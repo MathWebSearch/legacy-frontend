@@ -2,8 +2,6 @@
 if (isset($_GET["formula-url"])) {
 $ch = curl_init($_GET["formula-url"]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-//curl_setopt($ch, CURLOPT_POST, true);
-//curl_setopt($ch, CURLOPT_POSTFIELDS, '<mws:query xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:mws="http://www.mathweb.org/mws/ns" limitmin="0" answsize="30"><mws:expr><mws:qvar>x</mws:qvar></mws:expr></mws:query>');
 header('Content-Type: text/xml');
 }
 else {
