@@ -103,31 +103,14 @@ function expand_formula(uri, container)
           for (var substitution_index = 0; substitution_index < substitutions.snapshotLength; ++substitution_index)
             {
               var substitution = substitutions.snapshotItem(substitution_index);
-              var path = substitution.getAttribute("xpath").split("/");
-              var subexpression = formula;
-              for (var i = 0; i < path.length; ++i)
-                {
-                  var index = Number(path[i]);
-                  var child = subexpression.firstChild;
-                  while (child && index > 0)
-                    {
-                      if (child.ELEMENT_NODE == child.nodeType)
-                        {
-                          if ("semantics" == child.localName)
-                            {
-                              child = child.lastChild.firstChild;
-                              continue;
-                            }
-                          --index;
-                          if (0 == index)
-                            {
-                              subexpression = child;
-                              break;
-                            }
-                        }
-                      child = child.nextSibling;
-                    }
-                }
+              var subexpression = xpath(
+                '//*[@id="'+formula_id+'"]'+substitution.getAttribute("xpath"),
+                document.getElementById(formula_id),
+                XPathResult.ORDERED_NODE_SNAPSHOT_TYPE
+              );
+
+              subexpression = subexpression.snapshotItem(0);
+
               if (subexpression)
                 {
                   var replacement = document.createDocumentFragment();
@@ -429,7 +412,7 @@ function formula_search_variable_event(event)
     default:
       message("Error: property="+property+", name="+name);
     }
-  
+
   form.start.value = "0";
 }
 
@@ -564,7 +547,7 @@ var sentido =
       var query = formula_omobj;
       query = query_translator_om_to_cmml.transformToFragment(query, query.ownerDocument);
       query.firstChild.setAttribute("limitmin", document.forms.editor.start.value);
-      query.firstChild.setAttribute("answsize", document.forms.editor.num.value); 
+      query.firstChild.setAttribute("answsize", document.forms.editor.num.value);
 
       return this.serializer.serializeToString(query);
     },
@@ -671,7 +654,7 @@ function namespace_resolver(prefix)
       message("Warning: " + document.title + ": Unhandled namespace prefix: "
               + prefix);
     }
-  
+
   return uri;
 }
 
@@ -684,7 +667,7 @@ function namespace_URI_resolver(uri)
       message("Warning: " + document.title + ": Unhandled namespace URI: "
               + uri);
     }
-  
+
   return prefix;
 }
 
@@ -703,7 +686,7 @@ function xpath_first(expression, node)
               + ": " + exception);
       result = null;
     }
-  
+
   return result;
 }
 
@@ -722,7 +705,7 @@ function xpath_number(expression, node)
               + ": " + exception);
       result = undefined;
     }
-  
+
   return result;
 }
 
@@ -741,7 +724,7 @@ function xpath_boolean(expression, node)
               + ": " + exception);
       result = undefined;
     }
-  
+
   return result;
 }
 
@@ -760,7 +743,7 @@ function xpath_string(expression, node)
               + ": " + exception);
       result = null;
     }
-  
+
   return result;
 }
 
@@ -770,7 +753,7 @@ function xpath(expression, node, result_type)
   if (document.DOCUMENT_NODE == node.nodeType) document_node = node;
   else if ("ownerDocument" in node) document_node = node.ownerDocument;
   else message("Error: can't get document for " + node);
-  
+
   if ("[DocumentFragment]" == node.constructor)
     {
       // When the node is a DocumentFragment, the evaluate() function throws
@@ -779,7 +762,7 @@ function xpath(expression, node, result_type)
       // nsresult:"0x80530009 (NS_ERROR_DOM_NOT_SUPPORTED_ERR)"
       message("Error: Element.evaluate(xpath, node, nsres, type, result) does not accept DocumentFragment as root.");
     }
-  
+
   var result;
   try
     {
@@ -794,7 +777,7 @@ function xpath(expression, node, result_type)
               + ": " + exception);
       result = null;
     }
-  
+
   return result;
 }
 
@@ -818,7 +801,7 @@ function build_xpath(element)
     {
       path = "/";
     }
-  
+
   return path;
 }
 
@@ -837,7 +820,7 @@ function path_node(element)
     {
       full_name = element.nodeName;
     }
-  
+
   var selector;
   if (element.hasAttribute("xml:id"))
     {
@@ -868,7 +851,7 @@ function path_node(element)
           selector = full_name;
         }
     }
-  
+
   return selector;
 }
 ///////////////////////////////////////////////////////////////////////////
