@@ -1,0 +1,45 @@
+/* MathWebSearch web interface.
+   Author: Alberto González Palomo <http://www.matracas.org>
+   2012-04-19 16:06
+*/
+body { font-family:sans-serif; font-size:10pt; margin-left:4em; margin-right:4em; }
+img { border:0; }
+#title { text-align:center; }
+#formula-display-mathml { font-size:150%; padding:1em; text-align:center; }
+#variables-palette-container { float:left; max-height:16em; overflow:scroll; }
+#matesearch { clear:both; margin-top:0.5em; }
+#symbol-palettes-container { width:22em; height:30em; overflow:scroll; }
+#editor.sentido .hidden-in-sentido-mode { display:none; }
+#editor.raw     .hidden-in-raw-mode     { display:none; }
+#editor.folded  .hidden-in-folded-mode  { display:none; }
+/* Image from http://frankbille.wordpress.com/2007/06/24/working-indicator/
+   Creative Commons Attribution 3.0 License
+   http://frankbille.files.wordpress.com/2008/02/indicator_24.gif
+*/
+#results-display.loading:before { content:url('indicator_24.gif') " Searching..."; }
+.loading { text-align:center; margin:1em; }
+.description.loading:before { content:url('indicator_24.gif') " Loading..."; }
+.result-entry { background:#EEEEFF; border-left:medium solid #CCCCFF; margin:1em; padding:0.5em 0.5em 0.5em 0.5em; }
+.result-entry-match { font-size:150%; background:#FFFFFF; padding:0.2em; }
+.result-entry-substitution { margin:0.2em; padding-left:0.2em; padding-right:0.2em; background:#FFFFAA; border:thin solid #CCCC77; white-space:nowrap; }
+.result-entry-match-info { margin:0 1em 1em 0; }
+.result-entry-rank { float:right; cursor:default; border:thin solid grey; background-color:transparent; }
+.result-entry-rank > * { background:url('rank-bar.png') green right; }
+.description { }
+.description h1 { font-size:120%; }
+.description h2 { font-size:110%; }
+.description h3 { font-size:100%; }
+.matched-formula { cursor:pointer; padding:0.5em; border-radius:0.5em; }
+.matched-formula:hover { background:#FFFFFF; color:#008000; }
+.metadata { margin-top:1em; }
+.metadata > span { opacity:0.5; display:inline-block; border:thin solid #AAAACC; padding:0.2em 0.4em; margin:0.2em; }
+.metadata > span:hover { opacity:1.0; }
+.pager { text-align:center; margin:0.6em 0 0.6em 0; }
+.pager > a { margin:0.4em; }
+.pager > span { margin:0.4em; }
+.error:before { content:"Error " attr(code) ":"; font-family:monospace; margin-right:1em; }
+.error { padding:0.5em; margin:1em; border:medium solid red; }
+#info { text-align:center; color:grey; }
+#info > * { margin-left:1em; margin-right:1em; }
+.switches { }
+#footer { text-align:center; font-size:90%; border-top:thin solid #CCCCCC; padding-top:0.4em; }
