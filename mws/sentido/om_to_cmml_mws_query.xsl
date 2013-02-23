@@ -73,7 +73,8 @@
     <xsl:variable name="a" select="*[2]"/>
     <xsl:variable name="b" select="*[3]"/>
     <m:apply>
-      <m:power/>
+<!--  <m:power/> -->
+      <m:csymbol cd="ambiguous" xml:id="p1.1.m1.1.3.1.cmml">superscript</m:csymbol> <!-- LaTeXML compatible -->
       <xsl:apply-templates select="$a"/>
       <xsl:apply-templates select="$b"/>
     </m:apply>
@@ -112,9 +113,11 @@
     <xsl:variable name="a" select="*[2]"/>
     <m:apply>
       <m:root/>
+<!--
       <m:degree>
         <m:ci type="integer">2</m:ci>
       </m:degree>
+-->
       <xsl:apply-templates select="$a"/>
     </m:apply>
   </xsl:template>
