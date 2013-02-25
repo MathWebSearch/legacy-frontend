@@ -10,19 +10,53 @@ var formula_omobj;
 formula_omobj = null;
 
 var form, formula_input, editor, results, results_display;
-form          = document.getElementById('editor');
-formula_input = document.getElementById('sentido-embedded-input-editor-textarea');
-editor        = document.getElementById('editor');
-results       = document.getElementById('results');
-results_display = document.getElementById('results-display');
 var query_translator_om_to_cmml, query_translator_cmml_to_om;
 var formula_transformer, results_transformer, result_cmml_transformer;
-//query_translator_om_to_cmml = build_transformer("sentido/om_to_cmml.xsl");
-query_translator_om_to_cmml = build_transformer("sentido/om_to_cmml_mws_query.xsl");
-query_translator_cmml_to_om = build_transformer("sentido/cmml_to_om_mws_query.xsl");
-formula_transformer = build_transformer("sentido/om_to_pmml.xsl");
-results_transformer = build_transformer("results_to_pmml.xsl");
-result_cmml_transformer = build_transformer("sentido/cmml_to_pmml.xsl");
+
+var domLoaded = function (callback) {
+    /* Internet Explorer */
+    /*@cc_on
+    @if (@_win32 || @_win64)
+        document.write('<script id="ieScriptLoad" defer src="//:"><\/script>');
+        document.getElementById('ieScriptLoad').onreadystatechange = function() {
+            if (this.readyState == 'complete') {
+                callback();
+            }
+        };
+    @end @*/
+    /* Mozilla, Chrome, Opera */
+    if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', callback, false);
+    }
+    /* Safari, iCab, Konqueror */
+    if (/KHTML|WebKit|iCab/i.test(navigator.userAgent)) {
+        var DOMLoadTimer = setInterval(function () {
+            if (/loaded|complete/i.test(document.readyState)) {
+                callback();
+                clearInterval(DOMLoadTimer);
+            }
+        }, 10);
+    }
+    /* Other web browsers */
+    window.onload = callback;
+};
+
+window.onload = function () {
+  form          = document.getElementById('editor');
+  formula_input = document.getElementById('sentido-embedded-input-editor-textarea');
+  editor        = document.getElementById('editor');
+  results       = document.getElementById('results');
+  results_display = document.getElementById('results-display');
+  //query_translator_om_to_cmml = build_transformer("sentido/om_to_cmml.xsl");
+  query_translator_om_to_cmml = build_transformer("sentido/om_to_cmml_mws_query.xsl");
+  query_translator_cmml_to_om = build_transformer("sentido/cmml_to_om_mws_query.xsl");
+  formula_transformer = build_transformer("sentido/om_to_pmml.xsl");
+  results_transformer = build_transformer("results_to_pmml.xsl");
+  result_cmml_transformer = build_transformer("sentido/cmml_to_pmml.xsl");
+  init();
+};
+
+
 function start_query()
 {
   getOMCode();
