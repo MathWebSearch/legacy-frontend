@@ -5,7 +5,8 @@
 // See the project web site for details.
 
 var mws_settings = {
-  url: 'http://opal.eecs.jacobs-university.de:9090',
+  // url: 'http://opal.eecs.jacobs-university.de:9090',
+  url: 'mws-proxy.php',
   structure: { // provide document.querySelector compatible strings. These fields will be replaced by document.querySelector(value)
     language_selector: '#sentido-embedded-input-editor-syntax'
   },
