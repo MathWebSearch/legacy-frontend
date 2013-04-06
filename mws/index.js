@@ -71,7 +71,8 @@ function start_query()
     request.onreadystatechange=function() {
       if (request.readyState==4) results_loaded(request.responseXML);
     };
-    request.open("POST", "http://search.mathweb.org:9090/", false);
+    var mws_url = 'http://' + document.location.hostname + ':9090/';
+    request.open("POST", mws_url, false);
     request.send(query);
   }
   catch(error) {
@@ -183,7 +184,7 @@ function expand_formula(uri, container)
             container.appendChild(metadata);
         }
     };
-    request.open("GET", "http://search.mathweb.org/get-formula.php?formula-url=" + encodeURIComponent(uri), true);// Asynchronous
+    request.open("GET", "./get-formula.php?formula-url=" + encodeURIComponent(uri), true);// Asynchronous
     request.send();
 }
 function results_node(xpath, entry, tag, class_name)

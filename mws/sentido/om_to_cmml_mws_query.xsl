@@ -60,13 +60,12 @@
       <xsl:apply-templates select="$b"/>
     </m:apply>
   </xsl:template>
-  <xsl:template match="om:OMA[count(*)=3 and *[1][self::om:OMS[@cd='arith1' and @name='plus']]]">
-    <xsl:variable name="a" select="*[2]"/>
-    <xsl:variable name="b" select="*[3]"/>
+  <xsl:template match="om:OMA[count(*)>=1 and *[1][self::om:OMS[@cd='arith1' and @name='plus']]]">
     <m:apply>
       <m:plus/>
-      <xsl:apply-templates select="$a"/>
-      <xsl:apply-templates select="$b"/>
+      <xsl:for-each select="*[position() > 1]">
+        <xsl:apply-templates select="."/>
+      </xsl:for-each>
     </m:apply>
   </xsl:template>
   <xsl:template match="om:OMA[count(*)=3 and *[1][self::om:OMS[@cd='arith1' and @name='power']]]">
