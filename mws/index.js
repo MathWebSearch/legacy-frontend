@@ -4,6 +4,29 @@
 // at your option, any later version.
 // See the project web site for details.
 
+var mws_settings = {
+  url: 'http://opal.eecs.jacobs-university.de:9090',
+  structure: { // provide document.querySelector compatible strings. These fields will be replaced by document.querySelector(value)
+    language_selector: '#sentido-embedded-input-editor-syntax'
+  },
+  // !! The following elements will be attached to the global window object
+  elements: { // provide document.querySelector compatible strings strings
+    form: '#editor',
+    formula_input: '#sentido-embedded-input-editor-textarea',
+    editor: '#editor',
+    results: '#results',
+    results_display: '#results-display'
+  },
+  transformers: {
+    //query_translator_om_to_cmml: 'sentido/om_to_cmml.xsl',
+    query_translator_om_to_cmml: 'sentido/om_to_cmml_mws_query.xsl',
+    query_translator_cmml_to_om: 'sentido/cmml_to_om_mws_query.xsl',
+    formula_transformer: 'sentido/om_to_pmml.xsl',
+    results_transformer: 'results_to_pmml.xsl',
+    result_cmml_transformer: 'sentido/cmml_to_pmml.xsl'
+  }
+};
+
 var formula_editor;
 formula_editor = null;
 var formula_omobj;
@@ -42,17 +65,15 @@ var domLoaded = function (callback) {
 };
 
 window.onload = function () {
-  form          = document.getElementById('editor');
-  formula_input = document.getElementById('sentido-embedded-input-editor-textarea');
-  editor        = document.getElementById('editor');
-  results       = document.getElementById('results');
-  results_display = document.getElementById('results-display');
-  //query_translator_om_to_cmml = build_transformer("sentido/om_to_cmml.xsl");
-  query_translator_om_to_cmml = build_transformer("sentido/om_to_cmml_mws_query.xsl");
-  query_translator_cmml_to_om = build_transformer("sentido/cmml_to_om_mws_query.xsl");
-  formula_transformer = build_transformer("sentido/om_to_pmml.xsl");
-  results_transformer = build_transformer("results_to_pmml.xsl");
-  result_cmml_transformer = build_transformer("sentido/cmml_to_pmml.xsl");
+  for (var name in mws_settings.structure) {
+    mws_settings.structure[name] = document.querySelector(mws_settings.structure[name]);
+  }
+  for (var name in mws_settings.elements) {
+    window[name] = document.querySelector(mws_settings.elements[name]);
+  }
+  for (var name in mws_settings.transformers) {
+    window[name] = build_transformer(mws_settings.transformers[name]);
+  }
   init();
 };
 
@@ -71,8 +92,7 @@ function start_query()
     request.onreadystatechange=function() {
       if (request.readyState==4) results_loaded(request.responseXML);
     };
-    var mws_url = 'http://' + document.location.hostname + ':9090/';
-    request.open("POST", mws_url, false);
+    request.open("POST", mws_settings.url, false);
     request.send(query);
   }
   catch(error) {
@@ -460,7 +480,7 @@ function init()
       formula_editor.onchange = formula_changed;
       formula_editor.enable_edit(true);
     }
-  formula_editor.change_to_context(document.getElementById('sentido-embedded-input-editor-syntax').value);
+  formula_editor.change_to_context(mws_settings.structure.language_selector.value);
 
   if (!form.q.value && formula_input.value) formula_editor.linear_to_openmath(formula_input.value);
 
