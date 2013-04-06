@@ -2160,22 +2160,22 @@ function QMath(base_url)
     };
 
   var xml_serializer = new XMLSerializer();
-  var gClipboardHelper;
-  if ("Components" in window)
-    {
-      try
-        {
-          gClipboardHelper =
-            Components.classes["@mozilla.org/widget/clipboardhelper;1"]
-            .getService(Components.interfaces.nsIClipboardHelper);
-        }
-      catch (exception)
-        {
-          // This happens when using QMath in a web page, outside Sentido.
-          // We just don't copy anything to the clipboard in that case.
-          gClipboardHelper = null;
-        }
-    }
+  var gClipboardHelper = null;
+  // if ("Components" in window)
+  //   {
+  //     try
+  //       {
+  //         gClipboardHelper =
+  //           Components.classes["@mozilla.org/widget/clipboardhelper;1"]
+  //           .getService(Components.interfaces.nsIClipboardHelper);
+  //       }
+  //     catch (exception)
+  //       {
+  //         // This happens when using QMath in a web page, outside Sentido.
+  //         // We just don't copy anything to the clipboard in that case.
+  //         gClipboardHelper = null;
+  //       }
+  //   }
 
   var parser;
   var transformer_parse;
