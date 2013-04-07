@@ -123,14 +123,17 @@ function results_loaded(result)
 }
 function expand_formula(uri, container)
 {
-    var formula_id = uri.match(/#([a-zA-Z0-9_-]+)$/)[1];
+    var formula_id = uri.match(/#([a-zA-Z0-9_\-.]+)$/)[1];
     var request = new XMLHttpRequest();
     request.onreadystatechange=function() {
       if (request.readyState==4)
         {
           container.className = container.className.replace(/ ?\bloading\b/, "");
           var resultDocument = request.responseXML;
-          var formula = resultDocument.getElementById(formula_id);
+          var formula_xpath = '//*[@xml:id="'+formula_id + '"]';
+          var formula = xpath(formula_xpath,
+                              resultDocument,
+                              XPathResult.ORDERED_NODE_SNAPSHOT_TYPE).snapshotItem(0);
           if (!formula)
             {
               message("Error: formula '" + formula_id + "' not found in\n" + uri);
@@ -160,8 +163,8 @@ function expand_formula(uri, container)
             {
               var substitution = substitutions.snapshotItem(substitution_index);
               var subexpression = xpath(
-                '//*[@id="'+formula_id+'"]'+substitution.getAttribute("xpath"),
-                document.getElementById(formula_id),
+                formula_xpath + substitution.getAttribute("xpath"),
+                resultDocument,
                 XPathResult.ORDERED_NODE_SNAPSHOT_TYPE
               );
 
@@ -178,11 +181,18 @@ function expand_formula(uri, container)
             }
             var metadata = document.createElement("div");
             metadata.setAttribute("class", "metadata");
-            var entries = xpath('//h:div[@class="RDFa"]',
-                                resultDocument,
-                                XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
-            for (var entry_index = 0; entry_index < entries.snapshotLength; ++entry_index)
+            var classes = "language class keywords doctype title published reviewer".split(' ');
+            classes = classes.map(function (v) { return '.'+v; });
+            var entries = [];
+            for (var i=0; i<classes.length; ++i) {
+                entries.push(resultDocument.querySelector(classes[i]));
+            }
+            //var entries = xpath('//h:div[@class="RDFa"]',
+            //                    resultDocument,
+            //                    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+            for (var entry_index = 0; entry_index < entries.length;  ++entry_index)
             {
+            /*
                 var entry = entries.snapshotItem(entry_index);
                 var content = entry.getAttribute("content");
                 switch (entry.getAttribute("property"))
@@ -199,6 +209,31 @@ function expand_formula(uri, container)
                 case "arx:comment":
                     metadata.appendChild(document.createElement("span"));
                     metadata.lastChild.appendChild(document.createTextNode(content));
+                    break;
+                }
+            */
+                var entry = entries[entry_index];
+                if (!entry) continue;
+
+                var content = entry.innerHTML;
+                var content_element = document.createElement('span')
+                content_element.innerHTML = content;
+                switch (entry.getAttribute("class"))
+                {
+                case 'title':
+                    var title = document.createElement('h1');
+                    title.className = 'title document-title';
+                    title.innerHTML = content;
+                    container.insertBefore(title, container.childNodes[0]);
+                    //$(container).prepend(
+                    //    $(document.createElement('h1')).addClass('title document-title').html(content)
+                    // );
+                    break;
+                default:
+                    if (content.length == 0) break;
+                    metadata.appendChild(document.createElement("span"));
+                    metadata.lastChild.appendChild(document.createTextNode(entry.getAttribute('class')+': '));
+                    metadata.lastChild.appendChild(content_element);
                     break;
                 }
             }
@@ -2906,6 +2941,7 @@ function Formula_editor(formula_field)
     var    qmath_namespace = "http://www.matracas.org/ns/qmath";
     var   mathml_namespace = "http://www.w3.org/1998/Math/MathML";
     var    xhtml_namespace = "http://www.w3.org/1999/xhtml";
+    var      xml_namespace = 'http://www.w3.org/XML/1998/namespace';
 
     var namespace_prefix_map =
     {
@@ -2913,11 +2949,12 @@ function Formula_editor(formula_field)
       "om"  : openmath_namespace,
       "q"   :    qmath_namespace,
       "m"   :   mathml_namespace,
-      "h"   :    xhtml_namespace
+      "h"   :    xhtml_namespace,
+      'xml' :      xml_namespace
     };
     // The following is only necessary if using the XPath functions from
     // the main application.
-    //register_namespace_map(namespace_prefix_map);
+    register_namespace_map(namespace_prefix_map);
 
     var omobj;
     var linear;

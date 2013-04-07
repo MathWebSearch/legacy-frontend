@@ -1,6 +1,6 @@
 <?php
 
-  define('MWS_URL', 'http://opal.eecs.jacobs-university.de:9090');
+  define('MWS_URL', 'http://opal.eecs.jacobs-university.de:9093');
 
   $session = curl_init(MWS_URL);
   curl_setopt($session, CURLOPT_POST, true);
