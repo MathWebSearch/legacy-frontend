@@ -13,6 +13,12 @@
   <link rel="stylesheet" type="text/css" href="sentido/sentido-embedded-html.css" />
   <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="MathWeb Search" />
   <link rel="shortcut icon" href="/mws16.ico" type="image/vnd.microsoft.icon" />
+  <style>
+    #editor {display:none}
+    #math-output {
+      font-size: 25pt;
+    }
+  </style>
 </head>
 
 <body onload="init()">
@@ -881,10 +887,14 @@
     <!--/Creative Commons License-->
   </div>
 
-  <script src="js/slice-xpath.js" type="application/x-javascript;charset=UTF-8"/>
-  <script src="js/slice-interface.js" type="application/x-javascript;charset=UTF-8"/>
-  <script src="js/slice-query.js" type="application/x-javascript;charset=UTF-8"/>
-  <script src="js/slice-classes.js" type="application/x-javascript;charset=UTF-8"/>
-  <script src="js/slice-init.js" type="application/x-javascript;charset=UTF-8"/>
+  <script src="js/slice-xpath.js" ></script>
+  <script src="js/slice-interface.js" ></script>
+  <script src="js/slice-query.js" ></script>
+  <script src="js/slice-classes.js" ></script>
+  <script src="js/slice-init.js" ></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.jeditable.js"></script>
+
+  <script src="js/only-latex.js"></script>
 </body>
 </html>
