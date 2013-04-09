@@ -35,10 +35,23 @@
 
     $form = $(document.createElement('form'));
     $form.
-      append($(document.createElement('input')).attr('name', 'query')).
+      attr('id', 'search-form').
+      addClass('clearfix').
+      append(
+        $(document.createElement('input')).attr({
+          id: 'searchQuery',
+          name: 'query',
+          type: 'text',
+          placeholder: 'Type your latex here'
+        })
+      ).
       append(
         $(document.createElement('input')).
-          attr('type', 'submit').
+          attr({
+            id: 'search',
+            type: 'submit'
+          }).
+          addClass('orange').
           val('Submit')
       ).
       insertBefore($result).
@@ -53,6 +66,7 @@
     $math_output = $(document.createElement('div'));
     $math_output.attr('id', 'math-output').insertBefore($result);
 
+    $(document.createElement('div')).css('clear','both').insertAfter($form);
   });
   
   function mws_search (query) {
