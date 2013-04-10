@@ -9,6 +9,9 @@
   curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
   $response = curl_exec($session);
 
+  // HACK to remove :8000
+  $response = str_replace(':8000/', '/', $response);
+
   header('Content-Type: text/xml');
   echo $response;
 ?>
