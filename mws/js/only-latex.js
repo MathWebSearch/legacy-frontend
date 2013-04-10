@@ -18,8 +18,9 @@
 
   $(function set_only_latex_ui () {
     $result = $(mws_settings.elements.results_display);
-    $textarea = $('textarea[name="q"]');
     $result.show();
+    $textarea = $('textarea[name="q"]');
+    $textarea.val('');
 
     // pagination HACK
     $(document).on('click', '.pager a', function (event) {
@@ -58,7 +59,7 @@
       on('submit', function (event) {
         event.preventDefault();
         event.stopPropagation();
-        last_query = wrap_query($textarea.val());
+        last_query = $textarea.val();
         $('input[name="start"]').val(0);
         mws_search(last_query);
     });
@@ -109,7 +110,7 @@
               }                
               // 2. Turn content mathml into query
               $math_output.html("<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>"+pres+"</math>");
-              $textarea.val(content);
+              $textarea.val(wrap_query(content));
             }
           } else {
             $form.find('[name="mws-query"]').val('');
