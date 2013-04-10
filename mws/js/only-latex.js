@@ -1,4 +1,6 @@
 (function () {
+  var ajax_loader_url = 'ajax-loader.gif';
+
   var ac_counter = 0;
   var send_called = 0;
   var mouse_pressed = 0;
@@ -71,10 +73,19 @@
   });
   
   function mws_search (query) {
-    $result.empty();
+    $result.empty().html(
+      $(document.createElement('div')).
+        css('text-align', 'center').
+        append(
+          $(document.createElement('img')).attr('src', ajax_loader_url)
+        )
+    );
     var request = new XMLHttpRequest();
     request.onreadystatechange=function() {
-      if (request.readyState==4) results_loaded(request.responseXML);
+      if (request.readyState==4) {
+        $result.empty();
+        results_loaded(request.responseXML);
+      }
     };
     request.open("POST", mws_settings.url, false);
     request.send(query);
