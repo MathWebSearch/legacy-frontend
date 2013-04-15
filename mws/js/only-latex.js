@@ -40,6 +40,7 @@
       ['\\int_?a^?b |?f(x)?g(x)| dx \\leq ?r', '(Schauder Approximations)'],
       ['\\int_?a^?b (?f(x))^2 dx=?r', '(Energy of a signal)'],
       ['\\lim_{?a\\rightarrow 0} ?x', '(Limit)'],
+      ['?a^?n + ?b^?n=?c^?n', '(Fermat\'s Theorem)'],
       //['?a=_\\alpha ?b', '(Alpha-equality)'],
       ['0\\leq ?i\\leq ?n', '(Inequality chain)']
     ];
