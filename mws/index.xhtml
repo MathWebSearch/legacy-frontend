@@ -33,12 +33,51 @@
     #results-display .statistics {
       text-indent: 20px;
     }
+    .show-more {
+      position: absolute;
+      right: 0;
+      top: 0px;
+      bottom: 0px;
+      z-index: 900000;
+      display: inline-block;
+      border: 0;
+      border-left: 1px solid #ccc;
+    }
+    .show-more a {
+      text-decoration: none;
+    }
+    .show-more {
+      right: 70px;
+      background: #fff;
+      padding: 5px;
+    }
+    .show-more .handle {
+      display: block;
+    }
+    .show-more .target {
+      border: 1px solid #ccc;
+    }
+    .show-more .example {
+        display: block;
+        border-bottom: 1px solid #ccc;
+        background: #fff;
+        width: 200px;
+        padding: 3px 5px;
+        text-align: left;
+    }
+    .show-more .example:hover {
+        background: lightyellow;
+        color: #333;
+    }
+
   </style>
 </head>
 
 <body onload="init()" id="main-body">
   <section id="searchHolder">
-    <h1 id="title"><b>ZBL</b></h1>
+    <h1 id="title">
+        <img src="http://www.zentralblatt-math.org/zmath/de/images/logo.gif" alt="ZBL Logo" />
+    </h1>
     
     <form id="editor" class="sentido" method="post" action="" target="results" onsubmit="return start_query()">
 
@@ -897,52 +936,16 @@
   <div id="footer">
     <a href="http://sentido-labs.com" style="margin-right:2em;"><img src="sentido-labs.png" alt="Sentido Labs" /></a> <a href="http://www.jacobs-university.de"><img alt="Jacobs University Bremen" src="jacobs_logo.gif"  /></a>
     <!--Creative Commons License-->
-    <a rel="license" href="http://creativecommons.org/licenses/by/2.5/"><img 
+<!--    <a rel="license" href="http://creativecommons.org/licenses/by/2.5/"><img 
     alt="Creative Commons License"
     src="somerights20.png" /></a>
     <br />
-    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5 License</a>.
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5 License</a>.-->
     <!--/Creative Commons License-->
   </div>
-  
-  <style>
-    .show-more {
-      position: absolute;
-      right: 0;
-      top: 0px;
-      bottom: 0px;
-      z-index: 900000;
-      display: inline-block;
-      border: 0;
-      border-left: 1px solid #ccc;
-    }
-    .show-more a {
-      text-decoration: none;
-    }
-    .show-more {
-      right: 70px;
-      background: #fff;
-      padding: 5px;
-    }
-    .show-more .handle {
-      display: block;
-    }
-    .show-more .target {
-      border: 1px solid #ccc;
-    }
-    .show-more .example {
-        display: block;
-        border-bottom: 1px solid #ccc;
-        background: #fff;
-        width: 200px;
-        padding: 3px 5px;
-        text-align: left;
-    }
-    .show-more .example:hover {
-        background: lightyellow;
-        color: #333;
-    }
-  </style>
+  <footer>
+    Math Web Serach
+  </footer>
 
   <script src="js/slice-xpath.js" ></script>
   <script src="js/slice-interface.js" ></script>
