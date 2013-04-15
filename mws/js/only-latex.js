@@ -37,12 +37,12 @@
     });
     
     var example_queries = [
-      ['\\int_?a^?b |?f(x)?g(x)| dx \\leq ?r', '(Schauder Approximations)'],
-      ['\\int_?a^?b (?f(x))^2 dx=?r', '(Energy of a signal)'],
-      ['\\lim_{?a\\rightarrow 0} ?x', '(Limit)'],
-      ['?a^?n + ?b^?n=?c^?n', '(Fermat\'s Theorem)'],
-      //['?a=_\\alpha ?b', '(Alpha-equality)'],
-      ['0\\leq ?i\\leq ?n', '(Inequality chain)']
+      ['\\int_?a^?b |?f(x)?g(x)| dx \\leq ?r', 'Schauder Approximations'],
+      ['\\int_?a^?b (?f(x))^2 dx=?r', 'Energy of a signal'],
+      ['\\lim_{?a\\rightarrow 0} ?x', 'Limit'],
+      ['?a^?n + ?b^?n=?c^?n', 'Fermat\'s Theorem'],
+      ['?a=_\\alpha ?b', 'Alpha-equality'],
+      ['0\\leq ?i\\leq ?n', 'Inequality chain']
     ];
     var examples = $();
     for (var i=0; i<example_queries.length; ++i) {
@@ -85,7 +85,7 @@
         $(document.createElement('div')).
           addClass('show-more').
           append(
-            $(document.createElement('a')).addClass('handle').attr({href:'javascript:void(0)'}).html('Toggle examples'),
+            $(document.createElement('a')).addClass('handle').attr({href:'javascript:void(0)'}).html('Examples'),
             $(document.createElement('div')).addClass('target').append(examples)
           )
       ).
