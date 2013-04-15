@@ -904,6 +904,45 @@
     This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5 License</a>.
     <!--/Creative Commons License-->
   </div>
+  
+  <style>
+    .show-more {
+      position: absolute;
+      right: 0;
+      top: 0px;
+      bottom: 0px;
+      z-index: 900000;
+      display: inline-block;
+      border: 0;
+      border-left: 1px solid #ccc;
+    }
+    .show-more a {
+      text-decoration: none;
+    }
+    .show-more {
+      right: 70px;
+      background: #fff;
+      padding: 5px;
+    }
+    .show-more .handle {
+      display: block;
+    }
+    .show-more .target {
+      border: 1px solid #ccc;
+    }
+    .show-more .example {
+        display: block;
+        border-bottom: 1px solid #ccc;
+        background: #fff;
+        width: 200px;
+        padding: 3px 5px;
+        text-align: left;
+    }
+    .show-more .example:hover {
+        background: lightyellow;
+        color: #333;
+    }
+  </style>
 
   <script src="js/slice-xpath.js" ></script>
   <script src="js/slice-interface.js" ></script>

@@ -35,6 +35,31 @@
       last_query = last_query.replace(/(limitmin=")[0-9]*"/, '$1'+start+'"');
       mws_search(last_query);
     });
+    
+    var example_queries = [
+      ['\\int_?a^?b |?f(x)?g(x)| dx \\leq ?r', '(Schauder Approximations)'],
+      ['\\int_?a^?b (?f(x))^2 dx=?r', '(Energy of a signal)'],
+      ['\\lim_{?a\\rightarrow 0} ?x', '(Limit)'],
+      //['?a=_\\alpha ?b', '(Alpha-equality)'],
+      ['0\\leq ?i\\leq ?n', '(Inequality chain)']
+    ];
+    var examples = $();
+    for (var i=0; i<example_queries.length; ++i) {
+      var $example = $(document.createElement('a'));
+      $example.
+        addClass('example').
+        attr({
+          href: 'javascript:void(0)',
+          title: example_queries[i][0],
+          query: example_queries[i][0]
+        }).
+        html(example_queries[i][1]).
+        on('click.run-example', function () {
+          $('#searchQuery').val($(this).attr('query'));
+          $('#searchQuery').trigger('keyup');
+        });
+      examples = examples.add($example);
+    }
 
     $form = $(document.createElement('form'));
     $form.
@@ -55,7 +80,13 @@
             type: 'submit'
           }).
           addClass('orange').
-          val('Submit')
+          val('Submit'),
+        $(document.createElement('div')).
+          addClass('show-more').
+          append(
+            $(document.createElement('a')).addClass('handle').attr({href:'javascript:void(0)'}).html('Toggle examples'),
+            $(document.createElement('div')).addClass('target').append(examples)
+          )
       ).
       insertBefore($result).
       on('submit', function (event) {
@@ -64,6 +95,29 @@
         last_query = $textarea.val();
         $('input[name="start"]').val(0);
         mws_search(last_query);
+        $textarea.val('');
+    });
+    
+    $('.show-more').each(function () {
+	   var $that = $(this);
+	   var $target = $that.find('.target');
+	   var $handle = $that.find('.handle');
+	   $that.children().hide();
+	   $target.hide().css({
+           position: 'absolute',
+           top: $that.outerHeight(),
+           left: 0
+       });
+	   $handle.
+         show().
+         on('click.toggle-content', function on_click_toggle_content () {
+	       $target.toggle();		                  
+		 });
+    });   
+
+    $(window).bind('beforeunload', function () {
+      $textarea.val('');
+      $('#searchQuery').val('');
     });
 
     $math_output = $(document.createElement('div'));
