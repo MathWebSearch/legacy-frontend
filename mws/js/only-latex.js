@@ -56,8 +56,10 @@
         }).
         html(example_queries[i][1]).
         on('click.run-example', function () {
-          $('#searchQuery').val($(this).attr('query'));
-          $('#searchQuery').trigger('keyup');
+          $('#searchQuery')
+            .val($(this).attr('query'))
+            .trigger('keyup')
+            .focus();
         });
       examples = examples.add($example);
     }
@@ -96,6 +98,8 @@
         last_query = $textarea.val();
         $('input[name="start"]').val(0);
         mws_search(last_query);
+        var query = URI(window.location.search).removeSearch('query').addSearch('query', $('#searchQuery').val());
+        window.history.replaceState(null, null, query.toString());
         $textarea.val('');
     });
     
@@ -105,15 +109,15 @@
 	   var $handle = $that.find('.handle');
 	   $that.children().hide();
 	   $target.hide().css({
-           position: 'absolute',
-           top: $that.outerHeight(),
-           left: 0
-       });
+        position: 'absolute',
+        top: $that.outerHeight(),
+        left: 0
+     });
 	   $handle.
-         show().
-         on('click.toggle-content', function on_click_toggle_content () {
-	       $target.toggle();		                  
-		 });
+        show().
+        on('click.toggle-content', function on_click_toggle_content () {
+	        $target.toggle();
+		    });
     });   
 
     $(window).bind('beforeunload', function () {
@@ -125,6 +129,19 @@
     $math_output.attr('id', 'math-output').insertBefore($result);
 
     $(document.createElement('div')).css('clear','both').insertAfter($form);
+
+    var search = URI(window.location.search);
+    if (search.hasSearch('query')) {
+      $('#searchQuery').val(search.search(true).query);
+      // wait for all the sync AJAX calls to load
+      setTimeout(function () {
+        $('#searchQuery').trigger('keyup');
+        // TODO: uncomment this when you have callbacks for keyup / do_convert_on_the_fly
+        // $form.trigger('submit');
+      }, 1);
+    }
+
+    $('#searchQuery').focus();
   });
   
   function mws_search (query) {
