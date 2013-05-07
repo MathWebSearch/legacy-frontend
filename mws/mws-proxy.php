@@ -10,7 +10,8 @@
   $response = curl_exec($session);
 
   // HACK to remove :8000
-  $response = str_replace(':8000/', '/', $response);
+  $response = str_replace('opal.eecs.jacobs-university.de:8000/', 'search.mathweb.org/', $response);
+  $response = str_replace('/./', '/', $response);
 
   header('Content-Type: text/xml');
   echo $response;
