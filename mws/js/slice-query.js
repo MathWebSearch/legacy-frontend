@@ -102,16 +102,7 @@ function expand_formula(uri, container)
             metadata.setAttribute("class", "metadata");
 
             var number = resultDocument.querySelector('.number');
-            if (number) {
-              var href = 'http://zbmath.org/?q=an:' + number.innerHTML;
-              $(container).siblings('a[href="'+uri+'"]').attr({
-                href: href,
-                target: 'blank'
-              }).html(href);
-            } else {
-              console.warn('Number attribute not found in:', uri);
-            }
-
+            
             var classes = "language class keywords doctype title published reviewer".split(' ');
             classes = classes.map(function (v) { return '.'+v; });
             var entries = [];
@@ -142,6 +133,16 @@ function expand_formula(uri, container)
                 }
             }
             container.appendChild(metadata);
+            
+            var href = 'http://zbmath.org/?q=an:' + number.innerHTML;
+            $(container).siblings('a[href="'+uri+'"]').attr({
+              href: href,
+              target: 'blank'
+            }).html(href);
+
+            $(container).find('.matched-formula').attr({
+              onclick: 'window.open("'+href+'")'
+            });
         }
     };
     request.open("GET", "./get-formula.php?formula-url=" + encodeURIComponent(uri), true);// Asynchronous
