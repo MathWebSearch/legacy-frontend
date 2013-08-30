@@ -93,9 +93,10 @@
       $('#searchQuery').val(search.search(true).query);
       // wait for all the sync AJAX calls to load
       setTimeout(function () {
-        $('#searchQuery').trigger('keyup');
-        // TODO: uncomment this when you have callbacks for keyup / do_convert_on_the_fly
-        // $form.trigger('submit');
+        send_request($('#searchQuery').val(), ac_counter, function () {
+          $form.trigger('submit');
+        });
+        // $('#searchQuery').trigger('keyup');
       }, 1);
     }
 
@@ -121,7 +122,9 @@
     request.send(query);
   }
 
-  function send_request (tex, my_counter) {
+  function send_request (tex, my_counter, callback) {
+    callback = callback || function _no_callback () {};
+
     if (my_counter == ac_counter) {
       $("body").css("cursor","progress");
       if (ac_counter == 1) send_called = 0;
@@ -156,6 +159,7 @@
           } else {
             $form.find('[name="mws-query"]').val('');
           }
+          callback(data);
       });
     }
   }
