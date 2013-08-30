@@ -106,31 +106,7 @@ function expand_formula(uri, container)
             for (var i=0; i<classes.length; ++i) {
                 entries.push(resultDocument.querySelector(classes[i]));
             }
-            //var entries = xpath('//h:div[@class="RDFa"]',
-            //                    resultDocument,
-            //                    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
-            for (var entry_index = 0; entry_index < entries.length;  ++entry_index)
-            {
-            /*
-                var entry = entries.snapshotItem(entry_index);
-                var content = entry.getAttribute("content");
-                switch (entry.getAttribute("property"))
-                {
-                case "dct:identifier":
-                    metadata.appendChild(document.createElement("span"));
-                    metadata.lastChild.appendChild(document.createElement("a"));
-                    metadata.lastChild.lastChild.setAttribute("href", "http://arxiv.org/abs/" + content);
-                    metadata.lastChild.lastChild.appendChild(document.createTextNode(content));
-                    break;
-                case "dct:dateSubmitted":
-                case "dct:creator":
-                case "dct:subject":
-                case "arx:comment":
-                    metadata.appendChild(document.createElement("span"));
-                    metadata.lastChild.appendChild(document.createTextNode(content));
-                    break;
-                }
-            */
+            for (var entry_index = 0; entry_index < entries.length;  ++entry_index) {
                 var entry = entries[entry_index];
                 if (!entry) continue;
 
@@ -144,9 +120,6 @@ function expand_formula(uri, container)
                     title.className = 'title document-title';
                     title.innerHTML = content;
                     container.insertBefore(title, container.childNodes[0]);
-                    //$(container).prepend(
-                    //    $(document.createElement('h1')).addClass('title document-title').html(content)
-                    // );
                     break;
                 default:
                     if (content.length == 0) break;
