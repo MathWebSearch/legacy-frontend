@@ -70,30 +70,13 @@
     $form.on('submit', function (event) {
       event.preventDefault();
       event.stopPropagation();
-      last_query = $textarea.val();
+      last_query = $textarea.val().length ? $textarea.val() : last_query;
       $('input[name="start"]').val(0);
       mws_search(last_query);
       var query = URI(window.location.search).removeSearch('query').addSearch('query', $('#searchQuery').val());
       window.history.replaceState(null, null, query.toString());
       $textarea.val('');
     });
-
-    // $('.show-more').each(function () {
-    // var $that = $(this);
-    // var $target = $that.find('.target');
-    // var $handle = $that.find('.handle');
-    // $that.children().hide();
-    // // $target.hide().css({
-    // //     position: 'absolute',
-    // //     top: $that.outerHeight(),
-    // //     left: 0
-    // //  });
-    // $handle.
-    //     show().
-    //     on('click.toggle-content', function on_click_toggle_content () {
-    //      $target.toggle();
-    //   });
-    // });
 
     $(window).bind('beforeunload', function () {
       $textarea.val('');
