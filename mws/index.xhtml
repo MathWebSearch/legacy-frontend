@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<!-- MathWebSearch web interface.
-     Author: Alberto González Palomo <http://sentido-labs.com>
-     2012-04-19 13:53
--->
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" id="main-html">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>MathWeb Search - Zentralblatt Math</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Language" content="en" />
   <link rel="stylesheet" type="text/css" href="index.css" />
   <link rel="stylesheet" type="text/css" href="sentido/sentido-embedded-html.css" />
-  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="MathWeb Search" />
-  <link rel="shortcut icon" href="/mws16.ico" type="image/vnd.microsoft.icon" />
-  <link rel="stylesheet" type="text/css" href="html5reset.css" />
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="3rdparty/html5reset/html5reset.css" />
+  <link rel="stylesheet" type="text/css" href="3rdparty/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="mws-blue.css" />
 </head>
 
@@ -25,96 +17,36 @@
     </h1>
 
     <form id="editor" class="sentido" method="post" action="" target="results">
-
-    <div id="sentido-embedded-input-editor">
-      <table width="100%">
-        <tbody>
-        <tr style="height:2em">
-          <td>
-            <input id="sentido-embedded-input-editor-textarea" style="width:100%;" value="" onkeyup="input_changed(this)" onchange="input_changed(this)" onfocus="fold_interface(false)" onclick="fold_interface(false)" class="hidden-in-raw-mode"/>
-            <textarea name="q" rows="10" cols="20" style="width:100%" onfocus="fold_interface(false)" class="hidden-in-sentido-mode"></textarea>
-          </td>
-          <td align="right" style="width:22em" class="hidden-in-folded-mode">
-            <label for="sentido-embedded-input-editor-syntax">Input language: </label>
-            <select id="sentido-embedded-input-editor-syntax" onchange="change_syntax(this)">
-              <optgroup label="Formula editor">
-                <option value="en" title="QMath syntax in English" selected="selected">QMath:en</option>
-                <option value="en-semiformal" title="QMath syntax with some natural language in English">QMath:en semiformal</option>
-                <option value="maxima" title="Similar to Maxima: maxima.sourceforge.net">Maxima-style</option>
-                <option value="yacas" title="Similar to Yacas: yacas.sourceforge.net">Yacas-style</option>
-                <option value="mma" title="Similar to Mathematica&#x00AE;: www.wolfram.com/mathematica/">Mathematica&#x00AE;-style</option>
-                <option value="mpl" title="Similar to Maple&#x2122;: www.maplesoft.com">Maple&#x2122;-style</option>
-                <option value="LaTeX" title="Pseudo-LaTeX syntax in English">LaTeX:en</option>
-              </optgroup>
-              <optgroup label="Raw">
-                <option value="mws-string-xml">MWS XML</option>
-                <option value="mws-string">MWS string</option>
-              </optgroup>
-            </select>
-          </td>
-        </tr>
-        <tr class="hidden-in-raw-mode">
-          <td valign="top">
-            <div id="formula-display-mathml" onclick="formula_input.focus();"><m:math xmlns:m="http://www.w3.org/1998/Math/MathML" mode="display"/></div>
-          </td>
-          <td width="10%" height="80%" rowspan="2">
-            <div id="symbol-palettes-container" class="hidden-in-folded-mode">
-              <!-- here, dinosaurs rest in piece -->
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td valign="bottom">
-            <div id="variables-palette-container" class="hidden-in-raw-mode hidden-in-folded-mode">
-              <table xmlns="http://www.w3.org/1999/xhtml" class="symbol-palette" style="width:auto;">
-                <!-- It's important to keep the tbody element in one line, to avoid spurious text node children. -->
-                <tbody valign="top" id="formula-search-variable-types"><tr><th class="symbol-palette-header" colspan="4" onclick="toggle_palette(this)">Variables</th></tr><tr class="column-labels"><th>Variable</th><th title="This variable stands for any subexpression" style="cursor:help">Generic</th><th title="This variable is a function" style="cursor:help">Function</th></tr></tbody>
-              </table>
-            </div>
-            <div id="matesearch" style="display:none;"><label for="matesearch_text_query">Text query:</label><input name="matesearch_text_query" style="width:80%"/></div>
-          </td>
-        </tr>
-        <tr class="hidden-in-folded-mode" id="search-button-and-switches">
-          <td>
-            <input id="search-button" type="image" name="search" value="Search" alt="Search" src="search.jpg"/>
-            <input type="hidden" name="type" value="openmath"/>
-            <input type="hidden" name="start" value="0"/>
-            <input type="hidden" name="num" value="5"/>
-            <input type="hidden" name="identifier" value=""/>
-          </td>
-          <td class="switches">
-            <label for="matesearch">MaTeSearch:</label><input type="checkbox" name="matesearch" id="matesearch" onchange="document.getElementById('matesearch').style.display = this.checked?'block':'none'"/>
-            <label for="use_local_process">Local process:</label><input type="checkbox" name="use_local_process" id="use_local_process"/>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-
+        <input id="sentido-embedded-input-editor-textarea" style="width:100%;" value="" onkeyup="input_changed(this)" onchange="input_changed(this)" onfocus="fold_interface(false)" onclick="fold_interface(false)" class="hidden-in-raw-mode"/>
+        <textarea name="q" rows="10" cols="20" style="width:100%" onfocus="fold_interface(false)" class="hidden-in-sentido-mode"></textarea>
+        <input id="search-button" type="image" name="search" value="Search" alt="Search" src="search.jpg"/>
+        <input type="hidden" name="type" value="openmath"/>
+        <input type="hidden" name="start" value="0"/>
+        <input type="hidden" name="num" value="5"/>
+        <input type="hidden" name="identifier" value=""/>
     </form>
 
     <iframe name="results" id="results" style="display:none; border:none; width:100%; height:40em;"/>
-    <form id="search-form" class="btn-group clearfix">
-      <input id="searchQuery" class="input-xxlarge pull-left" name="query" type="text" placeholder="Type your latex here" />
-      <button id="search" class="btn search" type="submit">
-        <span class="icon-search" data-original-title="" title=""></span>
-      </button>
-      <div id="examples" class="btn-group">
-        <button class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-          Examples
-          <span class="caret"></span>
-        </button>
-        <ul class="target dropdown-menu"></ul>
-      </div>
-    </form>
-    <div id="results-display"/>
-
+        <form id="search-form" class="btn-group clearfix">
+            <input id="searchQuery" class="input-xxlarge pull-left" name="query" type="text" placeholder="Type your latex here" />
+            <button id="search" class="btn search" type="submit">
+                <span class="icon-search" data-original-title="" title=""></span>
+            </button>
+            <div id="examples" class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    Examples
+                    <span class="caret"></span>
+                </button>
+                <ul class="target dropdown-menu"></ul>
+            </div>
+        </form>
+        <div id="results-display"/>
   </section>
 
-  <footer class="clearfix" align="center">
-    <span id="footer-description" align="center">
-      Powered by <a href="http://mws.mathweb.org/"><font color="#009900">MathWebSearch</font></a>
-    </span>
+  <footer class="clearfix">
+    <div id="footer-description">
+      Powered by <a href="http://mws.mathweb.org/" class="mws-link">MathWebSearch</a>
+    </div>
   </footer>
 
   <div id="footer">
@@ -124,7 +56,7 @@
 
   <script src="js/jquery.js"></script>
   <script src="js/jquery.jeditable.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="3rdparty/bootstrap/js/bootstrap.min.js"></script>
   <script src="js/slice-xpath.js" ></script>
   <script src="js/slice-interface.js" ></script>
   <script src="js/slice-query.js" ></script>
@@ -132,6 +64,6 @@
   <script src="js/slice-init.js" ></script>
   <script src="js/URI.js"></script>
   <script src="js/only-latex.js"></script>
-  <script src="mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="3rdparty/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

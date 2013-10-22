@@ -185,7 +185,6 @@ function init()
       formula_editor.onchange = formula_changed;
       formula_editor.enable_edit(true);
     }
-  formula_editor.change_to_context(mws_settings.structure.language_selector.value);
 
   if (!form.q.value && formula_input.value) formula_editor.linear_to_openmath(formula_input.value);
 

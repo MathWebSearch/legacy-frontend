@@ -3,7 +3,7 @@ function start_query()
   getOMCode();
   fold_interface(true);
   while (results_display.firstChild) results_display.removeChild(results_display.firstChild);
-  results_display.className = "loading";
+  //results_display.className = "loading";
   document.getElementById("search-button").focus();
 
   var query = document.forms.editor.q.value;
@@ -28,7 +28,7 @@ function goto_page(page_number)
 }
 function results_loaded(result)
 {
-  results_display.className = "loaded";
+  //results_display.className = "loaded";
   try
     {
       results_transformer.setParameter(null, "start", Number(form.start.value) + 1);
