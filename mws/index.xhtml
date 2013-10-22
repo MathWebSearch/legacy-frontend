@@ -16,30 +16,22 @@
         <a href="http://zbmath.org"><img src="http://zbmath.org/static/zbMATH@2x.gif" alt="ZBL Logo" /></a>
     </h1>
 
-    <form id="editor" class="sentido" method="post" action="" target="results">
-        <input id="sentido-embedded-input-editor-textarea" style="width:100%;" value="" onkeyup="input_changed(this)" onchange="input_changed(this)" onfocus="fold_interface(false)" onclick="fold_interface(false)" class="hidden-in-raw-mode"/>
-        <textarea name="q" rows="10" cols="20" style="width:100%" onfocus="fold_interface(false)" class="hidden-in-sentido-mode"></textarea>
-        <input id="search-button" type="image" name="search" value="Search" alt="Search" src="search.jpg"/>
-        <input type="hidden" name="type" value="openmath"/>
-        <input type="hidden" name="start" value="0"/>
-        <input type="hidden" name="num" value="5"/>
-        <input type="hidden" name="identifier" value=""/>
-    </form>
-
-    <iframe name="results" id="results" style="display:none; border:none; width:100%; height:40em;"/>
     <form id="search-form" class="btn-group clearfix">
         <input id="searchQuery" class="input-xxlarge pull-left" name="query" type="text" placeholder="Type your latex here" />
         <button id="search" class="btn search" type="submit">
             <span class="icon-search" data-original-title="" title=""></span>
         </button>
         <div id="examples" class="btn-group">
-            <button class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
                 Examples
                 <span class="caret"></span>
             </button>
             <ul class="target dropdown-menu"></ul>
         </div>
     </form>
+
+    <div id="math-output"/>
+
     <div id="results-display"/>
 </section>
 
@@ -54,16 +46,18 @@
     <a href="http://www.jacobs-university.de"><img alt="Jacobs University Bremen" src="jacobs_logo.gif"  /></a>
 </div>
 
+<script src="config/config.js"></script>
 <script src="3rdparty/jquery/jquery.js"></script>
 <script src="3rdparty/jquery/jquery.jeditable.js"></script>
 <script src="3rdparty/bootstrap/js/bootstrap.min.js"></script>
 <script src="3rdparty/uri/URI.js"></script>
 <script src="3rdparty/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 <script src="js/slice-xpath.js" ></script>
 <script src="js/slice-interface.js" ></script>
 <script src="js/slice-query.js" ></script>
-<script src="js/slice-classes.js" ></script>
-<script src="js/slice-init.js" ></script>
 <script src="js/only-latex.js"></script>
+
+<script src="js/latexml.js"></script>
 </body>
 </html>

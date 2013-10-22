@@ -2042,32 +2042,7 @@ function Formula_editor(formula_field)
 
     function get_linear()
     {
-      if (!linear)
-        {
-          switch (formula_field.localName)
-            {
-            case "iframe":
-            case "browser":
-            case "editor":
-              formula_field = formula_field.contentDocument;
-              linear = formula_field.documentElement;
-              linear_is_plain_text_field = false;
-              break;
-            case "textbox":
-            case "textarea":
-            case "input":
-            case "searchbox":
-              linear = formula_field;
-              linear_is_plain_text_field = true;
-              break;
-            default:
-              message("Error: linear input element is a '"
-                      + formula_field.nodeName + "'");
-              break;
-            }
-        }
-
-      return linear;
+      return '';
     }
 
     function changed()

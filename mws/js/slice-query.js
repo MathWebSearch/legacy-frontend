@@ -26,18 +26,19 @@ function goto_page(page_number)
   form.start.value = (Number(page_number) - 1) * Number(form.num.value);
   if (form.onsubmit()) form.submit();
 }
-function results_loaded(result)
+function results_loaded(request, result)
 {
-  //results_display.className = "loaded";
+  results_display = $(mws_settings.elements.results_display);
   try
     {
       results_transformer.setParameter(null, "start", Number(form.start.value) + 1);
       results_transformer.setParameter(null, "results_per_page", form.num.value);
-      results_display.appendChild(results_transformer.transformToFragment(result, results_display.ownerDocument));
+      results_display.append(results_transformer.transformToFragment(result, results_display.ownerDocument));
     }
   catch (e)
     {
-      results_display.appendChild(document.createTextNode(request.responseText));
+      console.log(e);
+      results_display.append(document.createTextNode(request.responseText));
     }
 }
 function expand_formula(uri, container)
@@ -194,17 +195,16 @@ function change_syntax(select)
 var previous_input;
 function input_changed(input)
 {
+  console.log(input);
   switch (form.type.value)
     {
     case 'string':
-      put_formula_in_title("Raw input string");
       break;
     default:
       if (input.value != previous_input)
   {
     previous_input = input.value;
     formula_editor.linear_to_openmath(input.value);
-    put_formula_in_title(input.value);
   }
     }
 }

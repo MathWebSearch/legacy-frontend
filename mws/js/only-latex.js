@@ -3,10 +3,9 @@
 
   var ac_counter = 0;
   var send_called = 0;
-  var mouse_pressed = 0;
   var timeout = null;
   var hasFatal = /fatal error/;
-  var hasPres = /semantics[^>]*>([\s\S]*)<annotation-xml/;
+  var hasPresentation = /semantics[^>]*>([\s\S]*)<annotation-xml/;
   var hasContent = /\"MathML-Content\"[^>]*>([\s\S]*)<\/annotation-xml>/;
 
   var results_per_page = 5;
@@ -18,14 +17,17 @@
 
   var last_query = '';
 
-  $(function set_only_latex_ui () {
-    $result = $(mws_settings.elements.results_display);
+  var current_query = '';
+
+  $(function set_only_latex_ui() {
+    $result = $(settings.elements.results_display);
     $result.show();
     $textarea = $('textarea[name="q"]');
     $textarea.val('');
 
     // pagination HACK
     $(document).on('click', '.pager a', function (event) {
+      console.log("CLICK");
       event.preventDefault();
       event.stopPropagation();
       event.stopImmediatePropagation();
@@ -36,16 +38,9 @@
       mws_search(last_query);
     });
 
-    var example_queries = [
-      ['\\int_?a^?b |?f(x)?g(x)| dx \\leq ?r', 'Schauder Approximations'],
-      ['\\int_?a^?b (?f(x))^2 dx=?r', 'Energy of a signal'],
-      ['\\lim_{?a\\rightarrow 0} ?x', 'Limit'],
-      ['?a^?n + ?b^?n=?c^?n', 'Fermat\'s Theorem'],
-      ['?a=_\\alpha ?b', 'Alpha-equality'],
-      ['0\\leq ?i\\leq ?n', 'Inequality chain']
-    ];
+    var example_queries = settings.search_box_example_queries;
     var examples = $();
-    for (var i=0; i<example_queries.length; ++i) {
+    for (var i=0; i < example_queries.length; ++i) {
       var $example = $(document.createElement('a'));
       $example.
         attr({
@@ -70,12 +65,13 @@
     $form.on('submit', function (event) {
       event.preventDefault();
       event.stopPropagation();
-      last_query = $textarea.val().length ? $textarea.val() : last_query;
-      $('input[name="start"]').val(0);
-      mws_search(last_query);
+      //last_query = $textarea.val().length ? $textarea.val() : last_query;
+      //$('input[name="start"]').val(0);
+      console.log("SEARCH!");
+      //mws_search(last_query);
       var query = URI(window.location.search).removeSearch('query').addSearch('query', $('#searchQuery').val());
       window.history.replaceState(null, null, query.toString());
-      $textarea.val('');
+      //$textarea.val('');
     });
 
     $(window).bind('beforeunload', function () {
@@ -103,7 +99,8 @@
     $('#searchQuery').focus();
   });
 
-  function mws_search (query) {
+  function mws_search(query) {
+    console.log("search for " + query);
     $result.empty().html(
       $(document.createElement('div')).
         css('text-align', 'center').
@@ -115,10 +112,10 @@
     request.onreadystatechange=function() {
       if (request.readyState==4) {
         $result.empty();
-        results_loaded(request.responseXML);
+        results_loaded(request, request.responseXML);
       }
     };
-    request.open("POST", mws_settings.url, false);
+    request.open("POST", settings.mws_proxy_url, false);
     request.send(query);
   }
 
@@ -137,7 +134,7 @@
             if ((data.result != '') && (my_counter <= ac_counter)) {
               // 1. Get pres mathml and content mathml out!
               var m = null;
-              m = hasPres.exec(data.result);
+              m = hasPresentation.exec(data.result);
               var pres = null;
               if (m!= null) {
                 pres = m[1];
@@ -188,7 +185,7 @@
         return;
       }
       // call erst nach 300ms
-      timeout = setTimeout(function(){send_request(tex, ac_counter)}, 300);
+      timeout = setTimeout(function(){update_latex_input(tex)}, 300);
     }
   }
 
@@ -235,7 +232,7 @@
      });
   });
 
-  function wrap_query (query, page, size) {
+  function wrap_query(query, page, size) {
     page = page || 1;
     size = size || results_per_page;
     return '<mws:query limitmin="'+((page-1) * size)+'" answsize="'+size+'"><mws:expr>'+query+'</mws:expr></mws:query>';

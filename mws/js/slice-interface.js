@@ -178,14 +178,7 @@ function formula_search_variable_event(event)
 
 function init()
 {
-  if (!formula_editor)
-    {
-      formula_editor = new Formula_editor(formula_input);
-      formula_editor.init("sentido", "sentido/contexts");
-      formula_editor.onchange = formula_changed;
-      formula_editor.enable_edit(true);
-    }
-
+/*
   if (!form.q.value && formula_input.value) formula_editor.linear_to_openmath(formula_input.value);
 
   formula_input.focus();
@@ -200,6 +193,7 @@ function init()
   default:
   }
   results.setAttribute("onload", "results_loaded(this)");
+*/
 }
 
 function getOMCode()
@@ -231,15 +225,6 @@ function setOMCode()
   default:
     alert("Unknown query type '" + form.type.value + "'");
   }
-}
-
-function put_formula_in_title(linear_formula)
-{
-  if ("undefined" == typeof linear_formula)
-    {
-      linear_formula = document.getElementById("sentido-embedded-input-editor-textarea").value;
-    }
-  document.title = "MathWeb Search: " + linear_formula;
 }
 
 function toggle_palette(palette_item)
