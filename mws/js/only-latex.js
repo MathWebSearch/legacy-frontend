@@ -124,7 +124,6 @@
 
   function send_request (tex, my_counter, callback) {
     callback = callback || function _no_callback () {};
-
     if (my_counter == ac_counter) {
       $("body").css("cursor","progress");
       if (ac_counter == 1) send_called = 0;
@@ -155,6 +154,8 @@
               // 2. Turn content mathml into query
               $math_output.html("<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>"+pres+"</math>");
               $textarea.val(wrap_query(content));
+              // 3. Run MathJAX
+              MathJax.Hub.Queue(['Typeset',MathJax.Hub]);
             }
           } else {
             $form.find('[name="mws-query"]').val('');
