@@ -20,9 +20,9 @@ var mws_settings = {
   },
   transformers: {
     //query_translator_om_to_cmml: 'sentido/om_to_cmml.xsl',
-    query_translator_om_to_cmml: 'sentido/om_to_cmml_mws_query.xsl',
-    query_translator_cmml_to_om: 'sentido/cmml_to_om_mws_query.xsl',
-    formula_transformer: 'sentido/om_to_pmml.xsl',
+    //query_translator_om_to_cmml: 'sentido/om_to_cmml_mws_query.xsl',
+    //query_translator_cmml_to_om: 'sentido/cmml_to_om_mws_query.xsl',
+    //formula_transformer: 'sentido/om_to_pmml.xsl',
     results_transformer: 'results_to_pmml.xsl',
     result_cmml_transformer: 'sentido/cmml_to_pmml.xsl'
   }

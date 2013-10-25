@@ -178,6 +178,16 @@ function formula_search_variable_event(event)
 
 function init()
 {
+  var namespace_prefix_map =
+  {
+    'h'   :   'http://www.w3.org/1999/xhtml',
+    'm'   :   'http://www.w3.org/1998/Math/MathML',
+    'xml' :   'http://www.w3.org/XML/1998/namespace',
+    'xsl' :   'http://www.w3.org/1999/XSL/Transform'
+  };
+  // The following is only necessary if using the XPath functions from
+  // the main application.
+  register_namespace_map(namespace_prefix_map);
 /*
   if (!form.q.value && formula_input.value) formula_editor.linear_to_openmath(formula_input.value);
 
@@ -316,6 +326,41 @@ var sentido =
     }
   };
 
+function fixWebKitStylesheet(doc)
+{
+  // ensure output method = html:
+  var node = xpath_first("/xsl:stylesheet/xsl:output", doc);
+  if (node && node.getAttribute("method")=="xml")
+    node.setAttribute("method", "html");
+
+  // gut out document node template to deal with Webkit bug
+  // Google: webkit bug 28744 "root one"
+  if ((node= xpath_first("/xsl:stylesheet/xsl:template[@match='/']", doc)))
+  {
+    var child;
+    while ((child=node.lastChild))
+      node.removeChild(child);
+    child = node.appendChild(doc.createElement("xsl:apply-templates"));
+    child.setAttribute("select", "*");
+  }
+}
+
+function getProcessor(doc)
+{
+  // detect WebKit implementation (incomplete example pulled out
+  // of other code that handles cross-browser XMLDOM differences):
+  var d = document.implementation.createDocument("","",null);
+  var isWebKit = !(d.load);
+
+  var proc = new XSLTProcessor();
+  if (isWebKit)
+    fixWebKitStylesheet(doc);
+
+  proc.importStylesheet(doc);
+
+  return proc;
+}
+
 function build_transformer(stylesheet_url)
 {
   var request, transformer;
@@ -324,8 +369,7 @@ function build_transformer(stylesheet_url)
       request = new XMLHttpRequest();
       request.open("GET", stylesheet_url, false);
       request.send(null);
-      transformer = new XSLTProcessor();
-      transformer.importStylesheet(request.responseXML);
+      transformer = getProcessor(request.responseXML);
     }
   catch (error)
     {

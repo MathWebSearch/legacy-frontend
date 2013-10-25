@@ -4,10 +4,8 @@
      © 2012 Alberto González Palomo
      -->
 <xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1998/Math/MathML" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  
-  <xsl:include href="om_to_pmml.xsl"/>
-  
-  <xsl:output method="xml"/>
+
+  <xsl:output method="html"/>
 
   <xsl:template match="m:*">
     <xsl:message>ERROR: unhandled tag <xsl:value-of select="name(.)"/></xsl:message>

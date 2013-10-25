@@ -1,7 +1,6 @@
 (function () {
   var ajax_loader_url = 'ajax-loader.gif';
 
-  var ac_counter = 0;
   var send_called = 0;
   var timeout = null;
   var hasFatal = /fatal error/;
@@ -11,19 +10,17 @@
   var results_per_page = 5;
 
   var $result;
-  var $math_output;
   var $form;
-  var $textarea;
 
-  var last_query = '';
+  var current_content = '';
 
-  var current_query = '';
+  var latexmlErrorHandler = function (error_msg) {
+    console.log(error_msg);
+  };
 
   $(function set_only_latex_ui() {
     $result = $(settings.elements.results_display);
     $result.show();
-    $textarea = $('textarea[name="q"]');
-    $textarea.val('');
 
     // pagination HACK
     $(document).on('click', '.pager a', function (event) {
@@ -32,10 +29,10 @@
       event.stopPropagation();
       event.stopImmediatePropagation();
       var page = Number($(this).attr('href').match(/goto_page\(([0-9]*)\)/i)[1]);
-      var start = (page-1) * results_per_page;
-      $('input[name="start"]').val(start);
-      last_query = last_query.replace(/(limitmin=")[0-9]*"/, '$1'+start+'"');
-      mws_search(last_query);
+      // var start = (page - 1) * results_per_page;
+      //$('input[name="start"]').val(start);
+      //last_query = last_query.replace(/(limitmin=")[0-9]*"/, '$1'+start+'"');
+      mws_search();
     });
 
     var example_queries = settings.search_box_example_queries;
@@ -63,103 +60,46 @@
     $form = $('#search-form');
     $form.find('#examples .target').append(examples);
     $form.on('submit', function (event) {
+      console.log("SEARCH!");
       event.preventDefault();
       event.stopPropagation();
-      //last_query = $textarea.val().length ? $textarea.val() : last_query;
-      //$('input[name="start"]').val(0);
-      console.log("SEARCH!");
-      //mws_search(last_query);
+      mws_search();
       var query = URI(window.location.search).removeSearch('query').addSearch('query', $('#searchQuery').val());
       window.history.replaceState(null, null, query.toString());
-      //$textarea.val('');
     });
-
-    $(window).bind('beforeunload', function () {
-      $textarea.val('');
-      $('#searchQuery').val('');
-    });
-
-    $math_output = $(document.createElement('div'));
-    $math_output.attr('id', 'math-output').insertBefore($result);
-
-    $(document.createElement('div')).css('clear','both').insertAfter($form);
 
     var search = URI(window.location.search);
     if (search.hasSearch('query')) {
       $('#searchQuery').val(search.search(true).query);
       // wait for all the sync AJAX calls to load
       setTimeout(function () {
-        send_request($('#searchQuery').val(), ac_counter, function () {
+        update_latex_input($('#searchQuery').val(), function () {
           $form.trigger('submit');
-        });
-        // $('#searchQuery').trigger('keyup');
+        }, latexmlErrorHandler);
       }, 1);
     }
 
     $('#searchQuery').focus();
   });
 
-  function mws_search(query) {
-    console.log("search for " + query);
-    $result.empty().html(
-      $(document.createElement('div')).
-        css('text-align', 'center').
-        append(
-          $(document.createElement('img')).attr('src', ajax_loader_url)
-        )
-    );
-    var request = new XMLHttpRequest();
-    request.onreadystatechange=function() {
-      if (request.readyState==4) {
-        $result.empty();
-        results_loaded(request, request.responseXML);
-      }
-    };
-    request.open("POST", settings.mws_proxy_url, false);
-    request.send(query);
-  }
+  function mws_search() {
+    var mws_query = mws_query_from_content(current_content, 1, 5);
 
-  function send_request (tex, my_counter, callback) {
-    callback = callback || function _no_callback () {};
-    if (my_counter == ac_counter) {
-      $("body").css("cursor","progress");
-      if (ac_counter == 1) send_called = 0;
-      send_called++;
-      $.post('latexml-proxy.php', {
-          profile: 'math',
-          tex: tex
-        }, function (data) {
-          $('body').css('cursor', 'auto');
-          if (!hasFatal.test(data.status)) {
-            if ((data.result != '') && (my_counter <= ac_counter)) {
-              // 1. Get pres mathml and content mathml out!
-              var m = null;
-              m = hasPresentation.exec(data.result);
-              var pres = null;
-              if (m!= null) {
-                pres = m[1];
-              }
-              m = hasContent.exec(data.result);
-              var content = null;
-              if (m!= null) {
-                content = m[1];
-                content = content.replace(/<csymbol(\s+)cd=\"mws\"(\s+)name=\"qvar\"[^>]*>(\s*)([a-zA-Z0-9]*)(\s*)<\/csymbol>/g, "<mws:qvar>$4</mws:qvar>");
-                content = content.replace(/<csymbol(\s+)cd=\"mws\"(\s+)name=\"qvar\"[^>]*\/>/g, "<mws:qvar/>");
-                content = content.replace(/^\s+|\s+$/g,'');
-                // content = content.replace(/<(\/?)([^:></]+?)(\/?)>/g, "<$1m:$2$3>");
-              }
-              // 2. Turn content mathml into query
-              $math_output.html("<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>"+pres+"</math>");
-              $textarea.val(wrap_query(content));
-              // 3. Run MathJAX
-              MathJax.Hub.Queue(['Typeset',MathJax.Hub]);
-            }
-          } else {
-            $form.find('[name="mws-query"]').val('');
-          }
-          callback(data);
-      });
-    }
+    $result.empty().html(
+        $(document.createElement('div')).
+            css('text-align', 'center').
+            append(
+                $(document.createElement('img')).attr('src', ajax_loader_url)
+            )
+    );
+
+    mws_request(mws_query,
+        function (mws_response) {
+          results_loaded(mws_response);
+        },
+        function (error_msg) {
+          console.log(error_msg);
+        });
   }
 
   function do_convert_on_the_fly (e) {
@@ -170,72 +110,30 @@
       var key = 0;
     }
 
-    ac_counter++;
     if (((key < 37 || key > 40) && key > 32 && key <= 250) || key == 8 || key == 0){
       // immediately cancel outstanding requests
       if (timeout) {
         clearTimeout(timeout);
-        ac_counter--;
       }
       var tex = $form.find('[name="query"]').val();
       if (!tex) {
-        ac_counter = 0;
         $result.html(' ');
         $form.find('[name="mws-query"]').val('');
         return;
       }
-      // call erst nach 300ms
-      timeout = setTimeout(function(){update_latex_input(tex)}, 300);
+      timeout = setTimeout(function() {
+            update_latex_input(tex,
+                function(content) { current_content = content; },
+                function(error_msg) { console.log(error_msg); });
+          },
+          300);
     }
   }
 
-  $(document).ready(function(){
-    $('#preset').hide();
-    $('.edit_area').editable(do_convert_on_the_fly, {
-      data  :  function(value, settings) {
-        setTimeout(do_convert_on_the_fly, 300);
-        return $('#preset').text();
-      },
-      type: 'textarea',
-      loadtext: 'Converting...',
-      onblur: 'submit',
-      placeholder: 'Enter LaTeX Formula'
-    });
-    $form.on('keyup', '[name="query"]', do_convert_on_the_fly);
-    $('.examples pre')
-       .hide()
-       .prepend( $(document.createElement('a')).html('Load Example').attr({href:'javascript:void(0)', 'class':'loadExample'}) )
-       .each(function(){
-          var handle = $(document.createElement('a'));
-          handle
-            .html($(this).attr("title"))
-            .attr({
-               'class'  : 'exampleHandle',
-               'href'   : 'javascript:void(0)',
-               'style'  : 'display:block'
-            })
-            .data('target', $(this))
-            .insertBefore( $(this) )
-            .bind('click.toggleExample', function( e ){
-               $('.exampleHandle').not($(this)).each(function(){ $(this).data('target').slideUp(); });
-               $(this).data('target').slideToggle();
-            });
-          $(this).hide();
-       });
-
-     $('.loadExample').bind('click.loadExample', function(){
-         var clone = $(this).parent().clone();
-         clone.children().eq(0).remove();
-         $('#preset').text(clone.text());
-         $('.edit_area').click();
-         $('.edit_area').blur();
-     });
+  $(function() {
+    $form.on(
+        /* event    = */ 'keyup',
+        /* selector = */ '',
+        do_convert_on_the_fly);
   });
-
-  function wrap_query(query, page, size) {
-    page = page || 1;
-    size = size || results_per_page;
-    return '<mws:query limitmin="'+((page-1) * size)+'" answsize="'+size+'"><mws:expr>'+query+'</mws:expr></mws:query>';
-  }
-
 })();

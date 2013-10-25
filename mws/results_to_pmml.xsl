@@ -11,11 +11,7 @@
   <xsl:param name="results_per_page">10</xsl:param>
 
   <xsl:template match="/">
-    <html>
-      <body bgcolor="#FFFFFF">
-        <xsl:apply-templates/>
-      </body>
-    </html>
+    <xsl:apply-templates/>
   </xsl:template>
   
   <xsl:template match="mws:answset">

@@ -12,7 +12,7 @@ function start_query()
     request.onreadystatechange=function() {
       if (request.readyState==4) results_loaded(request.responseXML);
     };
-    request.open("POST", mws_settings.url, false);
+    request.open("POST", settings.mws_proxy_url, false);
     request.send(query);
   }
   catch(error) {
@@ -26,19 +26,20 @@ function goto_page(page_number)
   form.start.value = (Number(page_number) - 1) * Number(form.num.value);
   if (form.onsubmit()) form.submit();
 }
-function results_loaded(request, result)
+function results_loaded(result)
 {
-  results_display = $(mws_settings.elements.results_display);
+  console.log(result);
+  results_display = $(settings.elements.results_display);
   try
     {
-      results_transformer.setParameter(null, "start", Number(form.start.value) + 1);
-      results_transformer.setParameter(null, "results_per_page", form.num.value);
-      results_display.append(results_transformer.transformToFragment(result, results_display.ownerDocument));
+      results_transformer.setParameter(null, 'start', 1);
+      results_transformer.setParameter(null, 'results_per_page', 5);
+      results_display.append(results_transformer.transformToFragment(result, document));
     }
   catch (e)
     {
       console.log(e);
-      results_display.append(document.createTextNode(request.responseText));
+      results_display.append(document.createTextNode(result));
     }
 }
 function expand_formula(uri, container)
@@ -77,28 +78,22 @@ function expand_formula(uri, container)
               else                       title = title.parentNode;
             }
           var substitutions = xpath('following-sibling::*[@class="result-entry-match-info"]/*[@class="result-entry-substitution"]',
-                                    container,
-                                    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
-          for (var substitution_index = 0; substitution_index < substitutions.snapshotLength; ++substitution_index)
-            {
-              var substitution = substitutions.snapshotItem(substitution_index);
-              var subexpression = xpath(
-                formula_xpath + substitution.getAttribute("xpath"),
-                resultDocument,
-                XPathResult.ORDERED_NODE_SNAPSHOT_TYPE
-              );
+              container,
+              XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+          for (var substitution_index = 0; substitution_index < substitutions.snapshotLength; ++substitution_index) {
+            var substitution = substitutions.snapshotItem(substitution_index);
+            var xpath_expression = formula_xpath + substitution.getAttribute("xpath")
+            var subexpression = xpath_first(xpath_expression, resultDocument);
 
-              subexpression = subexpression.snapshotItem(0);
-
-              if (subexpression)
-                {
-                  var replacement = document.createDocumentFragment();
-                  replacement.appendChild(document.createElementNS("http://www.w3.org/1998/Math/MathML", "math"));
-                  replacement.lastChild.appendChild(subexpression.cloneNode(true));
-                  substitution.textContent = substitution.getAttribute("qvar") + " → ";
-                  substitution.appendChild(result_cmml_transformer.transformToFragment(replacement, document));
-                }
+            if (subexpression) {
+              var replacement = document.createDocumentFragment();
+              replacement.appendChild(document.createElementNS("http://www.w3.org/1998/Math/MathML", "math"));
+              replacement.lastChild.setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:m', 'http://www.w3.org/1998/Math/MathML');
+              replacement.lastChild.appendChild(subexpression.cloneNode(true));
+              substitution.textContent = substitution.getAttribute("qvar") + " → ";
+              substitution.appendChild(result_cmml_transformer.transformToFragment(replacement, document));
             }
+          }
             var metadata = document.createElement("div");
             metadata.setAttribute("class", "metadata");
 

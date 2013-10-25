@@ -1,26 +1,43 @@
 var last_latex = '';
-var last_request_counter = false;
-var current_content = '';
-
+var last_request_counter = 0;
 var $math_output = $('#' + settings.latexml_display_math_id);
 
-function update_latex_input(latex) {
+/**
+ * @callback errorCallback
+ * @param {string} error_msg error message
+ */
+
+/**
+ * @callback contentCallback
+ * @param {string} content
+ * @param mws_query_callback
+ * @param error_callback
+ */
+
+/**
+ * @param {string} latex
+ * @param {contentCallback} content_callback
+ * @param {errorCallback} error_callback
+ */
+function update_latex_input(latex, content_callback, error_callback) {
   if (latex.trim() != '' && latex != last_latex) {
     last_latex = latex;
     var counter = ++last_request_counter;
     latexml_request(latex,
         function (presentation, content) {
           if (last_request_counter == counter) {
-            current_content = content;
+            // Display presentation MathML and render via MathJAX
             $math_output.html(
                 "<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>" + presentation + "</math>"
             );
             MathJax.Hub.Queue(['Typeset',MathJax.Hub]);
+            // Deliver content
+            content_callback(content);
           }
         },
         function (latexml_error) {
           if (last_request_counter == counter) {
-            console.log(latexml_error);
+            error_callback(latexml_error);
           }
         });
   }
@@ -65,11 +82,6 @@ function get_presentation_mathml(latexml_response) {
  *
  * @param {string} presentation Presentation Math ML
  * @param {string} content Content Math ML
- */
-
-/**
- * @callback latexmlErrorCallback
- * @param {string} error_msg error message
  */
 
 /**
