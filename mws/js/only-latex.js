@@ -95,8 +95,6 @@
       }
       var tex = $form.find('[name="query"]').val();
       if (!tex) {
-        $result.html(' ');
-        $form.find('[name="mws-query"]').val('');
         return;
       }
       timeout = setTimeout(function() {
