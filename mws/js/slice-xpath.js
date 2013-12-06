@@ -68,10 +68,10 @@ function namespace_URI_resolver(uri)
   var prefix;
   prefix = namespace_map[uri];
   if (undefined === prefix)
-    {
+  {
       message("Warning: " + document.title + ": Unhandled namespace URI: "
               + uri);
-    }
+  }
 
   return prefix;
 }

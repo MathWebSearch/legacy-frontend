@@ -1,6 +1,6 @@
 <?php
 
-  define('MWS_URL', 'http://212.201.49.178:9097');
+  define('MWS_URL', 'http://localhost:9090');
 
   $session = curl_init(MWS_URL);
   curl_setopt($session, CURLOPT_POST, true);

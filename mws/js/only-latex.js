@@ -1,13 +1,6 @@
 (function () {
   var ajax_loader_url = 'ajax-loader.gif';
-
-  var send_called = 0;
   var timeout = null;
-  var hasFatal = /fatal error/;
-  var hasPresentation = /semantics[^>]*>([\s\S]*)<annotation-xml/;
-  var hasContent = /\"MathML-Content\"[^>]*>([\s\S]*)<\/annotation-xml>/;
-
-  var results_per_page = 5;
 
   var $result;
   var $form;
@@ -19,9 +12,6 @@
   };
 
   $(function set_only_latex_ui() {
-    $result = $(settings.elements.results_display);
-    $result.show();
-
     // pagination HACK
     $(document).on('click', '.pager a', function (event) {
       console.log("CLICK");
@@ -29,9 +19,6 @@
       event.stopPropagation();
       event.stopImmediatePropagation();
       var page = Number($(this).attr('href').match(/goto_page\(([0-9]*)\)/i)[1]);
-      // var start = (page - 1) * results_per_page;
-      //$('input[name="start"]').val(start);
-      //last_query = last_query.replace(/(limitmin=")[0-9]*"/, '$1'+start+'"');
       mws_search();
     });
 
@@ -60,7 +47,6 @@
     $form = $('#search-form');
     $form.find('#examples .target').append(examples);
     $form.on('submit', function (event) {
-      console.log("SEARCH!");
       event.preventDefault();
       event.stopPropagation();
       mws_search();
@@ -73,7 +59,8 @@
       $('#searchQuery').val(search.search(true).query);
       // wait for all the sync AJAX calls to load
       setTimeout(function () {
-        update_latex_input($('#searchQuery').val(), function () {
+        update_latex_input($('#searchQuery').val(), function (content) {
+          current_content = content;
           $form.trigger('submit');
         }, latexmlErrorHandler);
       }, 1);
@@ -84,18 +71,9 @@
 
   function mws_search() {
     var mws_query = mws_query_from_content(current_content, 1, 5);
-
-    $result.empty().html(
-        $(document.createElement('div')).
-            css('text-align', 'center').
-            append(
-                $(document.createElement('img')).attr('src', ajax_loader_url)
-            )
-    );
-
     mws_request(mws_query,
         function (mws_response) {
-          results_loaded(mws_response);
+          process_results(mws_response);
         },
         function (error_msg) {
           console.log(error_msg);
