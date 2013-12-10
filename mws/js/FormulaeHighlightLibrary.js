@@ -63,4 +63,4 @@ var FHL = {
 			return FHL.getElementByXMLId(semantics.getAttribute("xref"), doc);
 		}
 	}
-}
+};
