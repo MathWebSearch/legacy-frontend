@@ -34,7 +34,7 @@ function mws_request(query, result_callback, error_callback) {
  * @returns {string} MWS XML query
  */
 function mws_query_from_content(content, page, size) {
-  page = page || 1;
+  page = page || 0;
   size = size || settings.mws_results_per_page;
   var mwsQuery =
       '<mws:query ' +
