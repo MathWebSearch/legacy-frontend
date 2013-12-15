@@ -4,7 +4,7 @@ function onMwsAnswer($results_display, mws_answer) {
     var $data = $($.parseXML($(mws_answer).children('data').text()));
     var $math = $($data).children('m\\:math');
     var elem = FHL.getPresentation(xpath, $math[0]);
-    elem.setAttribute("mathcolor", "blue");
+    if (elem) elem.setAttribute("mathcolor", "blue");
     $results_display.append(
         $('<div style="width:800px; margin-left:auto; margin-right:auto; text-align:center;"/>').append($math));
 }
