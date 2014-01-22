@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>MathWebSearch Frontend</title>
+
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+	<div class="container">
+		<div class="row text-center">
+			<h1>MathWebSearch</h1>
+
+			<div>Implement logo here</div>
+
+			<form role="form" id="query-form" action="/">
+				<div class="input-group">
+				<input class="form-control" name="query-text" id="query-text" placeholder="Search Text" value="Horn"/>
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-default" id="start-search">Search</button>
+					</span>
+				</div>
+
+				<br />
+
+				<div class="row">
+					<div class="col-md-12" id="math-preview-div">
+						<input class="form-control" name="query-math" id="query-math" placeholder="Search LaTeX-Style Math" value="&lt;m:ci&gt;f&lt;/m:ci&gt;"/>
+					</div>
+
+					<div class="hidden" id="math-preview">
+						Pretend there is math previewed here :); <br />
+						(will be implemented later)
+					</div>
+				</div>
+
+			</form>
+
+			<br />
+
+			<div class="container">
+				<div id="results">There will be results here</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="js/init.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/query.js"></script>
+	<script src="js/makemath.js"></script>
+	<script src="js/gui.js"></script>
+</body>
+</html>
