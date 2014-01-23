@@ -22,7 +22,7 @@ MWS.query = function(text, math){
 			"text": me._text, 
 			"math": me._math, 
 			"from": start, 
-			"size": 5
+			"size": size
 		}; 
 
 		$.ajax({
@@ -60,7 +60,7 @@ MWS.query = function(text, math){
 		get(0, 0, function(data){
 			var count = data.hits.total || 0; 
 			get(0, count, function(data){
-				var res = []; 
+				var res = [];  
 				var hits = data.hits.hits; 
 				for(var i=0;i<hits.length;i++){
 					var hit = hits[i]; 

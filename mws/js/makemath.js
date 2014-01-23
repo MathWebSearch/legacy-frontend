@@ -10,7 +10,7 @@ MWS.canMathML = undefined;
 		
 		loadExternalJS(
 			//change cdn uri here
-			"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", 
+			MWS.config.mathjax_cdn_url, 
 			function(e, suc){ 
 				if(!suc){
 					console.error("Unable to load MathJax! You need an internet connection for that! ");
