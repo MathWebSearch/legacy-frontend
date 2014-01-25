@@ -287,10 +287,25 @@ MWS.gui = {
 			.text("retrieving results, please wait ...")
 		)
 
+		var counter = $(document.createElement("div")).append(
+			"Showing result(s) ", 
+			$(document.createElement("span")).addClass("badge").text(start + 1), 
+			" - ", 
+			$(document.createElement("span")).addClass("badge").text(start + len), 
+			" of ", 
+			$(document.createElement("span")).addClass("badge").text(res.count), 
+			"<br />", 
+			"Showing page ", 
+			$(document.createElement("span")).addClass("badge").text(pageId + 1), 
+			" of ", 
+			$(document.createElement("span")).addClass("badge").text(page_max + 1)
+		)
+
 		$res.append(
 			pagination, 
 			$resdiv, 
-			pagination.clone(true)
+			pagination.clone(true), 
+			counter
 		)
 
 		res(start, len, function(arr){
