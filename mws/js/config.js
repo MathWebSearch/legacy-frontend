@@ -13,6 +13,7 @@ MWS.config = {
 	"latexml_allow_disable": true, //can the user disable latexml support if it fails for some reason. 
 	"latexml_show_warning_message": true, //show the warning message if latexml is disabled
 	"latexml_debounce_interval": 250, // debouncing interval in ms
-	"latexml_proxy_url": //LatexML Proxy
-		resolve("php/latexml_proxy.php"), 
+	"latexml_url": //LaTexML URL
+		"http://latexml.mathweb.org/convert", //use this one directly
+		// resolve("php/latexml_proxy.php"), //use this one if you want to proxy all the traffic
 };

@@ -3,4 +3,4 @@ mws-frontend
 
 Web frontend for MathWebSearch, rewritten version. 
 
-Should run on any server with php and support for curl. 
+The php only works as a failsafe. It is not really needed. 

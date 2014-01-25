@@ -4,7 +4,7 @@ MWS.LaTexML = function(tex, result_callback, error_callback){
 	var latexml_error = '';
 
 	try{
-		$.post(MWS.config.latexml_proxy_url, {
+		$.post(MWS.config.latexml_url, {
 			profile: 'math',
 			tex: tex
 		}, function (data) {
