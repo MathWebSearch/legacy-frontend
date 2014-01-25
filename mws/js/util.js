@@ -243,3 +243,11 @@ function debounce(fn, delay, def) {
         return def; 
     };
 }
+
+//from: https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? false : decodeURIComponent(results[1].replace(/\+/g, " "));
+}

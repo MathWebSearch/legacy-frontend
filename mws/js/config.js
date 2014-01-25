@@ -2,6 +2,8 @@ MWS.config = {
 	"pagination_pagesize": 5, //entries per page
 	"pagination_surr": 2, //how many pages to show each direction around the current page
 
+	"force_query_params": true, //forcibly show query parameters for each search
+
 	"mws_query_url": //URL to put questions to
 		"http://opal.eecs.jacobs-university.de:8888/", 
 

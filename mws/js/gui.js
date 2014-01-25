@@ -1,23 +1,39 @@
 MWS.gui = {
 	"init": function(){
-		
-		var btn = $(document.getElementById("start-search")).click(function(){
-			MWS.gui.renderMathSearchText(function(){
-				MWS.gui.performSearch(); 
-			}); 
+
+		$(document.getElementById("start-search")).click(function(){
+			$(document.getElementById("query-form")).submit();  
 		}); 
 
 		$(document.getElementById("query-form")).submit(function(){
-			window.setTimeout(function(){btn.click(); }, 100);
-			return false; 
+			if(!MWS.config.force_query_params){
+				MWS.gui.runSearch();
+				return false; 
+			} else {
+				return true; 
+			}
 		})
 
 		$(document.getElementById("query-math")).on("keyup input paste", debounce(function() {
 			MWS.gui.renderMathSearchText(); 
-
 			return false; 
 		}, MWS.config.latexml_debounce_interval));
+
+		var query_math = getParameterByName("query-math");
+		var query_text = getParameterByName("query-text");
+
+		if(query_text || query_math){
+			$(document.getElementById("query-math")).val(query_math || "");
+			$(document.getElementById("query-text")).val(query_text || "");
+			MWS.gui.runSearch(); 
+		}
 	}, 
+
+	"runSearch": function(){
+		MWS.gui.renderMathSearchText(function(){
+			MWS.gui.performSearch(); 
+		});
+	},
 
 	"renderMathSearchText": function(callback){
 		var callback = (typeof callback == "function")?callback:function(){}; 
