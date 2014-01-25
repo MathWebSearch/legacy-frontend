@@ -294,11 +294,37 @@ MWS.gui = {
 	"renderResult": function(res, i){
 		//render a single result here!
 
-		var body = $("<div>").addClass("panel-body")
+		var xhtml_join = function(arr){
+			var div = $(document.createElement("div")); 
+			for(var i=0;i<arr.length;i++){
+				var ar = arr[i]; 
+
+				if(typeof ar == "string"){
+					div.append($(document.createElement("span")).text(ar))
+				} else {
+					div.append(ar)
+				}
+
+				if (i != arr.length-1){
+					div.append("; "); 
+				}
+			}
+
+			return div.html(); 
+		}
+
+		var body = $("<div>").addClass("panel-body").css("text-align", "left")
 		.append(
-			MWS.makeMath(res.data.review.body)
-			//TODO: Render more properties here
-		)
+
+			"<strong>Author(s): </strong>"+xhtml_join(res.data.review.aunot.author)+" <br />", 
+			"<strong>Class: </strong>"+res.data.class+" <br />",
+			"<strong>Doctype: </strong>"+res.data.doctype+" <br />", 
+			"<strong>Keywords: </strong>"+xhtml_join(res.data.keywords)+" <br />", 
+			"<strong>Language: </strong>"+res.data.language+" <br />", 
+			"<strong>Published: </strong>"+res.data.review.published+" <br />", 
+
+			res.data.review.body
+		); 
 
 		return $("<div>").addClass("panel panel-default")
 		.append(
@@ -316,7 +342,7 @@ MWS.gui = {
 			$("<div>")
 			.addClass("panel-collapse collapse")
 			.attr("id", "resultId"+i)
-			.append(body)
+			.append(MWS.makeMath(body))
 		); 
 	}, 
 
