@@ -277,7 +277,7 @@ MWS.gui = {
 		}
 
 		var start = pageId * MWS.config.pagination_pagesize; 
-		var end = Math.min(start + MWS.config.pagination_pagesize, res.count) + 1; 
+		var end = Math.min(start + MWS.config.pagination_pagesize, res.count); 
 		
 		var $resdiv = $(document.createElement("div")).attr("id", "resultsdiv"); 
 
@@ -291,7 +291,7 @@ MWS.gui = {
 			"Showing result(s) ", 
 			$(document.createElement("span")).addClass("badge").text(start + 1), 
 			" - ", 
-			$(document.createElement("span")).addClass("badge").text(end - 1), 
+			$(document.createElement("span")).addClass("badge").text(end), 
 			" of ", 
 			$(document.createElement("span")).addClass("badge").text(res.count), 
 			"<br />", 
@@ -308,7 +308,7 @@ MWS.gui = {
 			counter
 		)
 
-		res(start, end, function(arr){
+		res(start, end-start, function(arr){
 			$resdiv.empty(); 
 			for(var i=0;i<arr.length;i++){
 				$resdiv.append(MWS.gui.renderResult(arr[i], i))
