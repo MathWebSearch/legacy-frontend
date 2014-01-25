@@ -152,19 +152,28 @@ MWS.gui = {
 			return; 
 		}
 
+		$("#results")
+		.empty()
+		.append(
+			$(document.createElement("span"))
+			.css("color", "gray")
+			.text("Querying server, please wait ...")
+		)
+		
+
 		var myQuery = new MWS.query(text, math); //create a new query
 
 		myQuery.getAll(function(res){
 			MWS.gui.renderSearchResults(res, 0); 
 		}, function(){
-			MWS.gui.renderSearchFailure("Unable to search on the server. "); 
+			MWS.gui.renderSearchFailure("Unable to search, please check your connection and try again. "); 
 		}); 
 	}, 
 	"renderSearchResults": function(res, pageId){
 		//render the search results
 		var $res = $("#results").empty(); 
 
-		var page_max = res.length / MWS.config.pagination_pagesize; //max page number
+		var page_max = res.count / MWS.config.pagination_pagesize; //max page number
 
 		if(page_max % 1 !== 0){
 			page_max = Math.ceil(page_max); 
@@ -252,13 +261,15 @@ MWS.gui = {
 		}
 
 		var start = pageId * MWS.config.pagination_pagesize; 
-		var end = Math.min(start + MWS.config.pagination_pagesize, res.length); 
+		var len = Math.min(start + MWS.config.pagination_pagesize, res.length) + 1; 
 		
 		var $resdiv = $(document.createElement("div")).attr("id", "resultsdiv"); 
 
-		for(var i=start;i<end;i++){
-			$resdiv.append(MWS.gui.renderResult(res[i], i))
-		}
+		$resdiv.append(
+			$(document.createElement("span"))
+			.css("color", "gray")
+			.text("retrieving results, please wait ...")
+		)
 
 		$res.append(
 			pagination, 
@@ -266,8 +277,17 @@ MWS.gui = {
 			pagination.clone(true)
 		)
 
-		$resdiv.children().eq(0).find(".collapse").eq(0).addClass("in"); 
-		$resdiv.collapse(); 
+		res(start, len, function(arr){
+			$resdiv.empty(); 
+			for(var i=0;i<arr.length;i++){
+				$resdiv.append(MWS.gui.renderResult(arr[i], i))
+			}
+
+			$resdiv.children().eq(0).find(".collapse").eq(0).addClass("in"); 
+			$resdiv.collapse(); 
+		}, function(){
+			MWS.gui.renderSearchFailure("Failed to retrieve results. Check your network connection and try again. "); 
+		}); 
 
 	}, 
 

@@ -19,7 +19,7 @@
 
 			<form role="form" id="query-form" action="/">
 				<div class="input-group">
-				<input class="form-control" name="query-text" id="query-text" placeholder="Search Text" value="Horn"/>
+				<input class="form-control" name="query-text" id="query-text" placeholder="Search Text" value=""/>
 					<span class="input-group-btn">
 						<button type="button" class="btn btn-default" id="start-search">Search</button>
 					</span>
@@ -29,12 +29,11 @@
 
 				<div class="row">
 					<div class="col-md-12" id="math-preview-div">
-						<input class="form-control" name="query-math" id="query-math" placeholder="Search LaTeX-Style Math" value="&lt;m:ci&gt;f&lt;/m:ci&gt;"/>
+						<input class="form-control" name="query-math" id="query-math" placeholder="Search LaTeX-Style Math" value="?a + ?b"/>
 					</div>
 
 					<div class="hidden" id="math-preview">
-						Pretend there is math previewed here :); <br />
-						(will be implemented later)
+						Nothing here yet. 
 					</div>
 				</div>
 
@@ -43,10 +42,16 @@
 			<br />
 
 			<div class="container">
-				<div id="results">There will be results here</div>
+				<div id="results">There will be some informative text here. </div>
 			</div>
 		</div>
 	</div>
+
+	<br />
+
+	<footer class="footer">
+		&#169; The KWARC group 2014
+	</footer>
 
 
 	<script src="libs/jquery/jquery.js"></script>

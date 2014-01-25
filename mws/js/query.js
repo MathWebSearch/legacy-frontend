@@ -63,49 +63,89 @@ MWS.query = function(text, math){
 		return res; 
 	}
 
+	var make_proper_entry = function(hit){
+		var xhtml = $(jQuery.parseXML(hit._source.xhtml)); 
+
+		return {
+			"id": hit._id, 
+			"index": hit._index, 
+			"score": hit._score, 
+			"type": hit.type, 
+			"data": {
+				"language": xhtml.find(".language").text(), 
+				"class": xhtml.find(".class").text(), 
+				"keywords": split_xhtml(xhtml.find(".keywords")), 
+				"doctype": xhtml.find(".doctype").text(), 
+				"review": {
+					"aunot": {
+						"author": split_xhtml(xhtml.find(".review > .aunot > .author")), 
+						"number": parseInt(xhtml.find(".review > .aunot > .number").text()), 
+					}, 
+					
+					"title": xhtml.find(".review > .title").get(0), 
+					"body": xhtml.find(".review > .review-body").get(0), 
+					"reviewer": split_xhtml(xhtml.find(".review > .reviewer")), 
+					"published": parseInt(xhtml.find(".review > .published").text()),
+				}, 
+			}, 
+			//"raw_result": xhtml.get(0) //the raw result; disabled
+		}; 
+	}; 
+
 	this.getAll = function(callback, callback_fail){
 		var callback = (typeof callback == "function")?callback:function(){}; 
 		var callback_fail = (typeof callback_fail == "function")?callback:function(){}; 
 
-		get(0, 0, function(data){
-			var count = data.hits.total || 0; 
-			get(0, count, function(data){
-				var res = [];  
-				var hits = data.hits.hits; 
-				for(var i=0;i<hits.length;i++){
-					var hit = hits[i]; 
-					
-					//split xhtml
-					var xhtml = $(jQuery.parseXML(hit._source.xhtml)); 
 
-					res.push({
-						"id": hit._id, 
-						"index": hit._index, 
-						"score": hit._score, 
-						"type": hit.type, 
-						"data": {
-							"language": xhtml.find(".language").text(), 
-							"class": xhtml.find(".class").text(), 
-							"keywords": split_xhtml(xhtml.find(".keywords")), 
-							"doctype": xhtml.find(".doctype").text(), 
-							"review": {
-								"aunot": {
-									"author": split_xhtml(xhtml.find(".review > .aunot > .author")), 
-									"number": parseInt(xhtml.find(".review > .aunot > .number").text()), 
-								}, 
-								
-								"title": xhtml.find(".review > .title").get(0), 
-								"body": xhtml.find(".review > .review-body").get(0), 
-								"reviewer": split_xhtml(xhtml.find(".review > .reviewer")), 
-								"published": parseInt(xhtml.find(".review > .published").text()),
-							}, 
-						}, 
-						//"raw_result": xhtml.get(0) //the raw result; disabled
-					}); 
+		get(0, 0, function(data){
+			var cache = {}; 
+
+			var count = data.hits.total || 0; 
+
+			var res = function(from, len, cb, cb_fail){
+				var ret = []; 
+
+				if(len <= 0){
+					return cb([]); //ok, we have nothing to return 
 				}
 
-				callback(res); 
-			}, callback_fail); 
+				var iter = function(i, stop){
+
+					if(i>=len){
+						return cb(ret); 
+					}
+
+					var here = from + i; 
+					if(cache.hasOwnProperty("res_"+here)){
+						//is in local cache
+						ret.push(cache["res_"+here]); 
+						return iter(i+1); 
+					} else {
+						if(!stop && here <= count){
+							//retrieve the entries if we are not above the length
+							get(here, len-i, function(data){; //get the remaining entries
+								var hits = data.hits.hits; 
+
+								for(var j=0;j<hits.length;j++){
+									cache["res_"+(here+j)] = make_proper_entry(hits[j]); 
+								}
+
+								iter(i, true); 
+							}); 
+						} else {
+							iter(i+1); 
+						}
+					}
+
+				}; 
+
+				iter(0); 
+			}; 
+
+			res.count = count; 
+
+
+			callback(res);
 		}, callback_fail); 
 	}
 }
