@@ -7,7 +7,7 @@ MWS.query = function(text, math){
 
 	this._cached = false; 
 
-	var get = function(start, size, callback){
+	var get = function(start, size, callback, callback_fail){
 		if(arguments.length == 1){
 			var callback = start; 
 			var start = 0; 
@@ -18,20 +18,30 @@ MWS.query = function(text, math){
 			var callback = function(){}; //Nothing
 		}
 
+		if(typeof callback_fail !== "function"){
+			var callback_fail = function(){}; //Nothing
+		}
+
 		var data = {
 			"text": me._text, 
 			"math": me._math, 
 			"from": start, 
 			"size": size
 		}; 
-
-		$.ajax({
-		    type: 'GET',
-		    url: "http://opal.eecs.jacobs-university.de:8888/",
-		    data: data
-		}).done(function(data) {
-		    callback.call(me, data); 
-		})
+		try{
+			$.ajax({
+			    type: 'GET',
+			    url: MWS.config.mws_query_url,
+				data: data
+			}).done(function(data) {
+			    callback.call(me, data); 
+			}).fail(function(){
+				callback_fail.call(me); 
+			}); 
+		} catch(e){
+			callback_fail.call(me); 
+		}
+		
 	}
 
 	var split_xhtml = function(node){
@@ -53,9 +63,9 @@ MWS.query = function(text, math){
 		return res; 
 	}
 
-	this.getAll = function(callback){
-		var callback = (typeof callback == "function")?callback:function(d){console.log(d); }; 
-
+	this.getAll = function(callback, callback_fail){
+		var callback = (typeof callback == "function")?callback:function(){}; 
+		var callback_fail = (typeof callback_fail == "function")?callback:function(){}; 
 
 		get(0, 0, function(data){
 			var count = data.hits.total || 0; 
@@ -95,7 +105,7 @@ MWS.query = function(text, math){
 				}
 
 				callback(res); 
-			}); 
-		}); 
+			}, callback_fail); 
+		}, callback_fail); 
 	}
 }

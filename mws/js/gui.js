@@ -1,39 +1,135 @@
 MWS.gui = {
 	"init": function(){
-		$(document.getElementById("start-search")).click(function(){
+		
+		var btn = $(document.getElementById("start-search")).click(function(){
 			MWS.gui.renderMathSearchText(function(){
 				MWS.gui.performSearch(); 
 			}); 
 		}); 
 
-		$(document.getElementById("query-math")).on("keyup input paste", function() {
+		$(document.getElementById("query-form")).submit(function(){
+			window.setTimeout(function(){btn.click(); }, 100);
+			return false; 
+		})
+
+		$(document.getElementById("query-math")).on("keyup input paste", debounce(function() {
 			MWS.gui.renderMathSearchText(); 
-		});
+
+			return false; 
+		}, MWS.config.latexml_debounce_interval));
 	}, 
 
 	"renderMathSearchText": function(callback){
+		var callback = (typeof callback == "function")?callback:function(){}; 
+
 		var mathpreview = $(document.getElementById("math-preview")); 
 		var mathpreviewdiv = $(document.getElementById("math-preview-div")); 
 
 		var query = $(document.getElementById("query-math")).val(); 
 
-		mathpreview.data("actualquery", query); //save actual data
-
-		if(query == ""){
-			//empty; hide the preview
+		var hide = function(){
 			mathpreviewdiv.addClass("col-md-12").removeClass("col-md-6"); 
 			mathpreview.addClass("hidden").removeClass("col-md-6"); 
-			
-		} else {
-			//show the preview
+		}
+
+		var show = function(){
 			mathpreview.removeClass("hidden").addClass("col-md-6"); 
 			mathpreviewdiv.removeClass("col-md-12").addClass("col-md-6"); 
 		}
 
-		if(typeof callback == "function"){
+		if(query == ""){
+			//empty; hide the preview
+			hide(); 
+			mathpreview.data("runquery", true); 
+
 			callback(); 
+		} else {
+			//show the preview
+			if(MWS.config.latexml_enable_preview){
+				//request and render MathML
+				show(); 
+				mathpreview
+				.data("runquery", false)
+				.empty()
+				.append(
+					$(document.createElement("span"))
+					.css("color", "gray")
+					.text("Rendering MathML, please wait ...")
+				); 
+
+				var fail = function(msg){
+					mathpreview
+					.empty()
+					.append(
+						$(document.createElement("div"))
+						.addClass("alert alert-danger alert-nopad")
+						.text("Unable to render MathML: "+msg+" ")
+						.append(MWS.config.latexml_allow_disable?
+							(
+								$(document.createElement("a"))
+								.attr("href", "#")
+								.click(function(){ 
+									try{
+										MWS.config.latexml_enable_preview = false; 
+										MWS.gui.renderMathSearchText(); 
+									} catch(e){}
+									return false; 
+								})
+								.addClass("alert-link")
+								.text("Click to disable preview. ")
+							):""
+						)
+					);
+				};
+
+				MWS.LaTexML(query, function(pres, content){
+
+					MWS.makeMath(
+						mathpreview.
+						empty()
+						.html("<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>" + pres + "</math>")
+						.get(0)
+					); 
+
+					mathpreview
+					.data("actualquery", content)
+					.data("runquery", true); 
+
+					callback(); 
+					
+				}, function(msg, data){
+					fail(msg); 
+
+					mathpreview
+					.data("runquery", false); 
+				})
+
+			} else {
+				hide(); 
+
+				if(MWS.config.latexml_show_warning_message){
+					mathpreview.removeClass("hidden").addClass("col-md-6"); 
+					mathpreviewdiv.removeClass("col-md-12").addClass("col-md-6"); 
+
+					mathpreview
+					.empty()
+					.append(
+						$(document.createElement("div"))
+						.addClass("alert alert-warning alert-nopad")
+						.text("Preview is disabled in settings. Please remember to enter Content MathML. ")
+					); 
+				}
+				
+
+				mathpreview
+				.data("actualquery", query)
+				.data("runquery", true); //save actual data
+
+				callback(); 
+			}
+			
 		}
-	},
+	}, 
 
 	"getSearchText": function(){
 		return $(document.getElementById("query-text")).val(); 
@@ -43,7 +139,7 @@ MWS.gui = {
 		var mathpreview = $(document.getElementById("math-preview")); 
 		var query = $(document.getElementById("query-math")).val(); 
 		if(query == ""){return ""; }
-		if(mathpreview.is(":hidden")){return false; } else {return mathpreview.data("actualquery"); }
+		return (mathpreview.data("runquery"))?mathpreview.data("actualquery"):false;
 	}, 
 
 	"performSearch": function(){
@@ -60,7 +156,9 @@ MWS.gui = {
 
 		myQuery.getAll(function(res){
 			MWS.gui.renderSearchResults(res, 0); 
-		})
+		}, function(){
+			MWS.gui.renderSearchFailure("Unable to search on the server. "); 
+		}); 
 	}, 
 	"renderSearchResults": function(res, pageId){
 		//render the search results

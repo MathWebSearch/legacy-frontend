@@ -1,11 +1,15 @@
-MWS.canMathML = undefined; 
+MWS.useMathJax = undefined; 
 
 (function(){
 	//check if we need MathML
 	var agent = navigator.userAgent;
-	MWS.canMathML = ((agent.indexOf('Gecko') > -1) && (agent.indexOf('KHTML') === -1) || agent.match(/MathPlayer/) );
+	MWS.useMathJax = !((agent.indexOf('Gecko') > -1) && (agent.indexOf('KHTML') === -1) || agent.match(/MathPlayer/) );
 
-	if(!MWS.canMathML){
+	if(MWS.config.mathjax_force){
+		MWS.useMathJax = true; 
+	}
+
+	if(MWS.useMathJax){
 		$.holdReady(true); //we can not do MathML => load MathJax
 		
 		loadExternalJS(
@@ -33,7 +37,7 @@ MWS.canMathML = undefined;
 
 MWS.makeMath = function($element){
 	var $element = $($element); 
-	if(!MWS.canMathML){
+	if(MWS.useMathJax){
 		//we have MathJax loaded
 		//check everything here for MathML (Presentation)
 		//and add it to the MathJax Quenue

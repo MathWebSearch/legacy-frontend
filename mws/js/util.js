@@ -198,3 +198,48 @@ var loadExternalCSS = function(url, callback, scope, preLoadHack){
     }
 
 }
+
+/*
+    Resolves a relative url
+    @param url  Url to resolve
+    @param base Optional. Base url to use. 
+    @param isDir    Optional. If set to true, will return a directory name ending with a slash. 
+*/
+var resolve = function(url, base, isDir){
+ 
+    var resolveWithBase = false; 
+    var baseUrl, oldBase, newBase; 
+ 
+    if(typeof base == "string"){
+        resolveWithBase = true; 
+        baseUrl = arguments.callee(base, true); 
+        oldBase = jQuery("base").detach(); 
+        newBase = jQuery("<base>").attr("href", baseUrl).appendTo("head"); 
+    }
+ 
+    var el= document.createElement('div');
+    el.innerHTML= '<a href="'+jQuery('<span/>').text(url).html()+'">x</a>';
+    var url = el.firstChild.href;
+   
+    if(resolveWithBase){
+        newBase.remove(); 
+        oldBase.appendTo("head"); 
+    }
+ 
+    if( (base === true || isDir === true ) && url[url.length - 1] != "/"){url = url + "/"; }
+ 
+    return url; 
+}
+
+ //from: http://remysharp.com/2010/07/21/throttling-function-calls/
+function debounce(fn, delay, def) {
+    var timer = null;
+    return function () {
+        var context = this, args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            fn.apply(context, args);
+        }, delay);
+        return def; 
+    };
+}
