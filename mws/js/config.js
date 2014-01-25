@@ -4,6 +4,7 @@ MWS.config = {
 	"pagination_surr": 2, //how many pages to show each direction around the current page
 
 	"force_query_params": true, //forcibly show query parameters for each search
+	"expand_first_result": true, //automatically open the first result on every page
 
 	"mws_query_url": //URL to put questions to
 		"http://opal.eecs.jacobs-university.de:8888/", 

@@ -277,7 +277,7 @@ MWS.gui = {
 		}
 
 		var start = pageId * MWS.config.pagination_pagesize; 
-		var len = Math.min(start + MWS.config.pagination_pagesize, res.length) + 1; 
+		var end = Math.min(start + MWS.config.pagination_pagesize, res.count) + 1; 
 		
 		var $resdiv = $(document.createElement("div")).attr("id", "resultsdiv"); 
 
@@ -291,7 +291,7 @@ MWS.gui = {
 			"Showing result(s) ", 
 			$(document.createElement("span")).addClass("badge").text(start + 1), 
 			" - ", 
-			$(document.createElement("span")).addClass("badge").text(start + len), 
+			$(document.createElement("span")).addClass("badge").text(end - 1), 
 			" of ", 
 			$(document.createElement("span")).addClass("badge").text(res.count), 
 			"<br />", 
@@ -308,14 +308,16 @@ MWS.gui = {
 			counter
 		)
 
-		res(start, len, function(arr){
+		res(start, end, function(arr){
 			$resdiv.empty(); 
 			for(var i=0;i<arr.length;i++){
 				$resdiv.append(MWS.gui.renderResult(arr[i], i))
 			}
 
-			$resdiv.children().eq(0).find(".collapse").eq(0).addClass("in"); 
-			$resdiv.collapse(); 
+			if(MWS.config.expand_first_result){
+				$resdiv.children().eq(0).find(".collapse").eq(0).addClass("in"); 
+				$resdiv.collapse(); 
+			}
 		}, function(){
 			MWS.gui.renderSearchFailure("Failed to retrieve results. Check your network connection and try again. "); 
 		}); 
