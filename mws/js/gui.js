@@ -353,12 +353,13 @@ MWS.gui = {
 		var body = $("<div>").addClass("panel-body").css("text-align", "left")
 		.append(
 			$(document.createElement("a")).attr("href", link).attr("target", "_blank").text(link), " <br />", 
+			"<strong class='thema-ignore'>Title: </strong>"+res.data.review.title+" <br />", 
 			"<strong class='thema-ignore'>Author(s): </strong>"+xhtml_join(res.data.review.aunot.author)+" <br />", 
+			"<strong class='thema-ignore'>Published: </strong>"+res.data.review.published+" <br />", 
 			"<strong class='thema-ignore'>Class: </strong>"+res.data.class+" <br />",
 			"<strong class='thema-ignore'>Doctype: </strong>"+res.data.doctype+" <br />", 
 			"<strong class='thema-ignore'>Keywords: </strong>"+xhtml_join(res.data.keywords)+" <br />", 
 			"<strong class='thema-ignore'>Language: </strong>"+res.data.language+" <br />", 
-			"<strong class='thema-ignore'>Published: </strong>"+res.data.review.published+" <br />", 
 
 			bdyhtml
 		); 
@@ -414,4 +415,4 @@ MWS.gui = {
 		//show about dialog
 		alert("Unimplemented! "); 
 	}
-}; 
+};
