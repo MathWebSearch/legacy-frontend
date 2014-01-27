@@ -324,7 +324,7 @@ MWS.gui = {
 
 	}, 
 
-	"renderResult": function(res, i){
+	"renderResult": function(res, id){
 		//render a single result here!
 
 		var xhtml_join = function(arr){
@@ -348,18 +348,37 @@ MWS.gui = {
 
 		var link = MWS.config.result_link_prefix + res.data.number + MWS.config.result_link_suffix; 
 
+		var bdyhtml = $(res.data.review.body); 
+
 		var body = $("<div>").addClass("panel-body").css("text-align", "left")
 		.append(
 			$(document.createElement("a")).attr("href", link).attr("target", "_blank").text(link), " <br />", 
-			"<strong>Author(s): </strong>"+xhtml_join(res.data.review.aunot.author)+" <br />", 
-			"<strong>Class: </strong>"+res.data.class+" <br />",
-			"<strong>Doctype: </strong>"+res.data.doctype+" <br />", 
-			"<strong>Keywords: </strong>"+xhtml_join(res.data.keywords)+" <br />", 
-			"<strong>Language: </strong>"+res.data.language+" <br />", 
-			"<strong>Published: </strong>"+res.data.review.published+" <br />", 
+			"<strong class='thema-ignore'>Author(s): </strong>"+xhtml_join(res.data.review.aunot.author)+" <br />", 
+			"<strong class='thema-ignore'>Class: </strong>"+res.data.class+" <br />",
+			"<strong class='thema-ignore'>Doctype: </strong>"+res.data.doctype+" <br />", 
+			"<strong class='thema-ignore'>Keywords: </strong>"+xhtml_join(res.data.keywords)+" <br />", 
+			"<strong class='thema-ignore'>Language: </strong>"+res.data.language+" <br />", 
+			"<strong class='thema-ignore'>Published: </strong>"+res.data.review.published+" <br />", 
 
-			res.data.review.body
+			bdyhtml
 		); 
+
+		res.text.map(function(m){
+			body.highlight(m);
+		});
+		 
+
+		var math_hits = res.math_hits; 
+
+		for(var i=0;i<math_hits.length;i++){
+			var mhit = math_hits[i]; 
+			var elem = MWS.FHL.getElementByXMLId(mhit.id, bdyhtml[0]); 
+			elem = MWS.FHL.getElementBySimpleXPath(mhit.xpath, elem); 
+
+			if(typeof elem !== "undefined"){
+				elem.setAttribute("class", "math-highlight");  
+			}
+		}
 
 		return $("<div>").addClass("panel panel-default")
 		.append(
@@ -369,14 +388,14 @@ MWS.gui = {
 					$("<a>").attr({
 						"data-toggle": "collapse", 
 						"data-parent": "#resultsdiv", 
-						"href": "#resultId"+i
+						"href": "#resultId"+id
 					})
 					.append(MWS.makeMath(res.data.review.title))
 				)
 			), 
 			$("<div>")
 			.addClass("panel-collapse collapse")
-			.attr("id", "resultId"+i)
+			.attr("id", "resultId"+id)
 			.append(MWS.makeMath(body))
 		); 
 	}, 

@@ -85,6 +85,7 @@ MWS.query = function(text, math){
 					"published": parseInt(xhtml.find(".review > .published").text()),
 				}, 
 			}, 
+			"text": hit.text, 
 			"math_hits": hit.math_ids.map(function(m){return {"id": m.url.split("#")[1], "xpath": m.xpath};})
 		}; 
 	}; 
@@ -116,7 +117,6 @@ MWS.query = function(text, math){
 					if(cache.hasOwnProperty("res_"+here)){
 						//is in local cache
 						ret.push(cache["res_"+here]); 
-						console.log(cache["res_"+here]); 
 						return iter(i+1); 
 					} else {
 						if(!stop && here <= count){
