@@ -7,7 +7,7 @@ MWS.config = {
 	"expand_first_result": true, //automatically open the first result on every page
 
 	"mws_query_url": //URL to put questions to
-		"http://opal.eecs.jacobs-university.de:8889/", 
+		resolve("php/tema_proxy.php"),
 
 	"mathjax_force": false, //force to use MathJax
 	"mathjax_cdn_url": //MathJax CDN
@@ -21,8 +21,7 @@ MWS.config = {
 	"latexml_show_warning_message": true, //show the warning message if latexml is disabled
 	"latexml_debounce_interval": 250, // debouncing interval in ms
 	"latexml_url": //LaTexML URL
-		"http://latexml.mathweb.org/convert", //use this one directly
-		// resolve("php/latexml_proxy.php"), //use this one if you want to proxy all the traffic
+		resolve("php/latexml_proxy.php"),
 };
 
 //DO NOT CHANGE CODE BELOW
