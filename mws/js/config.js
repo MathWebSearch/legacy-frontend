@@ -7,11 +7,14 @@ MWS.config = {
 	"expand_first_result": true, //automatically open the first result on every page
 
 	"mws_query_url": //URL to put questions to
-		"http://opal.eecs.jacobs-university.de:8888/", 
+		"http://opal.eecs.jacobs-university.de:8889/", 
 
 	"mathjax_force": false, //force to use MathJax
 	"mathjax_cdn_url": //MathJax CDN
 		"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", 
+
+	"result_link_prefix": "http://zbmath.org/?q=an:", //Prefix for result links
+	"result_link_suffix": "", //Suffix for result links
 
 	"latexml_enable_preview": true, //enable preview (if false, you have to enter content mathml by hand)
 	"latexml_allow_disable": true, //can the user disable latexml support if it fails for some reason. (ignored if force_query_params is true)

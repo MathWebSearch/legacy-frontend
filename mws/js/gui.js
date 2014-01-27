@@ -346,9 +346,11 @@ MWS.gui = {
 			return div.html(); 
 		}
 
+		var link = MWS.config.result_link_prefix + res.data.number + MWS.config.result_link_suffix; 
+
 		var body = $("<div>").addClass("panel-body").css("text-align", "left")
 		.append(
-
+			$(document.createElement("a")).attr("href", link).attr("target", "_blank").text(link), " <br />", 
 			"<strong>Author(s): </strong>"+xhtml_join(res.data.review.aunot.author)+" <br />", 
 			"<strong>Class: </strong>"+res.data.class+" <br />",
 			"<strong>Doctype: </strong>"+res.data.doctype+" <br />", 

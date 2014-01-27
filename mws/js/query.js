@@ -44,6 +44,7 @@ MWS.query = function(text, math){
 		
 	}
 
+
 	var split_xhtml = function(node){
 		var res = []; 
 
@@ -64,14 +65,10 @@ MWS.query = function(text, math){
 	}
 
 	var make_proper_entry = function(hit){
-		var xhtml = $(jQuery.parseXML(hit._source.xhtml)); 
-
+		var xhtml = $(jQuery.parseXML(hit.xhtml)); 
 		return {
-			"id": hit._id, 
-			"index": hit._index, 
-			"score": hit._score, 
-			"type": hit.type, 
 			"data": {
+				"number": xhtml.find(".number").text(), 
 				"language": xhtml.find(".language").text(), 
 				"class": xhtml.find(".class").text(), 
 				"keywords": split_xhtml(xhtml.find(".keywords")), 
@@ -88,7 +85,7 @@ MWS.query = function(text, math){
 					"published": parseInt(xhtml.find(".review > .published").text()),
 				}, 
 			}, 
-			//"raw_result": xhtml.get(0) //the raw result; disabled
+			"math_hits": hit.math_ids.map(function(m){return {"id": m.url.split("#")[1], "xpath": m.xpath};})
 		}; 
 	}; 
 
@@ -100,7 +97,7 @@ MWS.query = function(text, math){
 		get(0, 0, function(data){
 			var cache = {}; 
 
-			var count = data.hits.total || 0; 
+			var count = data.total || 0; 
 
 			var res = function(from, len, cb, cb_fail){
 				var ret = []; 
@@ -119,12 +116,13 @@ MWS.query = function(text, math){
 					if(cache.hasOwnProperty("res_"+here)){
 						//is in local cache
 						ret.push(cache["res_"+here]); 
+						console.log(cache["res_"+here]); 
 						return iter(i+1); 
 					} else {
 						if(!stop && here <= count){
 							//retrieve the entries if we are not above the length
 							get(here, len-i, function(data){; //get the remaining entries
-								var hits = data.hits.hits; 
+								var hits = data.hits; 
 
 								for(var j=0;j<hits.length;j++){
 									cache["res_"+(here+j)] = make_proper_entry(hits[j]); 
