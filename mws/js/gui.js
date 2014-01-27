@@ -374,7 +374,7 @@ MWS.gui = {
 		for(var i=0;i<math_hits.length;i++){
 			var mhit = math_hits[i]; 
 			var elem = MWS.FHL.getElementByXMLId(mhit.id, bdyhtml[0]); 
-			elem = MWS.FHL.getElementBySimpleXPath(mhit.xpath, elem); 
+			elem = MWS.FHL.getPresentation(mhit.xpath, elem); 
 
 			if(typeof elem !== "undefined"){
 				elem.setAttribute("class", "math-highlight");  
