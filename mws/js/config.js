@@ -3,11 +3,11 @@ MWS.config = {
 	"pagination_pagesize": 5, //entries per page
 	"pagination_surr": 2, //how many pages to show each direction around the current page
 
-	"force_query_params": true, //forcibly show query parameters for each search
-	"expand_first_result": true, //automatically open the first result on every page
+	"expand_first_result": false, //automatically open the first result on every page
 
 	"mws_query_url": //URL to put questions to
 		resolve("php/tema_proxy.php"),
+	"mws_warn_highlight": false, //warn about failed highlights
 
 	"mathjax_force": false, //force to use MathJax
 	"mathjax_cdn_url": //MathJax CDN

@@ -6,12 +6,8 @@ MWS.gui = {
 		}); 
 
 		$(document.getElementById("query-form")).submit(function(){
-			if(!MWS.config.force_query_params){
-				MWS.gui.runSearch();
-				return false; 
-			} else {
-				return true; 
-			}
+			MWS.gui.runSearch();
+			return false; 
 		})
 
 		$(document.getElementById("query-math")).on("keyup input paste", debounce(function() {
@@ -62,10 +58,15 @@ MWS.gui = {
 			mathpreviewdiv.removeClass("col-md-12").addClass("col-md-6"); 
 		}
 
+		if(mathpreview.data("last-render") == query){
+			return callback(); 
+		}
+
 		if(query == ""){
 			//empty; hide the preview
 			hide(); 
 			mathpreview.data("runquery", true); 
+			mathpreview.data("last-render", ""); 
 
 			callback(); 
 		} else {
@@ -118,7 +119,8 @@ MWS.gui = {
 
 					mathpreview
 					.data("actualquery", content)
-					.data("runquery", true); 
+					.data("runquery", true)
+					.data("last-render", query); 
 
 					callback(); 
 					
@@ -161,10 +163,14 @@ MWS.gui = {
 	}, 
 
 	"getSearchMath": function(){
-		var mathpreview = $(document.getElementById("math-preview")); 
-		var query = $(document.getElementById("query-math")).val(); 
+		var mathpreview = $(document.getElementById("math-preview"));  
+		var query = MWS.gui.getSearchMathQ();  
 		if(query == ""){return ""; }
 		return (mathpreview.data("runquery"))?mathpreview.data("actualquery"):false;
+	}, 
+
+	"getSearchMathQ": function(){
+		return $(document.getElementById("query-math")).val();
 	}, 
 
 	"performSearch": function(){
@@ -176,6 +182,10 @@ MWS.gui = {
 			MWS.gui.renderSearchFailure("Please wait for the math to finish rendering! "); 
 			return; 
 		}
+
+		window.history.pushState("", window.title, resolve(
+			"?query-text="+encodeURIComponent(text)+"&query-math="+encodeURIComponent(MWS.gui.getSearchMathQ())
+		)); 
 
 		$("#results")
 		.empty()
@@ -303,7 +313,7 @@ MWS.gui = {
 
 		var counter = $(document.createElement("div")).append(
 			"Showing result(s) ", 
-			$(document.createElement("span")).addClass("badge").text(start + 1), 
+			$(document.createElement("span")).addClass("badge").text((end == 0)?0:(start + 1)), 
 			" - ", 
 			$(document.createElement("span")).addClass("badge").text(end), 
 			" of ", 
@@ -373,7 +383,7 @@ MWS.gui = {
 		var body = $("<div>").addClass("panel-body").css("text-align", "left")
 		.append(
 			$(document.createElement("a")).attr("href", link).attr("target", "_blank").text(link), " <br />", 
-			"<strong class='thema-ignore'>Title: </strong>"+res.data.review.title+" <br />", 
+			"<strong class='thema-ignore'>Title: </strong>"+$(res.data.review.title).html()+" <br />", 
 			"<strong class='thema-ignore'>Author(s): </strong>"+xhtml_join(res.data.review.aunot.author)+" <br />", 
 			"<strong class='thema-ignore'>Published: </strong>"+res.data.review.published+" <br />", 
 			"<strong class='thema-ignore'>Class: </strong>"+res.data.class+" <br />",
@@ -384,23 +394,65 @@ MWS.gui = {
 			bdyhtml
 		); 
 
+		//text highlighting
 		res.text.map(function(m){
 			body.highlight(m);
 		});
-		 
 
+		var substs = []; 
+		 
+		//math highlighting
 		var math_hits = res.math_hits; 
 
 		for(var i=0;i<math_hits.length;i++){
-			var mhit = math_hits[i]; 
-			var elem = MWS.FHL.getElementByXMLId(mhit.id, bdyhtml[0]); 
-			elem = MWS.FHL.getPresentation(mhit.xpath, elem); 
+			try{
+				var mhit = math_hits[i]; 
+				var elem = MWS.FHL.getElementByXMLId(mhit.id, body[0]); 
+				elem = MWS.FHL.getPresentation(mhit.xpath, elem); 
 
-			if(typeof elem !== "undefined"){
-				elem.setAttribute("class", "math-highlight");  
+				if(typeof elem !== "undefined"){
+					elem.setAttribute("class", "math-highlight");  
+				}
+
+				var qvars = mhit.qvars; 
+
+				for(var j=0;j<qvars.length;j++){
+					var qvar = qvars[j]; 
+
+					elem = MWS.FHL.getElementByXMLId(mhit.id, body[0]);
+					elem = MWS.FHL.getPresentation(qvar.xpath, elem); 
+					if(typeof elem !== "undefined"){
+						$(
+							elem.setAttribute("class", "math-highlight-qvar")
+						);  
+					}
+				}
+			} catch(e){
+				if(MWS.config.mws_warn_highlight){
+					console.log("Unable to highlight MWS result: ", mhit); 
+				}
 			}
+			
 		}
 
+		//Lets make the title
+		var titleelem = $(document.createElement("span"));
+		
+		titleelem.append(
+			res.data.review.aunot.author[0]
+		)
+
+		if(res.data.review.aunot.author.length > 1){
+			titleelem.append(" [+ "+(res.data.review.aunot.author.length-1)+" more]"); 
+		}
+
+		titleelem.append(
+			" (", res.data.review.published, "): ", 
+			"<em>"+$(res.data.review.title).html()+"</em>"
+		);
+
+
+		//Create the element
 		return $("<div>").addClass("panel panel-default")
 		.append(
 			$("<div>").addClass("panel-heading").append(
@@ -411,7 +463,7 @@ MWS.gui = {
 						"data-parent": "#resultsdiv", 
 						"href": "#resultId"+id
 					})
-					.append(MWS.makeMath(res.data.review.title))
+					.append(MWS.makeMath(titleelem))
 				)
 			), 
 			$("<div>")
@@ -429,10 +481,5 @@ MWS.gui = {
 			$("<div>").text(msg)
 
 		)
-	}, 
-
-	"showInfoDialog": function(){
-		//show about dialog
-		alert("Unimplemented! "); 
 	}
 };
