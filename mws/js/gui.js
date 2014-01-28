@@ -10,6 +10,7 @@ MWS.gui = {
 				MWS.gui.runSearch();
 				return false; 
 			} else {
+				document.location.hash = ""; //remove the hash
 				return true; 
 			}
 		})
@@ -393,13 +394,18 @@ MWS.gui = {
 		var math_hits = res.math_hits; 
 
 		for(var i=0;i<math_hits.length;i++){
-			var mhit = math_hits[i]; 
-			var elem = MWS.FHL.getElementByXMLId(mhit.id, bdyhtml[0]); 
-			elem = MWS.FHL.getPresentation(mhit.xpath, elem); 
+			try{
+				var mhit = math_hits[i]; 
+				var elem = MWS.FHL.getElementByXMLId(mhit.id, body[0]); 
+				elem = MWS.FHL.getPresentation(mhit.xpath, elem); 
 
-			if(typeof elem !== "undefined"){
-				elem.setAttribute("class", "math-highlight");  
+				if(typeof elem !== "undefined"){
+					elem.setAttribute("class", "math-highlight");  
+				}
+			} catch(e){
+				console.log("Unable to highlight MWS result: ", mhit); 
 			}
+			
 		}
 
 		//Lets make the title
@@ -410,7 +416,7 @@ MWS.gui = {
 		)
 
 		if(res.data.review.aunot.author.length > 1){
-			titleelem.append(" [ + "+(res.data.review.aunot.author.length-1)+" more]"); 
+			titleelem.append(" [+ "+(res.data.review.aunot.author.length-1)+" more]"); 
 		}
 
 		titleelem.append(
@@ -419,7 +425,7 @@ MWS.gui = {
 		); 		
 
 
-
+		//Create the element
 		return $("<div>").addClass("panel panel-default")
 		.append(
 			$("<div>").addClass("panel-heading").append(
