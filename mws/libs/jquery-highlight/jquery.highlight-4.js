@@ -12,6 +12,7 @@ Johann Burkard
 <http://johannburkard.de>
 <mailto:jb@eaio.com>
 
+adapated for MWS
 */
 
 jQuery.fn.highlight = function(pat) {
@@ -26,6 +27,7 @@ jQuery.fn.highlight = function(pat) {
      var pos = node.data.toUpperCase().indexOf(pat);
 
      if (pos >= 0 && isWordEnd(node.data[pos-1]) && isWordEnd(node.data[pos+pat.length])) {
+      //we check that we only match the entire word
       var spannode = document.createElement('span');
       spannode.className = 'text-highlight';
       var middlebit = node.splitText(pos);

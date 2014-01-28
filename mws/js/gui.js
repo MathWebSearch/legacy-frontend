@@ -303,7 +303,7 @@ MWS.gui = {
 
 		var counter = $(document.createElement("div")).append(
 			"Showing result(s) ", 
-			$(document.createElement("span")).addClass("badge").text(start + 1), 
+			$(document.createElement("span")).addClass("badge").text((end == 0)?0:(start + 1)), 
 			" - ", 
 			$(document.createElement("span")).addClass("badge").text(end), 
 			" of ", 
@@ -373,7 +373,7 @@ MWS.gui = {
 		var body = $("<div>").addClass("panel-body").css("text-align", "left")
 		.append(
 			$(document.createElement("a")).attr("href", link).attr("target", "_blank").text(link), " <br />", 
-			"<strong class='thema-ignore'>Title: </strong>"+res.data.review.title+" <br />", 
+			"<strong class='thema-ignore'>Title: </strong>"+$(res.data.review.title).html()+" <br />", 
 			"<strong class='thema-ignore'>Author(s): </strong>"+xhtml_join(res.data.review.aunot.author)+" <br />", 
 			"<strong class='thema-ignore'>Published: </strong>"+res.data.review.published+" <br />", 
 			"<strong class='thema-ignore'>Class: </strong>"+res.data.class+" <br />",
@@ -384,11 +384,12 @@ MWS.gui = {
 			bdyhtml
 		); 
 
+		//text highlighting
 		res.text.map(function(m){
 			body.highlight(m);
 		});
 		 
-
+		//math highlighting
 		var math_hits = res.math_hits; 
 
 		for(var i=0;i<math_hits.length;i++){
@@ -401,6 +402,24 @@ MWS.gui = {
 			}
 		}
 
+		//Lets make the title
+		var titleelem = $(document.createElement("span"));
+		
+		titleelem.append(
+			res.data.review.aunot.author[0]
+		)
+
+		if(res.data.review.aunot.author.length > 1){
+			titleelem.append(" [ + "+(res.data.review.aunot.author.length-1)+" more]"); 
+		}
+
+		titleelem.append(
+			" (", res.data.review.published, "): ", 
+			$(res.data.review.title).html()
+		); 		
+
+
+
 		return $("<div>").addClass("panel panel-default")
 		.append(
 			$("<div>").addClass("panel-heading").append(
@@ -411,7 +430,7 @@ MWS.gui = {
 						"data-parent": "#resultsdiv", 
 						"href": "#resultId"+id
 					})
-					.append(MWS.makeMath(res.data.review.title))
+					.append(MWS.makeMath(titleelem))
 				)
 			), 
 			$("<div>")
@@ -429,10 +448,5 @@ MWS.gui = {
 			$("<div>").text(msg)
 
 		)
-	}, 
-
-	"showInfoDialog": function(){
-		//show about dialog
-		alert("Unimplemented! "); 
 	}
 };
