@@ -27,6 +27,15 @@ MWS.gui = {
 			$(document.getElementById("query-text")).val(query_text || "");
 			MWS.gui.runSearch(); 
 		}
+
+		if(document.location.hash !== ""){
+			MWS.init_page = parseInt(document.location.hash.substr(1)) - 1;
+
+			//something weird
+			if(MWS.init_page % 1 !== 0 || MWS.init_page <= 0){
+				MWS.init_page = undefined; 
+			}
+		}
 	}, 
 
 	"runSearch": function(){
@@ -189,6 +198,11 @@ MWS.gui = {
 		//render the search results
 		var $res = $("#results").empty(); 
 
+		if(typeof MWS.init_page !== "undefined"){
+			pageId = MWS.init_page; 
+			MWS.init_page = undefined; 
+		}
+
 		var page_max = res.count / MWS.config.pagination_pagesize; //max page number
 
 		if(page_max % 1 !== 0){
@@ -300,6 +314,12 @@ MWS.gui = {
 			" of ", 
 			$(document.createElement("span")).addClass("badge").text(page_max + 1)
 		)
+
+		var tmp = $("#"+(pageId + 1)).removeAttr("id"); 
+		document.location.hash = "#"+(pageId + 1); 
+		tmp.attr("id", (pageId + 1)); 
+
+
 
 		$res.append(
 			pagination, 
