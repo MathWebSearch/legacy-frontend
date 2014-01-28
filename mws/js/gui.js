@@ -389,6 +389,8 @@ MWS.gui = {
 		res.text.map(function(m){
 			body.highlight(m);
 		});
+
+		var substs = []; 
 		 
 		//math highlighting
 		var math_hits = res.math_hits; 
@@ -401,6 +403,20 @@ MWS.gui = {
 
 				if(typeof elem !== "undefined"){
 					elem.setAttribute("class", "math-highlight");  
+				}
+
+				var qvars = mhit.qvars; 
+
+				for(var j=0;j<qvars.length;j++){
+					var qvar = qvars[j]; 
+
+					elem = MWS.FHL.getElementByXMLId(mhit.id, body[0]);
+					elem = MWS.FHL.getPresentation(qvar.xpath, elem); 
+					if(typeof elem !== "undefined"){
+						$(
+							elem.setAttribute("class", "math-highlight-qvar")
+						);  
+					}
 				}
 			} catch(e){
 				if(MWS.config.mws_warn_highlight){
@@ -424,7 +440,7 @@ MWS.gui = {
 		titleelem.append(
 			" (", res.data.review.published, "): ", 
 			"<em>"+$(res.data.review.title).html()+"</em>"
-		); 		
+		);
 
 
 		//Create the element

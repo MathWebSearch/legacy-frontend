@@ -64,7 +64,7 @@ MWS.query = function(text, math){
 		return res; 
 	}
 
-	var make_proper_entry = function(hit){
+	var make_proper_entry = function(hit, qvars){
 		var xhtml = $(jQuery.parseXML(hit.xhtml)); 
 		return {
 			"data": {
@@ -86,7 +86,19 @@ MWS.query = function(text, math){
 				}, 
 			}, 
 			"text": hit.text, 
-			"math_hits": hit.math_ids.map(function(m){return {"id": m.url.split("#")[1], "xpath": m.xpath};})
+			"math_hits": hit.math_ids.map(function(m){
+				return {
+						"id": m.url.split("#")[1], 
+						"xpath": m.xpath, 
+						"qvars": qvars.map(function(q){
+							return {
+								"name": q.name, 
+								"xpath": m.xpath+q.xpath, 
+								"relpath": q.xpath
+							}
+						})
+				};
+			})
 		}; 
 	}; 
 
@@ -123,9 +135,8 @@ MWS.query = function(text, math){
 							//retrieve the entries if we are not above the length
 							get(here, len-i, function(data){; //get the remaining entries
 								var hits = data.hits; 
-
 								for(var j=0;j<hits.length;j++){
-									cache["res_"+(here+j)] = make_proper_entry(hits[j]); 
+									cache["res_"+(here+j)] = make_proper_entry(hits[j], data.qvars); 
 								}
 
 								iter(i, true); 
