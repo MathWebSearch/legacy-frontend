@@ -6,13 +6,8 @@ MWS.gui = {
 		}); 
 
 		$(document.getElementById("query-form")).submit(function(){
-			if(!MWS.config.force_query_params){
-				MWS.gui.runSearch();
-				return false; 
-			} else {
-				document.location.hash = ""; //remove the hash
-				return true; 
-			}
+			MWS.gui.runSearch();
+			return false; 
 		})
 
 		$(document.getElementById("query-math")).on("keyup input paste", debounce(function() {
@@ -63,10 +58,15 @@ MWS.gui = {
 			mathpreviewdiv.removeClass("col-md-12").addClass("col-md-6"); 
 		}
 
+		if(mathpreview.data("last-render") == query){
+			return callback(); 
+		}
+
 		if(query == ""){
 			//empty; hide the preview
 			hide(); 
 			mathpreview.data("runquery", true); 
+			mathpreview.data("last-render", ""); 
 
 			callback(); 
 		} else {
@@ -119,7 +119,8 @@ MWS.gui = {
 
 					mathpreview
 					.data("actualquery", content)
-					.data("runquery", true); 
+					.data("runquery", true)
+					.data("last-render", query); 
 
 					callback(); 
 					
@@ -162,10 +163,14 @@ MWS.gui = {
 	}, 
 
 	"getSearchMath": function(){
-		var mathpreview = $(document.getElementById("math-preview")); 
-		var query = $(document.getElementById("query-math")).val(); 
+		var mathpreview = $(document.getElementById("math-preview"));  
+		var query = MWS.gui.getSearchMathQ();  
 		if(query == ""){return ""; }
 		return (mathpreview.data("runquery"))?mathpreview.data("actualquery"):false;
+	}, 
+
+	"getSearchMathQ": function(){
+		return $(document.getElementById("query-math")).val();
 	}, 
 
 	"performSearch": function(){
@@ -177,6 +182,10 @@ MWS.gui = {
 			MWS.gui.renderSearchFailure("Please wait for the math to finish rendering! "); 
 			return; 
 		}
+
+		window.history.pushState("", window.title, resolve(
+			"?query-text="+encodeURIComponent(text)+"&query-math="+encodeURIComponent(MWS.gui.getSearchMathQ())
+		)); 
 
 		$("#results")
 		.empty()
