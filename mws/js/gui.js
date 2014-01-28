@@ -403,7 +403,9 @@ MWS.gui = {
 					elem.setAttribute("class", "math-highlight");  
 				}
 			} catch(e){
-				console.log("Unable to highlight MWS result: ", mhit); 
+				if(MWS.config.mws_warn_highlight){
+					console.log("Unable to highlight MWS result: ", mhit); 
+				}
 			}
 			
 		}
@@ -421,7 +423,7 @@ MWS.gui = {
 
 		titleelem.append(
 			" (", res.data.review.published, "): ", 
-			$(res.data.review.title).html()
+			"<em>"+$(res.data.review.title).html()+"</em>"
 		); 		
 
 
