@@ -457,7 +457,7 @@ MWS.gui = {
 						i++; 
 					})
 				}
-				$(this).text(is_on?"Hide subsitutions":"Show subsitutions")
+				$(this).text(is_on?"Show subsitutions":"Hide subsitutions"); 
 				is_on = !is_on;
 			});
 
