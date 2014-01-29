@@ -35,8 +35,8 @@ MWS.gui = {
 	}, 
 
 	"runSearch": function(){
-		MWS.gui.renderMathSearchText(function(){
-			MWS.gui.performSearch(); 
+		MWS.gui.renderMathSearchText(function(search_mathml){
+			MWS.gui.performSearch(search_mathml); 
 		});
 	},
 
@@ -59,20 +59,22 @@ MWS.gui = {
 		}
 
 		if(mathpreview.data("last-render") == query){
-			return callback(); 
+			return callback(mathpreview.data("last-mathml")); 
 		}
 
 		if(query == ""){
 			//empty; hide the preview
 			hide(); 
 			mathpreview.data("runquery", true); 
-			mathpreview.data("last-render", ""); 
+			mathpreview.data("last-render", "");
+			mathpreview.data("last-mathml", $([])); 
 
-			callback(); 
+			callback($([])); 
 		} else {
 			//show the preview
 			if(MWS.config.latexml_enable_preview){
 				//request and render MathML
+				
 				show(); 
 				mathpreview
 				.data("runquery", false)
@@ -108,21 +110,30 @@ MWS.gui = {
 					);
 				};
 
-				MWS.LaTexML(query, function(pres, content){
+				MWS.LaTexML(query, function(pres, content, search_mathml){
 
-					MWS.makeMath(
-						mathpreview.
+					var prespreview = mathpreview.
 						empty()
-						.html("<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>" + pres + "</math>")
-						.get(0)
-					); 
+						.html("<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>" + pres + "</math>"); 
+
+					//add a class instead
+					prespreview.find("*[mathcolor=red]").removeAttr("mathcolor").each(function(){
+						this.setAttribute("class", "math-highlight-qvar"); 
+					}); 
+
+					MWS.makeMath(prespreview.get(0)); 
+
+					search_mathml.find("*[mathcolor=red]").removeAttr("mathcolor").each(function(){
+						this.setAttribute("class", "math-highlight-qvar"); 
+					});
 
 					mathpreview
 					.data("actualquery", content)
 					.data("runquery", true)
-					.data("last-render", query); 
+					.data("last-render", query)
+					.data("last-mathml", search_mathml); 
 
-					callback(); 
+					callback(search_mathml); 
 					
 				}, function(msg, data){
 					fail(msg); 
@@ -152,7 +163,7 @@ MWS.gui = {
 				.data("actualquery", query)
 				.data("runquery", true); //save actual data
 
-				callback(); 
+				callback($([])); 
 			}
 			
 		}
@@ -173,7 +184,7 @@ MWS.gui = {
 		return $(document.getElementById("query-math")).val();
 	}, 
 
-	"performSearch": function(){
+	"performSearch": function(search_mathml){
 		var text = MWS.gui.getSearchText(); 
 		var math = MWS.gui.getSearchMath();
 		var latex = MWS.gui.getSearchMathQ();
@@ -204,12 +215,12 @@ MWS.gui = {
 		var myQuery = new MWS.query(text, math); //create a new query
 
 		myQuery.getAll(function(res){
-			MWS.gui.renderSearchResults(res, 0); 
+			MWS.gui.renderSearchResults(res, 0, search_mathml); 
 		}, function(){
 			MWS.gui.renderSearchFailure("Unable to search, please check your connection and try again. "); 
 		}); 
 	}, 
-	"renderSearchResults": function(res, pageId){
+	"renderSearchResults": function(res, pageId, search_mathml){
 		//render the search results
 		var $res = $("#results").empty(); 
 
@@ -268,7 +279,7 @@ MWS.gui = {
 
 
 
-		var c = function(p){var p = p; return function(){MWS.gui.renderSearchResults(res, p); return false; }}; 
+		var c = function(p){var p = p; return function(){MWS.gui.renderSearchResults(res, p, search_mathml); return false; }}; 
 		var a = function(text, rf){
 			var b = $(document.createElement("a")); 
 			b.attr("href", "#").text(text).attr("alt", text);
@@ -346,7 +357,7 @@ MWS.gui = {
 		res(start, end-start, function(arr){
 			$resdiv.empty(); 
 			for(var i=0;i<arr.length;i++){
-				$resdiv.append(MWS.gui.renderResult(arr[i], i))
+				$resdiv.append(MWS.gui.renderResult(arr[i], i, search_mathml, arr))
 			}
 
 			if(MWS.config.expand_first_result){
@@ -359,7 +370,7 @@ MWS.gui = {
 
 	}, 
 
-	"renderResult": function(res, id){
+	"renderResult": function(res, id, search_mathml, all_results){
 		//render a single result here!
 
 		var xhtml_join = function(arr){
@@ -394,10 +405,74 @@ MWS.gui = {
 			"<strong class='thema-ignore'>Class: </strong>"+res.data.class+" <br />",
 			"<strong class='thema-ignore'>Doctype: </strong>"+res.data.doctype+" <br />", 
 			"<strong class='thema-ignore'>Keywords: </strong>"+xhtml_join(res.data.keywords)+" <br />", 
-			"<strong class='thema-ignore'>Language: </strong>"+res.data.language+" <br />", 
-
-			bdyhtml
+			"<strong class='thema-ignore'>Language: </strong>"+res.data.language+" <br />"
 		); 
+
+		var qvar_names = []; 
+		var qvars = all_results.qvars; 
+
+		if(search_mathml.length > 0 && qvars.length > 0 && MWS.config.mws_highlight_colors.length > 0){
+			
+			for(var i=0;i<qvars.length;i++){
+				if(qvar_names.indexOf(qvars[i].name) == -1){ //push anything that isn't there yet
+					qvar_names.push(qvars[i].name); 
+				}
+				try{
+					MWS.FHL.getPresentation("/*[1]"+qvars[i].xpath, search_mathml.get(0))
+					.setAttribute("class", "math-highlight-qvar math-highlight-qvar-"+qvars[i].name);
+				} catch(e){
+					if(MWS.config.mws_warn_highlight){
+						console.log("Unable to highlight MWS qvar: ", qvars[i]); 
+					}
+				}	
+			}
+
+			 
+
+			var is_on = false; 
+			search_mathml = $("<div>").css("display", "inline").append(MWS.makeMath(search_mathml.clone())).addClass("hidden")
+
+			$("<button>").addClass("btn btn-default").text("Show substitutions").appendTo(body).click(function(){
+				search_mathml.get(0)
+				if(is_on){
+					//remove all the colors
+					search_mathml.addClass("hidden");
+					qvar_names.map(function(qvar){
+						
+						body.find(".math-highlight-qvar-"+qvar).css("color", "").each(function(){
+							//for native MathMl
+							this.setAttribute("class", "math-highlight-qvar math-highlight-qvar-"+qvar);
+							this.removeAttribute("mathcolor"); 
+						})
+						 
+					})
+				} else {
+					search_mathml.removeClass("hidden"); 
+					var i = 0; 
+					qvar_names.map(function(qvar){
+						body
+						.find(".math-highlight-qvar-"+qvar)
+						.css("color", MWS.config.mws_highlight_colors[i % MWS.config.mws_highlight_colors.length])
+						.each(function(){
+							//for native MathMl
+							this.setAttribute("mathcolor", MWS.config.mws_highlight_colors[i % MWS.config.mws_highlight_colors.length]);
+							this.setAttribute("class", "math-highlight-qvar-"+qvar); 
+						})
+						 
+						i++; 
+					})
+				}
+				$(this).text(is_on?"Show substitutions":"Hide substitutions"); 
+				is_on = !is_on;
+			});
+
+			body.append("  ", search_mathml)
+			.appendTo(body); 
+		} else {
+			body.append("<br />"); 
+		}
+
+		body.append(bdyhtml); 
 
 		//text highlighting
 		res.text.map(function(m){
@@ -427,9 +502,7 @@ MWS.gui = {
 					elem = MWS.FHL.getElementByXMLId(mhit.id, body[0]);
 					elem = MWS.FHL.getPresentation(qvar.xpath, elem); 
 					if(typeof elem !== "undefined"){
-						$(
-							elem.setAttribute("class", "math-highlight-qvar")
-						);  
+						elem.setAttribute("class", "math-highlight-qvar math-highlight-qvar-"+qvar.name); 
 					}
 				}
 			} catch(e){

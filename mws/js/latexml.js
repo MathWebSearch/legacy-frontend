@@ -12,7 +12,7 @@ MWS.LaTexML = function(tex, result_callback, error_callback){
 				var content = MWS.LaTexML.get_content_mathml(data.result);
 				var presentation = MWS.LaTexML.get_presentation_mathml(data.result);
 				if (content && presentation) {
-					result_callback(presentation, content);
+					result_callback(presentation, content, $(data.result));
 					return;
 				} else {
 					latexml_error = 'No MathML returned. ';

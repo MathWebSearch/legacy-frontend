@@ -8,6 +8,7 @@ MWS.config = {
 	"mws_query_url": //URL to put questions to
 		resolve("php/tema_proxy.php"),
 	"mws_warn_highlight": false, //warn about failed highlights
+	"mws_highlight_colors": ["blue", "green", "purple", "orange", "red"], //colors for show substitutions. Set to an empty array to disable. 
 
 	"mathjax_force": false, //force to use MathJax
 	"mathjax_cdn_url": //MathJax CDN
