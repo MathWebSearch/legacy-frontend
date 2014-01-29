@@ -427,7 +427,7 @@ MWS.gui = {
 			var is_on = false; 
 			search_mathml = $("<div>").css("display", "inline").append(MWS.makeMath(search_mathml.clone())).addClass("hidden")
 
-			$("<button>").addClass("btn btn-default").text("Show subsitutions").appendTo(body).click(function(){
+			$("<button>").addClass("btn btn-default").text("Show substitutions").appendTo(body).click(function(){
 				search_mathml.get(0)
 				if(is_on){
 					//remove all the colors
@@ -457,7 +457,7 @@ MWS.gui = {
 						i++; 
 					})
 				}
-				$(this).text(is_on?"Show subsitutions":"Hide subsitutions"); 
+				$(this).text(is_on?"Show substitutions":"Hide substitutions"); 
 				is_on = !is_on;
 			});
 
