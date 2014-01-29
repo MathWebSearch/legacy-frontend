@@ -8,6 +8,7 @@ MWS.config = {
 	"mws_query_url": //URL to put questions to
 		"http://opal.eecs.jacobs-university.de:8889/", 
 	"mws_warn_highlight": false, //warn about failed highlights
+	"mws_highlight_colors": ["blue", "red", "green"], //colors for show substitutions. Set to an empty array to disable. 
 
 	"mathjax_force": false, //force to use MathJax
 	"mathjax_cdn_url": //MathJax CDN

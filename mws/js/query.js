@@ -114,6 +114,7 @@ MWS.query = function(text, math){
 
 			var res = function(from, len, cb, cb_fail){
 				var ret = []; 
+				ret.qvars = data.qvars; 
 
 				if(len <= 0){
 					return cb([]); //ok, we have nothing to return 
