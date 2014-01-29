@@ -175,8 +175,8 @@ MWS.gui = {
 
 	"performSearch": function(){
 		var text = MWS.gui.getSearchText(); 
-		var math = MWS.gui.getSearchMath(); 
-
+		var math = MWS.gui.getSearchMath();
+		var latex = MWS.gui.getSearchMathQ();
 
 		if(math === false){
 			MWS.gui.renderSearchFailure("Please wait for the math to finish rendering! "); 
@@ -184,8 +184,13 @@ MWS.gui = {
 		}
 
 		window.history.pushState("", window.title, resolve(
-			"?query-text="+encodeURIComponent(text)+"&query-math="+encodeURIComponent(MWS.gui.getSearchMathQ())
+			"?query-text="+encodeURIComponent(text)+"&query-math="+encodeURIComponent(latex)
 		)); 
+
+		// Log piwik search data
+		_paq.push(["trackSiteSearch", encodeURIComponent(text), "text", false]);
+		_paq.push(["trackSiteSearch", encodeURIComponent(latex), "math", false]);
+
 
 		$("#results")
 		.empty()
