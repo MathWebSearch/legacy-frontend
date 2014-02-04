@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>MathWebSearch Frontend</title>
+
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row text-center">
+
+			<div class="title">
+				<br />
+
+				<a href="http://zbmath.org"><img src="img/zbmath_logo.png" alt="ZBL Logo"/></a>
+
+				<br />
+				<br />
+				<br />
+			</div>
+
+			<form role="form" id="query-form">
+				<div class="input-group">
+				<input class="form-control" name="query-text" id="query-text" placeholder="Search Text" value=""/>
+					<span class="input-group-btn">
+						<input type="button" class="btn btn-default" id="start-search" value="Search" />
+					</span>
+				</div>
+
+				<br />
+
+				<div class="row">
+					<div class="col-md-12" id="math-preview-div">
+						<input class="form-control" name="query-math" id="query-math" placeholder="Search LaTeX-Style Math" value=""/>
+					</div>
+
+					<div class="hidden" id="math-preview">
+						Nothing here yet. 
+					</div>
+				</div>
+
+			</form>
+
+			<br />
+
+			<div class="container">
+				<div id="results"><br /><br /></div>
+			</div>
+		</div>
+	</div>
+
+	<br />
+
+	<footer>
+		<div class="footer">
+      		Powered by <a href="http://mws.mathweb.org/"><font color="#009900">MathWebSearch</font></a>
+		</div>
+		<div class="footer">
+		    <a href="http://kwarc.info/" class="footlink"><img src="img/kwarc_logo.png" alt="KWARC research group" /></a>
+		    <a href="http://www.jacobs-university.de" class="footlink"><img alt="Jacobs University Bremen" src="img/jacobs_logo.gif" /></a>
+		</div>
+	</footer>
+
+
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="libs/jquery-highlight/jquery.highlight-4.js"></script>
+	
+
+
+	<script src="js/init.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/FormulaeHighlightLibrary.js"></script>
+	<script src="js/query.js"></script>
+	<script src="js/makemath.js"></script>
+	<script src="js/latexml.js"></script>
+	<script src="js/gui.js"></script>
+	<script src="js/piwik.js"></script>
+</body>
+</html>
