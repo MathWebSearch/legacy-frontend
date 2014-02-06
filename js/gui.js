@@ -199,8 +199,10 @@ MWS.gui = {
 		)); 
 
 		// Log piwik search data
-		_paq.push(["trackSiteSearch", encodeURIComponent(text), "text", false]);
-		_paq.push(["trackSiteSearch", encodeURIComponent(latex), "math", false]);
+		if (typeof _paq !== 'undefined') {
+			_paq.push(["trackSiteSearch", encodeURIComponent(text), "text", false]);
+			_paq.push(["trackSiteSearch", encodeURIComponent(latex), "math", false]);
+		}
 
 
 		$("#results")
