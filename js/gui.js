@@ -32,6 +32,36 @@ MWS.gui = {
 				MWS.init_page = undefined; 
 			}
 		}
+
+		//load examples
+		if(MWS.examples.length > 0){
+			var ul = $("<ul>").addClass("dropdown-menu"); 
+
+			$("#examplebuttons")
+			.append(
+				$('<button type="button" data-toggle="dropdown" class="btn btn-default">').text("Examples").append('<span class="caret"></span>'), 
+				ul
+			);
+
+			MWS.examples.map(function(ex){
+				var href = "?query-text="+encodeURIComponent(ex[1])+"&query-math="+encodeURIComponent(ex[2]); 
+
+				ul
+				.append($("<li>").append(
+					$("<a>").attr("href", href).text(ex[0]).click(function(){
+
+						$(document.getElementById("query-text")).val(ex[1]); 
+						$(document.getElementById("query-math")).val(ex[2]); 
+						MWS.gui.runSearch(); //run the search
+
+						ul.dropdown("toggle"); 
+						return false; 
+					})
+				));
+			}); 
+		} else {
+			$("#examplebuttons").remove(); 
+		}
 	}, 
 
 	"runSearch": function(){
