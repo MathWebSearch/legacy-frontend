@@ -477,15 +477,16 @@ MWS.gui = {
 		body.append(bdyhtml); 
 
 		//text highlighting
-		res.text.map(function(m){
-			body.highlight(m);
-		});
+		if (res.text != null) {
+			res.text.map(function(m){
+				body.highlight(m);
+			});
+		}
 
 		var substs = []; 
 		 
 		//math highlighting
 		var math_hits = res.math_hits; 
-
 		for(var i=0;i<math_hits.length;i++){
 			try{
 				var mhit = math_hits[i]; 

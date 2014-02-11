@@ -1,6 +1,8 @@
 <?php
 
-$session = curl_init('http://212.201.49.178:8889/?' . $_SERVER['QUERY_STRING']);
+define ('TEMA_URL', 'http://212.201.49.178:8889');
+
+$session = curl_init(TEMA_URL.'/?'.$_SERVER['QUERY_STRING']);
 curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($session);
 curl_close($session);
