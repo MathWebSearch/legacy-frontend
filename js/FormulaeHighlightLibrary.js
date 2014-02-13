@@ -1,5 +1,22 @@
 (function(){
 	var FHL = {
+        "getElementChildNode": function(doc, idx) {
+            if ('children' in doc) {
+                return doc.children[idx];
+            } else {
+                var elementCounter = 0;
+                for(var i=0;i<doc.childNodes.length;i++) {
+                    var curr = doc.childNodes[i];
+                    if (curr.nodeType == curr.ELEMENT_NODE) {
+                        if (elementCounter == idx) {
+                            return curr;
+                        }
+                        elementCounter++;
+                    }
+                }
+            }
+            return undefined;
+        },
 		"getElementByXMLId": function(id, doc){
 			var doc = (typeof doc == "undefined")?document:doc; 
 
@@ -29,8 +46,8 @@
 
 			while(xpath.length > 0){
 				var n = xpath.shift(); 
-				try{
-					doc = doc.children[n]; 
+				try {
+					doc = FHL.getElementChildNode(doc, n);
 				} catch(e){
 					return undefined; 
 				}
