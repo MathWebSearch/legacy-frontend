@@ -3,7 +3,7 @@ MWS.LaTexML = function(tex, result_callback, error_callback){
 
 	try{
 		$.post(MWS.config.latexml_url, {
-			profile: 'math',
+			profile: 'mwsq',
 			tex: tex
 		}, function (data) {
 			if (data.status_code == 0) {
@@ -29,14 +29,11 @@ MWS.LaTexML = function(tex, result_callback, error_callback){
 
 
 MWS.LaTexML.get_content_mathml = function(latexml_response) {
-	var hasContent = /\"MathML-Content\"[^>]*>([\s\S]*)<\/annotation-xml>/;
+	var hasContent = /<annotation-xml[^>]*\"MWS\-Query\"[^>]*>([\s\S]*)<\/annotation-xml>/;
 	var m = hasContent.exec(latexml_response);
 	var content = null;
 	if (m!= null) {
 		content = m[1];
-		content = content.replace(/<csymbol(\s+)cd=\"mws\"(\s+)name=\"qvar\"[^>]*>(\s*)([a-zA-Z0-9]*)(\s*)<\/csymbol>/g, "<mws:qvar>$4</mws:qvar>");
-		content = content.replace(/<csymbol(\s+)cd=\"mws\"(\s+)name=\"qvar\"[^>]*\/>/g, "<mws:qvar/>");
-		content = content.replace(/^\s+|\s+$/g,'');
 	}
 
 	return content;

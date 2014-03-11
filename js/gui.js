@@ -161,7 +161,7 @@ MWS.gui = {
 					.data("actualquery", content)
 					.data("runquery", true)
 					.data("last-render", query)
-					.data("last-mathml", search_mathml); 
+					.data("last-mathml", search_mathml);
 
 					callback(search_mathml); 
 					
