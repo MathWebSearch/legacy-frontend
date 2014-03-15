@@ -15,7 +15,9 @@ MWS.gui = {
 			return false; 
 		}, MWS.config.latexml_debounce_interval));
 
-		var query_math = getParameterByName("query-math");
+		// For backwards compatibility, URLs which do not have "query-math"
+		// parameter can get the math query from "query" parameter
+		var query_math = getParameterByName("query-math") || getParameterByName("query");
 		var query_text = getParameterByName("query-text");
 
 		if(query_text || query_math){
