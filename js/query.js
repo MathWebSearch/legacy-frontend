@@ -42,7 +42,7 @@ MWS.query = function(text, math){
 			callback_fail.call(me); 
 		}
 		
-	}
+	};
 
 
 	var split_xhtml = function(node){
@@ -62,34 +62,21 @@ MWS.query = function(text, math){
 		}); 
 
 		return res; 
-	}
+	};
 
 	var make_proper_entry = function(hit, qvars){
-		var xhtml = $(jQuery.parseXML(hit.xhtml)); 
-		return {
+		var xhtml = $(jQuery.parseXML(hit.xhtml));
+        return {
 			"data": {
-				"number": xhtml.find(".number").text(), 
-				"language": xhtml.find(".language").text(), 
-				"class": xhtml.find(".class").text(), 
-				"keywords": split_xhtml(xhtml.find(".keywords")), 
-				"doctype": xhtml.find(".doctype").text(), 
-				"review": {
-					"aunot": {
-						"author": split_xhtml(xhtml.find(".review > .aunot > .author")), 
-						"number": parseInt(xhtml.find(".review > .aunot > .number").text()), 
-					}, 
-					
-					"title": xhtml.find(".review > .title").get(0), 
-					"body": xhtml.find(".review > .review-body").get(0), 
-					"reviewer": split_xhtml(xhtml.find(".review > .reviewer")), 
-					"published": parseInt(xhtml.find(".review > .published").text()),
-				}, 
-			}, 
-			"text": hit.text, 
-			"math_hits": hit.math_ids.map(function(m){
+                "id" : hit.id,
+                "metadata" : hit.metadata,
+                "snippets" : hit.snippets
+			},
+			"math_hits": hit.maths.map(function(m){
 				return {
-						"id": m.url.split("#")[1], 
-						"xpath": m.xpath, 
+						"id": m.replaces,
+                        "source" : m.source,
+						"xpath": m.highlight_xpath,
 						"qvars": qvars.map(function(q){
 							return {
 								"name": q.name, 
@@ -134,10 +121,10 @@ MWS.query = function(text, math){
 					} else {
 						if(!stop && here <= count){
 							//retrieve the entries if we are not above the length
-							get(here, len-i, function(data){; //get the remaining entries
+							get(here, len-i, function(data){ //get the remaining entries
 								var hits = data.hits; 
 								for(var j=0;j<hits.length;j++){
-									cache["res_"+(here+j)] = make_proper_entry(hits[j], data.qvars); 
+									cache["res_"+(here+j)] = make_proper_entry(hits[j], data.qvars);
 								}
 
 								iter(i, true); 
@@ -147,7 +134,7 @@ MWS.query = function(text, math){
 						}
 					}
 
-				}; 
+				};
 
 				iter(0); 
 			}; 
