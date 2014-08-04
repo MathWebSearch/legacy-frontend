@@ -1,4 +1,4 @@
-MWS.LaTexML = function(tex, result_callback, error_callback){
+MWS.LaTeXML = function(tex, result_callback, error_callback){
 	var latexml_error = '';
 
 	try{
@@ -7,8 +7,8 @@ MWS.LaTexML = function(tex, result_callback, error_callback){
 			tex: tex
 		}, function (data) {
 			if (data.status_code == 0) {
-				var content = MWS.LaTexML.get_content_mathml(data.result);
-				var presentation = MWS.LaTexML.get_presentation_mathml(data.result);
+				var content = MWS.LaTeXML.get_content_mathml(data.result);
+				var presentation = MWS.LaTeXML.get_presentation_mathml(data.result);
 				if (content && presentation) {
 					result_callback(presentation, content, $(data.result));
 					return;
@@ -28,7 +28,7 @@ MWS.LaTexML = function(tex, result_callback, error_callback){
 }
 
 
-MWS.LaTexML.get_content_mathml = function(latexml_response) {
+MWS.LaTeXML.get_content_mathml = function(latexml_response) {
 	var hasContent = /<annotation-xml[^>]*\"MWS\-Query\"[^>]*>([\s\S]*)<\/annotation-xml>/;
 	var m = hasContent.exec(latexml_response);
 	var content = null;
@@ -37,9 +37,9 @@ MWS.LaTexML.get_content_mathml = function(latexml_response) {
 	}
 
 	return content;
-}; 
+};
 
-MWS.LaTexML.get_presentation_mathml = function(latexml_response) {
+MWS.LaTeXML.get_presentation_mathml = function(latexml_response) {
  	var hasPresentation = /semantics[^>]*>([\s\S]*)<annotation-xml/;
  	var m = hasPresentation.exec(latexml_response);
  	var presentation = null;
