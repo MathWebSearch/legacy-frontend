@@ -1,6 +1,6 @@
 <?php
 
-define ('TEMA_URL', 'http://localhost:8901');
+define ('TEMA_URL', 'http://212.201.44.161:11005');
 
 $session = curl_init(TEMA_URL.'/?'.$_SERVER['QUERY_STRING']);
 curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
