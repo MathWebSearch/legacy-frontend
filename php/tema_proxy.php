@@ -9,8 +9,7 @@ curl_close($session);
 
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
-header('Content-type:application/json');
-header('Content-attributes: application/json; charset=ISO-8859-15');
+header('Content-type:application/json; charset=UTF-8');
 header('Access-Control-Allow-Origin: *');
 
 echo $response;
