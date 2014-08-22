@@ -438,10 +438,10 @@ MWS.gui = {
             bdyhtml.append("<div>" + snippet_with_math + "</div>");
         });
 
-		var link_regex = /^\/arXMLiv\/(?:.*)\/((?:nlin)?)(.*)\.html$/;
+		var link_regex = /^\/arXMLiv\/(?:.*)\/([^\d\/]*)((?:\d|\.)+)\.html$/;
 		link_regex = res.data.id.match(link_regex);
-		if(link_regex[1] == "nlin"){
-			link_regex = "http://arxiv.org/abs/nlin/"+link_regex[2];
+		if(link_regex[1] !== ""){
+			link_regex = "http://arxiv.org/abs/"+link_regex[1]+"/"+link_regex[2];
 		} else {
 			link_regex = "http://arxiv.org/abs/"+link_regex[2];
 		}
