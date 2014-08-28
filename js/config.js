@@ -27,6 +27,7 @@ MWS.config = {
 
 	"latexml_url": //LaTeXML URL
 		resolve("php/latexml_proxy.php"),
+	"mmt_url" : 'localhost:8080', //MMT URL
 };
 
 //DO NOT CHANGE CODE BELOW
