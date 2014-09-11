@@ -438,19 +438,18 @@ MWS.gui = {
             bdyhtml.append("<div>" + snippet_with_math + "</div>");
         });
 
-		var link_regex = /^\/arXMLiv\/(?:.*)\/([^\d\/]*)((?:\d|\.)+)\.html$/;
-		link_regex = res.data.id.match(link_regex);
-		if(link_regex[1] !== ""){
-			link_regex = "http://arxiv.org/abs/"+link_regex[1]+"/"+link_regex[2];
+		var link_data = MWS.config.data_to_link(res.data);
+		if(link_data){
+			link_data = [$("<strong class='thema-ignore'></strong>").text(MWS.config.link_name+" Link: "), $("<a>").attr("href", link_data).text(link_data), "<br />"];
 		} else {
-			link_regex = "http://arxiv.org/abs/"+link_regex[2];
+			link_data = undefined;
 		}
+
 
 		var body = $("<div>").addClass("panel-body").css("text-align", "left")
 		.append(
 			$(document.createElement("a")).attr("href", link).attr("target", "_blank").text(link), " <br />",
-			"<strong class='thema-ignore'>Title: </strong>" + res.data.metadata.title + " <br />",
-			"<strong class='thema-ignore'>arXiv Link: </strong>",$("<a>").attr("href", link_regex).text(link_regex), "<br />"
+			"<strong class='thema-ignore'>Title: </strong>" + res.data.metadata.title + " <br />"
 //			"<strong class='thema-ignore'>Author(s): </strong>"+xhtml_join(res.data.review.aunot.author)+" <br />",
 //			"<strong class='thema-ignore'>Published: </strong>"+res.data.review.published+" <br />",
 //			"<strong class='thema-ignore'>Class: </strong>"+res.data.class+" <br />",
@@ -458,6 +457,11 @@ MWS.gui = {
 //			"<strong class='thema-ignore'>Keywords: </strong>"+xhtml_join(res.data.keywords)+" <br />",
 //			"<strong class='thema-ignore'>Language: </strong>"+res.data.language+" <br />"
 		);
+
+		$(link_data).each(function(i, e){
+			//console.log(e); 
+			$(e).appendTo(body);
+		});
 
 		var qvar_names = [];
 		var qvars = all_results.qvars;

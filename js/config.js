@@ -24,10 +24,23 @@ MWS.config = {
 	"show_warning_message": true, //show the warning message if latexml is disabled
 
 	"preview_engine": "LaTeXML", //Engine for previews, "LaTeXML" or "MMT"
+	"data_to_link": function(data){ //returns the link to an entry.
+		var link_regex = /^\/arXMLiv\/(?:.*)\/([^\d\/]*)((?:\d|\.)+)\.html$/;
+		var link = data.id.match(link_regex);
+		if(link[1] !== ""){
+			link = "http://arxiv.org/abs/"+link[1]+"/"+link[2];
+		} else {
+			link = "http://arxiv.org/abs/"+link[2];
+		}
+		return link;
+	},
+	"link_name": "ArXiv",
 
 	"latexml_url": //LaTeXML URL
 		resolve("php/latexml_proxy.php"),
+
 	"mmt_url" : 'localhost:8080', //MMT URL
+
 };
 
 //DO NOT CHANGE CODE BELOW
