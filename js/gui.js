@@ -521,6 +521,12 @@ MWS.gui = {
 				is_on = !is_on;
 			});
 
+            // delimit each snippet
+            var snippets_divs = search_mathml.children();
+            for(var i=0;i<snippets_divs.length;i++){
+                $("<p style='color: blue;padding: 5px;'>[...]</p>").insertAfter(snippets_divs[i]);
+            }
+
 			body.append("  ", search_mathml)
 			.appendTo(body);
 		} else {
