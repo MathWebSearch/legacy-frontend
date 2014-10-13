@@ -429,6 +429,8 @@ MWS.gui = {
 		var link = res.data.metadata.url;
 
 		var bdyhtml = $("<div>");
+		bdyhtml.append("<p style='color: blue;padding: 5px;'>[...]</p>")
+
         res.data.snippets.map(function(snippet) {
             var snippet_with_math = snippet;
             res.math_hits.map(function(math) {
@@ -436,6 +438,8 @@ MWS.gui = {
                 snippet_with_math = snippet_with_math.split(math.id).join(math.source);
             });
             bdyhtml.append("<div>" + snippet_with_math + "</div>");
+            // separate snippets
+            bdyhtml.append("<p style='color: blue;padding: 5px;'>[...]</p>")
         });
 
 		var link_data = MWS.config.data_to_link(res.data);
@@ -521,14 +525,7 @@ MWS.gui = {
 				is_on = !is_on;
 			});
 
-            // delimit each snippet
-            var snippets_divs = search_mathml.children();
-            for(var i=0;i<snippets_divs.length;i++){
-                $("<p style='color: blue;padding: 5px;'>[...]</p>").insertAfter(snippets_divs[i]);
-            }
-
-			body.append("  ", search_mathml)
-			.appendTo(body);
+			body.append("  ", search_mathml);
 		} else {
 			body.append("<br />");
 		}
