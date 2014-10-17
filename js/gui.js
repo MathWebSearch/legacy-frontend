@@ -429,7 +429,6 @@ MWS.gui = {
 		var link = res.data.metadata.url;
 
 		var bdyhtml = $("<div>");
-		bdyhtml.append("<p style='color: blue;padding: 5px;'>[...]</p>")
 
         res.data.snippets.map(function(snippet) {
             var snippet_with_math = snippet;
@@ -437,10 +436,12 @@ MWS.gui = {
                 // replace all
                 snippet_with_math = snippet_with_math.split(math.id).join(math.source);
             });
-            bdyhtml.append("<div>" + snippet_with_math + "</div>");
-            // separate snippets
-            bdyhtml.append("<p style='color: blue;padding: 5px;'>[...]</p>")
+            var snippetSep = "<span style='color: blue;'>[...]</span>"
+            var snippetDiv = "<div>" + snippet_with_math + snippetSep + "</div>";
+            bdyhtml.append(snippetDiv);
         });
+	bdyhtml.children().first()
+		.prepend("<span style='color: blue;'>[...]</span>");
 
 		var link_data = MWS.config.data_to_link(res.data);
 		if(link_data){
