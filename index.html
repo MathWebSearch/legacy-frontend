@@ -1,111 +1,112 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<title>MathWebSearch Frontend</title>
+    <head>
+        <title>MathWebSearch Frontend</title>
 
-	<meta charset="UTF-8" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css" />
-	<link rel="stylesheet" href="css/main.css" />
-</head>
-<body>
-	<div class="container">
-		<div class="row text-center">
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <div class="container" style="margin-top: 10px;">
+            <div class="row text-center">
 
-			<div class="title">
-				<br />
+                <div class="title">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="mws-title"
+                                style="float:left; margin-right: 10px;"
+                                href="http://arxiv.org/">arXiv.org MathSearch</a>
 
-				<a href="http://arxiv.org/">arXiv.org MathSearch</a>
-
-				<br />
-				<br />
-				<br />
-			</div>
-
-            <p style="text-align: left; margin-bottom: 30px;">
-            The <a href="https://trac.mathweb.org/MWS/wiki">MathWebSearch</a>
-            system (MWS) is a content-based search engine for mathematical
-            formulae. It indexes MathML formulae, using a technique derived
-            from automated theorem proving: Substitution Tree Indexing. 
-            MWS performs mathematical full-text search, combining
-            key phrase search with unification-based formula search.
-            </p>
-            
-			<form role="form" id="query-form">
-				<div class="input-group">
-					<input class="form-control" name="query-text" id="query-text" placeholder="Search Text" value=""/>
-					<div class="btn-group input-group-btn">
-						<input type="button" class="btn btn-default" id="start-search" value="Search" />
-						<div class="btn-group input-group-btn" id="examplebuttons">
-
-						</div>
-					</div>
-				</div>
-
-				<br />
-
-				<div class="row">
-					<div class="col-md-12" id="math-preview-div">
-						<input class="form-control" name="query-math" id="query-math" placeholder="Search LaTeX-Style Math" value=""/>
-					</div>
-
-					<div class="hidden" id="math-preview">
-						Nothing here yet.
-					</div>
-				</div>
-
-			</form>
-
-            <p style="text-align: left; margin-top: 20px;">
-            Enter a comma-separated list of key phrases into the top search bar
-            and a set of formulae schemata (written in LaTeX with ?a, ?b,
-            ... for query variables; they are marked in red in the formula preview).
-			A formula schema in a query matches any formula in the MWS index
-            that has an instance schema as a subformula. Query variables with
-            the same name must be instantiated with the same formula, see the
-            examples for inspiration.
-            <a href="https://github.com/KWARC/mws/wiki">... more</a>
-			</p>
-
-			<br />
-
-			<div class="container">
-				<div id="results"><br /><br /></div>
-			</div>
-		</div>
-	</div>
-
-	<br />
-
-	<footer>
-		<div class="footer">
-			Powered by <a href="http://search.mathweb.org/">MathWebSearch</a>
-		</div>
-		<div class="footer">
-		    <a href="http://kwarc.info/" class="footlink"><img src="img/kwarc_logo.png" alt="KWARC research group" /></a>
-		    <a href="http://www.jacobs-university.de" class="footlink"><img src="img/jacobs_logo.png" alt="Jacobs University Bremen" /></a>
-		</div>
-	</footer>
+                            <p style="text-align: left; margin-bottom: 30px;">
+                            The <a href="https://trac.mathweb.org/MWS/wiki">MathWebSearch</a>
+                            system (MWS) is a content-based search engine for mathematical
+                            formulae. It indexes MathML formulae, using a technique derived
+                            from automated theorem proving: Substitution Tree Indexing. 
+                            MWS performs mathematical full-text search, combining
+                            key phrase search with unification-based formula search.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
 
-	<script src="libs/jquery/jquery.js"></script>
-	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
-	<script src="libs/jquery-highlight/jquery.highlight-4.js"></script>
+                <form role="form" id="query-form">
+                    <div class="input-group">
+                        <input class="form-control" name="query-text" id="query-text" placeholder="Search Text" value=""/>
+                        <div class="btn-group input-group-btn">
+                            <input type="button" class="btn btn-default" id="start-search" value="Search" />
+                            <div class="btn-group input-group-btn" id="examplebuttons">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <div class="row">
+                        <div class="col-md-12" id="math-preview-div">
+                            <input class="form-control" name="query-math" id="query-math" placeholder="Search LaTeX-Style Math" value=""/>
+                        </div>
+
+                        <div class="hidden" id="math-preview">
+                            Nothing here yet.
+                        </div>
+                    </div>
+
+                </form>
+
+                <p style="text-align: left; margin-top: 20px;">
+                Enter a comma-separated list of key phrases into the top search bar
+                and a set of formulae schemata (written in LaTeX with ?a, ?b,
+                ... for query variables; they are marked in red in the formula preview).
+                A formula schema in a query matches any formula in the MWS index
+                that has an instance schema as a subformula. Query variables with
+                the same name must be instantiated with the same formula, see the
+                examples for inspiration.
+                <a href="https://github.com/KWARC/mws/wiki">... more</a>
+                </p>
+
+                <br />
+
+                <div class="container">
+                    <div id="results"><br /><br /></div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <footer>
+        <div class="footer">
+            Powered by <a href="http://search.mathweb.org/">MathWebSearch</a>
+        </div>
+        <div class="footer">
+            <a href="http://kwarc.info/" class="footlink"><img src="img/kwarc_logo.png" alt="KWARC research group" /></a>
+            <a href="http://www.jacobs-university.de" class="footlink"><img src="img/jacobs_logo.png" alt="Jacobs University Bremen" /></a>
+        </div>
+        </footer>
+
+
+        <script src="libs/jquery/jquery.js"></script>
+        <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+        <script src="libs/jquery-highlight/jquery.highlight-4.js"></script>
 
 
 
-	<script src="js/init.js"></script>
-	<script src="js/util.js"></script>
-	<script src="js/config.js"></script>
-	<script src="js/examples.js"></script>
-	<script src="js/FormulaeHighlightLibrary.js"></script>
-	<script src="js/query.js"></script>
-	<script src="js/makemath.js"></script>
-	<script src="js/latexml.js"></script>
-	<script src="js/mmt.js"></script>
-	<script src="js/gui.js"></script>
-	<script src="js/piwik.js"></script>
-</body>
+        <script src="js/init.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/examples.js"></script>
+        <script src="js/FormulaeHighlightLibrary.js"></script>
+        <script src="js/query.js"></script>
+        <script src="js/makemath.js"></script>
+        <script src="js/latexml.js"></script>
+        <script src="js/mmt.js"></script>
+        <script src="js/gui.js"></script>
+        <script src="js/piwik.js"></script>
+    </body>
 </html>
