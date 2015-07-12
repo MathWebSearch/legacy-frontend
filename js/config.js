@@ -23,7 +23,7 @@ MWS.config = {
 	"debounce_interval": 250, // debouncing interval in ms
 	"show_warning_message": true, //show the warning message if latexml is disabled
 
-	"preview_engine": "LaTeXML", //Engine for previews, "LaTeXML" or "MMT"
+	"preview_engine": "MMT", //Engine for previews, "LaTeXML" or "MMT"
 	"data_to_link": function(data){ //returns the link to an entry.
 		var link_regex = /^\/arXMLiv\/(?:.*)\/([^\d\/]*)((?:\d|\.)+)\.html$/;
 		var link = data.id.match(link_regex);
@@ -39,7 +39,7 @@ MWS.config = {
 	"latexml_url": //LaTeXML URL
 		resolve("php/latexml_proxy.php"),
 
-	"mmt_url" : 'localhost:8080', //MMT URL
+	"mmt_url" : resolve("php/mmt_proxy.php"), //configure link in the mmt_proxy.php file if needed
 
 };
 

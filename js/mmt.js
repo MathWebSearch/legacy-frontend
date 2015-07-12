@@ -1,16 +1,14 @@
 MWS.MMT = function(input, result_callback, error_callback){
 	try {
 		$.ajax({
-			url :"http://localhost:8081/:mwsq",
+			url : MWS.config.mmt_url,
 			type:'POST',
-			data : '{' + 
-				'"mpath": "http://latin.omdoc.org/math/equal.omdoc?equal", \n' +
-				'"input": "' + input + '"' +
-			"}",
+			data :  input ,
 			processData:false,
 			dataType : 'text',
 			contentType:'text/plain',
 			success: function (data) {
+				console.log(data);
 				var content = MWS.MMT.get_content_mathml(data);
 				console.log(content);
 				var presentation = MWS.MMT.get_presentation_mathml(data);
