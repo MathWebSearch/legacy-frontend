@@ -25,16 +25,12 @@ MWS.config = {
 
 	"preview_engine": "MMT", //Engine for previews, "LaTeXML" or "MMT"
 	"data_to_link": function(data){ //returns the link to an entry.
-		var link_regex = /^\/arXMLiv\/(?:.*)\/([^\d\/]*)((?:\d|\.)+)\.html$/;
-		var link = data.id.match(link_regex);
-		if(link[1] !== ""){
-			link = "http://arxiv.org/abs/"+link[1]+"/"+link[2];
-		} else {
-			link = "http://arxiv.org/abs/"+link[2];
-		}
+		var link_regex = /^http:\/\/mathhub.info\/oeis\/oeis\/(.*).omdoc$/;
+		var matches = data.id.match(link_regex);
+		var link = "https://oeis.org/" + matches[1];
 		return link;
 	},
-	"link_name": "ArXiv",
+	"link_name": "OEIS",
 
 	"latexml_url": //LaTeXML URL
 		resolve("php/latexml_proxy.php"),
