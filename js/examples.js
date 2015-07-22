@@ -2,9 +2,9 @@
 //to not show examples, simply set MWS.examples to be an empty array. 
 MWS.examples = [
 //  Name                    Text                LaTeX Math
-    ['Fib.',          'Fibonacci',             '(1 + sqrt(5))^n'],
-    ['Fib. 2',        'Fibonacci',             '((1+?x)^n-(1-?x)^n)/?y'],
-
+    ['Fibonacci',          'Fibonacci',        '((1 + sqrt(5))^n - (1 - sqrt(5))^n)/?x'],
+    ['Euler',              'Euler',            'phi(n)*x^n/(1-x^n)'],
+    ['Fib. Schemata',      '',                 '((1+?x)^n-(1-?x)^n)/?y'],
 //    ['Limit',                   'limit',        '\\lim_{?a\\rightarrow 0} ?x'],
 //    ['Fermat\'s Theorem',       'Fermat',       '?a^?n + ?b^?n=?c^?n'],
 //    ['Polynomial',              'polynomial',   'P(?x)'],
