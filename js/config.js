@@ -25,9 +25,9 @@ MWS.config = {
 
 	"preview_engine": "MMT", //Engine for previews, "LaTeXML" or "MMT"
 	"data_to_link": function(data){ //returns the link to an entry.
-		var link_regex = /^http:\/\/mathhub.info\/oeis\/oeis\/(.*)\/(.*).omdoc$/;
+		var link_regex = /^http:\/\/mathhub.info\/oeis\/oeis\/(.*).omdoc$/;
 		var matches = data.id.match(link_regex);
-		var link = "https://oeis.org/" + matches[2];
+		var link = "https://oeis.org/" + matches[1];
 		return link;
 	},
 	"link_name": "OEIS",
