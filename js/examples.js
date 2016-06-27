@@ -3,7 +3,8 @@
 MWS.examples = [
 //  Name                    Text                LaTeX Math
     ['Fibonacci',          'Fibonacci',        '((1 + sqrt(5))^n - (1 - sqrt(5))^n)/?x'],
-    ['Euler',              'Euler',            'phi(n)*x^n/(1-x^n)'],
+    ['Euler',              'Euler',            '1-x^n'],
+    //['Euler',              'Euler',            'phi(n)*x^n/(1-x^n)'],
     ['Fib. Schemata',      '',                 '((1+?x)^n-(1-?x)^n)/?y'],
 //    ['Limit',                   'limit',        '\\lim_{?a\\rightarrow 0} ?x'],
 //    ['Fermat\'s Theorem',       'Fermat',       '?a^?n + ?b^?n=?c^?n'],
