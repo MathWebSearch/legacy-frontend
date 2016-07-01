@@ -25,6 +25,7 @@ MWS.config = {
 
 	"preview_engine": "LaTeXML", //Engine for previews, "LaTeXML" or "MMT"
 	"data_to_link": function(data){ //returns the link to an entry.
+	        /*
 		var link_regex = /^\/arXMLiv\/(?:.*)\/([^\d\/]*)((?:\d|\.)+)\.html$/;
 		var link = data.id.match(link_regex);
 		if(link[1] !== ""){
@@ -33,6 +34,8 @@ MWS.config = {
 			link = "http://arxiv.org/abs/"+link[2];
 		}
 		return link;
+		*/
+		var = "www.gap-system.org/Manuals/pkg/GAPDoc-1.5.1/example/chap2_mj.html#X7AA5BF0279938BE0";
 	},
 	"link_name": "ArXiv",
 
