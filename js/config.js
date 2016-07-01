@@ -33,9 +33,9 @@ MWS.config = {
 		} else {
 			link = "http://arxiv.org/abs/"+link[2];
 		}
-		return link;
 		*/
-		var = "www.gap-system.org/Manuals/pkg/GAPDoc-1.5.1/example/chap2_mj.html#X7AA5BF0279938BE0";
+		var link = "www.gap-system.org/Manuals/pkg/GAPDoc-1.5.1/example/chap2_mj.html#X7AA5BF0279938BE0";
+		return link;
 	},
 	"link_name": "ArXiv",
 
