@@ -13,5 +13,6 @@ MWS.examples = [
 //    ['Inequality chain',        'chain',        '0\\leq ?i\\leq ?n'],
 //    ['Lebesgue integral',       'Lebesgue',     '\\int_?a^?b |?f(?x)| d?x'],
 //    ['Signal Energy',           '',             '\\int_?a^?b (?f(x))^2 dx=?r'],
-//    ['Alpha-equality',          '',             '?a=_\\alpha ?b']
+//    ['Alpha-equality',          '',             '?a=_\\alpha ?b'],
+    ['Generating function', 'G.f',              '(?y)/(1-x^(?k))']
 ];
