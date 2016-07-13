@@ -443,12 +443,12 @@ MWS.gui = {
 	bdyhtml.children().first()
 		.prepend("<span style='color: blue;'>[...]</span>");
 
-		var link_data = MWS.config.data_to_link(res.data);
+		/*var link_data = MWS.config.data_to_link(res.data);
 		if(link_data){
 			link_data = [$("<strong class='thema-ignore'></strong>").text(MWS.config.link_name+" Link: "), $("<a>").attr("href", link_data).text(link_data), "<br />"];
 		} else {
 			link_data = undefined;
-		}
+		}*/
 
 
 		var body = $("<div>").addClass("panel-body").css("text-align", "left")
@@ -463,10 +463,10 @@ MWS.gui = {
 //			"<strong class='thema-ignore'>Language: </strong>"+res.data.language+" <br />"
 		);
 
-		$(link_data).each(function(i, e){
+		/*$(link_data).each(function(i, e){
 			//console.log(e);
 			$(e).appendTo(body);
-		});
+		});*/
 
 		var qvar_names = [];
 		var qvars = all_results.qvars;
