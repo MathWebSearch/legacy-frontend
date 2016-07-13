@@ -1,0 +1,42 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.21-1 ListX</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X8258477D7F72171B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.21-1 ListX</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ListX</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">...</var>, <var class="Arg">argn</var>, <var class="Arg">func</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ListX</code> returns a new list constructed from the arguments.</p><p xmlns="http://www.w3.org/1999/xhtml">Each of the arguments <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <math id="-2464853987658046610" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math> <var class="Arg">argn</var> must be one of the following:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">a list or collection</strong></dt><dd><p>this introduces a new for-loop in the sequence of nested for-loops and if-statements;</p>
+
+</dd><dt><strong class="Mark">a function returning a list or collection</strong></dt><dd><p>this introduces a new for-loop in the sequence of nested for-loops and if-statements, where the loop-range depends on the values of the outer loop-variables; or</p>
+
+</dd><dt><strong class="Mark">a function returning <code class="keyw">true</code> or <code class="keyw">false</code></strong></dt><dd><p>this introduces a new if-statement in the sequence of nested for-loops and if-statements.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The last argument <var class="Arg">func</var> must be a function, it is applied to the values of the loop-variables and the results are collected.</p><p xmlns="http://www.w3.org/1999/xhtml">Thus <code class="code">ListX( <var class="Arg">list</var>, <var class="Arg">func</var> )</code> is the same as <code class="code">List( <var class="Arg">list</var>, <var class="Arg">func</var> )</code>, and <code class="code">ListX( <var class="Arg">list</var>, <var class="Arg">func</var>, x -&gt; x )</code> is the same as <code class="code">Filtered( <var class="Arg">list</var>, <var class="Arg">func</var> )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">As a more elaborate example, assume <var class="Arg">arg1</var> is a list or collection, <var class="Arg">arg2</var> is a function returning <code class="keyw">true</code> or <code class="keyw">false</code>, <var class="Arg">arg3</var> is a function returning a list or collection, and <var class="Arg">arg4</var> is another function returning <code class="keyw">true</code> or <code class="keyw">false</code>, then</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">result</var> := ListX( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var>, <var class="Arg">arg4</var>, <var class="Arg">func</var> );</code></p><p xmlns="http://www.w3.org/1999/xhtml">is equivalent to</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+result := [];
+for v1 in arg1 do
+  if arg2( v1 ) then
+    for v2 in arg3( v1 ) do
+      if arg4( v1, v2 ) then
+        Add( result, func( v1, v2 ) );
+      fi;
+    od;
+  fi;
+od;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The following example shows how <code class="func">ListX</code> can be used to compute all pairs and all strictly sorted pairs of elements in a list.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:= [ 1, 2, 3, 4 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pair:= function( x, y ) return [ x, y ]; end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ListX( l, l, pair );</span>
+[ [ 1, 1 ], [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 1 ], [ 2, 2 ], 
+  [ 2, 3 ], [ 2, 4 ], [ 3, 1 ], [ 3, 2 ], [ 3, 3 ], [ 3, 4 ], 
+  [ 4, 1 ], [ 4, 2 ], [ 4, 3 ], [ 4, 4 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In the following example, <code class="func">\&lt;</code> (<a shape="rect" href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) is the comparison operation:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ListX( l, l, \&lt;, pair );</span>
+[ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ]
+</pre></div> </body>
+    </html>

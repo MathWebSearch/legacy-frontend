@@ -1,0 +1,149 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 49: Group Products-&gt;49.3 Subdirect Products</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap49.html#X815AFC537B215D7B"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">49.3 <span class="Heading">Subdirect Products</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The subdirect product of the groups <math id="-3009233215208827971" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> and <math id="5239806729896818164" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> with respect to the epimorphisms <math id="-3812313895162237328" display="inline" alttext="\varphi\colon G\rightarrow A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">φ</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">G</mi>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">→</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">A</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜑</ci>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">→</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐺</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐴</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\varphi\colon G\rightarrow A</annotation>
+  </semantics>
+</math> and <math id="-2435766733014741293" display="inline" alttext="\psi\colon H\rightarrow A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ψ</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">H</mi>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">→</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">A</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜓</ci>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">→</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐻</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐴</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\psi\colon H\rightarrow A</annotation>
+  </semantics>
+</math> (for a common group <math id="-3119888269472044510" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>) is the subgroup of the direct product <math id="8721835402670787209" display="inline" alttext="G\times H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">H</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐻</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G\times H</annotation>
+  </semantics>
+</math> consisting of the elements <math id="5036561818434011392" display="inline" alttext="(g,h)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">g</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">h</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="open">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑔</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">ℎ</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(g,h)</annotation>
+  </semantics>
+</math> for which <math id="568283091376096671" display="inline" alttext="g^{\varphi}=h^{\psi}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msup xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">φ</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <msup xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">h</mi>
+        <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">ψ</mi>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <csymbol id="p1.1.m1.1.6.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝜑</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">ℎ</ci>
+          <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝜓</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g^{\varphi}=h^{\psi}</annotation>
+  </semantics>
+</math>. It is the pull-back of the following diagram.</p><pre xml:space="preserve" class="normal" xmlns="http://www.w3.org/1999/xhtml">
+
+                   G
+                   | phi
+             psi   V
+          H  ---&gt;  A
+
+</pre> </body>
+    </html>

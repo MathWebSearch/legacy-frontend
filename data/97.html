@@ -1,0 +1,41 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.4-1 AlgebraByStructureConstants</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7CC58DFD816E6B65"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.4-1 AlgebraByStructureConstants</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AlgebraByStructureConstants</code>( <var class="Arg">R</var>, <var class="Arg">sctable</var>[, <var class="Arg">nameinfo</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a free left module <math id="-7553860244381373709" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> over the division ring <var class="Arg">R</var>, with multiplication defined by the structure constants table <var class="Arg">sctable</var>. The optional argument <var class="Arg">nameinfo</var> can be used to prescribe names for the elements of the canonical basis of <math id="-8488790597738564868" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>; it can be either a string <var class="Arg">name</var> (then <var class="Arg">name</var><code class="code">1</code>, <var class="Arg">name</var><code class="code">2</code> etc. are chosen) or a list of strings which are then chosen. The vectors of the canonical basis of <math id="4621860004887048816" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> correspond to the vectors of the basis given by <var class="Arg">sctable</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">It is <em>not</em> checked whether the coefficients in <var class="Arg">sctable</var> are really elements in <var class="Arg">R</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T:= EmptySCTable( 2, 0 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetEntrySCTable( T, 1, 1, [ 1/2, 1, 2/3, 2 ] );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= AlgebraByStructureConstants( Rationals, T );</span>
+&lt;algebra of dimension 2 over Rationals&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b:= BasisVectors( Basis( A ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b[1]^2;</span>
+(1/2)*v.1+(2/3)*v.2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b[1]*b[2];</span>
+0*v.1
+</pre></div> </body>
+    </html>

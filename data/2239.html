@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.9-1 Starting and stopping test</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X8213757B7ACC76E6"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">7.9-1 <span class="Heading">Starting and stopping test</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ START_TEST</code>( <var class="Arg">id</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ STOP_TEST</code>( <var class="Arg">file</var>, <var class="Arg">fac</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">START_TEST</code> and <code class="func">STOP_TEST</code> may be optionally used in files that are read via <code class="func">Test</code> (<a shape="rect" href="chap7_mj.html#X87712F9D8732193C"><span class="RefLink">7.9-2</span></a>). If used, <code class="func">START_TEST</code> reinitialize the caches and the global random number generator, in order to be independent of the reading order of several test files. Furthermore, the assertion level (see <code class="func">Assert</code> (<a shape="rect" href="chap7_mj.html#X830E443284780FB9"><span class="RefLink">7.5-3</span></a>)) is set to <math id="-3630535684857010086" display="inline" alttext="2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2</annotation>
+  </semantics>
+</math> (if it was lower before) by <code class="func">START_TEST</code> and set back to the previous value in the subsequent <code class="func">STOP_TEST</code> call.</p><p xmlns="http://www.w3.org/1999/xhtml">To use these options, a test file should be started with a line</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">START_TEST( &quot;arbitrary identifier string&quot; );</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">(Note that the <code class="code">gap&gt; </code> prompt is part of the line!)</p><p xmlns="http://www.w3.org/1999/xhtml">and should be finished with a line</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">STOP_TEST( &quot;filename&quot;, 10000 );</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Here the string <code class="code">&quot;filename&quot;</code> should give the name of the test file. The number is a proportionality factor that is used to output a &quot;<strong class="pkg">GAP</strong>stone&quot; speed ranking after the file has been completely processed. For the files provided with the distribution this scaling is roughly equalized to yield the same numbers as produced by the test file <code class="file">tst/combinat.tst</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the functions in <code class="file">tst/testutil.g</code> temporarily replace <code class="func">STOP_TEST</code> before they call <code class="func">Test</code> (<a shape="rect" href="chap7_mj.html#X87712F9D8732193C"><span class="RefLink">7.9-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">If you want to run a quick test of your <strong class="pkg">GAP</strong> installation (though this is not required), you can read in a test script that exercises some <strong class="pkg">GAP</strong>'s capabilities.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Read( Filename( DirectoriesLibrary( &quot;tst&quot; ), &quot;testinstall.g&quot; ) );</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The test requires up to 1 GB of memory and runs about one minute on an Intel Core 2 Duo / 2.53 GHz machine. You will get a large number of lines with output about the progress of the tests.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+test file         GAP4stones     time(msec)
+-------------------------------------------
+testing: ................/gap4r5/tst/zlattice.tst
+zlattice.tst               0              0
+testing: ................/gap4r5/tst/gaussian.tst
+gaussian.tst               0             10
+[ further lines deleted ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If you want to run a more advanced check (this is not required and make take up to an hour), you can read <code class="file">teststandard.g</code> which is an extended test script performing all tests from the <code class="file">tst</code> directory.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Read( Filename( DirectoriesLibrary( &quot;tst&quot; ), &quot;teststandard.g&quot; ) );</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The test requires up to 1 GB of memory and runs about one hour on an Intel Core 2 Duo / 2.53 GHz machine, and produces an output similar to the <code class="file">testinstall.g</code> test.</p> </body>
+    </html>

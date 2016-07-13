@@ -1,0 +1,53 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.7-1 RightCoset</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X8412ABD57986B9FC"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.7-1 RightCoset</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RightCoset</code>( <var class="Arg">U</var>, <var class="Arg">g</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the right coset of <var class="Arg">U</var> with representative <var class="Arg">g</var>, which is the set of all elements of the form <math id="4865882654173666066" display="inline" alttext="ug" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+      <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">g</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <times xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑔</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">ug</annotation>
+  </semantics>
+</math> for all <math id="2986187544158317848" display="inline" alttext="u\in\textit{U}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑈</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">U</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u\in\textit{U}</annotation>
+  </semantics>
+</math>. <var class="Arg">g</var> must be an element of a larger group <var class="Arg">G</var> which contains <var class="Arg">U</var>. For element operations such as <code class="keyw">in</code> a right coset behaves like a set of group elements.</p><p xmlns="http://www.w3.org/1999/xhtml">Right cosets are external orbits for the action of <var class="Arg">U</var> which acts via <code class="func">OnLeftInverse</code> (<a shape="rect" href="chap41_mj.html#X832DF5327ECA0E44"><span class="RefLink">41.2-3</span></a>). Of course the action of a larger group <var class="Arg">G</var> on right cosets is via <code class="func">OnRight</code> (<a shape="rect" href="chap41_mj.html#X7960924D84B5B18F"><span class="RefLink">41.2-2</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">u:=Group((1,2,3), (1,2));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=RightCoset(u,(2,3,4));</span>
+RightCoset(Group( [ (1,2,3), (1,2) ] ),(2,3,4))
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ActingDomain(c);</span>
+Group([ (1,2,3), (1,2) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Representative(c);</span>
+(2,3,4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(c);</span>
+6
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsList(c);</span>
+[ (2,3,4), (1,4,2), (1,3,4,2), (1,3)(2,4), (2,4), (1,4,2,3) ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,83 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.2-4 PresentationSubgroupMtc</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X80BA10F780EAE68E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.2-4 PresentationSubgroupMtc</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PresentationSubgroupMtc</code>( <var class="Arg">G</var>, <var class="Arg">H</var>[, <var class="Arg">string</var>][, <var class="Arg">print</var>, <var class="Arg">level</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">uses the Modified Todd-Coxeter coset representative enumeration method to compute a presentation <math id="1172068187273117996" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math>, say, for a subgroup <var class="Arg">H</var> of a finitely presented group <var class="Arg">G</var>. The presentation returned is in generators corresponding to the generators of <var class="Arg">H</var>. The generators in the resulting presentation will be named <var class="Arg">string</var><code class="code">1</code>, <var class="Arg">string</var><code class="code">2</code>, <math id="1314494264383722619" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math>, the default string is <code class="code">&quot;_x&quot;</code>. You may access the <math id="4926029813220412232" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th of these generators by <math id="7241432237714947109" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math><code class="code">!.</code><math id="7063753345022773147" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">The default print level is <math id="3925572626464358976" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math>. If the print level is set to <math id="3039705858148520886" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+    </annotation-xml>
+  </semantics>
+</math>, then the printout of the implicitly called function <code class="func">DecodeTree</code> (<a shape="rect" href="chap48_mj.html#X7ACBFE2F78D72A31"><span class="RefLink">48.10-1</span></a>) will be suppressed.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">p := PresentationSubgroupMtc( g, u );</span>
+#I  there are 3 generators and 4 relators of total length 12
+#I  there are 2 generators and 3 relators of total length 14
+&lt;presentation with 2 gens and 3 rels of total length 14&gt;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The so called Modified Todd-Coxeter method was proposed, in slightly different forms, by Nathan S. Mendelsohn and William O. J. Moser in 1966. Moser's method was proved in <a shape="rect" href="chapBib_mj.html#biBBC76">[BC76]</a>. It has been generalized to cover a broad spectrum of different versions (see the survey <a shape="rect" href="chapBib_mj.html#biBNeu82">[Neu82]</a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>Modified Todd-Coxeter</em> method performs an enumeration of coset representatives. It proceeds like an ordinary coset enumeration (see <a shape="rect" href="chap47_mj.html#X7BD0CEBA7B225416"><span class="RefLink">47.6</span></a>), but as the product of a coset representative by a group generator or its inverse need not be a coset representative itself, the Modified Todd-Coxeter has to store a kind of correction element for each coset table entry. Hence it builds up a so called <em>augmented coset table</em> of <var class="Arg">H</var> in <var class="Arg">G</var> consisting of the ordinary coset table and a second table in parallel which contains the associated subgroup elements.</p><p xmlns="http://www.w3.org/1999/xhtml">Theoretically, these subgroup elements could be expressed as words in the given generators of <var class="Arg">H</var>, but in general these words tend to become unmanageable because of their enormous lengths. Therefore, a highly redundant list of subgroup generators is built up starting from the given (&quot;primary&quot;) generators of <var class="Arg">H</var> and adding additional (&quot;secondary&quot;) generators which are defined as abbreviations of suitable words of length two in the preceding generators such that each of the subgroup elements in the augmented coset table can be expressed as a word of length at most one in the resulting (primary <em>and</em> secondary) subgroup generators.</p><p xmlns="http://www.w3.org/1999/xhtml">Then a rewriting process (which is essentially a kind of Reidemeister rewriting process) is used to get relators for <var class="Arg">H</var> from the defining relators of <var class="Arg">G</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The resulting presentation involves all the primary, but not all the secondary generators of <var class="Arg">H</var>. In fact, it contains only those secondary generators which explicitly occur in the augmented coset table. If we extended this presentation by those secondary generators which are not yet contained in it as additional generators, and by the definitions of all secondary generators as additional relators, we would get a presentation of <var class="Arg">H</var>, but, in general, we would end up with a large number of generators and relators.</p><p xmlns="http://www.w3.org/1999/xhtml">On the other hand, if we avoid this extension, the current presentation will not necessarily define <var class="Arg">H</var> although we have used the same rewriting process which in the case of the <code class="func">PresentationSubgroupRrs</code> (<a shape="rect" href="chap48_mj.html#X857365CD87ADC29E"><span class="RefLink">48.2-2</span></a>) command computes a defining set of relators for <var class="Arg">H</var> from an augmented coset table and defining relators of <var class="Arg">G</var>. The different behaviour here is caused by the fact that coincidences may have occurred in the Modified Todd-Coxeter coset enumeration.</p><p xmlns="http://www.w3.org/1999/xhtml">To overcome this problem without extending the presentation by all secondary generators, the <code class="func">PresentationSubgroupMtc</code> command applies the so called <em>decoding tree</em> algorithm which provides a more economical approach. The reader is strongly recommended to carefully read section <a shape="rect" href="chap48_mj.html#X7D9E283D81CCCF1A"><span class="RefLink">48.10</span></a> where this algorithm is described in more detail. Here we will only mention that this procedure may add a lot of intermediate generators and relators (and even change the isomorphism type) in a process which in fact eliminates all secondary generators from the presentation and hence finally provides a presentation of <var class="Arg">H</var> on the primary, i.e., the originally given, generators of <var class="Arg">H</var>. This is a remarkable advantage of the command <code class="func">PresentationSubgroupMtc</code> compared to the command <code class="func">PresentationSubgroupRrs</code> (<a shape="rect" href="chap48_mj.html#X857365CD87ADC29E"><span class="RefLink">48.2-2</span></a>). But note that, for some particular subgroup <var class="Arg">H</var>, the Reduced Reidemeister-Schreier method might quite well produce a more concise presentation.</p><p xmlns="http://www.w3.org/1999/xhtml">The resulting presentation is returned in the form of a presentation, <math id="-981363375817341551" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math> say.</p><p xmlns="http://www.w3.org/1999/xhtml">As the function <code class="func">PresentationSubgroupRrs</code> (<a shape="rect" href="chap48_mj.html#X857365CD87ADC29E"><span class="RefLink">48.2-2</span></a>) described above (see there for details), the function <code class="func">PresentationSubgroupMtc</code> returns a list of the primary subgroup generators of <var class="Arg">H</var> in the attribute <code class="func">PrimaryGeneratorWords</code> (<a shape="rect" href="chap48_mj.html#X7FCE7ED581CF7897"><span class="RefLink">48.2-3</span></a>) of <math id="1723621435157712840" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math>. In fact, this list is not very exciting here because it is just a shallow copy of the value of <code class="func">GeneratorsOfPresentation</code> (<a shape="rect" href="chap48_mj.html#X849429BC7D435F77"><span class="RefLink">48.1-3</span></a>) of <var class="Arg">H</var>, however it is needed to guarantee a certain consistency between the results of the different functions for computing subgroup presentations.</p><p xmlns="http://www.w3.org/1999/xhtml">Though the decoding tree routine already involves a lot of Tietze transformations, we recommend that you try to further simplify the resulting presentation by appropriate Tietze transformations (see <a shape="rect" href="chap48_mj.html#X829B634286471AB7"><span class="RefLink">48.6</span></a>).</p> </body>
+    </html>

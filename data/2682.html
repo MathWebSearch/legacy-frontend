@@ -1,0 +1,43 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.7-5 NaturalPartialOrder</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X7EA51F087CF7621F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.7-5 NaturalPartialOrder</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NaturalPartialOrder</code>( <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReverseNaturalPartialOrder</code>( <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: The natural partial order on an inverse semigroup.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>natural partial order</em> <math id="-8694524022215230473" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <leq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\leq</annotation>
+  </semantics>
+</math> on an inverse semigroup <var class="Arg">S</var> is defined by <code class="code">s</code><math id="-4854702390280156904" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <leq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\leq</annotation>
+  </semantics>
+</math><code class="code">t</code> if there exists an idempotent <code class="code">e</code> in <var class="Arg">S</var> such that <code class="code">s=et</code>. Hence if <code class="code">f</code> and <code class="code">g</code> are partial permutations, then <code class="code">f</code><math id="-4850048840248582178" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <leq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\leq</annotation>
+  </semantics>
+</math><code class="code">g</code> if and only if <code class="code">f</code> is a restriction of <code class="code">g</code>; see <code class="func">RestrictedPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X80ABBF4883C79060"><span class="RefLink">54.2-3</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">NaturalPartialOrder</code> returns the natural partial order on the inverse semigroup of partial permutations <var class="Arg">S</var> as a list of sets of positive integers where entry <code class="code">i</code> in <code class="code">NaturalPartialOrder(<var class="Arg">S</var>)</code> is the set of positions in <code class="code">Elements(<var class="Arg">S</var>)</code> of elements which are less than <code class="code">Elements(<var class="Arg">S</var>)[i]</code>. See also <code class="func">NaturalLeqPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X87B1ED93785257C1"><span class="RefLink">54.5-4</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">ReverseNaturalPartialOrder</code> returns the reverse of the natural partial order on the inverse semigroup of partial permutations <var class="Arg">S</var> as a list of sets of positive integers where entry <code class="code">i</code> in <code class="code">ReverseNaturalPartialOrder(<var class="Arg">S</var>)</code> is the set of positions in <code class="code">Elements(<var class="Arg">S</var>)</code> of elements which are greater than <code class="code">Elements(<var class="Arg">S</var>)[i]</code>. See also <code class="func">NaturalLeqPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X87B1ED93785257C1"><span class="RefLink">54.5-4</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := InverseSemigroup([ PartialPerm( [ 1, 3 ], [ 1, 3 ] ),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">PartialPerm( [ 1, 2 ], [ 3, 2 ] ) ] );</span>
+&lt;inverse partial perm semigroup of rank 3 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(S);</span>
+11
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NaturalPartialOrder(S);</span>
+[ [  ], [ 1 ], [ 1 ], [ 1 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 1 ], [ 1 ], 
+  [ 1, 4, 7 ], [ 1, 4, 8 ], [ 1, 2, 8 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NaturalLeqPartialPerm(Elements(S)[4], Elements(S)[10]);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NaturalLeqPartialPerm(Elements(S)[4], Elements(S)[1]); </span>
+false</pre></div> </body>
+    </html>

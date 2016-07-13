@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.2 Basic Actions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X81B8F9CD868CD953"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">41.2 <span class="Heading">Basic Actions</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> already provides acting functions for the more common actions of a group. For built-in operations such as <code class="func">Stabilizer</code> (<a shape="rect" href="chap41_mj.html#X86FB962786397E02"><span class="RefLink">41.5-2</span></a>) special methods are available for many of these actions.</p><p xmlns="http://www.w3.org/1999/xhtml">If one needs an action for which no acting function is provided by the library it can be implemented via a <strong class="pkg">GAP</strong> function that conforms to the syntax</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">actfun( omega, g )</code></p><p xmlns="http://www.w3.org/1999/xhtml">where <code class="code">omega</code> is an element of the action domain, <code class="code">g</code> is an element of the acting group, and the return value is the image of <code class="code">omega</code> under <code class="code">g</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">For example one could define the following function that acts on pairs of polynomials via <code class="func">OnIndeterminates</code> (<a shape="rect" href="chap41_mj.html#X7FA394D27E721E2B"><span class="RefLink">41.2-13</span></a>):</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+OnIndeterminatesPairs:= function( polypair, g )
+  return [ OnIndeterminates( polypair[1], g ),
+           OnIndeterminates( polypair[2], g ) ];
+end;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that this function <em>must</em> implement a group action from the <em>right</em>. This is not verified by <strong class="pkg">GAP</strong> and results are unpredictable otherwise.</p> </body>
+    </html>

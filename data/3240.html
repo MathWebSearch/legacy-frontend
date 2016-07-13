@@ -1,0 +1,29 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 40: Group Homomorphisms-&gt;40.7-4 IsAutomorphismGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap40.html#X7F87D5957D9B991E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">40.7-4 IsAutomorphismGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsAutomorphismGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">indicates whether <var class="Arg">G</var> is the full automorphism group of another group <math id="2318599735743933156" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math>, this group is given as <code class="func">AutomorphismDomain</code> (<a shape="rect" href="chap40_mj.html#X7B767B9D827EB0FC"><span class="RefLink">40.7-3</span></a>) value of <var class="Arg">G</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2,3,4),(1,3));</span>
+Group([ (1,2,3,4), (1,3) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">au:=AutomorphismGroup(g);</span>
+&lt;group of size 8 with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfGroup(au);</span>
+[ Pcgs([ (2,4), (1,2,3,4), (1,3)(2,4) ]) -&gt; 
+    [ (1,2)(3,4), (1,2,3,4), (1,3)(2,4) ], 
+  Pcgs([ (2,4), (1,2,3,4), (1,3)(2,4) ]) -&gt; 
+    [ (1,3), (1,2,3,4), (1,3)(2,4) ], 
+  Pcgs([ (2,4), (1,2,3,4), (1,3)(2,4) ]) -&gt; 
+    [ (2,4), (1,4,3,2), (1,3)(2,4) ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NiceObject(au);</span>
+Group([ (1,2,3,4), (1,3)(2,4), (2,4) ])
+</pre></div> </body>
+    </html>

@@ -1,0 +1,162 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.2-7 SimpleLieAlgebra</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X7933F05F7DE342AB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.2-7 SimpleLieAlgebra</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SimpleLieAlgebra</code>( <var class="Arg">type</var>, <var class="Arg">n</var>, <var class="Arg">F</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This function constructs the simple Lie algebra of type given by the string <var class="Arg">type</var> and rank <var class="Arg">n</var> over the field <var class="Arg">F</var>. The string <var class="Arg">type</var> must be one of <code class="code">&quot;A&quot;</code>, <code class="code">&quot;B&quot;</code>, <code class="code">&quot;C&quot;</code>, <code class="code">&quot;D&quot;</code>, <code class="code">&quot;E&quot;</code>, <code class="code">&quot;F&quot;</code>, <code class="code">&quot;G&quot;</code>, <code class="code">&quot;H&quot;</code>, <code class="code">&quot;K&quot;</code>, <code class="code">&quot;S&quot;</code>, <code class="code">&quot;W&quot;</code> or <code class="code">&quot;M&quot;</code>. For the types <code class="code">A</code> to <code class="code">G</code>, <var class="Arg">n</var> must be a positive integer. The last five types only exist over fields of characteristic <math id="-3424141733193660928" display="inline" alttext="p&amp;gt;0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">g</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.5">;</mo>
+      <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">0</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml">
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <times xref="p1.1.m1.1.7.2.1" id="p1.1.m1.1.7.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑡</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">0</cn>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p&amp;gt;0</annotation>
+  </semantics>
+</math>. If the type is <code class="code">H</code>, then <var class="Arg">n</var> must be a list of positive integers of even length. If the type is <code class="code">K</code>, then <var class="Arg">n</var> must be a list of positive integers of odd length. For the types <code class="code">S</code> and <code class="code">W</code>, <var class="Arg">n</var> must be a list of positive integers of any length. If the type is <code class="code">M</code>, then the Melikyan algebra is constructed. In this case <var class="Arg">n</var> must be a list of two positive integers. This Lie algebra only exists over fields of characteristic <math id="1978360227232846915" display="inline" alttext="5" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">5</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">5</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">5</annotation>
+  </semantics>
+</math>. This Lie algebra is <math id="8600220263622530162" display="inline" alttext="?\times?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3" mathvariant="normal">?</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">?</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?\times?</annotation>
+  </semantics>
+</math> graded; and the grading can be accessed via the attribute <code class="code">Grading(L)</code> (see <code class="func">Grading</code> (<a shape="rect" href="chap62_mj.html#X7DCA2568870A2D34"><span class="RefLink">62.9-20</span></a>)). In some cases the Lie algebra returned by this function is not simple. Examples are the Lie algebras of type <math id="-5523953462144907192" display="inline" alttext="A_{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">n</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A_{n}</annotation>
+  </semantics>
+</math> over a field of characteristic <math id="2633145555394756004" display="inline" alttext="p&amp;gt;0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">g</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.5">;</mo>
+      <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">0</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml">
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <times xref="p1.1.m1.1.7.2.1" id="p1.1.m1.1.7.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑡</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">0</cn>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p&amp;gt;0</annotation>
+  </semantics>
+</math> where <math id="-749658049300107084" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> divides <math id="-3206439327269986349" display="inline" alttext="n+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+        <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n+1</annotation>
+  </semantics>
+</math>, and the Lie algebras of type <math id="3584367577845043785" display="inline" alttext="K_{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">K</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">n</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐾</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">K_{n}</annotation>
+  </semantics>
+</math> where <math id="7855912003842542638" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> is a list of length 1.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">type</var> is one of <code class="code">A</code>, <code class="code">B</code>, <code class="code">C</code>, <code class="code">D</code>, <code class="code">E</code>, <code class="code">F</code>, <code class="code">G</code>, and <var class="Arg">F</var> is a field of characteristic zero, then the basis of the returned Lie algebra is a Chevalley basis.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SimpleLieAlgebra( &quot;E&quot;, 6, Rationals );</span>
+&lt;Lie algebra of dimension 78 over Rationals&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SimpleLieAlgebra( &quot;A&quot;, 6, GF(5) );</span>
+&lt;Lie algebra of dimension 48 over GF(5)&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SimpleLieAlgebra( &quot;W&quot;, [1,2], GF(5) );</span>
+&lt;Lie algebra of dimension 250 over GF(5)&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SimpleLieAlgebra( &quot;H&quot;, [1,2], GF(5) );</span>
+&lt;Lie algebra of dimension 123 over GF(5)&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;M&quot;, [1,1], GF(5) );</span>
+&lt;Lie algebra of dimension 125 over GF(5)&gt;
+</pre></div> </body>
+    </html>

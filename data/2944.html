@@ -1,0 +1,332 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X8716635F7951801B"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap39_mj.html#X8716635F7951801B">39 <span class="Heading">Groups</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X822370B47DEA37B1">39.1 <span class="Heading">Group Elements</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X86A022F9800121F8">39.2 <span class="Heading">Creating Groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7D8E473384DE9CD4">39.2-1 Group</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7F81960287F3E32A">39.2-2 GroupByGenerators</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8589EF9C7B658B94">39.2-3 GroupWithGenerators</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X79C44528864044C5">39.2-4 GeneratorsOfGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A0747F17B50D967">39.2-5 AsGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7E4143A08040BB47">39.2-6 ConjugateGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7939B3177BBD61E4">39.2-7 IsGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X845874BA82E1A11F">39.2-8 InfoGroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7BA181CA81D785BB">39.3 <span class="Heading">Subgroups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7C82AA387A42DCA0">39.3-1 Subgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X86DC933779B1CABD">39.3-2 <span class="Heading">Index (<strong class="pkg">GAP</strong> operation)</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8014135884DCC53E">39.3-3 IndexInWholeGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7904AC9D7E9A3BB7">39.3-4 AsSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7839D8927E778334">39.3-5 IsSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X838186F9836F678C">39.3-6 IsNormal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8390B5117A10CC52">39.3-7 IsCharacteristicSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X84F5464983655590">39.3-8 ConjugateSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7D9990EB837075A4">39.3-9 ConjugateSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X82ABF80780CC27AF">39.3-10 IsSubnormal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X829766158665FB54">39.3-11 SubgroupByProperty</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7E95101F80583E77">39.3-12 SubgroupShell</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7B855B0485C3C6C5">39.4 <span class="Heading">Closures of (Sub)groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7D13FC1F8576FFD8">39.4-1 ClosureGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X81A20A397C308483">39.4-2 ClosureGroupAddElm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X82F59F6680D1B0D5">39.4-3 ClosureGroupDefault</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A7AF14A8052F055">39.4-4 ClosureSubgroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7E19F92284F6684E">39.5 <span class="Heading">Expressing Group Elements as Words in Generators</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7FE8A3B08458A1BF">39.5-1 EpimorphismFromFreeGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8357294D7B164106">39.5-2 Factorization</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X871508DD808EB487">39.5-3 GrowthFunctionOfGroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X87BF1B887C91CA2E">39.6 <span class="Heading">Structure Descriptions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8199B74B84446971">39.6-1 StructureDescription</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X81002AA87DDBC02F">39.7 <span class="Heading">Cosets</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8412ABD57986B9FC">39.7-1 RightCoset</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X835F48248571364F">39.7-2 RightCosets</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X85884F177B5D98AE">39.7-3 CanonicalRightCosetElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7D7625A1861D9DAB">39.7-4 IsRightCoset</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X82F6ABE378B928D1">39.7-5 CosetDecomposition</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X83C723878230D616">39.8 <span class="Heading">Transversals</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X85C65D06822E716F">39.8-1 RightTransversal</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X78B98B257E981046">39.9 <span class="Heading">Double Cosets</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7E51ED757D17254B">39.9-1 DoubleCoset</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7F53DABD79BA4F72">39.9-2 RepresentativesContainedRightCosets</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A5EFABB86E6D4D5">39.9-3 DoubleCosets</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X85ED464F878EF24C">39.9-4 IsDoubleCoset</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A25B1C886CF8C6A">39.9-5 DoubleCosetRepsAndSizes</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X84AE7EE77E5FB30E">39.9-6 InfoCoset</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7D474F8F87E4E5D9">39.10 <span class="Heading">Conjugacy Classes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7B2F207F7F85F5B8">39.10-1 ConjugacyClass</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X871B570284BBA685">39.10-2 ConjugacyClasses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7D6ED84C86C2979B">39.10-3 ConjugacyClassesByRandomSearch</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X852B3634789D770E">39.10-4 ConjugacyClassesByOrbits</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8733F87B7E4C9903">39.10-5 NrConjugacyClasses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7BD2A4427B7FE248">39.10-6 RationalClass</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X81E9EF0A811072E8">39.10-7 RationalClasses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X877691247DE23386">39.10-8 GaloisGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X83DD148D7DA2ABA9">39.10-9 <span class="Heading">IsConjugate</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X81A92F828400FC8A">39.10-10 NthRootsInGroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X804F0F037F06E25E">39.11 <span class="Heading">Normal Structure</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X87B5370C7DFD401D">39.11-1 <span class="Heading">Normalizer</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7C4E00297E37AA44">39.11-2 Core</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7CF497C77B1E8938">39.11-3 PCore</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7BDEA0A98720D1BB">39.11-4 NormalClosure</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7D25E7DC7834A703">39.11-5 NormalIntersection</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X811B8A4683DDE1F9">39.11-6 ComplementClassesRepresentatives</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8581F4E77B11C610">39.11-7 InfoComplement</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7C39EE3E836D6BC6">39.12 <span class="Heading">Specific and Parametrized Subgroups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X829759F67D4247CA">39.12-1 TrivialSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A9A3D5578CE33A0">39.12-2 CommutatorSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7CC17CF179ED7EF2">39.12-3 DerivedSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7B10B58F83DDE56E">39.12-4 CommutatorLength</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X780552B57C30DD8F">39.12-5 FittingSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X788C856C82243274">39.12-6 FrattiniSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X81D86CCE84193E4F">39.12-7 PrefrattiniSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X83D5C8B8865C85F1">39.12-8 PerfectResiduum</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X787F5F14844FAACE">39.12-9 RadicalGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X81F647FA83D8854F">39.12-10 Socle</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8440C61080CDAA14">39.12-11 SupersolvableResiduum</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X796DA805853FAC90">39.12-12 PRump</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7FF0BBDD80E8F6BF">39.13 <span class="Heading">Sylow Subgroups and Hall Subgroups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7AA351308787544C">39.13-1 SylowSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8605F3FE7A3B8E12">39.13-2 SylowComplement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7EDBA19E828CD584">39.13-3 HallSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X832E8E6B8347B13F">39.13-4 SylowSystem</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X87A245E180D27147">39.13-5 ComplementSystem</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X82FE5DFD84F8A3C6">39.13-6 HallSystem</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X87AF37E980382499">39.14 <span class="Heading">Subgroups characterized by prime powers</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7F069ACC83DB3374">39.14-1 Omega</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X83DB33747F069ACC">39.14-2 Agemo</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7B75879B8085120A">39.15 <span class="Heading">Group Properties</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7DA27D338374FD28">39.15-1 IsCyclic</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X813C952F80E775D4">39.15-2 IsElementaryAbelian</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X87D062608719F2CD">39.15-3 IsNilpotentGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7E3056237C6A5D43">39.15-4 NilpotencyClassOfGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8755147280C84DBB">39.15-5 IsPerfectGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X809C78D5877D31DF">39.15-6 IsSolvableGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7D7456077D3D1B86">39.15-7 IsPolycyclicGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7AADF2E88501B9FF">39.15-8 IsSupersolvableGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X83977EB97A8E2290">39.15-9 IsMonomialGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A6685D7819AEC32">39.15-10 IsSimpleGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X78CC9764803601E7">39.15-11 IsAlmostSimpleGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7C6AA6897C4409AC">39.15-12 <span class="Heading">IsomorphismTypeInfoFiniteSimpleGroup</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8492B05B822AC58C">39.15-13 SimpleGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X839CDD8C7AE39FD6">39.15-14 SimpleGroupsIterator</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X872E93F586F54FCE">39.15-15 SmallSimpleGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7EB47BF27D8CBF72">39.15-16 AllSmallNonabelianSimpleGroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X81E22D07871DF37E">39.15-17 IsFinitelyGeneratedGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8648EDA287829755">39.15-18 IsSubsetLocallyFiniteGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8089F18C810B7E3E">39.15-19 IsPGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X87356BAA7E9E2142">39.15-20 PrimePGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X863434AD7DDE514B">39.15-21 PClassPGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X840A4F937ABF15E1">39.15-22 RankPGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X81130F9A7CFCF6BF">39.15-23 IsPSolvable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X87415A8485FCF510">39.15-24 IsPNilpotent</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7F8264FA796B2B7D">39.16 <span class="Heading">Numerical Group Attributes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X812827937F403300">39.16-1 AbelianInvariants</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7D44470C7DA59C1C">39.16-2 Exponent</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X843E0CCA8351FDF4">39.16-3 EulerianFunction</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7AEDEDF67CFED672">39.17 <span class="Heading">Subgroup Series</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7BDD116F7833800F">39.17-1 ChiefSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7AC93E977AC9ED58">39.17-2 ChiefSeriesThrough</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8724E15F81B51173">39.17-3 ChiefSeriesUnderAction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A0E7A8B8495B79D">39.17-4 SubnormalSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X81CDCBD67BC98A5A">39.17-5 CompositionSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X82C0D0217ACB2042">39.17-6 DisplayCompositionSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A879948834BD889">39.17-7 DerivedSeriesOfGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A9AA1577CEC891F">39.17-8 DerivedLength</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X83F057E5791944D6">39.17-9 <span class="Heading">ElementaryAbelianSeries</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X782BD7A47D6B6503">39.17-10 InvariantElementaryAbelianSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X879D55A67DB42676">39.17-11 LowerCentralSeriesOfGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8428592E8773CD7B">39.17-12 UpperCentralSeriesOfGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7809B7ED792669F3">39.17-13 PCentralSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X82A34BD681F24A94">39.17-14 JenningsSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7C08A8B77EC09CFF">39.17-15 DimensionsLoewyFactors</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X84112774812180DD">39.17-16 AscendingChain</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7C5029EE86D7FC96">39.17-17 IntermediateGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X781661FB78DC83B5">39.17-18 IntermediateSubgroups</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X84091B0A7E401E2B">39.18 <span class="Heading">Factor Groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X80FC390C7F38A13F">39.18-1 NaturalHomomorphismByNormalSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7E6EED0185B27C48">39.18-2 FactorGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7816FA867BF1B8ED">39.18-3 CommutatorFactorGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7BB93B9778C5A0B2">39.18-4 MaximalAbelianQuotient</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7FC83E4C783572E7">39.18-5 HasAbelianFactorGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7FAC018680B766B7">39.18-6 HasElementaryAbelianFactorGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X822A3AB27919BC1E">39.18-7 CentralizerModulo</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7D8EFB2F85AA24EE">39.19 <span class="Heading">Sets of Subgroups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7DDE67C67E871336">39.19-1 ConjugacyClassSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7C5BBF487977B8CD">39.19-2 IsConjugacyClassSubgroupsRep</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7E986BF48393113A">39.19-3 ConjugacyClassesSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8486C25380853F9B">39.19-4 ConjugacyClassesMaximalSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X80399CD4870FFC4B">39.19-5 AllSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X798BF55C837DB188">39.19-6 MaximalSubgroupClassReps</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X861CD8DA790D81C2">39.19-7 MaximalSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X80237A847E24E6CF">39.19-8 NormalSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X82ECAA427C987318">39.19-9 MaximalNormalSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X86FDD9BA819F5644">39.19-10 MinimalNormalSubgroups</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7FA267497CFC0550">39.20 <span class="Heading">Subgroup Lattice</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7B104E2C86166188">39.20-1 LatticeSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X78928A3582882BFD">39.20-2 ClassElementLattice</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7E5DF287825EE7BA">39.20-3 DotFileLatticeSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X815CDA447C5DB285">39.20-4 MaximalSubgroupsLattice</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8138997C871EDF96">39.20-5 MinimalSupergroupsLattice</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7BA3484E7AE0A0E1">39.20-6 RepresentativesPerfectSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7B2233D180DF77A1">39.20-7 ConjugacyClassesPerfectSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7BFE573187B4BEF8">39.20-8 Zuppos</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X82C12E2C81963B23">39.20-9 InfoLattice</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X85E613D57F28AEFF">39.21 <span class="Heading">Specific Methods for Subgroup Lattice Computations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X86462A567DDBA6BC">39.21-1 LatticeByCyclicExtension</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X78918D83835A0EDF">39.21-2 InvariantSubgroupsElementaryAbelianGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7AD7804A803910AC">39.21-3 SubgroupsSolvableGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7F60BBB8874DFE40">39.21-4 SizeConsiderFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X833C51BD7E7812C4">39.21-5 ExactSizeConsiderFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A2C774B7CFF3E07">39.21-6 InfoPcSubgroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X79F894537D526B61">39.22 <span class="Heading">Special Generating Sets</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X82FD78AF7F80A0E2">39.22-1 GeneratorsSmallest</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7A258CCF79552198">39.22-2 LargestElementGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X81D15723804771E2">39.22-3 MinimalGeneratingSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X814DBABC878D5232">39.22-4 SmallGeneratingSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7D1574457B152333">39.22-5 IndependentGeneratorsOfAbelianGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X86F835DA8264A0CE">39.22-6 IndependentGeneratorExponents</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X7CA0B6A27E0BE6B8">39.23 <span class="Heading">1-Cohomology</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X847BEC137A49BAF4">39.23-1 <span class="Heading">OneCocycles</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7E6438D5834ACCDA">39.23-2 OneCoboundaries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X80400ABD7F40FAA0">39.23-3 OCOneCocycles</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X811E1CF07DABE924">39.23-4 ComplementClassesRepresentativesEA</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8199B1D27D487897">39.23-5 InfoCoh</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X80A4B0F282977074">39.24 <span class="Heading">Schur Covers and Multipliers</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7F619DDA7DD6C43B">39.24-1 EpimorphismSchurCover</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7DD1E37987612042">39.24-2 SchurCover</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X792BC39D7CEB1D27">39.24-3 AbelianInvariantsMultiplier</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X819E8AEC835F8CD1">39.24-4 Epicentre</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8739CD4686301A0E">39.24-5 NonabelianExteriorSquare</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7E1C8CD77CDB9F71">39.24-6 EpimorphismNonabelianExteriorSquare</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7BF8DB3D8300BB3F">39.24-7 IsCentralFactor</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7F4240CD782B6032">39.24-8 <span class="Heading">Covering groups of symmetric groups</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7DDA6BC1824F78FD">39.24-9 BasicSpinRepresentationOfSymmetricGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X844CFFDE80F6AD15">39.24-10 SchurCoverOfSymmetricGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7E0F4896795E34FC">39.24-11 DoubleCoverOfAlternatingGroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap39_mj.html#X865722987E0E19B6">39.25 <span class="Heading">Tests for the Availability of Methods</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X798F13EA810FB215">39.25-1 CanEasilyTestMembership</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7C2A89607BDFD920">39.25-2 CanEasilyComputeWithIndependentGensAbelianGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X83245C82835D496C">39.25-3 CanComputeSize</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X8268965487364912">39.25-4 CanComputeSizeAnySubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X82DDE00D82A32083">39.25-5 CanComputeIndex</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X7BE7C36B84C23511">39.25-6 CanComputeIsSubset</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap39_mj.html#X87D62C2C7C375E2D">39.25-7 KnowsHowToDecompose</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">39 <span class="Heading">Groups</span></h3><p xmlns="http://www.w3.org/1999/xhtml">This chapter explains how to create groups and defines operations for groups, that is operations whose definition does not depend on the representation used. However methods for these operations in most cases will make use of the representation.</p><p xmlns="http://www.w3.org/1999/xhtml">If not otherwise specified, in all examples in this chapter the group <code class="code">g</code> will be the symmetric group <math id="-7981349653418409663" display="inline" alttext="S_{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">4</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">4</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S_{4}</annotation>
+  </semantics>
+</math> acting on the letters <math id="-5308805404562486199" display="inline" alttext="\{1,\ldots,4\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mo id="p1.1.m1.1.1" stretchy="false">{</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" mathvariant="normal">…</mi>
+      <mo id="p1.1.m1.1.5">,</mo>
+      <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">4</mn>
+      <mo id="p1.1.m1.1.7" stretchy="false">}</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <set xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml">
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">…</ci>
+        <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">4</cn>
+      </set>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\{1,\ldots,4\}</annotation>
+  </semantics>
+</math>.</p> </body>
+    </html>

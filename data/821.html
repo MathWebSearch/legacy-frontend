@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.11-4 ProbabilityShapes</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X7EB610D37D156DC6"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.11-4 ProbabilityShapes</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ProbabilityShapes</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">f</var> be an irreducible polynomial with rational coefficients. This function returns a list of the most likely type(s) of Gal(<var class="Arg">f</var>) (see <code class="func">GaloisType</code> (<a shape="rect" href="chap66_mj.html#X7AB9A6257ED694EC"><span class="RefLink">66.11-3</span></a>)), based on factorization modulo a set of primes. It is very fast, but the result is only probabilistic.</p><p xmlns="http://www.w3.org/1999/xhtml">This function requires the transitive groups library to be installed (see <a shape="rect" href="chap50_mj.html#X7FBB970F7D110FDB"><span class="RefLink">50.6</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=x^9-9*x^7+27*x^5-39*x^3+36*x-8;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GaloisType(f);</span>
+25
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TransitiveGroup(9,25);</span>
+[1/2.S(3)^3]3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ProbabilityShapes(f);</span>
+[ 25 ]
+</pre></div> </body>
+    </html>

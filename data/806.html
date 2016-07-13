@@ -1,0 +1,24 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.15-3 CoefficientsRing</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X8235D10781BE8003"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.15-3 CoefficientsRing</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CoefficientsRing</code>( <var class="Arg">pring</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the ring of coefficients of the polynomial ring <var class="Arg">pring</var>, that is the ring over which <var class="Arg">pring</var> was defined.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r:=PolynomialRing(GF(7));</span>
+GF(7)[x_1]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r:=PolynomialRing(GF(7),3);</span>
+GF(7)[x_1,x_2,x_3]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IndeterminatesOfPolynomialRing(r);</span>
+[ x_1, x_2, x_3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r2:=PolynomialRing(GF(7),[5,7,12]);</span>
+GF(7)[x_5,x_7,x_12]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CoefficientsRing(r);</span>
+GF(7)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r:=PolynomialRing(GF(7),3);</span>
+GF(7)[x_1,x_2,x_3]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r2:=PolynomialRing(GF(7),3,IndeterminatesOfPolynomialRing(r));</span>
+GF(7)[x_4,x_5,x_6]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r:=PolynomialRing(GF(7),[&quot;x&quot;,&quot;y&quot;,&quot;z&quot;,&quot;z2&quot;]);</span>
+GF(7)[x,y,z,z2]
+</pre></div> </body>
+    </html>

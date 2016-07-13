@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.4-3 EmptySCTable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7F1203A1793411DF"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.4-3 EmptySCTable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EmptySCTable</code>( <var class="Arg">dim</var>, <var class="Arg">zero</var>[, <var class="Arg">flag</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">EmptySCTable</code> returns a structure constants table for an algebra of dimension <var class="Arg">dim</var>, describing trivial multiplication. <var class="Arg">zero</var> must be the zero of the coefficients domain. If the multiplication is known to be (anti)commutative then this can be indicated by the optional third argument <var class="Arg">flag</var>, which must be one of the strings <code class="code">&quot;symmetric&quot;</code>, <code class="code">&quot;antisymmetric&quot;</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">For filling up the structure constants table, see <code class="func">SetEntrySCTable</code> (<a shape="rect" href="chap62_mj.html#X817BD086876EC1C4"><span class="RefLink">62.4-4</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">EmptySCTable( 2, Zero( GF(5) ), &quot;antisymmetric&quot; );</span>
+[ [ [ [  ], [  ] ], [ [  ], [  ] ] ], 
+  [ [ [  ], [  ] ], [ [  ], [  ] ] ], -1, 0*Z(5) ]
+</pre></div> </body>
+    </html>

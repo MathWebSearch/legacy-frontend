@@ -1,0 +1,526 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 43: Permutation Groups-&gt;43.7 Randomized Methods for Permutation Groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43.html#X7C2406B97E057196"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">43.7 <span class="Heading">Randomized Methods for Permutation Groups</span></h4><p xmlns="http://www.w3.org/1999/xhtml">For most computations with permutation groups, it is crucial to construct stabilizer chains efficiently. Sims's original construction in <a shape="rect" href="chapBib_mj.html#biBSim70">[Sim70]</a> is deterministic, and is called the Schreier-Sims algorithm, because it is based on Schreier's Lemma (<a shape="rect" href="chapBib_mj.html#biBHall">[HJ59, p. 96]</a>): given <math id="6096260862473542094" display="inline" alttext="K=\langle S\rangle" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">K</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.6.1">
+        <mo xref="p1.1.m1.1.6.1.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">⟨</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">S</mi>
+        <mo xref="p1.1.m1.1.6.1.1.1.cmml" id="p1.1.m1.1.5" stretchy="false">⟩</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐾</ci>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.1.cmml">
+          <csymbol xref="p1.1.m1.1.3" id="p1.1.m1.1.6.1.1.1.cmml" cd="latexml">delimited-⟨⟩</csymbol>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑆</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">K=\langle S\rangle</annotation>
+  </semantics>
+</math> and a transversal <math id="-2698741189290913757" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math> for <math id="-4716498585213873113" display="inline" alttext="K" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">K</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐾</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">K</annotation>
+  </semantics>
+</math> mod <math id="3637247150852293280" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math>, one can obtain <math id="1543097664485636360" display="inline" alttext="|S||T|" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2">
+        <mo xref="p1.1.m1.1.7.2.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">|</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">S</mi>
+        <mo xref="p1.1.m1.1.7.2.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">|</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.7.3.1.cmml" id="p1.1.m1.1.7.3">
+        <mo xref="p1.1.m1.1.7.3.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">|</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">T</mi>
+        <mo xref="p1.1.m1.1.7.3.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">|</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.1.cmml">
+          <abs xref="p1.1.m1.1.1" id="p1.1.m1.1.7.2.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑆</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.7.3" id="p1.1.m1.1.7.3.1.cmml">
+          <abs xref="p1.1.m1.1.4" id="p1.1.m1.1.7.3.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑇</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">|S||T|</annotation>
+  </semantics>
+</math> generators for <math id="1596469886805520277" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math>. This lemma is applied recursively, with consecutive point stabilizers <math id="2712895723033468263" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+      <mrow id="p1.1.m1.1.2.1">
+        <mo id="p1.1.m1.1.2.1.1" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">i</mi>
+        <mo id="p1.1.m1.1.2.1.3" stretchy="false">)</mo>
+      </mrow>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+        <ci xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}</annotation>
+  </semantics>
+</math> and <math id="-1514609552678867471" display="inline" alttext="G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+      <mrow xref="p1.1.m1.1.2.1.7.cmml" id="p1.1.m1.1.2.1">
+        <mo id="p1.1.m1.1.2.1.1" stretchy="false">(</mo>
+        <mrow xref="p1.1.m1.1.2.1.7.cmml" id="p1.1.m1.1.2.1.7">
+          <mi xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">i</mi>
+          <mo xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">+</mo>
+          <mn xref="p1.1.m1.1.2.1.4.cmml" id="p1.1.m1.1.2.1.4">1</mn>
+        </mrow>
+        <mo id="p1.1.m1.1.2.1.5" stretchy="false">)</mo>
+      </mrow>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+        <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.7.cmml">
+          <plus xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml"/>
+          <ci xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml">𝑖</ci>
+          <cn xref="p1.1.m1.1.2.1.4" id="p1.1.m1.1.2.1.4.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i+1)}</annotation>
+  </semantics>
+</math> playing the role of <math id="2307816683795069948" display="inline" alttext="K" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">K</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐾</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">K</annotation>
+  </semantics>
+</math> and <math id="-5122997064486117324" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">In permutation groups of large degree, the number of Schreier generators to be processed becomes too large, and the deterministic Schreier-Sims algorithm becomes impractical. Therefore, <strong class="pkg">GAP</strong> uses randomized algorithms. The method selection process, which is quite different from Version 3, works the following way.</p><p xmlns="http://www.w3.org/1999/xhtml">If a group acts on not more than a hundred points, Sims's original deterministic algorithm is applied. In groups of degree greater than hundred, a heuristic algorithm based on ideas in <a shape="rect" href="chapBib_mj.html#biBBCFS91">[BCFS91]</a> constructs a stabilizer chain. This construction is complemented by a verify-routine that either proves the correctness of the stabilizer chain or causes the extension of the chain to a correct one. The user can influence the verification process by setting the value of the record component <code class="code">random</code> (cf. <a shape="rect" href="chap43_mj.html#X7C7EA55C80E457FA"><span class="RefLink">43.8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">If the <code class="code">random</code> value equals <math id="-2643924412550430123" display="inline" alttext="1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1000</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1000</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1000</annotation>
+  </semantics>
+</math> then a slight extension of an unpublished method of Sims is used. The outcome of this verification process is always correct. The user also can prescribe any integer <math id="-4027200158074878702" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math>, <math id="-5905170542716096391" display="inline" alttext="1\leq x\leq 999" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≤</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">x</mi>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">≤</mo>
+      <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">999</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <and xref="p1.1.m1.1.8" id="p1.1.m1.1.8a.cmml"/>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8b.cmml">
+          <leq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑥</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8c.cmml">
+          <leq xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+          <share xref="p1.1.m1.1.8" id="p1.1.m1.1.8d.cmml" href="#p1.1.m1.1.3.cmml"/>
+          <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">999</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1\leq x\leq 999</annotation>
+  </semantics>
+</math> as the value of <code class="code">random</code>. In this case, a randomized verification process from <a shape="rect" href="chapBib_mj.html#biBBCFS91">[BCFS91]</a> is applied, and the result of the stabilizer chain construction is guaranteed to be correct with probability at least <math id="-7864567188927780085" display="inline" alttext="x/1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">/</mo>
+      <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">1000</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <divide xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">1000</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x/1000</annotation>
+  </semantics>
+</math>. The practical performance of the algorithm is much better than the theoretical guarantee.</p><p xmlns="http://www.w3.org/1999/xhtml">If the stabilizer chain is not correct then the elements in the product of transversals <math id="-5467922196463317276" display="inline" alttext="R^{(m)}R^{(m-1)}\cdots R^{(1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <msup xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+        <mrow id="p1.1.m1.1.2.1">
+          <mo id="p1.1.m1.1.2.1.1" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">m</mi>
+          <mo id="p1.1.m1.1.2.1.3" stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">⁢</mo>
+      <msup xref="p1.1.m1.1.8.3.cmml" id="p1.1.m1.1.8.3">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">R</mi>
+        <mrow xref="p1.1.m1.1.4.1.7.cmml" id="p1.1.m1.1.4.1">
+          <mo id="p1.1.m1.1.4.1.1" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.4.1.7.cmml" id="p1.1.m1.1.4.1.7">
+            <mi xref="p1.1.m1.1.4.1.2.cmml" id="p1.1.m1.1.4.1.2">m</mi>
+            <mo xref="p1.1.m1.1.4.1.3.cmml" id="p1.1.m1.1.4.1.3">-</mo>
+            <mn xref="p1.1.m1.1.4.1.4.cmml" id="p1.1.m1.1.4.1.4">1</mn>
+          </mrow>
+          <mo id="p1.1.m1.1.4.1.5" stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5" mathvariant="normal">⋯</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1b">⁢</mo>
+      <msup xref="p1.1.m1.1.8.4.cmml" id="p1.1.m1.1.8.4">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">R</mi>
+        <mrow id="p1.1.m1.1.7.1">
+          <mo id="p1.1.m1.1.7.1.1" stretchy="false">(</mo>
+          <mn xref="p1.1.m1.1.7.1.2.cmml" id="p1.1.m1.1.7.1.2">1</mn>
+          <mo id="p1.1.m1.1.7.1.3" stretchy="false">)</mo>
+        </mrow>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <times xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml"/>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <csymbol id="p1.1.m1.1.8.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+          <ci xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml">𝑚</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8.3" id="p1.1.m1.1.8.3.cmml">
+          <csymbol id="p1.1.m1.1.8.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑅</ci>
+          <apply xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.7.cmml">
+            <minus xref="p1.1.m1.1.4.1.3" id="p1.1.m1.1.4.1.3.cmml"/>
+            <ci xref="p1.1.m1.1.4.1.2" id="p1.1.m1.1.4.1.2.cmml">𝑚</ci>
+            <cn xref="p1.1.m1.1.4.1.4" id="p1.1.m1.1.4.1.4.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">⋯</ci>
+        <apply xref="p1.1.m1.1.8.4" id="p1.1.m1.1.8.4.cmml">
+          <csymbol id="p1.1.m1.1.8.4.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑅</ci>
+          <cn xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.2.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R^{(m)}R^{(m-1)}\cdots R^{(1)}</annotation>
+  </semantics>
+</math> constitute a proper subset of the group <math id="-3551923964590218849" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> in question. This means that a membership test with this stabilizer chain returns <code class="keyw">false</code> for all elements that are not in <math id="-7540318742718049336" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, but it may also return <code class="keyw">false</code> for some elements of <math id="5040450135850498742" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>; in other words, the result <code class="keyw">true</code> of a membership test is always correct, whereas the result <code class="keyw">false</code> may be incorrect.</p><p xmlns="http://www.w3.org/1999/xhtml">The construction and verification phases are separated because there are situations where the verification step can be omitted; if one happens to know the order of the group in advance then the randomized construction of the stabilizer chain stops as soon as the product of the lengths of the basic orbits of the chain equals the group order, and the chain will be correct (see the <code class="code">size</code> option of the <code class="func">StabChain</code> (<a shape="rect" href="chap43_mj.html#X80B5CF78829495C2"><span class="RefLink">43.8-1</span></a>) command).</p><p xmlns="http://www.w3.org/1999/xhtml">Although the worst case running time is roughly quadratic for Sims's verification and roughly linear for the randomized one, in most examples the running time of the stabilizer chain construction with <code class="code">random</code> value <math id="8261615181328567430" display="inline" alttext="1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1000</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1000</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1000</annotation>
+  </semantics>
+</math> (i.e., guaranteed correct output) is about the same as the running time of randomized verification with guarantee of at least <math id="-6065700568394878505" display="inline" alttext="90" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">90</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">90</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">90</annotation>
+  </semantics>
+</math> percent correctness. Therefore, we suggest to use the default value <code class="code">random</code> <math id="1234565434335570875" display="inline" alttext="=1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1"/>
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">=</mo>
+      <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">1000</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <eq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" cd="latexml">absent</csymbol>
+        <cn xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" type="integer">1000</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">=1000</annotation>
+  </semantics>
+</math>. Possible uses of <code class="code">random</code> values less than <math id="-2553794554808080216" display="inline" alttext="1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1000</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1000</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1000</annotation>
+  </semantics>
+</math> are when one has to run through a large collection of subgroups, and a low value of random is used to choose quickly a candidate for more thorough examination; another use is when the user suspects that the quadratic bottleneck of the guaranteed correct verification is hit.</p><p xmlns="http://www.w3.org/1999/xhtml">We will give two examples to illustrate these ideas.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h:= SL(4,7);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o:= Orbit( h, [1,0,0,0]*Z(7)^0, OnLines );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">op:= Action( h, o, OnLines );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NrMovedPoints( op );</span>
+400
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We created a permutation group on <math id="6913021325772729995" display="inline" alttext="400" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">400</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">400</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">400</annotation>
+  </semantics>
+</math> points. First we compute a guaranteed correct stabilizer chain (see <code class="func">StabChain</code> (<a shape="rect" href="chap43_mj.html#X80B5CF78829495C2"><span class="RefLink">43.8-1</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h:= Group( GeneratorsOfGroup( op ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StabChain( h );;  time;</span>
+1120
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( h );</span>
+2317591180800
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Now randomized verification will be used. We require that the result is guaranteed correct with probability <math id="2749720960072490398" display="inline" alttext="90" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">90</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">90</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">90</annotation>
+  </semantics>
+</math> percent. This means that if we would do this calculation many times over, <strong class="pkg">GAP</strong> would <em>guarantee</em> that in least <math id="-1450453638859766412" display="inline" alttext="90" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">90</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">90</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">90</annotation>
+  </semantics>
+</math> percent of all calculations the result is correct. In fact the results are much better than the guarantee, but we cannot promise that this will really happen. (For the meaning of the <code class="code">random</code> component in the second argument of <code class="func">StabChain</code> (<a shape="rect" href="chap43_mj.html#X80B5CF78829495C2"><span class="RefLink">43.8-1</span></a>).)</p><p xmlns="http://www.w3.org/1999/xhtml">First the group is created anew.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h:= Group( GeneratorsOfGroup( op ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StabChain( h, rec( random:= 900 ) );;  time;</span>
+1410
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( h );</span>
+2317591180800
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The result is still correct, and the running time is actually somewhat slower. If you give the algorithm additional information so that it can check its results, things become faster and the result is guaranteed to be correct.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h:=Group( GeneratorsOfGroup( op ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetSize( h, 2317591180800 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StabChain( h );;  time;</span>
+170
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The second example gives a typical group when the verification with <code class="code">random</code> value <math id="664288262046090924" display="inline" alttext="1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1000</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1000</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1000</annotation>
+  </semantics>
+</math> is slow. The problem is that the group has a stabilizer subgroup <math id="-8313582151857156653" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+      <mrow id="p1.1.m1.1.2.1">
+        <mo id="p1.1.m1.1.2.1.1" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">i</mi>
+        <mo id="p1.1.m1.1.2.1.3" stretchy="false">)</mo>
+      </mrow>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+        <ci xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}</annotation>
+  </semantics>
+</math> such that the fundamental orbit <math id="-3044285421915463773" display="inline" alttext="O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">O</mi>
+      <mrow id="p1.1.m1.1.2.1">
+        <mo id="p1.1.m1.1.2.1.1" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">i</mi>
+        <mo id="p1.1.m1.1.2.1.3" stretchy="false">)</mo>
+      </mrow>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑂</ci>
+        <ci xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">O^{(i)}</annotation>
+  </semantics>
+</math> is split into a lot of orbits when we stabilize <math id="3681883189817650200" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
+  </semantics>
+</math> and one additional point of <math id="-396965675691905486" display="inline" alttext="O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">O</mi>
+      <mrow id="p1.1.m1.1.2.1">
+        <mo id="p1.1.m1.1.2.1.1" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">i</mi>
+        <mo id="p1.1.m1.1.2.1.3" stretchy="false">)</mo>
+      </mrow>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑂</ci>
+        <ci xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">O^{(i)}</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">p1:=PermList(Concatenation([401],[1..400]));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">p2:=PermList(List([1..400],i-&gt;(i*20 mod 401)));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d:=DirectProduct(Group(p1,p2),SymmetricGroup(5));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h:=Group(GeneratorsOfGroup(d));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StabChain(h);;time;Size(h);</span>
+1030
+192480
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h:=Group(GeneratorsOfGroup(d));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StabChain(h,rec(random:=900));;time;Size(h);</span>
+570
+192480
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">When stabilizer chains of a group <math id="-155730092891822993" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> are created with <code class="code">random</code> value less than <math id="7627855931265193197" display="inline" alttext="1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1000</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1000</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1000</annotation>
+  </semantics>
+</math>, this is noted in the group <math id="8164492206551029392" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, by setting of the record component <code class="code">random</code> in the value of the attribute <code class="func">StabChainOptions</code> (<a shape="rect" href="chap43_mj.html#X790C27B8783EDE68"><span class="RefLink">43.8-2</span></a>) for <math id="-3772572496124924333" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>. As errors induced by the random methods might propagate, any group or homomorphism created from <math id="5124577514332532071" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> inherits a <code class="code">random</code> component in its <code class="func">StabChainOptions</code> (<a shape="rect" href="chap43_mj.html#X790C27B8783EDE68"><span class="RefLink">43.8-2</span></a>) value from the corresponding component for <math id="-3087241423615265874" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">A lot of algorithms dealing with permutation groups use randomized methods; however, if the initial stabilizer chain construction for a group is correct, these further methods will provide guaranteed correct output.</p> </body>
+    </html>

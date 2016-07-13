@@ -1,0 +1,59 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 45: Polycyclic Groups-&gt;45.9-5 \mod</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap45.html#X7E923519832F2D08"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">45.9-5 \mod</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ \mod</code>( <var class="Arg">P</var>, <var class="Arg">I</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Modulo Pcgs can also be built from compatible induced pcgs. Let <math id="6565092917986709967" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> be a group with pcgs <var class="Arg">P</var> and let <var class="Arg">I</var> be an induced pcgs of a normal subgroup <math id="-1799665093328360116" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> of <math id="272726228237603873" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>. (Respectively: <var class="Arg">P</var> and <var class="Arg">I</var> are both induced with respect to the <em>same</em> Pcgs.) Then we can compute a modulo pcgs of <math id="-9097424175634056773" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> mod <math id="-4099132776077872016" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> by</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">P</var> <code class="keyw">mod</code> <var class="Arg">I</var></p><p xmlns="http://www.w3.org/1999/xhtml">Note that in this case we obtain the advantage that the values of <code class="func">NumeratorOfModuloPcgs</code> (<a shape="rect" href="chap45_mj.html#X8027CC9878031D74"><span class="RefLink">45.9-3</span></a>) and <code class="func">DenominatorOfModuloPcgs</code> (<a shape="rect" href="chap45_mj.html#X87DBE2797D51B2F1"><span class="RefLink">45.9-4</span></a>) are just <var class="Arg">P</var> and <var class="Arg">I</var>, respectively, and hence are unique.</p><p xmlns="http://www.w3.org/1999/xhtml">The resulting modulo pcgs will consist of a subset of <var class="Arg">P</var> and will be &quot;compatible&quot; with <var class="Arg">P</var> (or its parent).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := Group((1,2,3,4));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := Pcgs(G);</span>
+Pcgs([ (1,2,3,4), (1,3)(2,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">I := InducedPcgsByGenerators(P, [(1,3)(2,4)]);</span>
+Pcgs([ (1,3)(2,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M := P mod I;</span>
+[ (1,2,3,4) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NumeratorOfModuloPcgs(M);</span>
+Pcgs([ (1,2,3,4), (1,3)(2,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DenominatorOfModuloPcgs(M);</span>
+Pcgs([ (1,3)(2,4) ])
+</pre></div> </body>
+    </html>

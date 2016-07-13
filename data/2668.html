@@ -1,0 +1,26 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 13: Types of Objects-&gt;13.2-3 ShowImpliedFilters</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap13.html#X7F9568A67F3840DE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">13.2-3 ShowImpliedFilters</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ShowImpliedFilters</code>( <var class="Arg">filter</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Displays information about the filters that may be implied by <var class="Arg">filter</var>. They are given by their names. <code class="code">ShowImpliedFilters</code> first displays the names of all filters that are unconditionally implied by <var class="Arg">filter</var>. It then displays implications that require further filters to be present (indicating by <code class="code">+</code> the required further filters). The function displays only first-level implications, implications that follow in turn are not displayed (though <strong class="pkg">GAP</strong> will do these).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ShowImpliedFilters(IsMatrix);</span>
+Implies:
+   IsGeneralizedRowVector
+   IsNearAdditiveElementWithInverse
+   IsAdditiveElement
+   IsMultiplicativeElement
+
+
+May imply with:
++IsGF2MatrixRep
+   IsOrdinaryMatrix
+
++CategoryCollections(CategoryCollections(IsAdditivelyCommutativeElement))
+   IsAdditivelyCommutativeElement
+
++IsInternalRep
+   IsOrdinaryMatrix
+
+</pre></div> </body>
+    </html>

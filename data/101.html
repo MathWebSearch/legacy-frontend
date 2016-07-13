@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.3-2 FreeAlgebraWithOne</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7FBD04B07B85623D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.3-2 FreeAlgebraWithOne</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeAlgebraWithOne</code>( <var class="Arg">R</var>, <var class="Arg">rank</var>[, <var class="Arg">name</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeAlgebraWithOne</code>( <var class="Arg">R</var>, <var class="Arg">name1</var>, <var class="Arg">name2</var>, <var class="Arg">...</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is a free (nonassociative) algebra-with-one of rank <var class="Arg">rank</var> over the division ring <var class="Arg">R</var>. Here <var class="Arg">name</var>, and <var class="Arg">name1</var>, <var class="Arg">name2</var>, ... are optional strings that can be used to provide names for the generators.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= FreeAlgebraWithOne( Rationals, 4, &quot;q&quot; );</span>
+&lt;algebra-with-one over Rationals, with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfAlgebra( A );</span>
+[ (1)*&lt;identity ...&gt;, (1)*q.1, (1)*q.2, (1)*q.3, (1)*q.4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">One( A );</span>
+(1)*&lt;identity ...&gt;
+</pre></div> </body>
+    </html>

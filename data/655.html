@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.4-2 ComplexConjugate</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X856AB97E785E0B04"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.4-2 ComplexConjugate</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ComplexConjugate</code>( <var class="Arg">chi</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GaloisCyc</code>( <var class="Arg">chi</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Permuted</code>( <var class="Arg">chi</var>, <var class="Arg">pi</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The operations <code class="func">ComplexConjugate</code>, <code class="func">GaloisCyc</code>, and <code class="func">Permuted</code> return a class function when they are called with a class function; The complex conjugate of a class function that is known to be a (virtual) character is again known to be a (virtual) character, and applying an arbitrary Galois automorphism to an ordinary (virtual) character yields a (virtual) character.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComplexConjugate( lin[2] );</span>
+Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),
+ [ 1, 1, E(3)^2, E(3) ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GaloisCyc( lin[2], 5 );</span>
+Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),
+ [ 1, 1, E(3)^2, E(3) ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Permuted( lin[2], (2,3,4) );</span>
+ClassFunction( CharacterTable( Alt( [ 1 .. 4 ] ) ),
+ [ 1, E(3)^2, 1, E(3) ] )
+</pre></div> </body>
+    </html>

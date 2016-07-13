@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.10-2 SimsNo</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X790D50447ABDF7EE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">50.10-2 SimsNo</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SimsNo</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">G</var> is a primitive group obtained by <code class="func">PrimitiveGroup</code> (<a shape="rect" href="chap50_mj.html#X7BCEA0C57B6D9F42"><span class="RefLink">50.9-1</span></a>) (respectively one of the selection functions) this attribute contains the number of the isomorphic group in the original list of C. Sims. (This is the arrangement as it was used in <strong class="pkg">GAP</strong> 3.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=PrimitiveGroup(25,2);</span>
+5^2:S(3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SimsNo(g);</span>
+3
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">As mentioned in the previous section, the index numbers of primitive groups in <strong class="pkg">GAP</strong> are guaranteed to remain stable. (Thus, missing groups will be added to the library at the end of each degree.) In particular, it is safe to refer to a primitive group of type <var class="Arg">deg</var>, <var class="Arg">nr</var> in the <strong class="pkg">GAP</strong> library.</p> </body>
+    </html>

@@ -1,0 +1,30 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 67: Algebraic extensions of fields-&gt;67.2 Elements in Algebraic Extensions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap67.html#X819C7E6F78817F1E"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">67.2 <span class="Heading">Elements in Algebraic Extensions</span></h4><p xmlns="http://www.w3.org/1999/xhtml">According to Kronecker's construction, the elements of an algebraic extension are considered to be polynomials in the primitive element. The elements of the base field are represented as polynomials of degree zero. <strong class="pkg">GAP</strong> therefore displays elements of an algebraic extension as polynomials in an indeterminate &quot;a&quot;, which is a root of the defining polynomial of the extension. Polynomials of degree zero are displayed with a leading exclamation mark to indicate that they are different from elements of the base field.</p><p xmlns="http://www.w3.org/1999/xhtml">The usual field operations are applicable to algebraic elements.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a^3/(a^2+a+1);</span>
+-1/2*a^3+1/2*a^2-1/2*a
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a*(1/a);</span>
+!1
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The external representation of algebraic extension elements are the polynomial coefficients in the primitive element <code class="code">a</code>, the operations <code class="func">ExtRepOfObj</code> (<a shape="rect" href="chap79_mj.html#X8542B32A8206118C"><span class="RefLink">79.16-1</span></a>) and <code class="func">ObjByExtRep</code> (<a shape="rect" href="chap79_mj.html#X8542B32A8206118C"><span class="RefLink">79.16-1</span></a>) can be used for conversion.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ExtRepOfObj(One(a));</span>
+[ 1, 0, 0, 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ExtRepOfObj(a^3+2*a-9);</span>
+[ -9, 2, 0, 1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ObjByExtRep(FamilyObj(a),[3,19,-27,433]);</span>
+433*a^3-27*a^2+19*a+3
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> does <em>not</em> embed the base field in its algebraic extensions and therefore lists which contain elements of the base field and of the extension are not homogeneous and thus cannot be used as polynomial coefficients or to form matrices. The remedy is to multiply the list(s) with the value of the attribute <code class="func">One</code> (<a shape="rect" href="chap31_mj.html#X8046262384895B2A"><span class="RefLink">31.10-2</span></a>) of the extension which will embed all entries in the extension.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:=[[1,a],[0,1]];</span>
+[ [ 1, a ], [ 0, 1 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMatrix(m);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:=m*One(e);</span>
+[ [ !1, a ], [ !0, !1 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMatrix(m);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m^2;</span>
+[ [ !1, 2*a ], [ !0, !1 ] ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,157 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 43: Permutation Groups-&gt;43.8-1 StabChain</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43.html#X80B5CF78829495C2"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">43.8-1 StabChain</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StabChain</code>( <var class="Arg">G</var>[, <var class="Arg">options</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StabChain</code>( <var class="Arg">G</var>, <var class="Arg">base</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StabChainOp</code>( <var class="Arg">G</var>, <var class="Arg">options</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StabChainMutable</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StabChainMutable</code>( <var class="Arg">permhomom</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StabChainImmutable</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">These commands compute a stabilizer chain for the permutation group <var class="Arg">G</var>; additionally, <code class="func">StabChainMutable</code> is also an attribute for the group homomorphism <var class="Arg">permhomom</var> whose source is a permutation group.</p><p xmlns="http://www.w3.org/1999/xhtml">(The mathematical background of stabilizer chains is sketched in <a shape="rect" href="chap43_mj.html#X7FA58C3A8283F3BD"><span class="RefLink">43.6</span></a>, more information about the objects representing stabilizer chains in <strong class="pkg">GAP</strong> can be found in <a shape="rect" href="chap43_mj.html#X81D7FCE47AC7F942"><span class="RefLink">43.9</span></a>.)</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">StabChainOp</code> is an operation with two arguments <var class="Arg">G</var> and <var class="Arg">options</var>, the latter being a record which controls some aspects of the computation of a stabilizer chain (see below); <code class="func">StabChainOp</code> returns a <em>mutable</em> stabilizer chain. <code class="func">StabChainMutable</code> is a <em>mutable</em> attribute for groups or homomorphisms, its default method for groups is to call <code class="func">StabChainOp</code> with empty options record. <code class="func">StabChainImmutable</code> is an attribute with <em>immutable</em> values; its default method dispatches to <code class="func">StabChainMutable</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">StabChain</code> is a function with first argument a permutation group <var class="Arg">G</var>, and optionally a record <var class="Arg">options</var> as second argument. If the value of <code class="func">StabChainImmutable</code> for <var class="Arg">G</var> is already known and if this stabilizer chain matches the requirements of <var class="Arg">options</var>, <code class="func">StabChain</code> simply returns this stored stabilizer chain. Otherwise <code class="func">StabChain</code> calls <code class="func">StabChainOp</code> and returns an immutable copy of the result; additionally, this chain is stored as <code class="func">StabChainImmutable</code> value for <var class="Arg">G</var>. If no <var class="Arg">options</var> argument is given, its components default to the global variable <code class="func">DefaultStabChainOptions</code> (<a shape="rect" href="chap43_mj.html#X87E1292E85A5D31C"><span class="RefLink">43.8-3</span></a>). If <var class="Arg">base</var> is a list of positive integers, the version <code class="code">StabChain( <var class="Arg">G</var>, <var class="Arg">base</var> )</code> defaults to <code class="code">StabChain( <var class="Arg">G</var>, rec( base:= <var class="Arg">base</var> ) )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If given, <var class="Arg">options</var> is a record whose components specify properties of the desired stabilizer chain or which may help the algorithm. Default values for all of them can be given in the global variable <code class="func">DefaultStabChainOptions</code> (<a shape="rect" href="chap43_mj.html#X87E1292E85A5D31C"><span class="RefLink">43.8-3</span></a>). The following options are supported.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">base</code> (default an empty list)</strong></dt><dd><p>A list of points, through which the resulting stabilizer chain shall run. For the base <math id="3974445841087888868" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math> of the resulting stabilizer chain <var class="Arg">S</var> this means the following. If the <code class="code">reduced</code> component of <var class="Arg">options</var> is <code class="keyw">true</code> then those points of <code class="code">base</code> with nontrivial basic orbits form the initial segment of <math id="-4478183884559895534" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math>, if the <code class="code">reduced</code> component is <code class="keyw">false</code> then <code class="code">base</code> itself is the initial segment of <math id="-698868117874533680" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math>. Repeated occurrences of points in <code class="code">base</code> are ignored. If a stabilizer chain for <var class="Arg">G</var> is already known then the stabilizer chain is computed via a base change.</p>
+
+</dd><dt><strong class="Mark"><code class="code">knownBase</code> (no default value)</strong></dt><dd><p>A list of points which is known to be a base for the group. Such a known base makes it easier to test whether a permutation given as a word in terms of a set of generators is the identity, since it suffices to map the known base with each factor consecutively, rather than multiplying the whole permutations (which would mean to map every point). This speeds up the Schreier-Sims algorithm which is used when a new stabilizer chain is constructed; it will not affect a base change, however. The component <code class="code">knownBase</code> bears no relation to the <code class="code">base</code> component, you may specify a known base <code class="code">knownBase</code> and a desired base <code class="code">base</code> independently.</p>
+
+</dd><dt><strong class="Mark"><code class="code">reduced</code> (default <code class="keyw">true</code>)</strong></dt><dd><p>If this is <code class="keyw">true</code> the resulting stabilizer chain <var class="Arg">S</var> is reduced, i.e., the case <math id="-8520901765753364634" display="inline" alttext="G^{(i)}=G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msup xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+        <mrow id="p1.1.m1.1.2.1">
+          <mo id="p1.1.m1.1.2.1.1" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">i</mi>
+          <mo id="p1.1.m1.1.2.1.3" stretchy="false">)</mo>
+        </mrow>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <msup xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">G</mi>
+        <mrow xref="p1.1.m1.1.5.1.7.cmml" id="p1.1.m1.1.5.1">
+          <mo id="p1.1.m1.1.5.1.1" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.5.1.7.cmml" id="p1.1.m1.1.5.1.7">
+            <mi xref="p1.1.m1.1.5.1.2.cmml" id="p1.1.m1.1.5.1.2">i</mi>
+            <mo xref="p1.1.m1.1.5.1.3.cmml" id="p1.1.m1.1.5.1.3">+</mo>
+            <mn xref="p1.1.m1.1.5.1.4.cmml" id="p1.1.m1.1.5.1.4">1</mn>
+          </mrow>
+          <mo id="p1.1.m1.1.5.1.5" stretchy="false">)</mo>
+        </mrow>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <csymbol id="p1.1.m1.1.6.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+          <ci xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml">𝑖</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐺</ci>
+          <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.7.cmml">
+            <plus xref="p1.1.m1.1.5.1.3" id="p1.1.m1.1.5.1.3.cmml"/>
+            <ci xref="p1.1.m1.1.5.1.2" id="p1.1.m1.1.5.1.2.cmml">𝑖</ci>
+            <cn xref="p1.1.m1.1.5.1.4" id="p1.1.m1.1.5.1.4.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}=G^{(i+1)}</annotation>
+  </semantics>
+</math> does not occur. Setting <code class="code">reduced</code> to <code class="keyw">false</code> makes sense only if the component <code class="code">base</code> (see above) is also set; in this case all points of <code class="code">base</code> will occur in the base <math id="-1284154510658281709" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math> of <var class="Arg">S</var>, even if they have trivial basic orbits. Note that if <code class="code">base</code> is just an initial segment of <math id="7398090429337630492" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math>, the basic orbits of the points in <math id="4764100018925300235" display="inline" alttext="B\setminus" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∖</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="latexml">limit-from</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <setdiff xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B\setminus</annotation>
+  </semantics>
+</math><code class="code">base</code> are always nontrivial.</p>
+
+</dd><dt><strong class="Mark"><code class="code">tryPcgs</code> (default <code class="keyw">true</code>)</strong></dt><dd><p>If this is <code class="keyw">true</code> and either the degree is at most <math id="5421639429812220231" display="inline" alttext="100" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">100</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">100</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">100</annotation>
+  </semantics>
+</math> or the group is known to be solvable, <strong class="pkg">GAP</strong> will first try to construct a pcgs (see Chapter <a shape="rect" href="chap45_mj.html#X86007B0083F60470"><span class="RefLink">45</span></a>) for <var class="Arg">G</var> which will succeed and implicitly construct a stabilizer chain if <var class="Arg">G</var> is solvable. If <var class="Arg">G</var> turns out non-solvable, one of the other methods will be used. This solvability check is comparatively fast, even if it fails, and it can save a lot of time if <var class="Arg">G</var> is solvable.</p>
+
+</dd><dt><strong class="Mark"><code class="code">random</code> (default <code class="code">1000</code>)</strong></dt><dd><p>If the value is less than <math id="-4241377098417849311" display="inline" alttext="1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1000</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1000</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1000</annotation>
+  </semantics>
+</math>, the resulting chain is correct with probability at least <code class="code">random</code><math id="-7320214551363094695" display="inline" alttext="/1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1"/>
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">/</mo>
+      <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">1000</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <divide xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" cd="latexml">absent</csymbol>
+        <cn xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" type="integer">1000</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">/1000</annotation>
+  </semantics>
+</math>. The <code class="code">random</code> option is explained in more detail in <a shape="rect" href="chap43_mj.html#X7C2406B97E057196"><span class="RefLink">43.7</span></a>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">size</code> (default <code class="code">Size(<var class="Arg">G</var>)</code> if this is known,
+        i.e., if <code class="code">HasSize(<var class="Arg">G</var>)</code> is <code class="keyw">true</code>)</strong></dt><dd><p>If this component is present, its value is assumed to be the order of the group <var class="Arg">G</var>. This information can be used to prove that a non-deterministically constructed stabilizer chain is correct. In this case, <strong class="pkg">GAP</strong> does a non-deterministic construction until the size is correct.</p>
+
+</dd><dt><strong class="Mark"><code class="code">limit</code> (default <code class="code">Size(Parent(<var class="Arg">G</var>))</code> or
+         <code class="code">StabChainOptions(Parent(<var class="Arg">G</var>)).limit</code>
+         if it is present)</strong></dt><dd><p>If this component is present, it must be greater than or equal to the order of <var class="Arg">G</var>. The stabilizer chain construction stops if size <code class="code">limit</code> is reached.</p>
+
+</dd></dl> </body>
+    </html>

@@ -1,0 +1,202 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 22: Boolean Lists-&gt;22.1-1 IsBlist</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap22.html#X7BE078187A08DCEA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">22.1-1 IsBlist</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsBlist</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A boolean list (&quot;blist&quot;) is a list that has no holes and contains only <code class="keyw">true</code> and <code class="keyw">false</code>. Boolean lists can be represented in an efficient compact form, see <a shape="rect" href="chap22_mj.html#X7C71B225841DFC0F"><span class="RefLink">22.5</span></a> for details.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsBlist( [ true, true, false, false ] );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsBlist( [] );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsBlist( [false,,true] );  # has holes</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsBlist( [1,1,0,0] );      # contains not only boolean values</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsBlist( 17 );             # is not even a list</span>
+false
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Boolean lists are lists and all operations for lists are therefore applicable to boolean lists.</p><p xmlns="http://www.w3.org/1999/xhtml">Boolean lists can be used in various ways, but maybe the most important application is their use for the description of <em>subsets</em> of finite sets. Suppose <math id="-8430940595816864371" display="inline" alttext="set" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">e</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">t</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑒</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑡</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">set</annotation>
+  </semantics>
+</math> is a finite set, represented as a list. Then a subset <math id="-6352559688800767432" display="inline" alttext="sub" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">u</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑢</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">sub</annotation>
+  </semantics>
+</math> of <math id="-6026348018288609661" display="inline" alttext="set" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">e</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">t</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑒</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑡</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">set</annotation>
+  </semantics>
+</math> is represented by a boolean list <math id="-6434161426335290963" display="inline" alttext="blist" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">s</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1c">⁢</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">t</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑡</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">blist</annotation>
+  </semantics>
+</math> of the same length as <math id="-8579824737670741596" display="inline" alttext="set" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">e</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">t</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑒</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑡</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">set</annotation>
+  </semantics>
+</math> such that <math id="-7282775839626981618" display="inline" alttext="blist[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">s</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1c">⁢</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">t</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1d">⁢</mo>
+      <mrow xref="p1.1.m1.1.9.2.1.cmml" id="p1.1.m1.1.9.2">
+        <mo xref="p1.1.m1.1.9.2.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">[</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">i</mi>
+        <mo xref="p1.1.m1.1.9.2.1.1.cmml" id="p1.1.m1.1.8" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <times xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑡</ci>
+        <apply xref="p1.1.m1.1.9.2" id="p1.1.m1.1.9.2.1.cmml">
+          <csymbol xref="p1.1.m1.1.6" id="p1.1.m1.1.9.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑖</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">blist[i]</annotation>
+  </semantics>
+</math> is <code class="keyw">true</code> if <math id="-584024726184004058" display="inline" alttext="set[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">e</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">t</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1b">⁢</mo>
+      <mrow xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2">
+        <mo xref="p1.1.m1.1.7.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">[</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">i</mi>
+        <mo xref="p1.1.m1.1.7.2.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑒</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑡</ci>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.1.cmml">
+          <csymbol xref="p1.1.m1.1.4" id="p1.1.m1.1.7.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑖</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">set[i]</annotation>
+  </semantics>
+</math> is in <math id="-8235714571467019996" display="inline" alttext="sub" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">u</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑢</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">sub</annotation>
+  </semantics>
+</math>, and <code class="keyw">false</code> otherwise.</p> </body>
+    </html>

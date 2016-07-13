@@ -1,0 +1,10 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.2-1 VectorSpace</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X805413157CE9BECF"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.2-1 VectorSpace</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ VectorSpace</code>( <var class="Arg">F</var>, <var class="Arg">gens</var>[, <var class="Arg">zero</var>][, <var class="Arg">&quot;basis&quot;</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a field <var class="Arg">F</var> and a collection <var class="Arg">gens</var> of vectors, <code class="func">VectorSpace</code> returns the <var class="Arg">F</var>-vector space spanned by the elements in <var class="Arg">gens</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">zero</var> can be used to specify the zero element of the space; <var class="Arg">zero</var> <em>must</em> be given if <var class="Arg">gens</var> is empty. The optional string <code class="code">&quot;basis&quot;</code> indicates that <var class="Arg">gens</var> is known to be linearly independent over <var class="Arg">F</var>, in particular the dimension of the vector space is immediately set; note that <code class="func">Basis</code> (<a shape="rect" href="chap61_mj.html#X837BE54C80DE368E"><span class="RefLink">61.5-2</span></a>) need <em>not</em> return the basis formed by <var class="Arg">gens</var> if the string <code class="code">&quot;basis&quot;</code> is given as an argument.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= VectorSpace( Rationals, [ [ 1, 2, 3 ], [ 1, 1, 1 ] ] );</span>
+&lt;vector space over Rationals, with 2 generators&gt;
+</pre></div> </body>
+    </html>

@@ -1,0 +1,353 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.1-3 Bell</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X7DC5667580522BDA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.1-3 Bell</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Bell</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the <em>Bell number</em> <math id="-2474924322126900435" display="inline" alttext="B(n)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mrow id="p1.1.m1.1.5.2">
+        <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+        <mo id="p1.1.m1.1.4" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B(n)</annotation>
+  </semantics>
+</math>. The Bell numbers are defined by <math id="-6276154278670558350" display="inline" alttext="B(0)=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.7.1.2">
+          <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+          <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">0</mn>
+          <mo id="p1.1.m1.1.4" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">=</mo>
+      <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <eq xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <times xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+          <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">0</cn>
+        </apply>
+        <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B(0)=1</annotation>
+  </semantics>
+</math> and the recurrence <math id="3398187471618228946" display="inline" alttext="B(n+1)=\sum_{{k=0}}^{n}{{n\choose k}}B(k)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+        <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.16.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.16.1.2.2.cmml" id="p1.1.m1.1.16.1.2">
+          <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.16.1.2.2.cmml" id="p1.1.m1.1.16.1.2.2">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+            <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">+</mo>
+            <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">1</mn>
+          </mrow>
+          <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">=</mo>
+      <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2">
+        <msubsup xref="p1.1.m1.1.16.2.1.cmml" id="p1.1.m1.1.16.2.1">
+          <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8" symmetric="true" largeop="true">∑</mo>
+          <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">
+            <mi xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1">k</mi>
+            <mo xref="p1.1.m1.1.9.1.2.cmml" id="p1.1.m1.1.9.1.2">=</mo>
+            <mn xref="p1.1.m1.1.9.1.3.cmml" id="p1.1.m1.1.9.1.3">0</mn>
+          </mrow>
+          <mi xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">n</mi>
+        </msubsup>
+        <mrow xref="p1.1.m1.1.16.2.2.cmml" id="p1.1.m1.1.16.2.2">
+          <mrow xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.5">
+            <mo xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.2">(</mo>
+            <mfrac xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.3" linethickness="0pt">
+              <mi xref="p1.1.m1.1.11.3.2.cmml" id="p1.1.m1.1.11.3.2">n</mi>
+              <mi xref="p1.1.m1.1.11.3.3.cmml" id="p1.1.m1.1.11.3.3">k</mi>
+            </mfrac>
+            <mo xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.4">)</mo>
+          </mrow>
+          <mo xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">B</mi>
+          <mo xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2.1a">⁢</mo>
+          <mrow id="p1.1.m1.1.16.2.2.2">
+            <mo id="p1.1.m1.1.13" stretchy="false">(</mo>
+            <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">k</mi>
+            <mo id="p1.1.m1.1.15" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">
+        <eq xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+        <apply xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml">
+          <times xref="p1.1.m1.1.16.1.1" id="p1.1.m1.1.16.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+          <apply xref="p1.1.m1.1.16.1.2" id="p1.1.m1.1.16.1.2.2.cmml">
+            <plus xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.16.2" id="p1.1.m1.1.16.2.cmml">
+          <apply xref="p1.1.m1.1.16.2.1" id="p1.1.m1.1.16.2.1.cmml">
+            <csymbol id="p1.1.m1.1.16.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.16.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.16.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <sum xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+              <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">
+                <eq xref="p1.1.m1.1.9.1.2" id="p1.1.m1.1.9.1.2.cmml"/>
+                <ci xref="p1.1.m1.1.9.1.1" id="p1.1.m1.1.9.1.1.cmml">𝑘</ci>
+                <cn xref="p1.1.m1.1.9.1.3" id="p1.1.m1.1.9.1.3.cmml" type="integer">0</cn>
+              </apply>
+            </apply>
+            <ci xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">𝑛</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.16.2.2" id="p1.1.m1.1.16.2.2.cmml">
+            <times xref="p1.1.m1.1.16.2.2.1" id="p1.1.m1.1.16.2.2.1.cmml"/>
+            <apply xref="p1.1.m1.1.11.5" id="p1.1.m1.1.11.1.cmml">
+              <csymbol id="p1.1.m1.1.11.3.1.cmml" cd="latexml">binomial</csymbol>
+              <ci xref="p1.1.m1.1.11.3.2" id="p1.1.m1.1.11.3.2.cmml">𝑛</ci>
+              <ci xref="p1.1.m1.1.11.3.3" id="p1.1.m1.1.11.3.3.cmml">𝑘</ci>
+            </apply>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝐵</ci>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑘</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B(n+1)=\sum_{{k=0}}^{n}{{n\choose k}}B(k)</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><math id="-9153635759366165612" display="inline" alttext="B(n)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mrow id="p1.1.m1.1.5.2">
+        <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+        <mo id="p1.1.m1.1.4" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B(n)</annotation>
+  </semantics>
+</math> is the number of ways to partition a set of <var class="Arg">n</var> elements into pairwise disjoint nonempty subsets (see <code class="func">PartitionsSet</code> (<a shape="rect" href="chap16_mj.html#X7A13D8DC8204525F"><span class="RefLink">16.2-16</span></a>)). This implies of course that <math id="6734775951655072713" display="inline" alttext="B(n)=\sum_{{k=0}}^{n}S_{2}(n,k)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+        <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.16.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.16.1.2">
+          <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+          <mo id="p1.1.m1.1.4" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">=</mo>
+      <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2">
+        <msubsup xref="p1.1.m1.1.16.2.1.cmml" id="p1.1.m1.1.16.2.1">
+          <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6" symmetric="true" largeop="true">∑</mo>
+          <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+            <mi xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">k</mi>
+            <mo xref="p1.1.m1.1.7.1.2.cmml" id="p1.1.m1.1.7.1.2">=</mo>
+            <mn xref="p1.1.m1.1.7.1.3.cmml" id="p1.1.m1.1.7.1.3">0</mn>
+          </mrow>
+          <mi xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">n</mi>
+        </msubsup>
+        <mrow xref="p1.1.m1.1.16.2.2.cmml" id="p1.1.m1.1.16.2.2">
+          <msub xref="p1.1.m1.1.16.2.2.2.cmml" id="p1.1.m1.1.16.2.2.2">
+            <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">S</mi>
+            <mn xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">2</mn>
+          </msub>
+          <mo xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2.1">⁢</mo>
+          <mrow xref="p1.1.m1.1.16.2.2.3.1.cmml" id="p1.1.m1.1.16.2.2.3">
+            <mo id="p1.1.m1.1.11" stretchy="false">(</mo>
+            <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">n</mi>
+            <mo id="p1.1.m1.1.13">,</mo>
+            <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">k</mi>
+            <mo id="p1.1.m1.1.15" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">
+        <eq xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml">
+          <times xref="p1.1.m1.1.16.1.1" id="p1.1.m1.1.16.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.16.2" id="p1.1.m1.1.16.2.cmml">
+          <apply xref="p1.1.m1.1.16.2.1" id="p1.1.m1.1.16.2.1.cmml">
+            <csymbol id="p1.1.m1.1.16.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.16.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.16.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <sum xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+              <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+                <eq xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.2.cmml"/>
+                <ci xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml">𝑘</ci>
+                <cn xref="p1.1.m1.1.7.1.3" id="p1.1.m1.1.7.1.3.cmml" type="integer">0</cn>
+              </apply>
+            </apply>
+            <ci xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">𝑛</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.16.2.2" id="p1.1.m1.1.16.2.2.cmml">
+            <times xref="p1.1.m1.1.16.2.2.1" id="p1.1.m1.1.16.2.2.1.cmml"/>
+            <apply xref="p1.1.m1.1.16.2.2.2" id="p1.1.m1.1.16.2.2.2.cmml">
+              <csymbol id="p1.1.m1.1.16.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑆</ci>
+              <cn xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml" type="integer">2</cn>
+            </apply>
+            <interval xref="p1.1.m1.1.16.2.2.3" id="p1.1.m1.1.16.2.2.3.1.cmml" closure="open">
+              <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑛</ci>
+              <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑘</ci>
+            </interval>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B(n)=\sum_{{k=0}}^{n}S_{2}(n,k)</annotation>
+  </semantics>
+</math> (see <code class="func">Stirling2</code> (<a shape="rect" href="chap16_mj.html#X7C93E14D7BC360F0"><span class="RefLink">16.1-6</span></a>)). <math id="7939595067277355152" display="inline" alttext="B(n)/n!" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.8.1.2">
+          <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+          <mo id="p1.1.m1.1.4" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">/</mo>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">n</mi>
+        <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7" rspace="3.5pt" lspace="0pt">!</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <divide xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <factorial xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑛</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B(n)/n!</annotation>
+  </semantics>
+</math> is the coefficient of <math id="-3580107760673743595" display="inline" alttext="x^{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">n</mi>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x^{n}</annotation>
+  </semantics>
+</math> in the formal series <math id="-2093149400998378038" display="inline" alttext="\exp(\exp(x)-1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.2">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">exp</mi>
+      <mo xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.2a">⁡</mo>
+      <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10">
+        <mo xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.2.1">
+          <mrow xref="p1.1.m1.1.10.2.1.1.1.cmml" id="p1.1.m1.1.10.2.1.1.2">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">exp</mi>
+            <mo xref="p1.1.m1.1.10.2.1.1.1.cmml" id="p1.1.m1.1.10.2.1.1.2a">⁡</mo>
+            <mrow xref="p1.1.m1.1.10.2.1.1.1.cmml" id="p1.1.m1.1.10.2.1.1">
+              <mo xref="p1.1.m1.1.10.2.1.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">(</mo>
+              <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">x</mi>
+              <mo xref="p1.1.m1.1.10.2.1.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">-</mo>
+          <mn xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">1</mn>
+        </mrow>
+        <mo xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.9" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.10.2" id="p1.1.m1.1.10.1.cmml">
+        <exp xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <apply xref="p1.1.m1.1.10.2" id="p1.1.m1.1.10.2.1.cmml">
+          <minus xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+          <apply xref="p1.1.m1.1.10.2.1.1.2" id="p1.1.m1.1.10.2.1.1.1.cmml">
+            <exp xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑥</ci>
+          </apply>
+          <cn xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\exp(\exp(x)-1)</annotation>
+  </semantics>
+</math>, which is the generating function for <math id="3792058821471115466" display="inline" alttext="B(n)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mrow id="p1.1.m1.1.5.2">
+        <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+        <mo id="p1.1.m1.1.4" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B(n)</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( [0..6], n -&gt; Bell( n ) );</span>
+[ 1, 1, 2, 5, 15, 52, 203 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Bell( 14 );</span>
+190899322
+</pre></div> </body>
+    </html>

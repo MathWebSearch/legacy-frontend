@@ -1,0 +1,76 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.16 Testing Finiteness of Finitely Presented Groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X86C43E3B81ED25DC"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">47.16 <span class="Heading">Testing Finiteness of Finitely Presented Groups</span></h4><p xmlns="http://www.w3.org/1999/xhtml">As a consequence of the algorithmic insolvabilities mentioned in the introduction to this chapter, there cannot be a general method that will test whether a given finitely presented group is actually finite.</p><p xmlns="http://www.w3.org/1999/xhtml">Therefore testing the finiteness of a finitely presented group can be problematic. What <strong class="pkg">GAP</strong> actually does upon a call of <code class="func">IsFinite</code> (<a shape="rect" href="chap30_mj.html#X808A4061809A6E67"><span class="RefLink">30.4-2</span></a>) (or if it is –probably implicitly– asked for a faithful permutation representation) is to test whether it can find (via coset enumeration) a cyclic subgroup of finite index. If it can, it rewrites the presentation to this subgroup. Since the subgroup is cyclic, its size can be checked easily from the resulting presentation, the size of the whole group is the product of the index and the subgroup size. Since however no bound for the index of such a subgroup (if any exist) is known, such a test might continue unsuccessfully until memory is exhausted.</p><p xmlns="http://www.w3.org/1999/xhtml">On the other hand, a couple of methods exist, that might prove that a group is infinite. Again, none is guaranteed to work in every case:</p><p xmlns="http://www.w3.org/1999/xhtml">The first method is to find (for example via the low index algorithm, see <code class="func">LowIndexSubgroupsFpGroup</code> (<a shape="rect" href="chap47_mj.html#X85C5151380E19122"><span class="RefLink">47.10-1</span></a>)) a subgroup <math id="3876691144210103818" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
+  </semantics>
+</math> such that <math id="476915404959690002" display="inline" alttext="[U:U^{\prime}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">U</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">:</mo>
+        <msup xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2.1">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">U</mi>
+          <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">′</mo>
+        </msup>
+      </mrow>
+      <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.7.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">:</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑈</ci>
+          <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.1.cmml">
+            <csymbol id="p1.1.m1.1.7.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑈</ci>
+            <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">′</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[U:U^{\prime}]</annotation>
+  </semantics>
+</math> is infinite. If <math id="-6918620112970265271" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
+  </semantics>
+</math> has finite index, this can be checked by <code class="func">IsInfiniteAbelianizationGroup</code> (<a shape="rect" href="chap47_mj.html#X82F444F67BE0E4FE"><span class="RefLink">47.16-1</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Note that this test has been done traditionally by checking the <code class="func">AbelianInvariants</code> (<a shape="rect" href="chap39_mj.html#X812827937F403300"><span class="RefLink">39.16-1</span></a>) (see section <a shape="rect" href="chap47_mj.html#X81451C4B8463B848"><span class="RefLink">47.15</span></a>) of <math id="-4164868445425854826" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
+  </semantics>
+</math>, <code class="func">IsInfiniteAbelianizationGroup</code> (<a shape="rect" href="chap47_mj.html#X82F444F67BE0E4FE"><span class="RefLink">47.16-1</span></a>) does a similar calculation but stops as soon as it is known whether <math id="5747406911808798981" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+    </annotation-xml>
+  </semantics>
+</math> is an invariant without computing the actual values. This can be notably faster.</p><p xmlns="http://www.w3.org/1999/xhtml">Another method is based on <math id="1083810912629621006" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-group quotients, see <code class="func">NewmanInfinityCriterion</code> (<a shape="rect" href="chap47_mj.html#X85C9FD548394C1E2"><span class="RefLink">47.16-2</span></a>).</p> </body>
+    </html>

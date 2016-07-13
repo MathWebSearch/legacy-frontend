@@ -1,0 +1,33 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.12-2 IsInternallyConsistent</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X8123650E817926FC"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.12-2 IsInternallyConsistent</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsInternallyConsistent</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For an <em>ordinary</em> character table <var class="Arg">tbl</var>, <code class="func">IsInternallyConsistent</code> (<a shape="rect" href="chap12_mj.html#X7F6C5C3287E8B816"><span class="RefLink">12.8-4</span></a>) checks the consistency of the following attribute values (if stored).</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p><code class="func">Size</code> (<a shape="rect" href="chap30_mj.html#X858ADA3B7A684421"><span class="RefLink">30.4-6</span></a>), <code class="func">SizesCentralizers</code> (<a shape="rect" href="chap71_mj.html#X7CF7907F790A5DE6"><span class="RefLink">71.9-2</span></a>), and <code class="func">SizesConjugacyClasses</code> (<a shape="rect" href="chap71_mj.html#X7D9D2A45879A6A62"><span class="RefLink">71.9-3</span></a>).</p>
+
+</li><li><p><code class="func">SizesCentralizers</code> (<a shape="rect" href="chap71_mj.html#X7CF7907F790A5DE6"><span class="RefLink">71.9-2</span></a>) and <code class="func">OrdersClassRepresentatives</code> (<a shape="rect" href="chap71_mj.html#X86F455DA7A9C30EE"><span class="RefLink">71.9-1</span></a>).</p>
+
+</li><li><p><code class="func">ComputedPowerMaps</code> (<a shape="rect" href="chap73_mj.html#X781FAA497E3B4D1A"><span class="RefLink">73.1-1</span></a>) and <code class="func">OrdersClassRepresentatives</code> (<a shape="rect" href="chap71_mj.html#X86F455DA7A9C30EE"><span class="RefLink">71.9-1</span></a>).</p>
+
+</li><li><p><code class="func">SizesCentralizers</code> (<a shape="rect" href="chap71_mj.html#X7CF7907F790A5DE6"><span class="RefLink">71.9-2</span></a>) and <code class="func">Irr</code> (<a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492"><span class="RefLink">71.8-2</span></a>).</p>
+
+</li><li><p><code class="func">Irr</code> (<a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492"><span class="RefLink">71.8-2</span></a>) (first orthogonality relation).</p>
+
+</li></ul><p xmlns="http://www.w3.org/1999/xhtml">For a <em>Brauer</em> table <var class="Arg">tbl</var>, <code class="func">IsInternallyConsistent</code> checks the consistency of the following attribute values (if stored).</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p><code class="func">Size</code> (<a shape="rect" href="chap30_mj.html#X858ADA3B7A684421"><span class="RefLink">30.4-6</span></a>), <code class="func">SizesCentralizers</code> (<a shape="rect" href="chap71_mj.html#X7CF7907F790A5DE6"><span class="RefLink">71.9-2</span></a>), and <code class="func">SizesConjugacyClasses</code> (<a shape="rect" href="chap71_mj.html#X7D9D2A45879A6A62"><span class="RefLink">71.9-3</span></a>).</p>
+
+</li><li><p><code class="func">SizesCentralizers</code> (<a shape="rect" href="chap71_mj.html#X7CF7907F790A5DE6"><span class="RefLink">71.9-2</span></a>) and <code class="func">OrdersClassRepresentatives</code> (<a shape="rect" href="chap71_mj.html#X86F455DA7A9C30EE"><span class="RefLink">71.9-1</span></a>).</p>
+
+</li><li><p><code class="func">ComputedPowerMaps</code> (<a shape="rect" href="chap73_mj.html#X781FAA497E3B4D1A"><span class="RefLink">73.1-1</span></a>) and <code class="func">OrdersClassRepresentatives</code> (<a shape="rect" href="chap71_mj.html#X86F455DA7A9C30EE"><span class="RefLink">71.9-1</span></a>).</p>
+
+</li><li><p><code class="func">Irr</code> (<a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492"><span class="RefLink">71.8-2</span></a>) (closure under complex conjugation and Frobenius map).</p>
+
+</li></ul><p xmlns="http://www.w3.org/1999/xhtml">If no inconsistency occurs, <code class="keyw">true</code> is returned, otherwise each inconsistency is printed to the screen if the level of <code class="func">InfoWarning</code> (<a shape="rect" href="chap7_mj.html#X7A28F77C82D6A3E0"><span class="RefLink">7.4-7</span></a>) is at least <math id="5116897701483276344" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math> (see <a shape="rect" href="chap7_mj.html#X7A9C902479CB6F7C"><span class="RefLink">7.4</span></a>), and <code class="keyw">false</code> is returned at the end.</p> </body>
+    </html>

@@ -1,0 +1,49 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 59: Finite Fields</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap59.html#X7893ABF67A028802"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap59_mj.html#X7893ABF67A028802">59 <span class="Heading">Finite Fields</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap59_mj.html#X7B9DCCCC83400B47">59.1 <span class="Heading">Finite Field Elements</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X7D3DF32C84FEBD25">59.1-1 IsFFE</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X7AA52FAF7EDEDD56">59.1-2 Z</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X8612BCEA816CF1B9">59.1-3 IsLexOrderedFFE</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap59_mj.html#X7A79399283EF78D0">59.2 <span class="Heading">Operations for Finite Field Elements</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X828E846E7C1EA3DD">59.2-1 DegreeFFE</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X7B049A3478B369E4">59.2-2 LogFFE</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X79F48E337FC2746A">59.2-3 IntFFE</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X7DABD827848BCC2A">59.2-4 IntFFESymm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X8009968782F18888">59.2-5 IntVecFFE</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X807959EE82CED148">59.2-6 AsInternalFFE</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap59_mj.html#X81B54A8378734C33">59.3 <span class="Heading">Creating Finite Fields</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X7979F51D7C43AB05">59.3-1 DefaultField</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X8592DBB086A8A9BE">59.3-2 GaloisField</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X788B1ECD83C70516">59.3-3 PrimitiveRoot</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap59_mj.html#X7A5F075185CE5B06">59.4 <span class="Heading">Frobenius Automorphisms</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X8758E4AB7D0A1955">59.4-1 FrobeniusAutomorphism</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap59_mj.html#X869919BB7EBE5741">59.5 <span class="Heading">Conway Polynomials</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X7C2425A786F09054">59.5-1 ConwayPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X78A7C1247E129AD9">59.5-2 IsCheapConwayPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X7ECC593583E68A6C">59.5-3 RandomPrimitivePolynomial</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap59_mj.html#X78EE3656879C3B88">59.6 <span class="Heading">Printing, Viewing and Displaying Finite Field Elements</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap59_mj.html#X80DAAA5E7C79C94C">59.6-1 ViewObj</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">59 <span class="Heading">Finite Fields</span></h3><p xmlns="http://www.w3.org/1999/xhtml">This chapter describes the special functionality which exists in <strong class="pkg">GAP</strong> for finite fields and their elements. Of course the general functionality for fields (see Chapter <a shape="rect" href="chap58_mj.html#X80A8E676814A19FD"><span class="RefLink">58</span></a>) also applies to finite fields.</p><p xmlns="http://www.w3.org/1999/xhtml">In the following, the term <em>finite field element</em> is used to denote <strong class="pkg">GAP</strong> objects in the category <code class="func">IsFFE</code> (<a shape="rect" href="chap59_mj.html#X7D3DF32C84FEBD25"><span class="RefLink">59.1-1</span></a>), and <em>finite field</em> means a field consisting of such elements. Note that in principle we must distinguish these fields from (abstract) finite fields. For example, the image of the embedding of a finite field into a field of rational functions in the same characteristic is of course a finite field but its elements are not in <code class="func">IsFFE</code> (<a shape="rect" href="chap59_mj.html#X7D3DF32C84FEBD25"><span class="RefLink">59.1-1</span></a>), and in fact <strong class="pkg">GAP</strong> does currently not support such fields.</p><p xmlns="http://www.w3.org/1999/xhtml">Special representations exist for row vectors and matrices over small finite fields (see sections <a shape="rect" href="chap23_mj.html#X8679F7DD7DFCBD9C"><span class="RefLink">23.3</span></a> and <a shape="rect" href="chap24_mj.html#X873822B6830CE367"><span class="RefLink">24.14</span></a>).</p> </body>
+    </html>

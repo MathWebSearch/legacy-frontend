@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.5-3 ZmodnZObj</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X838F36507D985EDA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.5-3 ZmodnZObj</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ZmodnZObj</code>( <var class="Arg">Fam</var>, <var class="Arg">r</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ZmodnZObj</code>( <var class="Arg">r</var>, <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If the first argument is a residue class family <var class="Arg">Fam</var> then <code class="func">ZmodnZObj</code> returns the element in <var class="Arg">Fam</var> whose coset is represented by the integer <var class="Arg">r</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the two arguments are an integer <var class="Arg">r</var> and a positive integer <var class="Arg">n</var> then <code class="func">ZmodnZObj</code> returns the element in <code class="code">ZmodnZ( <var class="Arg">n</var> )</code> (see <code class="func">ZmodnZ</code> (<a shape="rect" href="chap14_mj.html#X79CE76AD82B3E2B2"><span class="RefLink">14.5-2</span></a>)) whose coset is represented by the integer <var class="Arg">r</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r:= ZmodnZ(15);</span>
+(Integers mod 15)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fam:=ElementsFamily(FamilyObj(r));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:= ZmodnZObj(fam,9);</span>
+ZmodnZObj( 9, 15 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a+a;</span>
+ZmodnZObj( 3, 15 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Int(a+a);</span>
+3
+</pre></div> </body>
+    </html>

@@ -1,0 +1,157 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 59: Finite Fields-&gt;59.2-4 IntFFESymm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap59.html#X7DABD827848BCC2A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">59.2-4 IntFFESymm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IntFFESymm</code>( <var class="Arg">z</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IntFFESymm</code>( <var class="Arg">vec</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a finite prime field element <var class="Arg">z</var>, <code class="func">IntFFESymm</code> returns the corresponding integer of smallest absolute value. That is, <code class="func">IntFFESymm</code> returns the integer <math id="-8046064883431843846" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> of smallest absolute value such that <math id="-2568474067528574527" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code"> * One( </code><var class="Arg">z</var><code class="code"> ) = </code><var class="Arg">z</var> holds.</p><p xmlns="http://www.w3.org/1999/xhtml">For a vector <var class="Arg">vec</var> of FFEs, the operation returns the result of applying <code class="func">IntFFESymm</code> to every entry of the vector.</p><p xmlns="http://www.w3.org/1999/xhtml">The correspondence between elements from a finite prime field of characteristic <math id="-8608459203100659910" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> (for <math id="1471073281936485995" display="inline" alttext="p&amp;lt;2^{16}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">l</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.5">;</mo>
+      <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.3">
+        <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">2</mn>
+        <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">16</mn>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml">
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑡</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.3.cmml">
+          <csymbol id="p1.1.m1.1.8.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">2</cn>
+          <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">16</cn>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p&amp;lt;2^{16}</annotation>
+  </semantics>
+</math>) and the integers between <math id="-4249131146688571291" display="inline" alttext="-p/2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">-</mo>
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">p</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">/</mo>
+        <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">2</mn>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <minus xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <divide xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑝</ci>
+          <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">2</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">-p/2</annotation>
+  </semantics>
+</math> and <math id="-2772523804427760154" display="inline" alttext="p/2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">/</mo>
+      <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">2</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <divide xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p/2</annotation>
+  </semantics>
+</math> is defined by choosing <code class="code">Z(</code><math id="-6489785250027105949" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math><code class="code">)</code> the element corresponding to the smallest positive primitive root mod <math id="-4321207669126245041" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> (see <code class="func">PrimitiveRootMod</code> (<a shape="rect" href="chap15_mj.html#X82440BB9812FF148"><span class="RefLink">15.3-3</span></a>)) and reducing results to the <math id="8457690901037995941" display="inline" alttext="-p/2..p/2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow id="p1.1.m1.1b">
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">-</mo>
+      <mi id="p1.1.m1.1.2">p</mi>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">/</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">2</mn>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">.</mo>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">.</mo>
+      <mi id="p1.1.m1.1.7">p</mi>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">/</mo>
+      <mn xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">2</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1c" encoding="MathML-Content">
+      <cerror id="p1.1.m1.1d">
+        <csymbol id="p1.1.m1.1e" cd="ambiguous">fragments</csymbol>
+        <minus xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol id="p1.1.m1.1f" cd="unknown">p</csymbol>
+        <divide xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">2</cn>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">.</ci>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">.</ci>
+        <csymbol id="p1.1.m1.1g" cd="unknown">p</csymbol>
+        <divide xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+        <cn xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml" type="integer">2</cn>
+      </cerror>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1h" encoding="application/x-tex">-p/2..p/2</annotation>
+  </semantics>
+</math> range.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IntFFE(Z(13)^2);IntFFE(Z(13)^3);</span>
+4
+8
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IntFFESymm(Z(13)^2);IntFFESymm(Z(13)^3);</span>
+4
+-5
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">See also <code class="func">IntFFE</code> (<a shape="rect" href="chap59_mj.html#X79F48E337FC2746A"><span class="RefLink">59.2-3</span></a>)</p> </body>
+    </html>

@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.9-19 LeviMalcevDecomposition</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X85C58364833E014C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.9-19 LeviMalcevDecomposition</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LeviMalcevDecomposition</code>( <var class="Arg">L</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A Levi-Malcev subalgebra of the algebra <var class="Arg">L</var> is a semisimple subalgebra complementary to the radical of <var class="Arg">L</var>. This function returns a list with two components. The first component is a Levi-Malcev subalgebra, the second the radical. This function is implemented for associative and Lie algebras.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:= [ [ 1, 2, 0 ], [ 0, 1, 3 ], [ 0, 0, 1] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= Algebra( Rationals, [ m ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LeviMalcevDecomposition( A );</span>
+[ &lt;algebra of dimension 1 over Rationals&gt;, 
+  &lt;algebra of dimension 2 over Rationals&gt; ]
+</pre></div><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= FullMatrixLieAlgebra( Rationals, 5 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LeviMalcevDecomposition( L );</span>
+[ &lt;Lie algebra of dimension 24 over Rationals&gt;, 
+  &lt;two-sided ideal in &lt;Lie algebra of dimension 25 over Rationals&gt;, 
+      (dimension 1)&gt; ]
+</pre></div> </body>
+    </html>

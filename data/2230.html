@@ -1,0 +1,250 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X84DBFB8287C3F1B4"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap70_mj.html#X84DBFB8287C3F1B4">70 <span class="Heading">Tables of Marks</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X80883EC17968F442">70.1 <span class="Heading">More about Tables of Marks</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X7D29539F7C14956D">70.2 <span class="Heading">Table of Marks Objects in GAP</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X7B5E4B5F81AF6B00">70.3 <span class="Heading">Constructing Tables of Marks</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X85B262AB7E219C34">70.3-1 TableOfMarks</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7B30FF3A79CCB0DF">70.3-2 TableOfMarksByLattice</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X79ABFA0A833DDCFE">70.3-3 LatticeSubgroupsByTom</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X7AC0FB9685DCBCFD">70.4 <span class="Heading">Printing Tables of Marks</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7DC656517D8335DC">70.4-1 ViewObj</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X86379C0D7D17AD92">70.4-2 PrintObj</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X821F9438839F445D">70.4-3 Display</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X82385925797B5108">70.5 <span class="Heading">Sorting Tables of Marks</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X786A948E82C36F0E">70.5-1 SortedTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7EFD937D804662F6">70.5-2 PermutationTom</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X82271C4F7FD21FAA">70.6 <span class="Heading">Technical Details about Tables of Marks</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X870985C58547FED4">70.6-1 InfoTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7AC1A73D8100C7EC">70.6-2 IsTableOfMarks</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7ACF943D84BDF89E">70.6-3 TableOfMarksFamily</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X87789FD27831B2A2">70.6-4 TableOfMarksComponents</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X8491CDBF8543A7D5">70.6-5 ConvertToTableOfMarks</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X838D3B87827D6923">70.7 <span class="Heading">Attributes of Tables of Marks</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X78F486A28561D006">70.7-1 MarksTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X82E5DA217A5D1134">70.7-2 NrSubsTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X781AA1B28178AE9A">70.7-3 LengthsTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7A33C7C38083CC09">70.7-4 ClassTypesTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7A53E923819FE173">70.7-5 ClassNamesTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X86B9891C788D5107">70.7-6 FusionsTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X81E41D3880FA6C4C">70.7-7 UnderlyingGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X817238FB79A3462F">70.7-8 IdempotentsTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X810E53597B5BB4F8">70.7-9 Identifier</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X8463272986781E17">70.7-10 MatTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7D32C8B0786D16C1">70.7-11 MoebiusTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X78525D04849A48EA">70.7-12 WeightsTom</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X78A1B2E4826A9518">70.8 <span class="Heading">Properties of Tables of Marks</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7C93BAEC78B7C2B4">70.8-1 IsAbelianTom</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X7A40D99D7816F126">70.9 <span class="Heading">Other Operations for Tables of Marks</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7D8B4BE08094B137">70.9-1 IsInternallyConsistent</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X8528D9397FFAF477">70.9-2 DerivedSubgroupTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7C29BD438127DFBE">70.9-3 DerivedSubgroupsTomPossible</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7CE6C45881F7F7D4">70.9-4 NormalizerTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7F87B2797827E5DE">70.9-5 ContainedTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7EE050FB87D6F0E7">70.9-6 ContainingTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X838DE06B823C19CA">70.9-7 CyclicExtensionsTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X80890C247EB1E35C">70.9-8 DecomposedFixedPointVector</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7B1C1A7C867A4082">70.9-9 EulerianFunctionByTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X8224E51382FDB912">70.9-10 IntersectionsTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X859F069C8428B598">70.9-11 FactorGroupTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X8325811586C00ECF">70.9-12 MaximalSubgroupsTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7923B19D7C47BF63">70.9-13 MinimalSupergroupsTom</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X7FE9BE477A90199F">70.10 <span class="Heading">Accessing Subgroups via Tables of Marks</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7B0B6FDD806E9734">70.10-1 GeneratorsSubgroupsTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7898BE7284E47FF3">70.10-2 StraightLineProgramsTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7889DB6D790593B9">70.10-3 IsTableOfMarksWithGens</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7F625AB880B73AC3">70.10-4 RepresentativeTom</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X79ADA60880BE9C49">70.11 <span class="Heading">The Interface between Tables of Marks and Character Tables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7A82CB487DBDDC53">70.11-1 FusionCharTableTom</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X8016499282F0BA37">70.11-2 PermCharsTom</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X7CF66FAE7A8858E4">70.12 <span class="Heading">Generic Construction of Tables of Marks</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7CAA5B6C85CB9A8D">70.12-1 TableOfMarksCyclic</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X7AADB47B8079C99E">70.12-2 TableOfMarksDihedral</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap70_mj.html#X78E9DDF885E12687">70.12-3 TableOfMarksFrobenius</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap70_mj.html#X794ABC7187A9285B">70.13 <span class="Heading">The Library of Tables of Marks</span></a>
+</span>
+</div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">70 <span class="Heading">Tables of Marks</span></h3><p xmlns="http://www.w3.org/1999/xhtml">The concept of a <em>table of marks</em> was introduced by W. Burnside in his book &quot;Theory of Groups of Finite Order&quot;, see <a shape="rect" href="chapBib_mj.html#biBBur55">[Bur55]</a>. Therefore a table of marks is sometimes called a <em>Burnside matrix</em>.</p><p xmlns="http://www.w3.org/1999/xhtml">The table of marks of a finite group <math id="-4221620116750634026" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is a matrix whose rows and columns are labelled by the conjugacy classes of subgroups of <math id="2792057529847280879" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> and where for two subgroups <math id="-1746102470396865186" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> and <math id="-3505374577761080961" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math> the <math id="-8929369820955696148" display="inline" alttext="(A,B)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">A</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">B</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="open">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐴</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐵</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(A,B)</annotation>
+  </semantics>
+</math>-entry is the number of fixed points of <math id="4750156886774048422" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math> in the transitive action of <math id="2288520031900773749" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> on the cosets of <math id="-879862400035160693" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> in <math id="-4225514187450546196" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>. So the table of marks characterizes the set of all permutation representations of <math id="1761210767413899070" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Moreover, the table of marks gives a compact description of the subgroup lattice of <math id="-8764465065984556746" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, since from the numbers of fixed points the numbers of conjugates of a subgroup <math id="7705197277321293633" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math> contained in a subgroup <math id="-8183804410997682307" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> can be derived.</p><p xmlns="http://www.w3.org/1999/xhtml">A table of marks of a given group <math id="5957092174789933339" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> can be constructed from the subgroup lattice of <math id="-80372716324764228" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> (see <a shape="rect" href="chap70_mj.html#X7B5E4B5F81AF6B00"><span class="RefLink">70.3</span></a>). For several groups, the table of marks can be restored from the <strong class="pkg">GAP</strong> library of tables of marks (see <a shape="rect" href="chap70_mj.html#X794ABC7187A9285B"><span class="RefLink">70.13</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Given the table of marks of <math id="-8464707799747746360" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, one can display it (see <a shape="rect" href="chap70_mj.html#X7AC0FB9685DCBCFD"><span class="RefLink">70.4</span></a>) and derive information about <math id="2251492427803531189" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> and its Burnside ring from it (see <a shape="rect" href="chap70_mj.html#X838D3B87827D6923"><span class="RefLink">70.7</span></a>, <a shape="rect" href="chap70_mj.html#X78A1B2E4826A9518"><span class="RefLink">70.8</span></a>, <a shape="rect" href="chap70_mj.html#X7A40D99D7816F126"><span class="RefLink">70.9</span></a>). Moreover, tables of marks in <strong class="pkg">GAP</strong> provide an easy access to the classes of subgroups of their underlying groups (see <a shape="rect" href="chap70_mj.html#X7FE9BE477A90199F"><span class="RefLink">70.10</span></a>).</p> </body>
+    </html>

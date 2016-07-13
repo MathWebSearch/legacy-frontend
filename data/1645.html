@@ -1,0 +1,75 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 86: Weak Pointers</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap86.html#X86390538806F67CF"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap86_mj.html#X86390538806F67CF">86 <span class="Heading">Weak Pointers</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap86_mj.html#X86D963DC7968899B">86.1 <span class="Heading">Weak Pointer Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap86_mj.html#X8155EE1386F46063">86.1-1 WeakPointerObj</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap86_mj.html#X7F4476958497F239">86.2 <span class="Heading">Low Level Access Functions for Weak Pointer Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap86_mj.html#X7B9748ED7BAAA379">86.2-1 SetElmWPObj</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap86_mj.html#X8468DD647DDEFD82">86.3 <span class="Heading">Accessing Weak Pointer Objects as Lists</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap86_mj.html#X830918AC8702A189">86.4 <span class="Heading">Copying Weak Pointer Objects</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap86_mj.html#X7C1EFEEB8071E0A2">86.5 <span class="Heading">The GASMAN Interface for Weak Pointer Objects</span></a>
+</span>
+</div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">86 <span class="Heading">Weak Pointers</span></h3><p xmlns="http://www.w3.org/1999/xhtml">This chapter describes the use of the kernel feature of <em>weak pointers</em>. This feature is primarily intended for use only in <strong class="pkg">GAP</strong> internals, and should be used extremely carefully otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml">The GASMAN garbage collector is the part of the kernel that manages memory in the users workspace. It will normally only reclaim the storage used by an object when the object cannot be reached as a subobject of any <strong class="pkg">GAP</strong> variable, or from any reference in the kernel. We say that any link to object <math id="-3463331128127118259" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a</annotation>
+  </semantics>
+</math> from object <math id="3198745670645172833" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
+  </semantics>
+</math> &quot;keeps object <math id="-3750074162976487142" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a</annotation>
+  </semantics>
+</math> alive&quot;, as long as <math id="-4274793320525039457" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
+  </semantics>
+</math> is alive. It is occasionally convenient, however, to have a link to an object which <em>does not keep it alive</em>, and this is a weak pointer. The most common use is in caches, and similar structures, where it is only necessary to remember how to solve problem <math id="5832930072132513767" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> as long as some other link to <math id="3763472731874653708" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> exists.</p><p xmlns="http://www.w3.org/1999/xhtml">The following section <a shape="rect" href="chap86_mj.html#X86D963DC7968899B"><span class="RefLink">86.1</span></a> describes the semantics of the objects that contain weak pointers. Following sections describe the functions available to manipulate them.</p> </body>
+    </html>

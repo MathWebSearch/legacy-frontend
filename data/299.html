@@ -1,0 +1,87 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 22: Boolean Lists-&gt;22.2-1 BlistList</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap22.html#X7C597B2D87CA2E6E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">22.2-1 BlistList</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ BlistList</code>( <var class="Arg">list</var>, <var class="Arg">sub</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a new boolean list that describes the list <var class="Arg">sub</var> as a sublist of the dense list <var class="Arg">list</var>. That is <code class="func">BlistList</code> returns a boolean list <math id="-8623200204769606920" display="inline" alttext="blist" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">s</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1c">⁢</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">t</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑡</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">blist</annotation>
+  </semantics>
+</math> of the same length as <var class="Arg">list</var> such that <math id="-6080932372856342678" display="inline" alttext="blist[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">s</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1c">⁢</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">t</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1d">⁢</mo>
+      <mrow xref="p1.1.m1.1.9.2.1.cmml" id="p1.1.m1.1.9.2">
+        <mo xref="p1.1.m1.1.9.2.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">[</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">i</mi>
+        <mo xref="p1.1.m1.1.9.2.1.1.cmml" id="p1.1.m1.1.8" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <times xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑡</ci>
+        <apply xref="p1.1.m1.1.9.2" id="p1.1.m1.1.9.2.1.cmml">
+          <csymbol xref="p1.1.m1.1.6" id="p1.1.m1.1.9.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑖</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">blist[i]</annotation>
+  </semantics>
+</math> is <code class="keyw">true</code> if <var class="Arg">list</var><math id="-2361284802181214854" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">i</mi>
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.4.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[i]</annotation>
+  </semantics>
+</math> is in <var class="Arg">sub</var> and <code class="keyw">false</code> otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">list</var> need not be a proper set (see <a shape="rect" href="chap21_mj.html#X80ABC25582343910"><span class="RefLink">21.19</span></a>), even though in this case <code class="func">BlistList</code> is most efficient. In particular <var class="Arg">list</var> may contain duplicates. <var class="Arg">sub</var> need not be a proper sublist of <var class="Arg">list</var>, i.e., <var class="Arg">sub</var> may contain elements that are not in <var class="Arg">list</var>. Those elements of course have no influence on the result of <code class="func">BlistList</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BlistList( [1..10], [2,3,5,7] );</span>
+[ false, true, true, false, true, false, true, false, false, false ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BlistList( [1,2,3,4,5,2,8,6,4,10], [4,8,9,16] );</span>
+[ false, false, false, true, false, false, true, false, true, false ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">See also <code class="func">UniteBlistList</code> (<a shape="rect" href="chap22_mj.html#X7C86C8D3853BE5EB"><span class="RefLink">22.4-2</span></a>).</p> </body>
+    </html>

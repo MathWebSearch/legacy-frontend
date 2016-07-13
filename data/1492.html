@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.4-1 DimensionsMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X83A9DC2085D3A972"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.4-1 DimensionsMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DimensionsMat</code>( <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is a list of length 2, the first being the number of rows, the second being the number of columns of the matrix <var class="Arg">mat</var>. If <var class="Arg">mat</var> is malformed, that is, it is not a <code class="func">IsRectangularTable</code> (<a shape="rect" href="chap21_mj.html#X79581E0387F7F7A9"><span class="RefLink">21.1-5</span></a>), returns <code class="keyw">fail</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DimensionsMat([[1,2,3],[4,5,6]]);</span>
+[ 2, 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DimensionsMat([[1,2,3],[4,5]]);</span>
+fail
+</pre></div> </body>
+    </html>

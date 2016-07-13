@@ -1,0 +1,26 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.20-1 CharacterTableDirectProduct</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X7BE1572D7BBC6AC8"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.20-1 CharacterTableDirectProduct</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CharacterTableDirectProduct</code>( <var class="Arg">tbl1</var>, <var class="Arg">tbl2</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is the table of the direct product of the character tables <var class="Arg">tbl1</var> and <var class="Arg">tbl2</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The matrix of irreducibles of this table is the Kronecker product (see <code class="func">KroneckerProduct</code> (<a shape="rect" href="chap24_mj.html#X8634C79E7DB22934"><span class="RefLink">24.5-8</span></a>)) of the irreducibles of <var class="Arg">tbl1</var> and <var class="Arg">tbl2</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Products of ordinary and Brauer character tables are supported.</p><p xmlns="http://www.w3.org/1999/xhtml">In general, the result will not know an underlying group, so missing power maps (for prime divisors of the result) and irreducibles of the input tables may be computed in order to construct the table of the direct product.</p><p xmlns="http://www.w3.org/1999/xhtml">The embeddings of the input tables into the direct product are stored, they can be fetched with <code class="func">GetFusionMap</code> (<a shape="rect" href="chap73_mj.html#X8464DD23879431D9"><span class="RefLink">73.3-3</span></a>); if <var class="Arg">tbl1</var> is equal to <var class="Arg">tbl2</var> then the two embeddings are distinguished by their <code class="code">specification</code> components <code class="code">&quot;1&quot;</code> and <code class="code">&quot;2&quot;</code>, respectively.</p><p xmlns="http://www.w3.org/1999/xhtml">Analogously, the projections from the direct product onto the input tables are stored, and can be distinguished by the <code class="code">specification</code> components.</p><p xmlns="http://www.w3.org/1999/xhtml">The attribute <code class="func">FactorsOfDirectProduct</code> (<a shape="rect" href="chap71_mj.html#X7C97CF727FBDFCAB"><span class="RefLink">71.20-2</span></a>) is set to the lists of arguments.</p><p xmlns="http://www.w3.org/1999/xhtml">The <code class="code">*</code> operator for two character tables (see <a shape="rect" href="chap71_mj.html#X7CADCBC9824CB624"><span class="RefLink">71.7</span></a>) delegates to <code class="func">CharacterTableDirectProduct</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c2:= CharacterTable( &quot;Cyclic&quot;, 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3:= CharacterTable( &quot;Symmetric&quot;, 3 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( CharacterTableDirectProduct( c2, s3 ) );</span>
+C2xSym(3)
+
+     2  2  2  1  2  2  1
+     3  1  .  1  1  .  1
+
+       1a 2a 3a 2b 2c 6a
+    2P 1a 1a 3a 1a 1a 3a
+    3P 1a 2a 1a 2b 2c 2b
+
+X.1     1 -1  1  1 -1  1
+X.2     2  . -1  2  . -1
+X.3     1  1  1  1  1  1
+X.4     1 -1  1 -1  1 -1
+X.5     2  . -1 -2  .  1
+X.6     1  1  1 -1 -1 -1
+</pre></div> </body>
+    </html>

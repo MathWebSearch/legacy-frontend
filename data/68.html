@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.8-8 IsQuaternion</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X82B3A9077D0CB453"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.8-8 IsQuaternion</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsQuaternion</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsQuaternionCollection</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsQuaternionCollColl</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsQuaternion</code> is the category of elements in an algebra constructed by <code class="func">QuaternionAlgebra</code> (<a shape="rect" href="chap62_mj.html#X83DF4BCC7CE494FC"><span class="RefLink">62.5-1</span></a>). A collection of quaternions lies in the category <code class="func">IsQuaternionCollection</code>. Finally, a collection of quaternion collections (e.g., a matrix of quaternions) lies in the category <code class="func">IsQuaternionCollColl</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= QuaternionAlgebra( Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b:= BasisVectors( Basis( A ) );</span>
+[ e, i, j, k ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsQuaternion( b[1] );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsQuaternionCollColl( [ [ b[1], b[2] ], [ b[3], b[4] ] ] );</span>
+true
+</pre></div> </body>
+    </html>

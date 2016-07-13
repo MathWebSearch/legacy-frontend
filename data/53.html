@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.9-14 DirectSumOfAlgebras</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7C591B7C7DEA7EEB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.9-14 DirectSumOfAlgebras</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DirectSumOfAlgebras</code>( <var class="Arg">A1</var>, <var class="Arg">A2</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DirectSumOfAlgebras</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is the direct sum of the two algebras <var class="Arg">A1</var> and <var class="Arg">A2</var> respectively of the algebras in the list <var class="Arg">list</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If all involved algebras are associative algebras then the result is also known to be associative. If all involved algebras are Lie algebras then the result is also known to be a Lie algebra.</p><p xmlns="http://www.w3.org/1999/xhtml">All involved algebras must have the same left acting domain.</p><p xmlns="http://www.w3.org/1999/xhtml">The default case is that the result is a structure constants algebra. If all involved algebras are matrix algebras, and either both are Lie algebras or both are associative then the result is again a matrix algebra of the appropriate type.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= QuaternionAlgebra( Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DirectSumOfAlgebras( [A, A, A] );</span>
+&lt;algebra of dimension 12 over Rationals&gt;
+</pre></div> </body>
+    </html>

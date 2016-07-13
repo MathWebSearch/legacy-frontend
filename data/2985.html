@@ -1,0 +1,110 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.2-10 SmallestRootInt</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X7F98A0CE7B9FD366"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.2-10 SmallestRootInt</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SmallestRootInt</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SmallestRootInt</code> returns the smallest root of the integer <var class="Arg">n</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The smallest root of an integer <var class="Arg">n</var> is the integer <math id="-1425331693943207621" display="inline" alttext="r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑟</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">r</annotation>
+  </semantics>
+</math> of smallest absolute value for which a positive integer <math id="3235284904899176803" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
+  </semantics>
+</math> exists such that <math id="-8843325275697805575" display="inline" alttext="\textit{n}=r^{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑛</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">r</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">k</mi>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+        </mtext>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑟</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑘</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{n}=r^{k}</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SmallestRootInt( 2^30 );</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SmallestRootInt( -(2^30) );</span>
+-4
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that <math id="6930508444813666231" display="inline" alttext="(-2)^{30}=+(2^{30})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
+      <msup xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">
+        <mrow xref="p1.1.m1.1.12.1.2.2.cmml" id="p1.1.m1.1.12.1.2">
+          <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.12.1.2.2.cmml" id="p1.1.m1.1.12.1.2.2">
+            <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">-</mo>
+            <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">2</mn>
+          </mrow>
+          <mo id="p1.1.m1.1.4" stretchy="false">)</mo>
+        </mrow>
+        <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">30</mn>
+      </msup>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">=</mo>
+      <mrow xref="p1.1.m1.1.12.2.cmml" id="p1.1.m1.1.12.2">
+        <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">+</mo>
+        <mrow xref="p1.1.m1.1.12.2.1.2.cmml" id="p1.1.m1.1.12.2.1">
+          <mo id="p1.1.m1.1.8" stretchy="false">(</mo>
+          <msup xref="p1.1.m1.1.12.2.1.2.cmml" id="p1.1.m1.1.12.2.1.2">
+            <mn xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">2</mn>
+            <mn xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">30</mn>
+          </msup>
+          <mo id="p1.1.m1.1.11" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">
+        <eq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">
+          <csymbol id="p1.1.m1.1.12.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply xref="p1.1.m1.1.12.1.2" id="p1.1.m1.1.12.1.2.2.cmml">
+            <minus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+            <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">2</cn>
+          </apply>
+          <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">30</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.12.2" id="p1.1.m1.1.12.2.cmml">
+          <plus xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+          <apply xref="p1.1.m1.1.12.2.1" id="p1.1.m1.1.12.2.1.2.cmml">
+            <csymbol id="p1.1.m1.1.12.2.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <cn xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml" type="integer">2</cn>
+            <cn xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml" type="integer">30</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(-2)^{30}=+(2^{30})</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SmallestRootInt( 279936 );</span>
+6
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LogInt( 279936, 6 );</span>
+7
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SmallestRootInt( 1001 );</span>
+1001
+</pre></div> </body>
+    </html>

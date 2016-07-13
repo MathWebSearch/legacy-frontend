@@ -1,0 +1,25 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 27: Strings and Characters-&gt;27.4-4 IsEmptyString</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27.html#X7D944D507CBB24CD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">27.4-4 IsEmptyString</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsEmptyString</code>( <var class="Arg">str</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsEmptyString</code> returns <code class="keyw">true</code> if <var class="Arg">str</var> is the empty string in the representation <code class="func">IsStringRep</code> (<a shape="rect" href="chap27_mj.html#X7A17EDF8785C9F58"><span class="RefLink">27.4-1</span></a>), and <code class="keyw">false</code> otherwise. Note that the empty list <code class="code">[]</code> and the empty string <code class="code">&quot;&quot;</code> have the same type, the recommended way to distinguish them is via <code class="func">IsEmptyString</code>. For formatted printing, this distinction is sometimes necessary.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:= [];;  IsString( l );  IsEmptyString( l );  IsEmpty( l );</span>
+true
+false
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l;  ConvertToStringRep( l );  l;</span>
+[  ]
+&quot;&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsEmptyString( l );  IsEmptyString( &quot;&quot; );  IsEmptyString( &quot;abc&quot; );</span>
+true
+true
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ll:= [ 'a', 'b' ];  IsStringRep( ll );  ConvertToStringRep( ll );</span>
+&quot;ab&quot;
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ll;  IsStringRep( ll );</span>
+&quot;ab&quot;
+true
+</pre></div> </body>
+    </html>

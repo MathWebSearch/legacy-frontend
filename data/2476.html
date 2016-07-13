@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 30: Collections-&gt;30.4-6 Size</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30.html#X858ADA3B7A684421"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.4-6 Size</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Size</code>( <var class="Arg">listorcoll</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Size</code> returns the size of the list or collection <var class="Arg">listorcoll</var>, which is either an integer or <code class="func">infinity</code> (<a shape="rect" href="chap18_mj.html#X8511B8DF83324C27"><span class="RefLink">18.2-1</span></a>). If the argument is a list then the result is its length (see <code class="func">Length</code> (<a shape="rect" href="chap21_mj.html#X780769238600AFD1"><span class="RefLink">21.17-5</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">The default method for <code class="func">Size</code> checks the length of an enumerator of <var class="Arg">listorcoll</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Methods for <code class="func">IsFinite</code> (<a shape="rect" href="chap30_mj.html#X808A4061809A6E67"><span class="RefLink">30.4-2</span></a>) may call <code class="func">Size</code>, but methods for <code class="func">Size</code> must not call <code class="func">IsFinite</code> (<a shape="rect" href="chap30_mj.html#X808A4061809A6E67"><span class="RefLink">30.4-2</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( [1,2,3] );  Size( Group( () ) );  Size( Integers );</span>
+3
+1
+infinity
+</pre></div> </body>
+    </html>

@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.6-1 SemiSimpleType</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X8401CDC2859F8A85"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.6-1 SemiSimpleType</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SemiSimpleType</code>( <var class="Arg">L</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">L</var> be a semisimple Lie algebra, i.e., a direct sum of simple Lie algebras. Then <code class="func">SemiSimpleType</code> returns the type of <var class="Arg">L</var>, i.e., a string containing the types of the simple summands of <var class="Arg">L</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;E&quot;, 8, Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b:= BasisVectors( Basis( L ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">K:= LieCentralizer(L, Subalgebra(L, [ b[61]+b[79]+b[101]+b[102] ]));</span>
+&lt;Lie algebra of dimension 102 over Rationals&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">lev:= LeviMalcevDecomposition(K);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SemiSimpleType( lev[1] );</span>
+&quot;B3 A1&quot;
+</pre></div> </body>
+    </html>

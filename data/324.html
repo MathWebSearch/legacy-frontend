@@ -1,0 +1,60 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 59: Finite Fields-&gt;59.3-2 GaloisField</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap59.html#X8592DBB086A8A9BE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">59.3-2 GaloisField</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GaloisField</code>( <var class="Arg">p^d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GF</code>( <var class="Arg">p^d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GaloisField</code>( <var class="Arg">p</var>, <var class="Arg">d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GF</code>( <var class="Arg">p</var>, <var class="Arg">d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GaloisField</code>( <var class="Arg">subfield</var>, <var class="Arg">d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GF</code>( <var class="Arg">subfield</var>, <var class="Arg">d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GaloisField</code>( <var class="Arg">p</var>, <var class="Arg">pol</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GF</code>( <var class="Arg">p</var>, <var class="Arg">pol</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GaloisField</code>( <var class="Arg">subfield</var>, <var class="Arg">pol</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GF</code>( <var class="Arg">subfield</var>, <var class="Arg">pol</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">GaloisField</code> returns a finite field. It takes two arguments. The form <code class="code">GaloisField( <var class="Arg">p</var>, <var class="Arg">d</var> )</code>, where <var class="Arg">p</var>, <var class="Arg">d</var> are integers, can also be given as <code class="code">GaloisField( <var class="Arg">p</var>^<var class="Arg">d</var> )</code>. <code class="func">GF</code> is an abbreviation for <code class="func">GaloisField</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The first argument specifies the subfield <math id="-7684054049978099273" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> over which the new field is to be taken. It can be a prime integer or a finite field. If it is a prime <var class="Arg">p</var>, the subfield is the prime field of this characteristic.</p><p xmlns="http://www.w3.org/1999/xhtml">The second argument specifies the extension. It can be an integer or an irreducible polynomial over the field <math id="3996232559498502158" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math>. If it is an integer <var class="Arg">d</var>, the new field is constructed as the polynomial extension w.r.t. the Conway polynomial (see <code class="func">ConwayPolynomial</code> (<a shape="rect" href="chap59_mj.html#X7C2425A786F09054"><span class="RefLink">59.5-1</span></a>)) of degree <var class="Arg">d</var> over <math id="-531453887111996064" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math>. If it is an irreducible polynomial <var class="Arg">pol</var> over <math id="3286772965924327047" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math>, the new field is constructed as polynomial extension of <math id="6942892837245443608" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> with this polynomial; in this case, <var class="Arg">pol</var> is accessible as the value of <code class="func">DefiningPolynomial</code> (<a shape="rect" href="chap58_mj.html#X7ADDCBF47E2ED3D4"><span class="RefLink">58.2-7</span></a>) for the new field, and a root of <var class="Arg">pol</var> in the new field is accessible as the value of <code class="func">RootOfDefiningPolynomial</code> (<a shape="rect" href="chap58_mj.html#X8173DA4982DB1E8A"><span class="RefLink">58.2-8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the subfield over which a field was constructed determines over which field the Galois group, conjugates, norm, trace, minimal polynomial, and trace polynomial are computed (see <code class="func">GaloisGroup</code> (<a shape="rect" href="chap58_mj.html#X80CAA5BA82F09ED2"><span class="RefLink">58.3-1</span></a>), <code class="func">Conjugates</code> (<a shape="rect" href="chap58_mj.html#X837A4A5781F8EE92"><span class="RefLink">58.3-6</span></a>), <code class="func">Norm</code> (<a shape="rect" href="chap58_mj.html#X838515278587FF01"><span class="RefLink">58.3-4</span></a>), <code class="func">Trace</code> (<a shape="rect" href="chap58_mj.html#X7DD17EB581200AD6"><span class="RefLink">58.3-5</span></a>), <code class="func">MinimalPolynomial</code> (<a shape="rect" href="chap58_mj.html#X8738C6687D784BB5"><span class="RefLink">58.3-2</span></a>), <code class="func">TracePolynomial</code> (<a shape="rect" href="chap58_mj.html#X80FE7E017C2D255C"><span class="RefLink">58.3-3</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">The field is regarded as a vector space (see <a shape="rect" href="chap61_mj.html#X7DAD6700787EC845"><span class="RefLink">61</span></a>) over the given subfield, so this determines the dimension and the canonical basis of the field.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f1:= GF( 2^4 );</span>
+GF(2^4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( GaloisGroup ( f1 ) );</span>
+4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BasisVectors( Basis( f1 ) );</span>
+[ Z(2)^0, Z(2^4), Z(2^4)^2, Z(2^4)^3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f2:= GF( GF(4), 2 );</span>
+AsField( GF(2^2), GF(2^4) )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( GaloisGroup( f2 ) );</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BasisVectors( Basis( f2 ) );</span>
+[ Z(2)^0, Z(2^4) ]
+</pre></div> </body>
+    </html>

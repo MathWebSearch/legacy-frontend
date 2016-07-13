@@ -1,0 +1,26 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 80: Examples of Extending the System-&gt;80.3 Enforcing Property Tests</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap80.html#X7D880DB779EBA8D5"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">80.3 <span class="Heading">Enforcing Property Tests</span></h4><p xmlns="http://www.w3.org/1999/xhtml">As mentioned in Section <a shape="rect" href="chap78_mj.html#X851FC6387CA2B241"><span class="RefLink">78.3</span></a>, <strong class="pkg">GAP</strong> does not check unknown properties to test whether a method might be applicable. In some cases one wants to enforce this, however, because the gain from knowing the property outweighs the cost of its determination.</p><p xmlns="http://www.w3.org/1999/xhtml">In this situation one has to install a method <em>without</em> the additional property (so it can be tried even if the property is not yet known) and at high rank (so it will be used before other methods). The first thing to do in the actual function then is to test the property and to bail out with <code class="func">TryNextMethod</code> (<a shape="rect" href="chap78_mj.html#X7EED949B83046A7F"><span class="RefLink">78.4-1</span></a>) if it turns out to be <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The above <code class="func">Exponent</code> (<a shape="rect" href="chap39_mj.html#X7D44470C7DA59C1C"><span class="RefLink">39.16-2</span></a>) example thus would become:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+InstallMethod(Exponent,&quot;test abelianity&quot;, [IsGroup],
+  50,# enforced high rank
+function(G)
+  if not IsAbelian(G) then
+    TryNextMethod();
+  fi;
+  [remaining function body omitted]
+end);
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The value &quot;50&quot; used in this example is quite arbitrary. A better way is to use values that are given by the system inherently: We want this method still to be ranked as high, <em>as if it had</em> the <code class="func">IsAbelian</code> (<a shape="rect" href="chap35_mj.html#X830A4A4C795FBC2D"><span class="RefLink">35.4-9</span></a>) requirement. So we have <strong class="pkg">GAP</strong> compute the extra rank of this:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+InstallMethod(Exponent,&quot;test abelianity&quot;, [IsGroup],
+  # enforced absolute rank of `IsGroup and IsAbelian' installation: Subtract
+  # the rank of `IsGroup' and add the rank of `IsGroup and IsAbelian':
+  SIZE_FLAGS(FLAGS_FILTER(IsGroup and IsAbelian))
+  -SIZE_FLAGS(FLAGS_FILTER(IsGroup)),
+function(G)
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">the slightly complicated construction of addition and subtraction is necessary because <code class="func">IsGroup</code> (<a shape="rect" href="chap39_mj.html#X7939B3177BBD61E4"><span class="RefLink">39.2-7</span></a>) and <code class="func">IsAbelian</code> (<a shape="rect" href="chap35_mj.html#X830A4A4C795FBC2D"><span class="RefLink">35.4-9</span></a>) might imply the <em>same</em> elementary filters which we otherwise would count twice.</p><p xmlns="http://www.w3.org/1999/xhtml">A somehow similar situation occurs with matrix groups. Most methods for matrix groups are only applicable if the group is known to be finite.</p><p xmlns="http://www.w3.org/1999/xhtml">However we should not enforce a finiteness test early (someone else later might install good methods for infinite groups while the finiteness test would be too expensive) but just before <strong class="pkg">GAP</strong> would give a &quot;no method found&quot; error. This is done by redispatching, see <a shape="rect" href="chap78_mj.html#X7B85DD797A907106"><span class="RefLink">78.5</span></a>. For example to enforce such a final finiteness test for normalizer calculations could be done by:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+RedispatchOnCondition(NormalizerOp,IsIdenticalObj,
+  [IsMatrixGroup,IsMatrixGroup],[IsFinite,IsFinite],0);
+</pre></div> </body>
+    </html>

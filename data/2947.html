@@ -1,0 +1,34 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.7-3 State</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X819E3E3080297347"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.7-3 State</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ State</code>( <var class="Arg">rs</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Reset</code>( <var class="Arg">rs</var>[, <var class="Arg">seed</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Init</code>( <var class="Arg">prers</var>[, <var class="Arg">seed</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">These are the basic operations for which random sources (see <code class="func">IsRandomSource</code> (<a shape="rect" href="chap14_mj.html#X82E31A697E389F1D"><span class="RefLink">14.7-1</span></a>)) must have methods.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">State</code> should return a data structure which allows to recover the state of the random source such that a sequence of random calls using this random source can be reproduced. If a random source cannot be reset (say, it uses truly random physical data) then <code class="func">State</code> should return <code class="keyw">fail</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">Reset( <var class="Arg">rs</var>, <var class="Arg">seed</var> )</code> resets the random source <var class="Arg">rs</var> to a state described by <var class="Arg">seed</var>, if the random source can be reset (otherwise it should do nothing). Here <var class="Arg">seed</var> can be an output of <code class="func">State</code> and then should reset to that state. Also, the methods should always allow integers as <var class="Arg">seed</var>. Without the <var class="Arg">seed</var> argument the default <math id="335143303669549851" display="inline" alttext="\textit{seed}=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑠𝑒𝑒𝑑</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">seed</span>
+        </mtext>
+        <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{seed}=1</annotation>
+  </semantics>
+</math> is used.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Init</code> is the constructor of a random source, it gets an empty component object <var class="Arg">prers</var> which has already the correct type and should fill in the actual data which are needed. Optionally, it should allow one to specify a <var class="Arg">seed</var> for the initial state, as explained for <code class="func">Reset</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Most methods for <code class="func">Random</code> (<a shape="rect" href="chap30_mj.html#X7FF906E57D6936F8"><span class="RefLink">30.7-1</span></a>) in the <strong class="pkg">GAP</strong> library use the <code class="func">GlobalMersenneTwister</code> (<a shape="rect" href="chap14_mj.html#X7F772E2686B35865"><span class="RefLink">14.7-4</span></a>) as random source. It can be reset into a known state as in the following example.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">seed := State(GlobalMersenneTwister);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List([1..10],i-&gt;Random(Integers));</span>
+[ 2, -1, -2, -1, -1, 1, -4, 1, 0, -1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List([1..10],i-&gt;Random(Integers));</span>
+[ -1, -1, 1, -1, 1, -2, -1, -2, 0, -1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Reset(GlobalMersenneTwister, seed);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List([1..10],i-&gt;Random(Integers));</span>
+[ 2, -1, -2, -1, -1, 1, -4, 1, 0, -1 ]
+</pre></div> </body>
+    </html>

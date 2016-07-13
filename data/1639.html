@@ -1,0 +1,7 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 86: Weak Pointers-&gt;86.4 Copying Weak Pointer Objects</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap86.html#X830918AC8702A189"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">86.4 <span class="Heading">Copying Weak Pointer Objects</span></h4><p xmlns="http://www.w3.org/1999/xhtml">A <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) method is installed, which makes a new weak pointer object containing the same objects as the original.</p><p xmlns="http://www.w3.org/1999/xhtml">It is possible to apply <code class="func">StructuralCopy</code> (<a shape="rect" href="chap12_mj.html#X7C1E70587EBDD2CB"><span class="RefLink">12.7-2</span></a>) to a weak pointer object, obtaining a new weak pointer object containing copies of the objects in the original. This <em>may not be safe</em> if a badly timed garbage collection occurs during copying.</p><p xmlns="http://www.w3.org/1999/xhtml">Applying <code class="func">Immutable</code> (<a shape="rect" href="chap12_mj.html#X7F0ABF2C870B0CBB"><span class="RefLink">12.6-3</span></a>) to a weak pointer object produces an immutable plain list containing immutable copies of the objects contained in the weak pointer object. An immutable weak pointer object is a contradiction in terms.</p> </body>
+    </html>

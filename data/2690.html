@@ -1,0 +1,25 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.5-5 ShortLexLeqPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X81BD69307D294A1C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.5-5 ShortLexLeqPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ShortLexLeqPartialPerm</code>( <var class="Arg">f</var>, <var class="Arg">g</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">ShortLexLeqPartialPerm</code> returns <code class="keyw">true</code> if the concatenation of the domain and image list of <var class="Arg">f</var> is short-lex less than the corresponding concatenation for <var class="Arg">g</var> and <code class="keyw">false</code> otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that this is not the natural partial order on partial permutation or the same as comparing <var class="Arg">f</var> and <var class="Arg">g</var> using <code class="code">\&lt;</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 3, 4, 6, 7, 8, 10 ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 3, 8, 1, 9, 4, 10, 5, 6 ] );</span>
+[2,8,5][7,10,6,4,9](1,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=PartialPerm( [ 1, 2, 3, 4, 5, 8, 10 ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 7, 1, 4, 3, 2, 6, 5 ] );</span>
+[8,6][10,5,2,1,7](3,4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f&lt;g;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g&lt;f;</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ShortLexLeqPartialPerm(f, g);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ShortLexLeqPartialPerm(g, f);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NaturalLeqPartialPerm(f, g);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NaturalLeqPartialPerm(g, f);</span>
+false</pre></div> </body>
+    </html>

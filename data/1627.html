@@ -1,0 +1,36 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 36: Words-&gt;36.3-1 MappedWord</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap36.html#X7EC17930781D104A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">36.3-1 MappedWord</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MappedWord</code>( <var class="Arg">w</var>, <var class="Arg">gens</var>, <var class="Arg">imgs</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">MappedWord</code> returns the object that is obtained by replacing each occurrence in the word <var class="Arg">w</var> of a generator in the list <var class="Arg">gens</var> by the corresponding object in the list <var class="Arg">imgs</var>. The lists <var class="Arg">gens</var> and <var class="Arg">imgs</var> must of course have the same length.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">MappedWord</code> needs to do some preprocessing to get internal generator numbers etc. When mapping many (several thousand) words, an explicit loop over the words syllables might be faster.</p><p xmlns="http://www.w3.org/1999/xhtml">For example, if the elements in <var class="Arg">imgs</var> are all <em>associative words</em> (see Chapter <a shape="rect" href="chap37_mj.html#X78C56A0A87CE380E"><span class="RefLink">37</span></a>) in the same family as the elements in <var class="Arg">gens</var>, and some of them are equal to the corresponding generators in <var class="Arg">gens</var>, then those may be omitted from <var class="Arg">gens</var> and <var class="Arg">imgs</var>. In this situation, the special case that the lists <var class="Arg">gens</var> and <var class="Arg">imgs</var> have only length <math id="-5674935121121539862" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math> is handled more efficiently by <code class="func">EliminatedWord</code> (<a shape="rect" href="chap37_mj.html#X8486BFE1844CFE59"><span class="RefLink">37.4-6</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:= FreeMagma( &quot;a&quot;, &quot;b&quot; );;  gens:= GeneratorsOfMagma( m );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:= gens[1];  b:= gens[2];</span>
+a
+b
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w:= (a*b)*((b*a)*a)*b;</span>
+(((a*b)*((b*a)*a))*b)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MappedWord( w, gens, [ (1,2), (1,2,3,4) ] );</span>
+(2,4,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:= (1,2);; b:= (1,2,3,4);;  (a*b)*((b*a)*a)*b;</span>
+(2,4,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= FreeGroup( &quot;a&quot;, &quot;b&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:= GeneratorsOfGroup(f)[1];;  b:= GeneratorsOfGroup(f)[2];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w:= a^5*b*a^2/b^4*a;</span>
+a^5*b*a^2*b^-4*a
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MappedWord( w, [ a, b ], [ (1,2), (1,2,3,4) ] );</span>
+(1,3,4,2)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">(1,2)^5*(1,2,3,4)*(1,2)^2/(1,2,3,4)^4*(1,2);</span>
+(1,3,4,2)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MappedWord( w, [ a ], [ a^2 ] );</span>
+a^10*b*a^4*b^-4*a^2
+</pre></div> </body>
+    </html>

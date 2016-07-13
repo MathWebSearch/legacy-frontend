@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.8-18 DeterminantOfCharacter</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X7A292A58827B95B8"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.8-18 DeterminantOfCharacter</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DeterminantOfCharacter</code>( [<var class="Arg">tbl</var>, ]<var class="Arg">chi</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DeterminantOfCharacter</code> returns the <em>determinant character</em> of the character <var class="Arg">chi</var>. This is defined to be the character obtained by taking the determinant of representing matrices of any representation affording <var class="Arg">chi</var>; the determinant can be computed using <code class="func">EigenvaluesChar</code> (<a shape="rect" href="chap72_mj.html#X861B435C7F68AE7D"><span class="RefLink">72.8-19</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">It is also possible to call <code class="func">Determinant</code> (<a shape="rect" href="chap24_mj.html#X83045F6F82C180E1"><span class="RefLink">24.4-4</span></a>) instead of <code class="func">DeterminantOfCharacter</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the determinant character is well-defined for virtual characters.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CentralCharacter( TrivialCharacter( S4 ) );</span>
+ClassFunction( CharacterTable( S4 ), [ 1, 6, 3, 8, 6 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeterminantOfCharacter( Irr( S4 )[3] );</span>
+Character( CharacterTable( S4 ), [ 1, -1, 1, 1, -1 ] )
+</pre></div> </body>
+    </html>

@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.18-2 SortParallel</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X791F2B2C7E9B9A46"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.18-2 SortParallel</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SortParallel</code>( <var class="Arg">list1</var>, <var class="Arg">list2</var>[, <var class="Arg">func</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">sorts the list <var class="Arg">list1</var> in increasing order just as <code class="func">Sort</code> (<a shape="rect" href="chap21_mj.html#X7FE4975F8166884D"><span class="RefLink">21.18-1</span></a>) does. In parallel it applies the same exchanges that are necessary to sort <var class="Arg">list1</var> to the list <var class="Arg">list2</var>, which must of course have at least as many elements as <var class="Arg">list1</var> does.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list1 := [ 5, 4, 6, 1, 7, 5 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list2 := [ 2, 3, 5, 7, 8, 9 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SortParallel( list1, list2 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list1;</span>
+[ 1, 4, 5, 5, 6, 7 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list2;</span>
+[ 7, 3, 2, 9, 5, 8 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that <code class="code">[ 7, 3, 2, 9, 5, 8 ]</code> or <code class="code">[ 7, 3, 9, 2, 5, 8 ]</code> are possible results.</p> </body>
+    </html>

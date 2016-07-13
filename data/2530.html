@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.1-4 BaseIntMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X7F66E8EA7D1AA2C1"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.1-4 BaseIntMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ BaseIntMat</code>( <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">mat</var> is a matrix with integral entries, this function returns a list of vectors that forms a basis of the integral row space of <var class="Arg">mat</var>, i.e. of the set of integral linear combinations of the rows of <var class="Arg">mat</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=[[1,2,7],[4,5,6],[10,11,19]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BaseIntMat(mat);                  </span>
+[ [ 1, 2, 7 ], [ 0, 3, 7 ], [ 0, 0, 15 ] ]
+</pre></div> </body>
+    </html>

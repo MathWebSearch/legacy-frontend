@@ -1,0 +1,344 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 15: Number Theory-&gt;15.5-1 Sigma</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap15.html#X823707DF821E79A0"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">15.5-1 Sigma</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Sigma</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Sigma</code> returns the sum of the positive divisors of the nonzero integer <var class="Arg">n</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Sigma</code> is a multiplicative arithmetic function, i.e., if <math id="2065592670361724613" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> and <math id="7437642187167810181" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
+  </semantics>
+</math> are relatively prime we have that <math id="5216540984046706519" display="inline" alttext="\sigma(n\cdot m)=\sigma(n)\sigma(m)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">σ</mi>
+        <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.16.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.16.1.2.2.cmml" id="p1.1.m1.1.16.1.2">
+          <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.16.1.2.2.cmml" id="p1.1.m1.1.16.1.2.2">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+            <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">⋅</mo>
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">m</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">=</mo>
+      <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2">
+        <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">σ</mi>
+        <mo xref="p1.1.m1.1.16.2.1.cmml" id="p1.1.m1.1.16.2.1">⁢</mo>
+        <mrow id="p1.1.m1.1.16.2.2">
+          <mo id="p1.1.m1.1.9" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">n</mi>
+          <mo id="p1.1.m1.1.11" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.16.2.1.cmml" id="p1.1.m1.1.16.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">σ</mi>
+        <mo xref="p1.1.m1.1.16.2.1.cmml" id="p1.1.m1.1.16.2.1b">⁢</mo>
+        <mrow id="p1.1.m1.1.16.2.3">
+          <mo id="p1.1.m1.1.13" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">m</mi>
+          <mo id="p1.1.m1.1.15" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">
+        <eq xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+        <apply xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml">
+          <times xref="p1.1.m1.1.16.1.1" id="p1.1.m1.1.16.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜎</ci>
+          <apply xref="p1.1.m1.1.16.1.2" id="p1.1.m1.1.16.1.2.2.cmml">
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">⋅</ci>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑚</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.16.2" id="p1.1.m1.1.16.2.cmml">
+          <times xref="p1.1.m1.1.16.2.1" id="p1.1.m1.1.16.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝜎</ci>
+          <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑛</ci>
+          <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝜎</ci>
+          <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑚</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\sigma(n\cdot m)=\sigma(n)\sigma(m)</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Together with the formula <math id="5989050067466079526" display="inline" alttext="\sigma(p^{k})=(p^{{k+1}}-1)/(p-1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.19.cmml" id="p1.1.m1.1.19">
+      <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">σ</mi>
+        <mo xref="p1.1.m1.1.19.1.1.cmml" id="p1.1.m1.1.19.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.19.1.2.2.cmml" id="p1.1.m1.1.19.1.2">
+          <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+          <msup xref="p1.1.m1.1.19.1.2.2.cmml" id="p1.1.m1.1.19.1.2.2">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">p</mi>
+            <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">k</mi>
+          </msup>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">=</mo>
+      <mrow xref="p1.1.m1.1.19.2.cmml" id="p1.1.m1.1.19.2">
+        <mrow xref="p1.1.m1.1.19.2.1.2.cmml" id="p1.1.m1.1.19.2.1">
+          <mo id="p1.1.m1.1.7" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.19.2.1.2.cmml" id="p1.1.m1.1.19.2.1.2">
+            <msup xref="p1.1.m1.1.19.2.1.2.cmml" id="p1.1.m1.1.19.2.1.2.1">
+              <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">p</mi>
+              <mrow xref="p1.1.m1.1.19.2.1.2.cmml" id="p1.1.m1.1.9.1">
+                <mi xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1">k</mi>
+                <mo xref="p1.1.m1.1.9.1.2.cmml" id="p1.1.m1.1.9.1.2">+</mo>
+                <mn xref="p1.1.m1.1.9.1.3.cmml" id="p1.1.m1.1.9.1.3">1</mn>
+              </mrow>
+            </msup>
+            <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">-</mo>
+            <mn xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">1</mn>
+          </mrow>
+          <mo id="p1.1.m1.1.12" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">/</mo>
+        <mrow xref="p1.1.m1.1.19.2.2.2.cmml" id="p1.1.m1.1.19.2.2">
+          <mo id="p1.1.m1.1.14" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.19.2.2.2.cmml" id="p1.1.m1.1.19.2.2.2">
+            <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">p</mi>
+            <mo xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">-</mo>
+            <mn xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">1</mn>
+          </mrow>
+          <mo id="p1.1.m1.1.18" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.19" id="p1.1.m1.1.19.cmml">
+        <eq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.19.1" id="p1.1.m1.1.19.1.cmml">
+          <times xref="p1.1.m1.1.19.1.1" id="p1.1.m1.1.19.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜎</ci>
+          <apply xref="p1.1.m1.1.19.1.2" id="p1.1.m1.1.19.1.2.2.cmml">
+            <csymbol id="p1.1.m1.1.19.1.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑝</ci>
+            <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑘</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.19.2" id="p1.1.m1.1.19.2.cmml">
+          <divide xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+          <apply xref="p1.1.m1.1.19.2.1" id="p1.1.m1.1.19.2.1.2.cmml">
+            <minus xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml"/>
+            <apply xref="p1.1.m1.1.19.2.1" id="p1.1.m1.1.19.2.1.2.1.cmml">
+              <csymbol id="p1.1.m1.1.19.2.1.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑝</ci>
+              <apply xref="p1.1.m1.1.19.2.1" id="p1.1.m1.1.9.1.cmml">
+                <plus xref="p1.1.m1.1.9.1.2" id="p1.1.m1.1.9.1.2.cmml"/>
+                <ci xref="p1.1.m1.1.9.1.1" id="p1.1.m1.1.9.1.1.cmml">𝑘</ci>
+                <cn xref="p1.1.m1.1.9.1.3" id="p1.1.m1.1.9.1.3.cmml" type="integer">1</cn>
+              </apply>
+            </apply>
+            <cn xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml" type="integer">1</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.19.2.2" id="p1.1.m1.1.19.2.2.2.cmml">
+            <minus xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml"/>
+            <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑝</ci>
+            <cn xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\sigma(p^{k})=(p^{{k+1}}-1)/(p-1)</annotation>
+  </semantics>
+</math> this allows us to compute <math id="5254733227563227819" display="inline" alttext="\sigma(\textit{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">σ</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.5.2">
+        <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mtext xref="p1.1.m1.1.3.1a.cmml" id="p1.1.m1.1.3.1">𝑛</mtext>
+        <mo id="p1.1.m1.1.4" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜎</ci>
+        <mtext xref="p1.1.m1.1.5.2" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\sigma(\textit{n})</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Integers <var class="Arg">n</var> for which <math id="-7929067631679595273" display="inline" alttext="\sigma(\textit{n})=2\textit{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">σ</mi>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.8.1.2">
+          <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+          <mtext xref="p1.1.m1.1.3.1a.cmml" id="p1.1.m1.1.3.1">𝑛</mtext>
+          <mo id="p1.1.m1.1.4" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">=</mo>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">2</mn>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <mtext xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">𝑛</mtext>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <eq xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜎</ci>
+          <mtext xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.3.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+          </mtext>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">2</cn>
+          <mtext xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+          </mtext>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\sigma(\textit{n})=2\textit{n}</annotation>
+  </semantics>
+</math> are called perfect. Even perfect integers are exactly of the form <math id="-678163977486473502" display="inline" alttext="2^{{\textit{n}-1}}(2^{\textit{n}}-1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <msup xref="p1.1.m1.1.9.2.cmml" id="p1.1.m1.1.9.2">
+        <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mtext xref="p1.1.m1.1.2.1.1.1.cmml" id="p1.1.m1.1.2.1.1.1">𝑛</mtext>
+          <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">-</mo>
+          <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">1</mn>
+        </mrow>
+      </msup>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.9.3.2.cmml" id="p1.1.m1.1.9.3">
+        <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+        <mrow xref="p1.1.m1.1.9.3.2.cmml" id="p1.1.m1.1.9.3.2">
+          <msup xref="p1.1.m1.1.9.3.2.cmml" id="p1.1.m1.1.9.3.2.1">
+            <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">2</mn>
+            <mtext xref="p1.1.m1.1.5.1a.cmml" id="p1.1.m1.1.5.1">𝑛</mtext>
+          </msup>
+          <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">-</mo>
+          <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">1</mn>
+        </mrow>
+        <mo id="p1.1.m1.1.8" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <times xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml"/>
+        <apply xref="p1.1.m1.1.9.2" id="p1.1.m1.1.9.2.cmml">
+          <csymbol id="p1.1.m1.1.9.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+          <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <minus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+            <mtext xref="p1.1.m1.1.2.1.1.1" id="p1.1.m1.1.2.1.1.1.cmml">
+              <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+            </mtext>
+            <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.9.3" id="p1.1.m1.1.9.3.2.cmml">
+          <minus xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+          <apply xref="p1.1.m1.1.9.3" id="p1.1.m1.1.9.3.2.1.cmml">
+            <csymbol id="p1.1.m1.1.9.3.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">2</cn>
+            <mtext xref="p1.1.m1.1.9.3" id="p1.1.m1.1.5.1.cmml">
+              <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+            </mtext>
+          </apply>
+          <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2^{{\textit{n}-1}}(2^{\textit{n}}-1)</annotation>
+  </semantics>
+</math> where <math id="-7671736084057390331" display="inline" alttext="2^{\textit{n}}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+        <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑛</mtext>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">-</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <minus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+          </mtext>
+        </apply>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2^{\textit{n}}-1</annotation>
+  </semantics>
+</math> is prime. Primes of the form <math id="-7606335151425883927" display="inline" alttext="2^{\textit{n}}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+        <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑛</mtext>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">-</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <minus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+          </mtext>
+        </apply>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2^{\textit{n}}-1</annotation>
+  </semantics>
+</math> are called <em>Mersenne primes</em>, and 42 among the known Mersenne primes are obtained for <var class="Arg">n</var> <math id="-8721528604479538766" display="inline" alttext="=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">=</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <eq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">=</annotation>
+  </semantics>
+</math> 2, 3, 5, 7, 13, 17, 19, 31, 61, 89, 107, 127, 521, 607, 1279, 2203, 2281, 3217, 4253, 4423, 9689, 9941, 11213, 19937, 21701, 23209, 44497, 86243, 110503, 132049, 216091, 756839, 859433, 1257787, 1398269, 2976221, 3021377, 6972593, 13466917, 20996011, 24036583 and 25964951. Please find more up to date information about Mersenne primes at <span class="URL"><a shape="rect" href="http://www.mersenne.org">http://www.mersenne.org</a></span>. It is not known whether odd perfect integers exist, however <a shape="rect" href="chapBib_mj.html#biBBC89">[BC89]</a> show that any such integer must have at least 300 decimal digits.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Sigma</code> usually spends most of its time factoring <var class="Arg">n</var> (see <code class="func">FactorsInt</code> (<a shape="rect" href="chap14_mj.html#X82C989DB84744B36"><span class="RefLink">14.4-7</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Sigma( 1 );</span>
+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Sigma( 1009 );  # 1009 is a prime</span>
+1010
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Sigma( 8128 ) = 2*8128;  # 8128 is a perfect number</span>
+true
+</pre></div> </body>
+    </html>

@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.2-3 AssignGeneratorVariables</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X814203E281F3272E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">37.2-3 AssignGeneratorVariables</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AssignGeneratorVariables</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">G</var> is a group, whose generators are represented by symbols (for example a free group, a finitely presented group or a pc group) this function assigns these generators to global variables with the same names.</p><p xmlns="http://www.w3.org/1999/xhtml">The aim of this function is to make it easy in interactive use to work with (for example) a free group. It is a shorthand for a sequence of assignments of the form</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+var1:=GeneratorsOfGroup(G)[1];
+var2:=GeneratorsOfGroup(G)[2];
+...
+varn:=GeneratorsOfGroup(G)[n];
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">However, since overwriting global variables can be very dangerous, <em>it is not permitted to use this function within a function</em>. (If –despite this warning– this is done, the result is undefined.)</p><p xmlns="http://www.w3.org/1999/xhtml">If the assignment overwrites existing variables a warning is given, if any of the variables if write protected, or any of the generator names would not be a proper variable name, an error is raised.</p> </body>
+    </html>

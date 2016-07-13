@@ -1,0 +1,27 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.4-5 Where</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X7A7FFA2B7C1EF5A3"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.4-5 Where</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Where</code>( <var class="Arg">nr</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">shows the last <var class="Arg">nr</var> commands on the execution stack during whose execution the error occurred. If not given, <var class="Arg">nr</var> defaults to 5. (Assume, for the following example, that after the last example <code class="func">OnBreak</code> (<a shape="rect" href="chap6_mj.html#X82EBF01181C3C859"><span class="RefLink">6.4-3</span></a>) has been set back to its default value.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StabChain(SymmetricGroup(100)); # After this we typed ^C  </span>
+user interrupt at
+bpt := S.orbit[1];
+ called from
+SiftedPermutation( S, (g * rep) ^ -1 ) called from
+StabChainStrong( S.stabilizer, [ sch ], options ); called from
+StabChainStrong( S.stabilizer, [ sch ], options ); called from
+StabChainStrong( S, GeneratorsOfGroup( G ), options ); called from
+StabChainOp( G, rec(
+     ) ) called from
+...
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">Where(2);</span>
+ called from
+SiftedPermutation( S, (g * rep) ^ -1 ) called from
+StabChainStrong( S.stabilizer, [ sch ], options ); called from
+...
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that the variables displayed even in the first line of the <code class="func">Where</code> list (after the <code class="code">called from</code> line) may be already one environment level higher and <code class="func">DownEnv</code> (<a shape="rect" href="chap6_mj.html#X79E66DA2875303B0"><span class="RefLink">6.5-1</span></a>) may be necessary to access them.</p><p xmlns="http://www.w3.org/1999/xhtml">At the moment this backtrace does not work from within compiled code (this includes the method selection which by default is compiled into the kernel). If this creates problems for debugging, call <strong class="pkg">GAP</strong> with the <code class="code">-M</code> option (see <a shape="rect" href="chap3_mj.html#X782751D5858A6EAF"><span class="RefLink">3.1</span></a>) to avoid loading compiled code.</p><p xmlns="http://www.w3.org/1999/xhtml">(Function calls to <code class="func">Info</code> (<a shape="rect" href="chap7_mj.html#X864E4B6886E2697D"><span class="RefLink">7.4-5</span></a>) and methods installed for binary operations are handled in a special way. In rare circumstances it is possible therefore that they do not show up in a <code class="func">Where</code> log but the log refers to the <em>last</em> proper function call that happened before.)</p><p xmlns="http://www.w3.org/1999/xhtml">The command line option <code class="code">-T</code> to <strong class="pkg">GAP</strong> disables the break loop. This is mainly intended for testing purposes and for special applications. If this option is given then errors simply cause <strong class="pkg">GAP</strong> to return to the main loop.</p> </body>
+    </html>

@@ -1,0 +1,23 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.9-2 RestrictedClassFunctions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X86DB64F08035D219"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.9-2 RestrictedClassFunctions</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RestrictedClassFunctions</code>( [<var class="Arg">tbl</var>, ]<var class="Arg">chars</var>, <var class="Arg">target</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">RestrictedClassFunctions</code> is similar to <code class="func">RestrictedClassFunction</code> (<a shape="rect" href="chap72_mj.html#X86BABEA6841A40CF"><span class="RefLink">72.9-1</span></a>), the only difference is that it takes a list <var class="Arg">chars</var> of class functions instead of one class function, and returns the list of restricted class functions.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a5:= CharacterTable( &quot;A5&quot; );;  s5:= CharacterTable( &quot;S5&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RestrictedClassFunction( Irr( s5 )[2], a5 );</span>
+Character( CharacterTable( &quot;A5&quot; ), [ 1, 1, 1, 1, 1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RestrictedClassFunctions( Irr( s5 ), a5 );</span>
+[ Character( CharacterTable( &quot;A5&quot; ), [ 1, 1, 1, 1, 1 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 1, 1, 1, 1, 1 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 6, -2, 0, 1, 1 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 4, 0, 1, -1, -1 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 4, 0, 1, -1, -1 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 5, 1, -1, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 5, 1, -1, 0, 0 ] ) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:= NaturalHomomorphismByNormalSubgroup( S4, der );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RestrictedClassFunctions( Irr( Image( hom ) ), hom );</span>
+[ Character( CharacterTable( S4 ), [ 1, 1, 1, 1, 1 ] ), 
+  Character( CharacterTable( S4 ), [ 1, -1, 1, 1, -1 ] ) ]
+</pre></div> </body>
+    </html>

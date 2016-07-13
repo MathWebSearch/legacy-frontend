@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 56: Rings-&gt;56.3-4 GeneratorsOfRingWithOne</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap56.html#X7F9F122C831BCDD1"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">56.3-4 GeneratorsOfRingWithOne</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GeneratorsOfRingWithOne</code>( <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">GeneratorsOfRingWithOne</code> returns a list of elements such that the ring <var class="Arg">R</var> is the closure of these elements under addition, multiplication, taking additive inverses, and taking the identity element <code class="code">One( <var class="Arg">R</var> )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">R</var> itself need <em>not</em> be known to be a ring-with-one.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R:= RingWithOne( [ 4, 6 ] );</span>
+Integers
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfRingWithOne( R );</span>
+[ 1 ]
+</pre></div> </body>
+    </html>

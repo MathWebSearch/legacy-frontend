@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 46: Pc Groups-&gt;46.8-9 ExtensionRepresentatives</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap46.html#X854FFEF187C4AAB9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">46.8-9 ExtensionRepresentatives</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ExtensionRepresentatives</code>( <var class="Arg">G</var>, <var class="Arg">M</var>, <var class="Arg">P</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns all extensions of <var class="Arg">G</var> by the <var class="Arg">G</var>-module <var class="Arg">M</var> up to equivalence under action of <var class="Arg">P</var> where <var class="Arg">P</var> has to be a subgroup of the group of compatible pairs of <var class="Arg">G</var> with <var class="Arg">M</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := SmallGroup( 4, 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mats := List( Pcgs( G ), x -&gt; IdentityMat( 1, GF(2) ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M := GModuleByMats( mats, GF(2) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AutomorphismGroup( G );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B := GL( 1, 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D := DirectProduct( A, B );</span>
+&lt;group of size 6 with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := CompatiblePairs( G, M, D );</span>
+&lt;group of size 6 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ExtensionRepresentatives( G, M, P );</span>
+[ &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Extensions( G, M );</span>
+[ &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt; ]
+</pre></div> </body>
+    </html>

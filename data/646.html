@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.6-3 Character</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X849DD34C7968206C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.6-3 Character</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Character</code>( <var class="Arg">tbl</var>, <var class="Arg">values</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Character</code>( <var class="Arg">G</var>, <var class="Arg">values</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Character</code> returns the character (see <code class="func">IsCharacter</code> (<a shape="rect" href="chap72_mj.html#X7FE3CD08794051F8"><span class="RefLink">72.8-1</span></a>)) of the character table <var class="Arg">tbl</var> or the group <var class="Arg">G</var>, respectively, with values given by the list <var class="Arg">values</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">It is <em>not</em> checked whether the given values really describe a character.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= DihedralGroup( 8 );  tbl:= CharacterTable( g );</span>
+&lt;pc group of size 8 with 3 generators&gt;
+CharacterTable( &lt;pc group of size 8 with 3 generators&gt; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( tbl, &quot;D8&quot; );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">phi:= ClassFunction( g, [ 1, -1, 0, 2, -2 ] );</span>
+ClassFunction( D8, [ 1, -1, 0, 2, -2 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">psi:= ClassFunction( tbl,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">             List( Irr( g ), chi -&gt; ScalarProduct( chi, phi ) ) );</span>
+ClassFunction( D8, [ -3/8, 9/8, 5/8, 1/8, -1/4 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi:= VirtualCharacter( g, [ 0, 0, 8, 0, 0 ] );</span>
+VirtualCharacter( D8, [ 0, 0, 8, 0, 0 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">reg:= Character( tbl, [ 8, 0, 0, 0, 0 ] );</span>
+Character( D8, [ 8, 0, 0, 0, 0 ] )
+</pre></div> </body>
+    </html>

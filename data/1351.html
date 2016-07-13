@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 35: Magmas-&gt;35.2-12 IsMagmaWithZeroAdjoined</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap35.html#X8553F44D8123B2C6"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">35.2-12 IsMagmaWithZeroAdjoined</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsMagmaWithZeroAdjoined</code>( <var class="Arg">M</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">IsMagmaWithZeroAdjoined</code> returns <code class="keyw">true</code> if the magma <var class="Arg">M</var> was created using <code class="func">InjectionZeroMagma</code> (<a shape="rect" href="chap35_mj.html#X8620878D7FD98823"><span class="RefLink">35.2-13</span></a>) or <code class="func">MagmaWithZeroAdjoined</code> (<a shape="rect" href="chap35_mj.html#X8620878D7FD98823"><span class="RefLink">35.2-13</span></a>) and returns <code class="keyw">false</code> if it was not.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=Semigroup(Transformation([1,1,1]), Transformation([1,3,2]));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMagmaWithZeroAdjoined(S);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M:=MagmaWithZeroAdjoined(S);</span>
+&lt;&lt;transformation semigroup of degree 3 with 2 generators&gt;
+  with 0 adjoined&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMagmaWithZeroAdjoined(M);</span>
+true
+</pre></div> </body>
+    </html>

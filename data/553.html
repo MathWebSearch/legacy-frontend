@@ -1,0 +1,55 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.6-2 ConjugacyClasses</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X849A38F887F6EC86"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.6-2 ConjugacyClasses</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ConjugacyClasses</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a character table <var class="Arg">tbl</var> with known underlying group <math id="-2773754049703816342" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, the <code class="func">ConjugacyClasses</code> value of <var class="Arg">tbl</var> is a list of conjugacy classes of <math id="-7081390148971297529" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>. All those lists stored in the table that are related to the ordering of conjugacy classes (such as sizes of centralizers and conjugacy classes, orders of representatives, power maps, and all class functions) refer to the ordering of this list.</p><p xmlns="http://www.w3.org/1999/xhtml">This ordering need <em>not</em> coincide with the ordering of conjugacy classes as stored in the underlying group of the table (see <a shape="rect" href="chap71_mj.html#X816FCD5A805F9FE8"><span class="RefLink">71.21</span></a>). One reason for this is that otherwise we would not be allowed to use a library table as the character table of a group for which the conjugacy classes are stored already. (Another, less important reason is that we can use the same group as underlying group of character tables that differ only w.r.t. the ordering of classes.)</p><p xmlns="http://www.w3.org/1999/xhtml">The class of the identity element must be the first class (see <a shape="rect" href="chap71_mj.html#X829C4B6E83998F40"><span class="RefLink">71.5</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">tbl</var> was constructed from <math id="7078924292843455048" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> then the conjugacy classes have been stored at the same time when <math id="8620122305670170896" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> was stored. If <math id="-7272954135041884867" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> and <var class="Arg">tbl</var> have been connected later than in the construction of <var class="Arg">tbl</var>, the recommended way to do this is via <code class="func">CharacterTableWithStoredGroup</code> (<a shape="rect" href="chap71_mj.html#X8788C6C7829C1ADE"><span class="RefLink">71.6-4</span></a>). So there is no method for <code class="func">ConjugacyClasses</code> that computes the value for <var class="Arg">tbl</var> if it is not yet stored.</p><p xmlns="http://www.w3.org/1999/xhtml">Brauer tables do not store the (<math id="4455459441298958042" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-regular) conjugacy classes, they access them via the ordinary table (see <code class="func">OrdinaryCharacterTable</code> (<a shape="rect" href="chap71_mj.html#X8011EEB684848039"><span class="RefLink">71.8-4</span></a>)) if necessary.</p> </body>
+    </html>

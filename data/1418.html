@@ -1,0 +1,115 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.16 Special Multiplication Algorithms for Matrices over GF(2)</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X787DF5F07DC7D86E"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">24.16 <span class="Heading">Special Multiplication Algorithms for Matrices over GF(2)</span></h4><p xmlns="http://www.w3.org/1999/xhtml">When multiplying two compressed matrices <math id="-4169892235164408971" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> and <math id="5549771122050684300" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> over GF(2) of dimensions <math id="-1821810827920315153" display="inline" alttext="a\times b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a\times b</annotation>
+  </semantics>
+</math> and <math id="5557215216376706270" display="inline" alttext="b\times c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">c</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑐</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b\times c</annotation>
+  </semantics>
+</math>, say, where <math id="-3174261318812183588" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a</annotation>
+  </semantics>
+</math>, <math id="-8752319122607935100" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
+  </semantics>
+</math> and <math id="3689414412688930015" display="inline" alttext="c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">c</annotation>
+  </semantics>
+</math> are all greater than or equal to 128, <strong class="pkg">GAP</strong> by default uses a more sophisticated matrix multiplication algorithm, in which linear combinations of groups of 8 rows of <math id="5362895997906986265" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> are remembered and re-used in constructing various rows of the product. This is called level 8 grease. To optimise memory access patterns, these combinations are stored for <math id="-1807547253001428597" display="inline" alttext="(b+255)/256" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
+      <mrow xref="p1.1.m1.1.12.1.2.cmml" id="p1.1.m1.1.12.1">
+        <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+        <mrow xref="p1.1.m1.1.12.1.2.cmml" id="p1.1.m1.1.12.1.2">
+          <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">b</mi>
+          <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">+</mo>
+          <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">255</mn>
+        </mrow>
+        <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">/</mo>
+      <mn xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">256</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">
+        <divide xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+        <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.2.cmml">
+          <plus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑏</ci>
+          <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">255</cn>
+        </apply>
+        <cn xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml" type="integer">256</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(b+255)/256</annotation>
+  </semantics>
+</math> sets of 8 rows at once. This number is called the blocking level.</p><p xmlns="http://www.w3.org/1999/xhtml">These levels of grease and blocking are found experimentally to give good performance across a range of processors and matrix sizes, but other levels may do even better in some cases. You can control the levels exactly using the functions below.</p><p xmlns="http://www.w3.org/1999/xhtml">We plan to include greased blocked matrix multiplication for other finite fields, and greased blocked algorithms for inversion and other matrix operations in a future release.</p> </body>
+    </html>

@@ -1,0 +1,423 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.8-1 TzSubstitute</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X846DB23E8236FF8A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.8-1 <span class="Heading">TzSubstitute</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TzSubstitute</code>( <var class="Arg">P</var>, <var class="Arg">word</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TzSubstitute</code>( <var class="Arg">P</var>[, <var class="Arg">n</var>[, <var class="Arg">eliminate</var>]] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">In the first form <code class="func">TzSubstitute</code> expects <var class="Arg">P</var> to be a presentation and <var class="Arg">word</var> to be either an abstract word or a Tietze word in the generators of <var class="Arg">P</var>. It substitutes the given word as a new generator of <var class="Arg">P</var>. This is done as follows: First, <code class="func">TzSubstitute</code> creates a new abstract generator, <math id="492549001955588533" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
+  </semantics>
+</math> say, and adds it to the presentation, then it adds a new relator <math id="-1005816990400665622" display="inline" alttext="g^{{-1}}\cdot\textit{word}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mo xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">-</mo>
+          <mn xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">1</mn>
+        </mrow>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">⋅</mo>
+      <mtext xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">𝑤𝑜𝑟𝑑</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">⋅</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+          <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <minus xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml"/>
+            <cn xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <mtext xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">word</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g^{{-1}}\cdot\textit{word}</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">In its second form, <code class="func">TzSubstitute</code> substitutes a squarefree word of length 2 as a new generator and then eliminates a generator from the extended generator list. We will describe this process in more detail below.</p><p xmlns="http://www.w3.org/1999/xhtml">The parameters <var class="Arg">n</var> and <var class="Arg">eliminate</var> are optional. If you specify arguments for them, then <var class="Arg">n</var> is expected to be a positive integer, and <var class="Arg">eliminate</var> is expected to be 0, 1, or 2. The default values are <var class="Arg">n</var> <math id="2039808352418493796" display="inline" alttext="=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">=</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <eq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" cd="latexml">absent</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">=1</annotation>
+  </semantics>
+</math> and <var class="Arg">eliminate</var> <math id="-5247496389720302679" display="inline" alttext="=0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">=</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">0</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <eq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" cd="latexml">absent</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">0</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">=0</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">TzSubstitute</code> first determines the <var class="Arg">n</var> most frequently occurring relator subwords of the form <math id="-6494928071572253091" display="inline" alttext="g_{1}g_{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msub xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+      </msub>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <msub xref="p1.1.m1.1.5.3.cmml" id="p1.1.m1.1.5.3">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">g</mi>
+        <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">2</mn>
+      </msub>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.cmml">
+          <csymbol id="p1.1.m1.1.5.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.5.3" id="p1.1.m1.1.5.3.cmml">
+          <csymbol id="p1.1.m1.1.5.3.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑔</ci>
+          <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">2</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g_{1}g_{2}</annotation>
+  </semantics>
+</math>, where <math id="772584513483046968" display="inline" alttext="g_{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g_{1}</annotation>
+  </semantics>
+</math> and <math id="-467676180019536398" display="inline" alttext="g_{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g_{2}</annotation>
+  </semantics>
+</math> are different generators or their inverses, and sorts them by decreasing numbers of occurrences.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="7443337216542817441" display="inline" alttext="ab" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+      <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <times xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">ab</annotation>
+  </semantics>
+</math> be the last word in that list, and let <math id="-3699216038912494631" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> be the smallest positive integer which has not yet been used as a generator number in the presentation <var class="Arg">P</var> so far. <code class="func">TzSubstitute</code> defines a new abstract generator <math id="-4375651705732803576" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{i}</annotation>
+  </semantics>
+</math> named <code class="code">&quot;_x<var class="Arg">i</var>&quot;</code> and adds it to <var class="Arg">P</var> (see <code class="func">AddGenerator</code> (<a shape="rect" href="chap48_mj.html#X7F632A6D8685855D"><span class="RefLink">48.5-1</span></a>)). Then it adds the word <math id="-2451473084659307624" display="inline" alttext="x_{i}^{{-1}}ab" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msubsup xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+        <mrow xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">
+          <mo xref="p1.1.m1.1.3.1.1.cmml" id="p1.1.m1.1.3.1.1">-</mo>
+          <mn xref="p1.1.m1.1.3.1.2.cmml" id="p1.1.m1.1.3.1.2">1</mn>
+        </mrow>
+      </msubsup>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">a</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml"/>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.6.2.2.cmml">
+            <csymbol id="p1.1.m1.1.6.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+            <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+            <minus xref="p1.1.m1.1.3.1.1" id="p1.1.m1.1.3.1.1.cmml"/>
+            <cn xref="p1.1.m1.1.3.1.2" id="p1.1.m1.1.3.1.2.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{i}^{{-1}}ab</annotation>
+  </semantics>
+</math> as a new relator to <var class="Arg">P</var> and replaces all occurrences of <math id="7218639155615116511" display="inline" alttext="ab" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+      <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <times xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">ab</annotation>
+  </semantics>
+</math> in the relators by <math id="5929344186105687903" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{i}</annotation>
+  </semantics>
+</math>. Finally, it eliminates some suitable generator from <var class="Arg">P</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The choice of the generator to be eliminated depends on the actual value of the parameter <var class="Arg">eliminate</var>:</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">eliminate</var> is zero, <code class="func">TzSubstitute</code> just calls the function <code class="func">TzEliminate</code> (<a shape="rect" href="chap48_mj.html#X85989AF886EC2BF6"><span class="RefLink">48.7-1</span></a>). So it may happen that it is the just introduced generator <math id="-4579666049326294814" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{i}</annotation>
+  </semantics>
+</math> which now is deleted again so that you don't get any remarkable progress in simplifying your presentation. On the first glance this does not look reasonable, but it is a consequence of the request that a call of <code class="func">TzSubstitute</code> with <var class="Arg">eliminate</var> = 0 must not increase the total length of the relators.</p><p xmlns="http://www.w3.org/1999/xhtml">Otherwise, if <var class="Arg">eliminate</var> is 1 or 2, <code class="func">TzSubstitute</code> eliminates the respective factor of the substituted word <math id="8089896367671214732" display="inline" alttext="ab" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+      <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <times xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">ab</annotation>
+  </semantics>
+</math>, i. e., it eliminates <math id="1363360775556291792" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a</annotation>
+  </semantics>
+</math> if <var class="Arg">eliminate</var> = 1 or <math id="-1041335993926265144" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
+  </semantics>
+</math> if <var class="Arg">eliminate</var> = 2. In this case, it may happen that the total length of the relators increases, but sometimes such an intermediate extension is the only way to finally reduce a given presentation.</p><p xmlns="http://www.w3.org/1999/xhtml">There is still another property of the command <code class="func">TzSubstitute</code> which should be mentioned. If, for instance, <code class="code">word</code> is an abstract word, a call</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+TzSubstitute( P, word );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">is more or less equivalent to</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+AddGenerator( P );
+g := GeneratorsOfPresentation(P)[Length(GeneratorsOfPresentation(P))];
+AddRelator( P, g^-1 * word );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">However, there is a difference: If you are tracing generator images and preimages of <var class="Arg">P</var> through the Tietze transformations applied to <var class="Arg">P</var> (see <a shape="rect" href="chap48_mj.html#X85E703997A0212EE"><span class="RefLink">48.9</span></a>), then <code class="func">TzSubstitute</code>, as a Tietze transformation of <var class="Arg">P</var>, will update and save the respective lists, whereas a call of the function <code class="func">AddGenerator</code> (<a shape="rect" href="chap48_mj.html#X7F632A6D8685855D"><span class="RefLink">48.5-1</span></a>) (which does not perform a Tietze transformation) will delete these lists and hence terminate the tracing.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := PerfectGroup( IsSubgroupFpGroup, 960, 1 );</span>
+A5 2^4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := PresentationFpGroup( G );</span>
+&lt;presentation with 6 gens and 21 rels of total length 84&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfPresentation( P );</span>
+[ a, b, s, t, u, v ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGoGo( P );</span>
+#I  there are 3 generators and 10 relators of total length 81
+#I  there are 3 generators and 10 relators of total length 80
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzPrintGenerators( P );</span>
+#I  1.  a   31 occurrences   involution
+#I  2.  b   26 occurrences
+#I  3.  t   23 occurrences   involution
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := GeneratorsOfPresentation( P )[1];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b := GeneratorsOfPresentation( P )[2];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzSubstitute( P, a*b );</span>
+#I  now the presentation has 4 generators, the new generator is _x7
+#I  substituting new generator _x7 defined by a*b
+#I  there are 4 generators and 11 relators of total length 83
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGo( P );</span>
+#I  there are 3 generators and 10 relators of total length 74
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzPrintGenerators( P );</span>
+#I  1.  a   23 occurrences   involution
+#I  2.  t   23 occurrences   involution
+#I  3.  _x7   28 occurrences
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">As an example of an application of the command <code class="func">TzSubstitute</code> in its second form we handle a subgroup of index 266 in the Janko group <math id="-5578411471403740504" display="inline" alttext="J_{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">J</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐽</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">J_{1}</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">F2 := FreeGroup( &quot;a&quot;, &quot;b&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">J1 := F2 / [ F2.1^2, F2.2^3, (F2.1*F2.2)^7,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Comm(F2.1,F2.2)^10, Comm(F2.1,F2.2^-1*(F2.1*F2.2)^2)^6 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := J1.1;; b := J1.2;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := Subgroup ( J1, [ a, b^(a*b*(a*b^-1)^2) ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := PresentationSubgroup( J1, H );</span>
+&lt;presentation with 23 gens and 82 rels of total length 530&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGoGo( P );</span>
+#I  there are 3 generators and 47 relators of total length 1368
+#I  there are 2 generators and 46 relators of total length 3773
+#I  there are 2 generators and 46 relators of total length 2570
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGoGo( P );</span>
+#I  there are 2 generators and 46 relators of total length 2568
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGoGo( P );</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Here we do not get any more progress without substituting a new generator.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzSubstitute( P );</span>
+#I  substituting new generator _x28 defined by _x6*_x23^-1
+#I  eliminating _x28 = _x6*_x23^-1
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> cannot substitute a new generator without extending the total length, so we have to explicitly ask for it by using the second form of the command <code class="func">TzSubstitute</code>. Our problem is to choose appropriate values for the arguments <var class="Arg">n</var> and <var class="Arg">eliminate</var>. For this purpose it may be helpful to print out a list of the most frequently occurring squarefree relator subwords of length 2.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzPrintPairs( P );</span>
+#I  1.  504  occurrences of  _x6 * _x23^-1
+#I  2.  504  occurrences of  _x6^-1 * _x23
+#I  3.  448  occurrences of  _x6 * _x23
+#I  4.  448  occurrences of  _x6^-1 * _x23^-1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzSubstitute( P, 2, 1 );</span>
+#I  substituting new generator _x29 defined by _x6^-1*_x23
+#I  eliminating _x6 = _x23*_x29^-1
+#I  there are 2 generators and 46 relators of total length 2867
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGoGo( P );</span>
+#I  there are 2 generators and 45 relators of total length 2417
+#I  there are 2 generators and 45 relators of total length 2122
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzSubstitute( P, 1, 2 );</span>
+#I  substituting new generator _x30 defined by _x23*_x29^-1
+#I  eliminating _x29 = _x30^-1*_x23
+#I  there are 2 generators and 45 relators of total length 2192
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGoGo( P );</span>
+#I  there are 2 generators and 42 relators of total length 1637
+#I  there are 2 generators and 40 relators of total length 1286
+#I  there are 2 generators and 36 relators of total length 807
+#I  there are 2 generators and 32 relators of total length 625
+#I  there are 2 generators and 22 relators of total length 369
+#I  there are 2 generators and 18 relators of total length 213
+#I  there are 2 generators and 13 relators of total length 141
+#I  there are 2 generators and 12 relators of total length 121
+#I  there are 2 generators and 10 relators of total length 101
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzPrintPairs( P );</span>
+#I  1.  19  occurrences of  _x23 * _x30^-1
+#I  2.  19  occurrences of  _x23^-1 * _x30
+#I  3.  14  occurrences of  _x23 * _x30
+#I  4.  14  occurrences of  _x23^-1 * _x30^-1
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If we save a copy of the current presentation, then later we will be able to restart the computation from the current state.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P1 := ShallowCopy( P );</span>
+&lt;presentation with 2 gens and 10 rels of total length 101&gt;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Just for demonstration we make an inconvenient choice:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzSubstitute( P, 3, 1 );</span>
+#I  substituting new generator _x31 defined by _x23*_x30
+#I  eliminating _x23 = _x31*_x30^-1
+#I  there are 2 generators and 10 relators of total length 122
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGoGo( P );</span>
+#I  there are 2 generators and 9 relators of total length 105
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">This presentation is worse than the one we have saved, so we restart from that presentation again.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := ShallowCopy( P1 );</span>
+&lt;presentation with 2 gens and 10 rels of total length 101&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzSubstitute( P, 2, 1);</span>
+#I  substituting new generator _x31 defined by _x23^-1*_x30
+#I  eliminating _x23 = _x30*_x31^-1
+#I  there are 2 generators and 10 relators of total length 107
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGoGo( P );</span>
+#I  there are 2 generators and 9 relators of total length 84
+#I  there are 2 generators and 8 relators of total length 75
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzSubstitute( P, 2, 1);</span>
+#I  substituting new generator _x32 defined by _x30^-1*_x31
+#I  eliminating _x30 = _x31*_x32^-1
+#I  there are 2 generators and 8 relators of total length 71
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGoGo( P );</span>
+#I  there are 2 generators and 7 relators of total length 56
+#I  there are 2 generators and 5 relators of total length 36
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzPrintRelators( P );</span>
+#I  1. _x32^5
+#I  2. _x31^5
+#I  3. (_x31^-1*_x32^-1)^3
+#I  4. _x31*(_x32*_x31^-1)^2*_x32*_x31*_x32^-2
+#I  5. _x31^-1*_x32^2*(_x31*_x32^-1*_x31)^2*_x32^2
+</pre></div> </body>
+    </html>

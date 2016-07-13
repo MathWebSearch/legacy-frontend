@@ -1,0 +1,45 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.4-4 PositionWord</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X8509A0A4851981BB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">37.4-4 PositionWord</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PositionWord</code>( <var class="Arg">w</var>, <var class="Arg">sub</var>, <var class="Arg">from</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">w</var> and <var class="Arg">sub</var> be associative words, and <var class="Arg">from</var> a positive integer. <code class="func">PositionWord</code> returns the position of the first occurrence of <var class="Arg">sub</var> as a subword of <var class="Arg">w</var>, starting at position <var class="Arg">from</var>. If there is no such occurrence, <code class="keyw">fail</code> is returned. Indexing is done with origin 1.</p><p xmlns="http://www.w3.org/1999/xhtml">In other words, <code class="code">PositionWord( <var class="Arg">w</var>, <var class="Arg">sub</var>, <var class="Arg">from</var> )</code> is the smallest integer <math id="1280043644406054270" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> larger than or equal to <var class="Arg">from</var> such that <code class="code">Subword( <var class="Arg">w</var>, </code><math id="7603775512874135977" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">,</code> <math id="3564651039056939887" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">+Length( <var class="Arg">sub</var> )-1 ) =</code> <var class="Arg">sub</var>, see <code class="func">Subword</code> (<a shape="rect" href="chap37_mj.html#X82CC92C17AF6FFA0"><span class="RefLink">37.4-3</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w;  PositionWord( w, a/b, 1 );</span>
+a^5*b*a^2*b^-4*a
+8
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Subword( w, 8, 9 );</span>
+a*b^-1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PositionWord( w, a^2, 1 );</span>
+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PositionWord( w, a^2, 2 );</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PositionWord( w, a^2, 6 );</span>
+7
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PositionWord( w, a^2, 8 );</span>
+fail
+</pre></div> </body>
+    </html>

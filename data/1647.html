@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.7-3 ConsiderTableAutomorphisms</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X7C52CEDB7D98A6B8"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.7-3 ConsiderTableAutomorphisms</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ConsiderTableAutomorphisms</code>( <var class="Arg">approxmap</var>, <var class="Arg">grp</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ConsiderTableAutomorphisms</code> replaces the entries of the parametrized map <var class="Arg">approxmap</var> by improved values, according to condition 4. listed in the description of <code class="func">PossibleClassFusions</code> (<a shape="rect" href="chap73_mj.html#X7883271F7F26356E"><span class="RefLink">73.3-6</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Afterwards exactly one representative of fusion maps (contained in <var class="Arg">approxmap</var>) in each orbit under the action of the permutation group <var class="Arg">grp</var> is contained in the modified parametrized map.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ConsiderTableAutomorphisms</code> returns the list of positions where <var class="Arg">approxmap</var> was changed.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConsiderTableAutomorphisms( fus, AutomorphismsOfTable( tbl ) );</span>
+[ 16 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus;</span>
+[ 1, 2, 2, 4, 5, 7, 8, 9, 11, 14, 14, [ 13, 15 ], 16, [ 18, 19 ], 20, 
+  25, [ 25, 26 ], 5, 5, 6, 8, 14, [ 13, 15 ], [ 18, 19 ], [ 18, 19 ], 
+  [ 25, 26 ], [ 25, 26 ], 27, 27 ]
+</pre></div> </body>
+    </html>

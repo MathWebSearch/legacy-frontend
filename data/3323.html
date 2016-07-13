@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.15-2 ExteriorPowerOfAlgebraModule</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X7F4AB6A1863E8FB2"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.15-2 ExteriorPowerOfAlgebraModule</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ExteriorPowerOfAlgebraModule</code>( <var class="Arg">V</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">V</var> must be an algebra module, defined over a Lie algebra. This function returns the <var class="Arg">k</var>-th exterior power of <var class="Arg">V</var> as an algebra module.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra(&quot;G&quot;,2,Rationals);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= HighestWeightModule( L, [ 1, 0 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">W:= ExteriorPowerOfAlgebraModule( V, 3 );</span>
+&lt;35-dimensional left-module over &lt;Lie algebra of dimension 
+14 over Rationals&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w:= Basis(W)[1];</span>
+1*(1*v0/\y1*v0/\y3*v0)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Basis(L)[10]^w;</span>
+1*(1*v0/\y1*v0/\y6*v0)+1*(1*v0/\y3*v0/\y5*v0)+1*(y1*v0/\y3*v0/\y4*v0)
+</pre></div> </body>
+    </html>

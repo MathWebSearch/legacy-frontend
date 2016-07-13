@@ -1,0 +1,30 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 78: Method Selection-&gt;78.3 Applicable Methods and Method Selection</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap78.html#X851FC6387CA2B241"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">78.3 <span class="Heading">Applicable Methods and Method Selection</span></h4><p xmlns="http://www.w3.org/1999/xhtml">A method installed as above is <em>applicable</em> for an arguments tuple if the following conditions are satisfied.</p><p xmlns="http://www.w3.org/1999/xhtml">The number of arguments equals the length of the list <var class="Arg">args-filts</var>, the <math id="4792574694505522941" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th argument lies in the filter <var class="Arg">args-filts</var><math id="-5170197772730451524" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">i</mi>
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.4.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[i]</annotation>
+  </semantics>
+</math>, and <var class="Arg">famp</var> returns <code class="keyw">true</code> when applied to the families of the arguments. The maximal number of arguments supported for methods is six, one gets an error message if one tries to install a method with at least seven arguments.</p><p xmlns="http://www.w3.org/1999/xhtml">So <var class="Arg">args-filt</var> describes conditions for each argument, and <var class="Arg">famp</var> describes a relation between the arguments.</p><p xmlns="http://www.w3.org/1999/xhtml">For unary operations such as attributes and properties, there is no such relation to postulate, <var class="Arg">famp</var> is <code class="func">ReturnTrue</code> (<a shape="rect" href="chap5_mj.html#X7DB422A2876CCC4D"><span class="RefLink">5.4-1</span></a>) for these operations, a function that always returns <code class="keyw">true</code>. For binary operations, the usual value of <var class="Arg">famp</var> is <code class="func">IsIdenticalObj</code> (<a shape="rect" href="chap12_mj.html#X7961183378DFB902"><span class="RefLink">12.5-1</span></a>), which means that both arguments must lie in the same family.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that any properties which occur among the filters in the filter list will <em>not</em> be tested by the method selection if they are not yet known. (More exact: if <var class="Arg">prop</var> is a property then the filter implicitly uses not <var class="Arg">prop</var> but <code class="code">Has<var class="Arg">prop</var> and <var class="Arg">prop</var></code>.) If this is desired you must explicitly enforce a test (see section <a shape="rect" href="chap78_mj.html#X7B85DD797A907106"><span class="RefLink">78.5</span></a>) below.</p><p xmlns="http://www.w3.org/1999/xhtml">If no method is applicable, the error message &quot;no method found&quot; is signaled.</p><p xmlns="http://www.w3.org/1999/xhtml">Otherwise, the applicable method with highest <em>rank</em> is selected and then called. This rank is given by the sum of the ranks of the filters in the list <var class="Arg">args-filt</var>, <em>including involved filters</em>, plus the number <var class="Arg">val</var> used in the call of <code class="func">InstallMethod</code> (<a shape="rect" href="chap78_mj.html#X837EFDAB7BEF290B"><span class="RefLink">78.2-1</span></a>). So the argument <var class="Arg">val</var> can be used to raise the priority of a method relative to other methods for <var class="Arg">opr</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that from the applicable methods, an efficient one shall be selected. This is a method that needs only little time and storage for the computations.</p><p xmlns="http://www.w3.org/1999/xhtml">It seems to be impossible for <strong class="pkg">GAP</strong> to select an optimal method in all cases. The present ranking of methods is based on the assumption that a method installed for a special situation shall be preferred to a method installed for a more general situation.</p><p xmlns="http://www.w3.org/1999/xhtml">For example, a method for computing a Sylow subgroup of a nilpotent group is expected to be more efficient than a method for arbitrary groups. So the more specific method will be selected if <strong class="pkg">GAP</strong> knows that the group given as argument is nilpotent.</p><p xmlns="http://www.w3.org/1999/xhtml">Of course there is no obvious way to decide between the efficiency of incommensurable methods. For example, take an operation with one method for permutation groups, another method for nilpotent groups, but no method for nilpotent permutation groups, and call this operation with a permutation group known to be nilpotent.</p> </body>
+    </html>

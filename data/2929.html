@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.3-4 AsSubgroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7904AC9D7E9A3BB7"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.3-4 AsSubgroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsSubgroup</code>( <var class="Arg">G</var>, <var class="Arg">U</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">creates a subgroup of <var class="Arg">G</var> which contains the same elements as <var class="Arg">U</var></p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">v:=AsSubgroup(g,Group((1,2,3),(1,4)));</span>
+Group([ (1,2,3), (1,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Parent(v);</span>
+Group([ (1,2,3,4), (1,2) ])
+</pre></div> </body>
+    </html>

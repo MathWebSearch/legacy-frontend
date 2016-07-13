@@ -1,0 +1,80 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.9-10 IntersectionsTom</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X8224E51382FDB912"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.9-10 IntersectionsTom</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IntersectionsTom</code>( <var class="Arg">tom</var>, <var class="Arg">sub1</var>, <var class="Arg">sub2</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The intersections of the groups in the <var class="Arg">sub1</var>-th conjugacy class of subgroups of the table of marks <var class="Arg">tom</var> with the groups in the <var class="Arg">sub2</var>-th conjugacy classes of subgroups of <var class="Arg">tom</var> are determined up to conjugacy by the decomposition of the tensor product of their rows of marks. <code class="func">IntersectionsTom</code> returns a list <math id="-8233186860690299405" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> that describes this decomposition. The <math id="-3295819380106735637" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th entry in <math id="2072545093575224704" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> is the multiplicity of groups in the <math id="294687090500044608" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th conjugacy class as an intersection.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IntersectionsTom( a5, 8, 8 );</span>
+[ 0, 0, 1, 0, 0, 0, 0, 1 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Any two subgroups of class number 8 (<math id="2228317575596629918" display="inline" alttext="A_{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">4</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">4</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A_{4}</annotation>
+  </semantics>
+</math>) of <math id="8642074743959913471" display="inline" alttext="A_{5}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">5</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">5</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A_{5}</annotation>
+  </semantics>
+</math> are either equal and their intersection has again class number 8, or their intersection has class number <math id="-579063827242214548" display="inline" alttext="3" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">3</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">3</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">3</annotation>
+  </semantics>
+</math>, and is a cyclic subgroup of order 3.</p> </body>
+    </html>

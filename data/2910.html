@@ -1,0 +1,271 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.6-1 StructureDescription</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X8199B74B84446971"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.6-1 StructureDescription</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StructureDescription</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The method for <code class="func">StructureDescription</code> exhibits a structure of the given group <var class="Arg">G</var> to some extent, using the strategy outlined below. The idea is to return a possibly short string which gives some insight in the structure of the considered group. It is intended primarily for small groups (order less than 100) or groups with few normal subgroups, in other cases, in particular large <math id="-6133399581705898738" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-groups, it can be very costly. Furthermore, the string returned is -- as the action on chief factors is not described -- often not the most useful way to describe a group.</p><p xmlns="http://www.w3.org/1999/xhtml">The string returned by <code class="func">StructureDescription</code> is <strong class="button">not</strong> an isomorphism invariant: non-isomorphic groups can have the same string value, and two isomorphic groups in different representations can produce different strings. The value returned by <code class="func">StructureDescription</code> is a string of the following form:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+  StructureDescription(&lt;G&gt;) ::=
+      1                                 ; trivial group 
+    | C&lt;size&gt;                           ; cyclic group
+    | A&lt;degree&gt;                         ; alternating group
+    | S&lt;degree&gt;                         ; symmetric group
+    | D&lt;size&gt;                           ; dihedral group
+    | Q&lt;size&gt;                           ; quaternion group
+    | QD&lt;size&gt;                          ; quasidihedral group
+    | PSL(&lt;n&gt;,&lt;q&gt;)                      ; projective special linear group
+    | SL(&lt;n&gt;,&lt;q&gt;)                       ; special linear group
+    | GL(&lt;n&gt;,&lt;q&gt;)                       ; general linear group
+    | PSU(&lt;n&gt;,&lt;q&gt;)                      ; proj. special unitary group
+    | O(2&lt;n&gt;+1,&lt;q&gt;)                     ; orthogonal group, type B
+    | O+(2&lt;n&gt;,&lt;q&gt;)                      ; orthogonal group, type D
+    | O-(2&lt;n&gt;,&lt;q&gt;)                      ; orthogonal group, type 2D
+    | PSp(2&lt;n&gt;,&lt;q&gt;)                     ; proj. special symplectic group
+    | Sz(&lt;q&gt;)                           ; Suzuki group
+    | Ree(&lt;q&gt;)                          ; Ree group (type 2F or 2G)
+    | E(6,&lt;q&gt;) | E(7,&lt;q&gt;) | E(8,&lt;q&gt;)    ; Lie group of exceptional type
+    | 2E(6,&lt;q&gt;) | F(4,&lt;q&gt;) | G(2,&lt;q&gt;)
+    | 3D(4,&lt;q&gt;)                         ; Steinberg triality group
+    | M11 | M12 | M22 | M23 | M24
+    | J1 | J2 | J3 | J4 | Co1 | Co2
+    | Co3 | Fi22 | Fi23 | Fi24' | Suz
+    | HS | McL | He | HN | Th | B
+    | M | ON | Ly | Ru                  ; sporadic simple group
+    | 2F(4,2)'                          ; Tits group
+    | PerfectGroup(&lt;size&gt;,&lt;id&gt;)         ; the indicated group from the
+                                        ; library of perfect groups
+    | A x B                             ; direct product
+    | N : H                             ; semidirect product
+    | C(G) . G/C(G) = G' . G/G'         ; non-split extension
+                                        ; (equal alternatives and
+                                        ; trivial extensions omitted)
+    | Phi(G) . G/Phi(G)                 ; non-split extension:
+                                        ; Frattini subgroup and
+                                        ; Frattini factor group
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that the <code class="func">StructureDescription</code> is only <em>one</em> possible way of building up the given group from smaller pieces.</p><p xmlns="http://www.w3.org/1999/xhtml">The option &quot;short&quot; is recognized - if this option is set, an abbreviated output format is used (e.g. <code class="code">&quot;6x3&quot;</code> instead of <code class="code">&quot;C6 x C3&quot;</code>).</p><p xmlns="http://www.w3.org/1999/xhtml">If the <code class="func">Name</code> (<a shape="rect" href="chap12_mj.html#X7F14EF9D81432113"><span class="RefLink">12.8-2</span></a>) attribute is not bound, but <code class="func">StructureDescription</code> is, <code class="func">View</code> (<a shape="rect" href="chap6_mj.html#X851902C583B84CDC"><span class="RefLink">6.3-3</span></a>) prints the value of the attribute <code class="func">StructureDescription</code>. The <code class="func">Print</code> (<a shape="rect" href="chap6_mj.html#X7AFA64D97A1F39A3"><span class="RefLink">6.3-4</span></a>)ed representation of a group is not affected by computing a <code class="func">StructureDescription</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The strategy used to compute a <code class="func">StructureDescription</code> is as follows:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">1.</strong></dt><dd><p>Lookup in a precomputed list, if the order of <var class="Arg">G</var> is not larger than 100 and not equal to 64.</p>
+
+</dd><dt><strong class="Mark">2.</strong></dt><dd><p>If <var class="Arg">G</var> is abelian, then decompose it into cyclic factors in &quot;elementary divisors style&quot;. For example, <code class="code">&quot;C2 x C3 x C3&quot;</code> is <code class="code">&quot;C6 x C3&quot;</code>.</p>
+
+</dd><dt><strong class="Mark">3.</strong></dt><dd><p>Recognize alternating groups, symmetric groups, dihedral groups, quasidihedral groups, quaternion groups, PSL's, SL's, GL's and simple groups not listed so far as basic building blocks.</p>
+
+</dd><dt><strong class="Mark">4.</strong></dt><dd><p>Decompose <var class="Arg">G</var> into a direct product of irreducible factors.</p>
+
+</dd><dt><strong class="Mark">5.</strong></dt><dd><p>Recognize semidirect products <var class="Arg">G</var>=<math id="-7411903243004777711" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math>:<math id="-765724968989180949" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math>, where <math id="-8704553491513120661" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> is normal. Select a pair <math id="3026836950292552125" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math>, <math id="-3294945911807005505" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> with the following preferences:</p>
+
+
+<dl><dt><strong class="Mark">1.</strong></dt><dd><p><math id="3753857260514255488" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> is abelian</p>
+
+</dd><dt><strong class="Mark">2.</strong></dt><dd><p><math id="-3134866395563405140" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> is abelian</p>
+
+</dd><dt><strong class="Mark">2a.</strong></dt><dd><p><math id="-889007648896237483" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> has many abelian invariants</p>
+
+</dd><dt><strong class="Mark">3.</strong></dt><dd><p><math id="-7366158567367857319" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> is a direct product</p>
+
+</dd><dt><strong class="Mark">3a.</strong></dt><dd><p><math id="-5506630480203618831" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> has many direct factors</p>
+
+</dd><dt><strong class="Mark">4.</strong></dt><dd><p><math id="-4105308504224239925" display="inline" alttext="\phi:H\rightarrow" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ϕ</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">H</mi>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">→</mo>
+        <mi xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1"/>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">italic-ϕ</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">→</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐻</ci>
+          <csymbol xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml" cd="latexml">absent</csymbol>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\phi:H\rightarrow</annotation>
+  </semantics>
+</math> Aut(<math id="-8700718213095740765" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math>), <math id="1600386973400673796" display="inline" alttext="h\mapsto(n\mapsto n^{h})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow id="p1.1.m1.1b">
+      <mi id="p1.1.m1.1.1">h</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">↦</mo>
+      <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3" stretchy="false">(</mo>
+        <mi id="p1.1.m1.1.4">n</mi>
+        <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">↦</mo>
+        <msup xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">n</mi>
+          <mi xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">h</mi>
+        </msup>
+        <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1c" encoding="MathML-Content">
+      <cerror id="p1.1.m1.1d">
+        <csymbol id="p1.1.m1.1e" cd="ambiguous">fragments</csymbol>
+        <csymbol id="p1.1.m1.1f" cd="unknown">h</csymbol>
+        <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" cd="latexml">maps-to</csymbol>
+        <cerror xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+          <csymbol xref="p1.1.m1.1.7" id="p1.1.m1.1.7a.cmml" cd="ambiguous">fragments</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">(</ci>
+          <csymbol xref="p1.1.m1.1.7" id="p1.1.m1.1.7b.cmml" cd="unknown">n</csymbol>
+          <csymbol xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" cd="latexml">maps-to</csymbol>
+          <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+            <csymbol id="p1.1.m1.1.9.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑛</ci>
+            <ci xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">ℎ</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">)</ci>
+        </cerror>
+      </cerror>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1g" encoding="application/x-tex">h\mapsto(n\mapsto n^{h})</annotation>
+  </semantics>
+</math> is injective.</p>
+
+</dd></dl>
+</dd><dt><strong class="Mark">6.</strong></dt><dd><p>Fall back to non-splitting extensions: If the centre or the commutator factor group is non-trivial, write <var class="Arg">G</var> as Z(<var class="Arg">G</var>).<var class="Arg">G</var>/Z(<var class="Arg">G</var>) or <var class="Arg">G</var>'.<var class="Arg">G</var>/<var class="Arg">G</var>', respectively. Otherwise if the Frattini subgroup is non-trivial, write <var class="Arg">G</var> as <math id="560817065140617222" display="inline" alttext="\Phi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Φ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Φ</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Phi</annotation>
+  </semantics>
+</math>(<var class="Arg">G</var>).<var class="Arg">G</var>/<math id="5266882061746708888" display="inline" alttext="\Phi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Φ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Φ</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Phi</annotation>
+  </semantics>
+</math>(<var class="Arg">G</var>).</p>
+
+</dd><dt><strong class="Mark">7.</strong></dt><dd><p>If no decomposition is found (maybe this is not the case for any finite group), try to identify <var class="Arg">G</var> in the perfect groups library. If this fails also, then return a string describing this situation.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">Note that <code class="func">StructureDescription</code> is <em>not</em> intended to be a research tool, but rather an educational tool. The reasons for this are as follows:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">1.</strong></dt><dd><p>&quot;Most&quot; groups do not have &quot;nice&quot; decompositions. This is in some contrast to what is often taught in elementary courses on group theory, where it is sometimes suggested that basically every group can be written as iterated direct or semidirect product of cyclic groups and nonabelian simple groups.</p>
+
+</dd><dt><strong class="Mark">2.</strong></dt><dd><p>In particular many <math id="7671406298404416183" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-groups have very &quot;similar&quot; structure, and <code class="func">StructureDescription</code> can only exhibit a little of it. Changing this would likely make the output not essentially easier to read than a pc presentation.</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := AllSmallGroups(12);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(l,StructureDescription);; l;</span>
+[ C3 : C4, C12, A4, D12, C6 x C2 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(AllSmallGroups(40),G-&gt;StructureDescription(G:short));</span>
+[ &quot;5:8&quot;, &quot;40&quot;, &quot;5:8&quot;, &quot;5:Q8&quot;, &quot;4xD10&quot;, &quot;D40&quot;, &quot;2x(5:4)&quot;, &quot;(10x2):2&quot;, 
+  &quot;20x2&quot;, &quot;5xD8&quot;, &quot;5xQ8&quot;, &quot;2x(5:4)&quot;, &quot;2^2xD10&quot;, &quot;10x2^2&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(AllTransitiveGroups(DegreeAction,6),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        G-&gt;StructureDescription(G:short));</span>
+[ &quot;6&quot;, &quot;S3&quot;, &quot;D12&quot;, &quot;A4&quot;, &quot;3xS3&quot;, &quot;2xA4&quot;, &quot;S4&quot;, &quot;S4&quot;, &quot;S3xS3&quot;, 
+  &quot;(3^2):4&quot;, &quot;2xS4&quot;, &quot;A5&quot;, &quot;(S3xS3):2&quot;, &quot;S5&quot;, &quot;A6&quot;, &quot;S6&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StructureDescription(PSL(4,2));</span>
+&quot;A8&quot;
+</pre></div> </body>
+    </html>

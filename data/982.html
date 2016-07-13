@@ -1,0 +1,35 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 19: Floats</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap19.html#X81AA901181CA568F"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap19_mj.html#X81AA901181CA568F">19 <span class="Heading">Floats</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap19_mj.html#X7B4092CA7ABB93B0">19.1 <span class="Heading">A sample run</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap19_mj.html#X8606FDCE878850EF">19.2 <span class="Heading">Methods</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap19_mj.html#X87B6780178314628">19.2-1 <span class="Heading">Mathematical operations</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap19_mj.html#X7BD96E0585D5A1EE">19.2-2 EqFloat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap19_mj.html#X7B3133497DDE839B">19.2-3 PrecisionFloat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap19_mj.html#X7D085DA987B0BDA6">19.2-4 <span class="Heading">Interval operations</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap19_mj.html#X7DB3BC76836E6219">19.2-5 IsPInfinity</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap19_mj.html#X819050BF8403806E">19.2-6 FLOAT</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap19_mj.html#X873D56F67DD887C5">19.2-7 Float</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap19_mj.html#X7BCD34DC7B5A0521">19.2-8 Rat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap19_mj.html#X7A962B0983FA66E8">19.2-9 SetFloats</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap19_mj.html#X845ACF3A78BD2771">19.3 <span class="Heading">High-precision-specific methods</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap19_mj.html#X7E8F6EFB87A65F78">19.4 <span class="Heading">Complex arithmetic</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap19_mj.html#X7E57B09C80136484">19.5 <span class="Heading">Interval-specific methods</span></a>
+</span>
+</div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">19 <span class="Heading">Floats</span></h3><p xmlns="http://www.w3.org/1999/xhtml">Starting with version 4.5, <strong class="pkg">GAP</strong> has built-in support for floating-point numbers in machine format, and allows package to implement arbitrary-precision floating-point arithmetic in a uniform manner. For now, one such package, <strong class="pkg">Float</strong> exists, and is based on the arbitrary-precision routines in <strong class="pkg">mpfr</strong>.</p><p xmlns="http://www.w3.org/1999/xhtml">A word of caution: <strong class="pkg">GAP</strong> deals primarily with algebraic objects, which can be represented exactly in a computer. Numerical imprecision means that floating-point numbers do not form a ring in the strict <strong class="pkg">GAP</strong> sense, because addition is in general not associative (<code class="code">(1.0e-100+1.0)-1.0</code> is not the same as <code class="code">1.0e-100+(1.0-1.0)</code>, in the default precision setting).</p><p xmlns="http://www.w3.org/1999/xhtml">Most algorithms in <strong class="pkg">GAP</strong> which require ring elements will therefore not be applicable to floating-point elements. In some cases, such a notion would not even make any sense (what is the greatest common divisor of two floating-point numbers?)</p> </body>
+    </html>

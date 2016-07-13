@@ -1,0 +1,30 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 8: Options Stack</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap8.html#X7FD84061873F72A2"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap8_mj.html#X7FD84061873F72A2">8 <span class="Heading">Options Stack</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap8_mj.html#X794C5B5A80203CF9">8.1 <span class="Heading">Functions Dealing with the Options Stack</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap8_mj.html#X7D4939FF7FB37FBE">8.1-1 PushOptions</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap8_mj.html#X7818A5278679FD43">8.1-2 PopOptions</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap8_mj.html#X83D1190984DA3B85">8.1-3 ResetOptionsStack</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap8_mj.html#X78D87D1081BF99FE">8.1-4 OnQuit</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap8_mj.html#X7F9373AD7DB88D1F">8.1-5 ValueOption</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap8_mj.html#X7EDA4EB67D43FE33">8.1-6 DisplayOptionsStack</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap8_mj.html#X832F41187B150C19">8.1-7 InfoOptions</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap8_mj.html#X7BB781647CAAE9B4">8.2 <span class="Heading">Options Stack – an Example</span></a>
+</span>
+</div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">8 <span class="Heading">Options Stack</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> supports a <em>global options system</em>. This is intended as a way for the user to provide guidance to various algorithms that might be used in a computation. Such guidance should not change mathematically the specification of the computation to be performed, although it may change the algorithm used. A typical example is the selection of a strategy for the Todd-Coxeter coset enumeration procedure. An example of something not suited to the options mechanism is the imposition of exponent laws in the <math id="8189917217291937686" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-Quotient algorithm.</p><p xmlns="http://www.w3.org/1999/xhtml">The basis of this system is a global stack of records. All the entries of each record are thought of as options settings, and the effective setting of an option is given by the topmost record in which the relevant field is bound.</p><p xmlns="http://www.w3.org/1999/xhtml">The reason for the choice of a stack is the intended pattern of use:</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">PushOptions( rec( <var class="Arg">stuff</var> ) );</code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">DoSomething( <var class="Arg">args</var> );</code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">PopOptions();</code></p><p xmlns="http://www.w3.org/1999/xhtml">This can be abbreviated, to <code class="code">DoSomething( <var class="Arg">args</var> : <var class="Arg">stuff</var> );</code> with a small additional abbreviation of <var class="Arg">stuff</var> permitted. See <a shape="rect" href="chap4_mj.html#X867D54987EF86D1D"><span class="RefLink">4.11-2</span></a> for details. The full form can be used where the same options are to run across several calls, or where the <code class="code">DoSomething</code> procedure is actually an infix operator, or other function with special syntax.</p><p xmlns="http://www.w3.org/1999/xhtml">An alternative to this system is the use of additional optional arguments in procedure calls. This is not felt to be sufficient because many procedure calls might cause, for example, a coset enumeration and each would need to make provision for the possibility of extra arguments. In this system the options are pushed when the user-level procedure is called, and remain in effect (unless altered) for all procedures called by it.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that in some places in the system optional records containing options which are valid only for the immediate function or method call are in fact used.</p> </body>
+    </html>

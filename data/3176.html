@@ -1,0 +1,214 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.8-3 AbelianSubfactorAction</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X835317A7847477D4"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.8-3 AbelianSubfactorAction</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AbelianSubfactorAction</code>( <var class="Arg">G</var>, <var class="Arg">M</var>, <var class="Arg">N</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">G</var> be a group and <math id="2152665012650286796" display="inline" alttext="\textit{M}\geq\textit{N}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑀</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≥</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑁</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <geq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{M}\geq\textit{N}</annotation>
+  </semantics>
+</math> be subgroups of a common parent that are normal under <var class="Arg">G</var>, such that the subfactor <math id="1103389922437729083" display="inline" alttext="\textit{M}/\textit{N}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑀</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">/</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑁</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <divide xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{M}/\textit{N}</annotation>
+  </semantics>
+</math> is elementary abelian. The operation <code class="func">AbelianSubfactorAction</code> returns a list <code class="code">[ <var class="Arg">phi</var>, <var class="Arg">alpha</var>, <var class="Arg">bas</var> ]</code> where <var class="Arg">bas</var> is a list of elements of <var class="Arg">M</var> which are representatives for a basis of <math id="7256328791231126151" display="inline" alttext="\textit{M}/\textit{N}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑀</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">/</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑁</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <divide xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{M}/\textit{N}</annotation>
+  </semantics>
+</math>, <var class="Arg">alpha</var> is a map from <var class="Arg">M</var> into a <math id="6835487442703454810" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>-dimensional row space over <math id="-1698324039562179626" display="inline" alttext="GF(p)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">F</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1a">⁢</mo>
+      <mrow id="p1.1.m1.1.6.2">
+        <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">p</mi>
+        <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐹</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑝</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">GF(p)</annotation>
+  </semantics>
+</math> where <math id="-7211919746076766051" display="inline" alttext="[\textit{M}:\textit{N}]=p^{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow id="p1.1.m1.1b">
+      <mrow xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">
+        <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+        <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑀</mtext>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">:</mo>
+        <mtext xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">𝑁</mtext>
+        <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5" stretchy="false">]</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">=</mo>
+      <msup xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">p</mi>
+        <mi xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">n</mi>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1c" encoding="MathML-Content">
+      <cerror id="p1.1.m1.1d">
+        <csymbol id="p1.1.m1.1e" cd="ambiguous">fragments</csymbol>
+        <cerror xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">
+          <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.2a.cmml" cd="ambiguous">fragments</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">[</ci>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+          </mtext>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">:</ci>
+          <mtext xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">]</ci>
+        </cerror>
+        <eq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+          <csymbol id="p1.1.m1.1.9.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">𝑛</ci>
+        </apply>
+      </cerror>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1f" encoding="application/x-tex">[\textit{M}:\textit{N}]=p^{n}</annotation>
+  </semantics>
+</math> that is the natural homomorphism of <var class="Arg">M</var> by <var class="Arg">N</var> with the quotient represented as an additive group. Finally <var class="Arg">phi</var> is a homomorphism from <var class="Arg">G</var> into <math id="2058823637959727722" display="inline" alttext="GL_{n}(p)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <msub xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">L</mi>
+        <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">n</mi>
+      </msub>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1a">⁢</mo>
+      <mrow id="p1.1.m1.1.7.3">
+        <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">p</mi>
+        <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐿</ci>
+          <ci xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">𝑛</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑝</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">GL_{n}(p)</annotation>
+  </semantics>
+</math> that represents the action of <var class="Arg">G</var> on the factor <math id="-2196005103148209641" display="inline" alttext="\textit{M}/\textit{N}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑀</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">/</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑁</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <divide xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{M}/\textit{N}</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note: If only matrices for the action are needed, <code class="func">LinearActionLayer</code> (<a shape="rect" href="chap45_mj.html#X7C2135B98732BBC3"><span class="RefLink">45.14-3</span></a>) might be faster.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,8,10,7,3,5)(2,4,12,9,11,6),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">            (1,9,5,6,3,10)(2,11,12,8,4,7));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:=ChiefSeries(g);;List(c,Size);</span>
+[ 96, 48, 16, 4, 1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasElementaryAbelianFactorGroup(c[3],c[4]);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName(c[3],&quot;my_group&quot;);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:=AbelianSubfactorAction(g,c[3],c[4]);</span>
+[ [ (1,8,10,7,3,5)(2,4,12,9,11,6), (1,9,5,6,3,10)(2,11,12,8,4,7) ] -&gt; 
+    [ &lt;an immutable 2x2 matrix over GF2&gt;, 
+      &lt;an immutable 2x2 matrix over GF2&gt; ], 
+  MappingByFunction( my_group, ( GF(2)^
+    2 ), function( e ) ... end, function( r ) ... end ), 
+  Pcgs([ (2,9,3,8)(4,11,5,10), (1,6,12,7)(4,10,5,11) ]) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=Image(a[1],g);</span>
+Group([ &lt;an immutable 2x2 matrix over GF2&gt;, 
+  &lt;an immutable 2x2 matrix over GF2&gt; ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(mat);</span>
+3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e:=PreImagesRepresentative(a[2],[Z(2),0*Z(2)]);</span>
+(2,9,3,8)(4,11,5,10)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e in c[3];e in c[4];</span>
+true
+false
+</pre></div> </body>
+    </html>

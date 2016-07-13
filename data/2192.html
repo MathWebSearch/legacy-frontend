@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.9-3 DerivedSubgroupsTomPossible</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X7C29BD438127DFBE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.9-3 DerivedSubgroupsTomPossible</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DerivedSubgroupsTomPossible</code>( <var class="Arg">tom</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DerivedSubgroupsTomUnique</code>( <var class="Arg">tom</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">tom</var> be a table of marks. The value of the attribute <code class="func">DerivedSubgroupsTomPossible</code> is a list in which the value at position <math id="3775678983367498153" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> –if bound– is a positive integer or a list; the meaning of the entry is the same as in <code class="func">DerivedSubgroupTom</code> (<a shape="rect" href="chap70_mj.html#X8528D9397FFAF477"><span class="RefLink">70.9-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">If the value of the attribute <code class="func">DerivedSubgroupsTomUnique</code> is known for <var class="Arg">tom</var> then it is a list of positive integers, the value at position <math id="4492781862600669711" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> being the position of the class of derived subgroups of the <math id="8223788068613661269" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th class of subgroups in <var class="Arg">tom</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The derived subgroups are in general not uniquely determined by the table of marks if no <code class="func">UnderlyingGroup</code> (<a shape="rect" href="chap70_mj.html#X81E41D3880FA6C4C"><span class="RefLink">70.7-7</span></a>) value is stored, so there is no default method for <code class="func">DerivedSubgroupsTomUnique</code>. But in some cases the derived subgroups are explicitly set when the table of marks is constructed. In this case, <code class="func">DerivedSubgroupTom</code> (<a shape="rect" href="chap70_mj.html#X8528D9397FFAF477"><span class="RefLink">70.9-2</span></a>) does not set values in the <code class="func">DerivedSubgroupsTomPossible</code> list.</p><p xmlns="http://www.w3.org/1999/xhtml">The <code class="func">DerivedSubgroupsTomUnique</code> value is automatically set when the last missing unique value is entered in the <code class="func">DerivedSubgroupsTomPossible</code> list by <code class="func">DerivedSubgroupTom</code> (<a shape="rect" href="chap70_mj.html#X8528D9397FFAF477"><span class="RefLink">70.9-2</span></a>).</p> </body>
+    </html>

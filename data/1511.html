@@ -1,0 +1,30 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 29: Records-&gt;29.3 Record Assignment</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap29.html#X806DE3BD78742CA4"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">29.3 <span class="Heading">Record Assignment</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">r</var>.<var class="Arg">name</var> := <var class="Arg">obj</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">The record assignment assigns the object <var class="Arg">obj</var>, which may be an object of arbitrary type, to the record component with the name <var class="Arg">name</var>, which must be an identifier, of the record <var class="Arg">r</var>. That means that accessing the element with name <var class="Arg">name</var> of the record <var class="Arg">r</var> will return <var class="Arg">obj</var> after this assignment. If the record <var class="Arg">r</var> has no component with the name <var class="Arg">name</var>, the record is automatically extended to make room for the new component.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r := rec( a := 1, b := 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r.a := 10;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( r );</span>
+rec(
+  a := 10,
+  b := 2 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r.c := 3;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( r );</span>
+rec(
+  a := 10,
+  b := 2,
+  c := 3 )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that assigning to a record changes the record.</p><p xmlns="http://www.w3.org/1999/xhtml">The function <code class="func">IsBound</code> (<a shape="rect" href="chap29_mj.html#X7A13E8F87CAAA0AF"><span class="RefLink">29.6-1</span></a>) can be used to test if a record has a component with a certain name, the function <code class="func">Unbind</code> (<a shape="rect" href="chap29_mj.html#X7CA9AEFE7DB71604"><span class="RefLink">29.6-2</span></a>) can be used to remove a component with a certain name again.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsBound(r.a);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsBound(r.d);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Unbind(r.b);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( r );</span>
+rec(
+  a := 10,
+  c := 3 )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">r</var>.(<var class="Arg">name</var>) := <var class="Arg">obj</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">This construct is similar to the above construct. The difference is that the second operand <var class="Arg">name</var> is evaluated. It must evaluate to a string or an integer otherwise an error is signalled. The construct then assigns <var class="Arg">obj</var> to the record component of the record <var class="Arg">r</var> whose name is, as a string, equal to <var class="Arg">name</var>.</p> </body>
+    </html>

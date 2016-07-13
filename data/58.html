@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.9-9 AsSubalgebra</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7A922D26805AFF99"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.9-9 AsSubalgebra</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsSubalgebra</code>( <var class="Arg">A</var>, <var class="Arg">B</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If all elements of the algebra <var class="Arg">B</var> happen to be contained in the algebra <var class="Arg">A</var>, then <var class="Arg">B</var> can be viewed as a subalgebra of <var class="Arg">A</var>. This function returns this subalgebra.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= FullMatrixAlgebra( Rationals, 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= VectorSpace( Rationals, [ IdentityMat( 2 ) ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= AsAlgebra( Rationals, V );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BA:= AsSubalgebra( A, B );</span>
+&lt;algebra of dimension 1 over Rationals&gt;
+</pre></div> </body>
+    </html>

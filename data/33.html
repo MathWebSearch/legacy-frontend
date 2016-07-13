@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.10-13 RepresentativeLinearOperation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7F34244B81979696"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.10-13 RepresentativeLinearOperation</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RepresentativeLinearOperation</code>( <var class="Arg">A</var>, <var class="Arg">v</var>, <var class="Arg">w</var>, <var class="Arg">opr</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is an element of the algebra <var class="Arg">A</var> that maps the vector <var class="Arg">v</var> to the vector <var class="Arg">w</var> under the linear operation described by the function <var class="Arg">opr</var>. If no such element exists then <code class="keyw">fail</code> is returned.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:= NullMat( 2, 2 );; m1[1][1]:= 1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2:= NullMat( 2, 2 );; m2[2][2]:= 1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= AlgebraByGenerators( Rationals, [ m1, m2 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RepresentativeLinearOperation( B, [1,0], [1,0], OnRight );</span>
+[ [ 1, 0 ], [ 0, 0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RepresentativeLinearOperation( B, [1,0], [0,1], OnRight );</span>
+fail
+</pre></div> </body>
+    </html>

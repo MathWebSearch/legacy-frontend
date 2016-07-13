@@ -1,0 +1,153 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 35: Magmas-&gt;35.1-2 IsMagmaWithOne</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap35.html#X86071DE7835F1C7C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">35.1-2 IsMagmaWithOne</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsMagmaWithOne</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A <em>magma-with-one</em> in <strong class="pkg">GAP</strong> is a magma <math id="3195097272066871302" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> with an operation <code class="code">^0</code> (or <code class="func">One</code> (<a shape="rect" href="chap31_mj.html#X8046262384895B2A"><span class="RefLink">31.10-2</span></a>)) that yields the identity of <math id="6277228518413511385" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">So a magma-with-one <math id="-3359159362627691047" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> does always contain a unique multiplicatively neutral element <math id="592953901334497683" display="inline" alttext="e" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">e</annotation>
+  </semantics>
+</math>, i.e., <math id="-5820578456456702134" display="inline" alttext="e" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">e</annotation>
+  </semantics>
+</math><code class="code"> * </code><math id="4230958899561702547" display="inline" alttext="m=m=m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">m</mi>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">=</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">m</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <and xref="p1.1.m1.1.6" id="p1.1.m1.1.6a.cmml"/>
+        <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6b.cmml">
+          <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑚</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6c.cmml">
+          <eq xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+          <share xref="p1.1.m1.1.6" id="p1.1.m1.1.6d.cmml" href="#p1.1.m1.1.3.cmml"/>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑚</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m=m=m</annotation>
+  </semantics>
+</math><code class="code"> * </code><math id="4815007622908648153" display="inline" alttext="e" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">e</annotation>
+  </semantics>
+</math> holds for all <math id="4724035875501950906" display="inline" alttext="m\in M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">M</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑀</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m\in M</annotation>
+  </semantics>
+</math> (see <code class="func">MultiplicativeNeutralElement</code> (<a shape="rect" href="chap35_mj.html#X7EE2EA5F7EB7FEC2"><span class="RefLink">35.4-10</span></a>)). This element <math id="2867234847806687118" display="inline" alttext="e" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">e</annotation>
+  </semantics>
+</math> can be computed with the operation <code class="func">One</code> (<a shape="rect" href="chap31_mj.html#X8046262384895B2A"><span class="RefLink">31.10-2</span></a>) as <code class="code">One( </code><math id="-8590696180631319600" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math><code class="code"> )</code>, and <math id="2065653349725221094" display="inline" alttext="e" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">e</annotation>
+  </semantics>
+</math> is also equal to <code class="code">One( </code><math id="3477689771930110435" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
+  </semantics>
+</math><code class="code"> )</code> and to <math id="7778318905930174954" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
+  </semantics>
+</math><code class="code">^0</code> for each element <math id="-5352994646662996889" display="inline" alttext="m\in M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">M</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑀</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m\in M</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>Note</em> that a magma may contain a multiplicatively neutral element but <em>not</em> an identity (see <code class="func">One</code> (<a shape="rect" href="chap31_mj.html#X8046262384895B2A"><span class="RefLink">31.10-2</span></a>)), and a magma containing an identity may <em>not</em> lie in the category <code class="func">IsMagmaWithOne</code> (see Section <a shape="rect" href="chap31_mj.html#X7D72F11B82F4A036"><span class="RefLink">31.6</span></a>).</p> </body>
+    </html>

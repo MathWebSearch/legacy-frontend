@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 27: Strings and Characters-&gt;27.7-13 ReplacedString</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27.html#X864F0A9078D4DE0E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">27.7-13 ReplacedString</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReplacedString</code>( <var class="Arg">string</var>, <var class="Arg">old</var>, <var class="Arg">new</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">replaces occurrences of the string <var class="Arg">old</var> in <var class="Arg">string</var> by <var class="Arg">new</var>, starting from the left and always replacing the first occurrence. To avoid infinite recursion, characters which have been replaced already, are not subject to renewed replacement.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReplacedString(&quot;abacab&quot;,&quot;a&quot;,&quot;zl&quot;);</span>
+&quot;zlbzlczlb&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReplacedString(&quot;ababa&quot;, &quot;aba&quot;,&quot;c&quot;);</span>
+&quot;cba&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReplacedString(&quot;abacab&quot;,&quot;a&quot;,&quot;ba&quot;);</span>
+&quot;babbacbab&quot;
+</pre></div> </body>
+    </html>

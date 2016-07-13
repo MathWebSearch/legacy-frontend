@@ -1,0 +1,179 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.5 Bases of Vector Spaces</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X828AA09B87F14FAD"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">61.5 <span class="Heading">Bases of Vector Spaces</span></h4><p xmlns="http://www.w3.org/1999/xhtml">In <strong class="pkg">GAP</strong>, a <em>basis</em> of a free left <math id="7590834483478848635" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>-module <math id="4624990003264697232" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math> is a list of vectors <math id="-8511027320283310630" display="inline" alttext="B=[v_{1},v_{2},\ldots,v_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1">
+        <mo id="p1.1.m1.1.3" stretchy="false">[</mo>
+        <msub xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1.2">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">v</mi>
+          <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">1</mn>
+        </msub>
+        <mo id="p1.1.m1.1.6">,</mo>
+        <msub xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1.3">
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">v</mi>
+          <mn xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">2</mn>
+        </msub>
+        <mo id="p1.1.m1.1.9">,</mo>
+        <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10" mathvariant="normal">…</mi>
+        <mo id="p1.1.m1.1.11">,</mo>
+        <msub xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1.4">
+          <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">v</mi>
+          <mi xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">n</mi>
+        </msub>
+        <mo id="p1.1.m1.1.14" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <list xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.1.cmml">
+          <apply xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.2.cmml">
+            <csymbol id="p1.1.m1.1.15.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑣</ci>
+            <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">1</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.3.cmml">
+            <csymbol id="p1.1.m1.1.15.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑣</ci>
+            <cn xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml" type="integer">2</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">…</ci>
+          <apply xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.4.cmml">
+            <csymbol id="p1.1.m1.1.15.1.4.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑣</ci>
+            <ci xref="p1.1.m1.1.13.1" id="p1.1.m1.1.13.1.cmml">𝑛</ci>
+          </apply>
+        </list>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B=[v_{1},v_{2},\ldots,v_{n}]</annotation>
+  </semantics>
+</math> in <math id="4094595774038157567" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math> such that <math id="7986494166951944743" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math> is generated as a left <math id="4358937373289807284" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>-module by these vectors and such that <math id="-275763900107040868" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math> is linearly independent over <math id="-5917817195965250222" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>. The integer <math id="7247372571114785529" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> is the dimension of <math id="7562436670243713479" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math> (see <code class="func">Dimension</code> (<a shape="rect" href="chap57_mj.html#X7E6926C6850E7C4E"><span class="RefLink">57.3-3</span></a>)). In particular, as each basis is a list (see Chapter <a shape="rect" href="chap21_mj.html#X7B256AE5780F140A"><span class="RefLink">21</span></a>), it has a length (see <code class="func">Length</code> (<a shape="rect" href="chap21_mj.html#X780769238600AFD1"><span class="RefLink">21.17-5</span></a>)), and the <math id="5205371073154850694" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th vector of <math id="6812841947335163335" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math> can be accessed as <math id="5146604385147908655" display="inline" alttext="B[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.5.2.1.cmml" id="p1.1.m1.1.5.2">
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.2" stretchy="false">[</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.1.cmml">
+          <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.5.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B[i]</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= Rationals^3;</span>
+( Rationals^3 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= Basis( V );</span>
+CanonicalBasis( ( Rationals^3 ) )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( B );</span>
+3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B[1];</span>
+[ 1, 0, 0 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The operations described below make sense only for bases of <em>finite</em> dimensional vector spaces. (In practice this means that the vector spaces must be <em>low</em> dimensional, that is, the dimension should not exceed a few hundred.)</p><p xmlns="http://www.w3.org/1999/xhtml">Besides the basic operations for lists (see <a shape="rect" href="chap21_mj.html#X7B202D147A5C2884"><span class="RefLink">21.2</span></a>), the <em>basic operations for bases</em> are <code class="func">BasisVectors</code> (<a shape="rect" href="chap61_mj.html#X7B1F17AE8027A590"><span class="RefLink">61.6-1</span></a>), <code class="func">Coefficients</code> (<a shape="rect" href="chap61_mj.html#X80B32F667BF6AFD8"><span class="RefLink">61.6-3</span></a>), <code class="func">LinearCombination</code> (<a shape="rect" href="chap61_mj.html#X7D305AB3834889BF"><span class="RefLink">61.6-4</span></a>), and <code class="func">UnderlyingLeftModule</code> (<a shape="rect" href="chap61_mj.html#X81E8AE88843B70FF"><span class="RefLink">61.6-2</span></a>). These and other operations for arbitrary bases are described in <a shape="rect" href="chap61_mj.html#X839B9C4880EBFB5F"><span class="RefLink">61.6</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">For special kinds of bases, further operations are defined (see <a shape="rect" href="chap61_mj.html#X82809D6C82DE4EC2"><span class="RefLink">61.7</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> supports the following three kinds of bases.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>Relative bases</em> delegate the work to other bases of the same free left module, via basechange matrices (see <code class="func">RelativeBasis</code> (<a shape="rect" href="chap61_mj.html#X8786D40B84120F38"><span class="RefLink">61.5-4</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml"><em>Bases handled by nice bases</em> delegate the work to bases of isomorphic left modules over the same left acting domain (see <a shape="rect" href="chap61_mj.html#X81503EB77FCE648D"><span class="RefLink">61.11</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Finally, of course there must be bases in <strong class="pkg">GAP</strong> that really do the work.</p><p xmlns="http://www.w3.org/1999/xhtml">For example, in the case of a Gaussian row or matrix space <var class="Arg">V</var> (see <a shape="rect" href="chap61_mj.html#X7D937EBC7DE2819B"><span class="RefLink">61.9</span></a>), <code class="code">Basis( <var class="Arg">V</var> )</code> is a semi-echelonized basis (see <code class="func">IsSemiEchelonized</code> (<a shape="rect" href="chap61_mj.html#X865A540F85FAE2DF"><span class="RefLink">61.9-7</span></a>)) that uses Gaussian elimination; such a basis is of the third kind. <code class="code">Basis( <var class="Arg">V</var>, <var class="Arg">vectors</var> )</code> is either semi-echelonized or a relative basis. Other examples of bases of the third kind are canonical bases of finite fields and of abelian number fields.</p><p xmlns="http://www.w3.org/1999/xhtml">Bases handled by nice bases are described in <a shape="rect" href="chap61_mj.html#X81503EB77FCE648D"><span class="RefLink">61.11</span></a>. Examples are non-Gaussian row and matrix spaces, and subspaces of finite fields and abelian number fields that are themselves not fields.</p> </body>
+    </html>

@@ -1,0 +1,43 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 29: Records-&gt;29.4 Identical Records</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap29.html#X86BC2672803863FB"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">29.4 <span class="Heading">Identical Records</span></h4><p xmlns="http://www.w3.org/1999/xhtml">With the record assignment (see <a shape="rect" href="chap29_mj.html#X806DE3BD78742CA4"><span class="RefLink">29.3</span></a>) it is possible to change a record. This section describes the semantic consequences of this fact which are essentially the same as for lists (see <a shape="rect" href="chap21_mj.html#X7DD65BEA7EDB0CD7"><span class="RefLink">21.6</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+r := rec( a := 1 );
+r := rec( a := 1, b := 2 );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The second assignment does not change the first record, instead it assigns a new record to the variable <code class="code">r</code>. On the other hand, in the following example the record is changed by the second assignment.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+r := rec( a := 1 );
+r.b := 2;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">To understand the difference first think of a variable as a name for an object. The important point is that a record can have several names at the same time. An assignment <code class="code"><var class="Arg">var</var> := <var class="Arg">r</var></code> means in this interpretation that <var class="Arg">var</var> is a name for the object <var class="Arg">r</var>. At the end of the following example <code class="code">r2</code> still has the value <code class="code">rec( a := 1 )</code> as this record has not been changed and nothing else has been assigned to <code class="code">r2</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+r1 := rec( a := 1 );
+r2 := r1;
+r1 := rec( a := 1, b := 2 );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">But after the following example the record for which <code class="code">r2</code> is a name has been changed and thus the value of <code class="code">r2</code> is now <code class="code">rec( a := 1, b := 2 )</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+r1 := rec( a := 1 );
+r2 := r1;
+r1.b := 2;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We shall say that two records are <em>identical</em> if changing one of them by a record assignment also changes the other one. This is slightly incorrect, because if <em>two</em> records are identical, there are actually only two names for <em>one</em> record. However, the correct usage would be very awkward and would only add to the confusion. Note that two identical records must be equal, because there is only one records with two different names. Thus identity is an equivalence relation that is a refinement of equality.</p><p xmlns="http://www.w3.org/1999/xhtml">Let us now consider under which circumstances two records are identical.</p><p xmlns="http://www.w3.org/1999/xhtml">If you enter a record literal then the record denoted by this literal is a new record that is not identical to any other record. Thus in the following example <code class="code">r1</code> and <code class="code">r2</code> are not identical, though they are equal of course.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+r1 := rec( a := 1 );
+r2 := rec( a := 1 );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Also in the following example, no records in the list <code class="code">l</code> are identical.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+l := [];
+for i in [1..10] do
+  l[i] := rec( a := 1 );
+od;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If you assign a record to a variable no new record is created. Thus the record value of the variable on the left hand side and the record on the right hand side of the assignment are identical. So in the following example <code class="code">r1</code> and <code class="code">r2</code> are identical records.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+r1 := rec( a := 1 );
+r2 := r1;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If you pass a record as argument, the old record and the argument of the function are identical. Also if you return a record from a function, the old record and the value of the function call are identical. So in the following example <code class="code">r1</code> and <code class="code">r2</code> are identical records.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+r1 := rec( a := 1 );
+f := function ( r ) return r; end;
+r2 := f( r1 );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The functions <code class="func">StructuralCopy</code> (<a shape="rect" href="chap12_mj.html#X7C1E70587EBDD2CB"><span class="RefLink">12.7-2</span></a>) and <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) accept a record and return a new record that is equal to the old record but that is <em>not</em> identical to the old record. The difference between <code class="func">StructuralCopy</code> (<a shape="rect" href="chap12_mj.html#X7C1E70587EBDD2CB"><span class="RefLink">12.7-2</span></a>) and <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) is that in the case of <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) the corresponding components of the new and the old records will be identical, whereas in the case of <code class="func">StructuralCopy</code> (<a shape="rect" href="chap12_mj.html#X7C1E70587EBDD2CB"><span class="RefLink">12.7-2</span></a>) they will only be equal. So in the following example <code class="code">r1</code> and <code class="code">r2</code> are not identical records.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+r1 := rec( a := 1 );
+r2 := ShallowCopy( r1 );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If you change a record it keeps its identity. Thus if two records are identical and you change one of them, you also change the other, and they are still identical afterwards. On the other hand, two records that are not identical will never become identical if you change one of them. So in the following example both <code class="code">r1</code> and <code class="code">r2</code> are changed, and are still identical.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+r1 := rec( a := 1 );
+r2 := r1;
+r1.b := 2;
+</pre></div> </body>
+    </html>

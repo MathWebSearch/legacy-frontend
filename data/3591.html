@@ -1,0 +1,28 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 4: The Programming Language-&gt;4.15 Assignments</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap4.html#X7E6A50307F4D3FAE"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">4.15 <span class="Heading">Assignments</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">var</var> := <var class="Arg">expr</var>;</code></p><p xmlns="http://www.w3.org/1999/xhtml">The <em>assignment</em> has the effect of assigning the value of the expressions <var class="Arg">expr</var> to the variable <var class="Arg">var</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The variable <var class="Arg">var</var> may be an ordinary variable (see <a shape="rect" href="chap4_mj.html#X7A4C2D0E7E286B4F"><span class="RefLink">4.8</span></a>), a list element selection <code class="code"><var class="Arg">list-var</var>[<var class="Arg">int-expr</var>]</code> (see <a shape="rect" href="chap21_mj.html#X8611EF768210625B"><span class="RefLink">21.4</span></a>) or a record component selection <code class="code"><var class="Arg">record-var</var>.<var class="Arg">ident</var></code> (see <a shape="rect" href="chap29_mj.html#X806DE3BD78742CA4"><span class="RefLink">29.3</span></a>). Since a list element or a record component may itself be a list or a record the left hand side of an assignment may be arbitrarily complex.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that variables do not have a type. Thus any value may be assigned to any variable. For example a variable with an integer value may be assigned a permutation or a list or anything else.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">data:= rec( numbers:= [ 1, 2, 3 ] );</span>
+rec( numbers := [ 1, 2, 3 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">data.string:= &quot;string&quot;;; data;</span>
+rec( numbers := [ 1, 2, 3 ], string := &quot;string&quot; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">data.numbers[2]:= 4;; data;</span>
+rec( numbers := [ 1, 4, 3 ], string := &quot;string&quot; )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If the expression <var class="Arg">expr</var> is a function call then this function must return a value. If the function does not return a value an error is signalled and you enter a break loop (see <a shape="rect" href="chap6_mj.html#X8593B49F8705B486"><span class="RefLink">6.4</span></a>). As usual you can leave the break loop with <code class="code">quit;</code>. If you enter <code class="code">return <var class="Arg">return-expr</var>;</code> the value of the expression <var class="Arg">return-expr</var> is assigned to the variable, and execution continues after the assignment.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f1:= function( x ) Print( &quot;value: &quot;, x, &quot;\n&quot; ); end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f2:= function( x ) return f1( x ); end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f2( 4 );</span>
+value: 4
+Function Calls: &lt;func&gt; must return a value at
+return f1( x );
+ called from
+&lt;function&gt;( &lt;arguments&gt; ) called from read-eval-loop
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you can supply one by 'return &lt;value&gt;;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">return &quot;hello&quot;;</span>
+&quot;hello&quot;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In the above example, the function <code class="code">f2</code> calls <code class="code">f1</code> with argument <code class="code">4</code>, and since <code class="code">f1</code> does not return a value (but only prints a line &quot;<code class="code">value: ...</code>&quot;), the <code class="keyw">return</code> statement of <code class="code">f2</code> cannot be executed. The error message says that it is possible to return an appropriate value, and the returned string <code class="code">&quot;hello&quot;</code> is used by <code class="code">f2</code> instead of the missing return value of <code class="code">f1</code>.</p> </body>
+    </html>

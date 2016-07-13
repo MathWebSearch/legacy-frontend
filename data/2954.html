@@ -1,0 +1,108 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.5-4 IsZmodnZObj</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X7D0107DD79753901"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.5-4 IsZmodnZObj</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsZmodnZObj</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsZmodnZObjNonprime</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsZmodpZObj</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsZmodpZObjSmall</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsZmodpZObjLarge</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The elements in the rings <math id="-7176433089858165657" display="inline" alttext="Z/nZ" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">/</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">Z</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.cmml">
+          <divide xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑍</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑍</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z/nZ</annotation>
+  </semantics>
+</math> are in the category <code class="func">IsZmodnZObj</code>. If <math id="-5404100349643268737" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> is a prime then the elements are of course also in the category <code class="func">IsFFE</code> (<a shape="rect" href="chap59_mj.html#X7D3DF32C84FEBD25"><span class="RefLink">59.1-1</span></a>), otherwise they are in <code class="func">IsZmodnZObjNonprime</code>. <code class="func">IsZmodpZObj</code> is an abbreviation of <code class="code">IsZmodnZObj and IsFFE</code>. This category is the disjoint union of <code class="func">IsZmodpZObjSmall</code> and <code class="func">IsZmodpZObjLarge</code>, the former containing all elements with <math id="2935351043791773495" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> at most <code class="code">MAXSIZE_GF_INTERNAL</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The reasons to distinguish the prime case from the nonprime case are</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>that objects in <code class="func">IsZmodnZObjNonprime</code> have an external representation (namely the residue in the range <math id="5520702155120925792" display="inline" alttext="[0,1,\ldots,n-1]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">0</mn>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+      <mo id="p1.1.m1.1.5">,</mo>
+      <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6" mathvariant="normal">…</mi>
+      <mo id="p1.1.m1.1.7">,</mo>
+      <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.2">
+        <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">n</mi>
+        <mo xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">-</mo>
+        <mn xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">1</mn>
+      </mrow>
+      <mo id="p1.1.m1.1.11" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.12" id="p1.1.m1.1.12.1.cmml">
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">0</cn>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">…</ci>
+        <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.12.2.cmml">
+          <minus xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml"/>
+          <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑛</ci>
+          <cn xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml" type="integer">1</cn>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[0,1,\ldots,n-1]</annotation>
+  </semantics>
+</math>),</p>
+
+</li><li><p>that the comparison of elements can be defined as comparison of the residues, and</p>
+
+</li><li><p>that the elements lie in a family of type <code class="code">IsZmodnZObjNonprimeFamily</code> (note that for prime <math id="-6765511547752494811" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>, the family must be an <code class="code">IsFFEFamily</code>).</p>
+
+</li></ul><p xmlns="http://www.w3.org/1999/xhtml">The reasons to distinguish the small and the large case are that for small <math id="-1162661450622331516" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> the elements must be compatible with the internal representation of finite field elements, whereas we are free to define comparison as comparison of residues for large <math id="-4933721196855530088" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that we <em>cannot</em> claim that every finite field element of degree 1 is in <code class="func">IsZmodnZObj</code>, since finite field elements in internal representation may not know that they lie in the prime field.</p> </body>
+    </html>

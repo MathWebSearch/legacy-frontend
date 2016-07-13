@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.16-1 Position</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X79975EC6783B4293"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.16-1 Position</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Position</code>( <var class="Arg">list</var>, <var class="Arg">obj</var>[, <var class="Arg">from</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the position of the first occurrence <var class="Arg">obj</var> in <var class="Arg">list</var>, or <code class="keyw">fail</code> if <var class="Arg">obj</var> is not contained in <var class="Arg">list</var>. If a starting index <var class="Arg">from</var> is given, it returns the position of the first occurrence starting the search <em>after</em> position <var class="Arg">from</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Each call to the two argument version is translated into a call of the three argument version, with third argument the integer zero <code class="code">0</code>. (Methods for the two argument version must be installed as methods for the version with three arguments, the third being described by <code class="code">IsZeroCyc</code>.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Position( [ 2, 2, 1, 3 ], 1 );</span>
+3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Position( [ 2, 1, 1, 3 ], 1 );</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Position( [ 2, 1, 1, 3 ], 1, 2 );</span>
+3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Position( [ 2, 1, 1, 3 ], 1, 3 );</span>
+fail
+</pre></div> </body>
+    </html>

@@ -1,0 +1,54 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.10 Debugging Recursion</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X85FF55448787CCA0"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">7.10 <span class="Heading">Debugging Recursion</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The <strong class="pkg">GAP</strong> interpreter monitors the level of nesting of <strong class="pkg">GAP</strong> functions during execution. By default, whenever this nesting reaches a multiple of <math id="5993158629960701488" display="inline" alttext="5000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">5000</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">5000</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">5000</annotation>
+  </semantics>
+</math>, <strong class="pkg">GAP</strong> enters a break loop (<a shape="rect" href="chap6_mj.html#X8593B49F8705B486"><span class="RefLink">6.4</span></a>) allowing you to terminate the calculation, or enter <strong class="button">Return</strong><code class="code">;</code> to continue it.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">dive:= function(depth) if depth&gt;1 then dive(depth-1); fi; return; end;</span>
+function( depth ) ... end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">dive(100);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OnBreak:= function() Where(1); end; # shorter traceback</span>
+function(  ) ... end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">dive(6000);</span>
+recursion depth trap (5000)
+ at
+dive( depth - 1 );
+ called from
+dive( depth - 1 ); called from
+...
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you may 'return;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">return;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">dive(11000);</span>
+recursion depth trap (5000)
+ at
+dive( depth - 1 );
+ called from
+dive( depth - 1 ); called from
+...
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you may 'return;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">return;</span>
+recursion depth trap (10000)
+ at
+dive( depth - 1 );
+ called from
+dive( depth - 1 ); called from
+...
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you may 'return;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">return;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"/>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">This behaviour can be controlled using the following procedure.</p> </body>
+    </html>

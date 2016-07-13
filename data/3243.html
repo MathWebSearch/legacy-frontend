@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 40: Group Homomorphisms-&gt;40.7-1 AutomorphismGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap40.html#X87677B0787B4461A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">40.7-1 AutomorphismGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AutomorphismGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the full automorphism group of the group <var class="Arg">G</var>. The automorphisms act on <var class="Arg">G</var> by the caret operator <code class="code">^</code>. The automorphism group often stores a <code class="func">NiceMonomorphism</code> (<a shape="rect" href="chap40_mj.html#X7965086E82ABCF41"><span class="RefLink">40.5-2</span></a>) value whose image is a permutation group, obtained by the action on a subset of <var class="Arg">G</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that current methods for the calculation of the automorphism group of a group <math id="6316757323317043613" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> require <math id="-3948998100125663677" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> to be a permutation group or a pc group to be efficient. For groups in other representations the calculation is likely very slow.</p><p xmlns="http://www.w3.org/1999/xhtml">Also, the <strong class="pkg">AutPGrp</strong> package installs enhanced methods for <code class="func">AutomorphismGroup</code> for finite <math id="-3807575091795602238" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-groups, and the <strong class="pkg">FGA</strong> package - for finitely generated subgroups of free groups.</p><p xmlns="http://www.w3.org/1999/xhtml">Methods may be installed for <code class="func">AutomorphismGroup</code> for other domains, such as e.g. for linear codes in the <strong class="pkg">GUAVA</strong> package, loops in the <strong class="pkg">loops</strong> package and nilpotent Lie algebras in the <strong class="pkg">Sophus</strong> package (see package manuals for their descriptions).</p> </body>
+    </html>

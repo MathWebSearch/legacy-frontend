@@ -1,0 +1,37 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 40: Group Homomorphisms-&gt;40.9-6 MorClassLoop</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap40.html#X7AABA9A27E30BF2B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">40.9-6 MorClassLoop</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MorClassLoop</code>( <var class="Arg">range</var>, <var class="Arg">classes</var>, <var class="Arg">params</var>, <var class="Arg">action</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This function loops over element tuples taken from <var class="Arg">classes</var> and checks these for properties such as generating a given group, or fulfilling relations. This can be used to find small generating sets or all types of Morphisms. The element tuples are used only up to up to inner automorphisms as all images can be obtained easily from them by conjugation while running through all of them usually would take too long.</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">range</var> is a group from which these elements are taken. The classes are given in a list <var class="Arg">classes</var> which is a list of records with the following components.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">classes</code></strong></dt><dd><p>list of conjugacy classes</p>
+
+</dd><dt><strong class="Mark"><code class="code">representative</code></strong></dt><dd><p>One element in the union of these classes</p>
+
+</dd><dt><strong class="Mark"><code class="code">size</code></strong></dt><dd><p>The sum of the sizes of these classes</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">params</var> is a record containing the following optional components.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">gens</code></strong></dt><dd><p>generators that are to be mapped (for testing morphisms). The length of this list determines the length of element tuples considered.</p>
+
+</dd><dt><strong class="Mark"><code class="code">from</code></strong></dt><dd><p>a preimage group (that contains <code class="code">gens</code>)</p>
+
+</dd><dt><strong class="Mark"><code class="code">to</code></strong></dt><dd><p>image group (which might be smaller than <code class="code">range</code>)</p>
+
+</dd><dt><strong class="Mark"><code class="code">free</code></strong></dt><dd><p>free generators, a list of the same length than the generators <code class="code">gens</code>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">rels</code></strong></dt><dd><p>some relations that hold among the generators <code class="code">gens</code>. They are given as a list <code class="code">[ word, order ]</code> where <code class="code">word</code> is a word in the free generators <code class="code">free</code>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">dom</code></strong></dt><dd><p>a set of elements on which automorphisms act faithfully (used to do element tests in partial automorphism groups).</p>
+
+</dd><dt><strong class="Mark"><code class="code">aut</code></strong></dt><dd><p>Subgroup of already known automorphisms.</p>
+
+</dd><dt><strong class="Mark"><code class="code">condition</code></strong></dt><dd><p>A function that will be applied to the homomorphism and must return <code class="code">true</code> for the homomorphism to be accepted.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">action</var> is a number whose bit-representation indicates the requirements which are enforced on the element tuples found, as follows.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">1</strong></dt><dd><p>homomorphism</p>
+
+</dd><dt><strong class="Mark">2</strong></dt><dd><p>injective</p>
+
+</dd><dt><strong class="Mark">4</strong></dt><dd><p>surjective</p>
+
+</dd><dt><strong class="Mark">8</strong></dt><dd><p>find all (otherwise stops after the first find)</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">If the search is for homomorphisms, the function returns homomorphisms obtained by mapping the given generators <code class="code">gens</code> instead of element tuples.</p><p xmlns="http://www.w3.org/1999/xhtml">The &quot;Morpheus&quot; algorithm used to find homomorphisms is described in <a shape="rect" href="chapBib_mj.html#biBHulpke96">[Hul96, Section V.5]</a>.</p> </body>
+    </html>

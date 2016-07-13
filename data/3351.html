@@ -1,0 +1,29 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.9-6 NonNilpotentElement</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X86EF3E6F7BC0A8AD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.9-6 NonNilpotentElement</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NonNilpotentElement</code>( <var class="Arg">L</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A non-nilpotent element of a Lie algebra <var class="Arg">L</var> is an element <math id="-5309848063024492358" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> such that ad<math id="7966817306657622534" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> is not nilpotent. If <var class="Arg">L</var> is not nilpotent, then by Engel's theorem non-nilpotent elements exist in <var class="Arg">L</var>. In this case this function returns a non-nilpotent element of <var class="Arg">L</var>, otherwise (if <var class="Arg">L</var> is nilpotent) <code class="keyw">fail</code> is returned.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;G&quot;, 2, Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NonNilpotentElement( L );</span>
+v.13
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsNilpotentElement( L, last );</span>
+false
+</pre></div> </body>
+    </html>

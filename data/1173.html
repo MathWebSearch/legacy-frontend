@@ -1,0 +1,33 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 45: Polycyclic Groups-&gt;45.5-11 CleanedTailPcElement</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap45.html#X8702D76D8284CF3E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">45.5-11 CleanedTailPcElement</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CleanedTailPcElement</code>( <var class="Arg">pcgs</var>, <var class="Arg">elm</var>, <var class="Arg">dep</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns an element in the span of <var class="Arg">pcgs</var> whose exponents for indices <math id="-7720145233757828654" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math> to <math id="2927295153950633765" display="inline" alttext="\textit{dep}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑑𝑒𝑝</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">-</mo>
+      <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <minus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">dep</span>
+        </mtext>
+        <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{dep}-1</annotation>
+  </semantics>
+</math> with respect to <var class="Arg">pcgs</var> are the same as those of <var class="Arg">elm</var>, the remaining exponents are undefined. This can be used to obtain more &quot;simple&quot; elements if only representatives in a factor are required, see <a shape="rect" href="chap45_mj.html#X8294F5EF81B7ABA0"><span class="RefLink">45.9</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">The difference to <code class="func">HeadPcElementByNumber</code> (<a shape="rect" href="chap45_mj.html#X830A0D037DBEAA97"><span class="RefLink">45.5-12</span></a>) is that this function is guaranteed to zero out trailing coefficients while <code class="func">CleanedTailPcElement</code> will only do this if it can be done cheaply.</p> </body>
+    </html>

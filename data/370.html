@@ -1,0 +1,235 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 38: Rewriting Systems</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap38.html#X7CA8FCFD81AA1890"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap38_mj.html#X7CA8FCFD81AA1890">38 <span class="Heading">Rewriting Systems</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap38_mj.html#X8287CBE183EBE5D7">38.1 <span class="Heading">Operations on rewriting systems</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X842C0ED87986F7AA">38.1-1 IsRewritingSystem</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X833EAA8C86356F42">38.1-2 Rules</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X7C38C2EF817F9E0A">38.1-3 OrderOfRewritingSystem</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X8340EB2280DE6CCC">38.1-4 ReducedForm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X8006790B86328CE8">38.1-5 <span class="Heading">IsConfluent</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X870A1E1C7FB45A55">38.1-6 ConfluentRws</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X8134689C7B576946">38.1-7 IsReduced</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X864C82FD7FBA31A6">38.1-8 ReduceRules</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X81E6B5CB789A7C3A">38.1-9 AddRule</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X7FA0B54D7C533DDC">38.1-10 AddRuleReduced</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X7BD6299E85561DC3">38.1-11 MakeConfluent</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X795DC25886007DFE">38.1-12 GeneratorsOfRws</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap38_mj.html#X81B812C778CB1E4E">38.2 <span class="Heading">Operations on elements of the algebra</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X81BB38CC793F7CE2">38.2-1 ReducedProduct</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap38_mj.html#X8318649681DF783B">38.3 <span class="Heading">Properties of rewriting systems</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap38_mj.html#X7B647DB77D138A49">38.3-1 IsBuiltFromAdditiveMagmaWithInverses</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap38_mj.html#X7F8B7848851784DF">38.4 <span class="Heading">Rewriting in Groups and Monoids</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap38_mj.html#X8751F8FA7DC989A2">38.5 <span class="Heading">Developing rewriting systems</span></a>
+</span>
+</div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">38 <span class="Heading">Rewriting Systems</span></h3><p xmlns="http://www.w3.org/1999/xhtml">Rewriting systems in <strong class="pkg">GAP</strong> are a framework for dealing with the very general task of rewriting elements of a free (or <em>term</em>) algebra in some normal form. Although most rewriting systems currently in use are <em>string rewriting systems</em> (where the algebra has only one binary operation which is associative) the framework in <strong class="pkg">GAP</strong> is general enough to encompass the task of rewriting algebras of any signature from groups to semirings.</p><p xmlns="http://www.w3.org/1999/xhtml">Rewriting systems are already implemented in <strong class="pkg">GAP</strong> for finitely presented semigroups and for pc groups. The use of these particular rewriting systems is described in the corresponding chapters. We describe here only the general framework of rewriting systems with a particular emphasis on material which would be helpful for a developer implementing a rewriting system.</p><p xmlns="http://www.w3.org/1999/xhtml">We fix some definitions and terminology for the rest of this chapter. Let <math id="1277003587674459747" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math> be a term algebra in some signature. A <em>term rewriting system</em> for <math id="-5382119904403440600" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math> is a set of ordered pairs of elements of <math id="1456237051250898981" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math> of the form <math id="3847417101505329272" display="inline" alttext="(l,r)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">r</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="open">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑟</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(l,r)</annotation>
+  </semantics>
+</math>. Viewed as a set of relations, the rewriting system determines a presentation for a quotient algebra <math id="-8547324208235938803" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> of <math id="-8138440087733175626" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">When we take into account the fact that the relations are expressed as <em>ordered</em> pairs, we have a way of <em>reducing</em> the elements of <math id="-3112061544919548148" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math>. Suppose an element <math id="-6947818787946033118" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
+  </semantics>
+</math> of <math id="1015030302781115664" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math> has a subword <math id="5131321941021824435" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> and <math id="2837019032106191271" display="inline" alttext="(l,r)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">r</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="open">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑟</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(l,r)</annotation>
+  </semantics>
+</math> is a rule of the rewriting system, then we can replace the subterm <math id="-5131241137722161715" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> of <math id="6240787931777556090" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
+  </semantics>
+</math> by the term <math id="-7071575945155044296" display="inline" alttext="r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑟</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">r</annotation>
+  </semantics>
+</math> and obtain a new word <math id="-6591865036173152366" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑣</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">v</annotation>
+  </semantics>
+</math>. We say that we have <em>rewritten</em> <math id="7073904839650553161" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
+  </semantics>
+</math> as <math id="-1739721629049798191" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑣</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">v</annotation>
+  </semantics>
+</math>. Note that <math id="2544594757180171930" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
+  </semantics>
+</math> and <math id="3519537737298154478" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑣</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">v</annotation>
+  </semantics>
+</math> represent the same element of <math id="-8336126517862139125" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>. If <math id="-8303662294496291592" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
+  </semantics>
+</math> can not be rewritten using any rule of the rewriting system we sat that <math id="-7008054395219753774" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
+  </semantics>
+</math> is <em>reduced</em>.</p> </body>
+    </html>

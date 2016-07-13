@@ -1,0 +1,7 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 23: Row Vectors-&gt;23.3 Row Vectors over Finite Fields</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap23.html#X8679F7DD7DFCBD9C"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">23.3 <span class="Heading">Row Vectors over Finite Fields</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> can use compact formats to store row vectors over fields of order at most 256, based on those used by the Meat-Axe <a shape="rect" href="chapBib_mj.html#biBRin93">[Rin93]</a>. This format also permits extremely efficient vector arithmetic. On the other hand element access and assignment is significantly slower than for plain lists.</p><p xmlns="http://www.w3.org/1999/xhtml">The function <code class="func">ConvertToVectorRep</code> (<a shape="rect" href="chap23_mj.html#X810E46927F9E8F75"><span class="RefLink">23.3-1</span></a>) is used to convert a list into a compressed vector, or to rewrite a compressed vector over another field. Note that this function is <em>much</em> faster when it is given a field (or field size) as an argument, rather than having to scan the vector and try to decide the field. Supplying the field can also avoid errors and/or loss of performance, when one vector from some collection happens to have all of its entries over a smaller field than the &quot;natural&quot; field of the problem.</p> </body>
+    </html>

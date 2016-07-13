@@ -1,0 +1,180 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.21-4 SortedCharacterTable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X82DCAAA882416E24"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.21-4 SortedCharacterTable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SortedCharacterTable</code>( <var class="Arg">tbl</var>, <var class="Arg">kernel</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SortedCharacterTable</code>( <var class="Arg">tbl</var>, <var class="Arg">normalseries</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SortedCharacterTable</code>( <var class="Arg">tbl</var>, <var class="Arg">facttbl</var>, <var class="Arg">kernel</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is a character table obtained on permutation of the classes and the irreducibles characters of <var class="Arg">tbl</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The first form sorts the classes at positions contained in the list <var class="Arg">kernel</var> to the beginning, and sorts all characters in <code class="code">Irr( <var class="Arg">tbl</var> )</code> such that the first characters are those that contain <var class="Arg">kernel</var> in their kernel.</p><p xmlns="http://www.w3.org/1999/xhtml">The second form does the same successively for all kernels <math id="-1979886259500887114" display="inline" alttext="k_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k_{i}</annotation>
+  </semantics>
+</math> in the list <math id="-657914955417928147" display="inline" alttext="\textit{normalseries}=[k_{1},k_{2},\ldots,k_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑛𝑜𝑟𝑚𝑎𝑙𝑠𝑒𝑟𝑖𝑒𝑠</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1">
+        <mo id="p1.1.m1.1.3" stretchy="false">[</mo>
+        <msub xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1.2">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">k</mi>
+          <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">1</mn>
+        </msub>
+        <mo id="p1.1.m1.1.6">,</mo>
+        <msub xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1.3">
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">k</mi>
+          <mn xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">2</mn>
+        </msub>
+        <mo id="p1.1.m1.1.9">,</mo>
+        <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10" mathvariant="normal">…</mi>
+        <mo id="p1.1.m1.1.11">,</mo>
+        <msub xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1.4">
+          <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">k</mi>
+          <mi xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">n</mi>
+        </msub>
+        <mo id="p1.1.m1.1.14" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">normalseries</span>
+        </mtext>
+        <list xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.1.cmml">
+          <apply xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.2.cmml">
+            <csymbol id="p1.1.m1.1.15.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑘</ci>
+            <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">1</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.3.cmml">
+            <csymbol id="p1.1.m1.1.15.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑘</ci>
+            <cn xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml" type="integer">2</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">…</ci>
+          <apply xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.4.cmml">
+            <csymbol id="p1.1.m1.1.15.1.4.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑘</ci>
+            <ci xref="p1.1.m1.1.13.1" id="p1.1.m1.1.13.1.cmml">𝑛</ci>
+          </apply>
+        </list>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{normalseries}=[k_{1},k_{2},\ldots,k_{n}]</annotation>
+  </semantics>
+</math> where <math id="182533463991345347" display="inline" alttext="k_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k_{i}</annotation>
+  </semantics>
+</math> must be a sublist of <math id="-3062877085060025369" display="inline" alttext="k_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+      <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+        <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">i</mi>
+        <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">+</mo>
+        <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">1</mn>
+      </mrow>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+        <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <plus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑖</ci>
+          <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k_{{i+1}}</annotation>
+  </semantics>
+</math> for <math id="-3921777380340931703" display="inline" alttext="1\leq i\leq n-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≤</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">≤</mo>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">n</mi>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">-</mo>
+        <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">1</mn>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <and xref="p1.1.m1.1.8" id="p1.1.m1.1.8a.cmml"/>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8b.cmml">
+          <leq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8c.cmml">
+          <leq xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+          <share xref="p1.1.m1.1.8" id="p1.1.m1.1.8d.cmml" href="#p1.1.m1.1.3.cmml"/>
+          <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+            <minus xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1\leq i\leq n-1</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">The third form computes the table <math id="-4460078534757557298" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math> of the factor group of <var class="Arg">tbl</var> modulo the normal subgroup formed by the classes whose positions are contained in the list <var class="Arg">kernel</var>; <math id="7307051196121449786" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math> must be permutation equivalent to the table <var class="Arg">facttbl</var>, in the sense of <code class="func">TransformingPermutationsCharacterTables</code> (<a shape="rect" href="chap71_mj.html#X849731AA7EC9FA73"><span class="RefLink">71.22-4</span></a>), otherwise <code class="keyw">fail</code> is returned. The classes of <var class="Arg">tbl</var> are sorted such that the preimages of a class of <math id="-2599511517736875695" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math> are consecutive, and that the succession of preimages is that of <var class="Arg">facttbl</var>. The <code class="func">Irr</code> (<a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492"><span class="RefLink">71.8-2</span></a>) value of <var class="Arg">tbl</var> is sorted as with <code class="code">SortCharTable( <var class="Arg">tbl</var>, <var class="Arg">kernel</var> )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">(<em>Note</em> that the transformation is only unique up to table automorphisms of <math id="8863153122442828783" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>, and this need not be unique up to table automorphisms of <var class="Arg">tbl</var>.)</p><p xmlns="http://www.w3.org/1999/xhtml">All rearrangements of classes and characters are stable, i.e., the relative positions of classes and characters that are not distinguished by any relevant property is not changed.</p><p xmlns="http://www.w3.org/1999/xhtml">The result has all those attributes and properties of <var class="Arg">tbl</var> that are stored in <code class="func">SupportedCharacterTableInfo</code> (<a shape="rect" href="chap71_mj.html#X7DBEF4BF87F10CD6"><span class="RefLink">71.3-4</span></a>) and do not depend on the ordering of classes and characters.</p><p xmlns="http://www.w3.org/1999/xhtml">The <code class="func">ClassPermutation</code> (<a shape="rect" href="chap71_mj.html#X8099FEDC7DE03AEE"><span class="RefLink">71.21-5</span></a>) value of <var class="Arg">tbl</var> is changed if necessary, see <a shape="rect" href="chap71_mj.html#X829C4B6E83998F40"><span class="RefLink">71.5</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SortedCharacterTable</code> uses <code class="func">CharacterTableWithSortedClasses</code> (<a shape="rect" href="chap71_mj.html#X7E3DE0A47E62BE6B"><span class="RefLink">71.21-3</span></a>) and <code class="func">CharacterTableWithSortedCharacters</code> (<a shape="rect" href="chap71_mj.html#X7D9C4A7F8086F671"><span class="RefLink">71.21-1</span></a>).</p> </body>
+    </html>

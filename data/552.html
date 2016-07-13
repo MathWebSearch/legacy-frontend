@@ -1,0 +1,54 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.6-3 IdentificationOfConjugacyClasses</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X84DC12AA804C8085"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.6-3 IdentificationOfConjugacyClasses</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IdentificationOfConjugacyClasses</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For an ordinary character table <var class="Arg">tbl</var> with known underlying group <math id="-9124510462886060062" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, <code class="func">IdentificationOfConjugacyClasses</code> returns a list of positive integers that contains at position <math id="435980480819193398" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> the position of the <math id="3484869735156175554" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th conjugacy class of <var class="Arg">tbl</var> in the <code class="func">ConjugacyClasses</code> (<a shape="rect" href="chap71_mj.html#X849A38F887F6EC86"><span class="RefLink">71.6-2</span></a>) value of <math id="7865223443005722942" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= SymmetricGroup( 4 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">repres:= [ (1,2), (1,2,3), (1,2,3,4), (1,2)(3,4), () ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ccl:= List( repres, x -&gt; ConjugacyClass( g, x ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetConjugacyClasses( g, ccl );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( g );;   # the table stores already the values</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasConjugacyClasses( tbl );  HasUnderlyingGroup( tbl );</span>
+true
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnderlyingGroup( tbl ) = g;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasIdentificationOfConjugacyClasses( tbl );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IdentificationOfConjugacyClasses( tbl );</span>
+[ 5, 1, 2, 3, 4 ]
+</pre></div> </body>
+    </html>

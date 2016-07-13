@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 52: Finitely Presented Semigroups and Monoids-&gt;52.2-3 IsomorphismFpSemigroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap52.html#X869F966B8196F28C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">52.2-3 IsomorphismFpSemigroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsomorphismFpSemigroup</code>( <var class="Arg">s</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">for a semigroup <var class="Arg">s</var> returns an isomorphism from <var class="Arg">s</var> to a finitely presented semigroup</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := FreeGroup(2);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := f/[f.1^4,f.2^5];</span>
+&lt;fp group on the generators [ f1, f2 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">phi := IsomorphismFpSemigroup(g);</span>
+MappingByFunction( &lt;fp group on the generators 
+[ f1, f2 ]&gt;, &lt;fp semigroup on the generators 
+[ &lt;identity ...&gt;, f1^-1, f1, f2^-1, f2 
+ ]&gt;, function( x ) ... end, function( x ) ... end )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s := Range(phi);</span>
+&lt;fp semigroup on the generators [ &lt;identity ...&gt;, f1^-1, f1, f2^-1, 
+  f2 ]&gt;
+</pre></div> </body>
+    </html>

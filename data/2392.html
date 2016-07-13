@@ -1,0 +1,70 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 75: Monomiality Questions-&gt;75.4-6 TestRelativelySM</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap75.html#X83EF7B8D7C1C2CA3"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">75.4-6 <span class="Heading">TestRelativelySM</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TestRelativelySM</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TestRelativelySM</code>( <var class="Arg">chi</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TestRelativelySM</code>( <var class="Arg">G</var>, <var class="Arg">N</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TestRelativelySM</code>( <var class="Arg">chi</var>, <var class="Arg">N</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsRelativelySM</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsRelativelySM</code>( <var class="Arg">chi</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">In the first two cases, <code class="func">TestRelativelySM</code> returns a record with information whether the argument, which must be a SM group <var class="Arg">G</var> or an irreducible character <var class="Arg">chi</var> of a SM group <math id="437687721981328917" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, is relatively SM with respect to every normal subgroup of <var class="Arg">G</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">In the second two cases, a normal subgroup <var class="Arg">N</var> of <var class="Arg">G</var> is the second argument. Here <code class="func">TestRelativelySM</code> returns a record with information whether the first argument is relatively SM with respect to <var class="Arg">N</var>, i.e, whether there is a subnormal subgroup <math id="6096204457562915073" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> of <math id="7475241298992521461" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> that contains <var class="Arg">N</var> such that the character <var class="Arg">chi</var> resp. every irreducible character of <math id="-637146105607022466" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is induced from a character <math id="-679848694559701733" display="inline" alttext="\psi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ψ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜓</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\psi</annotation>
+  </semantics>
+</math> of <math id="3452367043189247052" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> such that the restriction of <math id="7512307320561682960" display="inline" alttext="\psi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ψ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜓</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\psi</annotation>
+  </semantics>
+</math> to <var class="Arg">N</var> is irreducible.</p><p xmlns="http://www.w3.org/1999/xhtml">The result record has the components <code class="code">isRelativelySM</code> (with value either <code class="keyw">true</code> or <code class="keyw">false</code>) and <code class="code">comment</code> (a string that describes a reason). If the argument is a group <var class="Arg">G</var> that is not relatively SM with respect to a normal subgroup then additionally the component <code class="code">character</code> is bound, with value a not relatively SM character of such a normal subgroup.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsRelativelySM</code> returns <code class="keyw">true</code> if the SM group <var class="Arg">G</var> or the irreducible character <var class="Arg">chi</var> of the SM group <var class="Arg">G</var> is relatively SM with respect to every normal subgroup of <var class="Arg">G</var>, and <code class="keyw">false</code> otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>Note</em> that it is <em>not</em> checked whether <var class="Arg">G</var> is SM.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSubnormallyMonomial( DerivedSubgroup( S4 ) );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TestRelativelySM( DerivedSubgroup( S4 ) );</span>
+rec( 
+  comment := &quot;normal subgroups are abelian or have nilpotent factor gr\
+oup&quot;, isRelativelySM := true )
+</pre></div> </body>
+    </html>

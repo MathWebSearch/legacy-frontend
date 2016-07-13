@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.14-6 EpimorphismSolvableQuotient</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X79A4D3B68110F48A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">47.14-6 EpimorphismSolvableQuotient</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EpimorphismSolvableQuotient</code>( <var class="Arg">F</var>, <var class="Arg">param</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes an epimorphism from the finitely presented group <var class="Arg">fpgrp</var> to the largest solvable quotient given by <var class="Arg">param</var> (specified as in <code class="func">SolvableQuotient</code> (<a shape="rect" href="chap47_mj.html#X869F70CC818C946D"><span class="RefLink">47.14-5</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := FreeGroup( &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fp := f / [ f.1^2, f.2^2, f.3^2, f.4^2, f.1*f.2*f.1*f.2*f.1*f.2,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"> f.2*f.3*f.2*f.3*f.2*f.3*f.2*f.3, f.3*f.4*f.3*f.4*f.3*f.4,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">f.1^-1*f.3^-1*f.1*f.3, f.1^-1*f.4^-1*f.1*f.4,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">f.2^-1*f.4^-1*f.2*f.4 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=EpimorphismSolvableQuotient(fp,300);Size(Image(hom));</span>
+[ a, b, c, d ] -&gt; [ f1*f2, f1*f2, f2*f3, f2 ]
+12
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=EpimorphismSolvableQuotient(fp,[2,3]);Size(Image(hom));</span>
+[ a, b, c, d ] -&gt; [ f1*f2*f4, f1*f2*f6*f8, f2*f3, f2 ]
+1152
+</pre></div> </body>
+    </html>

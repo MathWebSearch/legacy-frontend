@@ -1,0 +1,308 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.23-2 OneCoboundaries</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7E6438D5834ACCDA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.23-2 OneCoboundaries</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OneCoboundaries</code>( <var class="Arg">G</var>, <var class="Arg">M</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes the group of 1-coboundaries. Syntax of input and output otherwise is the same as with <code class="func">OneCocycles</code> (<a shape="rect" href="chap39_mj.html#X847BEC137A49BAF4"><span class="RefLink">39.23-1</span></a>) except that entries that refer to cocycles are not computed.</p><p xmlns="http://www.w3.org/1999/xhtml">The operations <code class="func">OneCocycles</code> (<a shape="rect" href="chap39_mj.html#X847BEC137A49BAF4"><span class="RefLink">39.23-1</span></a>) and <code class="func">OneCoboundaries</code> return a record with (at least) the components:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">generators</code></strong></dt><dd><p>Is a list of representatives for a generating set of <var class="Arg">G</var>/<var class="Arg">M</var>. Cocycles are represented with respect to these generators.</p>
+
+</dd><dt><strong class="Mark"><code class="code">oneCocycles</code></strong></dt><dd><p>A space of row vectors over GF(<math id="5145954013409739" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>), representing <math id="7802391510141882059" display="inline" alttext="Z^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑍</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z^{1}</annotation>
+  </semantics>
+</math>. The vectors are represented in dimension <math id="-1000820017493698333" display="inline" alttext="a\cdot b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">⋅</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">⋅</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a\cdot b</annotation>
+  </semantics>
+</math> where <math id="3903735248998303740" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a</annotation>
+  </semantics>
+</math> is the length of <code class="code">generators</code> and <math id="-847693896551342744" display="inline" alttext="p^{b}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">b</mi>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p^{b}</annotation>
+  </semantics>
+</math> the size of <var class="Arg">M</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">oneCoboundaries</code></strong></dt><dd><p>A space of row vectors that represents <math id="-3573815656398568706" display="inline" alttext="B^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B^{1}</annotation>
+  </semantics>
+</math>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">cocycleToList</code></strong></dt><dd><p>is a function to convert a cocycle (a row vector in <code class="code">oneCocycles</code>) to a corresponding list of elements of <var class="Arg">M</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">listToCocycle</code></strong></dt><dd><p>is a function to convert a list of elements of <var class="Arg">M</var> to a cocycle.</p>
+
+</dd><dt><strong class="Mark"><code class="code">isSplitExtension</code></strong></dt><dd><p>indicates whether <var class="Arg">G</var> splits over <var class="Arg">M</var>. The following components are only bound if the extension splits. Note that if <var class="Arg">M</var> is given by a modulo pcgs all subgroups are given as subgroups of <var class="Arg">G</var> by generators corresponding to <code class="code">generators</code> and thus may not contain the denominator of the modulo pcgs. In this case taking the closure with this denominator will give the full preimage of the complement in the factor group.</p>
+
+</dd><dt><strong class="Mark"><code class="code">complement</code></strong></dt><dd><p>One complement to <var class="Arg">M</var> in <var class="Arg">G</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">cocycleToComplement( cyc )</code></strong></dt><dd><p>is a function that takes a cocycle from <code class="code">oneCocycles</code> and returns the corresponding complement to <var class="Arg">M</var> in <var class="Arg">G</var> (with respect to the fixed complement <code class="code">complement</code>).</p>
+
+</dd><dt><strong class="Mark"><code class="code">complementToCocycle(<var class="Arg">U</var>)</code></strong></dt><dd><p>is a function that takes a complement and returns the corresponding cocycle.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">If the factor <var class="Arg">G</var>/<var class="Arg">M</var> is given by a (modulo) pcgs <var class="Arg">gens</var> then special methods are used that compute a presentation for the factor implicitly from the pcgs.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the groups of 1-cocycles and 1-coboundaries are not groups in the sense of <code class="func">Group</code> (<a shape="rect" href="chap39_mj.html#X7D8E473384DE9CD4"><span class="RefLink">39.2-1</span></a>) for <strong class="pkg">GAP</strong> but vector spaces.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2,3,4),(1,2));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n:=Group((1,2)(3,4),(1,3)(2,4));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">oc:=OneCocycles(g,n);</span>
+rec( cocycleToComplement := function( c ) ... end, 
+  cocycleToList := function( c ) ... end, 
+  complement := Group([ (3,4), (2,4,3) ]), 
+  complementGens := [ (3,4), (2,4,3) ], 
+  complementToCocycle := function( K ) ... end, 
+  factorGens := [ (3,4), (2,4,3) ], generators := [ (3,4), (2,4,3) ], 
+  isSplitExtension := true, listToCocycle := function( L ) ... end, 
+  oneCoboundaries := &lt;vector space over GF(2), with 2 generators&gt;, 
+  oneCocycles := &lt;vector space over GF(2), with 2 generators&gt; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">oc.cocycleToList([ 0*Z(2), Z(2)^0, 0*Z(2), Z(2)^0 ]);</span>
+[ (1,2)(3,4), (1,2)(3,4) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">oc.listToCocycle([(),(1,3)(2,4)]) = Z(2) * [ 0, 0, 1, 0];</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">oc.cocycleToComplement([ 0*Z(2), 0*Z(2), Z(2)^0, 0*Z(2) ]);</span>
+Group([ (3,4), (1,3,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">oc.complementToCocycle(Group((1,2,4),(1,4))) = Z(2) * [ 0, 1, 1, 1 ];</span>
+true
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The factor group <math id="-1423971080083811642" display="inline" alttext="H^{1}(\textit{G}/\textit{M},\textit{M})=Z^{1}(\textit{G}/\textit{M},\textit{M}%
+)/B^{1}(\textit{G}/\textit{M},\textit{M})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.30.cmml" id="p1.1.m1.1.30">
+      <mrow xref="p1.1.m1.1.30.1.cmml" id="p1.1.m1.1.30.1">
+        <msup xref="p1.1.m1.1.30.1.2.cmml" id="p1.1.m1.1.30.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+        </msup>
+        <mo xref="p1.1.m1.1.30.1.1.cmml" id="p1.1.m1.1.30.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.30.1.3.1.cmml" id="p1.1.m1.1.30.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.30.1.3.1.cmml" id="p1.1.m1.1.30.1.3.2">
+            <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝐺</mtext>
+            <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">/</mo>
+            <mtext xref="p1.1.m1.1.6.1a.cmml" id="p1.1.m1.1.6.1">𝑀</mtext>
+          </mrow>
+          <mo id="p1.1.m1.1.7">,</mo>
+          <mtext xref="p1.1.m1.1.8.1a.cmml" id="p1.1.m1.1.8.1">𝑀</mtext>
+          <mo id="p1.1.m1.1.9" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">=</mo>
+      <mrow xref="p1.1.m1.1.30.2.cmml" id="p1.1.m1.1.30.2">
+        <mrow xref="p1.1.m1.1.30.2.2.cmml" id="p1.1.m1.1.30.2.2">
+          <mrow xref="p1.1.m1.1.30.2.2.1.cmml" id="p1.1.m1.1.30.2.2.1">
+            <msup xref="p1.1.m1.1.30.2.2.1.2.cmml" id="p1.1.m1.1.30.2.2.1.2">
+              <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">Z</mi>
+              <mn xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">1</mn>
+            </msup>
+            <mo xref="p1.1.m1.1.30.2.2.1.1.cmml" id="p1.1.m1.1.30.2.2.1.1">⁢</mo>
+            <mrow xref="p1.1.m1.1.30.2.2.1.3.1.cmml" id="p1.1.m1.1.30.2.2.1.3">
+              <mo id="p1.1.m1.1.13" stretchy="false">(</mo>
+              <mrow xref="p1.1.m1.1.30.2.2.1.3.1.cmml" id="p1.1.m1.1.30.2.2.1.3.2">
+                <mtext xref="p1.1.m1.1.14.1a.cmml" id="p1.1.m1.1.14.1">𝐺</mtext>
+                <mo xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">/</mo>
+                <mtext xref="p1.1.m1.1.16.1a.cmml" id="p1.1.m1.1.16.1">𝑀</mtext>
+              </mrow>
+              <mo id="p1.1.m1.1.17">,</mo>
+              <mtext xref="p1.1.m1.1.18.1a.cmml" id="p1.1.m1.1.18.1">𝑀</mtext>
+              <mo id="p1.1.m1.1.19" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">/</mo>
+          <msup xref="p1.1.m1.1.30.2.2.2.cmml" id="p1.1.m1.1.30.2.2.2">
+            <mi xref="p1.1.m1.1.21.cmml" id="p1.1.m1.1.21">B</mi>
+            <mn xref="p1.1.m1.1.22.1.cmml" id="p1.1.m1.1.22.1">1</mn>
+          </msup>
+        </mrow>
+        <mo xref="p1.1.m1.1.30.2.1.cmml" id="p1.1.m1.1.30.2.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.30.2.3.1.cmml" id="p1.1.m1.1.30.2.3">
+          <mo id="p1.1.m1.1.23" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.30.2.3.1.cmml" id="p1.1.m1.1.30.2.3.2">
+            <mtext xref="p1.1.m1.1.24.1a.cmml" id="p1.1.m1.1.24.1">𝐺</mtext>
+            <mo xref="p1.1.m1.1.25.cmml" id="p1.1.m1.1.25">/</mo>
+            <mtext xref="p1.1.m1.1.26.1a.cmml" id="p1.1.m1.1.26.1">𝑀</mtext>
+          </mrow>
+          <mo id="p1.1.m1.1.27">,</mo>
+          <mtext xref="p1.1.m1.1.28.1a.cmml" id="p1.1.m1.1.28.1">𝑀</mtext>
+          <mo id="p1.1.m1.1.29" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.30" id="p1.1.m1.1.30.cmml">
+        <eq xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml"/>
+        <apply xref="p1.1.m1.1.30.1" id="p1.1.m1.1.30.1.cmml">
+          <times xref="p1.1.m1.1.30.1.1" id="p1.1.m1.1.30.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.30.1.2" id="p1.1.m1.1.30.1.2.cmml">
+            <csymbol id="p1.1.m1.1.30.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+            <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+          </apply>
+          <interval xref="p1.1.m1.1.30.1.3" id="p1.1.m1.1.30.1.3.1.cmml" closure="open">
+            <apply xref="p1.1.m1.1.30.1.3" id="p1.1.m1.1.30.1.3.2.cmml">
+              <divide xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+              <mtext xref="p1.1.m1.1.30.1.3" id="p1.1.m1.1.4.1.cmml">
+                <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+              </mtext>
+              <mtext xref="p1.1.m1.1.30.1.3" id="p1.1.m1.1.6.1.cmml">
+                <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+              </mtext>
+            </apply>
+            <mtext xref="p1.1.m1.1.30.1.3" id="p1.1.m1.1.8.1.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+            </mtext>
+          </interval>
+        </apply>
+        <apply xref="p1.1.m1.1.30.2" id="p1.1.m1.1.30.2.cmml">
+          <times xref="p1.1.m1.1.30.2.1" id="p1.1.m1.1.30.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.30.2.2" id="p1.1.m1.1.30.2.2.cmml">
+            <divide xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml"/>
+            <apply xref="p1.1.m1.1.30.2.2.1" id="p1.1.m1.1.30.2.2.1.cmml">
+              <times xref="p1.1.m1.1.30.2.2.1.1" id="p1.1.m1.1.30.2.2.1.1.cmml"/>
+              <apply xref="p1.1.m1.1.30.2.2.1.2" id="p1.1.m1.1.30.2.2.1.2.cmml">
+                <csymbol id="p1.1.m1.1.30.2.2.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑍</ci>
+                <cn xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml" type="integer">1</cn>
+              </apply>
+              <interval xref="p1.1.m1.1.30.2.2.1.3" id="p1.1.m1.1.30.2.2.1.3.1.cmml" closure="open">
+                <apply xref="p1.1.m1.1.30.2.2.1.3" id="p1.1.m1.1.30.2.2.1.3.2.cmml">
+                  <divide xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml"/>
+                  <mtext xref="p1.1.m1.1.30.2.2.1.3" id="p1.1.m1.1.14.1.cmml">
+                    <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+                  </mtext>
+                  <mtext xref="p1.1.m1.1.30.2.2.1.3" id="p1.1.m1.1.16.1.cmml">
+                    <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+                  </mtext>
+                </apply>
+                <mtext xref="p1.1.m1.1.30.2.2.1.3" id="p1.1.m1.1.18.1.cmml">
+                  <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+                </mtext>
+              </interval>
+            </apply>
+            <apply xref="p1.1.m1.1.30.2.2.2" id="p1.1.m1.1.30.2.2.2.cmml">
+              <csymbol id="p1.1.m1.1.30.2.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.21" id="p1.1.m1.1.21.cmml">𝐵</ci>
+              <cn xref="p1.1.m1.1.22.1" id="p1.1.m1.1.22.1.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <interval xref="p1.1.m1.1.30.2.3" id="p1.1.m1.1.30.2.3.1.cmml" closure="open">
+            <apply xref="p1.1.m1.1.30.2.3" id="p1.1.m1.1.30.2.3.2.cmml">
+              <divide xref="p1.1.m1.1.25" id="p1.1.m1.1.25.cmml"/>
+              <mtext xref="p1.1.m1.1.30.2.3" id="p1.1.m1.1.24.1.cmml">
+                <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+              </mtext>
+              <mtext xref="p1.1.m1.1.30.2.3" id="p1.1.m1.1.26.1.cmml">
+                <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+              </mtext>
+            </apply>
+            <mtext xref="p1.1.m1.1.30.2.3" id="p1.1.m1.1.28.1.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">M</span>
+            </mtext>
+          </interval>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H^{1}(\textit{G}/\textit{M},\textit{M})=Z^{1}(\textit{G}/\textit{M},\textit{M}%
+)/B^{1}(\textit{G}/\textit{M},\textit{M})</annotation>
+  </semantics>
+</math> is called the first cohomology group. Currently there is no function which explicitly computes this group. The easiest way to represent it is as a vector space complement to <math id="8358503174786212641" display="inline" alttext="B^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B^{1}</annotation>
+  </semantics>
+</math> in <math id="-5443475150897293247" display="inline" alttext="Z^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑍</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z^{1}</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the only purpose of the calculation of <math id="-1993432781935107996" display="inline" alttext="H^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H^{1}</annotation>
+  </semantics>
+</math> is the determination of complements it might be desirable to stop calculations once it is known that the extension cannot split. This can be achieved via the more technical function <code class="func">OCOneCocycles</code> (<a shape="rect" href="chap39_mj.html#X80400ABD7F40FAA0"><span class="RefLink">39.23-3</span></a>).</p> </body>
+    </html>

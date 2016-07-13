@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 31: Domains and their Elements-&gt;31.14-12 IsMultiplicativeElementWithZero</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap31.html#X8703BFC2841BBD63"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">31.14-12 IsMultiplicativeElementWithZero</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsMultiplicativeElementWithZero</code>( <var class="Arg">elt</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">This is the category of elements in a family which can be the operands of <code class="code">*</code> (multiplication) and the operation <code class="func">MultiplicativeZero</code> (<a shape="rect" href="chap35_mj.html#X7B39F93C8136D642"><span class="RefLink">35.4-11</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=Semigroup(Transformation( [ 1, 1, 1 ] ));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M:=MagmaWithZeroAdjoined(S);</span>
+&lt;&lt;commutative transformation semigroup of degree 3 with 1 generator&gt;
+  with 0 adjoined&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x:=Representative(M);</span>
+&lt;semigroup with 0 adjoined elt: Transformation( [ 1, 1, 1 ] )&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMultiplicativeElementWithZero(x);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MultiplicativeZeroOp(x);</span>
+&lt;semigroup with 0 adjoined elt: 0&gt;
+</pre></div> </body>
+    </html>

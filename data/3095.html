@@ -1,0 +1,33 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 79: Creating New Objects-&gt;79.14 Example – Constructing Iterators</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap79.html#X7F6BF6CE7AD04EFC"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">79.14 <span class="Heading">Example – Constructing Iterators</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Iterators are a kind of objects that is implemented for several collections in the <strong class="pkg">GAP</strong> library and which might be interesting also in other cases, see <a shape="rect" href="chap30_mj.html#X85A3F00985453F95"><span class="RefLink">30.8</span></a>. A general setup for implementing new iterators is provided by <code class="func">IteratorByFunctions</code> (<a shape="rect" href="chap30_mj.html#X82677D8F817D6701"><span class="RefLink">30.8-8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">All one has to do is to write down the functions for <code class="func">NextIterator</code> (<a shape="rect" href="chap30_mj.html#X879F62F77D1D1179"><span class="RefLink">30.8-5</span></a>), <code class="func">IsDoneIterator</code> (<a shape="rect" href="chap30_mj.html#X8055FC557B5D899E"><span class="RefLink">30.8-4</span></a>), and <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>), and to call <code class="func">IteratorByFunctions</code> (<a shape="rect" href="chap30_mj.html#X82677D8F817D6701"><span class="RefLink">30.8-8</span></a>) with this record as argument. For example, the following lines of code install an <code class="func">Iterator</code> (<a shape="rect" href="chap30_mj.html#X83ADF8287ED0668E"><span class="RefLink">30.8-1</span></a>) method for the case that the argument is the domain of rational integers.</p><p xmlns="http://www.w3.org/1999/xhtml">(Note that <code class="func">IsIntegers</code> (<a shape="rect" href="chap14_mj.html#X818683B17F8C97F3"><span class="RefLink">14.1-2</span></a>) is a filter that describes exactly the domain of rational integers.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+InstallMethod( Iterator,
+    &quot;for integers&quot;,
+    [ IsIntegers ],
+    Integers -&gt; IteratorByFunctions( rec(
+                    NextIterator:= function( iter ) ... end,
+                    IsDoneIterator := ReturnFalse,
+                    ShallowCopy := function( iter ) ... end ) ) );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The bodies of two of the functions have been omitted above; here is the code that is actually used in <strong class="pkg">GAP</strong>. (The ordering coincides with that for the iterators for the domain of rational integers that have been discussed in <a shape="rect" href="chap79_mj.html#X866E223484649E5A"><span class="RefLink">79.10</span></a> and <a shape="rect" href="chap79_mj.html#X834893D07FAA6FD2"><span class="RefLink">79.11</span></a>.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">iter:= Iterator( Integers );</span>
+&lt;iterator of Integers at 0&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( iter!.NextIterator, &quot;\n&quot; );</span>
+function ( iter )
+    iter!.counter := iter!.counter + 1;
+    if iter!.counter mod 2 = 0  then
+        return iter!.counter / 2;
+    else
+        return (1 - iter!.counter) / 2;
+    fi;
+    return;
+end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( iter!.ShallowCopy, &quot;\n&quot; );   </span>
+function ( iter )
+    return rec(
+        counter := iter!.counter );
+end
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that the <code class="code">ShallowCopy</code> component of the record must be a function that does not return an iterator but a record that can be used as the argument of <code class="func">IteratorByFunctions</code> (<a shape="rect" href="chap30_mj.html#X82677D8F817D6701"><span class="RefLink">30.8-8</span></a>) in order to create the desired shallow copy.</p> </body>
+    </html>

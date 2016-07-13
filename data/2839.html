@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.15-13 SimpleGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X8492B05B822AC58C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.15-13 SimpleGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SimpleGroup</code>( <var class="Arg">id</var>[, <var class="Arg">param</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This function will construct <strong class="button">an</strong> instance of the specified simple group. Groups are specified via their name in ATLAS style notation, with parameters added if necessary. The intelligence applied to parsing the name is limited, and at the moment no proper extensions can be constructed. For groups who do not have a permutation representation of small degree the ATLASREP package might need to be installed to construct theses groups.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=SimpleGroup(&quot;M(23)&quot;);</span>
+M23
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(g);</span>
+10200960
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=SimpleGroup(&quot;PSL&quot;,3,5);</span>
+PSL(3,5)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(g);</span>
+372000
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=SimpleGroup(&quot;PSp6&quot;,2);    </span>
+PSp(6,2)
+</pre></div> </body>
+    </html>

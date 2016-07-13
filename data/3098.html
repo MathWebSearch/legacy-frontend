@@ -1,0 +1,37 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 79: Creating New Objects-&gt;79.11 Positional Objects</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap79.html#X834893D07FAA6FD2"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">79.11 <span class="Heading">Positional Objects</span></h4><p xmlns="http://www.w3.org/1999/xhtml">A <em>positional object</em> is an object in the representation <code class="code">IsPositionalObjectRep</code> or a subrepresentation of it. Such an object <var class="Arg">pobj</var> is built from subobjects that can be accessed via <code class="code"><var class="Arg">pobj</var>![<var class="Arg">pos</var>]</code>, similar to positions in a list. Also analogously to lists, values can be assigned to positions of <var class="Arg">pobj</var> via <code class="code"><var class="Arg">pobj</var>![<var class="Arg">pos</var>]:= <var class="Arg">val</var></code>. For the creation of positional objects, see <a shape="rect" href="chap79_mj.html#X82E86CF37B123FD4"><span class="RefLink">79.9</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">One must be <em>very careful</em> when using the <code class="code">![]</code> operator, in order to interpret the position in the right way, and even more careful when using the assignment to positions using <code class="code">![]</code>, in order to keep the information stored in <var class="Arg">pobj</var> consistent.</p><p xmlns="http://www.w3.org/1999/xhtml">First of all, in the access or assignment to a position as shown above, <var class="Arg">pos</var> must be among the admissible positions for the representation of <var class="Arg">pobj</var>, see <a shape="rect" href="chap79_mj.html#X7858E2848048F99D"><span class="RefLink">79.2</span></a>. Second, preferably only few low level functions should use <code class="code">![]</code>, whereas this operator should not occur in &quot;user interactions&quot;.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that even if <var class="Arg">pobj</var> claims that it is immutable, i.e., if <var class="Arg">pobj</var> is not in the category <code class="func">IsMutable</code> (<a shape="rect" href="chap12_mj.html#X7999AD1D7A4F1F46"><span class="RefLink">12.6-2</span></a>), access and assignment via <code class="code">![]</code> work. This is necessary for being able to store newly discovered information in immutable objects.</p><p xmlns="http://www.w3.org/1999/xhtml">The following example shows the implementation of an iterator (see <a shape="rect" href="chap30_mj.html#X85A3F00985453F95"><span class="RefLink">30.8</span></a>) for the domain of integers, which is represented as positional object. See <a shape="rect" href="chap79_mj.html#X866E223484649E5A"><span class="RefLink">79.10</span></a> for an implementation using component objects, and more details.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+IsIntegersIteratorPosRep := NewRepresentation( &quot;IsIntegersIteratorRep&quot;,
+    IsPositionalObjectRep, [ 1 ] );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The above command creates a new representation (see <code class="func">NewRepresentation</code> (<a shape="rect" href="chap79_mj.html#X7CC8106F809E15CF"><span class="RefLink">79.2-1</span></a>)) <code class="code">IsIntegersIteratorPosRep</code>, as a subrepresentation of <code class="code">IsComponentObjectRep</code>, and with only the first position being admissible for storing data.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+InstallMethod( Iterator,
+    &quot;method for `Integers'&quot;,
+    [ IsIntegers ],
+    function( Integers )
+    return Objectify( NewType( IteratorsFamily,
+                                   IsIterator
+                               and IsIntegersIteratorRep ),
+                      [ 0 ] );
+    end );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">After the above method installation, one can already ask for <code class="code">Iterator( Integers )</code>. Note that exactly the domain of integers is described by the filter <code class="func">IsIntegers</code> (<a shape="rect" href="chap14_mj.html#X818683B17F8C97F3"><span class="RefLink">14.1-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">By the call to <code class="func">NewType</code> (<a shape="rect" href="chap79_mj.html#X7CE39E9478AEC826"><span class="RefLink">79.8-1</span></a>), the returned object lies in the family containing all iterators, which is <code class="code">IteratorsFamily</code>, it lies in the category <code class="func">IsIterator</code> (<a shape="rect" href="chap30_mj.html#X87168A827E5B28E4"><span class="RefLink">30.8-3</span></a>) and in the representation <code class="code">IsIntegersIteratorPosRep</code>; furthermore, the first position has value <code class="code">0</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">What is missing now are methods for the two basic operations of iterators, namely <code class="func">IsDoneIterator</code> (<a shape="rect" href="chap30_mj.html#X8055FC557B5D899E"><span class="RefLink">30.8-4</span></a>) and <code class="func">NextIterator</code> (<a shape="rect" href="chap30_mj.html#X879F62F77D1D1179"><span class="RefLink">30.8-5</span></a>). The former must always return <code class="keyw">false</code>, since there are infinitely many integers. The latter must return the next integer in the iteration, and update the information stored in the iterator, that is, increase the value stored in the first position.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+InstallMethod( IsDoneIterator,
+    &quot;method for iterator of `Integers'&quot;,
+    [ IsIterator and IsIntegersIteratorPosRep ],
+    ReturnFalse );
+
+InstallMethod( NextIterator,
+    &quot;method for iterator of `Integers'&quot;,
+    [ IsIntegersIteratorPosRep ],
+    function( iter )
+    iter![1]:= iter![1] + 1;
+    if iter![1] mod 2 = 0 then
+      return iter![1] / 2;
+    else
+      return ( 1 - iter![1] ) / 2;
+    fi;
+    end );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">It should be noted that one can of course install both the methods shown in Section <a shape="rect" href="chap79_mj.html#X866E223484649E5A"><span class="RefLink">79.10</span></a> and <a shape="rect" href="chap79_mj.html#X834893D07FAA6FD2"><span class="RefLink">79.11</span></a>. The call <code class="code">Iterator( Integers )</code> will cause one of the methods to be selected, and for the returned iterator, which will have one of the representations we constructed, the right <code class="func">NextIterator</code> (<a shape="rect" href="chap30_mj.html#X879F62F77D1D1179"><span class="RefLink">30.8-5</span></a>) method will be chosen.</p> </body>
+    </html>

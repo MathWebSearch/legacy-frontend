@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 60: Abelian Number Fields-&gt;60.4-2 ANFAutomorphism</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap60.html#X8643D4B47A827D9D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">60.4-2 ANFAutomorphism</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ANFAutomorphism</code>( <var class="Arg">F</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">F</var> be an abelian number field and <var class="Arg">k</var> be an integer that is coprime to the conductor (see <code class="func">Conductor</code> (<a shape="rect" href="chap18_mj.html#X815D6EC57CBA9827"><span class="RefLink">18.1-7</span></a>)) of <var class="Arg">F</var>. Then <code class="func">ANFAutomorphism</code> returns the automorphism of <var class="Arg">F</var> that is defined as the linear extension of the map that raises each root of unity in <var class="Arg">F</var> to its <var class="Arg">k</var>-th power.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= CF(25);</span>
+CF(25)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">alpha:= ANFAutomorphism( f, 2 );</span>
+ANFAutomorphism( CF(25), 2 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">alpha^2;</span>
+ANFAutomorphism( CF(25), 4 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Order( alpha );</span>
+20
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">E(5)^alpha;</span>
+E(5)^2
+</pre></div> </body>
+    </html>

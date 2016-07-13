@@ -1,0 +1,108 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 75: Monomiality Questions-&gt;75.2-1 Alpha</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap75.html#X86A900897819E5AC"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">75.2-1 Alpha</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Alpha</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a group <var class="Arg">G</var>, <code class="func">Alpha</code> returns a list whose <math id="8124807372227517417" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th entry is the maximal derived length of groups <math id="-3882960700143814803" display="inline" alttext="\textit{G}/\ker(\chi)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝐺</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">/</mo>
+      <mrow xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.2">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">ker</mi>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.2a">⁡</mo>
+        <mrow xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1">
+          <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">χ</mi>
+          <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <divide xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+        </mtext>
+        <apply xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.1.cmml">
+          <csymbol xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" cd="latexml">kernel</csymbol>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝜒</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{G}/\ker(\chi)</annotation>
+  </semantics>
+</math> for <math id="-2676145640176501192" display="inline" alttext="\chi\in Irr(\textit{G})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">I</mi>
+        <mo xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">r</mi>
+        <mo xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">r</mi>
+        <mo xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1b">⁢</mo>
+        <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.9.1.2">
+          <mo id="p1.1.m1.1.6" stretchy="false">(</mo>
+          <mtext xref="p1.1.m1.1.7.1a.cmml" id="p1.1.m1.1.7.1">𝐺</mtext>
+          <mo id="p1.1.m1.1.8" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+        <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">
+          <times xref="p1.1.m1.1.9.1.1" id="p1.1.m1.1.9.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐼</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑟</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑟</ci>
+          <mtext xref="p1.1.m1.1.9.1.2" id="p1.1.m1.1.7.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+          </mtext>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi\in Irr(\textit{G})</annotation>
+  </semantics>
+</math> with <math id="2228875053030585838" display="inline" alttext="\chi(1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mrow id="p1.1.m1.1.5.2">
+        <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">1</mn>
+        <mo id="p1.1.m1.1.4" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+        <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi(1)</annotation>
+  </semantics>
+</math> at most the <math id="-2999011914357639502" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th irreducible degree of <var class="Arg">G</var>.</p> </body>
+    </html>

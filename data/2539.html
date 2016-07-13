@@ -1,0 +1,288 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 68: p-adic Numbers (preliminary)-&gt;68.2-1 PadicExtensionNumberFamily</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap68.html#X83EE630D7885DB3D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">68.2-1 PadicExtensionNumberFamily</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PadicExtensionNumberFamily</code>( <var class="Arg">p</var>, <var class="Arg">precision</var>, <var class="Arg">unram</var>, <var class="Arg">ram</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">An extended <math id="-2494210553371893796" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-adic field <math id="-3376551206352547544" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math> is given by two polynomials <math id="-6669268442062502264" display="inline" alttext="h" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">h</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">ℎ</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">h</annotation>
+  </semantics>
+</math> and <math id="-7021290179775898666" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
+  </semantics>
+</math> with coefficient lists <var class="Arg">unram</var> (for the unramified part) and <var class="Arg">ram</var> (for the ramified part). Then <math id="-8281981523897582910" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math> is isomorphic to <math id="-3512580403624168217" display="inline" alttext="Q_{p}[x,y]/(h(x),g(y))" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">
+      <mrow xref="p1.1.m1.1.20.1.cmml" id="p1.1.m1.1.20.1">
+        <msub xref="p1.1.m1.1.20.1.2.cmml" id="p1.1.m1.1.20.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+          <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">p</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.20.1.1.cmml" id="p1.1.m1.1.20.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.20.1.3.1.cmml" id="p1.1.m1.1.20.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">[</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">x</mi>
+          <mo id="p1.1.m1.1.5">,</mo>
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">y</mi>
+          <mo id="p1.1.m1.1.7" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">/</mo>
+      <mrow xref="p1.1.m1.1.20.2.1.cmml" id="p1.1.m1.1.20.2">
+        <mo id="p1.1.m1.1.9" stretchy="false">(</mo>
+        <mrow xref="p1.1.m1.1.20.2.1.cmml" id="p1.1.m1.1.20.2.2">
+          <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">h</mi>
+          <mo xref="p1.1.m1.1.20.2.2.1.cmml" id="p1.1.m1.1.20.2.2.1">⁢</mo>
+          <mrow id="p1.1.m1.1.20.2.2.2">
+            <mo id="p1.1.m1.1.11" stretchy="false">(</mo>
+            <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">x</mi>
+            <mo id="p1.1.m1.1.13" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+        <mo id="p1.1.m1.1.14">,</mo>
+        <mrow xref="p1.1.m1.1.20.2.1.cmml" id="p1.1.m1.1.20.2.3">
+          <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">g</mi>
+          <mo xref="p1.1.m1.1.20.2.3.1.cmml" id="p1.1.m1.1.20.2.3.1">⁢</mo>
+          <mrow id="p1.1.m1.1.20.2.3.2">
+            <mo id="p1.1.m1.1.16" stretchy="false">(</mo>
+            <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">y</mi>
+            <mo id="p1.1.m1.1.18" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+        <mo id="p1.1.m1.1.19" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml">
+        <divide xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+        <apply xref="p1.1.m1.1.20.1" id="p1.1.m1.1.20.1.cmml">
+          <times xref="p1.1.m1.1.20.1.1" id="p1.1.m1.1.20.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.20.1.2" id="p1.1.m1.1.20.1.2.cmml">
+            <csymbol id="p1.1.m1.1.20.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+            <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑝</ci>
+          </apply>
+          <interval xref="p1.1.m1.1.20.1.3" id="p1.1.m1.1.20.1.3.1.cmml" closure="closed">
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑥</ci>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑦</ci>
+          </interval>
+        </apply>
+        <interval xref="p1.1.m1.1.20.2" id="p1.1.m1.1.20.2.1.cmml" closure="open">
+          <apply xref="p1.1.m1.1.20.2" id="p1.1.m1.1.20.2.2.cmml">
+            <times xref="p1.1.m1.1.20.2.2.1" id="p1.1.m1.1.20.2.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">ℎ</ci>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑥</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.20.2" id="p1.1.m1.1.20.2.3.cmml">
+            <times xref="p1.1.m1.1.20.2.3.1" id="p1.1.m1.1.20.2.3.1.cmml"/>
+            <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑔</ci>
+            <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝑦</ci>
+          </apply>
+        </interval>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q_{p}[x,y]/(h(x),g(y))</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">This function takes the prime number <var class="Arg">p</var> and the two coefficient lists <var class="Arg">unram</var> and <var class="Arg">ram</var> for the two polynomials. The polynomial given by the coefficients in <var class="Arg">unram</var> must be a cyclotomic polynomial and the polynomial given by <var class="Arg">ram</var> must be either an Eisenstein polynomial or <math id="3430563266530457884" display="inline" alttext="1+x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">x</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑥</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1+x</annotation>
+  </semantics>
+</math>. <em>This is not checked by <strong class="pkg">GAP</strong>.</em></p><p xmlns="http://www.w3.org/1999/xhtml">Every number in <math id="-7786102666968015405" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math> is represented as a coefficient list w. r. t. the basis <math id="-7583381478695949359" display="inline" alttext="\{1,x,x^{2},\ldots,y,xy,x^{2}y,\ldots\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.22.1.cmml" id="p1.1.m1.1.22">
+      <mo id="p1.1.m1.1.1" stretchy="false">{</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">x</mi>
+      <mo id="p1.1.m1.1.5">,</mo>
+      <msup xref="p1.1.m1.1.22.1.cmml" id="p1.1.m1.1.22.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">x</mi>
+        <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">2</mn>
+      </msup>
+      <mo id="p1.1.m1.1.8">,</mo>
+      <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">…</mi>
+      <mo id="p1.1.m1.1.10">,</mo>
+      <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">y</mi>
+      <mo id="p1.1.m1.1.12">,</mo>
+      <mrow xref="p1.1.m1.1.22.1.cmml" id="p1.1.m1.1.22.3">
+        <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">x</mi>
+        <mo xref="p1.1.m1.1.22.3.1.cmml" id="p1.1.m1.1.22.3.1">⁢</mo>
+        <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">y</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.15">,</mo>
+      <mrow xref="p1.1.m1.1.22.1.cmml" id="p1.1.m1.1.22.4">
+        <msup xref="p1.1.m1.1.22.1.cmml" id="p1.1.m1.1.22.4.2">
+          <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">x</mi>
+          <mn xref="p1.1.m1.1.17.1.cmml" id="p1.1.m1.1.17.1">2</mn>
+        </msup>
+        <mo xref="p1.1.m1.1.22.4.1.cmml" id="p1.1.m1.1.22.4.1">⁢</mo>
+        <mi xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">y</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.19">,</mo>
+      <mi xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20" mathvariant="normal">…</mi>
+      <mo id="p1.1.m1.1.21" stretchy="false">}</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <set xref="p1.1.m1.1.22" id="p1.1.m1.1.22.1.cmml">
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑥</ci>
+        <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.cmml">
+          <csymbol id="p1.1.m1.1.22.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑥</ci>
+          <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">2</cn>
+        </apply>
+        <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">…</ci>
+        <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑦</ci>
+        <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.3.cmml">
+          <times xref="p1.1.m1.1.22.3.1" id="p1.1.m1.1.22.3.1.cmml"/>
+          <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑦</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.4.cmml">
+          <times xref="p1.1.m1.1.22.4.1" id="p1.1.m1.1.22.4.1.cmml"/>
+          <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.4.2.cmml">
+            <csymbol id="p1.1.m1.1.22.4.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝑥</ci>
+            <cn xref="p1.1.m1.1.17.1" id="p1.1.m1.1.17.1.cmml" type="integer">2</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">𝑦</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml">…</ci>
+      </set>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\{1,x,x^{2},\ldots,y,xy,x^{2}y,\ldots\}</annotation>
+  </semantics>
+</math> of <math id="7139793546916658961" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math>. The integer <var class="Arg">precision</var> is the number of &quot;digits&quot; that all the coefficients have.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>A general comment:</em></p><p xmlns="http://www.w3.org/1999/xhtml">The polynomials with which <code class="func">PadicExtensionNumberFamily</code> is called define an extension of <math id="-7248186255453653863" display="inline" alttext="Q_{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">p</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑝</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q_{p}</annotation>
+  </semantics>
+</math>. It must be ensured that both polynomials are really irreducible over <math id="7253082958177021133" display="inline" alttext="Q_{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">p</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑝</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q_{p}</annotation>
+  </semantics>
+</math>! For example <math id="-8566453336664397985" display="inline" alttext="x^{2}+x+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <msup xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">+</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">x</mi>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3a">+</mo>
+      <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <plus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <csymbol id="p1.1.m1.1.7.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑥</ci>
+        <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x^{2}+x+1</annotation>
+  </semantics>
+</math> is <em>not</em> irreducible over <math id="-2308765524941813271" display="inline" alttext="Q_{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">p</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑝</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q_{p}</annotation>
+  </semantics>
+</math>. Therefore the &quot;extension&quot; <code class="code">PadicExtensionNumberFamily(3, 4, [1,1,1], [1,1])</code> contains non-invertible &quot;pseudo-p-adic numbers&quot;. Conversely, if an &quot;extension&quot; contains noninvertible elements then one of the defining polynomials was not irreducible.</p> </body>
+    </html>

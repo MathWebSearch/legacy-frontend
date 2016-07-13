@@ -1,0 +1,102 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 4: The Programming Language</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap4.html#X7FE7C0C17E1ED118"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap4_mj.html#X7FE7C0C17E1ED118">4 <span class="Heading">The Programming Language</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X7B5FF6827DFBDF20">4.1 <span class="Heading">Language Overview</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X80A85A707B6F4BE7">4.2 <span class="Heading">Lexical Structure</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X7E90E6607F4E4943">4.3 <span class="Heading">Symbols</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X7C53CEFC8641B919">4.4 <span class="Heading">Whitespaces</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X87506BDC7D5F789E">4.5 <span class="Heading">Keywords</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X860313A179A5163F">4.6 <span class="Heading">Identifiers</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X85CF993B7D19F2C4">4.6-1 IsValidIdentifier</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X7BAFE9C1817253C6">4.7 <span class="Heading">Expressions</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X7A4C2D0E7E286B4F">4.8 <span class="Heading">Variables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X842B89D4860FD5DB">4.8-1 IsBound</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X7BABB3E77F52626C">4.8-2 Unbind</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X816FBEEA85782EC2">4.9 <span class="Heading">More About Global Variables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X7CD3523B84744EB2">4.9-1 IsReadOnlyGlobal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X850CE44478254F27">4.9-2 MakeReadOnlyGlobal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X832AAF13861968BE">4.9-3 MakeReadWriteGlobal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X84BB4B1E872849FF">4.9-4 ValueGlobal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X823D4BC378395B32">4.9-5 IsBoundGlobal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X829A5F0E811F77D3">4.9-6 UnbindGlobal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X7D39D3E17CF49F5B">4.9-7 BindGlobal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X876A6EB68745A510">4.9-8 NamesGVars</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X7E604AF579A7BC92">4.9-9 NamesSystemGVars</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X870169447AF490D8">4.9-10 NamesUserGVars</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X798433307E62DCBA">4.9-11 TemporaryGlobalVarName</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X875BA7C58175DEFB">4.10 <span class="Heading">Namespaces for <strong class="pkg">GAP</strong> packages</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X78C70489791FDF43">4.11 <span class="Heading">Function Calls</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X80B93A9C7E0A57F4">4.11-1 <span class="Heading">Function Call With Arguments</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap4_mj.html#X867D54987EF86D1D">4.11-2 <span class="Heading">Function Call With Options</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X7A274A1F8553B7E6">4.12 <span class="Heading">Comparisons</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X7B66C8707B5DE10A">4.13 <span class="Heading">Arithmetic Operators</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X8543285D87361BE6">4.14 <span class="Heading">Statements</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X7E6A50307F4D3FAE">4.15 <span class="Heading">Assignments</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X825803DE78251DA6">4.16 <span class="Heading">Procedure Calls</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X875000188622700D">4.17 <span class="Heading">If</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X87AA46408783383F">4.18 <span class="Heading">While</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X8295CBF47FAA05C9">4.19 <span class="Heading">Repeat</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X78783E777867638A">4.20 <span class="Heading">For</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X7B60C6127E183021">4.21 <span class="Heading">Break</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X7CCBA2247AA366BD">4.22 <span class="Heading">Continue</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X815F71EA7BC0EB6F">4.23 <span class="Heading">Function</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap4_mj.html#X812C6ABC7A182E9E">4.24 <span class="Heading">Return (With or without Value)</span></a>
+</span>
+</div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">4 <span class="Heading">The Programming Language</span></h3><p xmlns="http://www.w3.org/1999/xhtml">This chapter describes the <strong class="pkg">GAP</strong> programming language. It should allow you in principle to predict the result of each and every input. In order to know what we are talking about, we first have to look more closely at the process of interpretation and the various representations of data involved.</p> </body>
+    </html>

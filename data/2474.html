@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 30: Collections-&gt;30.4-8 RepresentativeSmallest</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30.html#X8026085680270D37"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.4-8 RepresentativeSmallest</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RepresentativeSmallest</code>( <var class="Arg">C</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the smallest element in the collection <var class="Arg">C</var>, w.r.t. the ordering <code class="func">\&lt;</code> (<a shape="rect" href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>). While the operation defaults to comparing all elements, better methods are installed for some collections.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Representative( Rationals );</span>
+0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Representative( [ -1, -2 .. -100 ] );</span>
+-1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RepresentativeSmallest( [ -1, -2 .. -100 ] );</span>
+-100
+</pre></div> </body>
+    </html>

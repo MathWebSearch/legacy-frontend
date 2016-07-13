@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.14-5 HighestWeightModule</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X7FB14F7F80EFF33F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.14-5 HighestWeightModule</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ HighestWeightModule</code>( <var class="Arg">L</var>, <var class="Arg">wt</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the highest weight module with highest weight <var class="Arg">wt</var> of the semisimple Lie algebra <var class="Arg">L</var> of characteristic <math id="4952849474573774788" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+    </annotation-xml>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the elements of such a module lie in the category <code class="func">IsLeftAlgebraModuleElement</code> (<a shape="rect" href="chap62_mj.html#X80E786467F9163F9"><span class="RefLink">62.11-9</span></a>) (and in particular they do not lie in the category <code class="func">IsWeightRepElement</code> (<a shape="rect" href="chap64_mj.html#X8248DB547B02B0FA"><span class="RefLink">64.14-4</span></a>)). However, if <code class="code">v</code> is an element of such a module, then <code class="code">ExtRepOfObj( v )</code> is a <code class="code">WeightRepElement</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that for the following examples of this chapter we increase the line length limit from its default value 80 to 81 in order to make some long output expressions fit into the lines.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">K1:= SimpleLieAlgebra( &quot;G&quot;, 2, Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">K2:= SimpleLieAlgebra( &quot;B&quot;, 2, Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= DirectSumOfAlgebras( K1, K2 );</span>
+&lt;Lie algebra of dimension 24 over Rationals&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= HighestWeightModule( L, [ 0, 1, 1, 1 ] );</span>
+&lt;224-dimensional left-module over &lt;Lie algebra of dimension 
+24 over Rationals&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">vv:= GeneratorsOfLeftModule( V );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">vv[100];</span>
+y5*y7*y10*v0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e:= ExtRepOfObj( vv[100] );</span>
+y5*y7*y10*v0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ExtRepOfObj( e );</span>
+[ [ 100, y5*y7*y10, [ -3, 2, -1, 1 ] ], 1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Basis(L)[17]^vv[100];</span>
+-1*y5*y7*y8*v0-1*y5*y9*v0
+</pre></div> </body>
+    </html>

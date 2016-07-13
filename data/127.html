@@ -1,0 +1,29 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 60: Abelian Number Fields-&gt;60.1-1 CyclotomicField</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap60.html#X80D21D80850EFA4B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">60.1-1 CyclotomicField</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CyclotomicField</code>( [<var class="Arg">subfield</var>, ]<var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CyclotomicField</code>( [<var class="Arg">subfield</var>, ]<var class="Arg">gens</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CF</code>( [<var class="Arg">subfield</var>, ]<var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CF</code>( [<var class="Arg">subfield</var>, ]<var class="Arg">gens</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The first version creates the <var class="Arg">n</var>-th cyclotomic field <math id="-7323896003655893039" display="inline" alttext="?_{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">n</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?_{n}</annotation>
+  </semantics>
+</math>. The second version creates the smallest cyclotomic field containing the elements in the list <var class="Arg">gens</var>. In both cases the field can be generated as an extension of a designated subfield <var class="Arg">subfield</var> (cf. <a shape="rect" href="chap60_mj.html#X7D2421AC8491D2BE"><span class="RefLink">60.3</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">CyclotomicField</code> can be abbreviated to <code class="func">CF</code>, this form is used also when <strong class="pkg">GAP</strong> prints cyclotomic fields.</p><p xmlns="http://www.w3.org/1999/xhtml">Fields constructed with the one argument version of <code class="func">CF</code> are stored in the global list <code class="code">CYCLOTOMIC_FIELDS</code>, so repeated calls of <code class="func">CF</code> just fetch these field objects after they have been created once.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CyclotomicField( 5 );  CyclotomicField( [ Sqrt(3) ] );</span>
+CF(5)
+CF(12)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CF( CF(3), 12 );  CF( CF(4), [ Sqrt(7) ] );</span>
+AsField( CF(3), CF(12) )
+AsField( GaussianRationals, CF(28) )
+</pre></div> </body>
+    </html>

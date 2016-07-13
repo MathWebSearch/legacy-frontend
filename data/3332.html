@@ -1,0 +1,22 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.13-4 DimensionOfHighestWeightModule</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X7D67A9BC7E4714D9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.13-4 DimensionOfHighestWeightModule</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DimensionOfHighestWeightModule</code>( <var class="Arg">L</var>, <var class="Arg">w</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">L</var> is a semisimple Lie algebra, and <var class="Arg">w</var> a dominant weight. This function returns the dimension of the highest-weight module over <var class="Arg">L</var> with highest weight <var class="Arg">w</var>. The algorithm uses Weyl's dimension formula.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;F&quot;, 4, Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R:= RootSystem( L );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DominantWeights( R, [ 1, 1, 0, 0 ] );</span>
+[ [ [ 1, 1, 0, 0 ], [ 2, 0, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 1, 0, 0 ], 
+      [ 1, 0, 0, 0 ], [ 0, 0, 0, 0 ] ], [ 0, 3, 4, 8, 11, 19 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DominantCharacter( L, [ 1, 1, 0, 0 ] );</span>
+[ [ [ 1, 1, 0, 0 ], [ 2, 0, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 1, 0, 0 ], 
+      [ 1, 0, 0, 0 ], [ 0, 0, 0, 0 ] ], [ 1, 1, 4, 6, 14, 21 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DecomposeTensorProduct( L, [ 1, 0, 0, 0 ], [ 0, 0, 1, 0 ] );</span>
+[ [ [ 1, 0, 1, 0 ], [ 1, 0, 0, 0 ], [ 0, 0, 0, 1 ], [ 0, 1, 0, 0 ], 
+      [ 2, 0, 0, 0 ], [ 0, 0, 1, 0 ], [ 1, 1, 0, 0 ] ], 
+  [ 1, 1, 1, 1, 1, 1, 1 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DimensionOfHighestWeightModule( L, [ 1, 2, 3, 4 ] );</span>
+79316832731136
+</pre></div> </body>
+    </html>

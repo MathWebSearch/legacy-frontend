@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.11-6 BiAlgebraModule</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X84517770868DDA02"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.11-6 BiAlgebraModule</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ BiAlgebraModule</code>( <var class="Arg">A</var>, <var class="Arg">B</var>, <var class="Arg">opl</var>, <var class="Arg">opr</var>, <var class="Arg">V</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Constructs the algebra bi-module over <var class="Arg">A</var> and <var class="Arg">B</var> with underlying space <var class="Arg">V</var>. The left action of <var class="Arg">A</var> is described by the function <var class="Arg">opl</var>, and the right action of <var class="Arg">B</var> by the function <var class="Arg">opr</var>. <var class="Arg">opl</var> must be a function of two arguments; the first argument is the algebra element, and the second argument is a vector from <var class="Arg">V</var>; it outputs the result of applying the algebra element on the left to the vector. <var class="Arg">opr</var> must be a function of two arguments; the first argument is a vector from <var class="Arg">V</var>, and the second argument is the algebra element; it outputs the result of applying the algebra element on the right to the vector.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= Rationals^[3,3];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= Rationals^3;</span>
+( Rationals^3 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= Rationals^3;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M:= BiAlgebraModule( A, A, \*, \*, V );</span>
+&lt;bi-module over ( Rationals^[ 3, 3 ] ) (left) and ( Rationals^
+[ 3, 3 ] ) (right)&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Dimension( M );</span>
+3
+</pre></div> </body>
+    </html>

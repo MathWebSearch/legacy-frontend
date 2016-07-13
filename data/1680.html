@@ -1,0 +1,188 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.3-6 PossibleClassFusions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X7883271F7F26356E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.3-6 PossibleClassFusions</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PossibleClassFusions</code>( <var class="Arg">subtbl</var>, <var class="Arg">tbl</var>[, <var class="Arg">options</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For two ordinary character tables <var class="Arg">subtbl</var> and <var class="Arg">tbl</var> of the groups <math id="-4768953059733276440" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> and <math id="1926522391384085051" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, say, <code class="func">PossibleClassFusions</code> returns the list of all maps that have the following properties of class fusions from <var class="Arg">subtbl</var> to <var class="Arg">tbl</var>.</p><ol xmlns="http://www.w3.org/1999/xhtml"><li><p>For class <math id="4079599516827694922" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>, the centralizer order of the image in <math id="1411004349248422211" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is a multiple of the <math id="-3590847743683466836" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th centralizer order in <math id="-569919777738904607" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math>, and the element orders in the <math id="1563076113193414858" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th class and its image are equal. These criteria are checked in <code class="func">InitFusion</code> (<a shape="rect" href="chap73_mj.html#X7E2BC50C86A16604"><span class="RefLink">73.7-1</span></a>).</p>
+
+</li><li><p>The class fusion commutes with power maps. This is checked using <code class="func">TestConsistencyMaps</code> (<a shape="rect" href="chap73_mj.html#X78487F03852A503B"><span class="RefLink">73.5-12</span></a>).</p>
+
+</li><li><p>If the permutation character of <math id="-8348475087998060077" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> corresponding to the action of <math id="5890403613403411161" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> on the cosets of <math id="-980762224078972711" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> is specified (see the discussion of the <var class="Arg">options</var> argument below) then it prescribes for each class <math id="-8739603980015269703" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
+  </semantics>
+</math> of <math id="690880118785523342" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> the number of elements of <math id="-2674669673495282161" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> fusing into <math id="8433701203030780744" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
+  </semantics>
+</math>. The corresponding function is <code class="func">CheckPermChar</code> (<a shape="rect" href="chap73_mj.html#X82F776A3850C6404"><span class="RefLink">73.7-2</span></a>).</p>
+
+</li><li><p>The table automorphisms of <var class="Arg">tbl</var> (see <code class="func">AutomorphismsOfTable</code> (<a shape="rect" href="chap71_mj.html#X7C2753DE8094F4BA"><span class="RefLink">71.9-4</span></a>)) are used in order to compute only orbit representatives. (But note that the list returned by <code class="func">PossibleClassFusions</code> contains the full orbits.)</p>
+
+</li><li><p>For each character <math id="-2751774121021513459" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math> of <math id="-8558803946674330063" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, the restriction to <math id="3661626375063753679" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> via the class fusion is a character of <math id="3308215338161475624" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math>. This condition is checked for all characters specified below, the corresponding function is <code class="func">FusionsAllowedByRestrictions</code> (<a shape="rect" href="chap73_mj.html#X85024BAE8585DB1C"><span class="RefLink">73.7-4</span></a>).</p>
+
+</li><li><p>The class multiplication coefficients in <var class="Arg">subtbl</var> do not exceed the corresponding coefficients in <var class="Arg">tbl</var>. This is checked in <code class="func">ConsiderStructureConstants</code> (<a shape="rect" href="chap73_mj.html#X7BCC5B4B7E9DF42C"><span class="RefLink">73.3-7</span></a>), see also the comment on the parameter <code class="code">verify</code> below.</p>
+
+</li></ol><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">subtbl</var> and <var class="Arg">tbl</var> are Brauer tables then the possibilities are computed from those for the underlying ordinary tables.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">options</var> must be a record that may have the following components:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">chars</code></strong></dt><dd><p>a list of characters of <var class="Arg">tbl</var> which are used for the check of 5.; the default is <code class="code">Irr( <var class="Arg">tbl</var> )</code>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">subchars</code></strong></dt><dd><p>a list of characters of <var class="Arg">subtbl</var> which are constituents of the restrictions of <code class="code">chars</code>, the default is <code class="code">Irr( <var class="Arg">subtbl</var> )</code>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">fusionmap</code></strong></dt><dd><p>a parametrized map which is an approximation of the desired map,</p>
+
+</dd><dt><strong class="Mark"><code class="code">decompose</code></strong></dt><dd><p>a Boolean; a <code class="keyw">true</code> value indicates that all constituents of the restrictions of <code class="code">chars</code> computed for criterion 5. lie in <code class="code">subchars</code>, so the restrictions can be decomposed into elements of <code class="code">subchars</code>; the default value of <code class="code">decompose</code> is <code class="keyw">true</code> if <code class="code">subchars</code> is not bound and <code class="code">Irr( <var class="Arg">subtbl</var> )</code> is known, otherwise <code class="keyw">false</code>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">permchar</code></strong></dt><dd><p>(a values list of) a permutation character; only those fusions affording that permutation character are computed,</p>
+
+</dd><dt><strong class="Mark"><code class="code">quick</code></strong></dt><dd><p>a Boolean; if <code class="keyw">true</code> then the subroutines are called with value <code class="keyw">true</code> for the argument <var class="Arg">quick</var>; especially, as soon as only one possibility remains then this possibility is returned immediately; the default value is <code class="keyw">false</code>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">verify</code></strong></dt><dd><p>a Boolean; if <code class="keyw">false</code> then <code class="func">ConsiderStructureConstants</code> (<a shape="rect" href="chap73_mj.html#X7BCC5B4B7E9DF42C"><span class="RefLink">73.3-7</span></a>) is called only if more than one orbit of possible class fusions exists, under the action of the groups of table automorphisms; the default value is <code class="keyw">false</code> (because the computation of the structure constants is usually very time consuming, compared with checking the other criteria),</p>
+
+</dd><dt><strong class="Mark"><code class="code">parameters</code></strong></dt><dd><p>a record with components <code class="code">maxamb</code>, <code class="code">minamb</code> and <code class="code">maxlen</code> which control the subroutine <code class="func">FusionsAllowedByRestrictions</code> (<a shape="rect" href="chap73_mj.html#X85024BAE8585DB1C"><span class="RefLink">73.7-4</span></a>); it only uses characters with current indeterminateness up to <code class="code">maxamb</code>, tests decomposability only for characters with current indeterminateness at least <code class="code">minamb</code>, and admits a branch according to a character only if there is one with at most <code class="code">maxlen</code> possible restrictions.</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">subtbl:= CharacterTable( &quot;U3(3)&quot; );;  tbl:= CharacterTable( &quot;J4&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PossibleClassFusions( subtbl, tbl );</span>
+[ [ 1, 2, 4, 4, 5, 5, 6, 10, 12, 13, 14, 14, 21, 21 ], 
+  [ 1, 2, 4, 4, 5, 5, 6, 10, 13, 12, 14, 14, 21, 21 ], 
+  [ 1, 2, 4, 4, 6, 6, 6, 10, 12, 13, 15, 15, 22, 22 ], 
+  [ 1, 2, 4, 4, 6, 6, 6, 10, 12, 13, 16, 16, 22, 22 ], 
+  [ 1, 2, 4, 4, 6, 6, 6, 10, 13, 12, 15, 15, 22, 22 ], 
+  [ 1, 2, 4, 4, 6, 6, 6, 10, 13, 12, 16, 16, 22, 22 ] ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,43 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.7-11 MoebiusTom</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X7D32C8B0786D16C1"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.7-11 MoebiusTom</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MoebiusTom</code>( <var class="Arg">tom</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">MoebiusTom</code> computes the Möbius values both of the subgroup lattice of the group <math id="-4580539480650421490" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> with table of marks <var class="Arg">tom</var> and of the poset of conjugacy classes of subgroups of <math id="-334155279820725928" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>. It returns a record where the component <code class="code">mu</code> contains the Möbius values of the subgroup lattice, and the component <code class="code">nu</code> contains the Möbius values of the poset.</p><p xmlns="http://www.w3.org/1999/xhtml">Moreover, according to an observation of Isaacs et al. (see <a shape="rect" href="chapBib_mj.html#biBHIO89">[HIÖ89]</a>, <a shape="rect" href="chapBib_mj.html#biBPah93">[Pah93]</a>), the values on the subgroup lattice often can be derived from those of the poset of conjugacy classes. These &quot;expected values&quot; are returned in the component <code class="code">ex</code>, and the list of numbers of those subgroups where the expected value does not coincide with the actual value are returned in the component <code class="code">hyp</code>. For the computation of these values, the position of the derived subgroup of <math id="5887064491606631451" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is needed (see <code class="func">DerivedSubgroupTom</code> (<a shape="rect" href="chap70_mj.html#X8528D9397FFAF477"><span class="RefLink">70.9-2</span></a>)). If it is not uniquely determined then the result does not have the components <code class="code">ex</code> and <code class="code">hyp</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MoebiusTom( a5 );</span>
+rec( ex := [ -60, 4, 2,,, -1, -1, -1, 1 ], hyp := [  ], 
+  mu := [ -60, 4, 2,,, -1, -1, -1, 1 ], 
+  nu := [ -1, 2, 1,,, -1, -1, -1, 1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tom:= TableOfMarks( &quot;M12&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">moebius:= MoebiusTom( tom );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">moebius.hyp;</span>
+[ 1, 2, 4, 16, 39, 45, 105 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">moebius.mu[1];  moebius.ex[1];</span>
+95040
+190080
+</pre></div> </body>
+    </html>

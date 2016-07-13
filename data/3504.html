@@ -1,0 +1,51 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.13-1 Zero for lists</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X86A85ADC85C451DC"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.13-1 <span class="Heading">Zero for lists</span></h5><p xmlns="http://www.w3.org/1999/xhtml">The zero (see <code class="func">Zero</code> (<a shape="rect" href="chap31_mj.html#X8040AC7A79FFC442"><span class="RefLink">31.10-3</span></a>)) of a list <math id="-5938723523884202818" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> in <code class="func">IsGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X87ABCEE9809585A0"><span class="RefLink">21.12-1</span></a>) is defined as the list whose entry at position <math id="1957244137970528154" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> is the zero of <math id="-8834963380963397720" display="inline" alttext="x[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.5.2.1.cmml" id="p1.1.m1.1.5.2">
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.2" stretchy="false">[</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.1.cmml">
+          <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.5.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x[i]</annotation>
+  </semantics>
+</math> if this entry is bound, and is unbound otherwise.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Zero( [ 1, 2, 3 ] );  Zero( [ [ 1, 2 ], 3 ] );  Zero( liemat );</span>
+[ 0, 0, 0 ]
+[ [ 0, 0 ], 0 ]
+LieObject( [ [ 0, 0 ], [ 0, 0 ] ] )
+</pre></div> </body>
+    </html>

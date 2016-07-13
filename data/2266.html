@@ -1,0 +1,33 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.6-1 Runtimes</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X80355C9282B35673"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">7.6-1 Runtimes</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Runtimes</code>(  )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Runtimes</code> returns a record with components bound to integers or <code class="keyw">fail</code>. Each integer is the cpu time (processor time) in milliseconds spent by <strong class="pkg">GAP</strong> in a certain status:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">user_time</code></strong></dt><dd><p>cpu time spent with <strong class="pkg">GAP</strong> functions (without child processes).</p>
+
+</dd><dt><strong class="Mark"><code class="code">system_time</code></strong></dt><dd><p>cpu time spent in system calls, e.g., file access (<code class="keyw">fail</code> if not available).</p>
+
+</dd><dt><strong class="Mark"><code class="code">user_time_children</code></strong></dt><dd><p>cpu time spent in child processes (<code class="keyw">fail</code> if not available).</p>
+
+</dd><dt><strong class="Mark"><code class="code">system_time_children</code></strong></dt><dd><p>cpu time spent in system calls by child processes (<code class="keyw">fail</code> if not available).</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">Note that this function is not fully supported on all systems. Only the <code class="code">user_time</code> component is (and may on some systems include the system time).</p><p xmlns="http://www.w3.org/1999/xhtml">The following example demonstrates tasks which contribute to the different time components:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Runtimes(); # after startup</span>
+rec( user_time := 3980, system_time := 60, user_time_children := 0, 
+  system_time_children := 0 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Exec(&quot;cat /usr/bin/*||wc&quot;); # child process with a lot of file access</span>
+ 893799 7551659 200928302
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Runtimes();</span>
+rec( user_time := 3990, system_time := 60, user_time_children := 1590, 
+  system_time_children := 600 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:=0;;for i in [1..100000000] do a:=a+1; od; # GAP user time</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Runtimes();  </span>
+rec( user_time := 12980, system_time := 70, user_time_children := 1590, 
+  system_time_children := 600 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">?blabla  # first call of help, a lot of file access</span>
+Help: no matching entry found
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Runtimes();</span>
+rec( user_time := 13500, system_time := 440, user_time_children := 1590, 
+  system_time_children := 600 )
+</pre></div> </body>
+    </html>

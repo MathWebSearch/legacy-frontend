@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.5-1 DegreeOfTransformation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X78A209C87CF0E32B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.5-1 DegreeOfTransformation</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DegreeOfTransformation</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DegreeOfTransformationCollection</code>( <var class="Arg">coll</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A positive integer.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>degree</em> of a transformation <var class="Arg">f</var> is the largest value such that <code class="code">n^<var class="Arg">f</var>&lt;&gt;n</code> or <code class="code">i^<var class="Arg">f</var>=n</code> for some <code class="code">i&lt;&gt;n</code>. Equivalently, the degree of a transformation is the least value <code class="code">n</code> such that <code class="code">[n+1,n+2,...]</code> is fixed pointwise by <var class="Arg">f</var>. The degree a collection of transformations <var class="Arg">coll</var> is the maximum degree of any transformation in <var class="Arg">coll</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DegreeOfTransformation(IdentityTransformation);</span>
+0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DegreeOfTransformationCollection([ Transformation( [ 1, 3, 4, 1 ] ), </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Transformation( [ 3, 1, 1, 3, 4 ]), Transformation( [ 2, 4, 1, 2 ] ) ]);</span>
+5
+</pre></div> </body>
+    </html>

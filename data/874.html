@@ -1,0 +1,593 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X7A14A6588268810A"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap66_mj.html#X7A14A6588268810A">66 <span class="Heading">Polynomials and Rational Functions</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X7A8FADCD875826DA">66.1 <span class="Heading">Indeterminates</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X79D0380D7FA39F7D">66.1-1 <span class="Heading">Indeterminate</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X816C8D797C804380">66.1-2 IndeterminateNumberOfUnivariateRationalFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7A2FA46885EF403D">66.1-3 IndeterminateOfUnivariateRationalFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7FD4AC807A1C8E27">66.1-4 IndeterminateName</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X791A06E67F784328">66.1-5 CIUnivPols</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X86A68FD582F4F757">66.2 <span class="Heading">Operations for Rational Functions</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X824B6D328643CE04">66.3 <span class="Heading">Comparison of Rational Functions</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X7D871EA180E9486C">66.4 <span class="Heading">Properties and Attributes of Rational Functions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X86C92F677DA9347F">66.4-1 IsPolynomialFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7D7D2667803D8D8A">66.4-2 NumeratorOfRationalFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X78DC1B5B866ADB6C">66.4-3 DenominatorOfRationalFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7974B0707C8DAB6C">66.4-4 IsPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7914771F7C6013EF">66.4-5 AsPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8738F73583273FCA">66.4-6 IsUnivariateRationalFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7F1F67527A35A9CE">66.4-7 CoefficientsOfUnivariateRationalFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X86A2546685D0016B">66.4-8 IsUnivariatePolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X78C9524D7F2708C2">66.4-9 CoefficientsOfUnivariatePolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X79138FF28213B6EC">66.4-10 IsLaurentPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7F2A49208341C2A8">66.4-11 IsConstantRationalFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X834B54947FAADEA4">66.4-12 IsPrimitivePolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X87531E03849391C1">66.4-13 SplittingField</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X82E2F1707FC2E553">66.5 <span class="Heading">Univariate Polynomials</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8379F8CB7D0076BA">66.5-1 UnivariatePolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X85178A3E7B4F11E0">66.5-2 UnivariatePolynomialByCoefficients</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X78AF77C383245254">66.5-3 DegreeOfLaurentPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7CBB760C87B04F75">66.5-4 RootsOfPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X80CEB10D7879767F">66.5-5 RootsOfUPol</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7887FBC78149BB0C">66.5-6 QuotRemLaurpols</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7DDADF157879EFBF">66.5-7 UnivariatenessTestRationalFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7A3BC96B7A50DE98">66.5-8 InfoPoly</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X81499B5A823E6EA3">66.6 <span class="Heading">Polynomials as Univariate Polynomials in one Indeterminate</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X826B99B17ABD11BE">66.6-1 DegreeIndeterminate</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X85646FD07F9C60F5">66.6-2 PolynomialCoefficientsOfPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X80710E9B7D8340BD">66.6-3 LeadingCoefficient</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7B3EAE41795598A5">66.6-4 LeadingMonomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7B57CEE2780D0E0B">66.6-5 Derivative</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7C7D790A7D6E11AD">66.6-6 Discriminant</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X857AD5587EF49029">66.6-7 Resultant</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X85ABC4687DF05777">66.7 <span class="Heading">Multivariate Polynomials</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7A70769C7F52CD2D">66.7-1 <span class="Heading">Value</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X7ED3E7D17C7AC732">66.8 <span class="Heading">Minimal Polynomials</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8643915A8424DAF8">66.8-1 MinimalPolynomial</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X837B8E55832CDFEB">66.9 <span class="Heading">Cyclotomic Polynomials</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X827FC7FE81EE4C02">66.9-1 CyclotomicPolynomial</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X8551EF5187509D69">66.10 <span class="Heading">Polynomial Factorization</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X83511D517B544F36">66.10-1 Factors</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7F5A4ACB7AF9E329">66.10-2 FactorsSquarefree</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X7F45E9E47EA2C18B">66.11 <span class="Heading">Polynomials over the Rationals</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7E66494B7B05A055">66.11-1 PrimitivePolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7A73A3877EB73566">66.11-2 PolynomialModP</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7AB9A6257ED694EC">66.11-3 GaloisType</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7EB610D37D156DC6">66.11-4 ProbabilityShapes</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X7C178AB9866FDDE5">66.12 <span class="Heading">Factorization of Polynomials over the Rationals</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8723075C81D2CCA6">66.12-1 BombieriNorm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X856D769D878AF7AE">66.12-2 MinimizedBombieriNorm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8139BB0F87399F2C">66.12-3 HenselBound</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X79CC9C8D7C9F6B6A">66.12-4 OneFactorBound</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X844B3C6C87A0E7E0">66.13 <span class="Heading">Laurent Polynomials</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8467263B7EFA013E">66.13-1 LaurentPolynomialByCoefficients</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X86D58AB67F86469F">66.13-2 CoefficientsOfLaurentPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8381E1B582F38C85">66.13-3 IndeterminateNumberOfLaurentPolynomial</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X7C1708D27F97B05F">66.14 <span class="Heading">Univariate Rational Functions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X83DD411179888783">66.14-1 UnivariateRationalFunctionByCoefficients</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X7C59471783C3FEDC">66.15 <span class="Heading">Polynomial Rings and Function Fields</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7D2F16E480060330">66.15-1 <span class="Heading">PolynomialRing</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X80D585E1793D4552">66.15-2 IndeterminatesOfPolynomialRing</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8235D10781BE8003">66.15-3 CoefficientsRing</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7D631ACC86C584B7">66.15-4 IsPolynomialRing</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X86F391237A76D804">66.15-5 IsFiniteFieldPolynomialRing</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X782D07F77BCF67C1">66.15-6 IsAbelianNumberFieldPolynomialRing</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7D45213A8642033B">66.15-7 IsRationalsPolynomialRing</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X812E801484E3624E">66.15-8 <span class="Heading">FunctionField</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8090C9EC85201AAC">66.15-9 IsFunctionField</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X85CA757B844F12AE">66.16 <span class="Heading">Univariate Polynomial Rings</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X84DC2A59797A26DE">66.16-1 <span class="Heading">UnivariatePolynomialRing</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7A43D74B812401CA">66.16-2 IsUnivariatePolynomialRing</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X86E2ADEA784AD163">66.17 <span class="Heading">Monomial Orderings</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X79D4CBBF820EA204">66.17-1 IsMonomialOrdering</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7D052A017A73E91E">66.17-2 LeadingMonomialOfPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7B6231137BA8B95F">66.17-3 LeadingTermOfPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X798E707D86141087">66.17-4 LeadingCoefficientOfPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7EDE941781BA7F8B">66.17-5 MonomialComparisonFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7EDC3A457E7B591E">66.17-6 MonomialExtrepComparisonFun</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X852D7BB37ECE98E1">66.17-7 MonomialLexOrdering</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X786C866C824D2688">66.17-8 MonomialGrlexOrdering</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8094C733808D1799">66.17-9 MonomialGrevlexOrdering</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X84AC871283A74EC0">66.17-10 EliminationOrdering</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7C99593584D478D7">66.17-11 PolynomialReduction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7DE7D4467EBAD916">66.17-12 PolynomialReducedRemainder</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7C8239057FD4EC03">66.17-13 PolynomialDivisionAlgorithm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7A30E10B820311D1">66.17-14 MonomialExtGrlexLess</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X79BAB2937E6085D6">66.18 <span class="Heading">Groebner Bases</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7A43611E876B7560">66.18-1 <span class="Heading">GroebnerBasis</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7DEF286384967C9E">66.18-2 <span class="Heading">ReducedGroebnerBasis</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7FC1EFE78498C17C">66.18-3 StoredGroebnerBasis</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7C55702786D284A7">66.18-4 InfoGroebner</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X8113DD9B781CA6C1">66.19 <span class="Heading">Rational Function Families</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X855DD73C78A90BC3">66.19-1 RationalFunctionsFamily</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X86E097307D188D3B">66.19-2 IsPolynomialFunctionsFamily</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7AADCA45826866FB">66.19-3 CoefficientsFamily</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X7E360788785DE530">66.20 <span class="Heading">The Representations of Rational Functions</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X7F44CF87801DB965">66.21 <span class="Heading">The Defining Attributes of Rational Functions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X791E16C67A352263">66.21-1 IsRationalFunctionDefaultRep</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7DF955C87CBFC12B">66.21-2 ExtRepNumeratorRatFun</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8059E74D7DCABDBC">66.21-3 ExtRepDenominatorRatFun</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X84F546F87B5ECFE0">66.21-4 ZeroCoefficientRatFun</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X833CE16579AB26E0">66.21-5 IsPolynomialDefaultRep</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8406EE2E8775FBAB">66.21-6 ExtRepPolynomialRatFun</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7E1B98CC7BADAF56">66.21-7 IsLaurentPolynomialDefaultRep</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X791FADD278A2F32F">66.22 <span class="Heading">Creation of Rational Functions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X81297E4587A9F2A6">66.22-1 RationalFunctionByExtRep</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X79E445AF7849F48A">66.22-2 PolynomialByExtRep</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7E2A46D68472F492">66.22-3 LaurentPolynomialByExtRep</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X809028CD7C0EA7CE">66.23 <span class="Heading">Arithmetic for External Representations of Polynomials</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X855094857A78ABF9">66.23-1 ZippedSum</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7B911136782F0F6D">66.23-2 ZippedProduct</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X87E5EB8985AF04CD">66.23-3 QuotientPolynomialsExtRep</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap66_mj.html#X811B7D8E79E4BD46">66.24 <span class="Heading">Cancellation Tests for Rational Functions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X878A1AC87B492E3D">66.24-1 RationalFunctionByExtRepWithCancellation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X7BFB55887A153003">66.24-2 TryGcdCancelExtRepPolynomials</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap66_mj.html#X8477D7337C4A98AB">66.24-3 HeuristicCancelPolynomialsExtRep</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">66 <span class="Heading">Polynomials and Rational Functions</span></h3><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="-7643994275000951483" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> be a commutative ring-with-one. We call a free associative algebra <math id="8860947139607296793" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> over <math id="-4200027912617216145" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> a <em>polynomial ring</em> over <math id="-8437383520020171907" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>. The free generators of <math id="6835449182404874517" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> are called <em>indeterminates</em> (to avoid naming conflicts with the word <em>variables</em> which will be used to denote <strong class="pkg">GAP</strong> variables only) , they are usually denoted by <math id="-1084655819199089061" display="inline" alttext="x_{1},x_{2},\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <msub xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+      </msub>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <msub xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.3">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">x</mi>
+        <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">2</mn>
+      </msub>
+      <mo id="p1.1.m1.1.6">,</mo>
+      <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7" mathvariant="normal">…</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml">
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.cmml">
+          <csymbol id="p1.1.m1.1.8.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.3.cmml">
+          <csymbol id="p1.1.m1.1.8.3.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑥</ci>
+          <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">2</cn>
+        </apply>
+        <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">…</ci>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{1},x_{2},\ldots</annotation>
+  </semantics>
+</math>. The number of indeterminates is called the <em>rank</em> of <math id="2532896020816233697" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>. The elements of <math id="7567252377432708974" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> are called <em>polynomials</em>. Products of indeterminates are called <em>monomials</em>, every polynomial can be expressed as a finite sum of products of monomials with ring elements in a form like <math id="-7964019753941052504" display="inline" alttext="r_{{1,0}}x_{1}+r_{{1,1}}x_{1}x_{2}+r_{{0,1}}x_{2}+\cdots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.19.cmml" id="p1.1.m1.1.19">
+      <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19.1">
+        <msub xref="p1.1.m1.1.19.1.2.cmml" id="p1.1.m1.1.19.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
+          <mrow xref="p1.1.m1.1.2.1.4.cmml" id="p1.1.m1.1.2.1">
+            <mn xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">1</mn>
+            <mo id="p1.1.m1.1.2.1.2">,</mo>
+            <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">0</mn>
+          </mrow>
+        </msub>
+        <mo xref="p1.1.m1.1.19.1.1.cmml" id="p1.1.m1.1.19.1.1">⁢</mo>
+        <msub xref="p1.1.m1.1.19.1.3.cmml" id="p1.1.m1.1.19.1.3">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">x</mi>
+          <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">1</mn>
+        </msub>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">+</mo>
+      <mrow xref="p1.1.m1.1.19.2.cmml" id="p1.1.m1.1.19.2">
+        <msub xref="p1.1.m1.1.19.2.2.cmml" id="p1.1.m1.1.19.2.2">
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">r</mi>
+          <mrow xref="p1.1.m1.1.7.1.4.cmml" id="p1.1.m1.1.7.1">
+            <mn xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">1</mn>
+            <mo id="p1.1.m1.1.7.1.2">,</mo>
+            <mn xref="p1.1.m1.1.7.1.3.cmml" id="p1.1.m1.1.7.1.3">1</mn>
+          </mrow>
+        </msub>
+        <mo xref="p1.1.m1.1.19.2.1.cmml" id="p1.1.m1.1.19.2.1">⁢</mo>
+        <msub xref="p1.1.m1.1.19.2.3.cmml" id="p1.1.m1.1.19.2.3">
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">x</mi>
+          <mn xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">1</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.19.2.1.cmml" id="p1.1.m1.1.19.2.1a">⁢</mo>
+        <msub xref="p1.1.m1.1.19.2.4.cmml" id="p1.1.m1.1.19.2.4">
+          <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">x</mi>
+          <mn xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">2</mn>
+        </msub>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5a">+</mo>
+      <mrow xref="p1.1.m1.1.19.3.cmml" id="p1.1.m1.1.19.3">
+        <msub xref="p1.1.m1.1.19.3.2.cmml" id="p1.1.m1.1.19.3.2">
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">r</mi>
+          <mrow xref="p1.1.m1.1.14.1.4.cmml" id="p1.1.m1.1.14.1">
+            <mn xref="p1.1.m1.1.14.1.1.cmml" id="p1.1.m1.1.14.1.1">0</mn>
+            <mo id="p1.1.m1.1.14.1.2">,</mo>
+            <mn xref="p1.1.m1.1.14.1.3.cmml" id="p1.1.m1.1.14.1.3">1</mn>
+          </mrow>
+        </msub>
+        <mo xref="p1.1.m1.1.19.3.1.cmml" id="p1.1.m1.1.19.3.1">⁢</mo>
+        <msub xref="p1.1.m1.1.19.3.3.cmml" id="p1.1.m1.1.19.3.3">
+          <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">x</mi>
+          <mn xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">2</mn>
+        </msub>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5b">+</mo>
+      <mi xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18" mathvariant="normal">⋯</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.19" id="p1.1.m1.1.19.cmml">
+        <plus xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.19.1" id="p1.1.m1.1.19.1.cmml">
+          <times xref="p1.1.m1.1.19.1.1" id="p1.1.m1.1.19.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.19.1.2" id="p1.1.m1.1.19.1.2.cmml">
+            <csymbol id="p1.1.m1.1.19.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑟</ci>
+            <list xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.4.cmml">
+              <cn xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml" type="integer">1</cn>
+              <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">0</cn>
+            </list>
+          </apply>
+          <apply xref="p1.1.m1.1.19.1.3" id="p1.1.m1.1.19.1.3.cmml">
+            <csymbol id="p1.1.m1.1.19.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑥</ci>
+            <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.19.2" id="p1.1.m1.1.19.2.cmml">
+          <times xref="p1.1.m1.1.19.2.1" id="p1.1.m1.1.19.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.19.2.2" id="p1.1.m1.1.19.2.2.cmml">
+            <csymbol id="p1.1.m1.1.19.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑟</ci>
+            <list xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.4.cmml">
+              <cn xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml" type="integer">1</cn>
+              <cn xref="p1.1.m1.1.7.1.3" id="p1.1.m1.1.7.1.3.cmml" type="integer">1</cn>
+            </list>
+          </apply>
+          <apply xref="p1.1.m1.1.19.2.3" id="p1.1.m1.1.19.2.3.cmml">
+            <csymbol id="p1.1.m1.1.19.2.3.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑥</ci>
+            <cn xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml" type="integer">1</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.19.2.4" id="p1.1.m1.1.19.2.4.cmml">
+            <csymbol id="p1.1.m1.1.19.2.4.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑥</ci>
+            <cn xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.19.3" id="p1.1.m1.1.19.3.cmml">
+          <times xref="p1.1.m1.1.19.3.1" id="p1.1.m1.1.19.3.1.cmml"/>
+          <apply xref="p1.1.m1.1.19.3.2" id="p1.1.m1.1.19.3.2.cmml">
+            <csymbol id="p1.1.m1.1.19.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑟</ci>
+            <list xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.4.cmml">
+              <cn xref="p1.1.m1.1.14.1.1" id="p1.1.m1.1.14.1.1.cmml" type="integer">0</cn>
+              <cn xref="p1.1.m1.1.14.1.3" id="p1.1.m1.1.14.1.3.cmml" type="integer">1</cn>
+            </list>
+          </apply>
+          <apply xref="p1.1.m1.1.19.3.3" id="p1.1.m1.1.19.3.3.cmml">
+            <csymbol id="p1.1.m1.1.19.3.3.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑥</ci>
+            <cn xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">⋯</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">r_{{1,0}}x_{1}+r_{{1,1}}x_{1}x_{2}+r_{{0,1}}x_{2}+\cdots</annotation>
+  </semantics>
+</math> with <math id="7287239548696366008" display="inline" alttext="r_{{i,j}}\in R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msub xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
+        <mrow xref="p1.1.m1.1.2.1.4.cmml" id="p1.1.m1.1.2.1">
+          <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">i</mi>
+          <mo id="p1.1.m1.1.2.1.2">,</mo>
+          <mi xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">j</mi>
+        </mrow>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">∈</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">R</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <in xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑟</ci>
+          <list xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.4.cmml">
+            <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑖</ci>
+            <ci xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml">𝑗</ci>
+          </list>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑅</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">r_{{i,j}}\in R</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">A polynomial ring of rank 1 is called an <em>univariate</em> polynomial ring, its elements are <em>univariate polynomials</em>.</p><p xmlns="http://www.w3.org/1999/xhtml">Polynomial rings of smaller rank naturally embed in rings of higher rank; if <math id="-1975914923794603225" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> is a subring of <math id="-5507137366504154243" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> then a polynomial ring over <math id="238788193297055219" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> naturally embeds in a polynomial ring over <math id="-5707845168848944805" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> of the same rank. Note however that <strong class="pkg">GAP</strong> does not consider <math id="1184771861652954601" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> as a subset of a polynomial ring over <math id="3515389749114758989" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>; for example the zero of <math id="-8605302796556531503" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> (<math id="4652792811560875074" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+    </annotation-xml>
+  </semantics>
+</math>) and the zero of the polynomial ring (<math id="-123224065656564800" display="inline" alttext="0x^{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <msup xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">x</mi>
+        <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">0</mn>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+        <apply xref="p1.1.m1.1.4.2" id="p1.1.m1.1.4.2.cmml">
+          <csymbol id="p1.1.m1.1.4.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑥</ci>
+          <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">0</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">0x^{0}</annotation>
+  </semantics>
+</math>) are different objects.</p><p xmlns="http://www.w3.org/1999/xhtml">Internally, indeterminates are represented by positive integers, but it is possible to give names to them to have them printed in a nicer way. Beware, however that there is not necessarily any relation between the way an indeterminate is called and the way it is printed. See section <a shape="rect" href="chap66_mj.html#X7A8FADCD875826DA"><span class="RefLink">66.1</span></a> for details.</p><p xmlns="http://www.w3.org/1999/xhtml">If <math id="-810997499210916114" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> is an integral domain, the polynomial ring <math id="4400274858306456207" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> over <math id="5274512222821036351" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> is an integral domain as well and one can therefore form its quotient field <math id="-3223808547101170559" display="inline" alttext="Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q</annotation>
+  </semantics>
+</math>. This field is called a <em>field of rational functions</em>. Again <math id="5976837227006164934" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> embeds naturally into <math id="5416569301992301944" display="inline" alttext="Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q</annotation>
+  </semantics>
+</math> and <strong class="pkg">GAP</strong> will perform this embedding implicitly. (In fact it implements the ring of rational functions over <math id="-841117577171335243" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>.) To avoid problems with leading coefficients, however, <math id="-1789940959767754759" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> must be a unique factorization domain.</p> </body>
+    </html>

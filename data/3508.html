@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.12-3 IsListDefault</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7BAD12E67BFC90DE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.12-3 IsListDefault</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsListDefault</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a list <var class="Arg">list</var>, <code class="func">IsListDefault</code> indicates that the default methods for arithmetic operations of lists, such as pointwise addition and multiplication as inner product or matrix product, shall be applicable to <var class="Arg">list</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsListDefault</code> implies <code class="func">IsGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X87ABCEE9809585A0"><span class="RefLink">21.12-1</span></a>) and <code class="func">IsMultiplicativeGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X7FBCA5B58308C158"><span class="RefLink">21.12-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">All internally represented lists are in this category, and also all lists in the representations <code class="code">IsGF2VectorRep</code>, <code class="code">Is8BitVectorRep</code>, <code class="code">IsGF2MatrixRep</code>, and <code class="code">Is8BitMatrixRep</code> (see <a shape="rect" href="chap23_mj.html#X8679F7DD7DFCBD9C"><span class="RefLink">23.3</span></a> and <a shape="rect" href="chap24_mj.html#X873822B6830CE367"><span class="RefLink">24.14</span></a>). Note that the result of an arithmetic operation with lists in <code class="func">IsListDefault</code> will in general be an internally represented list, so most &quot;wrapped list objects&quot; will not lie in <code class="func">IsListDefault</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">v:= [ 1, 2 ];;  m:= [ v, 2*v ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsListDefault( v );  IsListDefault( m );</span>
+true
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsListDefault( bas );  IsListDefault( liemat );</span>
+true
+false
+</pre></div> </body>
+    </html>

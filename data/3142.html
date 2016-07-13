@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.12-12 ExternalOrbitsStabilizers</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X7A64EF807CE8893E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.12-12 <span class="Heading">ExternalOrbitsStabilizers</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ExternalOrbitsStabilizers</code>( <var class="Arg">G</var>, <var class="Arg">Omega</var>[, <var class="Arg">gens</var>, <var class="Arg">acts</var>][, <var class="Arg">act</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ExternalOrbitsStabilizers</code>( <var class="Arg">xset</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">In addition to <code class="func">ExternalOrbits</code> (<a shape="rect" href="chap41_mj.html#X867262FA82FDD592"><span class="RefLink">41.12-11</span></a>), this operation also computes the stabilizers of the representatives of the external orbits at the same time. (This can be quicker than computing the <code class="func">ExternalOrbits</code> (<a shape="rect" href="chap41_mj.html#X867262FA82FDD592"><span class="RefLink">41.12-11</span></a>) value first and the stabilizers afterwards.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e:=ExternalOrbitsStabilizers(g,AsList(g));</span>
+[ ()^G, (2,3,4)^G, (2,4,3)^G, (1,2)(3,4)^G ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasStabilizerOfExternalSet(e[3]);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StabilizerOfExternalSet(e[3]);</span>
+Group([ (2,4,3) ])
+</pre></div> </body>
+    </html>

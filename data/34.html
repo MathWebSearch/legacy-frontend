@@ -1,0 +1,46 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.10-12 IsomorphismSCAlgebra</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7F8D3DF2863EC50D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.10-12 IsomorphismSCAlgebra</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsomorphismSCAlgebra</code>( <var class="Arg">B</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsomorphismSCAlgebra</code>( <var class="Arg">A</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a basis <var class="Arg">B</var> of an algebra <math id="-5666248512856201189" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>, say, <code class="func">IsomorphismSCAlgebra</code> returns an algebra isomorphism from <math id="-3826193115089254277" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> to an algebra <math id="-1468170025044437905" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> given by structure constants (see <a shape="rect" href="chap62_mj.html#X7E8F45547CC07CE5"><span class="RefLink">62.4</span></a>), such that the canonical basis of <math id="2719269163350787272" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> is the image of <var class="Arg">B</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">For an algebra <var class="Arg">A</var>, <code class="func">IsomorphismSCAlgebra</code> chooses a basis of <var class="Arg">A</var> and returns the <code class="func">IsomorphismSCAlgebra</code> value for that basis.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismSCAlgebra( GF(8) );</span>
+CanonicalBasis( GF(2^3) ) -&gt; CanonicalBasis( &lt;algebra of dimension 
+3 over GF(2)&gt; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismSCAlgebra( GF(2)^[2,2] );</span>
+CanonicalBasis( ( GF(2)^
+[ 2, 2 ] ) ) -&gt; CanonicalBasis( &lt;algebra of dimension 4 over GF(2)&gt; )
+</pre></div> </body>
+    </html>

@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 45: Polycyclic Groups-&gt;45.7-3 ParentPcgs</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap45.html#X86308E80843BF9E5"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">45.7-3 ParentPcgs</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ParentPcgs</code>( <var class="Arg">pcgs</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the pcgs by which <var class="Arg">pcgs</var> was induced. If <var class="Arg">pcgs</var> was not induced, it simply returns <var class="Arg">pcgs</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := Group( (1,2,3,4),(1,2) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := Pcgs(G);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">K := InducedPcgsByPcSequence( P, [(1,2,3,4),(1,3)(2,4)] );</span>
+Pcgs([ (1,2,3,4), (1,3)(2,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ParentPcgs( K );</span>
+Pcgs([ (3,4), (2,4,3), (1,4)(2,3), (1,3)(2,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsInducedPcgs( K );</span>
+true
+</pre></div> </body>
+    </html>

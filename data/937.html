@@ -1,0 +1,27 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 52: Finitely Presented Semigroups and Monoids-&gt;52.6-7 FreeMonoidOfRewritingSystem</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap52.html#X84CE48BE7F870808"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">52.6-7 FreeMonoidOfRewritingSystem</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeMonoidOfRewritingSystem</code>( <var class="Arg">rws</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the free monoid over which <var class="Arg">rws</var> is a rewriting system</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f1 := FreeSemigroupOfRewritingSystem(rws);</span>
+&lt;free semigroup on the generators [ a, b ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f1=f;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g1 := SemigroupOfRewritingSystem(rws);</span>
+&lt;fp semigroup on the generators [ a, b ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g1=g;</span>
+true
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">As mentioned before, having a confluent rewriting system, one can decide whether two words represent the same element of a finitely presented semigroup (or finitely presented monoid).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := GeneratorsOfSemigroup( g )[ 1 ];</span>
+a
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b := GeneratorsOfSemigroup( g )[ 2 ];</span>
+b
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a*b*a=a^3;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReducedForm(rws,UnderlyingElement(a*b*a));</span>
+a^3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReducedForm(rws,UnderlyingElement(a^3));</span>
+a^3
+</pre></div> </body>
+    </html>

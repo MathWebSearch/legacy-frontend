@@ -1,0 +1,168 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.2-21 OrderedPartitions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X820DF201871F2723"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.2-21 OrderedPartitions</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OrderedPartitions</code>( <var class="Arg">n</var>[, <var class="Arg">k</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the set of all ordered partitions of the positive integer <var class="Arg">n</var> into sums with <var class="Arg">k</var> summands. If <var class="Arg">k</var> is not given it returns all ordered partitions of <var class="Arg">set</var> for all <var class="Arg">k</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">An <em>ordered partition</em> is an ordered sum <math id="5434899349167802726" display="inline" alttext="n=p_{1}+p_{2}+\ldots+p_{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">
+        <msub xref="p1.1.m1.1.13.1.1.cmml" id="p1.1.m1.1.13.1.1">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">p</mi>
+          <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">1</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">+</mo>
+        <msub xref="p1.1.m1.1.13.1.2.cmml" id="p1.1.m1.1.13.1.2">
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">p</mi>
+          <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">2</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5a">+</mo>
+        <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">…</mi>
+        <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5b">+</mo>
+        <msub xref="p1.1.m1.1.13.1.3.cmml" id="p1.1.m1.1.13.1.3">
+          <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">p</mi>
+          <mi xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">k</mi>
+        </msub>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+        <apply xref="p1.1.m1.1.13.1" id="p1.1.m1.1.13.1.cmml">
+          <plus xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+          <apply xref="p1.1.m1.1.13.1.1" id="p1.1.m1.1.13.1.1.cmml">
+            <csymbol id="p1.1.m1.1.13.1.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑝</ci>
+            <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">1</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.13.1.2" id="p1.1.m1.1.13.1.2.cmml">
+            <csymbol id="p1.1.m1.1.13.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑝</ci>
+            <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">2</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">…</ci>
+          <apply xref="p1.1.m1.1.13.1.3" id="p1.1.m1.1.13.1.3.cmml">
+            <csymbol id="p1.1.m1.1.13.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑝</ci>
+            <ci xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">𝑘</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n=p_{1}+p_{2}+\ldots+p_{k}</annotation>
+  </semantics>
+</math> of positive integers and is represented by the list <math id="8673383311260892487" display="inline" alttext="[p_{1},p_{2},\ldots,p_{k}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <msub xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">p</mi>
+        <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">1</mn>
+      </msub>
+      <mo id="p1.1.m1.1.4">,</mo>
+      <msub xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.3">
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">p</mi>
+        <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">2</mn>
+      </msub>
+      <mo id="p1.1.m1.1.7">,</mo>
+      <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8" mathvariant="normal">…</mi>
+      <mo id="p1.1.m1.1.9">,</mo>
+      <msub xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.4">
+        <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">p</mi>
+        <mi xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">k</mi>
+      </msub>
+      <mo id="p1.1.m1.1.12" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.13" id="p1.1.m1.1.13.1.cmml">
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.2.cmml">
+          <csymbol id="p1.1.m1.1.13.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑝</ci>
+          <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">1</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.3.cmml">
+          <csymbol id="p1.1.m1.1.13.3.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑝</ci>
+          <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">2</cn>
+        </apply>
+        <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">…</ci>
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.4.cmml">
+          <csymbol id="p1.1.m1.1.13.4.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.cmml">𝑘</ci>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[p_{1},p_{2},\ldots,p_{k}]</annotation>
+  </semantics>
+</math>. There are totally <math id="6942542651760140485" display="inline" alttext="2^{{n-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+      <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+        <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">n</mi>
+        <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">-</mo>
+        <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">1</mn>
+      </mrow>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+        <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <minus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑛</ci>
+          <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2^{{n-1}}</annotation>
+  </semantics>
+</math> ordered partitions and <math id="-8805470632454100055" display="inline" alttext="{{n-1\choose k-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.5">
+      <mo xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.2">(</mo>
+      <mfrac xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.3" linethickness="0pt">
+        <mrow xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.3.2">
+          <mi xref="p1.1.m1.1.1.3.2.1.cmml" id="p1.1.m1.1.1.3.2.1">n</mi>
+          <mo xref="p1.1.m1.1.1.3.2.2.cmml" id="p1.1.m1.1.1.3.2.2">-</mo>
+          <mn xref="p1.1.m1.1.1.3.2.3.cmml" id="p1.1.m1.1.1.3.2.3">1</mn>
+        </mrow>
+        <mrow xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.3.3">
+          <mi xref="p1.1.m1.1.1.3.3.1.cmml" id="p1.1.m1.1.1.3.3.1">k</mi>
+          <mo xref="p1.1.m1.1.1.3.3.2.cmml" id="p1.1.m1.1.1.3.3.2">-</mo>
+          <mn xref="p1.1.m1.1.1.3.3.3.cmml" id="p1.1.m1.1.1.3.3.3">1</mn>
+        </mrow>
+      </mfrac>
+      <mo xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.4">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.1.5" id="p1.1.m1.1.1.1.cmml">
+        <csymbol id="p1.1.m1.1.1.3.1.cmml" cd="latexml">binomial</csymbol>
+        <apply xref="p1.1.m1.1.1.5" id="p1.1.m1.1.1.3.2.cmml">
+          <minus xref="p1.1.m1.1.1.3.2.2" id="p1.1.m1.1.1.3.2.2.cmml"/>
+          <ci xref="p1.1.m1.1.1.3.2.1" id="p1.1.m1.1.1.3.2.1.cmml">𝑛</ci>
+          <cn xref="p1.1.m1.1.1.3.2.3" id="p1.1.m1.1.1.3.2.3.cmml" type="integer">1</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.1.5" id="p1.1.m1.1.1.3.3.cmml">
+          <minus xref="p1.1.m1.1.1.3.3.2" id="p1.1.m1.1.1.3.3.2.cmml"/>
+          <ci xref="p1.1.m1.1.1.3.3.1" id="p1.1.m1.1.1.3.3.1.cmml">𝑘</ci>
+          <cn xref="p1.1.m1.1.1.3.3.3" id="p1.1.m1.1.1.3.3.3.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">{{n-1\choose k-1}}</annotation>
+  </semantics>
+</math> (see <code class="func">Binomial</code> (<a shape="rect" href="chap16_mj.html#X7A9AF5F58682819D"><span class="RefLink">16.1-2</span></a>)) ordered partitions with <var class="Arg">k</var> summands.</p><p xmlns="http://www.w3.org/1999/xhtml">Do not call <code class="func">OrderedPartitions</code> with an <var class="Arg">n</var> much larger than <math id="-5756975418190224187" display="inline" alttext="15" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">15</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">15</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">15</annotation>
+  </semantics>
+</math>, the list will simply become too large.</p> </body>
+    </html>

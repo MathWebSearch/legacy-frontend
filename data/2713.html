@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.3-9 MovedPoints</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X82FE981A87FAA2DC"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.3-9 MovedPoints</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MovedPoints</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MovedPoints</code>( <var class="Arg">coll</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A set of positive integers.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">MovedPoints</code> returns the set of points <code class="code">i</code> in the domain of the partial permutation <var class="Arg">f</var> such that <code class="code">i^<var class="Arg">f</var>&lt;&gt;i</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">When the argument is a collection of partial permutations <var class="Arg">coll</var>, <code class="code">MovedPoints</code> returns the set of points moved by some element of the collection of partial permutations <var class="Arg">coll</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := PartialPerm( [ 1, 2, 3, 4 ], [ 5, 7, 1, 6 ] );</span>
+[2,7][3,1,5][4,6]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MovedPoints(f);</span>
+[ 1, 2, 3, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FixedPointsOfPartialPerm(f);</span>
+[  ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FixedPointsOfPartialPerm(PartialPerm([1 .. 4]));</span>
+[ 1, 2, 3, 4 ]</pre></div> </body>
+    </html>

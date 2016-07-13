@@ -1,0 +1,63 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.9-7 IsSemiEchelonized</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X865A540F85FAE2DF"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.9-7 IsSemiEchelonized</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsSemiEchelonized</code>( <var class="Arg">B</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">B</var> be a basis of a Gaussian row or matrix space <math id="1444567304832052888" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math>, say (see <code class="func">IsGaussianSpace</code> (<a shape="rect" href="chap61_mj.html#X83724C157F4FDFB4"><span class="RefLink">61.9-3</span></a>)) over the field <math id="2025117451199977426" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <math id="-6182451850205806417" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math> is a row space then <var class="Arg">B</var> is semi-echelonized if the matrix formed by its basis vectors has the property that the first nonzero element in each row is the identity of <math id="5910496588350694560" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>, and all values exactly below these pivot elements are the zero of <math id="-2586948503306685217" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math> (cf. <code class="func">SemiEchelonMat</code> (<a shape="rect" href="chap24_mj.html#X7D5D6BD07B7E981B"><span class="RefLink">24.10-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">If <math id="5641316832741776639" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math> is a matrix space then <var class="Arg">B</var> is semi-echelonized if the matrix obtained by replacing each basis vector by the concatenation of its rows is semi-echelonized (see above, cf. <code class="func">SemiEchelonMats</code> (<a shape="rect" href="chap24_mj.html#X827D7971800DB661"><span class="RefLink">24.10-4</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= GF(2)^2;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B1:= Basis( V, [ [ 0, 1 ], [ 1, 0 ] ] * Z(2) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSemiEchelonized( B1 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B2:= Basis( V, [ [ 0, 1 ], [ 1, 1 ] ] * Z(2) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSemiEchelonized( B2 );</span>
+false
+</pre></div> </body>
+    </html>

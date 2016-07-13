@@ -1,0 +1,86 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.17-3 IsSortedList</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7BAA9B0E81D4A884"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.17-3 IsSortedList</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsSortedList</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns <code class="keyw">true</code> if <var class="Arg">obj</var> is a list and it is sorted, and <code class="keyw">false</code> otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml">A list <var class="Arg">list</var> is <em>sorted</em> if it is dense (see <code class="func">IsDenseList</code> (<a shape="rect" href="chap21_mj.html#X870AA9D8798C93DD"><span class="RefLink">21.1-2</span></a>)) and satisfies the relation <math id="2987290279780768097" display="inline" alttext="\textit{list}[i]\leq\textit{list}[j]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">
+      <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">
+        <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑙𝑖𝑠𝑡</mtext>
+        <mo xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.10.1.2.1.cmml" id="p1.1.m1.1.10.1.2">
+          <mo xref="p1.1.m1.1.10.1.2.1.1.cmml" id="p1.1.m1.1.2" stretchy="false">[</mo>
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+          <mo xref="p1.1.m1.1.10.1.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">≤</mo>
+      <mrow xref="p1.1.m1.1.10.2.cmml" id="p1.1.m1.1.10.2">
+        <mtext xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">𝑙𝑖𝑠𝑡</mtext>
+        <mo xref="p1.1.m1.1.10.2.1.cmml" id="p1.1.m1.1.10.2.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.10.2.2.1.cmml" id="p1.1.m1.1.10.2.2">
+          <mo xref="p1.1.m1.1.10.2.2.1.1.cmml" id="p1.1.m1.1.7" stretchy="false">[</mo>
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">j</mi>
+          <mo xref="p1.1.m1.1.10.2.2.1.1.cmml" id="p1.1.m1.1.9" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">
+        <leq xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">
+          <times xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml"/>
+          <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">list</span>
+          </mtext>
+          <apply xref="p1.1.m1.1.10.1.2" id="p1.1.m1.1.10.1.2.1.cmml">
+            <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.10.1.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.10.2" id="p1.1.m1.1.10.2.cmml">
+          <times xref="p1.1.m1.1.10.2.1" id="p1.1.m1.1.10.2.1.cmml"/>
+          <mtext xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">list</span>
+          </mtext>
+          <apply xref="p1.1.m1.1.10.2.2" id="p1.1.m1.1.10.2.2.1.cmml">
+            <csymbol xref="p1.1.m1.1.7" id="p1.1.m1.1.10.2.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑗</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{list}[i]\leq\textit{list}[j]</annotation>
+  </semantics>
+</math> whenever <math id="7085899127233163770" display="inline" alttext="i&amp;lt;j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">l</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.5">;</mo>
+      <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">j</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml">
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <times xref="p1.1.m1.1.7.2.1" id="p1.1.m1.1.7.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑡</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑗</ci>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i&amp;lt;j</annotation>
+  </semantics>
+</math>. Note that a sorted list is not necessarily duplicate free (see <code class="func">IsDuplicateFree</code> (<a shape="rect" href="chap21_mj.html#X7FA892828252BB3B"><span class="RefLink">21.17-2</span></a>) and <code class="func">IsSSortedList</code> (<a shape="rect" href="chap21_mj.html#X80CDAF45782E8DCB"><span class="RefLink">21.17-4</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">Many sorted lists are in fact homogeneous (see <code class="func">IsHomogeneousList</code> (<a shape="rect" href="chap21_mj.html#X7C71596C82B6EF35"><span class="RefLink">21.1-3</span></a>)), but also non-homogeneous lists may be sorted (see <a shape="rect" href="chap31_mj.html#X7B3BC7BA7BB2646D"><span class="RefLink">31.11</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">In sorted lists, membership test and computing of positions can be done by binary search, see <a shape="rect" href="chap21_mj.html#X80ABC25582343910"><span class="RefLink">21.19</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that <strong class="pkg">GAP</strong> cannot compare (by less than) arbitrary objects. This can cause that <code class="func">IsSortedList</code> runs into an error, if <var class="Arg">obj</var> is a list with some non-comparable entries.</p> </body>
+    </html>

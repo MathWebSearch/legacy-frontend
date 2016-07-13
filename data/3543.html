@@ -1,0 +1,44 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 23: Row Vectors-&gt;23.7-4 ReduceCoeffsMod</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap23.html#X7F74B1637CB13B7B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">23.7-4 ReduceCoeffsMod</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReduceCoeffsMod</code>( <var class="Arg">list1</var>[, <var class="Arg">len1</var>], <var class="Arg">list2</var>[, <var class="Arg">len2</var>], <var class="Arg">modulus</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="4038399194634797875" display="inline" alttext="p1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">⁢</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <times xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p1</annotation>
+  </semantics>
+</math> (and <math id="-5867397888520989688" display="inline" alttext="p2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">⁢</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">2</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <times xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p2</annotation>
+  </semantics>
+</math>) be polynomials given by the first <var class="Arg">len1</var> (<var class="Arg">len2</var>) entries of the coefficient list <var class="Arg">list1</var> (<var class="Arg">list2</var>). If <var class="Arg">len1</var> and <var class="Arg">len2</var> are omitted, they default to the lengths of <var class="Arg">list1</var> and <var class="Arg">list2</var>. <code class="func">ReduceCoeffsMod</code> changes <var class="Arg">list1</var> to the coefficient list of the remainder when dividing <var class="Arg">p1</var> by <var class="Arg">p2</var> modulo <var class="Arg">modulus</var>, which must be a positive integer. This operation changes <var class="Arg">list1</var> which therefore must be a mutable list. The operations returns the position of the last non-zero entry of the result but is not guaranteed to remove trailing zeroes.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:=[1,2,3,4];;m:=[5,6,7];;ReduceCoeffsMod(l,m,3);</span>
+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l;</span>
+[ 1, 0, 0, 0 ]
+</pre></div> </body>
+    </html>

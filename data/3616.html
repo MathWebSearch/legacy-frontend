@@ -1,0 +1,24 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 4: The Programming Language-&gt;4.6 Identifiers</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap4.html#X860313A179A5163F"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">4.6 <span class="Heading">Identifiers</span></h4><p xmlns="http://www.w3.org/1999/xhtml">An <em>identifier</em> is used to refer to a variable (see <a shape="rect" href="chap4_mj.html#X7A4C2D0E7E286B4F"><span class="RefLink">4.8</span></a>). An identifier usually consists of letters, digits, underscores <code class="code">_</code>, and &quot;at&quot;-characters <code class="code">@</code>, and must contain at least one non-digit. An identifier is terminated by the first character not in this class. Note that the &quot;at&quot;-character <code class="code">@</code> is used to implement namespaces, see Section <a shape="rect" href="chap4_mj.html#X875BA7C58175DEFB"><span class="RefLink">4.10</span></a> for details.</p><p xmlns="http://www.w3.org/1999/xhtml">Examples of valid identifiers are</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+a           foo         aLongIdentifier
+hello       Hello       HELLO
+x100        100x       _100
+some_people_prefer_underscores_to_separate_words
+WePreferMixedCaseToSeparateWords
+abc@def
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that case is significant, so the three identifiers in the second line are distinguished.</p><p xmlns="http://www.w3.org/1999/xhtml">The backslash <code class="code">\</code> can be used to include other characters in identifiers; a backslash followed by a character is equivalent to the character, except that this escape sequence is considered to be an ordinary letter. For example</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+G\(2\,5\)
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">is an identifier, not a call to a function <code class="code">G</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">An identifier that starts with a backslash is never a keyword, so for example <code class="code">\*</code> and <code class="code">\mod</code> are identifiers.</p><p xmlns="http://www.w3.org/1999/xhtml">The length of identifiers is not limited, however only the first <math id="5715944186095364165" display="inline" alttext="1023" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1023</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1023</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1023</annotation>
+  </semantics>
+</math> characters are significant. The escape sequence <code class="code">\</code><strong class="button">newline</strong> is ignored, making it possible to split long identifiers over multiple lines.</p> </body>
+    </html>

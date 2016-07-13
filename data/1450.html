@@ -1,0 +1,99 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.9-2 ElementaryDivisorsTransformationsMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X7AA1C9047B102204"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.9-2 ElementaryDivisorsTransformationsMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ElementaryDivisorsTransformationsMat</code>( [<var class="Arg">ring</var>, ]<var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ElementaryDivisorsTransformationsMatDestructive</code>( <var class="Arg">ring</var>, <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">ElementaryDivisorsTransformations</code>, in addition to the tasks done by <code class="code">ElementaryDivisorsMat</code>, also calculates transforming matrices. It returns a record with components <code class="code">normal</code> (a matrix <math id="7373104470310700966" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math>), <code class="code">rowtrans</code> (a matrix <math id="-3676661825836772695" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math>), and <code class="code">coltrans</code> (a matrix <math id="9079564146979862436" display="inline" alttext="Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q</annotation>
+  </semantics>
+</math>) such that <math id="3595398134720397258" display="inline" alttext="PAQ=S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+        <mo xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.6.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">A</mi>
+        <mo xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.6.1.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">Q</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">=</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">S</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <eq xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <times xref="p1.1.m1.1.6.1.1" id="p1.1.m1.1.6.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐴</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑄</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑆</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">PAQ=S</annotation>
+  </semantics>
+</math>. The operations are performed over the euclidean ring <var class="Arg">ring</var>, which must contain all matrix entries. For compatibility reasons it can be omitted and defaults to the <code class="func">DefaultRing</code> (<a shape="rect" href="chap56_mj.html#X83AFFCC77DE6ABDA"><span class="RefLink">56.1-3</span></a>) of the matrix entries.</p><p xmlns="http://www.w3.org/1999/xhtml">The function <code class="func">ElementaryDivisorsTransformationsMatDestructive</code> produces the same result but in the process destroys the contents of <var class="Arg">mat</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=KroneckerProduct(CompanionMat((x-1)^2),CompanionMat((x^3-1)*(x-1)));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=mat*One(x)-x*mat^0;</span>
+[ [ -x, 0, 0, 0, 0, 0, 0, 1 ], [ 0, -x, 0, 0, -1, 0, 0, -1 ], 
+  [ 0, 0, -x, 0, 0, -1, 0, 0 ], [ 0, 0, 0, -x, 0, 0, -1, -1 ], 
+  [ 0, 0, 0, -1, -x, 0, 0, -2 ], [ 1, 0, 0, 1, 2, -x, 0, 2 ], 
+  [ 0, 1, 0, 0, 0, 2, -x, 0 ], [ 0, 0, 1, 1, 0, 0, 2, -x+2 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t:=ElementaryDivisorsTransformationsMat(PolynomialRing(Rationals,1),mat);</span>
+rec( coltrans := [ [ 0, 0, 0, 0, 0, 0, 1/6*x^2-7/9*x-1/18, -3*x^3-x^2-x-1 ], 
+      [ 0, 0, 0, 0, 0, 0, -1/6*x^2+x-1, 3*x^3-3*x^2 ], 
+      [ 0, 0, 0, 0, 0, 1, -1/18*x^4+1/3*x^3-1/3*x^2-1/9*x, x^5-x^4+2*x^2-2*x 
+         ], [ 0, 0, 0, 0, -1, 0, -1/9*x^3+1/2*x^2+1/9*x, 2*x^4+x^3+x^2+2*x ],
+      [ 0, -1, 0, 0, 0, 0, -2/9*x^2+19/18*x, 4*x^3+x^2+x ], 
+      [ 0, 0, -1, 0, 0, -x, 1/18*x^5-1/3*x^4+1/3*x^3+1/9*x^2, 
+          -x^6+x^5-2*x^3+2*x^2 ], 
+      [ 0, 0, 0, -1, x, 0, 1/9*x^4-2/3*x^3+2/3*x^2+1/18*x, 
+          -2*x^5+2*x^4-x^2+x ], 
+      [ 1, 0, 0, 0, 0, 0, 1/6*x^3-7/9*x^2-1/18*x, -3*x^4-x^3-x^2-x ] ], 
+  normal := [ [ 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, x-1, 0 ], 
+      [ 0, 0, 0, 0, 0, 0, 0, x^7-x^6-2*x^4+2*x^3+x-1 ] ], 
+  rowtrans := [ [ 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 0, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 1, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 1, 0, 0, 0, 0 ], 
+      [ -x+2, -x, 0, 0, 1, 0, 0, 0 ], 
+      [ 2*x^2-4*x+2, 2*x^2-x, 0, 2, -2*x+1, 0, 0, 1 ], 
+      [ 3*x^3-6*x^2+3*x, 3*x^3-2*x^2, 2, 3*x, -3*x^2+2*x, 0, 1, 2*x ], 
+      [ 1/6*x^8-7/6*x^7+2*x^6-4/3*x^5+7/3*x^4-4*x^3+13/6*x^2-7/6*x+2, 
+          1/6*x^8-17/18*x^7+13/18*x^6-5/18*x^5+35/18*x^4-31/18*x^3+1/9*x^2-x+\
+2, 1/9*x^5-5/9*x^4+1/9*x^3-1/9*x^2+14/9*x-1/9, 
+          1/6*x^6-5/6*x^5+1/6*x^4-1/6*x^3+11/6*x^2-1/6*x, 
+          -1/6*x^7+17/18*x^6-13/18*x^5+5/18*x^4-35/18*x^3+31/18*x^2-1/9*x+1, 
+          1, 1/18*x^5-5/18*x^4+1/18*x^3-1/18*x^2+23/18*x-1/18, 
+          1/9*x^6-5/9*x^5+1/9*x^4-1/9*x^3+14/9*x^2-1/9*x ] ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t.rowtrans*mat*t.coltrans;</span>
+[ [ 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0 ], 
+  [ 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0 ], 
+  [ 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, x-1, 0 ], 
+  [ 0, 0, 0, 0, 0, 0, 0, x^7-x^6-2*x^4+2*x^3+x-1 ] ]
+</pre></div> </body>
+    </html>

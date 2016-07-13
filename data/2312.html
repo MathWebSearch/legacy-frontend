@@ -1,0 +1,53 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 28: Dictionaries and General Hash Tables-&gt;28.2 Dictionaries</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap28.html#X7B571EA282AF70D7"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">28.2 <span class="Heading">Dictionaries</span></h4><p xmlns="http://www.w3.org/1999/xhtml">This section contains the formal declarations for dictionaries. For information on how to use them, please refer to the previous section <a shape="rect" href="chap28_mj.html#X81560C4083E27955"><span class="RefLink">28.1</span></a>. There are several ways how dictionaries are implemented: As lists, as sorted lists, as hash tables or via binary lists. A user however will just have to call <code class="func">NewDictionary</code> (<a shape="rect" href="chap28_mj.html#X7E78E3E983A5C895"><span class="RefLink">28.2-1</span></a>) and obtain a &quot;suitable&quot; dictionary for the kind of objects she wants to create. It is possible however to create hash tables (see <a shape="rect" href="chap28_mj.html#X8444087381BBA88A"><span class="RefLink">28.4</span></a>) and dictionaries using binary lists (see <code class="func">DictionaryByPosition</code> (<a shape="rect" href="chap28_mj.html#X865D5BE1830A448D"><span class="RefLink">28.3-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">The use of two objects, <var class="Arg">obj</var> and <var class="Arg">objcoll</var> to parametrize the objects a dictionary is able to store might look confusing. However there are situations where either of them might be needed:</p><p xmlns="http://www.w3.org/1999/xhtml">The first situation is that of objects, for which no formal &quot;collection object&quot; has been defined. A typical example here might be subspaces of a vector space. <strong class="pkg">GAP</strong> does not formally define a &quot;Grassmannian&quot; or anything else to represent the multitude of all subspaces. So it is only possible to give the dictionary a &quot;sample object&quot;.</p><p xmlns="http://www.w3.org/1999/xhtml">The other situation is that of an object which might represent quite varied domains. The permutation <math id="5623830977838399746" display="inline" alttext="(1,10^{6})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
+        <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">10</mn>
+        <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">6</mn>
+      </msup>
+      <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml" closure="open">
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.cmml">
+          <csymbol id="p1.1.m1.1.8.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" type="integer">10</cn>
+          <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">6</cn>
+        </apply>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(1,10^{6})</annotation>
+  </semantics>
+</math> might be the nontrivial element of a cyclic group of order 2, it might be a representative of <math id="6681665154896745374" display="inline" alttext="S_{{10^{6}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+      <msup xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+        <mn xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">10</mn>
+        <mn xref="p1.1.m1.1.2.1.3.1.cmml" id="p1.1.m1.1.2.1.3.1">6</mn>
+      </msup>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+        <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <csymbol id="p1.1.m1.1.2.1.4.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml" type="integer">10</cn>
+          <cn xref="p1.1.m1.1.2.1.3.1" id="p1.1.m1.1.2.1.3.1.cmml" type="integer">6</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S_{{10^{6}}}</annotation>
+  </semantics>
+</math>. In the first situation the best approach might be just to have two entries for the two possible objects, in the second situation a much more elaborate approach might be needed.</p><p xmlns="http://www.w3.org/1999/xhtml">An algorithm that creates a dictionary will usually know a priori, from what domain all the objects will be, giving this domain permits to use a more efficient dictionary.</p><p xmlns="http://www.w3.org/1999/xhtml">This is particularly true for vectors. From a single vector one cannot decide whether a calculation will take place over the smallest field containing all its entries or over a larger field.</p> </body>
+    </html>

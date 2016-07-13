@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 56: Rings-&gt;56.5-9 Factors</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap56.html#X82D6EDC685D12AE2"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">56.5-9 Factors</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Factors</code>( [<var class="Arg">R</var>, ]<var class="Arg">r</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Factors</code> returns the factorization of the ring element <var class="Arg">r</var> in the ring <var class="Arg">R</var>, if given, and otherwise in in its default ring (see <code class="func">DefaultRing</code> (<a shape="rect" href="chap56_mj.html#X83AFFCC77DE6ABDA"><span class="RefLink">56.1-3</span></a>)). The factorization is returned as a list of primes (see <code class="func">IsPrime</code> (<a shape="rect" href="chap56_mj.html#X7AA107AE7F79C6D8"><span class="RefLink">56.5-8</span></a>)). Each element in the list is a standard associate (see <code class="func">StandardAssociate</code> (<a shape="rect" href="chap56_mj.html#X7B1A9A4C7C59FB36"><span class="RefLink">56.5-5</span></a>)) except the first one, which is multiplied by a unit as necessary to have <code class="code">Product( Factors( <var class="Arg">R</var>, <var class="Arg">r</var> ) ) = <var class="Arg">r</var></code>. This list is usually also sorted, thus smallest prime factors come first. If <var class="Arg">r</var> is a unit or zero, <code class="code">Factors( <var class="Arg">R</var>, <var class="Arg">r</var> ) = [ <var class="Arg">r</var> ]</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x:= Indeterminate( GF(2), &quot;x&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pol:= x^2+x+1;</span>
+x^2+x+Z(2)^0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Factors( pol );</span>
+[ x^2+x+Z(2)^0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Factors( PolynomialRing( GF(4) ), pol );</span>
+[ x+Z(2^2), x+Z(2^2)^2 ]
+</pre></div> </body>
+    </html>

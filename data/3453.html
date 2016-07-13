@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.20-4 DuplicateFreeList</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X8727F2928467C2F9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.20-4 DuplicateFreeList</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DuplicateFreeList</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Unique</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a new mutable list whose entries are the elements of the list <var class="Arg">list</var> with duplicates removed. <code class="func">DuplicateFreeList</code> only uses the <code class="code">=</code> comparison and will not sort the result. Therefore <code class="func">DuplicateFreeList</code> can be used even if the elements of <var class="Arg">list</var> do not lie in the same family. Otherwise, if <var class="Arg">list</var> contains objects that can be compared with <code class="func">\&lt;</code> (<a shape="rect" href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) then it is much more efficient to use <code class="func">Set</code> (<a shape="rect" href="chap30_mj.html#X7E399AC97FD98217"><span class="RefLink">30.3-7</span></a>) instead of <code class="func">DuplicateFreeList</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Unique</code> is a synonym for <code class="func">DuplicateFreeList</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:=[1,Z(3),1,&quot;abc&quot;,Group((1,2,3),(1,2)),Z(3),Group((1,2),(2,3))];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DuplicateFreeList( l );</span>
+[ 1, Z(3), &quot;abc&quot;, Group([ (1,2,3), (1,2) ]) ]
+</pre></div> </body>
+    </html>

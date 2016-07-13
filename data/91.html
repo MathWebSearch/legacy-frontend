@@ -1,0 +1,46 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.4-7 IdentityFromSCTable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X78B633CE7A5B9F9A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.4-7 IdentityFromSCTable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IdentityFromSCTable</code>( <var class="Arg">T</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">T</var> be a structure constants table of an algebra <math id="-5544559219147355584" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> of dimension <math id="-6030571273651418951" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>. <code class="code">IdentityFromSCTable( <var class="Arg">T</var> )</code> is either <code class="keyw">fail</code> or the vector of length <math id="5875474285288230008" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> that contains the coefficients of the multiplicative identity of <math id="1119986299884056459" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> with respect to the basis that belongs to <var class="Arg">T</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T:= EmptySCTable( 2, 0 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetEntrySCTable( T, 1, 1, [ 1, 1 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetEntrySCTable( T, 1, 2, [ 1, 2 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetEntrySCTable( T, 2, 1, [ 1, 2 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IdentityFromSCTable( T );</span>
+[ 1, 0 ]
+</pre></div> </body>
+    </html>

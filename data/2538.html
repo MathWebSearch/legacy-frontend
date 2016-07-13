@@ -1,0 +1,170 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 68: p-adic Numbers (preliminary)-&gt;68.2-2 PadicNumber</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap68.html#X7C6F2F018084AFC4"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">68.2-2 PadicNumber</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PadicNumber</code>( <var class="Arg">fam</var>, <var class="Arg">rat</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PadicNumber</code>( <var class="Arg">purefam</var>, <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PadicNumber</code>( <var class="Arg">extfam</var>, <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">(see also <code class="func">PadicNumber</code> (<a shape="rect" href="chap68_mj.html#X84A79ED87B47CC07"><span class="RefLink">68.1-2</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">PadicNumber</code> creates a <math id="-8743853409846073931" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-adic number in the <math id="-4885213991035795474" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-adic numbers family <var class="Arg">fam</var>. The first form returns the <math id="-2211284731183074474" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-adic number corresponding to the rational <var class="Arg">rat</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The second form takes a pure <math id="-6082332895890080998" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-adic numbers family <var class="Arg">purefam</var> and a list <var class="Arg">list</var> of length two, and returns the number <math id="9073656753642426732" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math><code class="code">^</code><var class="Arg">list</var><code class="code">[1] * </code><var class="Arg">list</var><code class="code">[2]</code>. It must be guaranteed that no entry of <var class="Arg">list</var><code class="code">[2]</code> is divisible by the prime <math id="610292256571723951" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>. (Otherwise precision will get lost.)</p><p xmlns="http://www.w3.org/1999/xhtml">The third form creates a number in the family <var class="Arg">extfam</var> of a <math id="6411915927642009342" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-adic extension. The second argument must be a list <var class="Arg">list</var> of length two such that <var class="Arg">list</var><code class="code">[2]</code> is the list of coefficients w.r.t. the basis <math id="-3340087608558348708" display="inline" alttext="\{1,\ldots,x^{{f-1}}\cdot y^{{e-1}}\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12">
+      <mo id="p1.1.m1.1.1" stretchy="false">{</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" mathvariant="normal">…</mi>
+      <mo id="p1.1.m1.1.5">,</mo>
+      <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.2">
+        <msup xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.2.1">
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">x</mi>
+          <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.7.1">
+            <mi xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">f</mi>
+            <mo xref="p1.1.m1.1.7.1.2.cmml" id="p1.1.m1.1.7.1.2">-</mo>
+            <mn xref="p1.1.m1.1.7.1.3.cmml" id="p1.1.m1.1.7.1.3">1</mn>
+          </mrow>
+        </msup>
+        <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">⋅</mo>
+        <msup xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.2.2">
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">y</mi>
+          <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.10.1">
+            <mi xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">e</mi>
+            <mo xref="p1.1.m1.1.10.1.2.cmml" id="p1.1.m1.1.10.1.2">-</mo>
+            <mn xref="p1.1.m1.1.10.1.3.cmml" id="p1.1.m1.1.10.1.3">1</mn>
+          </mrow>
+        </msup>
+      </mrow>
+      <mo id="p1.1.m1.1.11" stretchy="false">}</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <set xref="p1.1.m1.1.12" id="p1.1.m1.1.12.1.cmml">
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">…</ci>
+        <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.12.2.cmml">
+          <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">⋅</ci>
+          <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.12.2.1.cmml">
+            <csymbol id="p1.1.m1.1.12.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑥</ci>
+            <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.7.1.cmml">
+              <minus xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml">𝑓</ci>
+              <cn xref="p1.1.m1.1.7.1.3" id="p1.1.m1.1.7.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.12.2.2.cmml">
+            <csymbol id="p1.1.m1.1.12.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑦</ci>
+            <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.10.1.cmml">
+              <minus xref="p1.1.m1.1.10.1.2" id="p1.1.m1.1.10.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml">𝑒</ci>
+              <cn xref="p1.1.m1.1.10.1.3" id="p1.1.m1.1.10.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+        </apply>
+      </set>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\{1,\ldots,x^{{f-1}}\cdot y^{{e-1}}\}</annotation>
+  </semantics>
+</math> of the extended <math id="844882988820676838" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-adic field and <var class="Arg">list</var><code class="code">[1]</code> is a common <math id="6996414782708125729" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-part of all these coefficients.</p><p xmlns="http://www.w3.org/1999/xhtml"><math id="-8438109360116199065" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-adic numbers admit the usual field operations.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">efam:=PadicExtensionNumberFamily(3, 5, [1,1,1], [1,1]);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PadicNumber(efam,7/9);</span>
+padic(120(3),0(3))
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><em>A word of warning:</em></p><p xmlns="http://www.w3.org/1999/xhtml">Depending on the actual representation of quotients, precision may seem to &quot;vanish&quot;. For example in <code class="code">PadicExtensionNumberFamily(3, 5, [1,1,1], [1,1])</code> the number <code class="code">(1.2000, 0.1210)(3)</code> can be represented as <code class="code">[ 0, [ 1.2000, 0.1210 ] ]</code> or as <code class="code">[ -1, [ 12.000, 1.2100 ] ]</code> (here the coefficients have to be multiplied by <math id="220822814349551246" display="inline" alttext="p^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+        <mo xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">-</mo>
+        <mn xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">1</mn>
+      </mrow>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <minus xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml"/>
+          <cn xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p^{{-1}}</annotation>
+  </semantics>
+</math>).</p><p xmlns="http://www.w3.org/1999/xhtml">So there may be a number <code class="code">(1.2, 2.2)(3)</code> which seems to have only two digits of precision instead of the declared 5. But internally the number is stored as <code class="code">[ -3, [ 0.0012, 0.0022 ] ]</code> and so has in fact maximum precision.</p> </body>
+    </html>

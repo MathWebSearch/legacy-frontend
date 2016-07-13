@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.12-16 UnderlyingExternalSet</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X8190A8247F29A5C7"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.12-16 UnderlyingExternalSet</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ UnderlyingExternalSet</code>( <var class="Arg">acthom</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The underlying set of an action homomorphism <var class="Arg">acthom</var> is the external set on which it was defined.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2,3),(1,2));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=ActionHomomorphism(g,Arrangements([1..4],3),OnTuples);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s:=UnderlyingExternalSet(hom);</span>
+&lt;xset:[[ 1, 2, 3 ],[ 1, 2, 4 ],[ 1, 3, 2 ],[ 1, 3, 4 ],[ 1, 4, 2 ],
+[ 1, 4, 3 ],[ 2, 1, 3 ],[ 2, 1, 4 ],[ 2, 3, 1 ],[ 2, 3, 4 ],
+[ 2, 4, 1 ],[ 2, 4, 3 ],[ 3, 1, 2 ],[ 3, 1, 4 ],[ 3, 2, 1 ], ...]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(s,&quot;\n&quot;);</span>
+[ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 2 ], [ 1, 3, 4 ], [ 1, 4, 2 ], 
+  [ 1, 4, 3 ], [ 2, 1, 3 ], [ 2, 1, 4 ], [ 2, 3, 1 ], [ 2, 3, 4 ], 
+  [ 2, 4, 1 ], [ 2, 4, 3 ], [ 3, 1, 2 ], [ 3, 1, 4 ], [ 3, 2, 1 ], 
+  [ 3, 2, 4 ], [ 3, 4, 1 ], [ 3, 4, 2 ], [ 4, 1, 2 ], [ 4, 1, 3 ], 
+  [ 4, 2, 1 ], [ 4, 2, 3 ], [ 4, 3, 1 ], [ 4, 3, 2 ] ]
+</pre></div> </body>
+    </html>

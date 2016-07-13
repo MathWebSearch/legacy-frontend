@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 75: Monomiality Questions-&gt;75.3-2 IsPrimitiveCharacter</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap75.html#X7BC72ECE822D4245"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">75.3-2 IsPrimitiveCharacter</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsPrimitiveCharacter</code>( <var class="Arg">chi</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a character <var class="Arg">chi</var> of the group <math id="4668489548852153918" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, say, <code class="func">IsPrimitiveCharacter</code> returns <code class="keyw">true</code> if <var class="Arg">chi</var> is not induced from any proper subgroup, and <code class="keyw">false</code> otherwise.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPrimitive( Irr( Sl23 )[4] );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPrimitive( Irr( Sl23 )[7] );</span>
+false
+</pre></div> </body>
+    </html>

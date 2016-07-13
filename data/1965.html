@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 43: Permutation Groups-&gt;43.4-1 IsNaturalSymmetricGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43.html#X8129BE59781478E1"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">43.4-1 IsNaturalSymmetricGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsNaturalSymmetricGroup</code>( <var class="Arg">group</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsNaturalAlternatingGroup</code>( <var class="Arg">group</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A group is a natural symmetric or alternating group if it is a permutation group acting as symmetric or alternating group, respectively, on its moved points.</p><p xmlns="http://www.w3.org/1999/xhtml">For groups that are known to be natural symmetric or natural alternating groups, very efficient methods for computing membership, conjugacy classes, Sylow subgroups etc. are used.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,5,7,8,99),(1,99,13,72));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsNaturalSymmetricGroup(g);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g;</span>
+Sym( [ 1, 5, 7, 8, 13, 72, 99 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsNaturalSymmetricGroup( Group( (1,2)(4,5), (1,2,3)(4,5,6) ) );</span>
+false
+</pre></div> </body>
+    </html>

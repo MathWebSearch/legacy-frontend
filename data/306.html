@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 17: Rational Numbers-&gt;17.2-5 DenominatorRat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap17.html#X81F6B5877A81E727"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">17.2-5 DenominatorRat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DenominatorRat</code>( <var class="Arg">rat</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DenominatorRat</code> returns the denominator of the rational <var class="Arg">rat</var>. Because the numerator holds the sign of the rational the denominator is always a positive integer. Integers are rationals with the denominator 1, thus <code class="func">DenominatorRat</code> returns 1 for integers.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DenominatorRat( 2/3 );</span>
+3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># numerator and denominator are made relatively prime:</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DenominatorRat( 66/123 );</span>
+41
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># the denominator holds the sign of the rational:</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DenominatorRat( 17/-13 );</span>
+13
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DenominatorRat( 11 ); # integers are rationals with denominator 1</span>
+1
+</pre></div> </body>
+    </html>

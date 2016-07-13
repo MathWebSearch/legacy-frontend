@@ -1,0 +1,24 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.10-2 ConjugacyClasses</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X871B570284BBA685"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.10-2 ConjugacyClasses</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ConjugacyClasses</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the conjugacy classes of elements of <var class="Arg">G</var> as a list of class objects of <var class="Arg">G</var> (see <code class="func">ConjugacyClass</code> (<a shape="rect" href="chap39_mj.html#X7B2F207F7F85F5B8"><span class="RefLink">39.10-1</span></a>) for details). It is guaranteed that the class of the identity is in the first position, the further arrangement depends on the method chosen (and might be different for equal but not identical groups).</p><p xmlns="http://www.w3.org/1999/xhtml">For very small groups (of size up to 500) the classes will be computed by the conjugation action of <var class="Arg">G</var> on itself (see <code class="func">ConjugacyClassesByOrbits</code> (<a shape="rect" href="chap39_mj.html#X852B3634789D770E"><span class="RefLink">39.10-4</span></a>)). This can be deliberately switched off using the &quot;<code class="code">noaction</code>&quot; option shown below.</p><p xmlns="http://www.w3.org/1999/xhtml">For solvable groups, the default method to compute the classes is by homomorphic lift (see section <a shape="rect" href="chap45_mj.html#X79DCCF6D80351859"><span class="RefLink">45.17</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">For other groups the method of <a shape="rect" href="chapBib_mj.html#biBHulpkeClasses">[Hul00]</a> is employed.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ConjugacyClasses</code> supports the following options that can be used to modify this strategy:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">random</code></strong></dt><dd><p>The classes are computed by random search. See <code class="func">ConjugacyClassesByRandomSearch</code> (<a shape="rect" href="chap39_mj.html#X7D6ED84C86C2979B"><span class="RefLink">39.10-3</span></a>) below.</p>
+
+</dd><dt><strong class="Mark"><code class="code">action</code></strong></dt><dd><p>The classes are computed by action of <var class="Arg">G</var> on itself. See <code class="func">ConjugacyClassesByOrbits</code> (<a shape="rect" href="chap39_mj.html#X852B3634789D770E"><span class="RefLink">39.10-4</span></a>) below.</p>
+
+</dd><dt><strong class="Mark"><code class="code">noaction</code></strong></dt><dd><p>Even for small groups <code class="func">ConjugacyClassesByOrbits</code> (<a shape="rect" href="chap39_mj.html#X852B3634789D770E"><span class="RefLink">39.10-4</span></a>) is not used as a default. This can be useful if the elements of the group use a lot of memory.</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=SymmetricGroup(4);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cl:=ConjugacyClasses(g);</span>
+[ ()^G, (1,2)^G, (1,2)(3,4)^G, (1,2,3)^G, (1,2,3,4)^G ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Representative(cl[3]);Centralizer(cl[3]);</span>
+(1,2)(3,4)
+Group([ (1,2), (1,3)(2,4), (3,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(Centralizer(cl[5]));</span>
+4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(cl[2]);</span>
+6
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In general, you will not need to have to influence the method, but simply call <code class="func">ConjugacyClasses</code> –<strong class="pkg">GAP</strong> will try to select a suitable method on its own. The method specifications are provided here mainly for expert use.</p> </body>
+    </html>

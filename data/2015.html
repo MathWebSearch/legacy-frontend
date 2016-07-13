@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 44: Matrix Groups-&gt;44.2-4 TransposedMatrixGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap44.html#X832D18C77ED608DE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">44.2-4 TransposedMatrixGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TransposedMatrixGroup</code>( <var class="Arg">matgrp</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the transpose of the matrix group <var class="Arg">matgrp</var>. The transpose of the transpose of <var class="Arg">matgrp</var> is identical to <var class="Arg">matgrp</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := Group( [[0,-1],[1,0]] );</span>
+Group([ [ [ 0, -1 ], [ 1, 0 ] ] ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T := TransposedMatrixGroup( G );</span>
+Group([ [ [ 0, 1 ], [ -1, 0 ] ] ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( G, TransposedMatrixGroup( T ) );</span>
+true
+</pre></div> </body>
+    </html>

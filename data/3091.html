@@ -1,0 +1,78 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 79: Creating New Objects-&gt;79.17 Mutability and Copying</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap79.html#X8090219A7C76AF55"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">79.17 <span class="Heading">Mutability and Copying</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Any <strong class="pkg">GAP</strong> object is either mutable or immutable. This can be tested with the function <code class="func">IsMutable</code> (<a shape="rect" href="chap12_mj.html#X7999AD1D7A4F1F46"><span class="RefLink">12.6-2</span></a>). The intended meaning of (im)mutability is a mathematical one: an immutable object should never change in such a way that it represents a different Element. Objects <em>may</em> change in other ways, for instance to store more information, or represent an element in a different way.</p><p xmlns="http://www.w3.org/1999/xhtml">Immutability is enforced in different ways for built-in objects (like records, or lists) and for external objects (made using <code class="func">Objectify</code> (<a shape="rect" href="chap79_mj.html#X7CB5C12E813F512B"><span class="RefLink">79.9-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">For built-in objects which are immutable, the kernel will prevent you from changing them. Thus</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := [1,2,4];</span>
+[ 1, 2, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MakeImmutable(l);</span>
+[ 1, 2, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l[3] := 5;</span>
+Error, Lists Assignment: &lt;list&gt; must be a mutable list
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">For external objects, the situation is different. An external object which claims to be immutable (i.e. its type does not contain <code class="func">IsMutable</code> (<a shape="rect" href="chap12_mj.html#X7999AD1D7A4F1F46"><span class="RefLink">12.6-2</span></a>)) should not admit any methods which change the element it represents. The kernel does <em>not</em> prevent the use of <code class="code">!.</code> and <code class="code">![</code> to change the underlying data structure. This is used for instance by the code that stores attribute values for reuse. In general, these <code class="code">!</code> operations should only be used in methods which depend on the representation of the object. Furthermore, we would <em>not</em> recommend users to install methods which depend on the representations of objects created by the library or by <strong class="pkg">GAP</strong> packages, as there is certainly no guarantee of the representations being the same in future versions of <strong class="pkg">GAP</strong>.</p><p xmlns="http://www.w3.org/1999/xhtml">Here we see an immutable object (the group <math id="-5709498670341804810" display="inline" alttext="S_{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">4</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">4</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S_{4}</annotation>
+  </semantics>
+</math>), in which we improperly install a new component.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := SymmetricGroup(IsPermGroup,4);</span>
+Sym( [ 1 .. 4 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMutable(g);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NamesOfComponents(g);</span>
+[ &quot;Size&quot;, &quot;NrMovedPoints&quot;, &quot;MovedPoints&quot;, 
+  &quot;GeneratorsOfMagmaWithInverses&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g!.silly := &quot;rubbish&quot;;</span>
+&quot;rubbish&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NamesOfComponents(g);</span>
+[ &quot;Size&quot;, &quot;NrMovedPoints&quot;, &quot;MovedPoints&quot;, 
+  &quot;GeneratorsOfMagmaWithInverses&quot;, &quot;silly&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g!.silly;</span>
+&quot;rubbish&quot;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">On the other hand, if we form an immutable externally represented list, we find that <strong class="pkg">GAP</strong> will not let us change the object.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e := Enumerator(g);</span>
+&lt;enumerator of perm group&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMutable(e);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsList(e);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e[3];</span>
+(1,2,4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e[3] := false;</span>
+Error, The list you are trying to assign to is immutable
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">When we consider copying objects, another filter <code class="func">IsCopyable</code> (<a shape="rect" href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>), enters the game and we find that <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) and <code class="func">StructuralCopy</code> (<a shape="rect" href="chap12_mj.html#X7C1E70587EBDD2CB"><span class="RefLink">12.7-2</span></a>) behave quite differently. Objects can be divided for this purpose into three: mutable objects, immutable but copyable objects, and non-copyable objects (called constants).</p><p xmlns="http://www.w3.org/1999/xhtml">A mutable or copyable object should have a method for the operation <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>), which should make a new mutable object, sharing its top-level subobjects with the original. The exact definition of top-level subobject may be defined by the implementor for new kinds of object.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) applied to a constant simply returns the constant.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">StructuralCopy</code> (<a shape="rect" href="chap12_mj.html#X7C1E70587EBDD2CB"><span class="RefLink">12.7-2</span></a>) is expected to be much less used than <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>). Applied to a mutable object, it returns a new mutable object which shares no mutable sub-objects with the input. Applied to an immutable object (even a copyable one), it just returns the object. It is not an operation (indeed, it's a rather special kernel function).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e1 := StructuralCopy(e);</span>
+&lt;enumerator of perm group&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMutable(e1);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e2 := ShallowCopy(e);</span>
+[ (), (1,4), (1,2,4), (1,3,4), (2,4), (1,4,2), (1,2), (1,3,4,2), 
+  (2,3,4), (1,4,2,3), (1,2,3), (1,3)(2,4), (3,4), (1,4,3), (1,2,4,3), 
+  (1,3), (2,4,3), (1,4,3,2), (1,2)(3,4), (1,3,2), (2,3), (1,4)(2,3), 
+  (1,2,3,4), (1,3,2,4) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"/>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">There are two other related functions: <code class="func">Immutable</code> (<a shape="rect" href="chap12_mj.html#X7F0ABF2C870B0CBB"><span class="RefLink">12.6-3</span></a>), which makes a new immutable object which shares no mutable subobjects with its input and <code class="func">MakeImmutable</code> (<a shape="rect" href="chap12_mj.html#X80CE136D804097C7"><span class="RefLink">12.6-4</span></a>) which changes an object and its mutable subobjects <em>in place</em> to be immutable. It should only be used on &quot;new&quot; objects that you have just created, and which cannot share mutable subobjects with anything else.</p><p xmlns="http://www.w3.org/1999/xhtml">Both <code class="func">Immutable</code> (<a shape="rect" href="chap12_mj.html#X7F0ABF2C870B0CBB"><span class="RefLink">12.6-3</span></a>) and <code class="func">MakeImmutable</code> (<a shape="rect" href="chap12_mj.html#X80CE136D804097C7"><span class="RefLink">12.6-4</span></a>) work on external objects by just resetting the <code class="func">IsMutable</code> (<a shape="rect" href="chap12_mj.html#X7999AD1D7A4F1F46"><span class="RefLink">12.6-2</span></a>) filter in the object's type. This should make ineligible any methods that might change the object. As a consequence, you must allow for the possibility of immutable versions of any objects you create.</p><p xmlns="http://www.w3.org/1999/xhtml">So, if you are implementing your own external objects. The rules amount to the following:</p><ol xmlns="http://www.w3.org/1999/xhtml"><li><p>You decide if your objects should be mutable or copyable or constants, by fixing whether their type includes <code class="func">IsMutable</code> (<a shape="rect" href="chap12_mj.html#X7999AD1D7A4F1F46"><span class="RefLink">12.6-2</span></a>) or <code class="func">IsCopyable</code> (<a shape="rect" href="chap12_mj.html#X811EFD727EBD1ADC"><span class="RefLink">12.6-1</span></a>).</p>
+
+</li><li><p>You install methods for your objects respecting that decision:</p>
+
+
+<dl><dt><strong class="Mark">for constants:</strong></dt><dd><p>no methods change the underlying elements;</p>
+
+</dd><dt><strong class="Mark">for copyables:</strong></dt><dd><p>you provide a method for <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>);</p>
+
+</dd><dt><strong class="Mark">for mutables:</strong></dt><dd><p>you may have methods that change the underlying elements and these should explicitly require <code class="func">IsMutable</code> (<a shape="rect" href="chap12_mj.html#X7999AD1D7A4F1F46"><span class="RefLink">12.6-2</span></a>).</p>
+
+</dd></dl>
+</li></ol> </body>
+    </html>

@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.7-6 FusionsTom</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X86B9891C788D5107"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.7-6 FusionsTom</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FusionsTom</code>( <var class="Arg">tom</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a table of marks <var class="Arg">tom</var>, <code class="func">FusionsTom</code> is a list of fusions into other tables of marks. Each fusion is a list of length two, the first entry being the <code class="func">Identifier</code> (<a shape="rect" href="chap70_mj.html#X810E53597B5BB4F8"><span class="RefLink">70.7-9</span></a>)) value of the image table, the second entry being the list of images of the class positions of <var class="Arg">tom</var> in the image table.</p><p xmlns="http://www.w3.org/1999/xhtml">This attribute is mainly used for tables of marks in the <strong class="pkg">GAP</strong> library (see <a shape="rect" href="chap70_mj.html#X794ABC7187A9285B"><span class="RefLink">70.13</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus:= FusionsTom( a6 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus[1];</span>
+[ &quot;L3(4)&quot;, 
+  [ 1, 2, 3, 3, 14, 5, 9, 7, 15, 15, 24, 26, 27, 32, 33, 50, 57, 55, 
+      63, 73, 77, 90 ] ]
+</pre></div> </body>
+    </html>

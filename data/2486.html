@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 30: Collections-&gt;30.3-8 AsList</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30.html#X8289FCCC8274C89D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.3-8 AsList</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsList</code>( <var class="Arg">listorcoll</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">AsList</code> returns a immutable list <var class="Arg">imm</var>. If the argument is a list (which may contain holes), then <code class="code">Length( <var class="Arg">imm</var> )</code> is the <code class="func">Length</code> (<a shape="rect" href="chap21_mj.html#X780769238600AFD1"><span class="RefLink">21.17-5</span></a>) value of this list, and <var class="Arg">imm</var> contains the elements (and holes) of of the list in the same order. If the argument is a collection that is not a list, then <code class="code">Length( <var class="Arg">imm</var> )</code> is the number of different elements of this collection, and <var class="Arg">imm</var> contains the different elements of the collection in an unspecified order, which may change for repeated calls of <code class="func">AsList</code>. <code class="code"><var class="Arg">imm</var>[<var class="Arg">pos</var>]</code> executes in constant time (see <code class="func">IsConstantTimeAccessList</code> (<a shape="rect" href="chap21_mj.html#X7C84E16A85C99C8C"><span class="RefLink">21.1-6</span></a>)), and the size of <var class="Arg">imm</var> in memory is proportional to its length.</p><p xmlns="http://www.w3.org/1999/xhtml">If you expect to do many element tests in the resulting list, it might be worth to use a sorted list instead, using <code class="func">AsSSortedList</code> (<a shape="rect" href="chap30_mj.html#X856D927378C33548"><span class="RefLink">30.3-10</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:= AsList( [ 1, 3, 3,, 2 ] );</span>
+[ 1, 3, 3,, 2 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMutable( l );  IsSortedList( l );  IsConstantTimeAccessList( l );</span>
+false
+false
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsList( Group( (1,2,3), (1,2) ) );</span>
+[ (), (2,3), (1,2), (1,2,3), (1,3,2), (1,3) ]
+</pre></div> </body>
+    </html>

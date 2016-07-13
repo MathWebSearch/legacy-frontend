@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 40: Group Homomorphisms-&gt;40.1-2 GroupHomomorphismByImagesNC</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap40.html#X7AB15AF5830F2A6B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">40.1-2 GroupHomomorphismByImagesNC</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GroupHomomorphismByImagesNC</code>( <var class="Arg">G</var>, <var class="Arg">H</var>[[, <var class="Arg">gens</var>], <var class="Arg">imgs</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">GroupHomomorphismByImagesNC</code> creates a homomorphism as <code class="func">GroupHomomorphismByImages</code> (<a shape="rect" href="chap40_mj.html#X7F348F497C813BE0"><span class="RefLink">40.1-1</span></a>) does, however it does not test whether <var class="Arg">gens</var> generates <var class="Arg">G</var> and that the mapping of <var class="Arg">gens</var> to <var class="Arg">imgs</var> indeed defines a group homomorphism. Because these tests can be expensive it can be substantially faster than <code class="func">GroupHomomorphismByImages</code> (<a shape="rect" href="chap40_mj.html#X7F348F497C813BE0"><span class="RefLink">40.1-1</span></a>). Results are unpredictable if the conditions do not hold.</p><p xmlns="http://www.w3.org/1999/xhtml">If omitted, the arguments <var class="Arg">gens</var> and <var class="Arg">imgs</var> default to the <code class="func">GeneratorsOfGroup</code> (<a shape="rect" href="chap39_mj.html#X79C44528864044C5"><span class="RefLink">39.2-4</span></a>) value of <var class="Arg">G</var> and <var class="Arg">H</var>, respectively.</p><p xmlns="http://www.w3.org/1999/xhtml">(For creating a possibly multi-valued mapping from <var class="Arg">G</var> to <var class="Arg">H</var> that respects multiplication and inverses, <code class="func">GroupGeneralMappingByImages</code> (<a shape="rect" href="chap40_mj.html#X7A59F2C47BD41DC8"><span class="RefLink">40.1-3</span></a>) can be used.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens:=[(1,2,3,4),(1,2)];</span>
+[ (1,2,3,4), (1,2) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group(gens);</span>
+Group([ (1,2,3,4), (1,2) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h:=Group((1,2,3),(1,2));</span>
+Group([ (1,2,3), (1,2) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=GroupHomomorphismByImages(g,h,gens,[(1,2),(1,3)]);</span>
+[ (1,2,3,4), (1,2) ] -&gt; [ (1,2), (1,3) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Image(hom,(1,4));</span>
+(2,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">map:=GroupHomomorphismByImages(g,h,gens,[(1,2,3),(1,2)]);</span>
+fail
+</pre></div> </body>
+    </html>

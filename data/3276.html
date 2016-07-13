@@ -1,0 +1,47 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 81: An Example – Residue Class Rings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap81.html#X8125CC6A87409887"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap81_mj.html#X8125CC6A87409887">81 <span class="Heading">An Example – Residue Class Rings</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap81_mj.html#X81008A74838A792E">81.1 <span class="Heading">A First Attempt to Implement Elements of Residue Class Rings</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap81_mj.html#X78B6425787FDB0E5">81.2 <span class="Heading">Why Proceed in a Different Way?</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap81_mj.html#X85B914DD81732492">81.3 <span class="Heading">A Second Attempt to Implement Elements of Residue Class Rings</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap81_mj.html#X83127B258512C436">81.4 <span class="Heading">Compatibility of Residue Class Rings with Prime Fields</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap81_mj.html#X81CA1C7087A815DE">81.5 <span class="Heading">Further Improvements in Implementing Residue Class Rings</span></a>
+</span>
+</div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">81 <span class="Heading">An Example – Residue Class Rings</span></h3><p xmlns="http://www.w3.org/1999/xhtml">In this chapter, we give an example how <strong class="pkg">GAP</strong> can be extended by new data structures and new functionality. In order to focus on the issues of the implementation, the mathematics in the example chosen is trivial. Namely, we will discuss computations with elements of residue class rings <math id="-6953276379762985763" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">/</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" mathvariant="normal">?</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.cmml">
+          <divide xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">?</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">The first attempt is straightforward (see Section <a shape="rect" href="chap81_mj.html#X81008A74838A792E"><span class="RefLink">81.1</span></a>), it deals with the implementation of the necessary arithmetic operations. Section <a shape="rect" href="chap81_mj.html#X78B6425787FDB0E5"><span class="RefLink">81.2</span></a> deals with the question why it might be useful to use an approach that involves creating a new data structure and integrating the algorithms dealing with these new <strong class="pkg">GAP</strong> objects into the system. Section <a shape="rect" href="chap81_mj.html#X85B914DD81732492"><span class="RefLink">81.3</span></a> shows how this can be done in our example, and Section <a shape="rect" href="chap81_mj.html#X83127B258512C436"><span class="RefLink">81.4</span></a>, the question of further compatibility of the new objects with known <strong class="pkg">GAP</strong> objects is discussed. Finally, Section <a shape="rect" href="chap81_mj.html#X81CA1C7087A815DE"><span class="RefLink">81.5</span></a> gives some hints how to improve the implementation presented before.</p> </body>
+    </html>

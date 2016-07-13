@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.4-3 ComponentTransformationInt</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X834A313B7DAF06D5"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.4-3 ComponentTransformationInt</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ComponentTransformationInt</code>( <var class="Arg">f</var>, <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A list of positive integers.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">f</var> is a transformation and <var class="Arg">n</var> is a positive integer, then <code class="code">ComponentTransformationInt</code> returns those elements <code class="code">i</code> such that <code class="code"><var class="Arg">n</var>^<var class="Arg">f</var>^j=i</code> for some positive integer <code class="code">j</code>, i.e. the elements of the component of <var class="Arg">f</var> containing <var class="Arg">n</var> that can be obtained by applying powers of <var class="Arg">f</var> to <var class="Arg">n</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=Transformation( [ 6, 2, 8, 4, 7, 5, 8, 3, 5, 8 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentTransformationInt(f, 1);</span>
+[ 1, 6, 5, 7, 8, 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentTransformationInt(f, 12);</span>
+[ 12 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentTransformationInt(f, 5); </span>
+[ 5, 7, 8, 3 ]
+</pre></div> </body>
+    </html>

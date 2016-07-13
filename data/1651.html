@@ -1,0 +1,125 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.6-6 PowerMapsAllowedBySymmetrizations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X808CCF6087D5B661"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.6-6 PowerMapsAllowedBySymmetrizations</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PowerMapsAllowedBySymmetrizations</code>( <var class="Arg">tbl</var>, <var class="Arg">subchars</var>, <var class="Arg">chars</var>, <var class="Arg">approxmap</var>, <var class="Arg">prime</var>, <var class="Arg">parameters</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">tbl</var> be an ordinary character table, <var class="Arg">prime</var> a prime integer, <var class="Arg">approxmap</var> a parametrized map that is an approximation of the <var class="Arg">prime</var>-th power map of <var class="Arg">tbl</var> (e.g., a list returned by <code class="func">InitPowerMap</code> (<a shape="rect" href="chap73_mj.html#X85D068D77C3C041C"><span class="RefLink">73.6-1</span></a>), <var class="Arg">chars</var> and <var class="Arg">subchars</var> two lists of (values lists of) characters of <var class="Arg">tbl</var>, and <var class="Arg">parameters</var> a record with components <code class="code">maxlen</code>, <code class="code">minamb</code>, <code class="code">maxamb</code> (three integers), <code class="code">quick</code> (a Boolean), and <code class="code">contained</code> (a function). Usual values of <code class="code">contained</code> are <code class="func">ContainedCharacters</code> (<a shape="rect" href="chap73_mj.html#X81F1137A874EB962"><span class="RefLink">73.5-17</span></a>) or <code class="func">ContainedPossibleCharacters</code> (<a shape="rect" href="chap73_mj.html#X7F957B1481E10A0C"><span class="RefLink">73.5-15</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">PowerMapsAllowedBySymmetrizations</code> replaces the entries of <var class="Arg">approxmap</var> by improved values, according to condition 6. listed in the description of <code class="func">PossiblePowerMaps</code> (<a shape="rect" href="chap73_mj.html#X7C7B292E80590BE0"><span class="RefLink">73.1-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">More precisely, the strategy used is as follows.</p><p xmlns="http://www.w3.org/1999/xhtml">First, for each <math id="7237494527831827723" display="inline" alttext="\chi\in\textit{chars}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑐ℎ𝑎𝑟𝑠</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">chars</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi\in\textit{chars}</annotation>
+  </semantics>
+</math>, let <code class="code">minus:= MinusCharacter(</code><math id="3485524618495834686" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math><code class="code">, <var class="Arg">approxmap</var>, <var class="Arg">prime</var>)</code>.</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>If <code class="code">Indeterminateness( minus )</code><math id="-5987498535767098514" display="inline" alttext="=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">=</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <eq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" cd="latexml">absent</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">=1</annotation>
+  </semantics>
+</math> and <code class="code"><var class="Arg">parameters</var>.quick = false</code> then the scalar products of <code class="code">minus</code> with <var class="Arg">subchars</var> are checked; if not all scalar products are nonnegative integers then an empty list is returned, otherwise <math id="-2437267873707164182" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math> is deleted from the list of characters to inspect.</p>
+
+</li><li><p>Otherwise if <code class="code">Indeterminateness( minus )</code> is smaller than <code class="code"><var class="Arg">parameters</var>.minamb</code> then <math id="7508927160099598596" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math> is deleted from the list of characters.</p>
+
+</li><li><p>If <code class="code"><var class="Arg">parameters</var>.minamb</code> <math id="-1064758306559702876" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <leq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\leq</annotation>
+  </semantics>
+</math> <code class="code">Indeterminateness( minus )</code> <math id="-190608421149212238" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <leq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\leq</annotation>
+  </semantics>
+</math> <code class="code"><var class="Arg">parameters</var>.maxamb</code> then construct the list of contained class functions <code class="code">poss:= <var class="Arg">parameters</var>.contained(<var class="Arg">tbl</var>, <var class="Arg">subchars</var>, minus)</code> and <code class="code">Parametrized( poss )</code>, and improve the approximation of the power map using <code class="func">UpdateMap</code> (<a shape="rect" href="chap73_mj.html#X80C7328C85BFC20B"><span class="RefLink">73.5-7</span></a>).</p>
+
+</li></ul><p xmlns="http://www.w3.org/1999/xhtml">If this yields no further immediate improvements then we branch. If there is a character from <var class="Arg">chars</var> left with less or equal <code class="code"><var class="Arg">parameters</var>.maxlen</code> possible symmetrizations, compute the union of power maps allowed by these possibilities. Otherwise we choose a class <math id="-4218979285243853087" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
+  </semantics>
+</math> such that the possible symmetrizations of a character in <var class="Arg">chars</var> differ at <math id="-707815252935595200" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
+  </semantics>
+</math>, and compute recursively the union of all allowed power maps with image at <math id="1954835208142160536" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
+  </semantics>
+</math> fixed in the set given by the current approximation of the power map.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;U4(3).4&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pow:= InitPowerMap( tbl, 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Congruences( tbl, Irr( tbl ), pow, 2 );;  pow;</span>
+[ 1, 1, 3, 4, 5, 2, 2, 8, 3, 4, 11, 12, [ 6, 7 ], 14, 9, 1, 1, 2, 2, 
+  3, 4, 5, [ 6, 7 ], 8, 9, 9, 10, 11, 12, 16, 16, 16, 16, 17, 17, 18, 
+  18, [ 18, 19 ], [ 18, 19 ], 20, 20, 20, 20, 22, 22, 24, 24, 
+  [ 25, 26 ], [ 25, 26 ], 28, 28, 29, 29 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PowerMapsAllowedBySymmetrizations( tbl, Irr( tbl ), Irr( tbl ),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      pow, 2, rec( maxlen:= 10, contained:= ContainedPossibleCharacters,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      minamb:= 2, maxamb:= infinity, quick:= false ) );</span>
+[ [ 1, 1, 3, 4, 5, 2, 2, 8, 3, 4, 11, 12, 6, 14, 9, 1, 1, 2, 2, 3, 4, 
+      5, 6, 8, 9, 9, 10, 11, 12, 16, 16, 16, 16, 17, 17, 18, 18, 18, 
+      18, 20, 20, 20, 20, 22, 22, 24, 24, 25, 26, 28, 28, 29, 29 ] ]
+</pre></div> </body>
+    </html>

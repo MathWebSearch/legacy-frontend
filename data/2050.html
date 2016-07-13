@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 27: Strings and Characters-&gt;27.7-17 JoinStringsWithSeparator</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27.html#X84624FEB825EC4B5"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">27.7-17 JoinStringsWithSeparator</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ JoinStringsWithSeparator</code>( <var class="Arg">list</var>[, <var class="Arg">sep</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">joins <var class="Arg">list</var> (a list of strings) after interpolating <var class="Arg">sep</var> (or <code class="code">&quot;,&quot;</code> if the second argument is omitted) between each adjacent pair of strings; <var class="Arg">sep</var> should be a string.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list := List([1..10], String);</span>
+[ &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">JoinStringsWithSeparator(list);</span>
+&quot;1,2,3,4,5,6,7,8,9,10&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">JoinStringsWithSeparator([&quot;The&quot;, &quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;], &quot; &quot;);</span>
+&quot;The quick brown fox&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">new:= JoinStringsWithSeparator([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;], &quot;,\n    &quot;);</span>
+&quot;a,\n    b,\n    c,\n    d&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(&quot;    &quot;, new, &quot;\n&quot;);</span>
+    a,
+    b,
+    c,
+    d
+</pre></div> </body>
+    </html>

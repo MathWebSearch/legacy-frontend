@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.3-18 ComponentsOfPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X8185065E788BDD0D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.3-18 ComponentsOfPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ComponentsOfPartialPerm</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A list of lists of positive integer.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">ComponentsOfPartialPerm</code> returns a list of the components of the partial permutation <var class="Arg">f</var>. Each component is a subset of the domain of <var class="Arg">f</var>, and the union of the components equals the domain.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve"> 
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 19 ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 20, 4, 6, 19, 9, 14, 3, 12, 17, 5, 15, 13 ] );</span>
+[1,20][2,4,19,13,15][7,14][8,3,6][10,12,5,9][11,17]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentsOfPartialPerm(f);</span>
+[ [ 1, 20 ], [ 2, 4, 19, 13, 15 ], [ 7, 14 ], [ 8, 3, 6 ], 
+  [ 10, 12, 5, 9 ], [ 11, 17 ] ]</pre></div> </body>
+    </html>

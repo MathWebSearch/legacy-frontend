@@ -1,0 +1,42 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.5-15 ContainedSpecialVectors</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X7F957B1481E10A0C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.5-15 ContainedSpecialVectors</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ContainedSpecialVectors</code>( <var class="Arg">tbl</var>, <var class="Arg">chars</var>, <var class="Arg">paracharacter</var>, <var class="Arg">func</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IntScalarProducts</code>( <var class="Arg">tbl</var>, <var class="Arg">chars</var>, <var class="Arg">candidate</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NonnegIntScalarProducts</code>( <var class="Arg">tbl</var>, <var class="Arg">chars</var>, <var class="Arg">candidate</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ContainedPossibleVirtualCharacters</code>( <var class="Arg">tbl</var>, <var class="Arg">chars</var>, <var class="Arg">paracharacter</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ContainedPossibleCharacters</code>( <var class="Arg">tbl</var>, <var class="Arg">chars</var>, <var class="Arg">paracharacter</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">tbl</var> be an ordinary character table, <var class="Arg">chars</var> a list of class functions (or values lists), <var class="Arg">paracharacter</var> a parametrized class function of <var class="Arg">tbl</var>, and <var class="Arg">func</var> a function that expects the three arguments <var class="Arg">tbl</var>, <var class="Arg">chars</var>, and a values list of a class function, and that returns either <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ContainedSpecialVectors</code> returns the list of all those elements <var class="Arg">vec</var> of <var class="Arg">paracharacter</var> that have integral norm, have integral scalar product with the principal character of <var class="Arg">tbl</var>, and that satisfy <var class="Arg">func</var><code class="code">( </code><var class="Arg">tbl</var>, <var class="Arg">chars</var>, <var class="Arg">vec</var> <code class="code">) = </code><code class="keyw">true</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Two special cases of <var class="Arg">func</var> are the check whether the scalar products in <var class="Arg">tbl</var> between the vector <var class="Arg">vec</var> and all lists in <var class="Arg">chars</var> are integers or nonnegative integers, respectively. These functions are accessible as global variables <code class="func">IntScalarProducts</code> and <code class="func">NonnegIntScalarProducts</code>, and <code class="func">ContainedPossibleVirtualCharacters</code> and <code class="func">ContainedPossibleCharacters</code> provide access to these special cases of <code class="func">ContainedSpecialVectors</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">subtbl:= CharacterTable( &quot;HSM12&quot; );;  tbl:= CharacterTable( &quot;HS&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus:= InitFusion( subtbl, tbl );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rest:= CompositionMaps( Irr( tbl )[8], fus );</span>
+[ 231, [ -9, 7 ], [ -9, 7 ], [ -9, 7 ], 6, 15, 15, [ -1, 15 ], 
+  [ -1, 15 ], 1, [ 1, 6 ], [ 1, 6 ], [ 1, 6 ], [ 1, 6 ], [ -2, 0 ], 
+  [ 1, 2 ], [ 1, 2 ], [ 1, 2 ], 0, 0, 1, 0, 0, 0, 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irr:= Irr( subtbl );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># no further condition</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cont1:= ContainedSpecialVectors( subtbl, irr, rest,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">               function( tbl, chars, vec ) return true; end );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( cont1 );</span>
+24
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># require scalar products to be integral</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cont2:= ContainedSpecialVectors( subtbl, irr, rest,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">               IntScalarProducts );</span>
+[ [ 231, 7, -9, -9, 6, 15, 15, -1, -1, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ], 
+  [ 231, 7, -9, 7, 6, 15, 15, -1, -1, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ], 
+  [ 231, 7, -9, -9, 6, 15, 15, 15, 15, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ], 
+  [ 231, 7, -9, 7, 6, 15, 15, 15, 15, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># additionally require scalar products to be nonnegative</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cont3:= ContainedSpecialVectors( subtbl, irr, rest,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">               NonnegIntScalarProducts );</span>
+[ [ 231, 7, -9, -9, 6, 15, 15, -1, -1, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ], 
+  [ 231, 7, -9, 7, 6, 15, 15, -1, -1, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cont2 = ContainedPossibleVirtualCharacters( subtbl, irr, rest );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cont3 = ContainedPossibleCharacters( subtbl, irr, rest );</span>
+true
+</pre></div> </body>
+    </html>

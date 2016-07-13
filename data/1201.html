@@ -1,0 +1,26 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.7-5 IsomorphismTransformationSemigroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X78F29C817CF6827F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.7-5 IsomorphismTransformationSemigroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsomorphismTransformationSemigroup</code>( <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsomorphismTransformationMonoid</code>( <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: An isomorphism to a transformation semigroup or monoid.</p><p xmlns="http://www.w3.org/1999/xhtml">Returns an isomorphism from the finite semigroup <var class="Arg">S</var> to a transformation semigroup. For most types of objects in <strong class="pkg">GAP</strong> the degree of this transformation semigroup will be equal to the size of <var class="Arg">S</var> plus <code class="code">1</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <code class="code"><var class="Arg">S</var>^1</code> denote the monoid obtained from <var class="Arg">S</var> by adjoining an identity element. Then <var class="Arg">S</var> acts faithfully on <code class="code"><var class="Arg">S</var>^1</code> by right multiplication, i.e. every element of <var class="Arg">S</var> describes a transformation on <code class="code">1,..,|S|+1</code>. The isomorphism from <var class="Arg">S</var> to the transformation semigroup described in this way is called the <em>right regular representation</em> of <var class="Arg">S</var>. In most cases, <code class="code">IsomorphismTransformationSemigroup</code> will return the right regular representation of <var class="Arg">S</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">As exceptions, if <var class="Arg">S</var> is a permutation group or a partial perm semigroup, then the elements of <var class="Arg">S</var> act naturally and faithfully by transformations on the values from <code class="code">1</code> to the largest moved point of <var class="Arg">S</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">S</var> is a finitely presented semigroup, then the Todd-Coxeter approach will be attempted.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">IsomorphismTransformationMonoid</code> differs from <code class="code">IsomorphismTransformationSemigroup</code> only in that its range is a transformation monoid, and not only a semigroup, when the semigroup <var class="Arg">S</var> is a monoid.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens := [ [ [ Z(3), 0*Z(3) ], [ 0*Z(3), Z(3) ^ 0 ] ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"> [ [ Z(3), Z(3)^0 ], [ Z(3), 0*Z(3) ] ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"> [ [ Z(3)^0, 0*Z(3) ], [ 0*Z(3), 0*Z(3) ] ] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := Semigroup(gens);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(S);</span>
+81
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismTransformationSemigroup(S);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := SymmetricInverseSemigroup(4);</span>
+&lt;symmetric inverse semigroup on 4 pts&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismTransformationMonoid(S);</span>
+MappingByFunction( &lt;symmetric inverse semigroup on 4 pts&gt;, 
+&lt;transformation monoid on 5 pts with 4 generators&gt;
+ , function( x ) ... end, &lt;Operation &quot;AsPartialPerm&quot;&gt; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := Group((1,2,3));</span>
+Group([ (1,2,3) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismTransformationMonoid(G);</span>
+MappingByFunction( Group([ (1,2,3) ]), &lt;commutative transformation 
+ monoid on 3 pts with 1 generator&gt;
+ , function( x ) ... end, function( x ) ... end )</pre></div> </body>
+    </html>

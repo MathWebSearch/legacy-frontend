@@ -1,0 +1,38 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.6-3 Coefficients</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X80B32F667BF6AFD8"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.6-3 Coefficients</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Coefficients</code>( <var class="Arg">B</var>, <var class="Arg">v</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="-4583944014418266090" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math> be the underlying left module of the basis <var class="Arg">B</var>, and <var class="Arg">v</var> a vector such that the family of <var class="Arg">v</var> is the elements family of the family of <math id="2879441727280654637" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math>. Then <code class="code">Coefficients( <var class="Arg">B</var>, <var class="Arg">v</var> )</code> is the list of coefficients of <var class="Arg">v</var> w.r.t. <var class="Arg">B</var> if <var class="Arg">v</var> lies in <math id="-7562654530181517108" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math>, and <code class="keyw">fail</code> otherwise.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= VectorSpace( Rationals, [ [ 1, 2, 7 ], [ 1/2, 1/3, 5 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= Basis( V, [ [ 1, 2, 7 ], [ 0, 1, -9/4 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Coefficients( B, [ 1/2, 1/3, 5 ] );</span>
+[ 1/2, -2/3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Coefficients( B, [ 1, 0, 0 ] );</span>
+fail
+</pre></div> </body>
+    </html>

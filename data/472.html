@@ -1,0 +1,111 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.19 An Example of Advanced Dixon-Schneider Calculations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X782B5E37848786BC"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">71.19 <span class="Heading">An Example of Advanced Dixon-Schneider Calculations</span></h4><p xmlns="http://www.w3.org/1999/xhtml">First, we set the appropriate info level higher.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetInfoLevel( InfoCharacterTable, 1 );</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">for printout of some internal results. We now define our group, which is isomorphic to PSL<math id="1367670092045448942" display="inline" alttext="{}_{4}(3)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mmultiscripts xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">3</mn>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" stretchy="false">)</mo>
+      </mrow>
+      <mprescripts xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5a"/>
+      <mn xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">4</mn>
+      <none xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5b"/>
+    </mmultiscripts>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <csymbol id="p1.1.m1.1.5.1.cmml" cd="ambiguous">subscript</csymbol>
+        <cerror xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.cmml">
+          <csymbol xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2a.cmml" cd="ambiguous">fragments</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">(</ci>
+          <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">3</cn>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">)</ci>
+        </cerror>
+        <cn xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml" type="integer">4</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">{}_{4}(3)</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= PrimitiveGroup(40,5);</span>
+PSL(4, 3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(g);</span>
+6065280
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d:= DixonInit( g );;</span>
+#I  29 classes
+#I  choosing prime 65521
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c:= d.characterTable;;</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">After the initialisation, one structure matrix is evaluated, yielding smaller spaces and several irreducible characters.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DixonSplit( d );</span>
+#I  Matrix 2,Representative of Order 3,Centralizer: 5832
+#I  Dimensions: [ 1, 2, 1, 4, 12, 1, 1, 2, 1, 2, 1 ]
+#I  Two-dim space split
+#I  Two-dim space split
+#I  Two-dim space split
+2
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In this case spaces of the listed dimensions are a result of the splitting process. The three two dimensional spaces are split successfully by combinatoric means.</p><p xmlns="http://www.w3.org/1999/xhtml">We obtain several irreducible characters by tensor products and notify them to the Dixon record.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">asp:= AntiSymmetricParts( c, d.irreducibles, 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ro:= ReducedCharacters( c, d.irreducibles, asp );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( ro.irreducibles );</span>
+3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DxIncludeIrreducibles( d, ro.irreducibles );</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The tensor products of the nonlinear characters among each other are reduced with the irreducible characters. The result is split according to the spaces found, which yields characters of smaller norms, but no new irreducibles.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">nlc:= Filtered( d.irreducibles, i -&gt; i[1] &gt; 1 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t:= Tensored( nlc, nlc );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ro:= ReducedCharacters( c, d.irreducibles, t );;  ro.irreducibles;</span>
+[  ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( ro.remainders, i -&gt; ScalarProduct( c, i, i) );</span>
+[ 2, 2, 4, 4, 4, 4, 13, 13, 18, 18, 19, 21, 21, 36, 36, 29, 34, 34, 
+  42, 34, 48, 54, 62, 68, 68, 78, 84, 84, 88, 90, 159, 169, 169, 172, 
+  172, 266, 271, 271, 268, 274, 274, 280, 328, 373, 373, 456, 532, 
+  576, 679, 683, 683, 754, 768, 768, 890, 912, 962, 1453, 1453, 1601, 
+  1601, 1728, 1739, 1739, 1802, 2058, 2379, 2414, 2543, 2744, 2744, 
+  2920, 3078, 3078, 4275, 4275, 4494, 4760, 5112, 5115, 5115, 5414, 
+  6080, 6318, 7100, 7369, 7369, 7798, 8644, 10392, 12373, 12922, 
+  14122, 14122, 18948, 21886, 24641, 24641, 25056, 38942, 44950, 
+  78778 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t:= SplitCharacters( d, ro.remainders );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( t, i -&gt; ScalarProduct( c, i, i ) );</span>
+[ 2, 2, 4, 2, 2, 4, 4, 3, 6, 5, 5, 9, 9, 4, 12, 13, 18, 18, 20, 18, 
+  20, 24, 26, 32, 32, 16, 42, 59, 69, 69, 72, 72, 36, 72, 78, 78, 84, 
+  122, 117, 127, 117, 127, 64, 132, 100, 144, 196, 256, 456, 532, 
+  576, 679, 683, 683, 754, 768, 768, 890, 912, 962, 1453, 1453, 1601, 
+  1601, 1728, 1739, 1739, 1802, 2058, 2379, 2414, 2543, 2744, 2744, 
+  2920, 3078, 3078, 4275, 4275, 4494, 4760, 5112, 5115, 5115, 5414, 
+  6080, 6318, 7100, 7369, 7369, 7798, 8644, 10392, 12373, 12922, 
+  14122, 14122, 18948, 21886, 24641, 24641, 25056, 38942, 44950, 
+  78778 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Finally we calculate the characters induced from all cyclic subgroups and obtain the missing irreducibles by applying the LLL-algorithm to them.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ic:= InducedCyclic( c, &quot;all&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ro:= ReducedCharacters( c, d.irreducibles, ic );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( ro.irreducibles );</span>
+0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:= LLL( c, ro.remainders );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( l.irreducibles );</span>
+13
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The LLL returns class function objects (see Chapter <a shape="rect" href="chap72_mj.html#X7C91D0D17850E564"><span class="RefLink">72</span></a>), and the Dixon record works with character values lists. So we convert them to a list of values before feeding them in the machinery of the Dixon-algorithm.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l.irreducibles[1];</span>
+Character( CharacterTable( PSL(4, 3) ),
+ [ 640, -8, -8, -8, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  0, 0, 0, 0, E(13)^7+E(13)^8+E(13)^11, E(13)^4+E(13)^10+E(13)^12, 
+  E(13)^2+E(13)^5+E(13)^6, E(13)+E(13)^3+E(13)^9, 0 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:=List(l.irreducibles,ValuesOfClassFunction);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DxIncludeIrreducibles( d, l );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( d.irreducibles );</span>
+29
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( d.classes );</span>
+29
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">It turns out we have found all irreducible characters. As the last step, we obtain the irreducible characters and tell them to the group. This makes them available also to the character table.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irrs:= DixontinI( d );;</span>
+#I  Total:1 matrices,[ 2 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetIrr(g,irrs);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length(Irr(c));</span>
+29
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetInfoLevel( InfoCharacterTable, 0 );</span>
+</pre></div> </body>
+    </html>

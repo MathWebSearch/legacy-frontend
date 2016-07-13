@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.2-1 LieAlgebraByStructureConstants</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X7D362350824FA115"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.2-1 LieAlgebraByStructureConstants</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LieAlgebraByStructureConstants</code>( <var class="Arg">R</var>, <var class="Arg">sct</var>[, <var class="Arg">nameinfo</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LieAlgebraByStructureConstants</code> does the same as <code class="func">AlgebraByStructureConstants</code> (<a shape="rect" href="chap62_mj.html#X7CC58DFD816E6B65"><span class="RefLink">62.4-1</span></a>), and has the same meaning of arguments, except that the result is assumed to be a Lie algebra. Note that the function does not check whether <var class="Arg">sct</var> satisfies the Jacobi identity. (So if one creates a Lie algebra this way with a table that does not satisfy the Jacobi identity, errors may occur later on.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T:= EmptySCTable( 2, 0, &quot;antisymmetric&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetEntrySCTable( T, 1, 2, [ 1/2, 1 ] );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= LieAlgebraByStructureConstants( Rationals, T );</span>
+&lt;Lie algebra of dimension 2 over Rationals&gt;
+</pre></div> </body>
+    </html>

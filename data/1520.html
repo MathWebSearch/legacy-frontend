@@ -1,0 +1,213 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 18: Cyclotomic Numbers-&gt;18.5-5 GaloisMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap18.html#X7DDDEC3F80543B7D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">18.5-5 GaloisMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GaloisMat</code>( <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">mat</var> be a matrix of cyclotomics. <code class="func">GaloisMat</code> calculates the complete orbits under the operation of the Galois group of the (irrational) entries of <var class="Arg">mat</var>, and the permutations of rows corresponding to the generators of the Galois group.</p><p xmlns="http://www.w3.org/1999/xhtml">If some rows of <var class="Arg">mat</var> are identical, only the first one is considered for the permutations, and a warning will be printed.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">GaloisMat</code> returns a record with the components <code class="code">mat</code>, <code class="code">galoisfams</code>, and <code class="code">generators</code>.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">mat</code></strong></dt><dd><p>a list with initial segment being the rows of <var class="Arg">mat</var> (<em>not</em> shallow copies of these rows); the list consists of full orbits under the action of the Galois group of the entries of <var class="Arg">mat</var> defined above. The last rows in the list are those not contained in <var class="Arg">mat</var> but must be added in order to complete the orbits; so if the orbits were already complete, <var class="Arg">mat</var> and <code class="code">mat</code> have identical rows.</p>
+
+</dd><dt><strong class="Mark"><code class="code">galoisfams</code></strong></dt><dd><p>a list that has the same length as the <code class="code">mat</code> component, its entries are either 1, 0, -1, or lists.</p>
+
+
+<dl><dt><strong class="Mark"><code class="code">galoisfams[i] = 1</code></strong></dt><dd><p>means that <code class="code">mat[i]</code> consists of rationals, i.e., <code class="code">[ mat[i] ]</code> forms an orbit;</p>
+
+</dd><dt><strong class="Mark"><code class="code">galoisfams[i] = -1</code></strong></dt><dd><p>means that <code class="code">mat[i]</code> contains unknowns (see Chapter <a shape="rect" href="chap74_mj.html#X7C1FAB6280A02CCB"><span class="RefLink">74</span></a>); in this case <code class="code">[ mat[i] ]</code> is regarded as an orbit, too, even if <code class="code">mat[i]</code> contains irrational entries;</p>
+
+</dd><dt><strong class="Mark"><code class="code">galoisfams[i] = </code><math id="8544741251394712976" display="inline" alttext="[l_{1},l_{2}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <msub xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+        <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">1</mn>
+      </msub>
+      <mo id="p1.1.m1.1.4">,</mo>
+      <msub xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.3">
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">l</mi>
+        <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">2</mn>
+      </msub>
+      <mo id="p1.1.m1.1.7" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml" closure="closed">
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.cmml">
+          <csymbol id="p1.1.m1.1.8.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+          <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">1</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.3.cmml">
+          <csymbol id="p1.1.m1.1.8.3.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑙</ci>
+          <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">2</cn>
+        </apply>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[l_{1},l_{2}]</annotation>
+  </semantics>
+</math></strong></dt><dd><p>(a list) means that <code class="code">mat[i]</code> is the first element of its orbit in <code class="code">mat</code>, <math id="-6127774780444474333" display="inline" alttext="l_{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l_{1}</annotation>
+  </semantics>
+</math> is the list of positions of rows that form the orbit, and <math id="6733559600967026702" display="inline" alttext="l_{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l_{2}</annotation>
+  </semantics>
+</math> is the list of corresponding Galois automorphisms (as exponents, not as functions); so we have <code class="code">mat</code><math id="3794610190302059530" display="inline" alttext="[l_{1}[j]][k]=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
+      <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">
+        <mrow xref="p1.1.m1.1.12.1.2.1.cmml" id="p1.1.m1.1.12.1.2">
+          <mo xref="p1.1.m1.1.12.1.2.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+          <mrow xref="p1.1.m1.1.12.1.2.1.cmml" id="p1.1.m1.1.12.1.2.2">
+            <msub xref="p1.1.m1.1.12.1.2.1.cmml" id="p1.1.m1.1.12.1.2.2.2">
+              <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+              <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">1</mn>
+            </msub>
+            <mo xref="p1.1.m1.1.12.1.2.2.1.cmml" id="p1.1.m1.1.12.1.2.2.1">⁢</mo>
+            <mrow xref="p1.1.m1.1.12.1.2.2.3.1.cmml" id="p1.1.m1.1.12.1.2.2.3">
+              <mo xref="p1.1.m1.1.12.1.2.2.3.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">[</mo>
+              <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">j</mi>
+              <mo xref="p1.1.m1.1.12.1.2.2.3.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">]</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.12.1.2.1.1.cmml" id="p1.1.m1.1.7" stretchy="false">]</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.12.1.3.1.cmml" id="p1.1.m1.1.12.1.3">
+          <mo xref="p1.1.m1.1.12.1.3.1.1.cmml" id="p1.1.m1.1.8" stretchy="false">[</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">k</mi>
+          <mo xref="p1.1.m1.1.12.1.3.1.1.cmml" id="p1.1.m1.1.10" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">=</mo>
+      <mi xref="p1.1.m1.1.12.2.cmml" id="p1.1.m1.1.12.2"/>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">
+        <eq xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml"/>
+        <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">
+          <times xref="p1.1.m1.1.12.1.1" id="p1.1.m1.1.12.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.12.1.2" id="p1.1.m1.1.12.1.2.1.cmml">
+            <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.12.1.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <apply xref="p1.1.m1.1.12.1.2" id="p1.1.m1.1.12.1.2.2.cmml">
+              <times xref="p1.1.m1.1.12.1.2.2.1" id="p1.1.m1.1.12.1.2.2.1.cmml"/>
+              <apply xref="p1.1.m1.1.12.1.2" id="p1.1.m1.1.12.1.2.2.2.cmml">
+                <csymbol id="p1.1.m1.1.12.1.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+                <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">1</cn>
+              </apply>
+              <apply xref="p1.1.m1.1.12.1.2.2.3" id="p1.1.m1.1.12.1.2.2.3.1.cmml">
+                <csymbol xref="p1.1.m1.1.4" id="p1.1.m1.1.12.1.2.2.3.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+                <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑗</ci>
+              </apply>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.12.1.3" id="p1.1.m1.1.12.1.3.1.cmml">
+            <csymbol xref="p1.1.m1.1.8" id="p1.1.m1.1.12.1.3.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑘</ci>
+          </apply>
+        </apply>
+        <csymbol xref="p1.1.m1.1.12.2" id="p1.1.m1.1.12.2.cmml" cd="latexml">absent</csymbol>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[l_{1}[j]][k]=</annotation>
+  </semantics>
+</math> <code class="code">GaloisCyc( mat</code><math id="4512589936554283299" display="inline" alttext="[i][k],l_{2}[j]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13">
+      <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.2">
+        <mrow xref="p1.1.m1.1.13.2.2.1.cmml" id="p1.1.m1.1.13.2.2">
+          <mo xref="p1.1.m1.1.13.2.2.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+          <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">i</mi>
+          <mo xref="p1.1.m1.1.13.2.2.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">]</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.13.2.1.cmml" id="p1.1.m1.1.13.2.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.13.2.3.1.cmml" id="p1.1.m1.1.13.2.3">
+          <mo xref="p1.1.m1.1.13.2.3.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">[</mo>
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">k</mi>
+          <mo xref="p1.1.m1.1.13.2.3.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+      <mo id="p1.1.m1.1.7">,</mo>
+      <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.3">
+        <msub xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.3.2">
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">l</mi>
+          <mn xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">2</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.13.3.1.cmml" id="p1.1.m1.1.13.3.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.13.3.3.1.cmml" id="p1.1.m1.1.13.3.3">
+          <mo xref="p1.1.m1.1.13.3.3.1.1.cmml" id="p1.1.m1.1.10" stretchy="false">[</mo>
+          <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">j</mi>
+          <mo xref="p1.1.m1.1.13.3.3.1.1.cmml" id="p1.1.m1.1.12" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.13" id="p1.1.m1.1.13.1.cmml">
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.2.cmml">
+          <times xref="p1.1.m1.1.13.2.1" id="p1.1.m1.1.13.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.13.2.2" id="p1.1.m1.1.13.2.2.1.cmml">
+            <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.13.2.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑖</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.13.2.3" id="p1.1.m1.1.13.2.3.1.cmml">
+            <csymbol xref="p1.1.m1.1.4" id="p1.1.m1.1.13.2.3.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑘</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.3.cmml">
+          <times xref="p1.1.m1.1.13.3.1" id="p1.1.m1.1.13.3.1.cmml"/>
+          <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.3.2.cmml">
+            <csymbol id="p1.1.m1.1.13.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑙</ci>
+            <cn xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml" type="integer">2</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.13.3.3" id="p1.1.m1.1.13.3.3.1.cmml">
+            <csymbol xref="p1.1.m1.1.10" id="p1.1.m1.1.13.3.3.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑗</ci>
+          </apply>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[i][k],l_{2}[j]</annotation>
+  </semantics>
+</math><code class="code"> )</code>;</p>
+
+</dd><dt><strong class="Mark"><code class="code">galoisfams[i] = 0</code></strong></dt><dd><p>means that <code class="code">mat[i]</code> is an element of a nontrivial orbit but not the first element of it.</p>
+
+</dd></dl>
+</dd><dt><strong class="Mark"><code class="code">generators</code></strong></dt><dd><p>a list of permutations generating the permutation group corresponding to the action of the Galois group on the rows of <code class="code">mat</code>.</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GaloisMat( [ [ E(3), E(4) ] ] );</span>
+rec( galoisfams := [ [ [ 1, 2, 3, 4 ], [ 1, 7, 5, 11 ] ], 0, 0, 0 ], 
+  generators := [ (1,2)(3,4), (1,3)(2,4) ], 
+  mat := [ [ E(3), E(4) ], [ E(3), -E(4) ], [ E(3)^2, E(4) ], 
+      [ E(3)^2, -E(4) ] ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GaloisMat( [ [ 1, 1, 1 ], [ 1, E(3), E(3)^2 ] ] );</span>
+rec( galoisfams := [ 1, [ [ 2, 3 ], [ 1, 2 ] ], 0 ], 
+  generators := [ (2,3) ], 
+  mat := [ [ 1, 1, 1 ], [ 1, E(3), E(3)^2 ], [ 1, E(3)^2, E(3) ] ] )
+</pre></div> </body>
+    </html>

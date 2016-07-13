@@ -1,0 +1,49 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 86: Weak Pointers-&gt;86.2-1 SetElmWPObj</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap86.html#X7B9748ED7BAAA379"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">86.2-1 SetElmWPObj</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SetElmWPObj</code>( <var class="Arg">wp</var>, <var class="Arg">pos</var>, <var class="Arg">val</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ UnbindElmWPObj</code>( <var class="Arg">wp</var>, <var class="Arg">pos</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ElmWPObj</code>( <var class="Arg">wp</var>, <var class="Arg">pos</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsBoundElmWPObj</code>( <var class="Arg">wp</var>, <var class="Arg">pos</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LengthWPObj</code>( <var class="Arg">wp</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The functions <code class="func">SetElmWPObj</code> and <code class="func">UnbindElmWPObj</code> set and unbind entries in a weak pointer object.</p><p xmlns="http://www.w3.org/1999/xhtml">The function <code class="func">ElmWPObj</code> returns the element at position <var class="Arg">pos</var> of the weak pointer object <var class="Arg">wp</var>, if there is one, and <code class="keyw">fail</code> otherwise. A return value of <code class="keyw">fail</code> can thus arise either because (a) the value <code class="keyw">fail</code> is stored at position <var class="Arg">pos</var>, or (b) no value is stored at position <var class="Arg">pos</var>. Since <code class="keyw">fail</code> cannot vanish in a garbage collection, these two cases can safely be distinguished by a <em>subsequent</em> call to <code class="func">IsBoundElmWPObj</code>, which returns <code class="keyw">true</code> if there is currently a value bound at position <var class="Arg">pos</var> of <var class="Arg">wp</var> and <code class="keyw">false</code> otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that it is <em>not</em> safe to write:</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">if IsBoundElmWPObj(w,i) then x:= ElmWPObj(w,i); fi;</code></p><p xmlns="http://www.w3.org/1999/xhtml">and treat <code class="code">x</code> as reliably containing a value taken from <code class="code">w</code>, as a badly timed garbage collection could leave <code class="code">x</code> containing <code class="keyw">fail</code>. Instead use</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">x := ElmWPObj(w,i); if x &lt;&gt; fail or IsBoundElmWPObj(w,i) then . . .</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Here is an example.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w := WeakPointerObj( [ 1, , [2,3], fail, rec() ] );   </span>
+WeakPointerObj( [ 1, , [ 2, 3 ], fail, rec(  ) ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetElmWPObj(w,5,[]);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w;</span>
+WeakPointerObj( [ 1, , [ 2, 3 ], fail, [  ] ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnbindElmWPObj(w,1);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w;</span>
+WeakPointerObj( [ , , [ 2, 3 ], fail, [  ] ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ElmWPObj(w,3);      </span>
+[ 2, 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ElmWPObj(w,1);</span>
+fail
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Now after some computations and garbage collections <math id="-2547378738495845851" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math></p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">2;;3;;4;;GASMAN(&quot;collect&quot;); # clear last, last2, last3</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><math id="247988934123988622" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math> we get the following.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ElmWPObj(w,3);          </span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w;</span>
+WeakPointerObj( [ , , , fail ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ElmWPObj(w,4);</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsBoundElmWPObj(w,3);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsBoundElmWPObj(w,4);</span>
+true
+</pre></div> </body>
+    </html>

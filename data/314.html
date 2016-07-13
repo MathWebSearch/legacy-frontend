@@ -1,0 +1,33 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 17: Rational Numbers</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap17.html#X87003045878E74DF"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap17_mj.html#X87003045878E74DF">17 <span class="Heading">Rational Numbers</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap17_mj.html#X7A76497986DA921F">17.1 <span class="Heading">Rationals: Global Variables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap17_mj.html#X7B6029D18570C08A">17.1-1 Rationals</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap17_mj.html#X826E2AA88679B3DF">17.2 <span class="Heading">Elementary Operations for Rationals</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap17_mj.html#X7ED018F5794935F7">17.2-1 IsRat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap17_mj.html#X7BD6E170840F045D">17.2-2 IsPosRat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap17_mj.html#X81179AC87AC951A8">17.2-3 IsNegRat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap17_mj.html#X7D830E7482E7F528">17.2-4 NumeratorRat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap17_mj.html#X81F6B5877A81E727">17.2-5 DenominatorRat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap17_mj.html#X7EB4C646806A2BDE">17.2-6 Rat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap17_mj.html#X7C8F8693825C28A4">17.2-7 Random</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">17 <span class="Heading">Rational Numbers</span></h3><p xmlns="http://www.w3.org/1999/xhtml">The <em>rationals</em> form a very important field. On the one hand it is the quotient field of the integers (see chapter <a shape="rect" href="chap14_mj.html#X853DF11B80068ED5"><span class="RefLink">14</span></a>). On the other hand it is the prime field of the fields of characteristic zero (see chapter <a shape="rect" href="chap60_mj.html#X80510B5880521FDC"><span class="RefLink">60</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The former comment suggests the representation actually used. A rational is represented as a pair of integers, called <em>numerator</em> and <em>denominator</em>. Numerator and denominator are <em>reduced</em>, i.e., their greatest common divisor is 1. If the denominator is 1, the rational is in fact an integer and is represented as such. The numerator holds the sign of the rational, thus the denominator is always positive.</p><p xmlns="http://www.w3.org/1999/xhtml">Because the underlying integer arithmetic can compute with arbitrary size integers, the rational arithmetic is always exact, even for rationals whose numerators and denominators have thousands of digits.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">2/3;</span>
+2/3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">66/123;  # numerator and denominator are made relatively prime</span>
+22/41
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">17/-13;  # the numerator carries the sign;</span>
+-17/13
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">121/11;  # rationals with denominator 1 (when canceled) are integers</span>
+11
+</pre></div> </body>
+    </html>

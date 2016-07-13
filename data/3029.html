@@ -1,0 +1,43 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.9-5 TzPrintGeneratorImages</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X7F086D0E7AD6173B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.9-5 TzPrintGeneratorImages</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TzPrintGeneratorImages</code>( <var class="Arg">P</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">assumes that <var class="Arg">P</var> is a presentation for which the generator images and preimages are being traced under Tietze transformations. It displays the preimages of the current generators as Tietze words in the old generators, and the images of the old generators as Tietze words in the current generators.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := PerfectGroup( IsSubgroupFpGroup, 960, 1 );</span>
+A5 2^4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := PresentationFpGroup( G );</span>
+&lt;presentation with 6 gens and 21 rels of total length 84&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzInitGeneratorImages( P );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzGo( P );</span>
+#I  there are 3 generators and 11 relators of total length 96
+#I  there are 3 generators and 10 relators of total length 81
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzPrintGeneratorImages( P );</span>
+#I  preimages of current generators as Tietze words in the old ones:
+#I  1. [ 1 ]
+#I  2. [ 2 ]
+#I  3. [ 4 ]
+#I  images of old generators as Tietze words in the current ones:
+#I  1. [ 1 ]
+#I  2. [ 2 ]
+#I  3. [ 1, -2, 1, 3, 1, 2, 1 ]
+#I  4. [ 3 ]
+#I  5. [ -2, 1, 3, 1, 2 ]
+#I  6. [ 1, 3, 1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens := GeneratorsOfPresentation( P );</span>
+[ a, b, t ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">oldgens := OldGeneratorsOfPresentation( P );</span>
+[ a, b, s, t, u, v ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzImagesOldGens( P );</span>
+[ a, b, a*b^-1*a*t*a*b*a, t, b^-1*a*t*a*b, a*t*a ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [ 1 .. Length( oldgens ) ] do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Print( oldgens[i], &quot; = &quot;, TzImagesOldGens( P )[i], &quot;\n&quot; );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">od;</span>
+a = a
+b = b
+s = a*b^-1*a*t*a*b*a
+t = t
+u = b^-1*a*t*a*b
+v = a*t*a
+</pre></div> </body>
+    </html>

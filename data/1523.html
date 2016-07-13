@@ -1,0 +1,192 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 18: Cyclotomic Numbers-&gt;18.5-2 ComplexConjugate</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap18.html#X7BE001A0811CD599"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">18.5-2 ComplexConjugate</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ComplexConjugate</code>( <var class="Arg">z</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RealPart</code>( <var class="Arg">z</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ImaginaryPart</code>( <var class="Arg">z</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a cyclotomic number <var class="Arg">z</var>, <code class="func">ComplexConjugate</code> returns <code class="code">GaloisCyc( <var class="Arg">z</var>, -1 )</code>, see <code class="func">GaloisCyc</code> (<a shape="rect" href="chap18_mj.html#X79EE9097783128C4"><span class="RefLink">18.5-1</span></a>). For a quaternion <math id="1033313565091945018" display="inline" alttext="\textit{z}=c_{1}e+c_{2}i+c_{3}j+c_{4}k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑧</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.1">
+        <mrow xref="p1.1.m1.1.18.1.1.cmml" id="p1.1.m1.1.18.1.1">
+          <msub xref="p1.1.m1.1.18.1.1.2.cmml" id="p1.1.m1.1.18.1.1.2">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">c</mi>
+            <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">1</mn>
+          </msub>
+          <mo xref="p1.1.m1.1.18.1.1.1.cmml" id="p1.1.m1.1.18.1.1.1">⁢</mo>
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">e</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">+</mo>
+        <mrow xref="p1.1.m1.1.18.1.2.cmml" id="p1.1.m1.1.18.1.2">
+          <msub xref="p1.1.m1.1.18.1.2.2.cmml" id="p1.1.m1.1.18.1.2.2">
+            <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">c</mi>
+            <mn xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">2</mn>
+          </msub>
+          <mo xref="p1.1.m1.1.18.1.2.1.cmml" id="p1.1.m1.1.18.1.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">i</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6a">+</mo>
+        <mrow xref="p1.1.m1.1.18.1.3.cmml" id="p1.1.m1.1.18.1.3">
+          <msub xref="p1.1.m1.1.18.1.3.2.cmml" id="p1.1.m1.1.18.1.3.2">
+            <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">c</mi>
+            <mn xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">3</mn>
+          </msub>
+          <mo xref="p1.1.m1.1.18.1.3.1.cmml" id="p1.1.m1.1.18.1.3.1">⁢</mo>
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">j</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6b">+</mo>
+        <mrow xref="p1.1.m1.1.18.1.4.cmml" id="p1.1.m1.1.18.1.4">
+          <msub xref="p1.1.m1.1.18.1.4.2.cmml" id="p1.1.m1.1.18.1.4.2">
+            <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">c</mi>
+            <mn xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">4</mn>
+          </msub>
+          <mo xref="p1.1.m1.1.18.1.4.1.cmml" id="p1.1.m1.1.18.1.4.1">⁢</mo>
+          <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">k</mi>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">z</span>
+        </mtext>
+        <apply xref="p1.1.m1.1.18.1" id="p1.1.m1.1.18.1.cmml">
+          <plus xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+          <apply xref="p1.1.m1.1.18.1.1" id="p1.1.m1.1.18.1.1.cmml">
+            <times xref="p1.1.m1.1.18.1.1.1" id="p1.1.m1.1.18.1.1.1.cmml"/>
+            <apply xref="p1.1.m1.1.18.1.1.2" id="p1.1.m1.1.18.1.1.2.cmml">
+              <csymbol id="p1.1.m1.1.18.1.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑐</ci>
+              <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">1</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑒</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.18.1.2" id="p1.1.m1.1.18.1.2.cmml">
+            <times xref="p1.1.m1.1.18.1.2.1" id="p1.1.m1.1.18.1.2.1.cmml"/>
+            <apply xref="p1.1.m1.1.18.1.2.2" id="p1.1.m1.1.18.1.2.2.cmml">
+              <csymbol id="p1.1.m1.1.18.1.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑐</ci>
+              <cn xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml" type="integer">2</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑖</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.18.1.3" id="p1.1.m1.1.18.1.3.cmml">
+            <times xref="p1.1.m1.1.18.1.3.1" id="p1.1.m1.1.18.1.3.1.cmml"/>
+            <apply xref="p1.1.m1.1.18.1.3.2" id="p1.1.m1.1.18.1.3.2.cmml">
+              <csymbol id="p1.1.m1.1.18.1.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑐</ci>
+              <cn xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml" type="integer">3</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑗</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.18.1.4" id="p1.1.m1.1.18.1.4.cmml">
+            <times xref="p1.1.m1.1.18.1.4.1" id="p1.1.m1.1.18.1.4.1.cmml"/>
+            <apply xref="p1.1.m1.1.18.1.4.2" id="p1.1.m1.1.18.1.4.2.cmml">
+              <csymbol id="p1.1.m1.1.18.1.4.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑐</ci>
+              <cn xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml" type="integer">4</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝑘</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{z}=c_{1}e+c_{2}i+c_{3}j+c_{4}k</annotation>
+  </semantics>
+</math>, <code class="func">ComplexConjugate</code> returns <math id="-3352169325866155513" display="inline" alttext="c_{1}e-c_{2}i-c_{3}j-c_{4}k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">
+        <msub xref="p1.1.m1.1.16.1.2.cmml" id="p1.1.m1.1.16.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.16.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">e</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">-</mo>
+      <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2">
+        <msub xref="p1.1.m1.1.16.2.2.cmml" id="p1.1.m1.1.16.2.2">
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">c</mi>
+          <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">2</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.16.2.1.cmml" id="p1.1.m1.1.16.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">i</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4a">-</mo>
+      <mrow xref="p1.1.m1.1.16.3.cmml" id="p1.1.m1.1.16.3">
+        <msub xref="p1.1.m1.1.16.3.2.cmml" id="p1.1.m1.1.16.3.2">
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">c</mi>
+          <mn xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">3</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.16.3.1.cmml" id="p1.1.m1.1.16.3.1">⁢</mo>
+        <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">j</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4b">-</mo>
+      <mrow xref="p1.1.m1.1.16.4.cmml" id="p1.1.m1.1.16.4">
+        <msub xref="p1.1.m1.1.16.4.2.cmml" id="p1.1.m1.1.16.4.2">
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">c</mi>
+          <mn xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">4</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.16.4.1.cmml" id="p1.1.m1.1.16.4.1">⁢</mo>
+        <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">k</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">
+        <minus xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <apply xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml">
+          <times xref="p1.1.m1.1.16.1.1" id="p1.1.m1.1.16.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.16.1.2" id="p1.1.m1.1.16.1.2.cmml">
+            <csymbol id="p1.1.m1.1.16.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+            <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑒</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.16.2" id="p1.1.m1.1.16.2.cmml">
+          <times xref="p1.1.m1.1.16.2.1" id="p1.1.m1.1.16.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.16.2.2" id="p1.1.m1.1.16.2.2.cmml">
+            <csymbol id="p1.1.m1.1.16.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑐</ci>
+            <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">2</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑖</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.16.3" id="p1.1.m1.1.16.3.cmml">
+          <times xref="p1.1.m1.1.16.3.1" id="p1.1.m1.1.16.3.1.cmml"/>
+          <apply xref="p1.1.m1.1.16.3.2" id="p1.1.m1.1.16.3.2.cmml">
+            <csymbol id="p1.1.m1.1.16.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑐</ci>
+            <cn xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml" type="integer">3</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑗</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.16.4" id="p1.1.m1.1.16.4.cmml">
+          <times xref="p1.1.m1.1.16.4.1" id="p1.1.m1.1.16.4.1.cmml"/>
+          <apply xref="p1.1.m1.1.16.4.2" id="p1.1.m1.1.16.4.2.cmml">
+            <csymbol id="p1.1.m1.1.16.4.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑐</ci>
+            <cn xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml" type="integer">4</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑘</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">c_{1}e-c_{2}i-c_{3}j-c_{4}k</annotation>
+  </semantics>
+</math>, see <code class="func">IsQuaternion</code> (<a shape="rect" href="chap62_mj.html#X82B3A9077D0CB453"><span class="RefLink">62.8-8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">When <code class="func">ComplexConjugate</code> is called with a list then the result is the list of return values of <code class="func">ComplexConjugate</code> for the list entries in the corresponding positions.</p><p xmlns="http://www.w3.org/1999/xhtml">When <code class="func">ComplexConjugate</code> is defined for an object <var class="Arg">z</var> then <code class="func">RealPart</code> and <code class="func">ImaginaryPart</code> return <code class="code">(<var class="Arg">z</var> + ComplexConjugate( <var class="Arg">z</var> )) / 2</code> and <code class="code">(<var class="Arg">z</var> - ComplexConjugate( <var class="Arg">z</var> )) / 2 i</code>, respectively, where <code class="code">i</code> denotes the corresponding imaginary unit.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GaloisCyc( E(5) + E(5)^4, 2 );</span>
+E(5)^2+E(5)^3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GaloisCyc( E(5), -1 );           # the complex conjugate</span>
+E(5)^4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GaloisCyc( E(5) + E(5)^4, -1 );  # this value is real</span>
+E(5)+E(5)^4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GaloisCyc( E(15) + E(15)^4, 3 );</span>
+E(5)+E(5)^4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComplexConjugate( E(7) );</span>
+E(7)^6
+</pre></div> </body>
+    </html>

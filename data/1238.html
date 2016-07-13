@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.3-2 RestrictedTransformation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X846A6F6B7B715188"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.3-2 RestrictedTransformation</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RestrictedTransformation</code>( <var class="Arg">f</var>, <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RestrictedTransformationNC</code>( <var class="Arg">f</var>, <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A transformation.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">RestrictedTransformation</code> returns the new transformation <code class="code">g</code> such that <code class="code">i^g=i^<var class="Arg">f</var></code> for all <code class="code">i</code> in <var class="Arg">list</var> and such that <code class="code">i^g=i</code> for all <code class="code">i</code> not in <var class="Arg">list</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">RestrictedTransformation</code> checks that <var class="Arg">list</var> is a duplicate free dense list consisting of positive integers, whereas <code class="code">RestrictedTransformationNC</code> performs no checks.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=Transformation( [ 2, 10, 5, 9, 10, 9, 6, 3, 8, 4, 6, 5 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RestrictedTransformation(f, [ 1, 2, 3, 10, 11, 12 ] );</span>
+Transformation( [ 2, 10, 5, 4, 5, 6, 7, 8, 9, 4, 6, 5 ] )
+</pre></div> </body>
+    </html>

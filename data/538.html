@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.9-4 AutomorphismsOfTable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X7C2753DE8094F4BA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.9-4 AutomorphismsOfTable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AutomorphismsOfTable</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is the permutation group of all column permutations of the character table <var class="Arg">tbl</var> that leave the set of irreducibles and each power map of <var class="Arg">tbl</var> invariant (see also <code class="func">TableAutomorphisms</code> (<a shape="rect" href="chap71_mj.html#X8082DD827C673138"><span class="RefLink">71.22-2</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;Dihedral&quot;, 8 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AutomorphismsOfTable( tbl );</span>
+Group([ (4,5) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OrdersClassRepresentatives( tbl );</span>
+[ 1, 4, 2, 2, 2 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SizesConjugacyClasses( tbl );</span>
+[ 1, 2, 1, 2, 2 ]
+</pre></div> </body>
+    </html>

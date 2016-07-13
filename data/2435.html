@@ -1,0 +1,67 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.5-1 DownEnv and UpEnv</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X79E66DA2875303B0"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.5-1 <span class="Heading">DownEnv and UpEnv</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DownEnv</code>( <var class="Arg">nr</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ UpEnv</code>( <var class="Arg">nr</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DownEnv</code> moves down <var class="Arg">nr</var> steps in the environment and allows one to inspect variables on this level; if <var class="Arg">nr</var> is negative it steps up in the environment again; <var class="Arg">nr</var> defaults to 1 if not given. <code class="func">UpEnv</code> acts similarly to <code class="func">DownEnv</code> but in the reverse direction (the mnemonic rule to remember the difference between <code class="func">DownEnv</code> and <code class="func">UpEnv</code> is the order in which commands on the execution stack are displayed by <code class="func">Where</code> (<a shape="rect" href="chap6_mj.html#X7A7FFA2B7C1EF5A3"><span class="RefLink">6.4-5</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OnBreak := function() Where(0); end;; # eliminate back-tracing on</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">                                      # entry to break loop</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">test:= function( n )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   if n &gt; 3 then Error( &quot;!\n&quot; ); fi; test( n+1 ); end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">test( 1 );</span>
+Error, !
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">Where();</span>
+ called from
+test( n + 1 ); called from
+test( n + 1 ); called from
+test( n + 1 ); called from
+&lt;function&gt;( &lt;arguments&gt; ) called from read-eval-loop
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">n;</span>
+4
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">DownEnv();</span>
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">n;</span>
+3
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">Where();</span>
+ called from
+test( n + 1 ); called from
+test( n + 1 ); called from
+&lt;function&gt;( &lt;arguments&gt; ) called from read-eval-loop
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">DownEnv( 2 );</span>
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">n;</span>
+1
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">Where();</span>
+ called from
+&lt;function&gt;( &lt;arguments&gt; ) called from read-eval-loop
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">DownEnv( -2 );</span>
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">n;</span>
+3
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">quit;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OnBreak := Where;; # restore OnBreak to its default value</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that the change of the environment caused by <code class="func">DownEnv</code> only affects variable access in the break loop. If you use <code class="keyw">return</code> to continue a calculation <strong class="pkg">GAP</strong> automatically jumps to the right environment level again.</p><p xmlns="http://www.w3.org/1999/xhtml">Note also that search for variables looks first in the chain of outer functions which enclosed the definition of a currently executing function, before it looks at the chain of calling functions which led to the current invocation of the function.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">foo := function()</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">local x; x := 1;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">return function() local y; y := x*x; Error(&quot;!!\n&quot;); end;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">end;</span>
+function(  ) ... end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">bar := foo();</span>
+function(  ) ... end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fun := function() local x; x := 3; bar(); end;</span>
+function(  ) ... end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fun();</span>
+Error, !!
+ called from
+bar(  ); called from
+&lt;function&gt;( &lt;arguments&gt; ) called from read-eval-loop
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">x;</span>
+1
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">DownEnv(1);</span>
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">x;</span>
+3
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Here the <code class="code">x</code> of <code class="code">foo</code> which contained the definition of <code class="code">bar</code> is found before that of <code class="code">fun</code> which caused its execution. Using <code class="func">DownEnv</code> we can access the <code class="code">x</code> from <code class="code">fun</code>.</p> </body>
+    </html>

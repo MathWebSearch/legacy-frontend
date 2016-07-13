@@ -1,0 +1,62 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.9-3 TzImagesOldGens</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X798B38F87C082C45"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.9-3 TzImagesOldGens</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TzImagesOldGens</code>( <var class="Arg">P</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">assumes that <var class="Arg">P</var> is a presentation for which the generator images and preimages are being traced under Tietze transformations. It returns a list <math id="-6316326326969329151" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> of words in the (current) <code class="func">GeneratorsOfPresentation</code> (<a shape="rect" href="chap48_mj.html#X849429BC7D435F77"><span class="RefLink">48.1-3</span></a>) value of <var class="Arg">P</var> such that the <math id="-6970372545553926242" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th word <math id="6422750266049251917" display="inline" alttext="l[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.5.2.1.cmml" id="p1.1.m1.1.5.2">
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.2" stretchy="false">[</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.1.cmml">
+          <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.5.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l[i]</annotation>
+  </semantics>
+</math> represents the <math id="-563738672729765244" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th old generator of <var class="Arg">P</var>, i. e., the <math id="-7930710234388010744" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th entry of the <code class="func">OldGeneratorsOfPresentation</code> (<a shape="rect" href="chap48_mj.html#X7AB9A06F80FB3659"><span class="RefLink">48.9-2</span></a>) value of <var class="Arg">P</var>.</p> </body>
+    </html>

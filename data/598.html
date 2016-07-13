@@ -1,0 +1,94 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.11-4 OrthogonalComponents</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X78648E367C65B1F1"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.11-4 OrthogonalComponents</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OrthogonalComponents</code>( <var class="Arg">tbl</var>, <var class="Arg">chars</var>, <var class="Arg">m</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <math id="5180357328049206081" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math> is a nonlinear character with indicator <math id="7771030195898782559" display="inline" alttext="+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">+</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <plus xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">+1</annotation>
+  </semantics>
+</math>, a splitting of the tensor power <math id="-6839209030363766785" display="inline" alttext="\chi^{m}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">m</mi>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑚</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi^{m}</annotation>
+  </semantics>
+</math> is given by the so-called Murnaghan functions (see <a shape="rect" href="chapBib_mj.html#biBMur58">[Mur58]</a>). These components in general have fewer irreducible constituents than the symmetrizations with the symmetric group of degree <var class="Arg">m</var> (see <code class="func">Symmetrizations</code> (<a shape="rect" href="chap72_mj.html#X7E220413823330EC"><span class="RefLink">72.11-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">OrthogonalComponents</code> returns the Murnaghan components of the nonlinear characters of the character table <var class="Arg">tbl</var> in the list <var class="Arg">chars</var> up to the power <var class="Arg">m</var>, where <var class="Arg">m</var> is an integer between 2 and 6.</p><p xmlns="http://www.w3.org/1999/xhtml">The Murnaghan functions are implemented as in <a shape="rect" href="chapBib_mj.html#biBFra82">[Fra82]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>Note</em>: If <var class="Arg">chars</var> is a list of character objects (see <code class="func">IsCharacter</code> (<a shape="rect" href="chap72_mj.html#X7FE3CD08794051F8"><span class="RefLink">72.8-1</span></a>)) then also the result consists of class function objects. It is not checked whether all characters in <var class="Arg">chars</var> do really have indicator <math id="77831235023403790" display="inline" alttext="+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">+</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <plus xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">+1</annotation>
+  </semantics>
+</math>; if there are characters with indicator <math id="-3239339833005434672" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+    </annotation-xml>
+  </semantics>
+</math> or <math id="5582861435806059190" display="inline" alttext="-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">-</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <minus xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">-1</annotation>
+  </semantics>
+</math>, the result might contain virtual characters (see also <code class="func">SymplecticComponents</code> (<a shape="rect" href="chap72_mj.html#X788B9AA17DD9418C"><span class="RefLink">72.11-5</span></a>)), therefore the entries of the result do in general not know that they are characters.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;A8&quot; );;  chi:= Irr( tbl )[2];</span>
+Character( CharacterTable( &quot;A8&quot; ), [ 7, -1, 3, 4, 1, -1, 1, 2, 0, -1, 
+  0, 0, -1, -1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OrthogonalComponents( tbl, [ chi ], 3 );</span>
+[ ClassFunction( CharacterTable( &quot;A8&quot; ), 
+    [ 21, -3, 1, 6, 0, 1, -1, 1, -2, 0, 0, 0, 1, 1 ] ), 
+  ClassFunction( CharacterTable( &quot;A8&quot; ), 
+    [ 27, 3, 7, 9, 0, -1, 1, 2, 1, 0, -1, -1, -1, -1 ] ), 
+  ClassFunction( CharacterTable( &quot;A8&quot; ), 
+    [ 105, 1, 5, 15, -3, 1, -1, 0, -1, 1, 0, 0, 0, 0 ] ), 
+  ClassFunction( CharacterTable( &quot;A8&quot; ), 
+    [ 35, 3, -5, 5, 2, -1, -1, 0, 1, 0, 0, 0, 0, 0 ] ), 
+  ClassFunction( CharacterTable( &quot;A8&quot; ), 
+    [ 77, -3, 13, 17, 2, 1, 1, 2, 1, 0, 0, 0, 2, 2 ] ) ]
+</pre></div> </body>
+    </html>

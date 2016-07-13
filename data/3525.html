@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.4-3 Remove</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7E98B11B79BA9167"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.4-3 Remove</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Remove</code>( <var class="Arg">list</var>[, <var class="Arg">pos</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">removes an element from <var class="Arg">list</var>. The one argument form removes the last element. The two argument form removes the element in position <var class="Arg">pos</var>, moving all subsequent elements down one position. Any holes after position <var class="Arg">pos</var> are also moved down by one position.</p><p xmlns="http://www.w3.org/1999/xhtml">The one argument form always returns the removed element. In this case <var class="Arg">list</var> must be non-empty.</p><p xmlns="http://www.w3.org/1999/xhtml">The two argument form returns the old value of <var class="Arg">list</var>[<var class="Arg">pos</var>] if it was bound, and nothing if it was not. Note that accessing or assigning the return value of this form of the <code class="func">Remove</code> operation is only safe when you <em>know</em> that there will be a value, otherwise it will cause an error.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := [ 2, 3, 5 ];; Add( l, 7 ); l;</span>
+[ 2, 3, 5, 7 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Add(l,4,2); l;</span>
+[ 2, 4, 3, 5, 7 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Remove(l,2); l;</span>
+4
+[ 2, 3, 5, 7 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Remove(l); l;</span>
+7
+[ 2, 3, 5 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Remove(l,5); l;</span>
+[ 2, 3, 5 ]
+</pre></div> </body>
+    </html>

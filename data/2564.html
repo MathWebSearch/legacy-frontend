@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 15: Number Theory-&gt;15.3-4 IsPrimitiveRootMod</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap15.html#X790466C07BD90E20"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">15.3-4 IsPrimitiveRootMod</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsPrimitiveRootMod</code>( <var class="Arg">r</var>, <var class="Arg">m</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsPrimitiveRootMod</code> returns <code class="keyw">true</code> if the integer <var class="Arg">r</var> is a primitive root modulo the positive integer <var class="Arg">m</var>, and <code class="keyw">false</code> otherwise. If <var class="Arg">r</var> is less than 0 or larger than <var class="Arg">m</var> it is replaced by its remainder.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPrimitiveRootMod( 2, 541 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPrimitiveRootMod( -539, 541 );  # same computation as above;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPrimitiveRootMod( 4, 541 );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAny( [1..29], r -&gt; IsPrimitiveRootMod( r, 30 ) );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># there is no a primitive root modulo 30</span>
+</pre></div> </body>
+    </html>

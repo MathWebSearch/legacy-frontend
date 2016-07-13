@@ -1,0 +1,27 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 51: Semigroups and Monoids-&gt;51.4-3 InversesOfSemigroupElement</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap51.html#X7AFDE0F17AE516C5"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">51.4-3 InversesOfSemigroupElement</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InversesOfSemigroupElement</code>( <var class="Arg">S</var>, <var class="Arg">x</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: The inverses of an element of a semigroup.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">InversesOfSemigroupElement</code> returns a list of the inverses of the element <var class="Arg">x</var> in the semigroup <var class="Arg">S</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">An element <var class="Arg">y</var> in <var class="Arg">S</var> is an <em>inverse</em> of <var class="Arg">x</var> if <code class="code"><var class="Arg">x</var>*y*<var class="Arg">x</var>=<var class="Arg">x</var></code> and <code class="code">y*<var class="Arg">x</var>*y=y</code>. The element <var class="Arg">x</var> has an inverse if and only if <var class="Arg">x</var> is a regular element of <var class="Arg">S</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=Semigroup([ Transformation( [ 3, 1, 4, 2, 5, 2, 1, 6, 1 ] ), </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"> Transformation( [ 5, 7, 8, 8, 7, 5, 9, 1, 9 ] ), </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"> Transformation( [ 7, 6, 2, 8, 4, 7, 5, 8, 3 ] ) ]);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x:=Transformation( [ 3, 1, 4, 2, 5, 2, 1, 6, 1 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">InversesOfSemigroupElement(S, x);</span>
+[  ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsRegularSemigroupElement(S, x);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x:=Transformation( [ 1, 9, 7, 5, 5, 1, 9, 5, 1 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Set(InversesOfSemigroupElement(S, x));</span>
+[ Transformation( [ 1, 2, 3, 5, 5, 1, 3, 5, 2 ] ), 
+  Transformation( [ 1, 5, 1, 1, 5, 1, 3, 1, 2 ] ), 
+  Transformation( [ 1, 5, 1, 2, 5, 1, 3, 2, 2 ] ) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsRegularSemigroupElement(S, x);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=ReesZeroMatrixSemigroup(Group((1,2,3)), </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ [ (), () ], [ (), 0 ], [ (), (1,2,3) ] ]);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x:=ReesZeroMatrixSemigroupElement(S, 2, (1,2,3), 3);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">InversesOfSemigroupElement(S, x);</span>
+[ (1,(1,2,3),3), (1,(1,3,2),1), (2,(),3), (2,(1,2,3),1) ]</pre></div> </body>
+    </html>

@@ -1,0 +1,57 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.7-1 MarksTom</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X78F486A28561D006"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.7-1 MarksTom</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MarksTom</code>( <var class="Arg">tom</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SubsTom</code>( <var class="Arg">tom</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The matrix of marks (see <a shape="rect" href="chap70_mj.html#X80883EC17968F442"><span class="RefLink">70.1</span></a>) of the table of marks <var class="Arg">tom</var> is stored in a compressed form where zeros are omitted, using the attributes <code class="func">MarksTom</code> and <code class="func">SubsTom</code>. If <math id="2946649734175865884" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> is the square matrix of marks of <var class="Arg">tom</var> (see <code class="func">MatTom</code> (<a shape="rect" href="chap70_mj.html#X8463272986781E17"><span class="RefLink">70.7-10</span></a>)) then the <code class="func">SubsTom</code> value of <var class="Arg">tom</var> is a list that contains at position <math id="-4953680317476115141" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> the list of all positions of nonzero entries of the <math id="-4713577881735536515" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th row of <math id="-5120697113691651025" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math>, and the <code class="func">MarksTom</code> value of <var class="Arg">tom</var> is a list that contains at position <math id="-1231224901075880051" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> the list of the corresponding marks.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">MarksTom</code> and <code class="func">SubsTom</code> are defining attributes of tables of marks (see <a shape="rect" href="chap70_mj.html#X7D29539F7C14956D"><span class="RefLink">70.2</span></a>). There is no default method for computing the <code class="func">SubsTom</code> value, and the default <code class="func">MarksTom</code> method needs the values of <code class="func">NrSubsTom</code> (<a shape="rect" href="chap70_mj.html#X82E5DA217A5D1134"><span class="RefLink">70.7-2</span></a>) and <code class="func">OrdersTom</code> (<a shape="rect" href="chap70_mj.html#X82E5DA217A5D1134"><span class="RefLink">70.7-2</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a5:= TableOfMarks( &quot;A5&quot; );</span>
+TableOfMarks( &quot;A5&quot; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MarksTom( a5 );</span>
+[ [ 60 ], [ 30, 2 ], [ 20, 2 ], [ 15, 3, 3 ], [ 12, 2 ], 
+  [ 10, 2, 1, 1 ], [ 6, 2, 1, 1 ], [ 5, 1, 2, 1, 1 ], 
+  [ 1, 1, 1, 1, 1, 1, 1, 1, 1 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SubsTom( a5 );</span>
+[ [ 1 ], [ 1, 2 ], [ 1, 3 ], [ 1, 2, 4 ], [ 1, 5 ], [ 1, 2, 3, 6 ], 
+  [ 1, 2, 5, 7 ], [ 1, 2, 3, 4, 8 ], [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] ]
+</pre></div> </body>
+    </html>

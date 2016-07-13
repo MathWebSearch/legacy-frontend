@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.8-6 StringOfResultOfStraightLineProgram</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X8098EAAF7D344466"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">37.8-6 StringOfResultOfStraightLineProgram</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StringOfResultOfStraightLineProgram</code>( <var class="Arg">prog</var>, <var class="Arg">gensnames</var>[, <var class="Arg">&quot;LaTeX&quot;</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">StringOfResultOfStraightLineProgram</code> returns a string that describes the result of the straight line program (see <code class="func">IsStraightLineProgram</code> (<a shape="rect" href="chap37_mj.html#X7F69FF3F7C6694CB"><span class="RefLink">37.8-1</span></a>)) <var class="Arg">prog</var> as word(s) in terms of the strings in the list <var class="Arg">gensnames</var>. If the result of <var class="Arg">prog</var> is a single element then the return value of <code class="func">StringOfResultOfStraightLineProgram</code> is a string consisting of the entries of <var class="Arg">gensnames</var>, opening and closing brackets <code class="code">(</code> and <code class="code">)</code>, and powering by integers via <code class="code">^</code>. If the result of <var class="Arg">prog</var> is a list of elements then the return value of <code class="func">StringOfResultOfStraightLineProgram</code> is a comma separated concatenation of the strings of the single elements, enclosed in square brackets <code class="code">[</code>, <code class="code">]</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">prg:= StraightLineProgram( [ [ 1, 2, 2, 3 ], [ 3, -1 ] ], 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StringOfResultOfStraightLineProgram( prg, [ &quot;a&quot;, &quot;b&quot; ] );</span>
+&quot;(a^2b^3)^-1&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StringOfResultOfStraightLineProgram( prg, [ &quot;a&quot;, &quot;b&quot; ], &quot;LaTeX&quot; );</span>
+&quot;(a^{2}b^{3})^{-1}&quot;
+</pre></div> </body>
+    </html>

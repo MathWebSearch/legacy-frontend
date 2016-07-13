@@ -1,0 +1,28 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.2-4 GeneratorsOfGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X79C44528864044C5"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.2-4 GeneratorsOfGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GeneratorsOfGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a list of generators of the group <var class="Arg">G</var>. If <var class="Arg">G</var> has been created by the command <code class="func">GroupWithGenerators</code> (<a shape="rect" href="chap39_mj.html#X8589EF9C7B658B94"><span class="RefLink">39.2-3</span></a>) with argument <var class="Arg">gens</var>, then the list returned by <code class="func">GeneratorsOfGroup</code> will be equal to <var class="Arg">gens</var>. For such a group, each generator can also be accessed using the <code class="code">.</code> operator (see <code class="func">GeneratorsOfDomain</code> (<a shape="rect" href="chap31_mj.html#X7E353DD1838AB223"><span class="RefLink">31.9-2</span></a>)): for a positive integer <math id="7825038161149105109" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>, <code class="code"><var class="Arg">G</var>.i</code> returns the <math id="1715738062586007752" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th element of the list returned by <code class="func">GeneratorsOfGroup</code>. Moreover, if <var class="Arg">G</var> is a free group, and <code class="code">name</code> is the name of a generator of <var class="Arg">G</var> then <code class="code"><var class="Arg">G</var>.name</code> also returns this generator.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=GroupWithGenerators([(1,2,3,4),(1,2)]);</span>
+Group([ (1,2,3,4), (1,2) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfGroup(g);</span>
+[ (1,2,3,4), (1,2) ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">While in this example <strong class="pkg">GAP</strong> displays the group via the generating set stored in the attribute <code class="func">GeneratorsOfGroup</code>, the methods installed for <code class="func">View</code> (<a shape="rect" href="chap6_mj.html#X851902C583B84CDC"><span class="RefLink">6.3-3</span></a>) will in general display only some information about the group which may even be just the fact that it is a group.</p> </body>
+    </html>

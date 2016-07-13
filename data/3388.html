@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.5-3 IsLieSolvable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X859FF1B3812B8FCC"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.5-3 IsLieSolvable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsLieSolvable</code>( <var class="Arg">L</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A Lie algebra <var class="Arg">L</var> is defined to be (Lie) <em>solvable</em> when its (Lie) derived series reaches the trivial subalgebra.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T:= EmptySCTable( 5, 0, &quot;antisymmetric&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= LieAlgebraByStructureConstants( Rationals, T );</span>
+&lt;Lie algebra of dimension 5 over Rationals&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLieSolvable( L );</span>
+true
+</pre></div> </body>
+    </html>

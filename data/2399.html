@@ -1,0 +1,59 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 75: Monomiality Questions-&gt;75.3-4 TestInducedFromNormalSubgroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap75.html#X84860E3A7FECDBA3"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">75.3-4 TestInducedFromNormalSubgroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TestInducedFromNormalSubgroup</code>( <var class="Arg">chi</var>[, <var class="Arg">N</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsInducedFromNormalSubgroup</code>( <var class="Arg">chi</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">TestInducedFromNormalSubgroup</code> returns a record with information whether the irreducible character <var class="Arg">chi</var> of the group <math id="-7615169002015358417" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, say, is induced from a proper normal subgroup of <math id="4020462075119029984" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>. If the second argument <var class="Arg">N</var> is present, which must be a normal subgroup of <math id="-4901605078034410541" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> or the list of class positions of a normal subgroup of <math id="287844361730037774" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, it is checked whether <var class="Arg">chi</var> is induced from <var class="Arg">N</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The result contains always the components <code class="code">isInduced</code> (either <code class="keyw">true</code> or <code class="keyw">false</code>) and <code class="code">comment</code> (a string telling a reason for the value of the component <code class="code">isInduced</code>). In the <code class="keyw">true</code> case there is a component <code class="code">character</code> which contains a character of a maximal normal subgroup from which <var class="Arg">chi</var> is induced.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsInducedFromNormalSubgroup</code> returns <code class="keyw">true</code> if <var class="Arg">chi</var> is induced from a proper normal subgroup of <math id="-8873578581141303258" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, and <code class="keyw">false</code> otherwise.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( Irr( Sl23 ), IsInducedFromNormalSubgroup );</span>
+[ false, false, false, false, false, false, true ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( Irr( S4 ){ [ 1, 3, 4 ] },</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">         TestInducedFromNormalSubgroup );</span>
+[ rec( comment := &quot;linear character&quot;, isInduced := false ), 
+  rec( character := Character( CharacterTable( Alt( [ 1 .. 4 ] ) ), 
+        [ 1, 1, E(3)^2, E(3) ] ), 
+      comment := &quot;induced from component '.character'&quot;, 
+      isInduced := true ), 
+  rec( comment := &quot;all maximal normal subgroups checked&quot;, 
+      isInduced := false ) ]
+</pre></div> </body>
+    </html>

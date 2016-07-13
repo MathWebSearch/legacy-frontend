@@ -1,0 +1,23 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.8-2 PthPowerImages</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X7D7BD5908016461B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.8-2 PthPowerImages</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PthPowerImages</code>( <var class="Arg">B</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">B</var> is a basis of a restricted Lie algebra. This function returns the list of the images of the basis vectors of <var class="Arg">B</var> under the <math id="7204623163725151582" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-map.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;W&quot;, [1], GF(11) );</span>
+&lt;Lie algebra of dimension 11 over GF(11)&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= Basis( L );</span>
+CanonicalBasis( &lt;Lie algebra of dimension 11 over GF(11)&gt; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PthPowerImages( B );</span>
+[ 0*v.1, v.2, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 
+  0*v.1 ]
+</pre></div> </body>
+    </html>

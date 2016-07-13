@@ -1,0 +1,32 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 10: Streams-&gt;10.5-2 OutputTextFile</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap10.html#X83F53291822B7126"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">10.5-2 OutputTextFile</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OutputTextFile</code>( <var class="Arg">filename</var>, <var class="Arg">append</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">OutputTextFile( <var class="Arg">filename</var>, <var class="Arg">append</var> )</code> returns an output stream in the category <code class="code">IsOutputTextFile</code> that writes received characters to the file <var class="Arg">filename</var>. If <var class="Arg">append</var> is <code class="keyw">false</code>, then the file is emptied first, otherwise received characters are added at the end of the file.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># use a temporary directory</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">name := Filename( DirectoryTemporary(), &quot;test&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># create an output stream, append output, and close again</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">output := OutputTextFile( name, true );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AppendTo( output, &quot;Hallo\n&quot;, &quot;You\n&quot; );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CloseStream(output);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># create an input, print complete contents of file, and close</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">input := InputTextFile(name);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( ReadAll(input) );</span>
+Hallo
+You
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CloseStream(input);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># append a single line</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">output := OutputTextFile( name, true );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AppendTo( output, &quot;AppendLine\n&quot; );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># close output stream to flush the output</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CloseStream(output);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># create an input, print complete contents of file, and close</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">input := InputTextFile(name);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( ReadAll(input) );</span>
+Hallo
+You
+AppendLine
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CloseStream(input);</span>
+</pre></div> </body>
+    </html>

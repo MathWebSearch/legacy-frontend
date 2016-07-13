@@ -1,0 +1,46 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.9-9 EulerianFunctionByTom</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X7B1C1A7C867A4082"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.9-9 EulerianFunctionByTom</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EulerianFunctionByTom</code>( <var class="Arg">tom</var>, <var class="Arg">n</var>[, <var class="Arg">sub</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Called with two arguments, <code class="func">EulerianFunctionByTom</code> computes the Eulerian function (see <code class="func">EulerianFunction</code> (<a shape="rect" href="chap39_mj.html#X843E0CCA8351FDF4"><span class="RefLink">39.16-3</span></a>)) of the underlying group <math id="-441423218371990627" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> of the table of marks <var class="Arg">tom</var>, that is, the number of <var class="Arg">n</var>-tuples of elements in <math id="6733798530627951703" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> that generate <math id="-445925443246239528" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>. If the optional argument <var class="Arg">sub</var> is given then <code class="func">EulerianFunctionByTom</code> computes the Eulerian function of each subgroup in the <var class="Arg">sub</var>-th class of subgroups of <var class="Arg">tom</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">For a group <math id="-401251456934603621" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> whose table of marks is known, <code class="func">EulerianFunctionByTom</code> is installed as a method for <code class="func">EulerianFunction</code> (<a shape="rect" href="chap39_mj.html#X843E0CCA8351FDF4"><span class="RefLink">39.16-3</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">EulerianFunctionByTom( a5, 2 );</span>
+2280
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">EulerianFunctionByTom( a5, 3 );</span>
+200160
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">EulerianFunctionByTom( a5, 2, 3 );</span>
+8
+</pre></div> </body>
+    </html>

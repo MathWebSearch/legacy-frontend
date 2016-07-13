@@ -1,0 +1,65 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 51: Semigroups and Monoids-&gt;51.1-10 FreeSemigroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap51.html#X7C72E4747BF642BB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">51.1-10 <span class="Heading">FreeSemigroup</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeSemigroup</code>( [<var class="Arg">wfilt</var>, ]<var class="Arg">rank</var>[, <var class="Arg">name</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeSemigroup</code>( [<var class="Arg">wfilt</var>, ]<var class="Arg">name1</var>, <var class="Arg">name2</var>, <var class="Arg">...</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeSemigroup</code>( [<var class="Arg">wfilt</var>, ]<var class="Arg">names</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeSemigroup</code>( [<var class="Arg">wfilt</var>, ]<var class="Arg">infinity</var>, <var class="Arg">name</var>, <var class="Arg">init</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Called with a positive integer <var class="Arg">rank</var>, <code class="func">FreeSemigroup</code> returns a free semigroup on <var class="Arg">rank</var> generators. If the optional argument <var class="Arg">name</var> is given then the generators are printed as <var class="Arg">name</var><code class="code">1</code>, <var class="Arg">name</var><code class="code">2</code> etc., that is, each name is the concatenation of the string <var class="Arg">name</var> and an integer from <code class="code">1</code> to <var class="Arg">range</var>. The default for <var class="Arg">name</var> is the string <code class="code">&quot;s&quot;</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Called in the second form, <code class="func">FreeSemigroup</code> returns a free semigroup on as many generators as arguments, printed as <var class="Arg">name1</var>, <var class="Arg">name2</var> etc.</p><p xmlns="http://www.w3.org/1999/xhtml">Called in the third form, <code class="func">FreeSemigroup</code> returns a free semigroup on as many generators as the length of the list <var class="Arg">names</var>, the <math id="-8557653216612187665" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th generator being printed as <var class="Arg">names</var><math id="-7774314050658253285" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">i</mi>
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.4.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[i]</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Called in the fourth form, <code class="func">FreeSemigroup</code> returns a free semigroup on infinitely many generators, where the first generators are printed by the names in the list <var class="Arg">init</var>, and the other generators by <var class="Arg">name</var> and an appended number.</p><p xmlns="http://www.w3.org/1999/xhtml">If the extra argument <var class="Arg">wfilt</var> is given, it must be either <code class="func">IsSyllableWordsFamily</code> (<a shape="rect" href="chap37_mj.html#X7869716C84EA9D81"><span class="RefLink">37.6-6</span></a>) or <code class="func">IsLetterWordsFamily</code> (<a shape="rect" href="chap37_mj.html#X7E36F7897D82417F"><span class="RefLink">37.6-2</span></a>) or <code class="func">IsWLetterWordsFamily</code> (<a shape="rect" href="chap37_mj.html#X8719E7F27CDA1995"><span class="RefLink">37.6-4</span></a>) or <code class="func">IsBLetterWordsFamily</code> (<a shape="rect" href="chap37_mj.html#X8719E7F27CDA1995"><span class="RefLink">37.6-4</span></a>). This filter then specifies the representation used for the elements of the free semigroup (see <a shape="rect" href="chap37_mj.html#X80A9F39582ED296E"><span class="RefLink">37.6</span></a>). If no such filter is given, a letter representation is used.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f1 := FreeSemigroup( 3 );</span>
+&lt;free semigroup on the generators [ s1, s2, s3 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f2 := FreeSemigroup( 3 , &quot;generator&quot; );</span>
+&lt;free semigroup on the generators 
+[ generator1, generator2, generator3 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f3 := FreeSemigroup( &quot;gen1&quot; , &quot;gen2&quot; );</span>
+&lt;free semigroup on the generators [ gen1, gen2 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f4 := FreeSemigroup( [&quot;gen1&quot; , &quot;gen2&quot;] );</span>
+&lt;free semigroup on the generators [ gen1, gen2 ]&gt;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Also see Chapter <a shape="rect" href="chap51_mj.html#X8665D8737FDD5B10"><span class="RefLink">51</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Each free object defines a unique alphabet (and a unique family of words). Its generators are the letters of this alphabet, thus words of length one.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeGroup( 5 );</span>
+&lt;free group on the generators [ f1, f2, f3, f4, f5 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeGroup( &quot;a&quot;, &quot;b&quot; );</span>
+&lt;free group on the generators [ a, b ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeGroup( infinity );</span>
+&lt;free group with infinity generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeSemigroup( &quot;x&quot;, &quot;y&quot; );</span>
+&lt;free semigroup on the generators [ x, y ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeMonoid( 7 );</span>
+&lt;free monoid on the generators [ m1, m2, m3, m4, m5, m6, m7 ]&gt;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Remember that names are just a help for printing and do not necessarily distinguish letters. It is possible to create arbitrarily weird situations by choosing strange names for the letters.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= FreeGroup( &quot;x&quot;, &quot;x&quot; );  gens:= GeneratorsOfGroup( f );;</span>
+&lt;free group on the generators [ x, x ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens[1] = gens[2];</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= FreeGroup( &quot;f1*f2&quot;, &quot;f2^-1&quot;, &quot;Group( [ f1, f2 ] )&quot; );</span>
+&lt;free group on the generators [ f1*f2, f2^-1, Group( [ f1, f2 ] ) ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens:= GeneratorsOfGroup( f );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens[1]*gens[2];</span>
+f1*f2*f2^-1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens[1]/gens[3];</span>
+f1*f2*Group( [ f1, f2 ] )^-1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens[3]/gens[1]/gens[2];</span>
+Group( [ f1, f2 ] )*f1*f2^-1*f2^-1^-1
+</pre></div> </body>
+    </html>

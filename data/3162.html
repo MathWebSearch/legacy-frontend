@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.10-5 IsRegular</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X7CF02C4785F0EAB5"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.10-5 <span class="Heading">IsRegular</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsRegular</code>( <var class="Arg">G</var>, <var class="Arg">Omega</var>[, <var class="Arg">gens</var>, <var class="Arg">acts</var>][, <var class="Arg">act</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsRegular</code>( <var class="Arg">xset</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns <code class="keyw">true</code> if the action implied by the arguments is regular, or <code class="keyw">false</code> otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml">An action is <em>regular</em> if it is both semiregular (see <code class="func">IsSemiRegular</code> (<a shape="rect" href="chap41_mj.html#X7B77040F8543CD6E"><span class="RefLink">41.10-4</span></a>)) and transitive (see <code class="func">IsTransitive</code> (<a shape="rect" href="chap41_mj.html#X79B15750851828CB"><span class="RefLink">41.10-1</span></a>)). In this case every point <var class="Arg">pnt</var> of <var class="Arg">Omega</var> defines a one-to-one correspondence between <var class="Arg">G</var> and <var class="Arg">Omega</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSemiRegular(g,Arrangements([1..4],3),OnTuples);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsRegular(g,Arrangements([1..4],3),OnTuples);</span>
+false
+</pre></div> </body>
+    </html>

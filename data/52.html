@@ -1,0 +1,37 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.9-15 FullMatrixAlgebraCentralizer</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7D0EB1437D3D9495"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.9-15 FullMatrixAlgebraCentralizer</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FullMatrixAlgebraCentralizer</code>( <var class="Arg">F</var>, <var class="Arg">lst</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">lst</var> be a nonempty list of square matrices of the same dimension <math id="-2561338953514987880" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>, say, with entries in the field <var class="Arg">F</var>. <code class="func">FullMatrixAlgebraCentralizer</code> returns the (pointwise) centralizer of all matrices in <var class="Arg">lst</var>, inside the full matrix algebra of <math id="5551514740769511405" display="inline" alttext="n\times n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n\times n</annotation>
+  </semantics>
+</math> matrices over <var class="Arg">F</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= QuaternionAlgebra( Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b:= Basis( A );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mats:= List( BasisVectors( b ), x -&gt; AdjointMatrix( b, x ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FullMatrixAlgebraCentralizer( Rationals, mats );</span>
+&lt;algebra-with-one of dimension 4 over Rationals&gt;
+</pre></div> </body>
+    </html>

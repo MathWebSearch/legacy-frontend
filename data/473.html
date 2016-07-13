@@ -1,0 +1,49 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.18 Components of a Dixon Record</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X7C1153637E7D2133"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">71.18 <span class="Heading">Components of a Dixon Record</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The &quot;Dixon record&quot; <var class="Arg">D</var> returned by <code class="func">DixonInit</code> (<a shape="rect" href="chap71_mj.html#X7E33C03E7BDDC9B0"><span class="RefLink">71.17-2</span></a>) stores all the information that is used by the Dixon-Schneider routines while computing the irreducible characters of a group. Some entries, however, may be useful to know about when using the algorithm interactively, see <a shape="rect" href="chap71_mj.html#X782B5E37848786BC"><span class="RefLink">71.19</span></a>.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">group</code></strong></dt><dd><p>the group <math id="4708183899172706692" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> of which the character table is to be computed,</p>
+
+</dd><dt><strong class="Mark"><code class="code">conjugacyClasses</code></strong></dt><dd><p>classes of <math id="4023891448580192375" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> (all characters stored in the Dixon record correspond to this arrangement of classes),</p>
+
+</dd><dt><strong class="Mark"><code class="code">irreducibles</code></strong></dt><dd><p>the already known irreducible characters (given as lists of their values on the conjugacy classes),</p>
+
+</dd><dt><strong class="Mark"><code class="code">characterTable</code></strong></dt><dd><p>the <code class="func">CharacterTable</code> (<a shape="rect" href="chap71_mj.html#X7FCA7A7A822BDA33"><span class="RefLink">71.3-1</span></a>) value of <math id="696338104540932308" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> (whose irreducible characters are not yet known),</p>
+
+</dd><dt><strong class="Mark"><code class="code">ClassElement( <var class="Arg">D</var>, <var class="Arg">el</var> )</code></strong></dt><dd><p>a function that returns the number of the class of <math id="4812676976809029586" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> that contains the element <var class="Arg">el</var>.</p>
+
+</dd></dl> </body>
+    </html>

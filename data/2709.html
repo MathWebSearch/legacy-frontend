@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.3-13 LargestMovedPoint</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X7D4290A785ABC86D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.3-13 LargestMovedPoint</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LargestMovedPoint</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LargestMovedPoint</code>( <var class="Arg">coll</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A positive integer or <code class="keyw">infinity</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">LargestMovedPoint</code> returns the largest positive integers <code class="code">i</code> such that <code class="code">i^<var class="Arg">f</var>&lt;&gt;i</code> if such an <code class="code">i</code> exists. If <var class="Arg">f</var> is the identity partial permutation, then <code class="code">0</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">If the argument is a collection of partial permutations <var class="Arg">coll</var>, then the largest point which is moved by at least one element of <var class="Arg">coll</var> is returned, if such a point exists. If <var class="Arg">coll</var> only contains identity partial permutations, then <code class="code">LargestMovedPoint</code> returns <code class="code">0</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := PartialPerm( [ 1, 3, 4, 5 ], [ 5, 1, 6, 4 ] );</span>
+[3,1,5,4,6]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LargestMovedPoint(f);</span>
+5
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LargestMovedPoint(PartialPerm([1 .. 10]));</span>
+0</pre></div> </body>
+    </html>

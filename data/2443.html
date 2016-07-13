@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.3-7 SetNameObject</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X87E546E27A1F1FAB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.3-7 SetNameObject</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SetNameObject</code>( <var class="Arg">o</var>, <var class="Arg">s</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SetNameObject</code> sets the string <var class="Arg">s</var> as display name for object <var class="Arg">o</var> in an interactive session. When applying <code class="func">View</code> (<a shape="rect" href="chap6_mj.html#X851902C583B84CDC"><span class="RefLink">6.3-3</span></a>) to object <var class="Arg">o</var>, for example in the system's main loop, <strong class="pkg">GAP</strong> will print the string <var class="Arg">s</var>. Calling <code class="func">SetNameObject</code> for the same object <var class="Arg">o</var> with <var class="Arg">s</var> set to <code class="code">fail</code> deletes the special viewing setup. since use of this features potentially slows down the whole print process, this function should be used sparingly.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetNameObject(3,&quot;three&quot;); </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Filtered([1..10],IsPrimeInt);</span>
+[ 2, three, 5, 7 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetNameObject(3,fail);   </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Filtered([1..10],IsPrimeInt);</span>
+[ 2, 3, 5, 7 ]
+</pre></div> </body>
+    </html>

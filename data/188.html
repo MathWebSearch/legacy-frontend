@@ -1,0 +1,210 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.12-4 ImfMatrixGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X78935B307B909101"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">50.12-4 ImfMatrixGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ImfMatrixGroup</code>( <var class="Arg">dim</var>, <var class="Arg">q</var>[, <var class="Arg">z</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ImfMatrixGroup</code> is the essential extraction function of this library (note that its name has been changed from <code class="code">ImfMatGroup</code> in <strong class="pkg">GAP</strong> 3 to <code class="func">ImfMatrixGroup</code> in <strong class="pkg">GAP</strong> 4). It returns a representative group, <math id="1208533819148981360" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> say, of the <var class="Arg">z</var>-th <math id="-6308634722319406103" display="inline" alttext="?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?</annotation>
+  </semantics>
+</math>-class in the <var class="Arg">q</var>-th <math id="-6508644082403604085" display="inline" alttext="?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?</annotation>
+  </semantics>
+</math>-class of i.m.f. integral matrix groups of dimension <var class="Arg">dim</var>. A value <var class="Arg">z</var><math id="53068707448611430" display="inline" alttext="\neq 1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≠</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <neq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" cd="latexml">absent</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\neq 1</annotation>
+  </semantics>
+</math> must not be specified if the <math id="-6075229237141763035" display="inline" alttext="?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?</annotation>
+  </semantics>
+</math>-classes are not known for the given dimension, i.e., if <var class="Arg">dim</var> <math id="316151148749809003" display="inline" alttext="&amp;gt;11" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">g</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.4">;</mo>
+      <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">11</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml">
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <times xref="p1.1.m1.1.7.2.1" id="p1.1.m1.1.7.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑡</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">11</cn>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">&amp;gt;11</annotation>
+  </semantics>
+</math> and <var class="Arg">dim</var> <math id="2643513201525459897" display="inline" alttext="\not\in\{13,17,19,23\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
+      <mi xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1"/>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∉</mo>
+      <mrow xref="p1.1.m1.1.16.2.1.cmml" id="p1.1.m1.1.16.2">
+        <mo id="p1.1.m1.1.3" stretchy="false">{</mo>
+        <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">13</mn>
+        <mo id="p1.1.m1.1.6">,</mo>
+        <mn xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">17</mn>
+        <mo id="p1.1.m1.1.9">,</mo>
+        <mn xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">19</mn>
+        <mo id="p1.1.m1.1.12">,</mo>
+        <mn xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">23</mn>
+        <mo id="p1.1.m1.1.15" stretchy="false">}</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">
+        <notin xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <csymbol xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml" cd="latexml">absent</csymbol>
+        <set xref="p1.1.m1.1.16.2" id="p1.1.m1.1.16.2.1.cmml">
+          <cn xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" type="integer">13</cn>
+          <cn xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml" type="integer">17</cn>
+          <cn xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml" type="integer">19</cn>
+          <cn xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml" type="integer">23</cn>
+        </set>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\not\in\{13,17,19,23\}</annotation>
+  </semantics>
+</math>. The default value of <var class="Arg">z</var> is 1. This value of <var class="Arg">z</var> will be accepted even if the <math id="-3427246062799977497" display="inline" alttext="?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?</annotation>
+  </semantics>
+</math>-classes are not known. Then it specifies the only representative group which is available for the <var class="Arg">q</var>-th <math id="3420853424617926414" display="inline" alttext="?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?</annotation>
+  </semantics>
+</math>-class. The greatest legal value of <var class="Arg">dim</var> is 31.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := ImfMatrixGroup( 5, 1, 3 );</span>
+ImfMatrixGroup(5,1,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for m in GeneratorsOfGroup( G ) do PrintArray( m ); od;</span>
+[ [  -1,   0,   0,   0,   0 ],
+  [   0,   1,   0,   0,   0 ],
+  [   0,   0,   0,   1,   0 ],
+  [  -1,  -1,  -1,  -1,   2 ],
+  [  -1,   0,   0,   0,   1 ] ]
+[ [  0,  1,  0,  0,  0 ],
+  [  0,  0,  1,  0,  0 ],
+  [  0,  0,  0,  1,  0 ],
+  [  1,  0,  0,  0,  0 ],
+  [  0,  0,  0,  0,  1 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The attributes <code class="func">Size</code> (<a shape="rect" href="chap30_mj.html#X858ADA3B7A684421"><span class="RefLink">30.4-6</span></a>) and <code class="code">IsSolvable</code> will be properly set in the resulting matrix group <math id="5244950595223702375" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>. In addition, it has two attributes <code class="code">IsImfMatrixGroup</code> and <code class="code">ImfRecord</code> where the first one is just a logical flag set to <code class="keyw">true</code> and the latter one is a record. Except for the group size and the solvability flag, this record contains the same components as the resulting record of the function <code class="func">ImfInvariants</code> (<a shape="rect" href="chap50_mj.html#X8604A2167B2E8434"><span class="RefLink">50.12-3</span></a>) described above, namely the components <code class="code">isomorphismType</code>, <code class="code">elementaryDivisors</code>, <code class="code">minimalNorm</code>, and <code class="code">sizesOrbitsShortVectors</code> and, if <math id="-2144961450214482725" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is not a rational i.m.f. group, <code class="code">maximalQClass</code>. Moreover, it has the two components</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">form</code></strong></dt><dd><p>the associated Gram matrix <math id="-6097785703479225107" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>, and</p>
+
+</dd><dt><strong class="Mark"><code class="code">repsOrbitsShortVectors</code></strong></dt><dd><p>representatives of the orbits of short vectors under <math id="-2116107013191585717" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The last one of these components will be required by the function <code class="func">IsomorphismPermGroup</code> (<a shape="rect" href="chap50_mj.html#X84BF34B27CD5E85C"><span class="RefLink">50.12-5</span></a>) below.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( G );</span>
+3840
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">imf := ImfRecord( G );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">imf.isomorphismType;</span>
+&quot;C2 wr S5 = C2 x W(D5)&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintArray( imf.form );</span>
+[ [  4,  0,  0,  0,  2 ],
+  [  0,  4,  0,  0,  2 ],
+  [  0,  0,  4,  0,  2 ],
+  [  0,  0,  0,  4,  2 ],
+  [  2,  2,  2,  2,  5 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">imf.elementaryDivisors;</span>
+[ 1, 4, 4, 4, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">imf.minimalNorm;</span>
+4
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If you want to perform calculations in such a matrix group <math id="892340002782744488" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> you should be aware of the fact that the permutation group routines of <strong class="pkg">GAP</strong> are much more efficient than the matrix group routines. Hence we recommend that you do your computations, whenever possible, in the isomorphic permutation group which is induced by the action of <math id="-2576616332800032280" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> on one of the orbits of the associated short vectors. You may call one of the following functions <code class="func">IsomorphismPermGroup</code> (<a shape="rect" href="chap50_mj.html#X84BF34B27CD5E85C"><span class="RefLink">50.12-5</span></a>) or <code class="func">IsomorphismPermGroupImfGroup</code> (<a shape="rect" href="chap50_mj.html#X7CEDB6CE7BAC4518"><span class="RefLink">50.12-6</span></a>) to get an isomorphism to such a permutation group (note that these <strong class="pkg">GAP</strong> 4 functions have replaced the <strong class="pkg">GAP</strong> 3 functions <code class="code">PermGroup</code> and <code class="code">PermGroupImfGroup</code>).</p> </body>
+    </html>

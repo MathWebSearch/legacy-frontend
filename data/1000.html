@@ -1,0 +1,42 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 33: Relations-&gt;33.4-3 TransitiveClosureBinaryRelation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap33.html#X853BFAD9858DCDF7"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">33.4-3 TransitiveClosureBinaryRelation</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TransitiveClosureBinaryRelation</code>( <var class="Arg">rel</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is the smallest binary relation containing the binary relation <var class="Arg">R</var> which is transitive. This closure inherits the properties reflexive and symmetric from <var class="Arg">R</var>. E.g., if <var class="Arg">R</var> is symmetric then its transitive closure is also.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">TransitiveClosureBinaryRelation</code> is a modified version of the Floyd-Warshall method of solving the all-pairs shortest-paths problem on a directed graph. Its asymptotic runtime is <math id="5162318114219937969" display="inline" alttext="O(n^{3})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">O</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.6.2.2.cmml" id="p1.1.m1.1.6.2">
+        <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <msup xref="p1.1.m1.1.6.2.2.cmml" id="p1.1.m1.1.6.2.2">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+          <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">3</mn>
+        </msup>
+        <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑂</ci>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+          <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">3</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">O(n^{3})</annotation>
+  </semantics>
+</math> where <math id="-7784940191332004499" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> is the size of the vertex set. It only assumes there is an arbitrary (but fixed) ordering of the vertex set.</p> </body>
+    </html>

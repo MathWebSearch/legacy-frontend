@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 75: Monomiality Questions-&gt;75.3-3 TestQuasiPrimitive</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap75.html#X82BFA6968415F308"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">75.3-3 TestQuasiPrimitive</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TestQuasiPrimitive</code>( <var class="Arg">chi</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsQuasiPrimitive</code>( <var class="Arg">chi</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">TestQuasiPrimitive</code> returns a record with information about quasiprimitivity of the group character <var class="Arg">chi</var>, i.e., whether <var class="Arg">chi</var> restricts homogeneously to every normal subgroup of its group. The result record contains at least the components <code class="code">isQuasiPrimitive</code> (with value either <code class="keyw">true</code> or <code class="keyw">false</code>) and <code class="code">comment</code> (a string telling a reason for the value of the component <code class="code">isQuasiPrimitive</code>). If <var class="Arg">chi</var> is not quasiprimitive then there is additionally a component <code class="code">character</code>, with value an irreducible constituent of a nonhomogeneous restriction of <var class="Arg">chi</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsQuasiPrimitive</code> returns <code class="keyw">true</code> or <code class="keyw">false</code>, depending on whether the character <var class="Arg">chi</var> is quasiprimitive.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that for solvable groups, quasiprimitivity is the same as primitivity (see <code class="func">IsPrimitiveCharacter</code> (<a shape="rect" href="chap75_mj.html#X7BC72ECE822D4245"><span class="RefLink">75.3-2</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi:= Irr( Sl23 )[4];</span>
+Character( CharacterTable( SL(2,3) ), [ 2, 1, 1, -2, -1, -1, 0 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TestQuasiPrimitive( chi );</span>
+rec( comment := &quot;all restrictions checked&quot;, isQuasiPrimitive := true )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi:= Irr( Sl23 )[7];</span>
+Character( CharacterTable( SL(2,3) ), [ 3, 0, 0, 3, 0, 0, -1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TestQuasiPrimitive( chi );</span>
+rec( character := Character( CharacterTable( Group(
+    [ [ [ 0*Z(3), Z(3) ], [ Z(3)^0, 0*Z(3) ] ], 
+      [ [ Z(3), 0*Z(3) ], [ 0*Z(3), Z(3) ] ], 
+      [ [ Z(3), Z(3)^0 ], [ Z(3)^0, Z(3)^0 ] ] ]) ),
+  [ 1, -1, 1, -1, 1 ] ), comment := &quot;restriction checked&quot;,
+  isQuasiPrimitive := false )
+</pre></div> </body>
+    </html>

@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.6-4 ConsiderSmallerPowerMaps</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X7DD1DCF3865E0017"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.6-4 ConsiderSmallerPowerMaps</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ConsiderSmallerPowerMaps</code>( <var class="Arg">tbl</var>, <var class="Arg">approxmap</var>, <var class="Arg">prime</var>, <var class="Arg">quick</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ConsiderSmallerPowerMaps</code> replaces the entries of <var class="Arg">approxmap</var> by improved values, according to condition 5. listed in the description of <code class="func">PossiblePowerMaps</code> (<a shape="rect" href="chap73_mj.html#X7C7B292E80590BE0"><span class="RefLink">73.1-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ConsiderSmallerPowerMaps</code> returns <code class="keyw">true</code> if each class admits at least one image after the checks, otherwise <code class="keyw">false</code> is returned. If no element orders of <var class="Arg">tbl</var> are stored (see <code class="func">OrdersClassRepresentatives</code> (<a shape="rect" href="chap71_mj.html#X86F455DA7A9C30EE"><span class="RefLink">71.9-1</span></a>)) then <code class="keyw">true</code> is returned without any tests.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t:= CharacterTable( &quot;3.A6&quot; );;  init:= InitPowerMap( t, 5 );</span>
+[ 1, [ 2, 3 ], [ 2, 3 ], 4, [ 5, 6 ], [ 5, 6 ], [ 7, 8 ], [ 7, 8 ], 
+  9, [ 10, 11 ], [ 10, 11 ], 1, [ 2, 3 ], [ 2, 3 ], 1, [ 2, 3 ], 
+  [ 2, 3 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Indeterminateness( init );</span>
+4096
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConsiderSmallerPowerMaps( t, init, 5, false );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Indeterminateness( init );</span>
+256
+</pre></div> </body>
+    </html>

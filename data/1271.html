@@ -1,0 +1,410 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.14-1 PQuotient</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X7B5DDADC80F5796B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">47.14-1 PQuotient</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PQuotient</code>( <var class="Arg">F</var>, <var class="Arg">p</var>[, <var class="Arg">c</var>][, <var class="Arg">logord</var>][, <var class="Arg">ctype</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes a factor <var class="Arg">p</var>-group of a finitely presented group <var class="Arg">F</var> in form of a quotient system. The quotient system can be converted into an epimorphism from <var class="Arg">F</var> onto the <var class="Arg">p</var>-group computed by the function <code class="func">EpimorphismQuotientSystem</code> (<a shape="rect" href="chap47_mj.html#X86EB30A7867EEF16"><span class="RefLink">47.14-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">For a group <math id="-8234134138468807200" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> define the exponent-<math id="7619203396487139140" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> central series of <math id="-8581361105892041159" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> inductively by <math id="5462989047466054592" display="inline" alttext="{\cal P}_{1}(G)=G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <msub xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" class="ltx_font_mathcaligraphic">𝒫</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.8.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">G</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">=</mo>
+      <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">G</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <eq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝒫</ci>
+            <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐺</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝐺</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">{\cal P}_{1}(G)=G</annotation>
+  </semantics>
+</math> and <math id="1390417065022001198" display="inline" alttext="{\cal P}_{{i+1}}(G)=[{\cal P}_{i}(G),G]{\cal P}_{{i+1}}(G)^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22">
+      <mrow xref="p1.1.m1.1.22.1.cmml" id="p1.1.m1.1.22.1">
+        <msub xref="p1.1.m1.1.22.1.2.cmml" id="p1.1.m1.1.22.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" class="ltx_font_mathcaligraphic">𝒫</mi>
+          <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+            <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">i</mi>
+            <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">+</mo>
+            <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">1</mn>
+          </mrow>
+        </msub>
+        <mo xref="p1.1.m1.1.22.1.1.cmml" id="p1.1.m1.1.22.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.22.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">G</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">=</mo>
+      <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2">
+        <mrow xref="p1.1.m1.1.22.2.2.1.cmml" id="p1.1.m1.1.22.2.2">
+          <mo id="p1.1.m1.1.7" stretchy="false">[</mo>
+          <mrow xref="p1.1.m1.1.22.2.2.1.cmml" id="p1.1.m1.1.22.2.2.2">
+            <msub xref="p1.1.m1.1.22.2.2.1.cmml" id="p1.1.m1.1.22.2.2.2.2">
+              <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8" class="ltx_font_mathcaligraphic">𝒫</mi>
+              <mi xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">i</mi>
+            </msub>
+            <mo xref="p1.1.m1.1.22.2.2.2.1.cmml" id="p1.1.m1.1.22.2.2.2.1">⁢</mo>
+            <mrow id="p1.1.m1.1.22.2.2.2.3">
+              <mo id="p1.1.m1.1.10" stretchy="false">(</mo>
+              <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">G</mi>
+              <mo id="p1.1.m1.1.12" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+          <mo id="p1.1.m1.1.13">,</mo>
+          <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">G</mi>
+          <mo id="p1.1.m1.1.15" stretchy="false">]</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.22.2.1.cmml" id="p1.1.m1.1.22.2.1">⁢</mo>
+        <msub xref="p1.1.m1.1.22.2.3.cmml" id="p1.1.m1.1.22.2.3">
+          <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16" class="ltx_font_mathcaligraphic">𝒫</mi>
+          <mrow xref="p1.1.m1.1.17.1.cmml" id="p1.1.m1.1.17.1">
+            <mi xref="p1.1.m1.1.17.1.1.cmml" id="p1.1.m1.1.17.1.1">i</mi>
+            <mo xref="p1.1.m1.1.17.1.2.cmml" id="p1.1.m1.1.17.1.2">+</mo>
+            <mn xref="p1.1.m1.1.17.1.3.cmml" id="p1.1.m1.1.17.1.3">1</mn>
+          </mrow>
+        </msub>
+        <mo xref="p1.1.m1.1.22.2.1.cmml" id="p1.1.m1.1.22.2.1a">⁢</mo>
+        <msup xref="p1.1.m1.1.22.2.4.cmml" id="p1.1.m1.1.22.2.4">
+          <mrow id="p1.1.m1.1.22.2.4.2">
+            <mo id="p1.1.m1.1.18" stretchy="false">(</mo>
+            <mi xref="p1.1.m1.1.19.cmml" id="p1.1.m1.1.19">G</mi>
+            <mo id="p1.1.m1.1.20" stretchy="false">)</mo>
+          </mrow>
+          <mi xref="p1.1.m1.1.21.1.cmml" id="p1.1.m1.1.21.1">p</mi>
+        </msup>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml">
+        <eq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.22.1" id="p1.1.m1.1.22.1.cmml">
+          <times xref="p1.1.m1.1.22.1.1" id="p1.1.m1.1.22.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.22.1.2" id="p1.1.m1.1.22.1.2.cmml">
+            <csymbol id="p1.1.m1.1.22.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝒫</ci>
+            <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+              <plus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑖</ci>
+              <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐺</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.22.2" id="p1.1.m1.1.22.2.cmml">
+          <times xref="p1.1.m1.1.22.2.1" id="p1.1.m1.1.22.2.1.cmml"/>
+          <interval xref="p1.1.m1.1.22.2.2" id="p1.1.m1.1.22.2.2.1.cmml" closure="closed">
+            <apply xref="p1.1.m1.1.22.2.2" id="p1.1.m1.1.22.2.2.2.cmml">
+              <times xref="p1.1.m1.1.22.2.2.2.1" id="p1.1.m1.1.22.2.2.2.1.cmml"/>
+              <apply xref="p1.1.m1.1.22.2.2" id="p1.1.m1.1.22.2.2.2.2.cmml">
+                <csymbol id="p1.1.m1.1.22.2.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝒫</ci>
+                <ci xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">𝑖</ci>
+              </apply>
+              <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝐺</ci>
+            </apply>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝐺</ci>
+          </interval>
+          <apply xref="p1.1.m1.1.22.2.3" id="p1.1.m1.1.22.2.3.cmml">
+            <csymbol id="p1.1.m1.1.22.2.3.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝒫</ci>
+            <apply xref="p1.1.m1.1.17.1" id="p1.1.m1.1.17.1.cmml">
+              <plus xref="p1.1.m1.1.17.1.2" id="p1.1.m1.1.17.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.17.1.1" id="p1.1.m1.1.17.1.1.cmml">𝑖</ci>
+              <cn xref="p1.1.m1.1.17.1.3" id="p1.1.m1.1.17.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.22.2.4" id="p1.1.m1.1.22.2.4.cmml">
+            <csymbol id="p1.1.m1.1.22.2.4.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.19" id="p1.1.m1.1.19.cmml">𝐺</ci>
+            <ci xref="p1.1.m1.1.21.1" id="p1.1.m1.1.21.1.cmml">𝑝</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">{\cal P}_{{i+1}}(G)=[{\cal P}_{i}(G),G]{\cal P}_{{i+1}}(G)^{p}</annotation>
+  </semantics>
+</math>. The factor groups modulo the terms of the lower exponent-<math id="-1244857403207030751" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> central series are <math id="-5398951498640992165" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-groups. The group <math id="1475233506512464275" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> has <math id="-2765828057236800956" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-class <math id="7336071622326704256" display="inline" alttext="c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">c</annotation>
+  </semantics>
+</math> if <math id="-6045534542937512565" display="inline" alttext="{\cal P}_{c}(G)\neq{\cal P}_{{c+1}}(G)=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">
+      <mrow xref="p1.1.m1.1.14.2.cmml" id="p1.1.m1.1.14.2">
+        <msub xref="p1.1.m1.1.14.2.2.cmml" id="p1.1.m1.1.14.2.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" class="ltx_font_mathcaligraphic">𝒫</mi>
+          <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">c</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.14.2.1.cmml" id="p1.1.m1.1.14.2.1">⁢</mo>
+        <mrow id="p1.1.m1.1.14.2.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">G</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">≠</mo>
+      <mrow xref="p1.1.m1.1.14.3.cmml" id="p1.1.m1.1.14.3">
+        <msub xref="p1.1.m1.1.14.3.2.cmml" id="p1.1.m1.1.14.3.2">
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7" class="ltx_font_mathcaligraphic">𝒫</mi>
+          <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+            <mi xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">c</mi>
+            <mo xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">+</mo>
+            <mn xref="p1.1.m1.1.8.1.3.cmml" id="p1.1.m1.1.8.1.3">1</mn>
+          </mrow>
+        </msub>
+        <mo xref="p1.1.m1.1.14.3.1.cmml" id="p1.1.m1.1.14.3.1">⁢</mo>
+        <mrow id="p1.1.m1.1.14.3.3">
+          <mo id="p1.1.m1.1.9" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">G</mi>
+          <mo id="p1.1.m1.1.11" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">=</mo>
+      <mn xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">
+        <and xref="p1.1.m1.1.14" id="p1.1.m1.1.14a.cmml"/>
+        <apply xref="p1.1.m1.1.14" id="p1.1.m1.1.14b.cmml">
+          <neq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+          <apply xref="p1.1.m1.1.14.2" id="p1.1.m1.1.14.2.cmml">
+            <times xref="p1.1.m1.1.14.2.1" id="p1.1.m1.1.14.2.1.cmml"/>
+            <apply xref="p1.1.m1.1.14.2.2" id="p1.1.m1.1.14.2.2.cmml">
+              <csymbol id="p1.1.m1.1.14.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝒫</ci>
+              <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑐</ci>
+            </apply>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐺</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.14.3" id="p1.1.m1.1.14.3.cmml">
+            <times xref="p1.1.m1.1.14.3.1" id="p1.1.m1.1.14.3.1.cmml"/>
+            <apply xref="p1.1.m1.1.14.3.2" id="p1.1.m1.1.14.3.2.cmml">
+              <csymbol id="p1.1.m1.1.14.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝒫</ci>
+              <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+                <plus xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml"/>
+                <ci xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml">𝑐</ci>
+                <cn xref="p1.1.m1.1.8.1.3" id="p1.1.m1.1.8.1.3.cmml" type="integer">1</cn>
+              </apply>
+            </apply>
+            <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝐺</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.14" id="p1.1.m1.1.14c.cmml">
+          <eq xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml"/>
+          <share xref="p1.1.m1.1.14" id="p1.1.m1.1.14d.cmml" href="#p1.1.m1.1.14.3.cmml"/>
+          <cn xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">{\cal P}_{c}(G)\neq{\cal P}_{{c+1}}(G)=1</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">The algorithm computes successive quotients modulo the terms of the exponent-<math id="7875082793387757058" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> central series of <var class="Arg">F</var>. If the parameter <var class="Arg">c</var> is present, then the factor group modulo the <math id="-7876288168127758819" display="inline" alttext="(c+1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">c</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">+</mo>
+        <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+      </mrow>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.2.cmml">
+        <plus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑐</ci>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(c+1)</annotation>
+  </semantics>
+</math>-th term of the exponent-<math id="6481887562509194459" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> central series of <var class="Arg">F</var> is returned. If <var class="Arg">c</var> is not present, then the algorithm attempts to compute the largest factor <var class="Arg">p</var>-group of <var class="Arg">F</var>. In case <var class="Arg">F</var> does not have a largest factor <var class="Arg">p</var>-group, the algorithm will not terminate.</p><p xmlns="http://www.w3.org/1999/xhtml">By default the algorithm computes only with factor groups of order at most <math id="2256497659251668896" display="inline" alttext="p^{256}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">256</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">256</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p^{256}</annotation>
+  </semantics>
+</math>. If the parameter <var class="Arg">logord</var> is present, it will compute with factor groups of order at most <math id="-3555776588586259273" display="inline" alttext="p^{\textit{logord}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑙𝑜𝑔𝑜𝑟𝑑</mtext>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">logord</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p^{\textit{logord}}</annotation>
+  </semantics>
+</math>. If this parameter is specified, then the parameter <var class="Arg">c</var> must also be given. The present implementation produces an error message if the order of a <math id="-1378461876328732927" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-quotient exceeds <math id="777308061115702545" display="inline" alttext="p^{256}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">256</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">256</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p^{256}</annotation>
+  </semantics>
+</math> or <math id="942809392452571499" display="inline" alttext="p^{\textit{logord}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑙𝑜𝑔𝑜𝑟𝑑</mtext>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">logord</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p^{\textit{logord}}</annotation>
+  </semantics>
+</math>, respectively. Note that the order of intermediate <math id="4966060366511523938" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-groups may be larger than the final order of a <math id="-728014742099917877" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-quotient.</p><p xmlns="http://www.w3.org/1999/xhtml">The parameter <var class="Arg">ctype</var> determines the type of collector that is used for computations within the factor <var class="Arg">p</var>-group. <var class="Arg">ctype</var> must either be <code class="code">&quot;single&quot;</code> in which case a simple collector from the left is used or <code class="code">&quot;combinatorial&quot;</code> in which case a combinatorial collector from the left is used.</p> </body>
+    </html>

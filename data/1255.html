@@ -1,0 +1,406 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X860026B880BCB2A5"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap53_mj.html#X860026B880BCB2A5">53 <span class="Heading">Transformations</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap53_mj.html#X7CF9291C7CC42340">53.1 <span class="Heading">The family and categories of transformations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7B6259467974FB70">53.1-1 IsTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7A6747CE85F2E6EA">53.1-2 IsTransformationCollection</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7E58AFA1832FF064">53.1-3 TransformationFamily</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap53_mj.html#X80F3086F87E93DF8">53.2 <span class="Heading">Creating transformations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X86ADBDE57A20E323">53.2-1 Transformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X8040642687531E7F">53.2-2 Transformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7E82EBD68455EE4A">53.2-3 TransformationByImageAndKernel</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X85D1071484CE004C">53.2-4 Idempotent</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7C2A3FC9782F2099">53.2-5 TransformationOp</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7D6FCC417DE86CD1">53.2-6 TransformationNumber</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X8475448F87E8CB8A">53.2-7 <span class="Heading">RandomTransformation</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X8268A58685BEFD6F">53.2-8 IdentityTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7F1E4B5184210D2B">53.2-9 ConstantTransformation</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap53_mj.html#X7F81A18B813C9DF0">53.3 <span class="Heading">Changing the representation of a transformation</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7C5360B2799943F3">53.3-1 AsTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X846A6F6B7B715188">53.3-2 RestrictedTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X8708AE247F5B129B">53.3-3 PermutationOfImage</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap53_mj.html#X812CEC008609A8A2">53.4 <span class="Heading">Operators for transformations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X83DBA2A18719EFA8">53.4-1 PermLeftQuoTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X8275DFAA8270BB59">53.4-2 IsInjectiveListTrans</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X834A313B7DAF06D5">53.4-3 ComponentTransformationInt</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X82F5DEEC837B60A3">53.4-4 PreImagesOfTransformation</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap53_mj.html#X86DE4F7A7C535820">53.5 <span class="Heading">Attributes for transformations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X78A209C87CF0E32B">53.5-1 DegreeOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7AEC9E6687B3505A">53.5-2 ImageListOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X839A6D6082A21D1F">53.5-3 ImageSetOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X818EBB167C7EA37B">53.5-4 RankOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X844F00F982D5BD3C">53.5-5 MovedPoints</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7FA6A4B57FDA003D">53.5-6 NrMovedPoints</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X86C0DDDC7881273A">53.5-7 SmallestMovedPoint</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X8383A7727AC97724">53.5-8 LargestMovedPoint</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7CCFE27E83676572">53.5-9 SmallestImageOfMovedPoint</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7E7172567C3A3E63">53.5-10 LargestImageOfMovedPoint</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X8083794579274E87">53.5-11 FlatKernelOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X80FCB5048789CF75">53.5-12 KernelOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X860306EB7FAAD2D4">53.5-13 InverseOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7BB9DB6E8558356D">53.5-14 Inverse</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X863216CB7AF88BED">53.5-15 IndexPeriodOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X85FE9F20810BCC70">53.5-16 SmallestIdempotentPower</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X858E944481F6B591">53.5-17 ComponentsOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X8640AE1C79201470">53.5-18 NrComponentsOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X784650B583CEAF7D">53.5-19 ComponentRepsOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7EAA15557D55D93B">53.5-20 CyclesOfTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X786EB02A829260DB">53.5-21 CycleTransformationInt</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X845869E0815A6AA6">53.5-22 LeftOne</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7F19C9C77F9F8981">53.5-23 TrimTransformation</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap53_mj.html#X810D23017A5527B7">53.6 <span class="Heading">Displaying transformations</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap53_mj.html#X7B51CE257B814B09">53.7 <span class="Heading">Semigroups of transformations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7EAF835D7FE4026F">53.7-1 IsTransformationSemigroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7EA699C687952544">53.7-2 DegreeOfTransformationSemigroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X7D2B0685815B4053">53.7-3 FullTransformationSemigroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X85C58E1E818C838C">53.7-4 IsFullTransformationSemigroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X78F29C817CF6827F">53.7-5 IsomorphismTransformationSemigroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap53_mj.html#X820ECE00846E480F">53.7-6 AntiIsomorphismTransformationSemigroup</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">53 <span class="Heading">Transformations</span></h3><p xmlns="http://www.w3.org/1999/xhtml">This chapter describes the functions in <strong class="pkg">GAP</strong> for transformations.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>transformation</em> in <strong class="pkg">GAP</strong> is simply a function from the positive integers to the positive integers. Transformations are to semigroup theory what permutations are to group theory, in the sense that every semigroup can be realised as a semigroup of transformations. In <strong class="pkg">GAP</strong> transformation semigroups are always finite, and so only finite semigroups can be realised in this way.</p><p xmlns="http://www.w3.org/1999/xhtml">A transformation in <strong class="pkg">GAP</strong> acts on the positive integers (up to some architecture dependent limit) on the right. The image of a point <code class="code">i</code> under a transformation <code class="code">f</code> is expressed as <code class="code">i^f</code> in <strong class="pkg">GAP</strong>. This action is also implemented by the function <code class="func">OnPoints</code> (<a shape="rect" href="chap41_mj.html#X7FE417DD837987B4"><span class="RefLink">41.2-1</span></a>). If <code class="code">i^f</code> is different from <code class="code">i</code>, then <code class="code">i</code> is <em>moved</em> by <em>f</em> and otherwise it is <em>fixed</em> by <code class="code">f</code>. Transformations in <strong class="pkg">GAP</strong> are created using the operations described in Section <a shape="rect" href="chap53_mj.html#X80F3086F87E93DF8"><span class="RefLink">53.2</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>degree</em> of a transformation <code class="code">f</code> is usually defined as the largest positive integer where <code class="code">f</code> is defined. In previous versions of <strong class="pkg">GAP</strong>, transformations were only defined on positive integers less than their degree, it was only possible to multiply transformations of equal degree, and a transformation did not act on any point exceeding its degree. Starting with version 4.7 of <strong class="pkg">GAP</strong>, transformations behave more like permutations, in that they fix unspecified points and it is possible to multiply arbitrary transformations; see Chapter <a shape="rect" href="chap42_mj.html#X80F808307A2D5AB8"><span class="RefLink">42</span></a>. The definition of the degree of a transformation <code class="code">f</code> in the current version of <strong class="pkg">GAP</strong> is the largest value <code class="code">n</code> such that <code class="code">n^f&lt;&gt;n</code> or <code class="code">i^f=n</code> for some <code class="code">i&lt;&gt;n</code>. Equivalently, the degree of a transformation is the least value <code class="code">n</code> such that <code class="code">[n+1,n+2,...]</code> is fixed pointwise by <code class="code">f</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The transformations of a given degree belong to the full transformation semigroup of that degree; see <code class="func">FullTransformationSemigroup</code> (<a shape="rect" href="chap53_mj.html#X7D2B0685815B4053"><span class="RefLink">53.7-3</span></a>). Transformation semigroups are hence subsemigroups of the full transformation semigroup.</p><p xmlns="http://www.w3.org/1999/xhtml">It is possible to use transformations in <strong class="pkg">GAP</strong> without reference to the degree, much as it is possible to use permutations in this way. However, for backwards compatibility, and because it is sometimes useful, it is possible to access the degree of a transformation using <code class="func">DegreeOfTransformation</code> (<a shape="rect" href="chap53_mj.html#X78A209C87CF0E32B"><span class="RefLink">53.5-1</span></a>). Certain attributes of transformations are also calculated with respect to the degree, such as the rank, image set, or kernel (these values can also be calculated with respect to any positive integer). So, it is possible to ignore the degree of a transformation if you prefer to think of transformations as acting on the positive integers in a similar way to permutations. For example, this approach is used in the <strong class="pkg">FR</strong> package. It is also possible to think of transformations as only acting on the positive integers not exceeding their degree. For example, this was the approach formerly used in <strong class="pkg">GAP</strong> and it is also useful in the <strong class="pkg">Semigroups</strong> package.</p><p xmlns="http://www.w3.org/1999/xhtml">Transformations are displayed, by default, using the list <code class="code">[1^f..n^f]</code> where <code class="code">n</code> is the degree of <code class="code">f</code>. This behaviour differs from versions of <strong class="pkg">GAP</strong> earlier than 4.7. See Section <a shape="rect" href="chap53_mj.html#X810D23017A5527B7"><span class="RefLink">53.6</span></a> for more information.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>rank</em> of a transformation on the positive integers up to <code class="code">n</code> is the number of distinct points in <code class="code">[1^f..n^f]</code>. The <em>kernel</em> of a transformation <code class="code">f</code> on <code class="code">[1..n]</code> is the equivalence relation on <code class="code">[1..n]</code> consisting of those <code class="code">(i, j)</code> such that <code class="code">i^f = j^f</code>. The kernel of a transformation is represented in two ways: as a partition of <code class="code">[1..n]</code> or as the image list of a transformation <code class="code">g</code> such that the kernel of <code class="code">g</code> on <code class="code">[1..n]</code> equals the kernel of <code class="code">f</code> and <code class="code">j^g=i</code> for all <code class="code">j</code> in <code class="code">i</code>th class. The latter is referred to as the flat kernel of <code class="code">f</code>. For any given transformation and value <code class="code">n</code>, there is a unique transformation with this property.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>functional digraph</em> is a directed graph where every vertex has out-degree <math id="-2861542351787239204" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math>. A transformation <var class="Arg">f</var> can be thought of as a functional digraph with vertices the positive integers and edges from <code class="code">i</code> to <code class="code">i^f</code> for every <code class="code">i</code>. A <em>component</em> of a transformation is defined as a component and a <em>cycle</em> is just a cycle (or strongly connected component) of the corresponding functional digraph. More specifically, <code class="code">i</code> and <code class="code">j</code> are in the same component if and only if there are <math id="5250200983118124046" display="inline" alttext="i=v_{0},v_{1},\ldots,v_{n}=j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15">
+      <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+        <mrow xref="p1.1.m1.1.15.2.1.1.cmml" id="p1.1.m1.1.15.2.1">
+          <msub xref="p1.1.m1.1.15.2.1.1.cmml" id="p1.1.m1.1.15.2.1.2">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">v</mi>
+            <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">0</mn>
+          </msub>
+          <mo id="p1.1.m1.1.5">,</mo>
+          <msub xref="p1.1.m1.1.15.2.1.1.cmml" id="p1.1.m1.1.15.2.1.3">
+            <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">v</mi>
+            <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">1</mn>
+          </msub>
+          <mo id="p1.1.m1.1.8">,</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">…</mi>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.15.1a.cmml" id="p1.1.m1.1.10">,</mo>
+      <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.3">
+        <msub xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.3.1">
+          <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">v</mi>
+          <mi xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">n</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">=</mo>
+        <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">j</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.1.cmml">
+        <csymbol xref="p1.1.m1.1.10" id="p1.1.m1.1.15.1a.cmml" cd="ambiguous">formulae-sequence</csymbol>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.2.cmml">
+          <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+          <list xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.1.cmml">
+            <apply xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.15.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑣</ci>
+              <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">0</cn>
+            </apply>
+            <apply xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.3.cmml">
+              <csymbol id="p1.1.m1.1.15.2.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑣</ci>
+              <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">1</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">…</ci>
+          </list>
+        </apply>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.3.cmml">
+          <eq xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+          <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.3.1.cmml">
+            <csymbol id="p1.1.m1.1.15.3.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑣</ci>
+            <ci xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">𝑛</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑗</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i=v_{0},v_{1},\ldots,v_{n}=j</annotation>
+  </semantics>
+</math> such that either <math id="-9042548852712046274" display="inline" alttext="v_{k+1}=v_{k}^{f}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <msub xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">k</mi>
+          <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">+</mo>
+          <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">1</mn>
+        </mrow>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <msubsup xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">v</mi>
+        <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">k</mi>
+        <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">f</mi>
+      </msubsup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <csymbol id="p1.1.m1.1.7.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑣</ci>
+          <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <plus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+            <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑘</ci>
+            <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.7.2.2.cmml">
+            <csymbol id="p1.1.m1.1.7.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑣</ci>
+            <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝑘</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">𝑓</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">v_{k+1}=v_{k}^{f}</annotation>
+  </semantics>
+</math> or <math id="-5533628365384991423" display="inline" alttext="v_{k}=v_{k+1}^{f}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <msub xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">k</mi>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <msubsup xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">v</mi>
+        <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+          <mi xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">k</mi>
+          <mo xref="p1.1.m1.1.5.1.2.cmml" id="p1.1.m1.1.5.1.2">+</mo>
+          <mn xref="p1.1.m1.1.5.1.3.cmml" id="p1.1.m1.1.5.1.3">1</mn>
+        </mrow>
+        <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">f</mi>
+      </msubsup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <csymbol id="p1.1.m1.1.7.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑣</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑘</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.7.2.2.cmml">
+            <csymbol id="p1.1.m1.1.7.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑣</ci>
+            <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+              <plus xref="p1.1.m1.1.5.1.2" id="p1.1.m1.1.5.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml">𝑘</ci>
+              <cn xref="p1.1.m1.1.5.1.3" id="p1.1.m1.1.5.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">𝑓</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">v_{k}=v_{k+1}^{f}</annotation>
+  </semantics>
+</math> for all <math id="-6010827809129144733" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
+  </semantics>
+</math>. A <em>cycle</em> of a transformation is defined as a cycle (or strongly connected component) of the corresponding functional digraph. More specifically, <code class="code">i</code> belongs to a cycle of <var class="Arg">f</var> if there are <math id="-6162260707220826498" display="inline" alttext="i=v_{0},v_{1},\ldots,v_{n}=i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15">
+      <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+        <mrow xref="p1.1.m1.1.15.2.1.1.cmml" id="p1.1.m1.1.15.2.1">
+          <msub xref="p1.1.m1.1.15.2.1.1.cmml" id="p1.1.m1.1.15.2.1.2">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">v</mi>
+            <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">0</mn>
+          </msub>
+          <mo id="p1.1.m1.1.5">,</mo>
+          <msub xref="p1.1.m1.1.15.2.1.1.cmml" id="p1.1.m1.1.15.2.1.3">
+            <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">v</mi>
+            <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">1</mn>
+          </msub>
+          <mo id="p1.1.m1.1.8">,</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">…</mi>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.15.1a.cmml" id="p1.1.m1.1.10">,</mo>
+      <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.3">
+        <msub xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.3.1">
+          <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">v</mi>
+          <mi xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">n</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">=</mo>
+        <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">i</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.1.cmml">
+        <csymbol xref="p1.1.m1.1.10" id="p1.1.m1.1.15.1a.cmml" cd="ambiguous">formulae-sequence</csymbol>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.2.cmml">
+          <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+          <list xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.1.cmml">
+            <apply xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.15.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑣</ci>
+              <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">0</cn>
+            </apply>
+            <apply xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.3.cmml">
+              <csymbol id="p1.1.m1.1.15.2.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑣</ci>
+              <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">1</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">…</ci>
+          </list>
+        </apply>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.3.cmml">
+          <eq xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+          <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.3.1.cmml">
+            <csymbol id="p1.1.m1.1.15.3.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑣</ci>
+            <ci xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">𝑛</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑖</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i=v_{0},v_{1},\ldots,v_{n}=i</annotation>
+  </semantics>
+</math> such that either <math id="-4881695031522880217" display="inline" alttext="v_{k+1}=v_{k}^{f}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <msub xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">k</mi>
+          <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">+</mo>
+          <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">1</mn>
+        </mrow>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <msubsup xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">v</mi>
+        <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">k</mi>
+        <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">f</mi>
+      </msubsup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <csymbol id="p1.1.m1.1.7.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑣</ci>
+          <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <plus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+            <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑘</ci>
+            <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.7.2.2.cmml">
+            <csymbol id="p1.1.m1.1.7.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑣</ci>
+            <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝑘</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">𝑓</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">v_{k+1}=v_{k}^{f}</annotation>
+  </semantics>
+</math> or <math id="3396396394551353646" display="inline" alttext="v_{k}=v_{k+1}^{f}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <msub xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">k</mi>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <msubsup xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">v</mi>
+        <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+          <mi xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">k</mi>
+          <mo xref="p1.1.m1.1.5.1.2.cmml" id="p1.1.m1.1.5.1.2">+</mo>
+          <mn xref="p1.1.m1.1.5.1.3.cmml" id="p1.1.m1.1.5.1.3">1</mn>
+        </mrow>
+        <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">f</mi>
+      </msubsup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <csymbol id="p1.1.m1.1.7.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑣</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑘</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.7.2.2.cmml">
+            <csymbol id="p1.1.m1.1.7.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑣</ci>
+            <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+              <plus xref="p1.1.m1.1.5.1.2" id="p1.1.m1.1.5.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml">𝑘</ci>
+              <cn xref="p1.1.m1.1.5.1.3" id="p1.1.m1.1.5.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">𝑓</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">v_{k}=v_{k+1}^{f}</annotation>
+  </semantics>
+</math> for all <math id="-2396826241814383953" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Internally, <strong class="pkg">GAP</strong> stores a transformation <code class="code">f</code> as a list consisting of the images <code class="code">i^f</code> of the points in <code class="code">i</code> less than some value, which is at least the degree of <code class="code">f</code> and which is determined at the time of creation. When the degree of a transformation <code class="code">f</code> is at most 65536, the images of points under <code class="code">f</code> are stored as 16-bit integers, the kernel and image set are subobjects of <code class="code">f</code> which are plain lists of <strong class="pkg">GAP</strong> integers. When the degree of <code class="code">f</code> is greater than 65536, the images of points under <code class="code">f</code> are stored as 32-bit integers; the kernel and image set are stored in the same way as before. A transformation belongs to <code class="code">IsTrans2Rep</code> if it is stored using 16-bit integers and to <code class="code">IsTrans4Rep</code> if it is stored using 32-bit integers.</p> </body>
+    </html>

@@ -1,0 +1,46 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.3-1 NrConjugacyClassesGL</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X831789117E93171E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">50.3-1 NrConjugacyClassesGL</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrConjugacyClassesGL</code>( <var class="Arg">n</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrConjugacyClassesGU</code>( <var class="Arg">n</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrConjugacyClassesSL</code>( <var class="Arg">n</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrConjugacyClassesSU</code>( <var class="Arg">n</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrConjugacyClassesPGL</code>( <var class="Arg">n</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrConjugacyClassesPGU</code>( <var class="Arg">n</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrConjugacyClassesPSL</code>( <var class="Arg">n</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrConjugacyClassesPSU</code>( <var class="Arg">n</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrConjugacyClassesSLIsogeneous</code>( <var class="Arg">n</var>, <var class="Arg">q</var>, <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrConjugacyClassesSUIsogeneous</code>( <var class="Arg">n</var>, <var class="Arg">q</var>, <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The first of these functions compute for given positive integer <var class="Arg">n</var> and prime power <var class="Arg">q</var> the number of conjugacy classes in the classical groups GL( <var class="Arg">n</var>, <var class="Arg">q</var> ), GU( <var class="Arg">n</var>, <var class="Arg">q</var> ), SL( <var class="Arg">n</var>, <var class="Arg">q</var> ), SU( <var class="Arg">n</var>, <var class="Arg">q</var> ), PGL( <var class="Arg">n</var>, <var class="Arg">q</var> ), PGU( <var class="Arg">n</var>, <var class="Arg">q</var> ), PSL( <var class="Arg">n</var>, <var class="Arg">q</var> ), PSL( <var class="Arg">n</var>, <var class="Arg">q</var> ), respectively. (See also <code class="func">ConjugacyClasses</code> (<a shape="rect" href="chap39_mj.html#X871B570284BBA685"><span class="RefLink">39.10-2</span></a>) and Section <a shape="rect" href="chap50_mj.html#X8674AAA578FE4AEE"><span class="RefLink">50.2</span></a>.)</p><p xmlns="http://www.w3.org/1999/xhtml">For each divisor <var class="Arg">f</var> of <var class="Arg">n</var> there is a group of Lie type with the same order as SL( <var class="Arg">n</var>, <var class="Arg">q</var> ), such that its derived subgroup modulo its center is isomorphic to PSL( <var class="Arg">n</var>, <var class="Arg">q</var> ). The various such groups with fixed <var class="Arg">n</var> and <var class="Arg">q</var> are called <em>isogeneous</em>. (Depending on congruence conditions on <var class="Arg">q</var> and <var class="Arg">n</var> several of these groups may actually be isomorphic.) The function <code class="func">NrConjugacyClassesSLIsogeneous</code> computes the number of conjugacy classes in this group. The extreme cases <var class="Arg">f</var> <math id="8734961571824950325" display="inline" alttext="=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">=</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <eq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" cd="latexml">absent</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">=1</annotation>
+  </semantics>
+</math> and <var class="Arg">f</var> <math id="-2810929564159650295" display="inline" alttext="=n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">=</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <eq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" cd="latexml">absent</csymbol>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">=n</annotation>
+  </semantics>
+</math> lead to the groups SL( <var class="Arg">n</var>, <var class="Arg">q</var> ) and PGL( <var class="Arg">n</var>, <var class="Arg">q</var> ), respectively.</p><p xmlns="http://www.w3.org/1999/xhtml">The function <code class="func">NrConjugacyClassesSUIsogeneous</code> is the analogous one for the corresponding unitary groups.</p><p xmlns="http://www.w3.org/1999/xhtml">The formulae for the number of conjugacy classes are taken from <a shape="rect" href="chapBib_mj.html#biBMac81">[Mac81]</a>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NrConjugacyClassesGL(24,27);</span>
+22528399544939174406067288580609952
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NrConjugacyClassesPSU(19,17);</span>
+15052300411163848367708
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NrConjugacyClasses(SL(16,16));</span>
+1229782938228219920
+</pre></div> </body>
+    </html>

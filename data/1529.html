@@ -1,0 +1,819 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 18: Cyclotomic Numbers-&gt;18.4-3 EY, EX, \(\ldots\), ES</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap18.html#X842338F184E63894"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">18.4-3 <span class="Heading">EY, EX, <math id="2368144106559814962" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math>, ES</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EY</code>( <var class="Arg">N</var>[, <var class="Arg">d</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EX</code>( <var class="Arg">N</var>[, <var class="Arg">d</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EW</code>( <var class="Arg">N</var>[, <var class="Arg">d</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EV</code>( <var class="Arg">N</var>[, <var class="Arg">d</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EU</code>( <var class="Arg">N</var>[, <var class="Arg">d</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ET</code>( <var class="Arg">N</var>[, <var class="Arg">d</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ES</code>( <var class="Arg">N</var>[, <var class="Arg">d</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For the given integer <var class="Arg">N</var> <math id="-6864068433240276641" display="inline" alttext="&amp;gt;2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.6.2.1.cmml" id="p1.1.m1.1.6.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">g</mi>
+        <mo xref="p1.1.m1.1.6.2.1.cmml" id="p1.1.m1.1.6.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.4">;</mo>
+      <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">2</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml">
+        <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.2.cmml">
+          <times xref="p1.1.m1.1.6.2.1" id="p1.1.m1.1.6.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑡</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" type="integer">2</cn>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">&amp;gt;2</annotation>
+  </semantics>
+</math>, let <math id="328683688776844359" display="inline" alttext="\textit{N}_{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑁</mtext>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">k</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑘</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{N}_{k}</annotation>
+  </semantics>
+</math> denote the first integer with multiplicative order exactly <math id="-5917920257016345489" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
+  </semantics>
+</math> modulo <var class="Arg">N</var>, chosen in the order of preference</p><p class="center" xmlns="http://www.w3.org/1999/xhtml">\[
+1, -1, 2, -2, 3, -3, 4, -4, \ldots .
+\]</p><p xmlns="http://www.w3.org/1999/xhtml">We define (with <math id="6018635552307097798" display="inline" alttext="z=\exp(2\pi i/\textit{N})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.11.1.1.cmml" id="p1.1.m1.1.11.1.2">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">exp</mi>
+        <mo xref="p1.1.m1.1.11.1.1.cmml" id="p1.1.m1.1.11.1.2a">⁡</mo>
+        <mrow xref="p1.1.m1.1.11.1.1.cmml" id="p1.1.m1.1.11.1">
+          <mo xref="p1.1.m1.1.11.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.11.1.1.cmml" id="p1.1.m1.1.11.1.2.1">
+            <mrow xref="p1.1.m1.1.11.1.1.cmml" id="p1.1.m1.1.11.1.2.1.1">
+              <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">2</mn>
+              <mo xref="p1.1.m1.1.11.1.2.1.1.1.cmml" id="p1.1.m1.1.11.1.2.1.1.1">⁢</mo>
+              <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">π</mi>
+              <mo xref="p1.1.m1.1.11.1.2.1.1.1.cmml" id="p1.1.m1.1.11.1.2.1.1.1a">⁢</mo>
+              <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">i</mi>
+            </mrow>
+            <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">/</mo>
+            <mtext xref="p1.1.m1.1.9.1a.cmml" id="p1.1.m1.1.9.1">𝑁</mtext>
+          </mrow>
+          <mo xref="p1.1.m1.1.11.1.1.cmml" id="p1.1.m1.1.10" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+        <apply xref="p1.1.m1.1.11.1.2" id="p1.1.m1.1.11.1.1.cmml">
+          <exp xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+          <apply xref="p1.1.m1.1.11.1.2" id="p1.1.m1.1.11.1.2.1.cmml">
+            <divide xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+            <apply xref="p1.1.m1.1.11.1.2" id="p1.1.m1.1.11.1.2.1.1.cmml">
+              <times xref="p1.1.m1.1.11.1.2.1.1.1" id="p1.1.m1.1.11.1.2.1.1.1.cmml"/>
+              <cn xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" type="integer">2</cn>
+              <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝜋</ci>
+              <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑖</ci>
+            </apply>
+            <mtext xref="p1.1.m1.1.11.1.2" id="p1.1.m1.1.9.1.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+            </mtext>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z=\exp(2\pi i/\textit{N})</annotation>
+  </semantics>
+</math>)</p><div class="pcenter" xmlns="http://www.w3.org/1999/xhtml"><table class="GAPDocTablenoborder"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="code">EY(</code><var class="Arg">N</var><code class="code">)</code></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="-6523125112695672614" display="inline" alttext="y_{\textit{N}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑁</mtext>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑦</ci>
+        <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">y_{\textit{N}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="5942399057240109782" display="inline" alttext="z+z^{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">z</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">n</mi>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑧</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑛</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z+z^{n}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdleft"><math id="-3872113611640177423" display="inline" alttext="(n=\textit{N}_{2})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+        <msub xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2.1">
+          <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝑁</mtext>
+          <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">2</mn>
+        </msub>
+      </mrow>
+      <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.1.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.4.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+          <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">2</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(n=\textit{N}_{2})</annotation>
+  </semantics>
+</math></td></tr><tr><td colspan="1" rowspan="1" class="tdleft"><code class="code">EX(</code><var class="Arg">N</var><code class="code">)</code></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="3041958163482546927" display="inline" alttext="x_{\textit{N}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑁</mtext>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{\textit{N}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="1588076554640587844" display="inline" alttext="z+z^{n}+z^{{n^{2}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">z</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">n</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2a">+</mo>
+      <msup xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">z</mi>
+        <msup xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+          <mi xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">n</mi>
+          <mn xref="p1.1.m1.1.7.1.2.1.cmml" id="p1.1.m1.1.7.1.2.1">2</mn>
+        </msup>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <csymbol id="p1.1.m1.1.8.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑧</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑛</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <csymbol id="p1.1.m1.1.8.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+            <csymbol id="p1.1.m1.1.7.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.7.1.2.1" id="p1.1.m1.1.7.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z+z^{n}+z^{{n^{2}}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdleft"><math id="8618430704196344525" display="inline" alttext="(n=\textit{N}_{3})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+        <msub xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2.1">
+          <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝑁</mtext>
+          <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">3</mn>
+        </msub>
+      </mrow>
+      <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.1.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.4.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+          <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">3</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(n=\textit{N}_{3})</annotation>
+  </semantics>
+</math></td></tr><tr><td colspan="1" rowspan="1" class="tdleft"><code class="code">EW</code>(<var class="Arg">N</var><code class="code">)</code></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="4774767913665944936" display="inline" alttext="w_{\textit{N}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">w</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑁</mtext>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑤</ci>
+        <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">w_{\textit{N}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="-7203476756523403577" display="inline" alttext="z+z^{n}+z^{{n^{2}}}+z^{{n^{3}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <msup xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">z</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">n</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2a">+</mo>
+      <msup xref="p1.1.m1.1.11.2.cmml" id="p1.1.m1.1.11.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">z</mi>
+        <msup xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+          <mi xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">n</mi>
+          <mn xref="p1.1.m1.1.7.1.2.1.cmml" id="p1.1.m1.1.7.1.2.1">2</mn>
+        </msup>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2b">+</mo>
+      <msup xref="p1.1.m1.1.11.3.cmml" id="p1.1.m1.1.11.3">
+        <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">z</mi>
+        <msup xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">
+          <mi xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">n</mi>
+          <mn xref="p1.1.m1.1.10.1.2.1.cmml" id="p1.1.m1.1.10.1.2.1">3</mn>
+        </msup>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+        <apply xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.cmml">
+          <csymbol id="p1.1.m1.1.11.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑧</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑛</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.11.2" id="p1.1.m1.1.11.2.cmml">
+          <csymbol id="p1.1.m1.1.11.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+            <csymbol id="p1.1.m1.1.7.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.7.1.2.1" id="p1.1.m1.1.7.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.11.3" id="p1.1.m1.1.11.3.cmml">
+          <csymbol id="p1.1.m1.1.11.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">
+            <csymbol id="p1.1.m1.1.10.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.10.1.2.1" id="p1.1.m1.1.10.1.2.1.cmml" type="integer">3</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z+z^{n}+z^{{n^{2}}}+z^{{n^{3}}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdleft"><math id="4009098674791972874" display="inline" alttext="(n=\textit{N}_{4})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+        <msub xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2.1">
+          <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝑁</mtext>
+          <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">4</mn>
+        </msub>
+      </mrow>
+      <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.1.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.4.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+          <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">4</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(n=\textit{N}_{4})</annotation>
+  </semantics>
+</math></td></tr><tr><td colspan="1" rowspan="1" class="tdleft"><code class="code">EV(</code><var class="Arg">N</var><code class="code">)</code></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="5809265531502009471" display="inline" alttext="v_{\textit{N}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑁</mtext>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑣</ci>
+        <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">v_{\textit{N}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="5655690937612032830" display="inline" alttext="z+z^{n}+z^{{n^{2}}}+z^{{n^{3}}}+z^{{n^{4}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <msup xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">z</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">n</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2a">+</mo>
+      <msup xref="p1.1.m1.1.14.2.cmml" id="p1.1.m1.1.14.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">z</mi>
+        <msup xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+          <mi xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">n</mi>
+          <mn xref="p1.1.m1.1.7.1.2.1.cmml" id="p1.1.m1.1.7.1.2.1">2</mn>
+        </msup>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2b">+</mo>
+      <msup xref="p1.1.m1.1.14.3.cmml" id="p1.1.m1.1.14.3">
+        <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">z</mi>
+        <msup xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">
+          <mi xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">n</mi>
+          <mn xref="p1.1.m1.1.10.1.2.1.cmml" id="p1.1.m1.1.10.1.2.1">3</mn>
+        </msup>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2c">+</mo>
+      <msup xref="p1.1.m1.1.14.4.cmml" id="p1.1.m1.1.14.4">
+        <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">z</mi>
+        <msup xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">
+          <mi xref="p1.1.m1.1.13.1.1.cmml" id="p1.1.m1.1.13.1.1">n</mi>
+          <mn xref="p1.1.m1.1.13.1.2.1.cmml" id="p1.1.m1.1.13.1.2.1">4</mn>
+        </msup>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+        <apply xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml">
+          <csymbol id="p1.1.m1.1.14.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑧</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑛</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.14.2" id="p1.1.m1.1.14.2.cmml">
+          <csymbol id="p1.1.m1.1.14.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+            <csymbol id="p1.1.m1.1.7.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.7.1.2.1" id="p1.1.m1.1.7.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.14.3" id="p1.1.m1.1.14.3.cmml">
+          <csymbol id="p1.1.m1.1.14.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">
+            <csymbol id="p1.1.m1.1.10.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.10.1.2.1" id="p1.1.m1.1.10.1.2.1.cmml" type="integer">3</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.14.4" id="p1.1.m1.1.14.4.cmml">
+          <csymbol id="p1.1.m1.1.14.4.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.13.1" id="p1.1.m1.1.13.1.cmml">
+            <csymbol id="p1.1.m1.1.13.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.13.1.1" id="p1.1.m1.1.13.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.13.1.2.1" id="p1.1.m1.1.13.1.2.1.cmml" type="integer">4</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z+z^{n}+z^{{n^{2}}}+z^{{n^{3}}}+z^{{n^{4}}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdleft"><math id="-4520823821092887815" display="inline" alttext="(n=\textit{N}_{5})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+        <msub xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2.1">
+          <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝑁</mtext>
+          <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">5</mn>
+        </msub>
+      </mrow>
+      <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.1.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.4.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+          <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">5</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(n=\textit{N}_{5})</annotation>
+  </semantics>
+</math></td></tr><tr><td colspan="1" rowspan="1" class="tdleft"><code class="code">EU(</code><var class="Arg">N</var><code class="code">)</code></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="8581506186091808481" display="inline" alttext="u_{\textit{N}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑁</mtext>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+        <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u_{\textit{N}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="4671461658489109421" display="inline" alttext="z+z^{n}+z^{{n^{2}}}+\ldots+z^{{n^{5}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <msup xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">z</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">n</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2a">+</mo>
+      <msup xref="p1.1.m1.1.13.2.cmml" id="p1.1.m1.1.13.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">z</mi>
+        <msup xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+          <mi xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">n</mi>
+          <mn xref="p1.1.m1.1.7.1.2.1.cmml" id="p1.1.m1.1.7.1.2.1">2</mn>
+        </msup>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2b">+</mo>
+      <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">…</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2c">+</mo>
+      <msup xref="p1.1.m1.1.13.3.cmml" id="p1.1.m1.1.13.3">
+        <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">z</mi>
+        <msup xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">
+          <mi xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1.1">n</mi>
+          <mn xref="p1.1.m1.1.12.1.2.1.cmml" id="p1.1.m1.1.12.1.2.1">5</mn>
+        </msup>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+        <apply xref="p1.1.m1.1.13.1" id="p1.1.m1.1.13.1.cmml">
+          <csymbol id="p1.1.m1.1.13.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑧</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑛</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.13.2" id="p1.1.m1.1.13.2.cmml">
+          <csymbol id="p1.1.m1.1.13.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+            <csymbol id="p1.1.m1.1.7.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.7.1.2.1" id="p1.1.m1.1.7.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">…</ci>
+        <apply xref="p1.1.m1.1.13.3" id="p1.1.m1.1.13.3.cmml">
+          <csymbol id="p1.1.m1.1.13.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">
+            <csymbol id="p1.1.m1.1.12.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.12.1.1" id="p1.1.m1.1.12.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.12.1.2.1" id="p1.1.m1.1.12.1.2.1.cmml" type="integer">5</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z+z^{n}+z^{{n^{2}}}+\ldots+z^{{n^{5}}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdleft"><math id="-968349169971459071" display="inline" alttext="(n=\textit{N}_{6})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+        <msub xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2.1">
+          <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝑁</mtext>
+          <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">6</mn>
+        </msub>
+      </mrow>
+      <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.1.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.4.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+          <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">6</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(n=\textit{N}_{6})</annotation>
+  </semantics>
+</math></td></tr><tr><td colspan="1" rowspan="1" class="tdleft"><code class="code">ET(</code><var class="Arg">N</var><code class="code">)</code></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="-8132777939734862388" display="inline" alttext="t_{\textit{N}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">t</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑁</mtext>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑡</ci>
+        <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">t_{\textit{N}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="5858732028756846788" display="inline" alttext="z+z^{n}+z^{{n^{2}}}+\ldots+z^{{n^{6}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <msup xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">z</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">n</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2a">+</mo>
+      <msup xref="p1.1.m1.1.13.2.cmml" id="p1.1.m1.1.13.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">z</mi>
+        <msup xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+          <mi xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">n</mi>
+          <mn xref="p1.1.m1.1.7.1.2.1.cmml" id="p1.1.m1.1.7.1.2.1">2</mn>
+        </msup>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2b">+</mo>
+      <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">…</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2c">+</mo>
+      <msup xref="p1.1.m1.1.13.3.cmml" id="p1.1.m1.1.13.3">
+        <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">z</mi>
+        <msup xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">
+          <mi xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1.1">n</mi>
+          <mn xref="p1.1.m1.1.12.1.2.1.cmml" id="p1.1.m1.1.12.1.2.1">6</mn>
+        </msup>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+        <apply xref="p1.1.m1.1.13.1" id="p1.1.m1.1.13.1.cmml">
+          <csymbol id="p1.1.m1.1.13.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑧</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑛</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.13.2" id="p1.1.m1.1.13.2.cmml">
+          <csymbol id="p1.1.m1.1.13.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+            <csymbol id="p1.1.m1.1.7.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.7.1.2.1" id="p1.1.m1.1.7.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">…</ci>
+        <apply xref="p1.1.m1.1.13.3" id="p1.1.m1.1.13.3.cmml">
+          <csymbol id="p1.1.m1.1.13.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">
+            <csymbol id="p1.1.m1.1.12.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.12.1.1" id="p1.1.m1.1.12.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.12.1.2.1" id="p1.1.m1.1.12.1.2.1.cmml" type="integer">6</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z+z^{n}+z^{{n^{2}}}+\ldots+z^{{n^{6}}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdleft"><math id="-2260937581083359039" display="inline" alttext="(n=\textit{N}_{7})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+        <msub xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2.1">
+          <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝑁</mtext>
+          <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">7</mn>
+        </msub>
+      </mrow>
+      <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.1.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.4.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+          <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">7</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(n=\textit{N}_{7})</annotation>
+  </semantics>
+</math></td></tr><tr><td colspan="1" rowspan="1" class="tdleft"><code class="code">ES(</code><var class="Arg">N</var><code class="code">)</code></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="3635978187901134667" display="inline" alttext="s_{\textit{N}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑁</mtext>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑠</ci>
+        <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">s_{\textit{N}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="746344431959904293" display="inline" alttext="z+z^{n}+z^{{n^{2}}}+\ldots+z^{{n^{7}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <msup xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">z</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">n</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2a">+</mo>
+      <msup xref="p1.1.m1.1.13.2.cmml" id="p1.1.m1.1.13.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">z</mi>
+        <msup xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+          <mi xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">n</mi>
+          <mn xref="p1.1.m1.1.7.1.2.1.cmml" id="p1.1.m1.1.7.1.2.1">2</mn>
+        </msup>
+      </msup>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2b">+</mo>
+      <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">…</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2c">+</mo>
+      <msup xref="p1.1.m1.1.13.3.cmml" id="p1.1.m1.1.13.3">
+        <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">z</mi>
+        <msup xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">
+          <mi xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1.1">n</mi>
+          <mn xref="p1.1.m1.1.12.1.2.1.cmml" id="p1.1.m1.1.12.1.2.1">7</mn>
+        </msup>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+        <apply xref="p1.1.m1.1.13.1" id="p1.1.m1.1.13.1.cmml">
+          <csymbol id="p1.1.m1.1.13.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑧</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑛</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.13.2" id="p1.1.m1.1.13.2.cmml">
+          <csymbol id="p1.1.m1.1.13.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+            <csymbol id="p1.1.m1.1.7.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.7.1.2.1" id="p1.1.m1.1.7.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">…</ci>
+        <apply xref="p1.1.m1.1.13.3" id="p1.1.m1.1.13.3.cmml">
+          <csymbol id="p1.1.m1.1.13.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">
+            <csymbol id="p1.1.m1.1.12.1.3.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.12.1.1" id="p1.1.m1.1.12.1.1.cmml">𝑛</ci>
+            <cn xref="p1.1.m1.1.12.1.2.1" id="p1.1.m1.1.12.1.2.1.cmml" type="integer">7</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z+z^{n}+z^{{n^{2}}}+\ldots+z^{{n^{7}}}</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdleft"><math id="-5121913665417152797" display="inline" alttext="(n=\textit{N}_{8})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+        <msub xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2.1">
+          <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝑁</mtext>
+          <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">8</mn>
+        </msub>
+      </mrow>
+      <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.1.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.4.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+          <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">8</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(n=\textit{N}_{8})</annotation>
+  </semantics>
+</math></td></tr></tbody></table><br/><p> </p><br/>
+</div><p xmlns="http://www.w3.org/1999/xhtml">For the two-argument versions of the functions, see Section <code class="func">NK</code> (<a shape="rect" href="chap18_mj.html#X844F0EBF849EDEB3"><span class="RefLink">18.4-5</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">EY(5);</span>
+E(5)+E(5)^4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">EW(16,3); EW(17,2);</span>
+0
+E(17)+E(17)^4+E(17)^13+E(17)^16
+</pre></div> </body>
+    </html>

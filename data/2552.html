@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 15: Number Theory-&gt;15.6-1 ContinuedFractionExpansionOfRoot</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap15.html#X874C161B83416092"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">15.6-1 ContinuedFractionExpansionOfRoot</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ContinuedFractionExpansionOfRoot</code>( <var class="Arg">f</var>, <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The first <var class="Arg">n</var> terms of the continued fraction expansion of the only positive real root of the polynomial <var class="Arg">f</var> with integer coefficients. The leading coefficient of <var class="Arg">f</var> must be positive and the value of <var class="Arg">f</var> at 0 must be negative. If the degree of <var class="Arg">f</var> is 2 and <var class="Arg">n</var> = 0, the function computes one period of the continued fraction expansion of the root in question. Anything may happen if <var class="Arg">f</var> has three or more positive real roots.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x := Indeterminate(Integers);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ContinuedFractionExpansionOfRoot(x^2-7,20);</span>
+[ 2, 1, 1, 1, 4, 1, 1, 1, 4, 1, 1, 1, 4, 1, 1, 1, 4, 1, 1, 1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ContinuedFractionExpansionOfRoot(x^2-7,0);</span>
+[ 2, 1, 1, 1, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ContinuedFractionExpansionOfRoot(x^3-2,20);</span>
+[ 1, 3, 1, 5, 1, 1, 4, 1, 1, 8, 1, 14, 1, 10, 2, 1, 4, 12, 2, 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ContinuedFractionExpansionOfRoot(x^5-x-1,50);</span>
+[ 1, 5, 1, 42, 1, 3, 24, 2, 2, 1, 16, 1, 11, 1, 1, 2, 31, 1, 12, 5, 
+  1, 7, 11, 1, 4, 1, 4, 2, 2, 3, 4, 2, 1, 1, 11, 1, 41, 12, 1, 8, 1, 
+  1, 1, 1, 1, 9, 2, 1, 5, 4 ]
+</pre></div> </body>
+    </html>

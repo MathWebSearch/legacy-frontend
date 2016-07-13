@@ -1,0 +1,140 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.7-11 An Example of Function Profiling</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X7C5CE32579891120"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">7.7-11 <span class="Heading">An Example of Function Profiling</span></h5><p xmlns="http://www.w3.org/1999/xhtml">Let us suppose we want to get information about the computation of the conjugacy classes of a certain permutation group. For that, first we create the group, then we start profiling for all global functions and for all operations and their methods, then we compute the conjugacy classes, and then we stop profiling.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= PrimitiveGroup( 24, 1 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ProfileGlobalFunctions( true );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ProfileOperationsAndMethods( true );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConjugacyClasses( g );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ProfileGlobalFunctions( false );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ProfileOperationsAndMethods( false );</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Now the profile information is available. We can list the information for all profiled functions with <code class="func">DisplayProfile</code> (<a shape="rect" href="chap7_mj.html#X80FEA6A08775A48E"><span class="RefLink">7.7-9</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisplayProfile();</span>
+  count  self/ms  chld/ms  stor/kb  chld/kb  package  function              
+  17647        0        0      275        0  GAP      BasePoint             
+  10230        0        0      226        0  (oprt.)  ShallowCopy           
+  10139        0        0        0        0           PositionSortedOp: for*
+  10001        0        0      688        0           UniteSet: for two int*
+  10001        8        0       28      688  (oprt.)  UniteSet              
+  14751       12        0        0        0           =: for two families: *
+  10830        8        4      182      276  GAP      Concatenation         
+   2700       20       12      313       55  GAP      AddRefinement         
+   2444       28        4     3924      317  GAP      ConjugateStabChain    
+   4368        0       32        7      714  (oprt.)  Size                  
+   2174       32        4     1030      116  GAP      List                  
+    585        4       32       45      742  GAP      RRefine               
+   1532       32        8      194       56  GAP      AddGeneratorsExtendSc*
+   1221        8       32      349      420  GAP      Partition             
+ 185309       28       12        0        0  (oprt.)  Length                
+    336        4       40       95      817  GAP      ExtendSeriesPermGroup 
+      4       28       20      488      454  (oprt.)  Sortex                
+   2798        0       52       54      944  GAP      StabChainForcePoint   
+    560        4       48       83      628  GAP      StabChainSwap         
+    432       16       40      259      461  GAP      SubmagmaWithInversesNC
+ 185553       48        8      915       94  (oprt.)  Add                   
+     26        0       64        0     2023  (oprt.)  CentralizerOp         
+     26        0       64        0     2023  GAP      CentralizerOp: perm g*
+     26        0       64        0     2023  GAP      Centralizer: try to e*
+    152        4       64        0     2024  (oprt.)  Centralizer           
+   1605        0       68        0     2032  (oprt.)  StabilizerOfExternalS*
+     26        0       68        0     2024  GAP      Meth(StabilizerOfExte*
+    382        0       96       69     1922  GAP      TryPcgsPermGroup      
+   5130        4       96      309     3165  GAP      ForAll                
+   7980       24      116      330     6434  GAP      ChangeStabChain       
+  12076       12      136      351     6478  GAP      ProcessFixpoint       
+    192        0      148        4     3029  GAP      StabChainMutable: cal*
+   2208        4      148        3     3083  (oprt.)  StabChainMutable      
+    217        0      160        0     3177  (oprt.)  StabChainOp           
+    217       12      148       60     3117  GAP      StabChainOp: group an*
+    216       36      464      334    12546  GAP      PartitionBacktrack    
+   1479       12      668      566    18474  GAP      RepOpElmTuplesPermGro*
+   1453       12      684       56    18460  GAP      in: perm class rep    
+    126        0      728       13    19233  GAP      ConjugacyClassesTry   
+      1        0      736        0    19671  GAP      ConjugacyClassesByRan*
+      2        0      736        2    19678  (oprt.)  ConjugacyClasses      
+      1        0      736        0    19675  GAP      ConjugacyClasses: per*
+  13400     1164        0        0        0  (oprt.)  Position              
+             484             12052                    OTHER                 
+            2048             23319                    TOTAL                 
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We can restrict the list to global functions with <code class="func">ProfileGlobalFunctions</code> (<a shape="rect" href="chap7_mj.html#X79D6CB927BBEB940"><span class="RefLink">7.7-2</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ProfileGlobalFunctions();</span>
+  count  self/ms  chld/ms  stor/kb  chld/kb  package  function              
+  17647        0        0      275        0  GAP      BasePoint             
+  10830        8        4      182      276  GAP      Concatenation         
+   2700       20       12      313       55  GAP      AddRefinement         
+   2444       28        4     3924      317  GAP      ConjugateStabChain    
+   2174       32        4     1030      116  GAP      List                  
+    585        4       32       45      742  GAP      RRefine               
+   1532       32        8      194       56  GAP      AddGeneratorsExtendSc*
+   1221        8       32      349      420  GAP      Partition             
+    336        4       40       95      817  GAP      ExtendSeriesPermGroup 
+   2798        0       52       54      944  GAP      StabChainForcePoint   
+    560        4       48       83      628  GAP      StabChainSwap         
+    432       16       40      259      461  GAP      SubmagmaWithInversesNC
+    382        0       96       69     1922  GAP      TryPcgsPermGroup      
+   5130        4       96      309     3165  GAP      ForAll                
+   7980       24      116      330     6434  GAP      ChangeStabChain       
+  12076       12      136      351     6478  GAP      ProcessFixpoint       
+    216       36      464      334    12546  GAP      PartitionBacktrack    
+   1479       12      668      566    18474  GAP      RepOpElmTuplesPermGro*
+    126        0      728       13    19233  GAP      ConjugacyClassesTry   
+      1        0      736        0    19671  GAP      ConjugacyClassesByRan*
+            1804             14536                    OTHER                 
+            2048             23319                    TOTAL                 
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We can restrict the list to operations with <code class="func">ProfileOperations</code> (<a shape="rect" href="chap7_mj.html#X7C893F68841B990B"><span class="RefLink">7.7-3</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ProfileOperations();</span>
+  count  self/ms  chld/ms  stor/kb  chld/kb  package  function              
+  10230        0        0      226        0  (oprt.)  ShallowCopy           
+  10001        8        0       28      688  (oprt.)  UniteSet              
+   4368        0       32        7      714  (oprt.)  Size                  
+ 185309       28       12        0        0  (oprt.)  Length                
+      4       28       20      488      454  (oprt.)  Sortex                
+ 185553       48        8      915       94  (oprt.)  Add                   
+     26        0       64        0     2023  (oprt.)  CentralizerOp         
+    152        4       64        0     2024  (oprt.)  Centralizer           
+   1605        0       68        0     2032  (oprt.)  StabilizerOfExternalS*
+   2208        4      148        3     3083  (oprt.)  StabChainMutable      
+    217        0      160        0     3177  (oprt.)  StabChainOp           
+      2        0      736        2    19678  (oprt.)  ConjugacyClasses      
+  13400     1164        0        0        0  (oprt.)  Position              
+             764             21646                    OTHER                 
+            2048             23319                    TOTAL                 
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We can restrict the list to operations and their methods with <code class="func">ProfileOperationsAndMethods</code> (<a shape="rect" href="chap7_mj.html#X79D41E977DCA2BEE"><span class="RefLink">7.7-4</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ProfileOperationsAndMethods();</span>
+  count  self/ms  chld/ms  stor/kb  chld/kb  package  function              
+  10230        0        0      226        0  (oprt.)  ShallowCopy           
+  10139        0        0        0        0           PositionSortedOp: for*
+  10001        0        0      688        0           UniteSet: for two int*
+  10001        8        0       28      688  (oprt.)  UniteSet              
+  14751       12        0        0        0           =: for two families: *
+   4368        0       32        7      714  (oprt.)  Size                  
+ 185309       28       12        0        0  (oprt.)  Length                
+      4       28       20      488      454  (oprt.)  Sortex                
+ 185553       48        8      915       94  (oprt.)  Add                   
+     26        0       64        0     2023  (oprt.)  CentralizerOp         
+     26        0       64        0     2023  GAP      CentralizerOp: perm g*
+     26        0       64        0     2023  GAP      Centralizer: try to e*
+    152        4       64        0     2024  (oprt.)  Centralizer           
+   1605        0       68        0     2032  (oprt.)  StabilizerOfExternalS*
+     26        0       68        0     2024  GAP      Meth(StabilizerOfExte*
+    192        0      148        4     3029  GAP      StabChainMutable: cal*
+   2208        4      148        3     3083  (oprt.)  StabChainMutable      
+    217        0      160        0     3177  (oprt.)  StabChainOp           
+    217       12      148       60     3117  GAP      StabChainOp: group an*
+   1453       12      684       56    18460  GAP      in: perm class rep    
+      2        0      736        2    19678  (oprt.)  ConjugacyClasses      
+      1        0      736        0    19675  GAP      ConjugacyClasses: per*
+  13400     1164        0        0        0  (oprt.)  Position              
+             728             20834                    OTHER                 
+            2048             23319                    TOTAL                 
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Finally, we can restrict the list to explicitly given functions with <code class="func">DisplayProfile</code> (<a shape="rect" href="chap7_mj.html#X80FEA6A08775A48E"><span class="RefLink">7.7-9</span></a>), by entering the list of functions as an argument.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisplayProfile( [ StabChainOp, Centralizer ] );</span>
+  count  self/ms  chld/ms  stor/kb  chld/kb  package  function              
+    152        4       64        0     2024  (oprt.)  Centralizer           
+    217        0      160        0     3177  (oprt.)  StabChainOp           
+            2044             23319                    OTHER                 
+            2048             23319                    TOTAL                 
+</pre></div> </body>
+    </html>

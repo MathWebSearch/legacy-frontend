@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.1-5 BaseIntersectionIntMats</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X8771349D865C9179"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.1-5 BaseIntersectionIntMats</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ BaseIntersectionIntMats</code>( <var class="Arg">m</var>, <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">m</var> and <var class="Arg">n</var> are matrices with integral entries, this function returns a list of vectors that forms a basis of the intersection of the integral row spaces of <var class="Arg">m</var> and <var class="Arg">n</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">nat:=[[5,7,2],[4,2,5],[7,1,4]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BaseIntMat(nat);</span>
+[ [ 1, 1, 15 ], [ 0, 2, 55 ], [ 0, 0, 64 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BaseIntersectionIntMats(mat,nat);</span>
+[ [ 1, 5, 509 ], [ 0, 6, 869 ], [ 0, 0, 960 ] ]
+</pre></div> </body>
+    </html>

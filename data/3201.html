@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.2-12 OnLines</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X86DC2DD5829CAD9A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.2-12 OnLines</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OnLines</code>( <var class="Arg">vec</var>, <var class="Arg">g</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">vec</var> be a <em>normed</em> row vector, that is, its first nonzero entry is normed to the identity of the relevant field, see <code class="func">NormedRowVector</code> (<a shape="rect" href="chap23_mj.html#X785DC60D8482695D"><span class="RefLink">23.2-1</span></a>). The function <code class="func">OnLines</code> returns the row vector obtained from first multiplying <var class="Arg">vec</var> from the right with <var class="Arg">g</var> (via <code class="func">OnRight</code> (<a shape="rect" href="chap41_mj.html#X7960924D84B5B18F"><span class="RefLink">41.2-2</span></a>)) and then normalizing the resulting row vector by scalar multiplication from the left.</p><p xmlns="http://www.w3.org/1999/xhtml">This action corresponds to the projective action of a matrix group on one-dimensional subspaces.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">vec</var> is a zero vector or is not normed then an error is triggered (see <a shape="rect" href="chap41_mj.html#X82181CA07A5B2056"><span class="RefLink">41.3</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gl:=GL(2,5);;v:=[1,0]*Z(5)^0;</span>
+[ Z(5)^0, 0*Z(5) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h:=Action(gl,Orbit(gl,v,OnLines),OnLines);</span>
+Group([ (2,3,5,6), (1,2,4)(3,6,5) ])
+</pre></div> </body>
+    </html>

@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 32: Mappings-&gt;32.2-4 CompositionMapping</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap32.html#X7ED1E4E27CCE2DCA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">32.2-4 CompositionMapping</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CompositionMapping</code>( <var class="Arg">map1</var>, <var class="Arg">map2</var>, <var class="Arg">...</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">CompositionMapping</code> allows one to compose arbitrarily many general mappings, and delegates each step to <code class="func">CompositionMapping2</code> (<a shape="rect" href="chap32_mj.html#X86486B687B7077AC"><span class="RefLink">32.2-5</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Additionally, the properties <code class="func">IsInjective</code> (<a shape="rect" href="chap32_mj.html#X7F065FD7822C0A12"><span class="RefLink">32.3-4</span></a>) and <code class="func">IsSingleValued</code> (<a shape="rect" href="chap32_mj.html#X86D44C8A78BF1981"><span class="RefLink">32.3-2</span></a>) are maintained; if the source of the <math id="-6753198852478059173" display="inline" alttext="i+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+        <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i+1</annotation>
+  </semantics>
+</math>-th general mapping is identical to the range of the <math id="2926775157856932267" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th general mapping, also <code class="func">IsTotal</code> (<a shape="rect" href="chap32_mj.html#X83C7494E828CC9C8"><span class="RefLink">32.3-1</span></a>) and <code class="func">IsSurjective</code> (<a shape="rect" href="chap32_mj.html#X784ECE847E005B8F"><span class="RefLink">32.3-5</span></a>) are maintained. (So one should not call <code class="func">CompositionMapping2</code> (<a shape="rect" href="chap32_mj.html#X86486B687B7077AC"><span class="RefLink">32.2-5</span></a>) directly if one wants to maintain these properties.)</p><p xmlns="http://www.w3.org/1999/xhtml">Depending on the types of <var class="Arg">map1</var> and <var class="Arg">map2</var>, the returned mapping might be constructed completely new (for example by giving domain generators and their images, this is for example the case if both mappings preserve the same algebraic structures and <strong class="pkg">GAP</strong> can decompose elements of the source of <var class="Arg">map2</var> into generators) or as an (iterated) composition (see <code class="func">IsCompositionMappingRep</code> (<a shape="rect" href="chap32_mj.html#X7A926D167C3155F6"><span class="RefLink">32.2-6</span></a>)).</p> </body>
+    </html>

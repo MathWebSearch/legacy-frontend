@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.8-3 NrBasisVectors</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X7EC90F4F7BCAF8D4"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.8-3 NrBasisVectors</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrBasisVectors</code>( <var class="Arg">MB</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a mutable basis <var class="Arg">MB</var>, <code class="code">NrBasisVectors</code> returns the current number of basis vectors of <var class="Arg">MB</var>. Note that this operation is <em>not</em> an attribute, as it makes no sense to store the value. <code class="code">NrBasisVectors</code> is used mainly as an equivalent of <code class="code">Dimension</code> for the underlying left module in the case of immutable bases.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MB:= MutableBasis( Rationals, [ [ 1, 1], [ 2, 2 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NrBasisVectors( MB );</span>
+1
+</pre></div> </body>
+    </html>

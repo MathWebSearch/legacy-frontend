@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 30: Collections-&gt;30.5-3 Union</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30.html#X799F0E2F7A502DBA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.5-3 <span class="Heading">Union</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Union</code>( <var class="Arg">C1</var>, <var class="Arg">C2</var>, <var class="Arg">...</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Union</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Union2</code>( <var class="Arg">C1</var>, <var class="Arg">C2</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">In the first form <code class="func">Union</code> returns the union of the collections <var class="Arg">C1</var>, <var class="Arg">C2</var>, etc. In the second form <var class="Arg">list</var> must be a list of collections and <code class="func">Union</code> returns the union of those collections. Each argument or element of <var class="Arg">list</var> respectively may also be a homogeneous list that is not a proper set, in which case <code class="func">Union</code> silently applies <code class="func">Set</code> (<a shape="rect" href="chap30_mj.html#X7E399AC97FD98217"><span class="RefLink">30.3-7</span></a>) to it first.</p><p xmlns="http://www.w3.org/1999/xhtml">The result of <code class="func">Union</code> is the set of elements that lie in any of the collections <var class="Arg">C1</var>, <var class="Arg">C2</var>, etc. If the result is a list then it is mutable and new, i.e., not identical to any of <var class="Arg">C1</var>, <var class="Arg">C2</var>, etc.</p><p xmlns="http://www.w3.org/1999/xhtml">Methods can be installed for the operation <code class="func">Union2</code> that takes only two arguments. <code class="func">Union</code> calls <code class="func">Union2</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Union( [ (1,2,3), (1,2,3,4) ], Group( (1,2,3), (1,2) ) );</span>
+[ (), (2,3), (1,2), (1,2,3), (1,2,3,4), (1,3,2), (1,3) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Union( [2,4,6,8,10], [3,6,9,12,15], [5,10,15,20,25] )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   ;  # two or more lists or collections as arguments are legal</span>
+[ 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 20, 25 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Union( [ [1,2,4], [2,3,4], [1,3,4] ] )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   ;  # or one list of lists or collections</span>
+[ 1, 2, 3, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Union( [ ] );</span>
+[  ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,30 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.8-4 ImmutableBasis</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X7BA87512823A8CFD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.8-4 ImmutableBasis</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ImmutableBasis</code>( <var class="Arg">MB</var>[, <var class="Arg">V</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ImmutableBasis</code> returns the immutable basis <math id="-2117621069652783963" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math>, say, with the same basis vectors as in the mutable basis <var class="Arg">MB</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the second argument <var class="Arg">V</var> is present then <var class="Arg">V</var> is the value of <code class="func">UnderlyingLeftModule</code> (<a shape="rect" href="chap61_mj.html#X81E8AE88843B70FF"><span class="RefLink">61.6-2</span></a>) for <math id="7211632814690513079" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math>. The second variant is used mainly for the case that one knows the module for the desired basis in advance, and if it has a nicer structure than the module known to <var class="Arg">MB</var>, for example if it is an algebra.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MB:= MutableBasis( Rationals, [ [ 1, 1 ], [ 2, 2 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= ImmutableBasis( MB );</span>
+SemiEchelonBasis( &lt;vector space of dimension 1 over Rationals&gt;, 
+[ [ 1, 1 ] ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnderlyingLeftModule( B );</span>
+&lt;vector space of dimension 1 over Rationals&gt;
+</pre></div> </body>
+    </html>

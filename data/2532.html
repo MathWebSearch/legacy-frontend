@@ -1,0 +1,29 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.1-2 SolutionIntMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X7D749F317DBD1E69"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.1-2 SolutionIntMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SolutionIntMat</code>( <var class="Arg">mat</var>, <var class="Arg">vec</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">mat</var> is a matrix with integral entries and <var class="Arg">vec</var> a vector with integral entries, this function returns a vector <math id="5056725843015669130" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> with integer entries that is a solution of the equation <math id="-6525408077735448310" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> <code class="code">* <var class="Arg">mat</var> = <var class="Arg">vec</var></code>. It returns <code class="keyw">fail</code> if no such vector exists.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=[[1,2,7],[4,5,6],[7,8,9],[10,11,19],[5,7,12]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SolutionMat(mat,[95,115,182]);</span>
+[ 47/4, -17/2, 67/4, 0, 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SolutionIntMat(mat,[95,115,182]);   </span>
+[ 2285, -5854, 4888, -1299, 0 ]
+</pre></div> </body>
+    </html>

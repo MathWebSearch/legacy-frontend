@@ -1,0 +1,209 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7B256AE5780F140A"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap21_mj.html#X7B256AE5780F140A">21 <span class="Heading">Lists</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X86B28F5B781FFD31">21.1 <span class="Heading">List Categories</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7C4CC4EA8299701E">21.1-1 IsList</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X870AA9D8798C93DD">21.1-2 IsDenseList</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7C71596C82B6EF35">21.1-3 IsHomogeneousList</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X80872FAF80EB5DF9">21.1-4 IsTable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X79581E0387F7F7A9">21.1-5 IsRectangularTable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7C84E16A85C99C8C">21.1-6 IsConstantTimeAccessList</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X7B202D147A5C2884">21.2 <span class="Heading">Basic Operations for Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X8297BBCD79642BE6">21.2-1 \[\]</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X7921047F83F5FA28">21.3 <span class="Heading">List Elements</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X78791B8B838A8BA0">21.3-1 \{\}</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X8611EF768210625B">21.4 <span class="Heading">List Assignment</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X813FF1637F8D2B7F">21.4-1 \{\}\:\=</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X795EC9D67E34DAB0">21.4-2 Add</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7E98B11B79BA9167">21.4-3 Remove</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X79D7E96F80A2D7C0">21.4-4 CopyListEntries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X79E31DB27C82D6E1">21.4-5 Append</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X7963C8E17EFF86DB">21.5 <span class="Heading">IsBound and Unbind for Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X79EC565A7DCEC938">21.5-1 IsBound</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X78B72FDF7BD63C0B">21.5-2 Unbind</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X7DD65BEA7EDB0CD7">21.6 <span class="Heading">Identical Lists</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X7ED7C0738495556F">21.7 <span class="Heading">Duplication of Lists</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X808A207182B2F84F">21.8 <span class="Heading">Membership Test for Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7B914A287F88ED0A">21.8-1 \in</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X84D6FC7E7E39ED33">21.9 <span class="Heading">Enlarging Internally Represented Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X78BF67A5802E93AD">21.9-1 EmptyPlist</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X8016D50F85147A77">21.10 <span class="Heading">Comparisons of Lists</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X845EEAF083D43CCE">21.11 <span class="Heading">Arithmetic for Lists</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X84D642967B8546B7">21.12 <span class="Heading">Filters Controlling the Arithmetic Behaviour of Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X87ABCEE9809585A0">21.12-1 IsGeneralizedRowVector</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7FBCA5B58308C158">21.12-2 IsMultiplicativeGeneralizedRowVector</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7BAD12E67BFC90DE">21.12-3 IsListDefault</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X8428E77B86722D52">21.12-4 NestingDepthA</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X84B383B97FD986CD">21.12-5 NestingDepthM</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X7E6A1F66781BE923">21.13 <span class="Heading">Additive Arithmetic for Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X86A85ADC85C451DC">21.13-1 <span class="Heading">Zero for lists</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7B91CE4D814C2D08">21.13-2 <span class="Heading">AdditiveInverse for lists</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X842D123E7EE5E3DB">21.13-3 <span class="Heading">Addition of lists</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7C3DC8BE78DEECDE">21.13-4 <span class="Heading">Subtraction of lists</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X782ED7F27D8C7FC1">21.14 <span class="Heading">Multiplicative Arithmetic for Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X79A8A5627FD42FA5">21.14-1 <span class="Heading">One for lists</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X78C6C1E2849D303A">21.14-2 <span class="Heading">Inverse for lists</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X84FDB95179BFE4CD">21.14-3 <span class="Heading">Multiplication of lists</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X82EA2A5B786181C7">21.14-4 <span class="Heading">Division of lists</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7A0FD70C80B95C00">21.14-5 <span class="Heading">mod for lists</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X84BB2DFB8432A1A4">21.14-6 <span class="Heading">Left quotients of lists</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X8676EFE67972FD06">21.15 <span class="Heading">Mutability Status and List Arithmetic</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X80FDB1457FF582E7">21.15-1 ListWithIdenticalEntries</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X8196FD4779BCCA0C">21.16 <span class="Heading">Finding Positions in Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X79975EC6783B4293">21.16-1 Position</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7FA9648883AE1B88">21.16-2 Positions</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7B4B10AE81602D4E">21.16-3 PositionCanonical</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7D2B25B484591506">21.16-4 PositionNthOccurrence</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7A122E848464E534">21.16-5 PositionSorted</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X78BFE9D78347C0DA">21.16-6 PositionSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7E6C763A82C6153B">21.16-7 PositionProperty</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7DA94D278304EC3D">21.16-8 PositionsProperty</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X86C9E5C3863B3C03">21.16-9 PositionBound</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X865EF45D87ED1384">21.16-10 PositionNot</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7F42E5AD87EC9D5A">21.16-11 PositionNonZero</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X87A8C62A867D6DA4">21.16-12 PositionSublist</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X7865747A7CCF5812">21.17 <span class="Heading">Properties and Attributes for Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X83F8EC7C7BF27EFC">21.17-1 IsMatchingSublist</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7FA892828252BB3B">21.17-2 IsDuplicateFree</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7BAA9B0E81D4A884">21.17-3 IsSortedList</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X80CDAF45782E8DCB">21.17-4 IsSSortedList</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X780769238600AFD1">21.17-5 Length</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7B55FB967CDEF468">21.17-6 ConstantTimeAccessList</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X83E558E37D1B44D4">21.18 <span class="Heading">Sorting Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7FE4975F8166884D">21.18-1 Sort</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X791F2B2C7E9B9A46">21.18-2 SortParallel</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X87287FCA81E2B06A">21.18-3 Sortex</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X800209E881E7CECB">21.18-4 SortingPerm</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X80ABC25582343910">21.19 <span class="Heading">Sorted Lists and Sets</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7B16AD597CB12305">21.19-1 \in</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7B4C0FEE7CDF6F2A">21.19-2 IsEqualSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X79B940567A849216">21.19-3 IsSubsetSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X832C23CC7FCD8892">21.19-4 AddSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7FCA282E789A4F4B">21.19-5 RemoveSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7B3469CD7EFC1A87">21.19-6 UniteSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X8473AA657FEC3D4D">21.19-7 IntersectSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X80B427537EB07D09">21.19-8 SubtractSet</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X7DF510F7848CBBFD">21.20 <span class="Heading">Operations for Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X840C55A77D1BB2E1">21.20-1 Concatenation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7CB0A6AF87C7FAF7">21.20-2 Compacted</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7ECE9056792F28BA">21.20-3 Collected</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X8727F2928467C2F9">21.20-4 DuplicateFreeList</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7F5D4DD87E4378AC">21.20-5 AsDuplicateFreeList</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7FA272D984EF82ED">21.20-6 Flat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7C4FDB007C3F54A1">21.20-7 Reversed</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X8057372F83374193">21.20-8 Shuffle</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7BA5EF2181DD78D7">21.20-9 IsLexicographicallyLess</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X8075FBDE7B81B4C8">21.20-10 Apply</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7EF6E2BC81DBF6FB">21.20-11 Perform</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X8763882A7D65F979">21.20-12 PermListList</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X82CE0DE8828E4303">21.20-13 <span class="Heading">Maximum</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X82F133EC7F89665F">21.20-14 <span class="Heading">Minimum</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X842851EB7E0969F7">21.20-15 <span class="Heading">MaximumList and MinimumList</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7E1593B979BDF2CD">21.20-16 <span class="Heading">Cartesian</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7E76F5A782184823">21.20-17 <span class="Heading">IteratorOfCartesianProduct</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7B5A19098406347A">21.20-18 Permuted</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X86CB7DCE8510F977">21.20-19 List</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7C86D7F7795125F0">21.20-20 Filtered</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X8179B13D80E935FC">21.20-21 Number</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X82801DFA84E11272">21.20-22 First</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7F06961278166671">21.20-23 ForAll</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7AF82E747A8BDA75">21.20-24 ForAny</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7E5C72F27B657948">21.20-25 Product</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7A04B71C84CFCC2D">21.20-26 Sum</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X834E4DF57F3A20F0">21.20-27 Iterated</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7D150C2881881139">21.20-28 ListN</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X805CA0B68029B47A">21.21 <span class="Heading">Advanced List Manipulations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X8258477D7F72171B">21.21-1 ListX</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7AC321B87A2DCAF5">21.21-2 SetX</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X82B1411E7FBE925F">21.21-3 SumX</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7FB318B47D8783DA">21.21-4 ProductX</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X79596BDE7CAF8491">21.22 <span class="Heading">Ranges</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X86DDC2FF7A50FBEE">21.22-1 IsRange</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7D22B2298167A58F">21.22-2 ConvertToRangeRep</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap21_mj.html#X7EA3ACE27E43D174">21.23 <span class="Heading">Enumerators</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap21_mj.html#X7BB462C17962647F">21.23-1 IsQuickPositionList</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">21 <span class="Heading">Lists</span></h3><p xmlns="http://www.w3.org/1999/xhtml">Lists are the most important way to treat objects together. A <em>list</em> arranges objects in a definite order. So each list implies a partial mapping from the integers to the elements of the list. I.e., there is a first element of a list, a second, a third, and so on. Lists can occur in mutable or immutable form, see <a shape="rect" href="chap12_mj.html#X7F0C119682196D65"><span class="RefLink">12.6</span></a> for the concept of mutability, and <a shape="rect" href="chap21_mj.html#X7ED7C0738495556F"><span class="RefLink">21.7</span></a> for the case of lists.</p><p xmlns="http://www.w3.org/1999/xhtml">This chapter deals mainly with the aspect of lists in <strong class="pkg">GAP</strong> as <em>data structures</em>. Chapter <a shape="rect" href="chap30_mj.html#X8050A8037984E5B6"><span class="RefLink">30</span></a> tells more about the <em>collection</em> aspect of certain lists, and more about lists as <em>arithmetic objects</em> can be found in the chapters <a shape="rect" href="chap23_mj.html#X82C7E6CF7BA03391"><span class="RefLink">23</span></a> and <a shape="rect" href="chap24_mj.html#X812CCAB278643A59"><span class="RefLink">24</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Lists are used to implement ranges (see <a shape="rect" href="chap21_mj.html#X79596BDE7CAF8491"><span class="RefLink">21.22</span></a>), sets (see <a shape="rect" href="chap21_mj.html#X80ABC25582343910"><span class="RefLink">21.19</span></a>), strings (see <a shape="rect" href="chap27_mj.html#X7D28329B7EDB8F47"><span class="RefLink">27</span></a>), row vectors (see <a shape="rect" href="chap23_mj.html#X82C7E6CF7BA03391"><span class="RefLink">23</span></a>), and matrices (see <a shape="rect" href="chap24_mj.html#X812CCAB278643A59"><span class="RefLink">24</span></a>); Boolean lists (see <a shape="rect" href="chap22_mj.html#X7AC531DD79B6938E"><span class="RefLink">22</span></a>) are a further special kind of lists.</p><p xmlns="http://www.w3.org/1999/xhtml">Several operations for lists, such as <code class="func">Intersection</code> (<a shape="rect" href="chap30_mj.html#X851069107CACF98E"><span class="RefLink">30.5-2</span></a>) and <code class="func">Random</code> (<a shape="rect" href="chap30_mj.html#X7FF906E57D6936F8"><span class="RefLink">30.7-1</span></a>), will be described in Chapter <a shape="rect" href="chap30_mj.html#X8050A8037984E5B6"><span class="RefLink">30</span></a>, in particular see <a shape="rect" href="chap30_mj.html#X7C3722DF8736FFDB"><span class="RefLink">30.3</span></a>.</p> </body>
+    </html>

@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.9-12 MaximalSubgroupsTom</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X8325811586C00ECF"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.9-12 MaximalSubgroupsTom</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MaximalSubgroupsTom</code>( <var class="Arg">tom</var>[, <var class="Arg">sub</var>] )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Called with a table of marks <var class="Arg">tom</var>, <code class="func">MaximalSubgroupsTom</code> returns a list of length two, the first entry being the list of positions of the classes of maximal subgroups of the whole group of <var class="Arg">tom</var>, the second entry being the list of class lengths of these groups.</p><p xmlns="http://www.w3.org/1999/xhtml">Called with a table of marks <var class="Arg">tom</var> and a position <var class="Arg">sub</var>, the same information for the <var class="Arg">sub</var>-th class of subgroups is returned.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MaximalSubgroupsTom( s4 );</span>
+[ [ 10, 9, 8 ], [ 1, 3, 4 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MaximalSubgroupsTom( s4, 10 );</span>
+[ [ 5, 4 ], [ 1, 4 ] ]
+</pre></div> </body>
+    </html>

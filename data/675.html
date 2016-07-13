@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 51: Semigroups and Monoids-&gt;51.9-1 ReesMatrixSemigroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap51.html#X8526AA557CDF6C49"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">51.9-1 ReesMatrixSemigroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReesMatrixSemigroup</code>( <var class="Arg">S</var>, <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReesZeroMatrixSemigroup</code>( <var class="Arg">S</var>, <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A Rees matrix or 0-matrix semigroup.</p><p xmlns="http://www.w3.org/1999/xhtml">When <var class="Arg">S</var> is a semigroup and <var class="Arg">mat</var> is an <code class="code">m</code> by <code class="code">n</code> matrix with entries in <var class="Arg">S</var>, the function <code class="code">ReesMatrixSemigroup</code> returns the <code class="code">n</code> by <code class="code">m</code> Rees matrix semigroup over <var class="Arg">S</var> with multiplication defined by <var class="Arg">mat</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The arguments of <code class="code">ReesZeroMatrixSemigroup</code> should be a semigroup <var class="Arg">S</var> and an <code class="code">m</code> by <code class="code">n</code> matrix <var class="Arg">mat</var> with entries in <var class="Arg">S</var> or equal to the integer <code class="code">0</code>. <code class="code">ReesZeroMatrixSemigroup</code> returns the <code class="code">n</code> by <code class="code">m</code> Rees 0-matrix semigroup over <var class="Arg">S</var> with multiplication defined by <var class="Arg">mat</var>. In <strong class="pkg">GAP</strong> a Rees 0-matrix semigroup always contains a multiplicative zero element, regardless of whether there are any entries in <var class="Arg">mat</var> which are equal to <code class="code">0</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G:=Random(AllGroups(Size, 32));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=List([1..5], x-&gt; List([1..3], y-&gt; Random(G)));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=ReesMatrixSemigroup(G, mat);</span>
+&lt;Rees matrix semigroup 3x5 over &lt;pc group of size 32 with 
+ 5 generators&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=[[(), 0, (), ()], [0, 0, 0, 0]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=ReesZeroMatrixSemigroup(DihedralGroup(IsPermGroup, 8), mat);</span>
+&lt;Rees 0-matrix semigroup 4x2 over Group([ (1,2,3,4), (2,4) ])&gt;
+</pre></div> </body>
+    </html>

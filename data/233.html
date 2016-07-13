@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.4 Constructors for Basic Groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X817EBD6E841285CD"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">50.4 <span class="Heading">Constructors for Basic Groups</span></h4><p xmlns="http://www.w3.org/1999/xhtml">All functions described in the previous sections call constructor operations to do the work. The names of the constructors are obtained from the names of the functions by appending <code class="code">&quot;Cons&quot;</code>, so for example <code class="func">CyclicGroup</code> (<a shape="rect" href="chap50_mj.html#X7A7C473D87B31F3B"><span class="RefLink">50.1-2</span></a>) calls the constructor</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">CyclicGroupCons( <var class="Arg">cat</var>, <var class="Arg">n</var> )</code></p><p xmlns="http://www.w3.org/1999/xhtml">The first argument <var class="Arg">cat</var> for each method of this constructor must be the category for which the method is installed. For example the method for constructing a cyclic permutation group is installed as follows (see <code class="func">InstallMethod</code> (<a shape="rect" href="chap78_mj.html#X837EFDAB7BEF290B"><span class="RefLink">78.2-1</span></a>) for the meaning of the arguments.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+InstallMethod( CyclicGroupCons,
+    &quot;regular perm group&quot;,
+    true,
+    [ IsPermGroup and IsRegularProp and IsFinite, IsInt and IsPosRat ], 0,
+    function( filter, n )
+
+    ...
+
+    end );
+</pre></div> </body>
+    </html>

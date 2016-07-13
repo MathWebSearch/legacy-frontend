@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 52: Finitely Presented Semigroups and Monoids-&gt;52.4-1 UnderlyingElement</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap52.html#X818E25C887512E89"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">52.4-1 UnderlyingElement</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ UnderlyingElement</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">for an element <var class="Arg">elm</var> of a finitely presented semigroup, it returns the word from the free semigroup that is used as a representative for <var class="Arg">elm</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := FreeSemigroup( &quot;a&quot; , &quot;b&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := GeneratorsOfSemigroup( f )[ 1 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b := GeneratorsOfSemigroup( f )[ 2 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s := f / [ [ a^3 , a ] , [ b^3 , b ] , [ a*b , b*a ] ];</span>
+&lt;fp semigroup on the generators [ a, b ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w := GeneratorsOfSemigroup(s)[1] * GeneratorsOfSemigroup(s)[2];</span>
+a*b
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWord (w );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ue := UnderlyingElement( w );</span>
+a*b
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWord( ue );</span>
+true
+</pre></div> </body>
+    </html>

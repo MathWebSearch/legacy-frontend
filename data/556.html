@@ -1,0 +1,23 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.5 Conventions for Character Tables</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X829C4B6E83998F40"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">71.5 <span class="Heading">Conventions for Character Tables</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The following few conventions should be noted.</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>The class of the <em>identity element</em> is expected to be the first one; thus the degree of a character is the character value at position <math id="-7735076327570842789" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math>.</p>
+
+</li><li><p>The <em>trivial character</em> of a character table need not be the first in the list of irreducibles.</p>
+
+</li><li><p>Most functions that take a character table as an argument and work with characters expect these characters as an argument, too. For some functions, the list of irreducible characters serves as the default, i.e, the value of the attribute <code class="func">Irr</code> (<a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492"><span class="RefLink">71.8-2</span></a>); in these cases, the <code class="func">Irr</code> (<a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492"><span class="RefLink">71.8-2</span></a>) value is automatically computed if it was not yet known.</p>
+
+</li><li><p>For a stored class fusion, the image table is denoted by its <code class="func">Identifier</code> (<a shape="rect" href="chap71_mj.html#X79C40EE97890202F"><span class="RefLink">71.9-8</span></a>) value; each library table has a unique identifier by which it can be accessed (see <a shape="rect" href="../../pkg/ctbllib/doc/chap2.html#X84930B2D7849E019"><span class="RefLink">CTblLib: Accessing a Character Table from the Library</span></a> in the manual for the <strong class="pkg">GAP</strong> Character Table Library), tables constructed from groups get an identifier that is unique in the current <strong class="pkg">GAP</strong> session.</p>
+
+</li></ul> </body>
+    </html>

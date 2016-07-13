@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 30: Collections-&gt;30.2-3 ElementsFamily</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30.html#X864BB3748546F63F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.2-3 ElementsFamily</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ElementsFamily</code>( <var class="Arg">Fam</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">Fam</var> is a collections family (see <code class="func">IsCollectionFamily</code> (<a shape="rect" href="chap30_mj.html#X856AC2DF7F7CBAAF"><span class="RefLink">30.2-2</span></a>)) then <code class="func">ElementsFamily</code> returns the family from which <var class="Arg">Fam</var> was created by <code class="func">CollectionsFamily</code> (<a shape="rect" href="chap30_mj.html#X84E5A67E87D8DD66"><span class="RefLink">30.2-1</span></a>). The way a collections family is created, it always has its elements family stored. If <var class="Arg">Fam</var> is not a collections family then an error is signalled.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fam:= FamilyObj( (1,2) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">collfam:= CollectionsFamily( fam );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fam = collfam;  fam = ElementsFamily( collfam );</span>
+false
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">collfam = FamilyObj( [ (1,2,3) ] );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">collfam = FamilyObj( Group( () ) );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">collfam = CollectionsFamily( collfam );</span>
+false
+</pre></div> </body>
+    </html>

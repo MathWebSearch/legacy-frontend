@@ -1,0 +1,76 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 49: Group Products-&gt;49.1-1 DirectProduct</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap49.html#X861BA02C7902A4F4"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">49.1-1 DirectProduct</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DirectProduct</code>( <var class="Arg">G</var>[, <var class="Arg">H</var>, <var class="Arg">...</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DirectProductOp</code>( <var class="Arg">list</var>, <var class="Arg">expl</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">These functions construct the direct product of the groups given as arguments. <code class="func">DirectProduct</code> takes an arbitrary positive number of arguments and calls the operation <code class="func">DirectProductOp</code>, which takes exactly two arguments, namely a nonempty list <var class="Arg">list</var> of groups and one of these groups, <var class="Arg">expl</var>. (This somewhat strange syntax allows the method selection to choose a reasonable method for special cases, e.g., if all groups are permutation groups or pc groups.)</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> will try to choose an efficient representation for the direct product. For example the direct product of permutation groups will be a permutation group again and the direct product of pc groups will be a pc group.</p><p xmlns="http://www.w3.org/1999/xhtml">If the groups are in different representations a generic direct product will be formed which may not be particularly efficient for many calculations. Instead it may be worth to convert all factors to a common representation first, before forming the product.</p><p xmlns="http://www.w3.org/1999/xhtml">For a direct product <math id="6199734224323886533" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math>, calling <code class="func">Embedding</code> (<a shape="rect" href="chap32_mj.html#X86452F8587CBAEA0"><span class="RefLink">32.2-10</span></a>) with <math id="8238343881870737775" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math> and <math id="-5725643483981662121" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> yields the homomorphism embedding the <math id="2702313885535192572" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>-th factor into <math id="-3984598528964453991" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math>; calling <code class="func">Projection</code> (<a shape="rect" href="chap32_mj.html#X8769E8DA80BC96C1"><span class="RefLink">32.2-11</span></a>) with <var class="Arg">P</var> and <var class="Arg">n</var> yields the projection of <math id="-6141370028004958692" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math> onto the <math id="1101281098621637716" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>-th factor, see <a shape="rect" href="chap49_mj.html#X798FDA1386A0EAC6"><span class="RefLink">49.6</span></a>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2,3),(1,2));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d:=DirectProduct(g,g,g);</span>
+Group([ (1,2,3), (1,2), (4,5,6), (4,5), (7,8,9), (7,8) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(d);</span>
+216
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e:=Embedding(d,2);</span>
+2nd embedding into Group([ (1,2,3), (1,2), (4,5,6), (4,5), (7,8,9), 
+  (7,8) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Image(e,(1,2));</span>
+(4,5)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Image(Projection(d,2),(1,2,3)(4,5)(8,9));</span>
+(1,2)
+</pre></div> </body>
+    </html>

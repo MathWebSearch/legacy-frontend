@@ -1,0 +1,63 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.6 Displaying partial permutations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X7849595B81D063EE"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">54.6 <span class="Heading">Displaying partial permutations</span></h4><p xmlns="http://www.w3.org/1999/xhtml">It is possible to change the way that <strong class="pkg">GAP</strong> displays partial permutations using the user preferences <code class="code">PartialPermDisplayLimit</code> and <code class="code">NotationForPartialPerms</code>; see Section <code class="func">UserPreference</code> (<a shape="rect" href="chap3_mj.html#X7B0AD104839B6C3C"><span class="RefLink">3.2-3</span></a>) for more information about user preferences.</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="code">f</code> is a partial permutation of rank <code class="code">r</code> exceeding the value of the user preference <code class="code">PartialPermDisplayLimit</code>, then <code class="code">f</code> is displayed as:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">&lt;partial perm on r pts with degree m, codegree n&gt;</pre></div><p xmlns="http://www.w3.org/1999/xhtml">where the degree and codegree are <code class="code">m</code> and <code class="code">n</code>, respectively. The idea is to abbreviate the display of partial permutations defined on many points. The default value for the <code class="code">PartialPermDisplayLimit</code> is <code class="code">100</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the rank of <code class="code">f</code> does not exceed the value of <code class="code">PartialPermDisplayLimit</code>, then how <code class="code">f</code> is displayed depends on the value of the user preference <code class="code">NotationForPartialPerms</code> except in the case that <code class="code">f</code> is the empty partial permutation or an identity partial permutation.</p><p xmlns="http://www.w3.org/1999/xhtml">There are three possible values for <code class="code">NotationForPartialPerms</code> user preference, which are described below.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">component</strong></dt><dd><p>Similar to permutations, and unlike transformations, partial permutations can be expressed as products of disjoint permutations and chains. A <em>chain</em> is a list <code class="code">c</code> of some length <code class="code">n</code> such that:</p>
+
+
+<ul><li><p><code class="code">c[1]</code> is an element of the domain of <var class="Arg">f</var> but not the image</p>
+
+</li><li><p><code class="code">c[i]^<var class="Arg">f</var>=c[i+1]</code> for all <code class="code">i</code> in the range from <code class="code">1</code> to <code class="code">n-1</code>.</p>
+
+</li><li><p><code class="code">c[n]</code> is in the image of <var class="Arg">f</var> but not the domain.</p>
+
+</li></ul>
+<p>In the display, permutations are displayed as they usually are in <strong class="pkg">GAP</strong>, except that fixed points are displayed enclosed in round brackets, and chains are displayed enclosed in square brackets.</p>
+
+
+<div class="example"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := PartialPerm([ 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 16, 17, 18, 19 ],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 3, 12, 14, 4, 11, 18, 17, 2, 9, 5, 15, 8, 20, 10, 19 ]);</span>
+[1,3,14][16,8,2,12,15](4)(5,11)[6,18,10,9][7,17,20](19)</pre></div>
+
+<p>This option is the most compact way to display a partial permutation and is the default value of the user preference <code class="code">NotationForPartialPerms</code>.</p>
+
+</dd><dt><strong class="Mark">domainimage</strong></dt><dd><p>With this option a partial permutation <code class="code">f</code> is displayed in the format: <code class="code">DomainOfPartialPerm(<var class="Arg">f</var>)-&gt; ImageListOfPartialPerm(<var class="Arg">f</var>)</code>.</p>
+
+
+<div class="example"><pre xml:space="preserve"><span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 4, 5, 6, 7 ], [ 10, 1, 6, 5, 8, 7 ]);</span>
+[ 1, 2, 4, 5, 6, 7 ] -&gt; [ 10, 1, 6, 5, 8, 7 ]</pre></div>
+
+</dd><dt><strong class="Mark">input</strong></dt><dd><p>With this option a partial permutation <var class="Arg">f</var> is displayed as: <code class="code">PartialPerm(DomainOfPartialPerm(<var class="Arg">f</var>), ImageListOfPartialPerm(<var class="Arg">f</var>))</code> which corresponds to the input (of the first type described in <code class="func">PartialPerm</code> (<a shape="rect" href="chap54_mj.html#X8538BAE77F2FB2F8"><span class="RefLink">54.2-1</span></a>)).</p>
+
+
+<div class="example"><pre xml:space="preserve"><span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 3, 5, 6, 9, 10 ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 4, 7, 3, 8, 2, 1, 6 ] );</span>
+PartialPerm( [ 1, 2, 3, 5, 6, 9, 10 ], [ 4, 7, 3, 8, 2, 1, 6 ] )</pre></div>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetUserPreference(&quot;PartialPermDisplayLimit&quot;, 12);                </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UserPreference(&quot;PartialPermDisplayLimit&quot;);</span>
+12
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm([1,2,3,4,5,6], [6,7,1,4,3,2]);</span>
+[5,3,1,6,2,7](4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 16, 17, 18, 19 ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 3, 12, 14, 4, 11, 18, 17, 2, 9, 5, 15, 8, 20, 10, 19 ] );</span>
+&lt;partial perm on 15 pts with degree 19, codegree 20&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetUserPreference(&quot;PartialPermDisplayLimit&quot;, 100);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f;</span>
+[1,3,14][6,18,10,9][7,17,20][16,8,2,12,15](4)(5,11)(19)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UserPreference(&quot;NotationForPartialPerms&quot;);</span>
+&quot;component&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetUserPreference(&quot;NotationForPartialPerms&quot;, &quot;domainimage&quot;);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f;</span>
+[ 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 16, 17, 18, 19 ] -&gt; 
+[ 3, 12, 14, 4, 11, 18, 17, 2, 9, 5, 15, 8, 20, 10, 19 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetUserPreference(&quot;NotationForPartialPerms&quot;, &quot;input&quot;);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f;</span>
+PartialPerm( 
+[ 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 16, 17, 18, 19 ], 
+[ 3, 12, 14, 4, 11, 18, 17, 2, 9, 5, 15, 8, 20, 10, 19 ] )</pre></div> </body>
+    </html>

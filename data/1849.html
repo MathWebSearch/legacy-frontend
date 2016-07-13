@@ -1,0 +1,133 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.4-1 Permanent</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X7F0942DD83BBAB7A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.4-1 Permanent</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Permanent</code>( <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the <em>permanent</em> of the matrix <var class="Arg">mat</var>. The permanent is defined by <math id="1663549585508065102" display="inline" alttext="\sum_{{p\in Sym(n)}}\prod_{{i=1}}^{n}mat[i][i^{p}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
+      <msub xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">
+        <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" symmetric="true" largeop="true">∑</mo>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">p</mi>
+          <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">∈</mo>
+          <mrow xref="p1.1.m1.1.2.1.9.cmml" id="p1.1.m1.1.2.1.9">
+            <mi xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">S</mi>
+            <mo xref="p1.1.m1.1.2.1.9.1.cmml" id="p1.1.m1.1.2.1.9.1">⁢</mo>
+            <mi xref="p1.1.m1.1.2.1.4.cmml" id="p1.1.m1.1.2.1.4">y</mi>
+            <mo xref="p1.1.m1.1.2.1.9.1.cmml" id="p1.1.m1.1.2.1.9.1a">⁢</mo>
+            <mi xref="p1.1.m1.1.2.1.5.cmml" id="p1.1.m1.1.2.1.5">m</mi>
+            <mo xref="p1.1.m1.1.2.1.9.1.cmml" id="p1.1.m1.1.2.1.9.1b">⁢</mo>
+            <mrow id="p1.1.m1.1.2.1.9.2">
+              <mo id="p1.1.m1.1.2.1.6" stretchy="false">(</mo>
+              <mi xref="p1.1.m1.1.2.1.7.cmml" id="p1.1.m1.1.2.1.7">n</mi>
+              <mo id="p1.1.m1.1.2.1.8" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+        </mrow>
+      </msub>
+      <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2">
+        <msubsup xref="p1.1.m1.1.16.2.1.cmml" id="p1.1.m1.1.16.2.1">
+          <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3" symmetric="true" largeop="true">∏</mo>
+          <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">
+            <mi xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.4.1.1">i</mi>
+            <mo xref="p1.1.m1.1.4.1.2.cmml" id="p1.1.m1.1.4.1.2">=</mo>
+            <mn xref="p1.1.m1.1.4.1.3.cmml" id="p1.1.m1.1.4.1.3">1</mn>
+          </mrow>
+          <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">n</mi>
+        </msubsup>
+        <mrow xref="p1.1.m1.1.16.2.2.cmml" id="p1.1.m1.1.16.2.2">
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">m</mi>
+          <mo xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">a</mi>
+          <mo xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">t</mi>
+          <mo xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2.1b">⁢</mo>
+          <mrow xref="p1.1.m1.1.16.2.2.2.1.cmml" id="p1.1.m1.1.16.2.2.2">
+            <mo xref="p1.1.m1.1.16.2.2.2.1.1.cmml" id="p1.1.m1.1.9" stretchy="false">[</mo>
+            <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">i</mi>
+            <mo xref="p1.1.m1.1.16.2.2.2.1.1.cmml" id="p1.1.m1.1.11" stretchy="false">]</mo>
+          </mrow>
+          <mo xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2.1c">⁢</mo>
+          <mrow xref="p1.1.m1.1.16.2.2.3.1.cmml" id="p1.1.m1.1.16.2.2.3">
+            <mo xref="p1.1.m1.1.16.2.2.3.1.1.cmml" id="p1.1.m1.1.12" stretchy="false">[</mo>
+            <msup xref="p1.1.m1.1.16.2.2.3.1.cmml" id="p1.1.m1.1.16.2.2.3.2">
+              <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">i</mi>
+              <mi xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">p</mi>
+            </msup>
+            <mo xref="p1.1.m1.1.16.2.2.3.1.1.cmml" id="p1.1.m1.1.15" stretchy="false">]</mo>
+          </mrow>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">
+        <apply xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml">
+          <csymbol id="p1.1.m1.1.16.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <sum xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <in xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+            <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑝</ci>
+            <apply xref="p1.1.m1.1.2.1.9" id="p1.1.m1.1.2.1.9.cmml">
+              <times xref="p1.1.m1.1.2.1.9.1" id="p1.1.m1.1.2.1.9.1.cmml"/>
+              <ci xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml">𝑆</ci>
+              <ci xref="p1.1.m1.1.2.1.4" id="p1.1.m1.1.2.1.4.cmml">𝑦</ci>
+              <ci xref="p1.1.m1.1.2.1.5" id="p1.1.m1.1.2.1.5.cmml">𝑚</ci>
+              <ci xref="p1.1.m1.1.2.1.7" id="p1.1.m1.1.2.1.7.cmml">𝑛</ci>
+            </apply>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.16.2" id="p1.1.m1.1.16.2.cmml">
+          <apply xref="p1.1.m1.1.16.2.1" id="p1.1.m1.1.16.2.1.cmml">
+            <csymbol id="p1.1.m1.1.16.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.16.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.16.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <csymbol xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" cd="latexml">product</csymbol>
+              <apply xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+                <eq xref="p1.1.m1.1.4.1.2" id="p1.1.m1.1.4.1.2.cmml"/>
+                <ci xref="p1.1.m1.1.4.1.1" id="p1.1.m1.1.4.1.1.cmml">𝑖</ci>
+                <cn xref="p1.1.m1.1.4.1.3" id="p1.1.m1.1.4.1.3.cmml" type="integer">1</cn>
+              </apply>
+            </apply>
+            <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝑛</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.16.2.2" id="p1.1.m1.1.16.2.2.cmml">
+            <times xref="p1.1.m1.1.16.2.2.1" id="p1.1.m1.1.16.2.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑚</ci>
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑎</ci>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑡</ci>
+            <apply xref="p1.1.m1.1.16.2.2.2" id="p1.1.m1.1.16.2.2.2.1.cmml">
+              <csymbol xref="p1.1.m1.1.9" id="p1.1.m1.1.16.2.2.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+              <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑖</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.16.2.2.3" id="p1.1.m1.1.16.2.2.3.1.cmml">
+              <csymbol xref="p1.1.m1.1.12" id="p1.1.m1.1.16.2.2.3.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+              <apply xref="p1.1.m1.1.16.2.2.3" id="p1.1.m1.1.16.2.2.3.2.cmml">
+                <csymbol id="p1.1.m1.1.16.2.2.3.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑖</ci>
+                <ci xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml">𝑝</ci>
+              </apply>
+            </apply>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\sum_{{p\in Sym(n)}}\prod_{{i=1}}^{n}mat[i][i^{p}]</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note the similarity of the definition of the permanent to the definition of the determinant (see <code class="func">DeterminantMat</code> (<a shape="rect" href="chap24_mj.html#X83045F6F82C180E1"><span class="RefLink">24.4-4</span></a>)). In fact the only difference is the missing sign of the permutation. However the permanent is quite unlike the determinant, for example it is not multilinear or alternating. It has however important combinatorial properties.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Permanent( [[0,1,1,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     [1,0,1,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     [1,1,0,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     [1,1,1,0]] );  # inefficient way to compute NrDerangements([1..4])</span>
+9
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># 24 permutations fit the projective plane of order 2:</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Permanent( [[1,1,0,1,0,0,0],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     [0,1,1,0,1,0,0],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     [0,0,1,1,0,1,0],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     [0,0,0,1,1,0,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     [1,0,0,0,1,1,0],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     [0,1,0,0,0,1,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     [1,0,1,0,0,0,1]] );</span>
+24
+</pre></div><div class="chlinkprevnextbot" xmlns="http://www.w3.org/1999/xhtml"> <a shape="rect" href="chap0_mj.html">[Top of Book]</a>   <a shape="rect" href="chap0_mj.html#contents">[Contents]</a>    <a shape="rect" href="chap15_mj.html">[Previous Chapter]</a>    <a shape="rect" href="chap17_mj.html">[Next Chapter]</a>   </div><div class="chlinkbot" xmlns="http://www.w3.org/1999/xhtml"><span class="chlink1">Goto Chapter: </span><a shape="rect" href="chap0_mj.html">Top</a>  <a shape="rect" href="chap1_mj.html">1</a>  <a shape="rect" href="chap2_mj.html">2</a>  <a shape="rect" href="chap3_mj.html">3</a>  <a shape="rect" href="chap4_mj.html">4</a>  <a shape="rect" href="chap5_mj.html">5</a>  <a shape="rect" href="chap6_mj.html">6</a>  <a shape="rect" href="chap7_mj.html">7</a>  <a shape="rect" href="chap8_mj.html">8</a>  <a shape="rect" href="chap9_mj.html">9</a>  <a shape="rect" href="chap10_mj.html">10</a>  <a shape="rect" href="chap11_mj.html">11</a>  <a shape="rect" href="chap12_mj.html">12</a>  <a shape="rect" href="chap13_mj.html">13</a>  <a shape="rect" href="chap14_mj.html">14</a>  <a shape="rect" href="chap15_mj.html">15</a>  <a shape="rect" href="chap16_mj.html">16</a>  <a shape="rect" href="chap17_mj.html">17</a>  <a shape="rect" href="chap18_mj.html">18</a>  <a shape="rect" href="chap19_mj.html">19</a>  <a shape="rect" href="chap20_mj.html">20</a>  <a shape="rect" href="chap21_mj.html">21</a>  <a shape="rect" href="chap22_mj.html">22</a>  <a shape="rect" href="chap23_mj.html">23</a>  <a shape="rect" href="chap24_mj.html">24</a>  <a shape="rect" href="chap25_mj.html">25</a>  <a shape="rect" href="chap26_mj.html">26</a>  <a shape="rect" href="chap27_mj.html">27</a>  <a shape="rect" href="chap28_mj.html">28</a>  <a shape="rect" href="chap29_mj.html">29</a>  <a shape="rect" href="chap30_mj.html">30</a>  <a shape="rect" href="chap31_mj.html">31</a>  <a shape="rect" href="chap32_mj.html">32</a>  <a shape="rect" href="chap33_mj.html">33</a>  <a shape="rect" href="chap34_mj.html">34</a>  <a shape="rect" href="chap35_mj.html">35</a>  <a shape="rect" href="chap36_mj.html">36</a>  <a shape="rect" href="chap37_mj.html">37</a>  <a shape="rect" href="chap38_mj.html">38</a>  <a shape="rect" href="chap39_mj.html">39</a>  <a shape="rect" href="chap40_mj.html">40</a>  <a shape="rect" href="chap41_mj.html">41</a>  <a shape="rect" href="chap42_mj.html">42</a>  <a shape="rect" href="chap43_mj.html">43</a>  <a shape="rect" href="chap44_mj.html">44</a>  <a shape="rect" href="chap45_mj.html">45</a>  <a shape="rect" href="chap46_mj.html">46</a>  <a shape="rect" href="chap47_mj.html">47</a>  <a shape="rect" href="chap48_mj.html">48</a>  <a shape="rect" href="chap49_mj.html">49</a>  <a shape="rect" href="chap50_mj.html">50</a>  <a shape="rect" href="chap51_mj.html">51</a>  <a shape="rect" href="chap52_mj.html">52</a>  <a shape="rect" href="chap53_mj.html">53</a>  <a shape="rect" href="chap54_mj.html">54</a>  <a shape="rect" href="chap55_mj.html">55</a>  <a shape="rect" href="chap56_mj.html">56</a>  <a shape="rect" href="chap57_mj.html">57</a>  <a shape="rect" href="chap58_mj.html">58</a>  <a shape="rect" href="chap59_mj.html">59</a>  <a shape="rect" href="chap60_mj.html">60</a>  <a shape="rect" href="chap61_mj.html">61</a>  <a shape="rect" href="chap62_mj.html">62</a>  <a shape="rect" href="chap63_mj.html">63</a>  <a shape="rect" href="chap64_mj.html">64</a>  <a shape="rect" href="chap65_mj.html">65</a>  <a shape="rect" href="chap66_mj.html">66</a>  <a shape="rect" href="chap67_mj.html">67</a>  <a shape="rect" href="chap68_mj.html">68</a>  <a shape="rect" href="chap69_mj.html">69</a>  <a shape="rect" href="chap70_mj.html">70</a>  <a shape="rect" href="chap71_mj.html">71</a>  <a shape="rect" href="chap72_mj.html">72</a>  <a shape="rect" href="chap73_mj.html">73</a>  <a shape="rect" href="chap74_mj.html">74</a>  <a shape="rect" href="chap75_mj.html">75</a>  <a shape="rect" href="chap76_mj.html">76</a>  <a shape="rect" href="chap77_mj.html">77</a>  <a shape="rect" href="chap78_mj.html">78</a>  <a shape="rect" href="chap79_mj.html">79</a>  <a shape="rect" href="chap80_mj.html">80</a>  <a shape="rect" href="chap81_mj.html">81</a>  <a shape="rect" href="chap82_mj.html">82</a>  <a shape="rect" href="chap83_mj.html">83</a>  <a shape="rect" href="chap84_mj.html">84</a>  <a shape="rect" href="chap85_mj.html">85</a>  <a shape="rect" href="chap86_mj.html">86</a>  <a shape="rect" href="chap87_mj.html">87</a>  <a shape="rect" href="chapBib_mj.html">Bib</a>  <a shape="rect" href="chapInd_mj.html">Ind</a>  </div><hr xmlns="http://www.w3.org/1999/xhtml"/><p class="foot" xmlns="http://www.w3.org/1999/xhtml">generated by <a shape="rect" href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p> </body>
+    </html>

@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.4-6 OrbitLengthsDomain</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X8520E2487F7E98AF"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.4-6 <span class="Heading">OrbitLengthsDomain</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OrbitLengthsDomain</code>( <var class="Arg">G</var>, <var class="Arg">Omega</var>[, <var class="Arg">gens</var>, <var class="Arg">acts</var>][, <var class="Arg">act</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OrbitLengthsDomain</code>( <var class="Arg">xset</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes the lengths of all the orbits of <var class="Arg">G</var> on <var class="Arg">Omega</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">This operation is often faster than <code class="func">OrbitLengths</code> (<a shape="rect" href="chap41_mj.html#X8032F73078DF2DDB"><span class="RefLink">41.4-5</span></a>). The domain <var class="Arg">Omega</var> must be closed under the action of <var class="Arg">G</var>, otherwise an error can occur.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,3,2),(2,4,3));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OrbitLength(g,[1,2,3,4],OnTuples);</span>
+12
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OrbitLengths(g,Arrangements([1..4],4),OnTuples);</span>
+[ 12, 12 ]
+</pre></div> </body>
+    </html>

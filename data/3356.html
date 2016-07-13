@@ -1,0 +1,27 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.9-1 AdjointMatrix</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X786886D882795F78"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.9-1 AdjointMatrix</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AdjointMatrix</code>( <var class="Arg">B</var>, <var class="Arg">x</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is the matrix of the adjoint representation of the element <var class="Arg">x</var> w.r.t. the basis <var class="Arg">B</var>. The adjoint map is the left multiplication by <var class="Arg">x</var>. The <math id="6915183700042359198" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th column of the resulting matrix represents the image of the <math id="1935387435784555875" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th basis vector of <var class="Arg">B</var> under left multiplication by <var class="Arg">x</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;A&quot;, 1, Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AdjointMatrix( Basis( L ), Basis( L )[1] );</span>
+[ [ 0, 0, -2 ], [ 0, 0, 0 ], [ 0, 1, 0 ] ]
+</pre></div> </body>
+    </html>

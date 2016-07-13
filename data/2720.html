@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.3-2 CodegreeOfPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X8413D0EF7DEE1FFF"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.3-2 CodegreeOfPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CodegreeOfPartialPerm</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CodegreeOfPartialPermCollection</code>( <var class="Arg">coll</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A non-negative integer.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>codegree</em> of a partial permutation <var class="Arg">f</var> is the largest positive integer in its image.</p><p xmlns="http://www.w3.org/1999/xhtml">The codegree a collection of partial permutations <var class="Arg">coll</var> is the largest codegree of any partial permutation in <var class="Arg">coll</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 3, 4, 5, 8, 10 ], [ 7, 1, 4, 3, 2, 6, 5 ] );</span>
+[8,6][10,5,2,1,7](3,4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CodegreeOfPartialPerm(f);</span>
+7</pre></div> </body>
+    </html>

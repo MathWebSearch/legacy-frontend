@@ -1,0 +1,255 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X7D6495F77B8A77BD"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap54_mj.html#X7D6495F77B8A77BD">54 <span class="Heading">Partial permutations</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap54_mj.html#X87B0D6657A3F2B0E">54.1 <span class="Heading">The family and categories of partial permutations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7EECE133792B30FC">54.1-1 IsPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X8262A827790DD1CC">54.1-2 IsPartialPermCollection</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7E63D17780F64FBA">54.1-3 PartialPermFamily</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap54_mj.html#X7B9D451D7FDA1DD8">54.2 <span class="Heading">Creating partial permutations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X8538BAE77F2FB2F8">54.2-1 PartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X81188D9F83F64222">54.2-2 PartialPermOp</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X80ABBF4883C79060">54.2-3 RestrictedPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X849668DD7B0B9E3B">54.2-4 JoinOfPartialPerms</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X81E2B6977E28CD00">54.2-5 MeetOfPartialPerms</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X80EFB142817A0A9F">54.2-6 EmptyPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7E6ADC8583C31530">54.2-7 <span class="Heading">RandomPartialPerm</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap54_mj.html#X8779F0997D0FDA78">54.3 <span class="Heading">Attributes for partial permutations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X8612A4DC864E7959">54.3-1 DegreeOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X8413D0EF7DEE1FFF">54.3-2 CodegreeOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7C1ABD8A80E95B39">54.3-3 RankOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X784A14F787E041D7">54.3-4 DomainOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7CD84B107831E0FC">54.3-5 ImageOfPartialPermCollection</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X8333293F87F654FA">54.3-6 ImageListOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7F0724A07A14DCF7">54.3-7 ImageSetOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X82AAFF938623422E">54.3-8 FixedPointsOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X82FE981A87FAA2DC">54.3-9 MovedPoints</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7FAF969C84CDC742">54.3-10 NrFixedPoints</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X81F5C64E7DAD27A7">54.3-11 NrMovedPoints</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X84A49C977E1E29AA">54.3-12 SmallestMovedPoint</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7D4290A785ABC86D">54.3-13 LargestMovedPoint</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X85280F1A7B1014BA">54.3-14 SmallestImageOfMovedPoint</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7A95CD437BC1CB1A">54.3-15 LargestImageOfMovedPoint</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X873A9F717DA75CBC">54.3-16 IndexPeriodOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7C04AA377F080722">54.3-17 SmallestIdempotentPower</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X8185065E788BDD0D">54.3-18 ComponentsOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7CB51EB67FFA95E9">54.3-19 NrComponentsOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7AAAAE4082B30E18">54.3-20 ComponentRepsOfPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7A8FB86C78C49F85">54.3-21 LeftOne</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X857FC10C81507E8B">54.3-22 One</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X83B6AE4881C7253B">54.3-23 Zero</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap54_mj.html#X8585AA8B78E9CDFB">54.4 <span class="Heading">Changing the representation of a partial permutation</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X81B32CB182489ACA">54.4-1 AsPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X87EC67747B260E98">54.4-2 AsPartialPerm</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap54_mj.html#X848CD855802C6CE1">54.5 <span class="Heading">Operators and operations for partial permutations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X8382A0F8875CEB08">54.5-1 PermLeftQuoPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7C7F5EAB7E9A381D">54.5-2 PreImagePartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X797A6CC084068219">54.5-3 ComponentPartialPermInt</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X87B1ED93785257C1">54.5-4 NaturalLeqPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X81BD69307D294A1C">54.5-5 ShortLexLeqPartialPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X83560BE678ACF855">54.5-6 TrimPartialPerm</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap54_mj.html#X7849595B81D063EE">54.6 <span class="Heading">Displaying partial permutations</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap54_mj.html#X7CCC82E07A73EB55">54.7 <span class="Heading">Semigroups and inverse semigroups of partial permutations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7D161674800B50E0">54.7-1 IsPartialPermSemigroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7D7F0BAB82F0D820">54.7-2 DegreeOfPartialPermSemigroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X81D271B380995F8A">54.7-3 SymmetricInverseSemigroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7C8AEA50834060DD">54.7-4 IsSymmetricInverseSemigroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X7EA51F087CF7621F">54.7-5 NaturalPartialOrder</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap54_mj.html#X857F68DF7EDA3BE4">54.7-6 IsomorphismPartialPermMonoid</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">54 <span class="Heading">Partial permutations</span></h3><p xmlns="http://www.w3.org/1999/xhtml">This chapter describes the functions in <strong class="pkg">GAP</strong> for partial permutations.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>partial permutation</em> in <strong class="pkg">GAP</strong> is simply an injective function from any finite set of positive integers to any other finite set of positive integers. The largest point on which a partial permutation can be defined, and the largest value that the image of such a point can have, are defined by certain architecture dependent limits.</p><p xmlns="http://www.w3.org/1999/xhtml">Every inverse semigroup is isomorphic to an inverse semigroup of partial permutations and, as such, partial permutations are to inverse semigroup theory what permutations are to group theory and transformations are to semigroup theory. In this way, partial permutations are the elements of inverse partial permutation semigroups.</p><p xmlns="http://www.w3.org/1999/xhtml">A partial permutations in <strong class="pkg">GAP</strong> acts on a finite set of positive integers on the right. The image of a point <code class="code">i</code> under a partial permutation <code class="code">f</code> is expressed as <code class="code">i^f</code> in <strong class="pkg">GAP</strong>. This action is also implemented by the function <code class="func">OnPoints</code> (<a shape="rect" href="chap41_mj.html#X7FE417DD837987B4"><span class="RefLink">41.2-1</span></a>). The preimage of a point <code class="code">i</code> under the partial permutation <code class="code">f</code> can be computed using <code class="code">i/f</code> without constructing the inverse of <code class="code">f</code>. Partial permutations in <strong class="pkg">GAP</strong> are created using the operations described in Section <a shape="rect" href="chap54_mj.html#X7B9D451D7FDA1DD8"><span class="RefLink">54.2</span></a>. Partial permutations are, by default, displayed in component notation, which is described in Section <a shape="rect" href="chap54_mj.html#X7849595B81D063EE"><span class="RefLink">54.6</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">The fundamental attributes of a partial permutation are:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">Domain</strong></dt><dd><p>The <em>domain</em> of a partial permutation is just the set of positive integers where it is defined; see <code class="func">DomainOfPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X784A14F787E041D7"><span class="RefLink">54.3-4</span></a>). We will denote the domain of a partial permutation <code class="code">f</code> by dom(<code class="code">f</code>).</p>
+
+</dd><dt><strong class="Mark">Degree</strong></dt><dd><p>The <em>degree</em> of a partial permutation <code class="code">f</code> is just the largest positive integer where <code class="code">f</code> is defined. In other words, the degree of <code class="code">f</code> is the largest element in the domain of <code class="code">f</code>; see <code class="func">DegreeOfPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X8612A4DC864E7959"><span class="RefLink">54.3-1</span></a>).</p>
+
+</dd><dt><strong class="Mark">Image list</strong></dt><dd><p>The <em>image list</em> of a partial permutation <code class="code">f</code> is the list <code class="code">[i_1^f, i_2^f, .. , i_n^f]</code> where the domain of <code class="code">f</code> is <code class="code">[i_1, i_2, .., i_n]</code> see <code class="func">ImageListOfPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X8333293F87F654FA"><span class="RefLink">54.3-6</span></a>). For example, the partial perm sending <code class="code">1</code> to <code class="code">5</code> and <code class="code">2</code> to <code class="code">4</code> has image list <code class="code">[ 5, 4 ]</code>.</p>
+
+</dd><dt><strong class="Mark">Image set</strong></dt><dd><p>The <em>image set</em> of a partial permutation <code class="code">f</code> is just the set of points in the image list (i.e. the image list after it has been sorted into increasing order); see <code class="func">ImageSetOfPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X7F0724A07A14DCF7"><span class="RefLink">54.3-7</span></a>). We will denote the image set of a partial permutation <code class="code">f</code> by im(<code class="code">f</code>).</p>
+
+</dd><dt><strong class="Mark">Codegree</strong></dt><dd><p>The <em>codegree</em> of a partial permutation <code class="code">f</code> is just the largest positive integer of the form <code class="code">i^f</code> for any <code class="code">i</code> in the domain of <code class="code">f</code>. In other words, the codegree of <code class="code">f</code> is the largest element in the image of <code class="code">f</code>; see <code class="func">CodegreeOfPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X8413D0EF7DEE1FFF"><span class="RefLink">54.3-2</span></a>).</p>
+
+</dd><dt><strong class="Mark">Rank</strong></dt><dd><p>The <em>rank</em> of a partial permutation <code class="code">f</code> is the size of its domain, or equivalently the size of its image set or image list; see <code class="func">RankOfPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X7C1ABD8A80E95B39"><span class="RefLink">54.3-3</span></a>).</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">A <em>functional digraph</em> is a directed graph where every vertex has out-degree <code class="code">1</code>. A partial permutation <var class="Arg">f</var> can be thought of as a functional digraph with vertices <code class="code">[1..DegreeOfPartialPerm(f)]</code> and edges from <code class="code">i</code> to <code class="code">i^f</code> for every <code class="code">i</code>. A <em>component</em> of a partial permutation is defined as a component of the corresponding functional digraph. More specifically, <code class="code">i</code> and <code class="code">j</code> are in the same component if and only if there are <math id="4365157345920802369" display="inline" alttext="i=v_{0},v_{1},\ldots,v_{n}=j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15">
+      <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+        <mrow xref="p1.1.m1.1.15.2.1.1.cmml" id="p1.1.m1.1.15.2.1">
+          <msub xref="p1.1.m1.1.15.2.1.1.cmml" id="p1.1.m1.1.15.2.1.2">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">v</mi>
+            <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">0</mn>
+          </msub>
+          <mo id="p1.1.m1.1.5">,</mo>
+          <msub xref="p1.1.m1.1.15.2.1.1.cmml" id="p1.1.m1.1.15.2.1.3">
+            <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">v</mi>
+            <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">1</mn>
+          </msub>
+          <mo id="p1.1.m1.1.8">,</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">…</mi>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.15.1a.cmml" id="p1.1.m1.1.10">,</mo>
+      <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.3">
+        <msub xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.3.1">
+          <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">v</mi>
+          <mi xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">n</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">=</mo>
+        <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">j</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.1.cmml">
+        <csymbol xref="p1.1.m1.1.10" id="p1.1.m1.1.15.1a.cmml" cd="ambiguous">formulae-sequence</csymbol>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.2.cmml">
+          <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+          <list xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.1.cmml">
+            <apply xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.15.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑣</ci>
+              <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">0</cn>
+            </apply>
+            <apply xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.3.cmml">
+              <csymbol id="p1.1.m1.1.15.2.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑣</ci>
+              <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">1</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">…</ci>
+          </list>
+        </apply>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.3.cmml">
+          <eq xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+          <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.3.1.cmml">
+            <csymbol id="p1.1.m1.1.15.3.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑣</ci>
+            <ci xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">𝑛</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑗</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i=v_{0},v_{1},\ldots,v_{n}=j</annotation>
+  </semantics>
+</math> such that either <math id="2063023094118275203" display="inline" alttext="v_{k+1}=v_{k}^{f}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <msub xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">k</mi>
+          <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">+</mo>
+          <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">1</mn>
+        </mrow>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <msubsup xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">v</mi>
+        <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">k</mi>
+        <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">f</mi>
+      </msubsup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <csymbol id="p1.1.m1.1.7.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑣</ci>
+          <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <plus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+            <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑘</ci>
+            <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.7.2.2.cmml">
+            <csymbol id="p1.1.m1.1.7.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑣</ci>
+            <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝑘</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">𝑓</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">v_{k+1}=v_{k}^{f}</annotation>
+  </semantics>
+</math> or <math id="-6093241459461522069" display="inline" alttext="v_{k}=v_{k+1}^{f}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <msub xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">k</mi>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <msubsup xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">v</mi>
+        <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+          <mi xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">k</mi>
+          <mo xref="p1.1.m1.1.5.1.2.cmml" id="p1.1.m1.1.5.1.2">+</mo>
+          <mn xref="p1.1.m1.1.5.1.3.cmml" id="p1.1.m1.1.5.1.3">1</mn>
+        </mrow>
+        <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">f</mi>
+      </msubsup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <csymbol id="p1.1.m1.1.7.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑣</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑘</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.7.2.2.cmml">
+            <csymbol id="p1.1.m1.1.7.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑣</ci>
+            <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+              <plus xref="p1.1.m1.1.5.1.2" id="p1.1.m1.1.5.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml">𝑘</ci>
+              <cn xref="p1.1.m1.1.5.1.3" id="p1.1.m1.1.5.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">𝑓</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">v_{k}=v_{k+1}^{f}</annotation>
+  </semantics>
+</math> for all <code class="code">k</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="code">S</code> is a semigroup and <code class="code">s</code> is an element of <code class="code">S</code>, then an element <code class="code">t</code> in <code class="code">S</code> is a <em>semigroup inverse</em> for <code class="code">s</code> if <code class="code">s*t*s=s</code> and <code class="code">t*s*t=t</code>; see, for example, <code class="func">InverseOfTransformation</code> (<a shape="rect" href="chap53_mj.html#X860306EB7FAAD2D4"><span class="RefLink">53.5-13</span></a>). A semigroup in which every element has a unique semigroup inverse is called an <em>inverse semigroup</em>.</p><p xmlns="http://www.w3.org/1999/xhtml">Every partial permutation belongs to a symmetric inverse monoid; see <code class="func">SymmetricInverseSemigroup</code> (<a shape="rect" href="chap54_mj.html#X81D271B380995F8A"><span class="RefLink">54.7-3</span></a>). Inverse semigroups of partial permutations are hence inverse subsemigroups of the symmetric inverse monoids.</p><p xmlns="http://www.w3.org/1999/xhtml">The inverse <code class="code">f^-1</code> of a partial permutation <code class="code">f</code> is simply the partial permutation that maps <code class="code">i^f</code> to <code class="code">i</code> for all <code class="code">i</code> in the image of <code class="code">f</code>. It follows that the domain of <code class="code">f^-1</code> equals the image of <code class="code">f</code> and that the image of <code class="code">f^-1</code> equals the domain of <code class="code">f</code>. The inverse <code class="code">f^-1</code> is the unique partial permutation with the property that <code class="code">f*f^-1*f=f</code> and <code class="code">f^-1*f*f^-1=f^-1</code>. In other words, <code class="code">f^-1</code> is the unique semigroup inverse of <code class="code">f</code> in the symmetric inverse monoid.</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="code">f</code> and <code class="code">g</code> are partial permutations, then the domain and image of the product are:</p><p class="center" xmlns="http://www.w3.org/1999/xhtml">\[
+    \textrm{dom}(fg)=(\textrm{im}(f)\cap \textrm{dom}(g))f^{-1}\textrm{ and }
+    \textrm{im}(fg)=(\textrm{im}(f)\cap \textrm{dom}(g))g
+  \]</p><p xmlns="http://www.w3.org/1999/xhtml">A partial permutation is an idempotent if and only if it is the identity function on its domain. The products <code class="code">f*f^-1</code> and <code class="code">f^-1*f</code> are just the identity functions on the domain and image of <code class="code">f</code>, respectively. It follows that <code class="code">f*f^-1</code> is a left identity for <code class="code">f</code> and <code class="code">f^-1*f</code> is a right identity. These products will be referred to here as the <em>left one</em> and <em>right one</em> of the partial permutation <code class="code">f</code>; see <code class="func">LeftOne</code> (<a shape="rect" href="chap54_mj.html#X7A8FB86C78C49F85"><span class="RefLink">54.3-21</span></a>). The <em>one</em> of a partial permutation is just the identity on the union of its domain and its image, and the <em>zero</em> of a partial permutation is just the empty partial permutation; see <code class="func">One</code> (<a shape="rect" href="chap54_mj.html#X857FC10C81507E8B"><span class="RefLink">54.3-22</span></a>) and <code class="func">Zero</code> (<a shape="rect" href="chap54_mj.html#X83B6AE4881C7253B"><span class="RefLink">54.3-23</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="code">S</code> is an arbitrary inverse semigroup, the <em>natural partial order</em> on <code class="code">S</code> is defined as follows: for elements <code class="code">x</code> and <code class="code">y</code> of <code class="code">S</code> we say <code class="code">x</code><math id="-785774428902194959" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <leq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\leq</annotation>
+  </semantics>
+</math><code class="code">y</code> if there exists an idempotent element <code class="code">e</code> in <code class="code">S</code> such that <code class="code">x=ey</code>. In the context of the symmetric inverse monoid, a partial permutation <code class="code">f</code> is less than or equal to a partial permutation <code class="code">g</code> in the natural partial order if and only if <code class="code">f</code> is a restriction of <code class="code">g</code>. The natural partial order is a meet semilattice, in other words, every pair of elements has a greatest lower bound; see <code class="func">MeetOfPartialPerms</code> (<a shape="rect" href="chap54_mj.html#X81E2B6977E28CD00"><span class="RefLink">54.2-5</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Note that unlike permutations, partial permutations do not fix unspecified points but are simply undefined on such points; see Chapter <a shape="rect" href="chap42_mj.html#X80F808307A2D5AB8"><span class="RefLink">42</span></a>. Similar to permutations, and unlike transformations, it is possible to multiply any two partial permutations in <strong class="pkg">GAP</strong>.</p><p xmlns="http://www.w3.org/1999/xhtml">Internally, <strong class="pkg">GAP</strong> stores a partial permutation <code class="code">f</code> as a list consisting of the codegree of <code class="code">f</code> and the images <code class="code">i^f</code> of the points <code class="code">i</code> that are less than or equal to the degree of <code class="code">f</code>; the value <code class="code">0</code> is stored where <code class="code">i^f</code> is undefined. The domain and image set of <code class="code">f</code> are also stored after either of these values is computed. When the codegree of a partial permutation <code class="code">f</code> is less than 65536, the codegree and images <code class="code">i^f</code> are stored as 16-bit integers, the domain and image set are subobjects of <code class="code">f</code> which are immutable plain lists of <strong class="pkg">GAP</strong> integers. When the codegree of <code class="code">f</code> is greater than or equal to 65536, the codegree and images are stored as 32-bit integers; the domain and image set are stored in the same way as before. A partial permutation belongs to <code class="code">IsPPerm2Rep</code> if it is stored using 16-bit integers and to <code class="code">IsPPerm4Rep</code> otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml">In the names of the <strong class="pkg">GAP</strong> functions that deal with partial permutations, the word &quot;Permutation&quot; is usually abbreviated to &quot;Perm&quot;, to save typing. For example, the category test function for partial permutations is <code class="func">IsPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X7EECE133792B30FC"><span class="RefLink">54.1-1</span></a>).</p> </body>
+    </html>

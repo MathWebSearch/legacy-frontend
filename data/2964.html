@@ -1,0 +1,72 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.4-7 FactorsInt</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X82C989DB84744B36"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.4-7 FactorsInt</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FactorsInt</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FactorsInt</code>( <var class="Arg">n:</var> <var class="Arg">RhoTrials</var> <var class="Arg">:=</var> <var class="Arg">trials</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">FactorsInt</code> returns a list of factors of a given integer <var class="Arg">n</var> such that <code class="code">Product( FactorsInt( <var class="Arg">n</var> ) ) = <var class="Arg">n</var></code>. If <math id="7587818150645824315" display="inline" alttext="|n|\leq 1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mrow xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.6.1">
+        <mo xref="p1.1.m1.1.6.1.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">|</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+        <mo xref="p1.1.m1.1.6.1.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">|</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">≤</mo>
+      <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <leq xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.1.cmml">
+          <abs xref="p1.1.m1.1.1" id="p1.1.m1.1.6.1.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">|n|\leq 1</annotation>
+  </semantics>
+</math> the list <code class="code">[<var class="Arg">n</var>]</code> is returned. Otherwise the result contains probable primes, sorted by absolute value. The entries will all be positive except for the first one in case of a negative <var class="Arg">n</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">See <code class="func">PrimeDivisors</code> (<a shape="rect" href="chap14_mj.html#X80E7A5D381C64CC9"><span class="RefLink">14.4-8</span></a>) for a function that returns a set of (probable) primes dividing <var class="Arg">n</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that <code class="func">FactorsInt</code> uses a probable-primality test (see <code class="func">IsPrimeInt</code> (<a shape="rect" href="chap14_mj.html#X78FDA4437EDCA70C"><span class="RefLink">14.4-2</span></a>)). Thus <code class="func">FactorsInt</code> might return a list which contains composite integers. In such a case you will get a warning about the use of a probable prime. You can switch off these warnings by <code class="code">SetInfoLevel( InfoPrimeInt, 0 );</code> (also see <code class="func">SetInfoLevel</code> (<a shape="rect" href="chap7_mj.html#X7A43B9E68765EE9E"><span class="RefLink">7.4-3</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">The time taken by <code class="func">FactorsInt</code> is approximately proportional to the square root of the second largest prime factor of <var class="Arg">n</var>, which is the last one that <code class="func">FactorsInt</code> has to find, since the largest factor is simply what remains when all others have been removed. Thus the time is roughly bounded by the fourth root of <var class="Arg">n</var>. <code class="func">FactorsInt</code> is guaranteed to find all factors less than <math id="-3065991991899224656" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
+      <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">6</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">10</cn>
+        <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">6</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">10^{6}</annotation>
+  </semantics>
+</math> and will find most factors less than <math id="2583879654224382381" display="inline" alttext="10^{10}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
+      <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">10</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">10</cn>
+        <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">10</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">10^{10}</annotation>
+  </semantics>
+</math>. If <var class="Arg">n</var> contains multiple factors larger than that <code class="func">FactorsInt</code> may not be able to factor <var class="Arg">n</var> and will then signal an error.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">FactorsInt</code> is used in a method for the general operation <code class="func">Factors</code> (<a shape="rect" href="chap56_mj.html#X82D6EDC685D12AE2"><span class="RefLink">56.5-9</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">In the second form, <code class="func">FactorsInt</code> calls <code class="code">FactorsRho</code> with a limit of <var class="Arg">trials</var> on the number of trials it performs. The default is 8192. Note that Pollard's Rho is the fastest method for finding prime factors with roughly 5-10 decimal digits, but becomes more and more inferior to other factorization techniques like e.g. the Elliptic Curves Method (ECM) the bigger the prime factors are. Therefore instead of performing a huge number of Rho <var class="Arg">trials</var>, it is usually more advisable to install the <strong class="pkg">FactInt</strong> package and then simply to use the operation <code class="func">Factors</code> (<a shape="rect" href="chap56_mj.html#X82D6EDC685D12AE2"><span class="RefLink">56.5-9</span></a>). The factorization of the 8-th Fermat number by Pollard's Rho below takes already a while.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FactorsInt( -Factorial(6) );</span>
+[ -2, 2, 2, 2, 3, 3, 5 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Set( FactorsInt( Factorial(13)/11 ) );</span>
+[ 2, 3, 5, 7, 13 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FactorsInt( 2^63 - 1 );</span>
+[ 7, 7, 73, 127, 337, 92737, 649657 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FactorsInt( 10^42 + 1 );</span>
+[ 29, 101, 281, 9901, 226549, 121499449, 4458192223320340849 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FactorsInt(2^256+1:RhoTrials:=100000000);</span>
+[ 1238926361552897, 
+  93461639715357977769163558199606896584051237541638188580280321 ]
+</pre></div> </body>
+    </html>

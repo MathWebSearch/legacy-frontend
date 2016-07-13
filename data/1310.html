@@ -1,0 +1,27 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.4-3 RelatorsOfFpGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X87BA180287CD1F71"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">47.4-3 RelatorsOfFpGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RelatorsOfFpGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the relators of the finitely presented group <var class="Arg">G</var> as words in the free generators provided by the <code class="func">FreeGeneratorsOfFpGroup</code> (<a shape="rect" href="chap47_mj.html#X79C77C5184CA02B6"><span class="RefLink">47.4-2</span></a>) value of <var class="Arg">G</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := FreeGroup( &quot;a&quot;, &quot;b&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := f / [ f.1^5, f.2^2, f.1^f.2*f.1 ];</span>
+&lt;fp group on the generators [ a, b ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( g );</span>
+10
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeGroupOfFpGroup( g ) = f;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeGeneratorsOfFpGroup( g );</span>
+[ a, b ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RelatorsOfFpGroup( g );</span>
+[ a^5, b^2, b^-1*a*b*a ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that these attributes are only available for the <em>full</em> finitely presented group. It is possible (for example by using <code class="func">Subgroup</code> (<a shape="rect" href="chap39_mj.html#X7C82AA387A42DCA0"><span class="RefLink">39.3-1</span></a>)) to construct a subgroup of index <math id="3061951929577719816" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math> which is not identical to the whole group. The latter one can be obtained in this situation via <code class="func">Parent</code> (<a shape="rect" href="chap31_mj.html#X7BC856CC7F116BB0"><span class="RefLink">31.7-1</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Elements of a finitely presented group are not words, but are represented using a word from the free group as representative. The following two commands obtain this representative, respectively create an element in the finitely presented group.</p> </body>
+    </html>

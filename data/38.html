@@ -1,0 +1,43 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.10-8 OperationAlgebraHomomorphism</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X8705A9C68102FEA3"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.10-8 OperationAlgebraHomomorphism</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OperationAlgebraHomomorphism</code>( <var class="Arg">A</var>, <var class="Arg">B</var>[, <var class="Arg">opr</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OperationAlgebraHomomorphism</code>( <var class="Arg">A</var>, <var class="Arg">V</var>[, <var class="Arg">opr</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">OperationAlgebraHomomorphism</code> returns an algebra homomorphism from the <math id="4198891633926448747" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>-algebra <var class="Arg">A</var> into a matrix algebra over <math id="-2732545470847646961" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math> that describes the <math id="5080930881849350007" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>-linear action of <var class="Arg">A</var> on the basis <var class="Arg">B</var> of a free left module respectively on the free left module <var class="Arg">V</var> (in which case some basis of <var class="Arg">V</var> is chosen), via the operation <var class="Arg">opr</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The homomorphism need not be surjective. The default value for <var class="Arg">opr</var> is <code class="func">OnRight</code> (<a shape="rect" href="chap41_mj.html#X7960924D84B5B18F"><span class="RefLink">41.2-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">A</var> is an algebra-with-one then the operation homomorphism is an algebra-with-one homomorphism because the identity of <var class="Arg">A</var> must act as the identity.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:= NullMat( 2, 2 );; m1[1][1]:= 1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2:= NullMat( 2, 2 );; m2[2][2]:= 1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= AlgebraByGenerators( Rationals, [ m1, m2 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= FullRowSpace( Rationals, 2 );</span>
+( Rationals^2 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=OperationAlgebraHomomorphism( B, Basis( V ), OnRight );</span>
+&lt;op. hom. Algebra( Rationals, 
+[ [ [ 1, 0 ], [ 0, 0 ] ], [ [ 0, 0 ], [ 0, 1 ] ] 
+ ] ) -&gt; matrices of dim. 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Image( f, m1 );</span>
+[ [ 1, 0 ], [ 0, 0 ] ]
+</pre></div> </body>
+    </html>

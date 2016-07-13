@@ -1,0 +1,185 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 32: Mappings-&gt;32.11-1 RespectsScalarMultiplication</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap32.html#X87842ED97FA19973"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">32.11-1 RespectsScalarMultiplication</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RespectsScalarMultiplication</code>( <var class="Arg">mapp</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">mapp</var> be a general mapping, with underlying relation <math id="4159783618459561280" display="inline" alttext="F\subseteq S\times R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">⊆</mo>
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">S</mi>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">×</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">R</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <subset xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <times xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑆</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑅</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F\subseteq S\times R</annotation>
+  </semantics>
+</math>, where <math id="-5174139572203659804" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> and <math id="5203821000517471594" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> are the source and the range of <var class="Arg">mapp</var>, respectively. Then <code class="func">RespectsScalarMultiplication</code> returns <code class="keyw">true</code> if <math id="3820056618701301140" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> and <math id="-7397485258115844423" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> are left modules with the left acting domain <math id="2241520320394399088" display="inline" alttext="D" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">D</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐷</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">D</annotation>
+  </semantics>
+</math> of <math id="7971089771928837260" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> contained in the left acting domain of <math id="-7757061121469250213" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> and such that <math id="-2760116595384542350" display="inline" alttext="(s,r)\in F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1">
+        <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">s</mi>
+        <mo id="p1.1.m1.1.3">,</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">r</mi>
+        <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">∈</mo>
+      <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">F</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <in xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <interval xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.1.cmml" closure="open">
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑠</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑟</ci>
+        </interval>
+        <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝐹</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(s,r)\in F</annotation>
+  </semantics>
+</math> implies <math id="-4518907749847005974" display="inline" alttext="(c*s,c*r)\in F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
+      <mrow xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1">
+        <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+        <mrow xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1.2">
+          <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">c</mi>
+          <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">*</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">s</mi>
+        </mrow>
+        <mo id="p1.1.m1.1.5">,</mo>
+        <mrow xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1.3">
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">c</mi>
+          <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">*</mo>
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">r</mi>
+        </mrow>
+        <mo id="p1.1.m1.1.9" stretchy="false">)</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">∈</mo>
+      <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">F</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">
+        <in xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml"/>
+        <interval xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.1.cmml" closure="open">
+          <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.2.cmml">
+            <times xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+            <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑐</ci>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑠</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.3.cmml">
+            <times xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑐</ci>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑟</ci>
+          </apply>
+        </interval>
+        <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝐹</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(c*s,c*r)\in F</annotation>
+  </semantics>
+</math> for all <math id="7870253269519284626" display="inline" alttext="c\in D" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">D</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐷</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">c\in D</annotation>
+  </semantics>
+</math>, and <code class="keyw">false</code> otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">mapp</var> is single-valued then <code class="func">RespectsScalarMultiplication</code> returns <code class="keyw">true</code> if and only if the equation <code class="code"><var class="Arg">c</var> * <var class="Arg">s</var>^<var class="Arg">mapp</var> = (<var class="Arg">c</var> * <var class="Arg">s</var>)^<var class="Arg">mapp</var></code> holds for all <var class="Arg">c</var> in <math id="8739618808210576213" display="inline" alttext="D" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">D</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐷</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">D</annotation>
+  </semantics>
+</math> and <var class="Arg">s</var> in <math id="4111826148909529986" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math>.</p> </body>
+    </html>

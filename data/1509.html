@@ -1,0 +1,28 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 29: Records-&gt;29.5 Comparisons of Records</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap29.html#X83A7E6607B1D63BC"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">29.5 <span class="Heading">Comparisons of Records</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">rec1</var> = <var class="Arg">rec2</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">rec1</var> &lt;&gt; <var class="Arg">rec2</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">Two records are considered equal, if for each component of one record the other record has a component of the same name with an equal value and vice versa.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( a := 1, b := 2 ) = rec( b := 2, a := 1 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( a := 1, b := 2 ) = rec( a := 2, b := 1 );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( a := 1 ) = rec( a := 1, b := 2 );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( a := 1 ) = 1;</span>
+false
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">rec1</var> &lt; <var class="Arg">rec2</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">rec1</var> &lt;= <var class="Arg">rec2</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">To compare records we imagine that the components of both records are sorted according to their names (the sorting depends on the <strong class="pkg">GAP</strong> session, more precisely the order in which component names were first used). Then the records are compared lexicographically with unbound elements considered smaller than anything else. Precisely one record <var class="Arg">rec1</var> is considered less than another record <var class="Arg">rec2</var> if <var class="Arg">rec2</var> has a component with name <var class="Arg">name2</var> and either <var class="Arg">rec1</var> has no component with this name or <code class="code"><var class="Arg">rec1</var>.<var class="Arg">name2</var> &lt; <var class="Arg">rec2</var>.<var class="Arg">name2</var></code> and for each component of <var class="Arg">rec1</var> with name <code class="code"><var class="Arg">name1</var> &lt; <var class="Arg">name2</var></code> <var class="Arg">rec2</var> has a component with this name and <code class="code"><var class="Arg">rec1</var>.<var class="Arg">name1</var> = <var class="Arg">rec2</var>.<var class="Arg">name1</var></code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( axy := 1, bxy := 2 ) &lt; rec( bxy := 2, axy := 1 ); # are equal</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( axy := 1 ) &lt; rec( axy := 1, bxy := 2 ); # unbound is &lt; 2</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># in new session the .axy components are compared first</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( axy := 1, bxy := 2 ) &lt; rec( axy := 2, bxy := 0 ); # 1 &lt; 2</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( axy := 1 ) &lt; rec( axy := 0, bxy := 2 ); # 0 &lt; 1</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( bxy := 1 ) &lt; rec( bxy := 0, axy := 2 ); # unbound is &lt; 2</span>
+true
+</pre></div> </body>
+    </html>

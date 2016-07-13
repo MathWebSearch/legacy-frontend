@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 51: Semigroups and Monoids-&gt;51.9-6 IsReesMatrixSubsemigroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap51.html#X7F03BE707AC7F8A0"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">51.9-6 IsReesMatrixSubsemigroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsReesMatrixSubsemigroup</code>( <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( synonym )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsReesZeroMatrixSubsemigroup</code>( <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( synonym )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Every semigroup consisting of elements of a Rees matrix semigroup satisfies the property <code class="func">IsReesMatrixSubsemigroup</code> and every semigroup of Rees 0-matrix semigroup elements satisfies <code class="func">IsReesZeroMatrixSubsemigroup</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that a subsemigroup of a Rees matrix semigroup is not necessarily a Rees matrix semigroup.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G:=DihedralGroup(32);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=List([1..2], x-&gt; List([1..10], x-&gt; Random(G)));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R:=ReesMatrixSemigroup(G, mat);</span>
+&lt;Rees matrix semigroup 10x2 over &lt;pc group of size 32 with 
+ 5 generators&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=Semigroup(GeneratorsOfSemigroup(R));      </span>
+&lt;subsemigroup of 10x2 Rees matrix semigroup with 14 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsReesMatrixSubsemigroup(S); </span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=Semigroup(GeneratorsOfSemigroup(R)[1]);</span>
+&lt;subsemigroup of 10x2 Rees matrix semigroup with 1 generator&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsReesMatrixSubsemigroup(S);</span>
+true</pre></div> </body>
+    </html>

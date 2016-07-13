@@ -1,0 +1,33 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.2-8 Tuples</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X86A3CA0F7CC8C320"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.2-8 Tuples</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Tuples</code>( <var class="Arg">set</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the set of all ordered tuples of length <var class="Arg">k</var> of the set <var class="Arg">set</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">An <em>ordered tuple</em> of length <var class="Arg">k</var> of <var class="Arg">set</var> is an ordered selection with repetition and is represented by a list of length <var class="Arg">k</var> containing elements of <var class="Arg">set</var>. There are <math id="6586409248472968844" display="inline" alttext="|\textit{set}|^{\textit{k}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mrow xref="p1.1.m1.1.5.2.1.cmml" id="p1.1.m1.1.5.2">
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">|</mo>
+        <mtext xref="p1.1.m1.1.2.1a.cmml" id="p1.1.m1.1.2.1">𝑠𝑒𝑡</mtext>
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">|</mo>
+      </mrow>
+      <mtext xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">𝑘</mtext>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <csymbol id="p1.1.m1.1.5.1.cmml" cd="ambiguous">superscript</csymbol>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.1.cmml">
+          <abs xref="p1.1.m1.1.1" id="p1.1.m1.1.5.2.1.1.cmml"/>
+          <mtext xref="p1.1.m1.1.5.2" id="p1.1.m1.1.2.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">set</span>
+          </mtext>
+        </apply>
+        <mtext xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">|\textit{set}|^{\textit{k}}</annotation>
+  </semantics>
+</math> such ordered tuples.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the fact that <code class="func">Tuples</code> returns a set implies that the last index runs fastest. That means the first tuple contains the smallest element from <var class="Arg">set</var> <var class="Arg">k</var> times, the second tuple contains the smallest element of <var class="Arg">set</var> at all positions except at the last positions, where it contains the second smallest element from <var class="Arg">set</var> and so on.</p> </body>
+    </html>

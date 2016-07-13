@@ -1,0 +1,165 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.20-4 CharacterTableIsoclinic</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X85BE46F784B83938"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.20-4 CharacterTableIsoclinic</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CharacterTableIsoclinic</code>( <var class="Arg">tbl</var>[, <var class="Arg">classes</var>][, <var class="Arg">centre</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SourceOfIsoclinicTable</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">tbl</var> is the (ordinary or modular) character table of a group with the structure <math id="-6102717466203551824" display="inline" alttext="2.G.2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+      <mo xref="p1.1.m1.1.6.1a.cmml" id="p1.1.m1.1.2">.</mo>
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">G</mi>
+        <mo xref="p1.1.m1.1.6.2.1.cmml" id="p1.1.m1.1.6.2.1">⁢</mo>
+        <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">.2</mn>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml">
+        <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.6.1a.cmml" cd="ambiguous">formulae-sequence</csymbol>
+        <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+        <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.2.cmml">
+          <times xref="p1.1.m1.1.6.2.1" id="p1.1.m1.1.6.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐺</ci>
+          <cn xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" type="float">.2</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2.G.2</annotation>
+  </semantics>
+</math> with a central subgroup <math id="-8754397663345986384" display="inline" alttext="Z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑍</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z</annotation>
+  </semantics>
+</math> of order <math id="-7160031233577409431" display="inline" alttext="2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2</annotation>
+  </semantics>
+</math> or <math id="-4354993425891003919" display="inline" alttext="4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">4</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">4</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">4</annotation>
+  </semantics>
+</math> and a normal subgroup <math id="-3098464006504983034" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> of index <math id="6579137996482364023" display="inline" alttext="2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2</annotation>
+  </semantics>
+</math> that contains <math id="-8242773321112656874" display="inline" alttext="Z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑍</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z</annotation>
+  </semantics>
+</math> then <code class="func">CharacterTableIsoclinic</code> returns the table of the isoclinic group in the sense of the <strong class="pkg">Atlas</strong> of Finite Groups <a shape="rect" href="chapBib_mj.html#biBCCN85">[CCNPW85, Chapter 6, Section 7]</a>. If <math id="1608149920889633474" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> is not uniquely determined then the positions of the classes forming <math id="6028086654369098980" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> must be entered as list <var class="Arg">classes</var>. If <math id="-64774932873668041" display="inline" alttext="Z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑍</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z</annotation>
+  </semantics>
+</math> is not unique inside <math id="-8954480256909820730" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
+  </semantics>
+</math> then the positions of the classes in <math id="7228345970899168388" display="inline" alttext="Z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑍</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z</annotation>
+  </semantics>
+</math> must be entered as list <var class="Arg">centre</var>; If <math id="-6594050719902886799" display="inline" alttext="Z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑍</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z</annotation>
+  </semantics>
+</math> has order <math id="-759792187542998750" display="inline" alttext="2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2</annotation>
+  </semantics>
+</math> then <var class="Arg">centre</var> can be also the position of the involution in <math id="5400034597278155737" display="inline" alttext="Z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑍</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that also if <var class="Arg">tbl</var> is a Brauer table then <var class="Arg">classes</var> and <var class="Arg">centre</var> denote class numbers w.r.t. the <em>ordinary</em> character table.</p><p xmlns="http://www.w3.org/1999/xhtml">For an ordinary character table that has been constructed via <code class="func">CharacterTableIsoclinic</code>, the value of <code class="func">SourceOfIsoclinicTable</code> is the list of three arguments in the <code class="func">CharacterTableIsoclinic</code> call.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that there is no default method for <em>computing</em> the value of <code class="func">SourceOfIsoclinicTable</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d8:= CharacterTable( &quot;Dihedral&quot;, 8 );</span>
+CharacterTable( &quot;Dihedral(8)&quot; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">nsg:= ClassPositionsOfNormalSubgroups( d8 );</span>
+[ [ 1 ], [ 1, 3 ], [ 1 .. 3 ], [ 1, 3, 4 ], [ 1, 3 .. 5 ], [ 1 .. 5 ] 
+ ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">iso:= CharacterTableIsoclinic( d8, nsg[3] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( iso );</span>
+Isoclinic(Dihedral(8))
+
+     2  3  2  3  2  2
+
+       1a 4a 2a 4b 4c
+    2P 1a 2a 1a 2a 2a
+
+X.1     1  1  1  1  1
+X.2     1  1  1 -1 -1
+X.3     1 -1  1  1 -1
+X.4     1 -1  1 -1  1
+X.5     2  . -2  .  .
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SourceOfIsoclinicTable( iso );</span>
+[ CharacterTable( &quot;Dihedral(8)&quot; ), [ 1, 2, 3 ], [ 3 ], 3 ]
+</pre></div> </body>
+    </html>

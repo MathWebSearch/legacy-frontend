@@ -1,0 +1,9 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 76: Using GAP Packages-&gt;76.3-10 Kernel modules in GAP packages</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap76.html#X79EF67107E40A130"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">76.3-10 <span class="Heading">Kernel modules in <strong class="pkg">GAP</strong> packages</span></h5><p xmlns="http://www.w3.org/1999/xhtml">If the package has a kernel module, then it can be compiled using the <strong class="pkg">gac</strong> script. A kernel module is implemented in C and follows certain conventions to comply with the <strong class="pkg">GAP</strong> kernel interface, which we plan to document later. In the meantime, we advice to get in touch with <strong class="pkg">GAP</strong> developers if you plan to develop such a package.</p><p xmlns="http://www.w3.org/1999/xhtml">To use the <strong class="pkg">gac</strong> script to produce dynamically loadable modules, call it with the <code class="code">-d</code> option, for example:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+$ gap4/bin/i386-ibm-linux-gcc2/gac -d test.c
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">This will produce a file <code class="file">test.so</code>, which then can be loaded into <strong class="pkg">GAP</strong> with <code class="func">LoadDynamicModule</code> (<a shape="rect" href="chap76_mj.html#X7C99782886B18C77"><span class="RefLink">76.3-11</span></a>).</p> </body>
+    </html>

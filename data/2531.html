@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.1-3 SolutionNullspaceIntMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X82CECB6E7D515CD2"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.1-3 SolutionNullspaceIntMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SolutionNullspaceIntMat</code>( <var class="Arg">mat</var>, <var class="Arg">vec</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This function returns a list of length two, its first entry being the result of a call to <code class="func">SolutionIntMat</code> (<a shape="rect" href="chap25_mj.html#X7D749F317DBD1E69"><span class="RefLink">25.1-2</span></a>) with same arguments, the second the result of <code class="func">NullspaceIntMat</code> (<a shape="rect" href="chap25_mj.html#X792315717F5B0294"><span class="RefLink">25.1-1</span></a>) applied to the matrix <var class="Arg">mat</var>. The calculation is performed faster than if two separate calls would be used.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=[[1,2,7],[4,5,6],[7,8,9],[10,11,19],[5,7,12]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SolutionNullspaceIntMat(mat,[95,115,182]);</span>
+[ [ 2285, -5854, 4888, -1299, 0 ], 
+  [ [ 1, 18, -9, 2, -6 ], [ 0, 24, -13, 3, -7 ] ] ]
+</pre></div> </body>
+    </html>

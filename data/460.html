@@ -1,0 +1,74 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.21-5 ClassPermutation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X8099FEDC7DE03AEE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.21-5 ClassPermutation</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ClassPermutation</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is a permutation <math id="-1411718523290149692" display="inline" alttext="\pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">π</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜋</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\pi</annotation>
+  </semantics>
+</math> of classes of the character table <var class="Arg">tbl</var>. If it is stored then class fusions into <var class="Arg">tbl</var> that are stored on other tables must be followed by <math id="-6682806431087178542" display="inline" alttext="\pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">π</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜋</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\pi</annotation>
+  </semantics>
+</math> in order to describe the correct fusion.</p><p xmlns="http://www.w3.org/1999/xhtml">This attribute value is bound only if <var class="Arg">tbl</var> was obtained from another table by permuting the classes, using <code class="func">CharacterTableWithSortedClasses</code> (<a shape="rect" href="chap71_mj.html#X7E3DE0A47E62BE6B"><span class="RefLink">71.21-3</span></a>) or <code class="func">SortedCharacterTable</code> (<a shape="rect" href="chap71_mj.html#X82DCAAA882416E24"><span class="RefLink">71.21-4</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">It is necessary because the original table and the sorted table have the same identifier (and the same group if known), and hence the same fusions are valid for the two tables.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;Symmetric&quot;, 4 );</span>
+CharacterTable( &quot;Sym(4)&quot; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( tbl );</span>
+Sym(4)
+
+     2  3  2  3  .  2
+     3  1  .  .  1  .
+
+       1a 2a 2b 3a 4a
+    2P 1a 1a 1a 3a 2b
+    3P 1a 2a 2b 1a 4a
+
+X.1     1 -1  1  1 -1
+X.2     3 -1 -1  .  1
+X.3     2  .  2 -1  .
+X.4     3  1 -1  . -1
+X.5     1  1  1  1  1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">srt1:= CharacterTableWithSortedCharacters( tbl );</span>
+CharacterTable( &quot;Sym(4)&quot; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( Irr( srt1 ), Degree );</span>
+[ 1, 1, 2, 3, 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">srt2:= CharacterTableWithSortedClasses( tbl );</span>
+CharacterTable( &quot;Sym(4)&quot; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SizesCentralizers( tbl );</span>
+[ 24, 4, 8, 3, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SizesCentralizers( srt2 );</span>
+[ 24, 8, 4, 3, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">nsg:= ClassPositionsOfNormalSubgroups( tbl );</span>
+[ [ 1 ], [ 1, 3 ], [ 1, 3, 4 ], [ 1 .. 5 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">srt3:= SortedCharacterTable( tbl, nsg );</span>
+CharacterTable( &quot;Sym(4)&quot; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">nsg:= ClassPositionsOfNormalSubgroups( srt3 );</span>
+[ [ 1 ], [ 1, 2 ], [ 1 .. 3 ], [ 1 .. 5 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( srt3 );</span>
+Sym(4)
+
+     2  3  3  .  2  2
+     3  1  .  1  .  .
+
+       1a 2a 3a 2b 4a
+    2P 1a 1a 3a 1a 2a
+    3P 1a 2a 1a 2b 4a
+
+X.1     1  1  1  1  1
+X.2     1  1  1 -1 -1
+X.3     2  2 -1  .  .
+X.4     3 -1  . -1  1
+X.5     3 -1  .  1 -1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ClassPermutation( srt3 );</span>
+(2,4,3)
+</pre></div> </body>
+    </html>

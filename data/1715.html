@@ -1,0 +1,39 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 65: Magma Rings-&gt;65.4 Magma Rings modulo Relations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap65.html#X81B002EE799B5E77"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">65.4 <span class="Heading">Magma Rings modulo Relations</span></h4><p xmlns="http://www.w3.org/1999/xhtml">A more general construction than that of free magma rings allows one to create rings that are not free <math id="-903736783460887227" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>-modules on a given magma <math id="2677421452343061332" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> but arise from the magma ring <math id="-671675065067161082" display="inline" alttext="RM" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+      <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">M</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <times xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑀</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">RM</annotation>
+  </semantics>
+</math> by factoring out certain identities. Examples for such structures are finitely presented (associative) algebras and free Lie algebras (see <code class="func">FreeLieAlgebra</code> (<a shape="rect" href="chap64_mj.html#X7F7B34BD80F0F1C8"><span class="RefLink">64.2-4</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">In <strong class="pkg">GAP</strong>, the use of magma rings modulo relations is limited to situations where a normal form of the elements is known and where one wants to guarantee that all elements actually constructed are in normal form. (In particular, the computation of the normal form must be cheap.) This is because the methods for comparing elements in magma rings modulo relations via <code class="code">\=</code> and <code class="code">\&lt;</code> just compare the involved coefficients and magma elements, and also the vector space functions regard those monomials as linearly independent over the coefficients ring that actually occur in the representation of an element of a magma ring modulo relations.</p><p xmlns="http://www.w3.org/1999/xhtml">Thus only very special finitely presented algebras will be represented as magma rings modulo relations, in general finitely presented algebras are dealt with via the mechanism described in Chapter <a shape="rect" href="chap63_mj.html#X85A22A8286596D02"><span class="RefLink">63</span></a>.</p> </body>
+    </html>

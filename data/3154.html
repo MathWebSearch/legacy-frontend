@@ -1,0 +1,63 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.12 External Sets</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X7FD3D2D2788709B7"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">41.12 <span class="Heading">External Sets</span></h4><p xmlns="http://www.w3.org/1999/xhtml">When considering group actions, sometimes the concept of a <em><math id="-1879314904467896526" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>-set</em> is used. This is a set <math id="3122809954699340883" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Ω</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega</annotation>
+  </semantics>
+</math> endowed with an action of <math id="-3616477654336704490" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>. The elements of the <math id="7457698496278372381" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>-set are the same as those of <math id="3173401389059853879" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Ω</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega</annotation>
+  </semantics>
+</math>, however concepts like equality and equivalence of <math id="3255479711163352326" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>-sets do not only consider the underlying domain <math id="4732993662099654643" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Ω</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega</annotation>
+  </semantics>
+</math> but the group action as well.</p><p xmlns="http://www.w3.org/1999/xhtml">This concept is implemented in <strong class="pkg">GAP</strong> via <em>external sets</em>.</p><p xmlns="http://www.w3.org/1999/xhtml">The constituents of an external set are stored in the attributes <code class="func">ActingDomain</code> (<a shape="rect" href="chap41_mj.html#X7B9DB15D80CE28B4"><span class="RefLink">41.12-3</span></a>), <code class="func">FunctionAction</code> (<a shape="rect" href="chap41_mj.html#X86153CB087394DC1"><span class="RefLink">41.12-4</span></a>) and <code class="func">HomeEnumerator</code> (<a shape="rect" href="chap41_mj.html#X86A0CC1479A5932A"><span class="RefLink">41.12-5</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Most operations for actions are applicable as an attribute for an external set.</p><p xmlns="http://www.w3.org/1999/xhtml">The most prominent external subsets are orbits, see <code class="func">ExternalOrbit</code> (<a shape="rect" href="chap41_mj.html#X7FB656AE7A066C35"><span class="RefLink">41.12-9</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Many subsets of a group, such as conjugacy classes or cosets (see <code class="func">ConjugacyClass</code> (<a shape="rect" href="chap39_mj.html#X7B2F207F7F85F5B8"><span class="RefLink">39.10-1</span></a>) and <code class="func">RightCoset</code> (<a shape="rect" href="chap39_mj.html#X8412ABD57986B9FC"><span class="RefLink">39.7-1</span></a>)) are implemented as external orbits.</p><p xmlns="http://www.w3.org/1999/xhtml">External sets also are implicitly underlying action homomorphisms, see <code class="func">UnderlyingExternalSet</code> (<a shape="rect" href="chap41_mj.html#X8190A8247F29A5C7"><span class="RefLink">41.12-16</span></a>) and <code class="func">SurjectiveActionHomomorphismAttr</code> (<a shape="rect" href="chap41_mj.html#X7A3D87DE809FBFD4"><span class="RefLink">41.12-17</span></a>).</p> </body>
+    </html>

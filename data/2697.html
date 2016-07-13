@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.4-1 AsPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X81B32CB182489ACA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.4-1 AsPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsPartialPerm</code>( <var class="Arg">f</var>, <var class="Arg">set</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsPartialPerm</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsPartialPerm</code>( <var class="Arg">f</var>, <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A partial permutation.</p><p xmlns="http://www.w3.org/1999/xhtml">A permutation <var class="Arg">f</var> defines a partial permutation when it is restricted to any finite set of positive integers. <code class="code">AsPartialPerm</code> can be used to obtain this partial permutation.</p><p xmlns="http://www.w3.org/1999/xhtml">There are several possible arguments for <code class="code">AsPartialPerm</code>:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">for a permutation and set of positive integers</strong></dt><dd><p><code class="code">AsPartialPerm</code> returns the partial permutation that equals <var class="Arg">f</var> on the set of positive integers <var class="Arg">set</var> and that is undefined on every other positive integer.</p>
+
+<p>Note that as explained in <code class="func">PartialPerm</code> (<a shape="rect" href="chap54_mj.html#X8538BAE77F2FB2F8"><span class="RefLink">54.2-1</span></a>) <em>a permutation is never a partial permutation</em> in <strong class="pkg">GAP</strong>, please keep this in mind when using <code class="code">AsPartialPerm</code>.</p>
+
+</dd><dt><strong class="Mark">for a permutation</strong></dt><dd><p><code class="code">AsPartialPerm</code> returns the partial permutation that agrees with <var class="Arg">f</var> on <code class="code">[1..LargestMovedPoint(<var class="Arg">f</var>)]</code> and that is not defined on any other positive integer.</p>
+
+</dd><dt><strong class="Mark">for a permutation and a positive integer</strong></dt><dd><p><code class="code">AsPartialPerm</code> returns the partial permutation that agrees with <var class="Arg">f</var> on <code class="code">[1..<var class="Arg">n</var>]</code>, when <var class="Arg">n</var> is a positive integer, and that is not defined on any other positive integer.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The operation <code class="func">PartialPermOp</code> (<a shape="rect" href="chap54_mj.html#X81188D9F83F64222"><span class="RefLink">54.2-2</span></a>) can also be used to convert permutations into partial permutations.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=(2,8,19,9,14,10,20,17,4,13,12,3,5,7,18,16);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsPartialPerm(f);</span>
+(1)(2,8,19,9,14,10,20,17,4,13,12,3,5,7,18,16)(6)(11)(15)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsPartialPerm(f, [ 1, 2, 3 ] );</span>
+[2,8][3,5](1)</pre></div> </body>
+    </html>

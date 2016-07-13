@@ -1,0 +1,161 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.2-9 NormalFormIntMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X81FB746E82BE6CDA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.2-9 NormalFormIntMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NormalFormIntMat</code>( <var class="Arg">mat</var>, <var class="Arg">options</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This general operation for computation of various Normal Forms is probably the most efficient.</p><p xmlns="http://www.w3.org/1999/xhtml">Options bit values:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">0/1</strong></dt><dd><p>Triangular Form / Smith Normal Form.</p>
+
+</dd><dt><strong class="Mark">2</strong></dt><dd><p>Reduce off diagonal entries.</p>
+
+</dd><dt><strong class="Mark">4</strong></dt><dd><p>Row Transformations.</p>
+
+</dd><dt><strong class="Mark">8</strong></dt><dd><p>Col Transformations.</p>
+
+</dd><dt><strong class="Mark">16</strong></dt><dd><p>Destructive (the original matrix may be destroyed)</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">Compute a Triangular, Hermite or Smith form of the <math id="-819868328036590235" display="inline" alttext="n\times m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">m</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑚</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n\times m</annotation>
+  </semantics>
+</math> integer input matrix <math id="72800850411683021" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>. Optionally, compute <math id="4105975917549617934" display="inline" alttext="n\times n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n\times n</annotation>
+  </semantics>
+</math> and <math id="7078204845914445164" display="inline" alttext="m\times m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">m</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑚</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m\times m</annotation>
+  </semantics>
+</math> unimodular transforming matrices <math id="-2470394357152865025" display="inline" alttext="Q,P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+      <mo id="p1.1.m1.1.2">,</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">P</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑃</ci>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q,P</annotation>
+  </semantics>
+</math> which satisfy <math id="-4395295766861981378" display="inline" alttext="QA=H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+        <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">A</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">H</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <times xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐴</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐻</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">QA=H</annotation>
+  </semantics>
+</math> or <math id="-6551262212486577441" display="inline" alttext="QAP=S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+        <mo xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.6.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">A</mi>
+        <mo xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.6.1.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">P</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">=</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">S</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <eq xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <times xref="p1.1.m1.1.6.1.1" id="p1.1.m1.1.6.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐴</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑃</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑆</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">QAP=S</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note option is a value ranging from 0 to 15 but not all options make sense (e.g., reducing off diagonal entries with SNF option selected already). If an option makes no sense it is ignored.</p><p xmlns="http://www.w3.org/1999/xhtml">Returns a record with component <code class="code">normal</code> containing the computed normal form and optional components <code class="code">rowtrans</code> and/or <code class="code">coltrans</code> which hold the respective transformation matrix. Also in the record are components holding the sign of the determinant, <code class="code">signdet</code>, and the rank of the matrix, <code class="code">rank</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:=[[1,15,28],[4,5,6],[7,8,9]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NormalFormIntMat(m,0);  # Triangular, no transforms</span>
+rec( normal := [ [ 1, 15, 28 ], [ 0, 1, 1 ], [ 0, 0, 3 ] ], 
+  rank := 3, signdet := 1 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NormalFormIntMat(m,6);  # Hermite Normal Form with row transforms</span>
+rec( normal := [ [ 1, 0, 1 ], [ 0, 1, 1 ], [ 0, 0, 3 ] ], rank := 3, 
+  rowC := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ], 
+  rowQ := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ], 
+  rowtrans := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ], 
+  signdet := 1 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NormalFormIntMat(m,13); # Smith Normal Form with both transforms</span>
+rec( colC := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ], 
+  colQ := [ [ 1, 0, -1 ], [ 0, 1, -1 ], [ 0, 0, 1 ] ], 
+  coltrans := [ [ 1, 0, -1 ], [ 0, 1, -1 ], [ 0, 0, 1 ] ], 
+  normal := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 3 ] ], rank := 3, 
+  rowC := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ], 
+  rowQ := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ], 
+  rowtrans := [ [ -2, 62, -35 ], [ 1, -30, 17 ], [ -3, 97, -55 ] ], 
+  signdet := 1 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">last.rowtrans*m*last.coltrans;</span>
+[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 3 ] ]
+</pre></div> </body>
+    </html>

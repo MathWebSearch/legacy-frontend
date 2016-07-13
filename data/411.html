@@ -1,0 +1,115 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 56: Rings-&gt;56.4-8 IsJacobianRing</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap56.html#X799BEF8581971A13"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">56.4-8 IsJacobianRing</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsJacobianRing</code>( <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is <code class="keyw">true</code> if the Jacobi identity holds in the ring <var class="Arg">R</var>, and <code class="keyw">false</code> otherwise. The Jacobi identity means that <math id="-944765505506601003" display="inline" alttext="x*(y*z)+z*(x*y)+y*(z*x)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.24.cmml" id="p1.1.m1.1.24">
+      <mrow xref="p1.1.m1.1.24.1.cmml" id="p1.1.m1.1.24.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">*</mo>
+        <mrow xref="p1.1.m1.1.24.1.1.2.cmml" id="p1.1.m1.1.24.1.1">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.24.1.1.2.cmml" id="p1.1.m1.1.24.1.1.2">
+            <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">y</mi>
+            <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">*</mo>
+            <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">z</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">+</mo>
+      <mrow xref="p1.1.m1.1.24.2.cmml" id="p1.1.m1.1.24.2">
+        <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">z</mi>
+        <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">*</mo>
+        <mrow xref="p1.1.m1.1.24.2.1.2.cmml" id="p1.1.m1.1.24.2.1">
+          <mo id="p1.1.m1.1.11" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.24.2.1.2.cmml" id="p1.1.m1.1.24.2.1.2">
+            <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">x</mi>
+            <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">*</mo>
+            <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">y</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.15" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8a">+</mo>
+      <mrow xref="p1.1.m1.1.24.3.cmml" id="p1.1.m1.1.24.3">
+        <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">y</mi>
+        <mo xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">*</mo>
+        <mrow xref="p1.1.m1.1.24.3.1.2.cmml" id="p1.1.m1.1.24.3.1">
+          <mo id="p1.1.m1.1.19" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.24.3.1.2.cmml" id="p1.1.m1.1.24.3.1.2">
+            <mi xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">z</mi>
+            <mo xref="p1.1.m1.1.21.cmml" id="p1.1.m1.1.21">*</mo>
+            <mi xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22">x</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.23" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.24" id="p1.1.m1.1.24.cmml">
+        <plus xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+        <apply xref="p1.1.m1.1.24.1" id="p1.1.m1.1.24.1.cmml">
+          <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <apply xref="p1.1.m1.1.24.1.1" id="p1.1.m1.1.24.1.1.2.cmml">
+            <times xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑦</ci>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑧</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.24.2" id="p1.1.m1.1.24.2.cmml">
+          <times xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml"/>
+          <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑧</ci>
+          <apply xref="p1.1.m1.1.24.2.1" id="p1.1.m1.1.24.2.1.2.cmml">
+            <times xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑥</ci>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑦</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.24.3" id="p1.1.m1.1.24.3.cmml">
+          <times xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml"/>
+          <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝑦</ci>
+          <apply xref="p1.1.m1.1.24.3.1" id="p1.1.m1.1.24.3.1.2.cmml">
+            <times xref="p1.1.m1.1.21" id="p1.1.m1.1.21.cmml"/>
+            <ci xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml">𝑧</ci>
+            <ci xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml">𝑥</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x*(y*z)+z*(x*y)+y*(z*x)</annotation>
+  </semantics>
+</math> is the zero element of <var class="Arg">R</var>, for all elements <math id="7419251655894418921" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math>, <math id="6250167541454461160" display="inline" alttext="y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑦</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">y</annotation>
+  </semantics>
+</math>, <math id="-8344668184518722579" display="inline" alttext="z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z</annotation>
+  </semantics>
+</math> in <var class="Arg">R</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= FullMatrixLieAlgebra( GF( 5 ), 7 );</span>
+&lt;Lie algebra over GF(5), with 13 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsJacobianRing( L );</span>
+true
+</pre></div> </body>
+    </html>

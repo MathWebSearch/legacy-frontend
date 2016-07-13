@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.5-1 PermLeftQuoPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X8382A0F8875CEB08"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.5-1 PermLeftQuoPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PermLeftQuoPartialPerm</code>( <var class="Arg">f</var>, <var class="Arg">g</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PermLeftQuoPartialPermNC</code>( <var class="Arg">f</var>, <var class="Arg">g</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A permutation.</p><p xmlns="http://www.w3.org/1999/xhtml">Returns the permutation on the image set of <var class="Arg">f</var> induced by <code class="code"><var class="Arg">f</var>^-1*<var class="Arg">g</var></code> when the partial permutations <var class="Arg">f</var> and <var class="Arg">g</var> have equal domain and image set.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">PermLeftQuoPartialPerm</code> verifies that <var class="Arg">f</var> and <var class="Arg">g</var> have equal domains and image sets, and returns an error if they do not. <code class="code">PermLeftQuoPartialPermNC</code> does no checks.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 3, 4, 5, 7 ], [ 7, 9, 10, 4, 2, 5 ] );</span>
+[1,7,5,2,9][3,10](4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=PartialPerm( [ 1, 2, 3, 4, 5, 7 ], [ 7, 4, 9, 2, 5, 10 ] );</span>
+[1,7,10][3,9](2,4)(5)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PermLeftQuoPartialPerm(f, g);</span>
+(2,5,10,9,4)</pre></div> </body>
+    </html>

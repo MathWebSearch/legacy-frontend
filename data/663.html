@@ -1,0 +1,115 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.1 Why Class Functions?</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X823319217E4B6852"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">72.1 <span class="Heading">Why Class Functions?</span></h4><p xmlns="http://www.w3.org/1999/xhtml">In principle it is possible to represent group characters or more general class functions by the plain lists of their values, and in fact many operations for class functions work with plain lists of class function values. But this has two disadvantages.</p><p xmlns="http://www.w3.org/1999/xhtml">First, it is then necessary to regard a values list explicitly as a class function of a particular character table, by supplying this character table as an argument. In practice this means that with this setup, the user has the task to put the objects into the right context. For example, forming the scalar product or the tensor product of two class functions or forming an induced class function or a conjugate class function then needs three arguments in this case; this is particularly inconvenient in cases where infix operations cannot be used because of the additional argument, as for tensor products and induced class functions.</p><p xmlns="http://www.w3.org/1999/xhtml">Second, when one says that &quot;<math id="-7380747483292960232" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math> is a character of a group <math id="8307286762980961" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>&quot; then this object <math id="4304679135404723700" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math> carries a lot of information. <math id="2573766122382841036" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math> has certain properties such as being irreducible or not. Several subgroups of <math id="-3698281874615664006" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> are related to <math id="-1351322611685960144" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math>, such as the kernel and the centre of <math id="3343493926646936999" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math>. Other attributes of characters are the determinant and the central character. This knowledge cannot be stored in a plain list.</p><p xmlns="http://www.w3.org/1999/xhtml">For dealing with a group together with its characters, and maybe also subgroups and their characters, it is desirable that <strong class="pkg">GAP</strong> keeps track of the interpretation of characters. On the other hand, for using characters without accessing their groups, such as characters of tables from the <strong class="pkg">GAP</strong> table library, dealing just with values lists is often sufficient. In particular, if one deals with incomplete character tables then it is often necessary to specify the arguments explicitly, for example one has to choose a fusion map or power map from a set of possibilities.</p><p xmlns="http://www.w3.org/1999/xhtml">The main idea behind class function objects is that a class function object is equal to its values list in the sense of <code class="func">\=</code> (<a shape="rect" href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>), so class function objects can be used wherever their values lists can be used, but there are operations for class function objects that do not work just with values lists. <strong class="pkg">GAP</strong> library functions prefer to return class function objects rather than returning just values lists, for example <code class="func">Irr</code> (<a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492"><span class="RefLink">71.8-2</span></a>) lists consist of class function objects, and <code class="func">TrivialCharacter</code> (<a shape="rect" href="chap72_mj.html#X86129DC37C55E4D6"><span class="RefLink">72.7-1</span></a>) returns a class function object.</p><p xmlns="http://www.w3.org/1999/xhtml">Here is an <em>example</em> that shows both approaches. First we define some groups.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S4:= SymmetricGroup( 4 );;  SetName( S4, &quot;S4&quot; );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D8:= SylowSubgroup( S4, 2 );; SetName( D8, &quot;D8&quot; );</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We do some computations using the functions described later in this Chapter, first with class function objects.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irrS4:= Irr( S4 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irrD8:= Irr( D8 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi:= irrD8[4];</span>
+Character( CharacterTable( D8 ), [ 1, -1, 1, -1, 1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi * chi;</span>
+Character( CharacterTable( D8 ), [ 1, 1, 1, 1, 1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ind:= chi ^ S4;</span>
+Character( CharacterTable( S4 ), [ 3, -1, -1, 0, 1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( irrS4, x -&gt; ScalarProduct( x, ind ) );</span>
+[ 0, 1, 0, 0, 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">det:= Determinant( ind );</span>
+Character( CharacterTable( S4 ), [ 1, 1, 1, 1, 1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cent:= CentralCharacter( ind );</span>
+ClassFunction( CharacterTable( S4 ), [ 1, -2, -1, 0, 2 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rest:= Restricted( cent, D8 );</span>
+ClassFunction( CharacterTable( D8 ), [ 1, -2, -1, -1, 2 ] )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Now we repeat these calculations with plain lists of character values. Here we need the character tables in some places.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tS4:= CharacterTable( S4 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tD8:= CharacterTable( D8 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi:= ValuesOfClassFunction( irrD8[4] );</span>
+[ 1, -1, 1, -1, 1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Tensored( [ chi ], [ chi ] )[1];</span>
+[ 1, 1, 1, 1, 1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ind:= InducedClassFunction( tD8, chi, tS4 );</span>
+ClassFunction( CharacterTable( S4 ), [ 3, -1, -1, 0, 1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( Irr( tS4 ), x -&gt; ScalarProduct( tS4, x, ind ) );</span>
+[ 0, 1, 0, 0, 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">det:= DeterminantOfCharacter( tS4, ind );</span>
+ClassFunction( CharacterTable( S4 ), [ 1, 1, 1, 1, 1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cent:= CentralCharacter( tS4, ind );</span>
+ClassFunction( CharacterTable( S4 ), [ 1, -2, -1, 0, 2 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rest:= Restricted( tS4, cent, tD8 );</span>
+ClassFunction( CharacterTable( D8 ), [ 1, -2, -1, -1, 2 ] )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If one deals with character tables from the <strong class="pkg">GAP</strong> table library then one has no access to their groups, but often the tables provide enough information for computing induced or restricted class functions, symmetrizations etc., because the relevant class fusions and power maps are often stored on library tables. In these cases it is possible to use the tables instead of the groups as arguments. (If necessary information is not uniquely determined by the tables then an error is signalled.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s5 := CharacterTable( &quot;A5.2&quot; );; irrs5 := Irr( s5  );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m11:= CharacterTable( &quot;M11&quot;  );; irrm11:= Irr( m11 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi:= TrivialCharacter( s5 );</span>
+Character( CharacterTable( &quot;A5.2&quot; ), [ 1, 1, 1, 1, 1, 1, 1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi ^ m11;</span>
+Character( CharacterTable( &quot;M11&quot; ), [ 66, 10, 3, 2, 1, 1, 0, 0, 0, 0 
+ ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Determinant( irrs5[4] );</span>
+Character( CharacterTable( &quot;A5.2&quot; ), [ 1, 1, 1, 1, -1, -1, -1 ] )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Functions that compute <em>normal</em> subgroups related to characters have counterparts that return the list of class positions corresponding to these groups.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ClassPositionsOfKernel( irrs5[2] );</span>
+[ 1, 2, 3, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ClassPositionsOfCentre( irrs5[2] );</span>
+[ 1, 2, 3, 4, 5, 6, 7 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Non-normal subgroups cannot be described this way, so for example inertia subgroups (see <code class="func">InertiaSubgroup</code> (<a shape="rect" href="chap72_mj.html#X7C3187387C2D9938"><span class="RefLink">72.8-13</span></a>)) can in general not be computed from character tables without access to their groups.</p> </body>
+    </html>

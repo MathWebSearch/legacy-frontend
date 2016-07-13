@@ -1,0 +1,98 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 57: Modules-&gt;57.1-1 IsLeftOperatorAdditiveGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap57.html#X7C62FE5282E9C505"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">57.1-1 IsLeftOperatorAdditiveGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsLeftOperatorAdditiveGroup</code>( <var class="Arg">D</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A domain <var class="Arg">D</var> lies in <code class="code">IsLeftOperatorAdditiveGroup</code> if it is an additive group that is closed under scalar multiplication from the left, and such that <math id="4877396260778892073" display="inline" alttext="\lambda*(x+y)=\lambda*x+\lambda*y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">λ</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">*</mo>
+        <mrow xref="p1.1.m1.1.16.1.1.2.cmml" id="p1.1.m1.1.16.1.1">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.16.1.1.2.cmml" id="p1.1.m1.1.16.1.1.2">
+            <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">x</mi>
+            <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">+</mo>
+            <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">y</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">=</mo>
+      <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2">
+        <mrow xref="p1.1.m1.1.16.2.1.cmml" id="p1.1.m1.1.16.2.1">
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">λ</mi>
+          <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">*</mo>
+          <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">x</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">+</mo>
+        <mrow xref="p1.1.m1.1.16.2.2.cmml" id="p1.1.m1.1.16.2.2">
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">λ</mi>
+          <mo xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">*</mo>
+          <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">y</mi>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">
+        <eq xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+        <apply xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml">
+          <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜆</ci>
+          <apply xref="p1.1.m1.1.16.1.1" id="p1.1.m1.1.16.1.1.2.cmml">
+            <plus xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑥</ci>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑦</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.16.2" id="p1.1.m1.1.16.2.cmml">
+          <plus xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml"/>
+          <apply xref="p1.1.m1.1.16.2.1" id="p1.1.m1.1.16.2.1.cmml">
+            <times xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml"/>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝜆</ci>
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑥</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.16.2.2" id="p1.1.m1.1.16.2.2.cmml">
+            <times xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml"/>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝜆</ci>
+            <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑦</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\lambda*(x+y)=\lambda*x+\lambda*y</annotation>
+  </semantics>
+</math> for all scalars <math id="1695742415238617278" display="inline" alttext="\lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">λ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\lambda</annotation>
+  </semantics>
+</math> and elements <math id="1730694986354146349" display="inline" alttext="x,y\in D" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mrow xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mo id="p1.1.m1.1.2">,</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">y</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">∈</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">D</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <in xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <list xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.1.cmml">
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑦</ci>
+        </list>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐷</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x,y\in D</annotation>
+  </semantics>
+</math> (here and below by scalars we mean elements of a domain acting on <var class="Arg">D</var> from left or right as appropriate).</p> </body>
+    </html>

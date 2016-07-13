@@ -1,0 +1,56 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.2-2 PresentationSubgroupRrs</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X857365CD87ADC29E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.2-2 <span class="Heading">PresentationSubgroupRrs</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PresentationSubgroupRrs</code>( <var class="Arg">G</var>, <var class="Arg">H</var>[, <var class="Arg">string</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PresentationSubgroupRrs</code>( <var class="Arg">G</var>, <var class="Arg">table</var>[, <var class="Arg">string</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">uses the Reduced Reidemeister-Schreier method to compute a presentation <var class="Arg">P</var>, say, for a subgroup <var class="Arg">H</var> of a finitely presented group <var class="Arg">G</var>. The generators in the resulting presentation will be named <var class="Arg">string</var><code class="code">1</code>, <var class="Arg">string</var><code class="code">2</code>, <math id="6616339801599830977" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math>, the default string is <code class="code">&quot;_x&quot;</code>. You may access the <math id="-2655712768259739000" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th of these generators by <var class="Arg">P</var><code class="code">!.</code><math id="-4948120371621437163" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Alternatively to the subgroup <var class="Arg">H</var>, its coset table <var class="Arg">table</var> in <var class="Arg">G</var> may be given as second argument.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := FreeGroup( &quot;a&quot;, &quot;b&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := f / [ f.1^2, f.2^3, (f.1*f.2)^5 ];</span>
+&lt;fp group on the generators [ a, b ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g1 := Size( g );</span>
+60
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">u := Subgroup( g, [ g.1, g.1^g.2 ] );</span>
+Group([ a, b^-1*a*b ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">p := PresentationSubgroup( g, u, &quot;g&quot; );</span>
+&lt;presentation with 3 gens and 4 rels of total length 12&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens := GeneratorsOfPresentation( p );</span>
+[ g1, g2, g3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzPrintRelators( p );</span>
+#I  1. g1^2
+#I  2. g2^2
+#I  3. g3*g2*g1
+#I  4. g3^5
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that you cannot call the generators by their names. These names are not variables, but just display figures. So, if you want to access the generators by their names, you first will have to introduce the respective variables and to assign the generators to them.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens[1] = g1;</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g1;</span>
+60
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g1 := gens[1];; g2 := gens[2];; g3 := gens[3];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g1;</span>
+g1
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The Reduced Reidemeister-Schreier algorithm is a modification of the Reidemeister-Schreier algorithm of George Havas <a shape="rect" href="chapBib_mj.html#biBHav74b">[Hav74]</a>. It was proposed by Joachim Neubüser and first implemented in 1986 by Andrea Lucchini and Volkmar Felsch in the SPAS system <a shape="rect" href="chapBib_mj.html#biBSpa89">[SPAS]</a>. Like the Reidemeister-Schreier algorithm of George Havas, it needs only the presentation of <var class="Arg">G</var> and a coset table of <var class="Arg">H</var> in <var class="Arg">G</var> to construct a presentation of <var class="Arg">H</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Whenever you call the command <code class="func">PresentationSubgroupRrs</code>, it first obtains a coset table of <var class="Arg">H</var> in <var class="Arg">G</var> if not given. Next, a set of generators of <var class="Arg">H</var> is determined by reconstructing the coset table and introducing in that process as many Schreier generators of <var class="Arg">H</var> in <var class="Arg">G</var> as are needed to do a Felsch strategy coset enumeration without any coincidences. (In general, though containing redundant generators, this set will be much smaller than the set of all Schreier generators. That is why we call the method the <em>Reduced</em> Reidemeister-Schreier.)</p><p xmlns="http://www.w3.org/1999/xhtml">After having constructed this set of <em>primary subgroup generators</em>, say, the coset table is extended to an <em>augmented coset table</em> which describes the action of the group generators on coset representatives, i.e., on elements instead of cosets. For this purpose, suitable words in the (primary) subgroup generators have to be associated to the coset table entries. In order to keep the lengths of these words short, additional <em>secondary subgroup generators</em> are introduced as abbreviations of subwords. Their number may be large.</p><p xmlns="http://www.w3.org/1999/xhtml">Finally, a Reidemeister rewriting process is used to get defining relators for <var class="Arg">H</var> from the relators of <var class="Arg">G</var>. As the resulting presentation of <var class="Arg">H</var> is a presentation on primary <em>and</em> secondary generators, in general you will have to simplify it by appropriate Tietze transformations (see <a shape="rect" href="chap48_mj.html#X829B634286471AB7"><span class="RefLink">48.6</span></a>) or by the command <code class="func">DecodeTree</code> (<a shape="rect" href="chap48_mj.html#X7ACBFE2F78D72A31"><span class="RefLink">48.10-1</span></a>) before you can use it. Therefore it is returned in the form of a presentation, <var class="Arg">P</var> say.</p><p xmlns="http://www.w3.org/1999/xhtml">Compared with the Modified Todd-Coxeter method described below, the Reduced Reidemeister-Schreier method (as well as Havas' original Reidemeister-Schreier program) has the advantage that it does not require generators of <var class="Arg">H</var> to be given if a coset table of <var class="Arg">H</var> in <var class="Arg">G</var> is known. This provides a possibility to compute a presentation of the normal closure of a given subgroup (see <code class="func">PresentationNormalClosureRrs</code> (<a shape="rect" href="chap48_mj.html#X7D6A52837BEE5C3D"><span class="RefLink">48.2-5</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">For certain applications you may be interested in getting not only just a presentation for <var class="Arg">H</var>, but also a relation between the involved generators of <var class="Arg">H</var> and the generators of <var class="Arg">G</var>. The subgroup generators in the presentation are sorted such that the primary generators precede the secondary ones. Moreover, for each secondary subgroup generator there is a relator in the presentation which expresses this generator as a word in preceding ones. Hence, all we need in addition is a list of words in the generators of <var class="Arg">G</var> which express the primary subgroup generators. In fact, such a list is provided in the attribute <code class="func">PrimaryGeneratorWords</code> (<a shape="rect" href="chap48_mj.html#X7FCE7ED581CF7897"><span class="RefLink">48.2-3</span></a>) of the resulting presentation.</p> </body>
+    </html>

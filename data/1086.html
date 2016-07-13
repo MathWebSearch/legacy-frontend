@@ -1,0 +1,55 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 12: Objects and Elements-&gt;12.3 Sets</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap12.html#X83BE0C20875DD285"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">12.3 <span class="Heading">Sets</span></h4><p xmlns="http://www.w3.org/1999/xhtml">In <strong class="pkg">GAP</strong> there is no category whose definition corresponds to the mathematical property of being a set, however in the manual we will often refer to an object as a <em>set</em> in order to convey the fact that mathematically, we are thinking of it as a set. In particular, two sets <math id="-5557908796027944730" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> and <math id="2100734038172770093" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math> are equal if and only if, <math id="4481346902923118736" display="inline" alttext="x\in A\iff x\in B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">A</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">⇔</mo>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">x</mi>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">∈</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">B</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <csymbol xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" cd="latexml">iff</csymbol>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐴</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <in xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝐵</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x\in A\iff x\in B</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">There are two types of object in <strong class="pkg">GAP</strong> which exhibit this kind of behaviour with respect to equality, namely domains (see Section <a shape="rect" href="chap12_mj.html#X7BAF69417BB925F6"><span class="RefLink">12.4</span></a>) and lists whose elements are strictly sorted see <code class="func">IsSSortedList</code> (<a shape="rect" href="chap21_mj.html#X80CDAF45782E8DCB"><span class="RefLink">21.17-4</span></a>). In general, <em>set</em> in this manual will mean an object of one of these types.</p><p xmlns="http://www.w3.org/1999/xhtml">More precisely: two domains can be compared with &quot;{<code class="code">=</code>}&quot;, the answer being <code class="keyw">true</code> if and only if the sets of elements are equal (regardless of any additional structure) and; a domain and a list can be compared with &quot;<code class="code">=</code>&quot;, the answer being <code class="keyw">true</code> if and only if the list is equal to the strictly sorted list of elements of the domain.</p><p xmlns="http://www.w3.org/1999/xhtml">A discussion about sorted lists and sets can be found in Section <a shape="rect" href="chap21_mj.html#X80ABC25582343910"><span class="RefLink">21.19</span></a>.</p> </body>
+    </html>

@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 29: Records-&gt;29.1-2 RecNames</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap29.html#X837F1E1F866FB1A0"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">29.1-2 RecNames</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RecNames</code>( <var class="Arg">record</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a list of strings corresponding to the names of the record components of the record <var class="Arg">record</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r := rec( a := 1, b := 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Set(RecNames( r )); # 'Set' because ordering depends on GAP session</span>
+[ &quot;a&quot;, &quot;b&quot; ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that you cannot use the string result in the ordinary way to access or change a record component. You can use the <code class="code"><var class="Arg">record</var>.(<var class="Arg">name</var>)</code> construct for that, see <a shape="rect" href="chap29_mj.html#X7EAAE25D7A17F778"><span class="RefLink">29.2</span></a> and <a shape="rect" href="chap29_mj.html#X806DE3BD78742CA4"><span class="RefLink">29.3</span></a>.</p> </body>
+    </html>

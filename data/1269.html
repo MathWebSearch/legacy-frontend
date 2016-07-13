@@ -1,0 +1,56 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.14-3 EpimorphismPGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X7CA738DB80B20D67"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">47.14-3 EpimorphismPGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EpimorphismPGroup</code>( <var class="Arg">fpgrp</var>, <var class="Arg">p</var>[, <var class="Arg">cl</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes an epimorphism from the finitely presented group <var class="Arg">fpgrp</var> to the largest <math id="-3563084603501468097" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-group of <math id="2840593887533848638" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-class <var class="Arg">cl</var> which is a quotient of <var class="Arg">fpgrp</var>. If <var class="Arg">cl</var> is omitted, the largest finite <math id="-1889164982267900238" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-group quotient (of <math id="3392089560787582485" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-class up to <math id="1338968354843477033" display="inline" alttext="1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1000</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1000</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1000</annotation>
+  </semantics>
+</math>) is determined.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=EpimorphismPGroup(fp,2);</span>
+[ f1, f2 ] -&gt; [ a1, a2 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(Image(hom));</span>
+8
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=EpimorphismPGroup(fp,3,7);</span>
+[ f1, f2 ] -&gt; [ a1, a2 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(Image(hom));</span>
+6561
+</pre></div> </body>
+    </html>

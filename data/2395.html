@@ -1,0 +1,846 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 75: Monomiality Questions-&gt;75.4-3 IsMonomialNumber</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap75.html#X8261B5AA7BCFFCC2"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">75.4-3 IsMonomialNumber</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsMonomialNumber</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a positive integer <var class="Arg">n</var>, <code class="func">IsMonomialNumber</code> returns <code class="keyw">true</code> if every solvable group of order <var class="Arg">n</var> is monomial, and <code class="keyw">false</code> otherwise. One can also use <code class="code">IsMonomial</code> instead.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="5873447013438105832" display="inline" alttext="\nu_{p}(n)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msub xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">p</mi>
+      </msub>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">⁢</mo>
+      <mrow id="p1.1.m1.1.6.3">
+        <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+        <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml"/>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑝</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu_{p}(n)</annotation>
+  </semantics>
+</math> denote the multiplicity of the prime <math id="6899541841835532954" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> as factor of <math id="6037679231272421494" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>, and <math id="-5189607658779408300" display="inline" alttext="ord(p,q)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">o</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">r</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">d</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1b">⁢</mo>
+      <mrow xref="p1.1.m1.1.9.2.1.cmml" id="p1.1.m1.1.9.2">
+        <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">p</mi>
+        <mo id="p1.1.m1.1.6">,</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">q</mi>
+        <mo id="p1.1.m1.1.8" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <times xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑜</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑟</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑑</ci>
+        <interval xref="p1.1.m1.1.9.2" id="p1.1.m1.1.9.2.1.cmml" closure="open">
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑞</ci>
+        </interval>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">ord(p,q)</annotation>
+  </semantics>
+</math> the multiplicative order of <math id="-5165900928882908649" display="inline" alttext="p\pmod{q}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mspace xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3a" width="veryverythickmathspace"/>
+      <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.10">
+        <mo xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.4" stretchy="false" lspace="8.1pt">(</mo>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.10.2">
+          <mo xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.7">mod</mo>
+          <mi xref="p1.1.m1.1.2.8.cmml" id="p1.1.m1.1.2.8">q</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.9" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="latexml">annotated</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <apply xref="p1.1.m1.1.2.10" id="p1.1.m1.1.2.1.cmml">
+          <ci xref="p1.1.m1.1.2.4" id="p1.1.m1.1.2.1.1.cmml">pmod</ci>
+          <ci xref="p1.1.m1.1.2.8" id="p1.1.m1.1.2.8.cmml">𝑞</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p\pmod{q}</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Then there exists a solvable nonmonomial group of order <math id="-50685780326343766" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> if and only if one of the following conditions is satisfied.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">1.</strong></dt><dd><p><math id="-4970751443753966365" display="inline" alttext="\nu_{2}(n)\geq 2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <msub xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.8.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">≥</mo>
+      <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">2</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <geq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+            <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu_{2}(n)\geq 2</annotation>
+  </semantics>
+</math> and there is a <math id="274560563337391418" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> such that <math id="-2853921357568876248" display="inline" alttext="\nu_{p}(n)\geq 3" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <msub xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+          <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">p</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.8.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">≥</mo>
+      <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">3</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <geq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+            <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑝</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">3</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu_{p}(n)\geq 3</annotation>
+  </semantics>
+</math> and <math id="-1217319545646084803" display="inline" alttext="p\equiv-1\pmod{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≡</mo>
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mrow xref="p1.1.m1.1.6.1.2.cmml" id="p1.1.m1.1.6.1.2">
+          <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">-</mo>
+          <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+        </mrow>
+        <mspace xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1a" width="veryverythickmathspace"/>
+        <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.10">
+          <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.4" stretchy="false" lspace="8.1pt">(</mo>
+          <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.10.2">
+            <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.7">mod</mo>
+            <mn xref="p1.1.m1.1.5.8.cmml" id="p1.1.m1.1.5.8">4</mn>
+          </mrow>
+          <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.9" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <equivalent xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <csymbol id="p1.1.m1.1.6.1.1.cmml" cd="latexml">annotated</csymbol>
+          <apply xref="p1.1.m1.1.6.1.2" id="p1.1.m1.1.6.1.2.cmml">
+            <minus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+            <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.5.10" id="p1.1.m1.1.5.1.cmml">
+            <ci xref="p1.1.m1.1.5.4" id="p1.1.m1.1.5.1.1.cmml">pmod</ci>
+            <cn xref="p1.1.m1.1.5.8" id="p1.1.m1.1.5.8.cmml" type="integer">4</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p\equiv-1\pmod{4}</annotation>
+  </semantics>
+</math>,</p>
+
+</dd><dt><strong class="Mark">2.</strong></dt><dd><p><math id="2185893947332466402" display="inline" alttext="\nu_{2}(n)\geq 3" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <msub xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.8.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">≥</mo>
+      <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">3</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <geq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+            <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">3</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu_{2}(n)\geq 3</annotation>
+  </semantics>
+</math> and there is a <math id="4354787507221977953" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> such that <math id="5007055108956801677" display="inline" alttext="\nu_{p}(n)\geq 3" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <msub xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+          <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">p</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.8.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">≥</mo>
+      <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">3</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <geq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+            <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑝</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">3</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu_{p}(n)\geq 3</annotation>
+  </semantics>
+</math> and <math id="2560121347487251734" display="inline" alttext="p\equiv 1\pmod{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≡</mo>
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">1</mn>
+        <mspace xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1a" width="veryverythickmathspace"/>
+        <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.10">
+          <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.4.4" stretchy="false" lspace="8.1pt">(</mo>
+          <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.10.2">
+            <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.4.7">mod</mo>
+            <mn xref="p1.1.m1.1.4.8.cmml" id="p1.1.m1.1.4.8">4</mn>
+          </mrow>
+          <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.4.9" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <equivalent xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="latexml">annotated</csymbol>
+          <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">1</cn>
+          <apply xref="p1.1.m1.1.4.10" id="p1.1.m1.1.4.1.cmml">
+            <ci xref="p1.1.m1.1.4.4" id="p1.1.m1.1.4.1.1.cmml">pmod</ci>
+            <cn xref="p1.1.m1.1.4.8" id="p1.1.m1.1.4.8.cmml" type="integer">4</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p\equiv 1\pmod{4}</annotation>
+  </semantics>
+</math>,</p>
+
+</dd><dt><strong class="Mark">3.</strong></dt><dd><p>there are odd prime divisors <math id="2574065980781125962" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> and <math id="-3286221508893557147" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑞</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
+  </semantics>
+</math> of <math id="-8715636735614005704" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> such that <math id="7761287724076469851" display="inline" alttext="ord(p,q)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">o</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">r</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">d</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1b">⁢</mo>
+      <mrow xref="p1.1.m1.1.9.2.1.cmml" id="p1.1.m1.1.9.2">
+        <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">p</mi>
+        <mo id="p1.1.m1.1.6">,</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">q</mi>
+        <mo id="p1.1.m1.1.8" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <times xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑜</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑟</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑑</ci>
+        <interval xref="p1.1.m1.1.9.2" id="p1.1.m1.1.9.2.1.cmml" closure="open">
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑞</ci>
+        </interval>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">ord(p,q)</annotation>
+  </semantics>
+</math> is even and <math id="-227090406265546915" display="inline" alttext="ord(p,q)&amp;lt;\nu_{p}(n)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18">
+      <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">o</mi>
+        <mo xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">r</mi>
+        <mo xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">d</mi>
+        <mo xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1b">⁢</mo>
+        <mrow xref="p1.1.m1.1.18.2.2.1.cmml" id="p1.1.m1.1.18.2.2">
+          <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">p</mi>
+          <mo id="p1.1.m1.1.6">,</mo>
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">q</mi>
+          <mo id="p1.1.m1.1.8" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1c">⁢</mo>
+        <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1d">⁢</mo>
+        <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">l</mi>
+        <mo xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1e">⁢</mo>
+        <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.12">;</mo>
+      <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.3">
+        <msub xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.3.2">
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">ν</mi>
+          <mi xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">p</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.18.3.1.cmml" id="p1.1.m1.1.18.3.1">⁢</mo>
+        <mrow id="p1.1.m1.1.18.3.3">
+          <mo id="p1.1.m1.1.15" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">n</mi>
+          <mo id="p1.1.m1.1.17" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.18" id="p1.1.m1.1.18.1.cmml">
+        <apply xref="p1.1.m1.1.18" id="p1.1.m1.1.18.2.cmml">
+          <times xref="p1.1.m1.1.18.2.1" id="p1.1.m1.1.18.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑜</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑟</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑑</ci>
+          <interval xref="p1.1.m1.1.18.2.2" id="p1.1.m1.1.18.2.2.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑝</ci>
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑞</ci>
+          </interval>
+          <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑡</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.18" id="p1.1.m1.1.18.3.cmml">
+          <times xref="p1.1.m1.1.18.3.1" id="p1.1.m1.1.18.3.1.cmml"/>
+          <apply xref="p1.1.m1.1.18" id="p1.1.m1.1.18.3.2.cmml">
+            <csymbol id="p1.1.m1.1.18.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝜈</ci>
+            <ci xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml">𝑝</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝑛</ci>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">ord(p,q)&amp;lt;\nu_{p}(n)</annotation>
+  </semantics>
+</math> (especially <math id="8794534677274494268" display="inline" alttext="\nu_{p}(n)\geq 3" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <msub xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+          <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">p</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.8.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">≥</mo>
+      <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">3</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <geq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+            <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑝</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">3</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu_{p}(n)\geq 3</annotation>
+  </semantics>
+</math>),</p>
+
+</dd><dt><strong class="Mark">4.</strong></dt><dd><p>there is a prime divisor <math id="-5236760225410890577" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑞</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
+  </semantics>
+</math> of <math id="2066985490383883267" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> such that <math id="2059128032990775559" display="inline" alttext="\nu_{2}(n)\geq 2ord(2,q)+2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">
+      <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.1">
+        <msub xref="p1.1.m1.1.18.1.2.cmml" id="p1.1.m1.1.18.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.18.1.1.cmml" id="p1.1.m1.1.18.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.18.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">≥</mo>
+      <mrow xref="p1.1.m1.1.18.2.cmml" id="p1.1.m1.1.18.2">
+        <mrow xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1">
+          <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">2</mn>
+          <mo xref="p1.1.m1.1.18.2.1.1.cmml" id="p1.1.m1.1.18.2.1.1">⁢</mo>
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">o</mi>
+          <mo xref="p1.1.m1.1.18.2.1.1.cmml" id="p1.1.m1.1.18.2.1.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">r</mi>
+          <mo xref="p1.1.m1.1.18.2.1.1.cmml" id="p1.1.m1.1.18.2.1.1b">⁢</mo>
+          <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">d</mi>
+          <mo xref="p1.1.m1.1.18.2.1.1.cmml" id="p1.1.m1.1.18.2.1.1c">⁢</mo>
+          <mrow xref="p1.1.m1.1.18.2.1.2.1.cmml" id="p1.1.m1.1.18.2.1.2">
+            <mo id="p1.1.m1.1.11" stretchy="false">(</mo>
+            <mn xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">2</mn>
+            <mo id="p1.1.m1.1.13">,</mo>
+            <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">q</mi>
+            <mo id="p1.1.m1.1.15" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+        <mo xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">+</mo>
+        <mn xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">2</mn>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">
+        <geq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.18.1" id="p1.1.m1.1.18.1.cmml">
+          <times xref="p1.1.m1.1.18.1.1" id="p1.1.m1.1.18.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.18.1.2" id="p1.1.m1.1.18.1.2.cmml">
+            <csymbol id="p1.1.m1.1.18.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+            <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.18.2" id="p1.1.m1.1.18.2.cmml">
+          <plus xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml"/>
+          <apply xref="p1.1.m1.1.18.2.1" id="p1.1.m1.1.18.2.1.cmml">
+            <times xref="p1.1.m1.1.18.2.1.1" id="p1.1.m1.1.18.2.1.1.cmml"/>
+            <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">2</cn>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑟</ci>
+            <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑑</ci>
+            <interval xref="p1.1.m1.1.18.2.1.2" id="p1.1.m1.1.18.2.1.2.1.cmml" closure="open">
+              <cn xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml" type="integer">2</cn>
+              <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑞</ci>
+            </interval>
+          </apply>
+          <cn xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml" type="integer">2</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu_{2}(n)\geq 2ord(2,q)+2</annotation>
+  </semantics>
+</math> (especially <math id="-4014295293752530440" display="inline" alttext="\nu_{2}(n)\geq 4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <msub xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.8.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">≥</mo>
+      <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">4</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <geq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+            <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">4</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu_{2}(n)\geq 4</annotation>
+  </semantics>
+</math>),</p>
+
+</dd><dt><strong class="Mark">5.</strong></dt><dd><p><math id="-3389694217830971521" display="inline" alttext="\nu_{2}(n)\geq 2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <msub xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.8.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">≥</mo>
+      <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">2</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <geq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+            <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu_{2}(n)\geq 2</annotation>
+  </semantics>
+</math> and there is a <math id="-1663822164819624986" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> such that <math id="1490565610204626662" display="inline" alttext="p\equiv 1\pmod{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≡</mo>
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">1</mn>
+        <mspace xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1a" width="veryverythickmathspace"/>
+        <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.10">
+          <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.4.4" stretchy="false" lspace="8.1pt">(</mo>
+          <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.10.2">
+            <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.4.7">mod</mo>
+            <mn xref="p1.1.m1.1.4.8.cmml" id="p1.1.m1.1.4.8">4</mn>
+          </mrow>
+          <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.4.9" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <equivalent xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="latexml">annotated</csymbol>
+          <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">1</cn>
+          <apply xref="p1.1.m1.1.4.10" id="p1.1.m1.1.4.1.cmml">
+            <ci xref="p1.1.m1.1.4.4" id="p1.1.m1.1.4.1.1.cmml">pmod</ci>
+            <cn xref="p1.1.m1.1.4.8" id="p1.1.m1.1.4.8.cmml" type="integer">4</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p\equiv 1\pmod{4}</annotation>
+  </semantics>
+</math>, <math id="-5724118322219291552" display="inline" alttext="ord(p,q)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">o</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">r</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">d</mi>
+      <mo xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1b">⁢</mo>
+      <mrow xref="p1.1.m1.1.9.2.1.cmml" id="p1.1.m1.1.9.2">
+        <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">p</mi>
+        <mo id="p1.1.m1.1.6">,</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">q</mi>
+        <mo id="p1.1.m1.1.8" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <times xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑜</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑟</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑑</ci>
+        <interval xref="p1.1.m1.1.9.2" id="p1.1.m1.1.9.2.1.cmml" closure="open">
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑞</ci>
+        </interval>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">ord(p,q)</annotation>
+  </semantics>
+</math> is odd, and <math id="-2414933868114512349" display="inline" alttext="2ord(p,q)&amp;lt;\nu_{p}(n)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19">
+      <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19.2">
+        <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+        <mo xref="p1.1.m1.1.19.2.1.cmml" id="p1.1.m1.1.19.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">o</mi>
+        <mo xref="p1.1.m1.1.19.2.1.cmml" id="p1.1.m1.1.19.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">r</mi>
+        <mo xref="p1.1.m1.1.19.2.1.cmml" id="p1.1.m1.1.19.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">d</mi>
+        <mo xref="p1.1.m1.1.19.2.1.cmml" id="p1.1.m1.1.19.2.1c">⁢</mo>
+        <mrow xref="p1.1.m1.1.19.2.2.1.cmml" id="p1.1.m1.1.19.2.2">
+          <mo id="p1.1.m1.1.5" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">p</mi>
+          <mo id="p1.1.m1.1.7">,</mo>
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">q</mi>
+          <mo id="p1.1.m1.1.9" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.19.2.1.cmml" id="p1.1.m1.1.19.2.1d">⁢</mo>
+        <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.19.2.1.cmml" id="p1.1.m1.1.19.2.1e">⁢</mo>
+        <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">l</mi>
+        <mo xref="p1.1.m1.1.19.2.1.cmml" id="p1.1.m1.1.19.2.1f">⁢</mo>
+        <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.13">;</mo>
+      <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19.3">
+        <msub xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19.3.2">
+          <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">ν</mi>
+          <mi xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.1">p</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.19.3.1.cmml" id="p1.1.m1.1.19.3.1">⁢</mo>
+        <mrow id="p1.1.m1.1.19.3.3">
+          <mo id="p1.1.m1.1.16" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">n</mi>
+          <mo id="p1.1.m1.1.18" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.19" id="p1.1.m1.1.19.1.cmml">
+        <apply xref="p1.1.m1.1.19" id="p1.1.m1.1.19.2.cmml">
+          <times xref="p1.1.m1.1.19.2.1" id="p1.1.m1.1.19.2.1.cmml"/>
+          <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑜</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑟</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑑</ci>
+          <interval xref="p1.1.m1.1.19.2.2" id="p1.1.m1.1.19.2.2.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑝</ci>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑞</ci>
+          </interval>
+          <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑡</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.19" id="p1.1.m1.1.19.3.cmml">
+          <times xref="p1.1.m1.1.19.3.1" id="p1.1.m1.1.19.3.1.cmml"/>
+          <apply xref="p1.1.m1.1.19" id="p1.1.m1.1.19.3.2.cmml">
+            <csymbol id="p1.1.m1.1.19.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝜈</ci>
+            <ci xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.cmml">𝑝</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝑛</ci>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2ord(p,q)&amp;lt;\nu_{p}(n)</annotation>
+  </semantics>
+</math> (especially <math id="-254062221002076509" display="inline" alttext="\nu_{p}(n)\geq 3" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <msub xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+          <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">p</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.8.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">≥</mo>
+      <mn xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">3</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <geq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <times xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+            <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑝</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml" type="integer">3</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu_{p}(n)\geq 3</annotation>
+  </semantics>
+</math>).</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">These five possibilities correspond to the five types of solvable minimal nonmonomial groups (see <code class="func">MinimalNonmonomialGroup</code> (<a shape="rect" href="chap75_mj.html#X7B416BBD80072079"><span class="RefLink">75.5-2</span></a>)) that can occur as subgroups and factor groups of groups of order <var class="Arg">n</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Filtered( [ 1 .. 111 ], x -&gt; not IsMonomial( x ) );</span>
+[ 24, 48, 72, 96, 108 ]
+</pre></div> </body>
+    </html>

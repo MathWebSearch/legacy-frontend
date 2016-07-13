@@ -1,0 +1,40 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.9-4 Writing your own command line editing functions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X87D4EA197A263FB7"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.9-4 <span class="Heading">Writing your own command line editing functions</span></h5><p xmlns="http://www.w3.org/1999/xhtml">It is possible to write new command line editing functions in <strong class="pkg">GAP</strong> as follows.</p><p xmlns="http://www.w3.org/1999/xhtml">The functions have one argument <var class="Arg">l</var> which is a list with five entries of the form <code class="code">[count, key, line, cursorpos, markpos]</code> where <code class="code">count</code> and <code class="code">key</code> are the last pressed key and its count (these are not so useful here because users probably do not want to overwrite the binding of a single key), then <code class="code">line</code> is a string containing the line typed so far, <code class="code">cursorpos</code> is the current position of the cursor (point), and <code class="code">markpos</code> the current position of the mark.</p><p xmlns="http://www.w3.org/1999/xhtml">The result of such a function must be a list which can have various forms:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">[str]</code></strong></dt><dd><p>with a string <code class="code">str</code>. In this case the text <code class="code">str</code> is inserted at the cursor position.</p>
+
+</dd><dt><strong class="Mark"><code class="code">[kill, begin, end]</code></strong></dt><dd><p>where <code class="code">kill</code> is <code class="keyw">true</code> or <code class="keyw">false</code> and <code class="code">begin</code> and <code class="code">end</code> are positions on the input line. This removes the text from the lower position to before the higher position. If <code class="code">kill</code> is <code class="keyw">true</code> the text is killed, i.e. put in the kill ring for later yanking.</p>
+
+</dd><dt><strong class="Mark"><code class="code">[begin, end, str]</code></strong></dt><dd><p>where <code class="code">begin</code> and <code class="code">end</code> are positions on the input line and <code class="code">str</code> is a string. Then the text from position <code class="code">begin</code> to before <code class="code">end</code> is substituted by <code class="code">str</code>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">[1, lstr]</code></strong></dt><dd><p>where <code class="code">lstr</code> is a list of strings. Then these strings are displayed like a list of possible completions. The input line is not changed.</p>
+
+</dd><dt><strong class="Mark"><code class="code">[2, chars]</code></strong></dt><dd><p>where <code class="code">chars</code> is a string. The characters from <code class="code">chars</code> are used as the next characters from the input. (At most 512 characters are possible.)</p>
+
+</dd><dt><strong class="Mark"><code class="code">[100]</code></strong></dt><dd><p>This rings the bell as configured in the terminal.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">In the first three cases the result list can contain a position as a further entry, this becomes the new cursor position. Or it can contain two positions as further entries, these become the new cursor position and the new position of the mark.</p><p xmlns="http://www.w3.org/1999/xhtml">Such a function can be installed as a macro for <code class="code">readline</code> via <code class="code">InstallReadlineMacro(name, fun);</code> where <code class="code">name</code> is a string used as name of the macro and <code class="code">fun</code> is a function as above. This macro can be called by a key sequence which is returned by <code class="code">InvocationReadlineMacro(name);</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">As an example we define a function which puts double quotes around the word under or before the cursor position. The space character, the characters in <code class="code">&quot;(,)&quot;</code>, and the beginning and end of the line are considered as word boundaries. The function is then installed as a macro and bound to the key sequence <strong class="button">Esc</strong> <strong class="button">Q</strong>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">EditAddQuotes := function(l)</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  local str, pos, i, j, new;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  str := l[3];</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  pos := l[4];</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  i := pos; </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  while i &gt; 1 and (not str[i-1] in &quot;,( &quot;) do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    i := i-1;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  od;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  j := pos;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  while IsBound(str[j]) and not str[j] in &quot;,) &quot; do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    j := j+1;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  od;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  new := &quot;\&quot;&quot;;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  Append(new, str{[i..j-1]});</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  Append(new, &quot;\&quot;&quot;);</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  return [i, j, new];</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">InstallReadlineMacro(&quot;addquotes&quot;, EditAddQuotes);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">invl := InvocationReadlineMacro(&quot;addquotes&quot;);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReadlineInitLine(Concatenation(&quot;\&quot;\\eQ\&quot;:\&quot;&quot;,invl,&quot;\&quot;&quot;));;</span>
+</pre></div> </body>
+    </html>

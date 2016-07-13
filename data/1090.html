@@ -1,0 +1,55 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 12: Objects and Elements</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap12.html#X86710F997832ABA4"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap12_mj.html#X86710F997832ABA4">12 <span class="Heading">Objects and Elements</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap12_mj.html#X78497E777FB3E402">12.1 <span class="Heading">Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X7B130AC98415CAFB">12.1-1 IsObject</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap12_mj.html#X780C66027A49D110">12.2 <span class="Heading">Elements as equivalence classes</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap12_mj.html#X83BE0C20875DD285">12.3 <span class="Heading">Sets</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap12_mj.html#X7BAF69417BB925F6">12.4 <span class="Heading">Domains</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap12_mj.html#X84545F3985C60F5B">12.5 <span class="Heading">Identical Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X7961183378DFB902">12.5-1 IsIdenticalObj</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X811976EC78EC5E29">12.5-2 IsNotIdenticalObj</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap12_mj.html#X7F0C119682196D65">12.6 <span class="Heading">Mutability and Copyability</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X811EFD727EBD1ADC">12.6-1 IsCopyable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X7999AD1D7A4F1F46">12.6-2 IsMutable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X7F0ABF2C870B0CBB">12.6-3 Immutable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X80CE136D804097C7">12.6-4 MakeImmutable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X7FBA5F4D7C6872BD">12.6-5 <span class="Heading">Mutability of Iterators</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X7ADB82997A16E853">12.6-6 <span class="Heading">Mutability of Results of Arithmetic Operations</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap12_mj.html#X786B942B82D684BD">12.7 <span class="Heading">Duplication of Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X846BC7107C352031">12.7-1 ShallowCopy</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X7C1E70587EBDD2CB">12.7-2 StructuralCopy</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap12_mj.html#X86E7193D848C53FC">12.8 <span class="Heading">Other Operations Applicable to any Object</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X85D6D47B83BD02A1">12.8-1 SetName</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X7F14EF9D81432113">12.8-2 Name</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X871562FD7F982C12">12.8-3 InfoText</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X7F6C5C3287E8B816">12.8-4 IsInternallyConsistent</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap12_mj.html#X7F4D216B7DF7BE9D">12.8-5 MemoryUsage</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">12 <span class="Heading">Objects and Elements</span></h3><p xmlns="http://www.w3.org/1999/xhtml">An <em>object</em> is anything in <strong class="pkg">GAP</strong> that can be assigned to a variable, so nearly everything in <strong class="pkg">GAP</strong> is an object.</p><p xmlns="http://www.w3.org/1999/xhtml">Different objects can be regarded as equal with respect to the equivalence relation &quot;<code class="code">=</code>&quot;, in this case we say that the objects describe the same <em>element</em>.</p> </body>
+    </html>

@@ -1,0 +1,423 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.8 Straight Line Programs</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X7DC99E4284093FBB"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">37.8 <span class="Heading">Straight Line Programs</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><em>Straight line programs</em> describe an efficient way for evaluating an abstract word at concrete generators, in a more efficient way than with <code class="func">MappedWord</code> (<a shape="rect" href="chap36_mj.html#X7EC17930781D104A"><span class="RefLink">36.3-1</span></a>). For example, the associative word <math id="4660609758712552337" display="inline" alttext="ababbab" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">b</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">a</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">b</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1c">⁢</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">b</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1d">⁢</mo>
+      <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">a</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1e">⁢</mo>
+      <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <times xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">ababbab</annotation>
+  </semantics>
+</math> of length <math id="-447861349284004699" display="inline" alttext="7" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">7</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">7</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">7</annotation>
+  </semantics>
+</math> can be computed from the generators <math id="-5943280548263450933" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a</annotation>
+  </semantics>
+</math>, <math id="-7047527044222858092" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
+  </semantics>
+</math> with only four multiplications, by first computing <math id="-8169051603417369770" display="inline" alttext="c=ab" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">a</mi>
+        <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">b</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <times xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑎</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑏</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">c=ab</annotation>
+  </semantics>
+</math>, then <math id="-3121737463274604024" display="inline" alttext="d=cb" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">d</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">c</mi>
+        <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">b</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑑</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <times xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑐</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑏</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">d=cb</annotation>
+  </semantics>
+</math>, and then <math id="4758635973052196966" display="inline" alttext="cdc" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">d</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">c</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑑</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑐</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">cdc</annotation>
+  </semantics>
+</math>; Alternatively, one can compute <math id="-8292766969385845591" display="inline" alttext="c=ab" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">a</mi>
+        <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">b</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <times xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑎</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑏</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">c=ab</annotation>
+  </semantics>
+</math>, <math id="4148139065435108907" display="inline" alttext="e=bc" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">b</mi>
+        <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">c</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑒</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <times xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑏</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑐</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">e=bc</annotation>
+  </semantics>
+</math>, and <math id="-7404108357652950349" display="inline" alttext="aee" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">e</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">e</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑒</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑒</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">aee</annotation>
+  </semantics>
+</math>. In each step of these computations, one forms words in terms of the words computed in the previous steps.</p><p xmlns="http://www.w3.org/1999/xhtml">A straight line program in <strong class="pkg">GAP</strong> is represented by an object in the category <code class="func">IsStraightLineProgram</code> (<a shape="rect" href="chap37_mj.html#X7F69FF3F7C6694CB"><span class="RefLink">37.8-1</span></a>)) that stores a list of &quot;lines&quot; each of which has one of the following three forms.</p><ol xmlns="http://www.w3.org/1999/xhtml"><li><p>a nonempty dense list <math id="-4737635580159221419" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> of integers,</p>
+
+</li><li><p>a pair <math id="-2932687054888666989" display="inline" alttext="[l,i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">i</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="closed">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑖</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[l,i]</annotation>
+  </semantics>
+</math> where <math id="7384175854659809575" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> is a list of form 1. and <math id="887454021299213739" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> is a positive integer,</p>
+
+</li><li><p>a list <math id="5265327170967210491" display="inline" alttext="[l_{1},l_{2},\ldots,l_{k}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <msub xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+        <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">1</mn>
+      </msub>
+      <mo id="p1.1.m1.1.4">,</mo>
+      <msub xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.3">
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">l</mi>
+        <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">2</mn>
+      </msub>
+      <mo id="p1.1.m1.1.7">,</mo>
+      <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8" mathvariant="normal">…</mi>
+      <mo id="p1.1.m1.1.9">,</mo>
+      <msub xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.4">
+        <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">l</mi>
+        <mi xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">k</mi>
+      </msub>
+      <mo id="p1.1.m1.1.12" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.13" id="p1.1.m1.1.13.1.cmml">
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.2.cmml">
+          <csymbol id="p1.1.m1.1.13.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+          <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">1</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.3.cmml">
+          <csymbol id="p1.1.m1.1.13.3.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑙</ci>
+          <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">2</cn>
+        </apply>
+        <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">…</ci>
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.4.cmml">
+          <csymbol id="p1.1.m1.1.13.4.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.cmml">𝑘</ci>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[l_{1},l_{2},\ldots,l_{k}]</annotation>
+  </semantics>
+</math> where each <math id="2566417949305806270" display="inline" alttext="l_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l_{i}</annotation>
+  </semantics>
+</math> is a list of form 1.; this may occur only for the last line of the program.</p>
+
+</li></ol><p xmlns="http://www.w3.org/1999/xhtml">The lists of integers that occur are interpreted as external representations of associative words (see Section  <a shape="rect" href="chap37_mj.html#X7934D3D5797102EC"><span class="RefLink">37.7</span></a>); for example, the list <math id="5669734546438173050" display="inline" alttext="[1,3,2,-1]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">3</mn>
+      <mo id="p1.1.m1.1.5">,</mo>
+      <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">2</mn>
+      <mo id="p1.1.m1.1.7">,</mo>
+      <mrow xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.2">
+        <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">-</mo>
+        <mn xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">1</mn>
+      </mrow>
+      <mo id="p1.1.m1.1.10" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.11" id="p1.1.m1.1.11.1.cmml">
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">3</cn>
+        <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">2</cn>
+        <apply xref="p1.1.m1.1.11" id="p1.1.m1.1.11.2.cmml">
+          <minus xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+          <cn xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml" type="integer">1</cn>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[1,3,2,-1]</annotation>
+  </semantics>
+</math> represents the word <math id="-5276721601352579535" display="inline" alttext="g_{1}^{3}g_{2}^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <msubsup xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+        <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">3</mn>
+      </msubsup>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <msubsup xref="p1.1.m1.1.7.3.cmml" id="p1.1.m1.1.7.3">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">g</mi>
+        <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">2</mn>
+        <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+          <mo xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.6.1.1">-</mo>
+          <mn xref="p1.1.m1.1.6.1.2.cmml" id="p1.1.m1.1.6.1.2">1</mn>
+        </mrow>
+      </msubsup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.7.2.2.cmml">
+            <csymbol id="p1.1.m1.1.7.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+            <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+          </apply>
+          <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">3</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.7.3" id="p1.1.m1.1.7.3.cmml">
+          <csymbol id="p1.1.m1.1.7.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.7.3.2.cmml">
+            <csymbol id="p1.1.m1.1.7.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑔</ci>
+            <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">2</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+            <minus xref="p1.1.m1.1.6.1.1" id="p1.1.m1.1.6.1.1.cmml"/>
+            <cn xref="p1.1.m1.1.6.1.2" id="p1.1.m1.1.6.1.2.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g_{1}^{3}g_{2}^{{-1}}</annotation>
+  </semantics>
+</math>, with <math id="4064626387020624259" display="inline" alttext="g_{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g_{1}</annotation>
+  </semantics>
+</math> and <math id="1029717595553191371" display="inline" alttext="g_{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g_{2}</annotation>
+  </semantics>
+</math> the first and second abstract generator, respectively.</p><p xmlns="http://www.w3.org/1999/xhtml">For the meaning of the list of lines, see <code class="func">ResultOfStraightLineProgram</code> (<a shape="rect" href="chap37_mj.html#X7847D32B863E822F"><span class="RefLink">37.8-5</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Straight line programs can be constructed using <code class="func">StraightLineProgram</code> (<a shape="rect" href="chap37_mj.html#X7AECA57280DA3195"><span class="RefLink">37.8-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Defining attributes for straight line programs are <code class="func">NrInputsOfStraightLineProgram</code> (<a shape="rect" href="chap37_mj.html#X820A592881D57802"><span class="RefLink">37.8-4</span></a>) and <code class="func">LinesOfStraightLineProgram</code> (<a shape="rect" href="chap37_mj.html#X81A8AFC47F8E4B91"><span class="RefLink">37.8-3</span></a>). Another operation for straight line programs is <code class="func">ResultOfStraightLineProgram</code> (<a shape="rect" href="chap37_mj.html#X7847D32B863E822F"><span class="RefLink">37.8-5</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Special methods applicable to straight line programs are installed for the operations <code class="func">Display</code> (<a shape="rect" href="chap6_mj.html#X83A5C59278E13248"><span class="RefLink">6.3-6</span></a>), <code class="func">IsInternallyConsistent</code> (<a shape="rect" href="chap12_mj.html#X7F6C5C3287E8B816"><span class="RefLink">12.8-4</span></a>), <code class="func">PrintObj</code> (<a shape="rect" href="chap6_mj.html#X815BF22186FD43C9"><span class="RefLink">6.3-5</span></a>), and <code class="func">ViewObj</code> (<a shape="rect" href="chap6_mj.html#X815BF22186FD43C9"><span class="RefLink">6.3-5</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">For a straight line program <var class="Arg">prog</var>, the default <code class="func">Display</code> (<a shape="rect" href="chap6_mj.html#X83A5C59278E13248"><span class="RefLink">6.3-6</span></a>) method prints the interpretation of <var class="Arg">prog</var> as a sequence of assignments of associative words; a record with components <code class="code">gensnames</code> (with value a list of strings) and <code class="code">listname</code> (a string) may be entered as second argument of <code class="func">Display</code> (<a shape="rect" href="chap6_mj.html#X83A5C59278E13248"><span class="RefLink">6.3-6</span></a>), in this case these names are used, the default for <code class="code">gensnames</code> is <code class="code">[ g1, g2, </code><math id="-5963538336749478290" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math><code class="code"> ]</code>, the default for <code class="code">listname</code> is <math id="-7970477745027852819" display="inline" alttext="r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑟</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">r</annotation>
+  </semantics>
+</math>.</p> </body>
+    </html>

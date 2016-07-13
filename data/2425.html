@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.7-5 InstallAtExit</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X7A2C380986F46FEE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.7-5 InstallAtExit</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InstallAtExit</code>( <var class="Arg">func</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ QUITTING</code></td><td colspan="1" rowspan="1" class="tdright">( global variable )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Before actually terminating, <strong class="pkg">GAP</strong> will call (with no arguments) all of the functions that have been installed using <code class="code">InstallAtExit</code>. These typically perform tasks such as cleaning up temporary files created during the session, and closing open files. If an error occurs during the execution of one of these functions, that function is simply abandoned, no break loop is entered.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">InstallAtExit(function() Print(&quot;bye\n&quot;); end);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">quit;</span>
+bye
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">During execution of these functions, the global variable <code class="code">QUITTING</code> will be set to <code class="keyw">true</code> if <strong class="pkg">GAP</strong> is exiting because the user typed <code class="keyw">QUIT</code> and <code class="keyw">false</code> otherwise. Since <code class="keyw">QUIT</code> is considered as an emergency measure, different action may be appropriate.</p> </body>
+    </html>

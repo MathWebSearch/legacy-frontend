@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.1 Recovery from NoMethodFound-Errors</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X83C45B0A797AAF96"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">7.1 <span class="Heading">Recovery from NoMethodFound-Errors</span></h4><p xmlns="http://www.w3.org/1999/xhtml">When the method selection fails because there is no applicable method, an error as in the following example occurs and a break loop is entered:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsNormal(2,2);</span>
+Error, no method found! For debugging hints type ?Recovery from NoMethodFound
+Error, no 1st choice method found for `IsNormal' on 2 arguments called from
+&lt;function&gt;( &lt;arguments&gt; ) called from read-eval-loop
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput"/>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">This only says, that the method selection tried to find a method for <code class="code">IsNormal</code> on two arguments and failed. In this situation it is crucial to find out, why this happened. Therefore there are a few functions which can display further information. Note that you can leave the break loop by the <code class="keyw">quit</code> command (see <a shape="rect" href="chap6_mj.html#X83033EEB81CF4F49"><span class="RefLink">6.4-1</span></a>) and that the information about the incident is no longer accessible afterwards.</p> </body>
+    </html>

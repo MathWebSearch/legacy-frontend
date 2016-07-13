@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 79: Creating New Objects-&gt;79.18-10 DeclareSynonym</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap79.html#X851654DA87616207"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">79.18-10 DeclareSynonym</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DeclareSynonym</code>( <var class="Arg">name</var>, <var class="Arg">value</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DeclareSynonymAttr</code>( <var class="Arg">name</var>, <var class="Arg">value</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DeclareSynonym</code> assigns the string <var class="Arg">name</var> to a global variable as a synonym for <var class="Arg">value</var>. Two typical intended usages are to declare an &quot;and-filter&quot;, e.g.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+DeclareSynonym( &quot;IsGroup&quot;, IsMagmaWithInverses and IsAssociative );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">and to provide a previously declared global function with an alternative name, e.g.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+DeclareGlobalFunction( &quot;SizeOfSomething&quot; );
+DeclareSynonym( &quot;OrderOfSomething&quot;, SizeOfSomething );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><em>Note:</em> Before using <code class="func">DeclareSynonym</code> in the way of this second example, one should determine whether the synonym is really needed. Perhaps an extra index entry in the documentation would be sufficient.</p><p xmlns="http://www.w3.org/1999/xhtml">When <var class="Arg">value</var> is actually an attribute then <code class="func">DeclareSynonymAttr</code> should be used; this binds also globals variables <code class="code">Set</code><var class="Arg">name</var> and <code class="code">Has</code><var class="Arg">name</var> for its setter and tester, respectively.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+DeclareSynonymAttr( &quot;IsField&quot;, IsDivisionRing and IsCommutative );
+DeclareAttribute( &quot;GeneratorsOfDivisionRing&quot;, IsDivisionRing );
+DeclareSynonymAttr( &quot;GeneratorsOfField&quot;, GeneratorsOfDivisionRing );
+</pre></div> </body>
+    </html>

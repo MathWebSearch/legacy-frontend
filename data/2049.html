@@ -1,0 +1,25 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 27: Strings and Characters-&gt;27.7-18 Chomp</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27.html#X79F8FFC5876D854A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">27.7-18 Chomp</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Chomp</code>( <var class="Arg">str</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Like the similarly named Perl function, <code class="func">Chomp</code> removes a trailing newline character (or carriage-return line-feed couplet) from a string argument <var class="Arg">str</var> if present and returns the result. If <var class="Arg">str</var> is not a string or does not have such trailing character(s) it is returned unchanged. This latter property means that <code class="func">Chomp</code> is safe to use in cases where one is manipulating the result of another function which might sometimes return <code class="keyw">fail</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Chomp(&quot;The quick brown fox jumps over the lazy dog.\n&quot;);</span>
+&quot;The quick brown fox jumps over the lazy dog.&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Chomp(&quot;The quick brown fox jumps over the lazy dog.\r\n&quot;);</span>
+&quot;The quick brown fox jumps over the lazy dog.&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Chomp(&quot;The quick brown fox jumps over the lazy dog.&quot;);</span>
+&quot;The quick brown fox jumps over the lazy dog.&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Chomp(fail);</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Chomp(32);</span>
+32
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><em>Note:</em> <code class="func">Chomp</code> only removes a trailing newline character from <var class="Arg">str</var>. If your string contains several newline characters and you really want to split <var class="Arg">str</var> into lines at the newline characters (and remove those newline characters) then you should use <code class="func">SplitString</code> (<a shape="rect" href="chap27_mj.html#X86E897D486DCFEAB"><span class="RefLink">27.7-12</span></a>), e.g.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">str := &quot;The quick brown fox\njumps over the lazy dog.\n&quot;;</span>
+&quot;The quick brown fox\njumps over the lazy dog.\n&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SplitString(str, &quot;&quot;, &quot;\n&quot;);</span>
+[ &quot;The quick brown fox&quot;, &quot;jumps over the lazy dog.&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Chomp(str);</span>
+&quot;The quick brown fox\njumps over the lazy dog.&quot;
+</pre></div> </body>
+    </html>

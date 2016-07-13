@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 9: Files and Filenames-&gt;9.4-1 Filename</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap9.html#X7E352E1F87060602"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">9.4-1 <span class="Heading">Filename</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Filename</code>( <var class="Arg">dir</var>, <var class="Arg">name</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Filename</code>( <var class="Arg">list-of-dirs</var>, <var class="Arg">name</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If the first argument is a directory object <var class="Arg">dir</var>, <code class="func">Filename</code> returns the (system dependent) filename as a string for the file with name <var class="Arg">name</var> in the directory <var class="Arg">dir</var>. <code class="func">Filename</code> returns the filename regardless of whether the directory contains a file with name <var class="Arg">name</var> or not.</p><p xmlns="http://www.w3.org/1999/xhtml">If the first argument is a list <var class="Arg">list-of-dirs</var> (possibly of length 1) of directory objects, then <code class="func">Filename</code> searches the directories in order, and returns the filename for the file <var class="Arg">name</var> in the first directory which contains a file <var class="Arg">name</var> or <code class="keyw">fail</code> if no directory contains a file <var class="Arg">name</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>For example</em>, in order to locate the system program <code class="code">date</code> use <code class="func">DirectoriesSystemPrograms</code> (<a shape="rect" href="chap9_mj.html#X808E2C187DD984B4"><span class="RefLink">9.3-6</span></a>) together with the second form of <code class="func">Filename</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">path := DirectoriesSystemPrograms();;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">date := Filename( path, &quot;date&quot; );</span>
+&quot;/bin/date&quot;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In order to locate the library file <code class="file">files.gd</code> use <code class="func">DirectoriesLibrary</code> (<a shape="rect" href="chap9_mj.html#X87ED469A85343A3C"><span class="RefLink">9.3-5</span></a>) together with the second form of <code class="func">Filename</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">path := DirectoriesLibrary();;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Filename( path, &quot;files.gd&quot; );</span>
+&quot;./lib/files.gd&quot;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In order to construct filenames for new files in a temporary directory use <code class="func">DirectoryTemporary</code> (<a shape="rect" href="chap9_mj.html#X8222B1A886E6195E"><span class="RefLink">9.3-3</span></a>) together with the first form of <code class="func">Filename</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tmpdir := DirectoryTemporary();;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Filename( [ tmpdir ], &quot;file.new&quot; );</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Filename( tmpdir, &quot;file.new&quot; );</span>
+&quot;/var/tmp/tmp.0.021738.0001/file.new&quot;
+</pre></div> </body>
+    </html>

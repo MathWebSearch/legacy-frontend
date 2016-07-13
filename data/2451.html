@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.2 Special Rules for Input Lines</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X866092F281910B74"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">6.2 <span class="Heading">Special Rules for Input Lines</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The input for some <strong class="pkg">GAP</strong> objects may not fit on one line, in particular big integers, long strings or long identifiers. In these cases you can still type or paste them in long single lines. For nicer display you can also specify the input on several lines. This is achieved by ending a line by a backslash or by a backslash and a carriage return character, then continue the input on the beginning of the next line. When reading this <strong class="pkg">GAP</strong> will ignore such continuation backslashes, carriage return characters and newline characters. <strong class="pkg">GAP</strong> also prints long strings and integers this way.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n := 1234\</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">567890;</span>
+1234567890
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">&quot;This is a very long string that does not fit on a line \</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">and is therefore continued on the next line.&quot;;</span>
+&quot;This is a very long string that does not fit on a line and is therefo\
+re continued on the next line.&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">bla\</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">bla := 5;; blabla;</span>
+5
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">There is a special rule about <strong class="pkg">GAP</strong> prompts in input lines: In line editing mode (usual user input and <strong class="pkg">GAP</strong> started without <code class="code">-n</code>) in lines starting with whitespace following <code class="code">gap&gt; </code>, <code class="code">&gt; </code> or <code class="code">brk&gt; </code> this beginning part is removed. This rule is very convenient because it allows to cut and paste input from other <strong class="pkg">GAP</strong> sessions or manual examples easily into your current session.</p> </body>
+    </html>

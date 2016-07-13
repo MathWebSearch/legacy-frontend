@@ -1,0 +1,79 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 65: Magma Rings-&gt;65.5-3 MagmaRingModuloSpanOfZero</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap65.html#X7A7F880D7D7D3722"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">65.5-3 MagmaRingModuloSpanOfZero</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MagmaRingModuloSpanOfZero</code>( <var class="Arg">R</var>, <var class="Arg">M</var>, <var class="Arg">z</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">R</var> be a ring, <var class="Arg">M</var> a magma, and <var class="Arg">z</var> an element of <var class="Arg">M</var> with the property that <math id="8785554484152626824" display="inline" alttext="\textit{z}*m=\textit{z}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑧</mtext>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">*</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">m</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">=</mo>
+      <mtext xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">𝑧</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <eq xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">z</span>
+          </mtext>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑚</ci>
+        </apply>
+        <mtext xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">z</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{z}*m=\textit{z}</annotation>
+  </semantics>
+</math> holds for all <math id="6375494536584146785" display="inline" alttext="m\in M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">M</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑀</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m\in M</annotation>
+  </semantics>
+</math>. The element <var class="Arg">z</var> could be called a &quot;zero element&quot; of <var class="Arg">M</var>, but note that in general <var class="Arg">z</var> cannot be obtained as <code class="code">Zero( </code><math id="5512797807891466084" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
+  </semantics>
+</math><code class="code"> )</code> for each <math id="-5135470076535079769" display="inline" alttext="m\in M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">M</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑀</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m\in M</annotation>
+  </semantics>
+</math>, so this situation does not match the definition of <code class="func">Zero</code> (<a shape="rect" href="chap31_mj.html#X8040AC7A79FFC442"><span class="RefLink">31.10-3</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">MagmaRingModuloSpanOfZero</code> returns the magma ring <div id="-9019496826020066431" class="ltx_document" xmlns="http://www.w3.org/1999/xhtml">
+<div class="ltx_para" id="p1">
+<p class="ltx_p" id="p1.1"><span class="ltx_text ltx_markedasmath ltx_font_italic" id="p1.1.m1.1.1.1">R</span><span class="ltx_text ltx_markedasmath ltx_font_italic" id="p1.1.m1.1.1.2">M</span></p>
+</div>
+</div> modulo the relation given by the identification of <var class="Arg">z</var> with zero. This is an example of a magma ring modulo relations, see <a shape="rect" href="chap65_mj.html#X81B002EE799B5E77"><span class="RefLink">65.4</span></a>.</p> </body>
+    </html>

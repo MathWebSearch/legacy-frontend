@@ -1,0 +1,172 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 42: Permutations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap42.html#X80F808307A2D5AB8"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap42_mj.html#X80F808307A2D5AB8">42 <span class="Heading">Permutations</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap42_mj.html#X80F07BE2811D4BAC">42.1 <span class="Heading">IsPerm (Filter)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X7AA69C6686FC49EA">42.1-1 IsPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X82069E437D2DF9AA">42.1-2 IsPermCollection</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X819628B083B3939B">42.1-3 PermutationsFamily</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap42_mj.html#X7A21DE5779D21A6D">42.2 <span class="Heading">Comparison of Permutations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X7CEC03A9808E2E7C">42.2-1 \=</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X7BC944F57A04AFF2">42.2-2 DistancePerms</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X83A917F67D45C7EA">42.2-3 SmallestGeneratorPerm</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap42_mj.html#X82C255E2821C0721">42.3 <span class="Heading">Moved Points of Permutations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X84EF0A697F7A87DC">42.3-1 SmallestMovedPoint</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X84AA603987C94AC0">42.3-2 LargestMovedPoint</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X85E61B9C7A6B0CCA">42.3-3 MovedPoints</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X85E7B1E28430F49E">42.3-4 NrMovedPoints</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap42_mj.html#X79BE80267F4AA2B0">42.4 <span class="Heading">Sign and Cycle Structure</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X7BE5011B7C0DB704">42.4-1 SignPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X7944D1447804A69A">42.4-2 CycleStructurePerm</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap42_mj.html#X7B3194EC869D936D">42.5 <span class="Heading">Creating Permutations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X7A9DCFD986958C1E">42.5-1 ListPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X78D611D17EA6E3BC">42.5-2 PermList</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X8087DCC780B9656A">42.5-3 MappingPermListList</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X7EF8388E7DA8E600">42.5-4 RestrictedPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X8353AB8987E35DF3">42.5-5 AsPermutation</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">42 <span class="Heading">Permutations</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> offers a data type <em>permutation</em> to describe the elements of permutation groups.</p><p xmlns="http://www.w3.org/1999/xhtml">The points on which permutations in <strong class="pkg">GAP</strong> act are the positive integers up to a certain architecture dependent limit, and the image of a point <math id="4397143202281678237" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> under a permutation <math id="7088258602189223754" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> is written <math id="6534802450587029909" display="inline" alttext="i^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">p</mi>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑝</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i^{p}</annotation>
+  </semantics>
+</math>, which is expressed as <math id="-6388859526886970713" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">^</code><math id="-376598922901489164" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> in <strong class="pkg">GAP</strong>. (This action is also implemented by the function <code class="func">OnPoints</code> (<a shape="rect" href="chap41_mj.html#X7FE417DD837987B4"><span class="RefLink">41.2-1</span></a>).) If <math id="8432990838759694888" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">^</code><math id="7364350517672893877" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> is different from <math id="1944472657481957971" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>, we say that <math id="-8038761453732768437" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> is <em>moved</em> by <math id="-5770514634649074682" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>, otherwise it is <em>fixed</em>. Permutations in <strong class="pkg">GAP</strong> are entered and displayed in cycle notation, such as <code class="code">(1,2,3)(4,5)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The preimage of the point <math id="5577191253379225630" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> under the permutation <math id="7488564157016438306" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> can be computed as <math id="6566410485031107006" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">/</code><math id="8601161319635143793" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>, without constructing the inverse of <math id="-7837848017787528424" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">For arithmetic operations for permutations and their precedence, see <a shape="rect" href="chap31_mj.html#X7A2914307963E370"><span class="RefLink">31.12</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">In the names of the <strong class="pkg">GAP</strong> functions that deal with permutations, the word &quot;Permutation&quot; is usually abbreviated to &quot;Perm&quot;, to save typing. For example, the category test function for permutations is <code class="func">IsPerm</code> (<a shape="rect" href="chap42_mj.html#X7AA69C6686FC49EA"><span class="RefLink">42.1-1</span></a>).</p> </body>
+    </html>

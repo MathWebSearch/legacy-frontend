@@ -1,0 +1,22 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.14 Quotient Methods</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X846072F779B51087"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">47.14 <span class="Heading">Quotient Methods</span></h4><p xmlns="http://www.w3.org/1999/xhtml">An important class of algorithms for finitely presented groups are the <em>quotient algorithms</em> which compute quotient groups of a given finitely presented group. There are algorithms for epimorphisms onto abelian groups, <math id="1706777174229254862" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-groups and solvable groups. (The &quot;low index&quot; algorithm –<code class="func">LowIndexSubgroupsFpGroup</code> (<a shape="rect" href="chap47_mj.html#X85C5151380E19122"><span class="RefLink">47.10-1</span></a>)– can be considered as well as an algorithm that produces permutation group quotients.)</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">MaximalAbelianQuotient</code> (<a shape="rect" href="chap39_mj.html#X7BB93B9778C5A0B2"><span class="RefLink">39.18-4</span></a>), as defined for general groups, returns the largest abelian quotient of the given group.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=FreeGroup(2);;fp:=f/[f.1^6,f.2^6,(f.1*f.2)^12];</span>
+&lt;fp group on the generators [ f1, f2 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=MaximalAbelianQuotient(fp);</span>
+[ f1, f2 ] -&gt; [ f1, f3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(Image(hom));</span>
+36
+</pre></div> </body>
+    </html>

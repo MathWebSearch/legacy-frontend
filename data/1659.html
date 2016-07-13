@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.5-16 CollapsedMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X84F87C2282EFB0EE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.5-16 CollapsedMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CollapsedMat</code>( <var class="Arg">mat</var>, <var class="Arg">maps</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is a record with the components</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">fusion</code></strong></dt><dd><p>fusion that collapses those columns of <var class="Arg">mat</var> that are equal in <var class="Arg">mat</var> and also for all maps in the list <var class="Arg">maps</var>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">mat</code></strong></dt><dd><p>the image of <var class="Arg">mat</var> under that fusion.</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:= [ [ 1, 1, 1, 1 ], [ 2, -1, 0, 0 ], [ 4, 4, 1, 1 ] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">coll:= CollapsedMat( mat, [] );</span>
+rec( fusion := [ 1, 2, 3, 3 ], 
+  mat := [ [ 1, 1, 1 ], [ 2, -1, 0 ], [ 4, 4, 1 ] ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( last.mat, x -&gt; x{ last.fusion } ) = mat;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">coll:= CollapsedMat( mat, [ [ 1, 1, 1, 2 ] ] );</span>
+rec( fusion := [ 1, 2, 3, 4 ], 
+  mat := [ [ 1, 1, 1, 1 ], [ 2, -1, 0, 0 ], [ 4, 4, 1, 1 ] ] )
+</pre></div> </body>
+    </html>

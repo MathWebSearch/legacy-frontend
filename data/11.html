@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.11-21 ModuleByRestriction</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7E16630185CE2C10"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.11-21 ModuleByRestriction</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ModuleByRestriction</code>( <var class="Arg">V</var>, <var class="Arg">sub1</var>[, <var class="Arg">sub2</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">V</var> is an algebra module and <var class="Arg">sub1</var> is a subalgebra of the acting algebra of <var class="Arg">V</var>. This function returns the module that is the restriction of <var class="Arg">V</var> to <var class="Arg">sub1</var>. So it has the same underlying vector space as <var class="Arg">V</var>, but the acting algebra is <var class="Arg">sub</var>. If two subalgebras <var class="Arg">sub1</var>, <var class="Arg">sub2</var> are given then <var class="Arg">V</var> is assumed to be a bi-module, and <var class="Arg">sub1</var> a subalgebra of the algebra acting on the left, and <var class="Arg">sub2</var> a subalgebra of the algebra acting on the right.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= Rationals^[3,3];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= LeftAlgebraModuleByGenerators( A, \*, [ [ 1, 0, 0 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= Subalgebra( A, [ Basis(A)[1] ] );</span>
+&lt;algebra over Rationals, with 1 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">W:= ModuleByRestriction( V, B );</span>
+&lt;left-module over &lt;algebra over Rationals, with 1 generators&gt;&gt;
+</pre></div> </body>
+    </html>

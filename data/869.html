@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.1-4 IndeterminateName</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X7FD4AC807A1C8E27"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.1-4 IndeterminateName</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IndeterminateName</code>( <var class="Arg">fam</var>, <var class="Arg">nr</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ HasIndeterminateName</code>( <var class="Arg">fam</var>, <var class="Arg">nr</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SetIndeterminateName</code>( <var class="Arg">fam</var>, <var class="Arg">nr</var>, <var class="Arg">name</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SetIndeterminateName</code> assigns the name <var class="Arg">name</var> to indeterminate <var class="Arg">nr</var> in the rational functions family <var class="Arg">fam</var>. It issues an error if the indeterminate was already named.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IndeterminateName</code> returns the name of the <var class="Arg">nr</var>-th indeterminate (and returns <code class="keyw">fail</code> if no name has been assigned).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">HasIndeterminateName</code> tests whether indeterminate <var class="Arg">nr</var> has already been assigned a name.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IndeterminateName(FamilyObj(x),2);</span>
+&quot;y&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasIndeterminateName(FamilyObj(x),4);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetIndeterminateName(FamilyObj(x),10,&quot;bla&quot;);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Indeterminate(GF(3),10);</span>
+bla
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">As a convenience there is a special method installed for <code class="code">SetName</code> that will assign a name to an indeterminate.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:=Indeterminate(GF(3),5);</span>
+x_5
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName(a,&quot;ah&quot;);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a^5+a;</span>
+ah^5+ah
+</pre></div> </body>
+    </html>

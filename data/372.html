@@ -1,0 +1,10 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 56: Rings-&gt;56.9-5 DirectSum</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap56.html#X82AD6F187B550060"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">56.9-5 DirectSum</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DirectSum</code>( <var class="Arg">R{</var>, <var class="Arg">S}</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DirectSumOp</code>( <var class="Arg">list</var>, <var class="Arg">expl</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">These functions construct the direct sum of the rings given as arguments. <code class="code">DirectSum</code> takes an arbitrary positive number of arguments and calls the operation <code class="code">DirectSumOp</code>, which takes exactly two arguments, namely a nonempty list of rings and one of these rings. (This somewhat strange syntax allows the method selection to choose a reasonable method for special cases.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DirectSum(SmallRing(5,1),SmallRing(5,1));</span>
+&lt;ring with 2 generators&gt;
+</pre></div> </body>
+    </html>

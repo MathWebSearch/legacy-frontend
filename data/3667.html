@@ -1,0 +1,7 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 10: Streams-&gt;10.2-1 CloseStream</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap10.html#X786E5520803FDE00"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">10.2-1 CloseStream</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CloseStream</code>( <var class="Arg">stream</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">In order to preserve system resources and to flush output streams every stream should be closed as soon as it is no longer used using <code class="func">CloseStream</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">It is an error to try to read characters from or write characters to a closed stream. Closing a stream tells the <strong class="pkg">GAP</strong> kernel and/or the operating system kernel that the file is no longer needed. This may be necessary because the <strong class="pkg">GAP</strong> kernel and/or the operating system may impose a limit on how many streams may be open simultaneously.</p> </body>
+    </html>

@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.19-8 SubtractSet</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X80B427537EB07D09"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.19-8 SubtractSet</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SubtractSet</code>( <var class="Arg">set</var>, <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">subtracts <var class="Arg">list</var> from the proper set <var class="Arg">set</var>. This is equivalent to removing from <var class="Arg">set</var> all elements of <var class="Arg">list</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">set := [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SubtractSet( set, [ 6, 10 ] );  set;</span>
+[ 2, 3, 4, 5, 7, 8, 9, 11 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SubtractSet( set, [ 9, 4, 6, 8 ] );  set;</span>
+[ 2, 3, 5, 7, 11 ]
+</pre></div> </body>
+    </html>

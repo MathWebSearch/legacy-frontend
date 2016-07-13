@@ -1,0 +1,43 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 27: Strings and Characters-&gt;27.7-20 NumbersString</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27.html#X7848A9D878FD59BB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">27.7-20 NumbersString</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NumbersString</code>( <var class="Arg">s</var>, <var class="Arg">m</var>[, <var class="Arg">table</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">NumbersString</code> takes a string message <var class="Arg">s</var> and returns a list of integers, each not exceeding the integer <var class="Arg">m</var> that encode the message using the scheme <math id="-1892458474964060109" display="inline" alttext="A=11" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">11</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">11</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A=11</annotation>
+  </semantics>
+</math>, <math id="5252660197874584548" display="inline" alttext="B=12" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">12</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">12</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B=12</annotation>
+  </semantics>
+</math> and so on (and converting lower case to upper case). If a list of characters is given in <var class="Arg">table</var>, it is used instead for encoding).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:=NumbersString(&quot;Twas brillig and the slithy toves&quot;,1000000);</span>
+[ 303311, 291012, 281922, 221917, 101124, 141030, 181510, 292219, 
+  301835, 103025, 321529 ]
+</pre></div> </body>
+    </html>

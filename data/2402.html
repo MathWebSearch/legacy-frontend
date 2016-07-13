@@ -1,0 +1,56 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 75: Monomiality Questions-&gt;75.3-1 TestHomogeneous</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap75.html#X81FD26947924C500"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">75.3-1 TestHomogeneous</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TestHomogeneous</code>( <var class="Arg">chi</var>, <var class="Arg">N</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a group character <var class="Arg">chi</var> of the group <math id="-8698813747375347791" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, say, and a normal subgroup <var class="Arg">N</var> of <math id="9168714883371533869" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, <code class="func">TestHomogeneous</code> returns a record with information whether the restriction of <var class="Arg">chi</var> to <var class="Arg">N</var> is homogeneous, i.e., is a multiple of an irreducible character.</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">N</var> may be given also as list of conjugacy class positions w.r.t. the character table of <math id="-2202026428546837956" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">The components of the result are</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">isHomogeneous</code></strong></dt><dd><p><code class="keyw">true</code> or <code class="keyw">false</code>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">comment</code></strong></dt><dd><p>a string telling a reason for the value of the <code class="code">isHomogeneous</code> component,</p>
+
+</dd><dt><strong class="Mark"><code class="code">character</code></strong></dt><dd><p>irreducible constituent of the restriction, only bound if the restriction had to be checked,</p>
+
+</dd><dt><strong class="Mark"><code class="code">multiplicity</code></strong></dt><dd><p>multiplicity of the <code class="code">character</code> component in the restriction of <var class="Arg">chi</var>.</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n:= DerivedSubgroup( Sl23 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi:= Irr( Sl23 )[7];</span>
+Character( CharacterTable( SL(2,3) ), [ 3, 0, 0, 3, 0, 0, -1 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TestHomogeneous( chi, n );</span>
+rec( character := Character( CharacterTable( Group(
+    [ [ [ 0*Z(3), Z(3) ], [ Z(3)^0, 0*Z(3) ] ], 
+      [ [ Z(3), 0*Z(3) ], [ 0*Z(3), Z(3) ] ], 
+      [ [ Z(3), Z(3)^0 ], [ Z(3)^0, Z(3)^0 ] ] ]) ),
+  [ 1, -1, 1, -1, 1 ] ), comment := &quot;restriction checked&quot;,
+  isHomogeneous := false, multiplicity := 1 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi:= Irr( Sl23 )[4];</span>
+Character( CharacterTable( SL(2,3) ), [ 2, 1, 1, -2, -1, -1, 0 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cln:= ClassPositionsOfNormalSubgroup( CharacterTable( Sl23 ), n );</span>
+[ 1, 4, 7 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TestHomogeneous( chi, cln );</span>
+rec( comment := &quot;restricts irreducibly&quot;, isHomogeneous := true )
+</pre></div> </body>
+    </html>

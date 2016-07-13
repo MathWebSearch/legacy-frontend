@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 13: Types of Objects-&gt;13.6-3 AttributeValueNotSet</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap13.html#X8529F8A17884A32C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">13.6-3 AttributeValueNotSet</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AttributeValueNotSet</code>( <var class="Arg">attr</var>, <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If the value of the attribute <var class="Arg">attr</var> is already stored for <var class="Arg">obj</var>, <code class="code">AttributeValueNotSet</code> simply returns this value. Otherwise the value of <code class="code"><var class="Arg">attr</var>( <var class="Arg">obj</var> )</code> is computed and returned <em>without storing it</em> in <var class="Arg">obj</var>. This can be useful when &quot;large&quot; attribute values (such as element lists) are needed only once and shall not be stored in the object.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasAsSSortedList(g);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AttributeValueNotSet(AsSSortedList,g);</span>
+[ (), (4,5), (1,2,3), (1,2,3)(4,5), (1,3,2), (1,3,2)(4,5) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasAsSSortedList(g);</span>
+false
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The normal behaviour of attributes (when called with just one argument) is that once a method has been selected and executed, and has returned a value the setter of the attribute is called, to (possibly) store the computed value. In special circumstances, this behaviour can be altered dynamically on an attribute-by-attribute basis, using the functions <code class="code">DisableAttributeValueStoring</code> and <code class="code">EnableAttributeValueStoring</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">In general, the code in the library assumes, for efficiency, but not for correctness, that attribute values <em>will</em> be stored (in suitable objects), so disabling storing may cause substantial computations to be repeated.</p> </body>
+    </html>

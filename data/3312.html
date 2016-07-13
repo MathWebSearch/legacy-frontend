@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 80: Examples of Extending the System-&gt;80.8-1 Example: M-groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap80.html#X7DC936877A3330D0"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">80.8-1 <span class="Heading">Example: M-groups</span></h5><p xmlns="http://www.w3.org/1999/xhtml">M-groups are finite groups for which all irreducible complex representations are induced from linear representations of subgroups, it turns out that they are all solvable and that every supersolvable group is an M-group. See <a shape="rect" href="chapBib_mj.html#biBIsa76">[Isa76]</a> for further details.</p><p xmlns="http://www.w3.org/1999/xhtml">Solvability and supersolvability both are testable properties. We therefore declare <code class="code">IsMGroup</code> as a property for solvable groups:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+IsMGroup:=NewProperty(&quot;IsMGroup&quot;,IsSolvableGroup);
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The filter <code class="func">IsSolvableGroup</code> (<a shape="rect" href="chap39_mj.html#X809C78D5877D31DF"><span class="RefLink">39.15-6</span></a>) in this declaration <em>only</em> means that methods for <code class="code">IsMGroup</code> by default can only be installed for groups that are (and know to be) solvable (though they could be installed for more general situations using <code class="func">InstallOtherMethod</code> (<a shape="rect" href="chap78_mj.html#X7D2C12DB841CE539"><span class="RefLink">78.2-2</span></a>)). It does not yet imply that M-groups are solvable. We must do this deliberately via an implication and we use the same technique to imply that every supersolvable group is an M-group.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+InstallTrueMethod(IsSolvableGroup,IsMGroup);
+InstallTrueMethod(IsMGroup,IsSupersolvableGroup);
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Now we might install a method that tests for solvable groups whether they are M-groups:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+InstallMethod(IsMGroup,&quot;for solvable groups&quot;,[IsSolvableGroup],
+function(G)
+  [... code omitted. The function must return `true' or `false' ...]
+end);
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that this example of declaring the <code class="code">IsMGroup</code> property for solvable groups is not a part of the <strong class="pkg">GAP</strong> library, which uses a similar but different filter <code class="func">IsMonomialGroup</code> (<a shape="rect" href="chap39_mj.html#X83977EB97A8E2290"><span class="RefLink">39.15-9</span></a>).</p> </body>
+    </html>

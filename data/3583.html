@@ -1,0 +1,100 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 4: The Programming Language-&gt;4.23 Function</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap4.html#X815F71EA7BC0EB6F"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">4.23 <span class="Heading">Function</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">function( [ <var class="Arg">arg-ident</var> {, <var class="Arg">arg-ident</var>} ] )</code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">  [local <var class="Arg">loc-ident</var> {, <var class="Arg">loc-ident</var>} ; ]</code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">  <var class="Arg">statements</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">end</code></p><p xmlns="http://www.w3.org/1999/xhtml">A function is in fact a literal and not a statement. Such a function literal can be assigned to a variable or to a list element or a record component. Later this function can be called as described in <a shape="rect" href="chap4_mj.html#X78C70489791FDF43"><span class="RefLink">4.11</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">The following is an example of a function definition. It is a function to compute values of the Fibonacci sequence (see <code class="func">Fibonacci</code> (<a shape="rect" href="chap16_mj.html#X85AE1D70803A886C"><span class="RefLink">16.3-1</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fib := function ( n )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    local f1, f2, f3, i;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    f1 := 1; f2 := 1;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    for i in [3..n] do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      f3 := f1 + f2;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      f1 := f2;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      f2 := f3;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    od;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    return f2;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( [1..10], fib );</span>
+[ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Because for each of the formal arguments <var class="Arg">arg-ident</var> and for each of the formal locals <var class="Arg">loc-ident</var> a new variable is allocated when the function is called (see <a shape="rect" href="chap4_mj.html#X78C70489791FDF43"><span class="RefLink">4.11</span></a>), it is possible that a function calls itself. This is usually called <em>recursion</em>. The following is a recursive function that computes values of the Fibonacci sequence.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fib := function ( n )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    if n &lt; 3 then</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      return 1;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    else</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      return fib(n-1) + fib(n-2);</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    fi;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">  end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( [1..10], fib );</span>
+[ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that the recursive version needs <code class="code">2 * fib(<var class="Arg">n</var>)-1</code> steps to compute <code class="code">fib(<var class="Arg">n</var>)</code>, while the iterative version of <code class="code">fib</code> needs only <code class="code"><var class="Arg">n</var>-2</code> steps. Both are not optimal however, the library function <code class="func">Fibonacci</code> (<a shape="rect" href="chap16_mj.html#X85AE1D70803A886C"><span class="RefLink">16.3-1</span></a>) only needs about <code class="code">Log(<var class="Arg">n</var>)</code> steps.</p><p xmlns="http://www.w3.org/1999/xhtml">As noted in Section <a shape="rect" href="chap4_mj.html#X78C70489791FDF43"><span class="RefLink">4.11</span></a>, the case where a function's last argument is followed by <code class="code">...</code> is special. It provides a way of defining a function with a variable number of arguments. The values of the actual arguments are computed and the first ones are assigned to the new variables corresponding to the formal arguments before the last argument, if any. The values of all the remaining actual arguments are stored in a list and this list is assigned to the new variable corresponding to the final formal argument. There are two typical scenarios for wanting such a possibility: having optional arguments and having any number of arguments.</p><p xmlns="http://www.w3.org/1999/xhtml">The following example shows one way that the function <code class="func">Position</code> (<a shape="rect" href="chap21_mj.html#X79975EC6783B4293"><span class="RefLink">21.16-1</span></a>) might be encoded and demonstrates the &quot;optional argument&quot; scenario.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">position := function ( list, obj, arg... )    </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    local pos;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    if 0 = Length(arg) then</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      pos := 0;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    else</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      pos := arg[1];</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    fi;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    repeat</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      pos := pos + 1;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      if pos &gt; Length(list) then</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        return fail;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      fi;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    until list[pos] = obj;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    return pos;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   end;</span>
+function( list, obj, arg... ) ... end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">position([1, 4, 2], 4);</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">position([1, 4, 2], 3);</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">position([1, 4, 2], 4, 2);</span>
+fail
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The following example demonstrates the &quot;any number of arguments&quot; scenario.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sum := function ( l... )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    local total, x;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    total := 0;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    for x in l do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      total := total + x;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    od;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    return total;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   end;</span>
+function( l... ) ... end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sum(1, 2, 3);</span>
+6
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sum(1, 2, 3, 4);</span>
+10
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sum();</span>
+0
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The user should compare the above with the <strong class="pkg">GAP</strong> function <code class="func">Sum</code> (<a shape="rect" href="chap21_mj.html#X7A04B71C84CFCC2D"><span class="RefLink">21.20-26</span></a>) which, for example, may take a list argument and optionally an initial element (which zero should the sum of an empty list return?).</p><p xmlns="http://www.w3.org/1999/xhtml">GAP will also special case a function with a single argument with the name <code class="code">arg</code> as function with a variable length list of arguments, as if the user had written <code class="code">arg...</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that if a function <var class="Arg">f</var> is defined as above then <code class="code">NumberArgumentsFunction(<var class="Arg">f</var>)</code> returns minus the number of formal arguments (including the final argument) (see <code class="func">NumberArgumentsFunction</code> (<a shape="rect" href="chap5_mj.html#X877F03F77FD74C98"><span class="RefLink">5.1-2</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">Using the <code class="code">...</code> notation on a function <var class="Arg">f</var> with only a single named argument tells <strong class="pkg">GAP</strong> that when it encounters <var class="Arg">f</var> that it should form a list out of the arguments of <var class="Arg">f</var>. What if one wishes to do the &quot;opposite&quot;: tell <strong class="pkg">GAP</strong> that a list should be &quot;unwrapped&quot; and passed as several arguments to a function. The function <code class="func">CallFuncList</code> (<a shape="rect" href="chap5_mj.html#X7CF4DDB97D65AE52"><span class="RefLink">5.2-1</span></a>) is provided for this purpose.</p><p xmlns="http://www.w3.org/1999/xhtml">Also see Chapter <a shape="rect" href="chap5_mj.html#X86FA580F8055B274"><span class="RefLink">5</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">arg-ident</var> -&gt; <var class="Arg">expr</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">This is a shorthand for</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">function ( <var class="Arg">arg-ident</var> ) return <var class="Arg">expr</var>; end.</code></p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">arg-ident</var> must be a single identifier, i.e., it is not possible to write functions of several arguments this way. Also <code class="code">arg</code> is not treated specially, so it is also impossible to write functions that take a variable number of arguments this way.</p><p xmlns="http://www.w3.org/1999/xhtml">The following is an example of a typical use of such a function</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Sum( List( [1..100], x -&gt; x^2 ) );</span>
+338350
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">When the definition of a function <var class="Arg">fun1</var> is evaluated inside another function <var class="Arg">fun2</var>, <strong class="pkg">GAP</strong> binds all the identifiers inside the function <var class="Arg">fun1</var> that are identifiers of an argument or a local of <var class="Arg">fun2</var> to the corresponding variable. This set of bindings is called the environment of the function <var class="Arg">fun1</var>. When <var class="Arg">fun1</var> is called, its body is executed in this environment. The following implementation of a simple stack uses this. Values can be pushed onto the stack and then later be popped off again. The interesting thing here is that the functions <code class="code">push</code> and <code class="code">pop</code> in the record returned by <code class="code">Stack</code> access the local variable <code class="code">stack</code> of <code class="code">Stack</code>. When <code class="code">Stack</code> is called, a new variable for the identifier <code class="code">stack</code> is created. When the function definitions of <code class="code">push</code> and <code class="code">pop</code> are then evaluated (as part of the <code class="keyw">return</code> statement) each reference to <code class="code">stack</code> is bound to this new variable. Note also that the two stacks <code class="code">A</code> and <code class="code">B</code> do not interfere, because each call of <code class="code">Stack</code> creates a new variable for <code class="code">stack</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Stack := function ()</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    local  stack;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    stack := [];</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    return rec(</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      push := function ( value )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        Add( stack, value );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      end,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      pop := function ()</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        local  value;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        value := stack[Length(stack)];</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        Unbind( stack[Length(stack)] );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        return value;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      end</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"> end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := Stack();;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B := Stack();;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A.push( 1 ); A.push( 2 ); A.push( 3 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B.push( 4 ); B.push( 5 ); B.push( 6 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A.pop(); A.pop(); A.pop();</span>
+3
+2
+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B.pop(); B.pop(); B.pop();</span>
+6
+5
+4
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">This feature should be used rarely, since its implementation in <strong class="pkg">GAP</strong> is not very efficient.</p> </body>
+    </html>

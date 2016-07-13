@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.23 Enumerators</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7EA3ACE27E43D174"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.23 <span class="Heading">Enumerators</span></h4><p xmlns="http://www.w3.org/1999/xhtml">An <em>enumerator</em> is an immutable list that need not store its elements explicitly but knows, from a set of basic data, how to determine the <math id="1412508568711545901" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th element and the position of a given object. A typical example of this is a vector space over a finite field with <math id="8745617884117469425" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑞</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
+  </semantics>
+</math> elements, say, for which it is very easy to enumerate all elements using <math id="-1900133902111893980" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑞</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
+  </semantics>
+</math>-adic expansions of integers.</p><p xmlns="http://www.w3.org/1999/xhtml">Using this enumeration can be even quicker than a binary search in a sorted list of vectors, see <code class="func">IsQuickPositionList</code> (<a shape="rect" href="chap21_mj.html#X7BB462C17962647F"><span class="RefLink">21.23-1</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">On the one hand, element access to an enumerator may take more time than element access to an internally represented list containing the same elements. On the other hand, an enumerator may save a vast amount of memory. Take for example a permutation group of size a few millions. Even for moderate degree it is unlikely that a list of all its elements will fit into memory whereas it is no problem to construct an enumerator from a stabilizer chain (see <a shape="rect" href="chap43_mj.html#X7FA58C3A8283F3BD"><span class="RefLink">43.6</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">There are situations where one only wants to loop over the elements of a domain, without using the special facilities of an enumerator, namely the particular order of elements and the possibility to find the position of elements. For such cases, <strong class="pkg">GAP</strong> provides iterators (see <a shape="rect" href="chap30_mj.html#X85A3F00985453F95"><span class="RefLink">30.8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The functions <code class="func">Enumerator</code> (<a shape="rect" href="chap30_mj.html#X7EF8910F82B45EC7"><span class="RefLink">30.3-2</span></a>) and <code class="func">EnumeratorSorted</code> (<a shape="rect" href="chap30_mj.html#X80CD7DDC7D0C60D5"><span class="RefLink">30.3-3</span></a>) return enumerators of domains. Most of the special implementations of enumerators in the <strong class="pkg">GAP</strong> library are based on the general interface that is provided by <code class="func">EnumeratorByFunctions</code> (<a shape="rect" href="chap30_mj.html#X85E149177AC547C3"><span class="RefLink">30.3-4</span></a>); one generic example is <code class="func">EnumeratorByBasis</code> (<a shape="rect" href="chap61_mj.html#X7EB0D16A7EC2DEE3"><span class="RefLink">61.6-5</span></a>), which can be used to get an enumerator of a finite dimensional free module.</p><p xmlns="http://www.w3.org/1999/xhtml">Also enumerators for non-domains can be implemented via <code class="func">EnumeratorByFunctions</code> (<a shape="rect" href="chap30_mj.html#X85E149177AC547C3"><span class="RefLink">30.3-4</span></a>); for a discussion, see <a shape="rect" href="chap79_mj.html#X849D8BC278649EA5"><span class="RefLink">79.13</span></a>.</p> </body>
+    </html>

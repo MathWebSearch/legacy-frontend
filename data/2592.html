@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.10-5 Hom</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X80015C78876B4F1E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.10-5 Hom</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Hom</code>( <var class="Arg">F</var>, <var class="Arg">V</var>, <var class="Arg">W</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a field <var class="Arg">F</var> and two vector spaces <var class="Arg">V</var> and <var class="Arg">W</var> that can be regarded as <var class="Arg">F</var>-modules (see <code class="func">AsLeftModule</code> (<a shape="rect" href="chap57_mj.html#X7EB3E46D7BC4A35C"><span class="RefLink">57.1-5</span></a>)), <code class="func">Hom</code> returns the <var class="Arg">F</var>-vector space of all <var class="Arg">F</var>-linear mappings from <var class="Arg">V</var> to <var class="Arg">W</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= Rationals^2;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">W:= VectorSpace( Rationals, [ [ 1, 0, 1 ], [ 1, 2, 3 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H:= Hom( Rationals, V, W );</span>
+Hom( Rationals, ( Rationals^2 ), &lt;vector space over Rationals, with 
+2 generators&gt; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Dimension( H );</span>
+4
+</pre></div> </body>
+    </html>

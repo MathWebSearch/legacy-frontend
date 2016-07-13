@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.4-1 Length</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X8680FCAD83019E70"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">37.4-1 Length</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Length</code>( <var class="Arg">w</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For an associative word <var class="Arg">w</var>, <code class="func">Length</code> returns the number of letters in <var class="Arg">w</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := FreeGroup(&quot;a&quot;,&quot;b&quot;);; gens := GeneratorsOfGroup(f);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := gens[1];; b := gens[2];;w := a^5*b*a^2*b^-4*a;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"> w; Length( w );  Length( a^17 );  Length( w^0 );</span>
+a^5*b*a^2*b^-4*a
+13
+17
+0
+</pre></div> </body>
+    </html>

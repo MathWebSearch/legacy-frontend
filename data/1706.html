@@ -1,0 +1,92 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 65: Magma Rings-&gt;65.6 Technical Details about the Implementation of Magma Rings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap65.html#X79889F017F2EB7ED"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">65.6 <span class="Heading">Technical Details about the Implementation of Magma Rings</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The <em>family</em> containing elements in the magma ring <math id="-9165101355275610750" display="inline" alttext="RM" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+      <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">M</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <times xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑀</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">RM</annotation>
+  </semantics>
+</math> in fact contains all elements with coefficients in the family of elements of <math id="9140931697122904574" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> and magma elements in the family of elements of <math id="-3298203480657447177" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math>. So arithmetic operations with coefficients outside <math id="4713436116245887525" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> or with magma elements outside <math id="3885801088370580161" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> might create elements outside <math id="-1441359005527008517" display="inline" alttext="RM" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+      <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">M</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <times xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑀</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">RM</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">It should be mentioned that each call of <code class="func">FreeMagmaRing</code> (<a shape="rect" href="chap65_mj.html#X7B9AF0A47F44E4B4"><span class="RefLink">65.1-1</span></a>) creates a new family of elements, so for example the elements of two group rings of permutation groups over the same ring lie in different families and therefore are regarded as different.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= SymmetricGroup( 3 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h:= AlternatingGroup( 3 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSubset( g, h );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= GF(2);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fg:= GroupRing( f, g );</span>
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fh:= GroupRing( f, h );</span>
+&lt;algebra-with-one over GF(2), with 1 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSubset( fg, fh );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">o1:= One( fh );  o2:= One( fg );  o1 = o2;</span>
+(Z(2)^0)*()
+(Z(2)^0)*()
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">emb:= Embedding( g, fg );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">im:= Image( emb, h );</span>
+&lt;group of size 3 with 1 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSubset( fg, im );</span>
+true
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">There is <em>no</em> generic <em>external representation</em> for elements in an arbitrary free magma ring. For example, polynomials are elements of a free magma ring, and they have an external representation relying on the special form of the underlying monomials. On the other hand, elements in a group ring of a permutation group do not admit such an external representation.</p><p xmlns="http://www.w3.org/1999/xhtml">For convenience, magma rings constructed with <code class="func">FreeAlgebra</code> (<a shape="rect" href="chap62_mj.html#X83484C917D8F7A1A"><span class="RefLink">62.3-1</span></a>), <code class="func">FreeAssociativeAlgebra</code> (<a shape="rect" href="chap62_mj.html#X87835FFE79D2E068"><span class="RefLink">62.3-3</span></a>), <code class="func">FreeAlgebraWithOne</code> (<a shape="rect" href="chap62_mj.html#X7FBD04B07B85623D"><span class="RefLink">62.3-2</span></a>), and <code class="func">FreeAssociativeAlgebraWithOne</code> (<a shape="rect" href="chap62_mj.html#X845A777584A7D711"><span class="RefLink">62.3-4</span></a>) support an external representation of their elements, which is defined as a list of length 2, the first entry being the zero coefficient, the second being a list with the external representations of the magma elements at the odd positions and the corresponding coefficients at the even positions.</p><p xmlns="http://www.w3.org/1999/xhtml">As the above examples show, there are several possible representations of magma ring elements, the representations used for polynomials (see Chapter  <a shape="rect" href="chap66_mj.html#X7A14A6588268810A"><span class="RefLink">66</span></a>) as well as the default representation <code class="func">IsMagmaRingObjDefaultRep</code> (<a shape="rect" href="chap65_mj.html#X827B2D7D7E41780C"><span class="RefLink">65.2-1</span></a>) of magma ring elements. The latter simply stores the zero coefficient and a list containing the coefficients of the element at the even positions and the corresponding magma elements at the odd positions, where the succession is compatible with the ordering of magma elements via <code class="code">\&lt;</code>.</p><div class="chlinkprevnextbot" xmlns="http://www.w3.org/1999/xhtml"> <a shape="rect" href="chap0_mj.html">[Top of Book]</a>   <a shape="rect" href="chap0_mj.html#contents">[Contents]</a>    <a shape="rect" href="chap64_mj.html">[Previous Chapter]</a>    <a shape="rect" href="chap66_mj.html">[Next Chapter]</a>   </div><div class="chlinkbot" xmlns="http://www.w3.org/1999/xhtml"><span class="chlink1">Goto Chapter: </span><a shape="rect" href="chap0_mj.html">Top</a>  <a shape="rect" href="chap1_mj.html">1</a>  <a shape="rect" href="chap2_mj.html">2</a>  <a shape="rect" href="chap3_mj.html">3</a>  <a shape="rect" href="chap4_mj.html">4</a>  <a shape="rect" href="chap5_mj.html">5</a>  <a shape="rect" href="chap6_mj.html">6</a>  <a shape="rect" href="chap7_mj.html">7</a>  <a shape="rect" href="chap8_mj.html">8</a>  <a shape="rect" href="chap9_mj.html">9</a>  <a shape="rect" href="chap10_mj.html">10</a>  <a shape="rect" href="chap11_mj.html">11</a>  <a shape="rect" href="chap12_mj.html">12</a>  <a shape="rect" href="chap13_mj.html">13</a>  <a shape="rect" href="chap14_mj.html">14</a>  <a shape="rect" href="chap15_mj.html">15</a>  <a shape="rect" href="chap16_mj.html">16</a>  <a shape="rect" href="chap17_mj.html">17</a>  <a shape="rect" href="chap18_mj.html">18</a>  <a shape="rect" href="chap19_mj.html">19</a>  <a shape="rect" href="chap20_mj.html">20</a>  <a shape="rect" href="chap21_mj.html">21</a>  <a shape="rect" href="chap22_mj.html">22</a>  <a shape="rect" href="chap23_mj.html">23</a>  <a shape="rect" href="chap24_mj.html">24</a>  <a shape="rect" href="chap25_mj.html">25</a>  <a shape="rect" href="chap26_mj.html">26</a>  <a shape="rect" href="chap27_mj.html">27</a>  <a shape="rect" href="chap28_mj.html">28</a>  <a shape="rect" href="chap29_mj.html">29</a>  <a shape="rect" href="chap30_mj.html">30</a>  <a shape="rect" href="chap31_mj.html">31</a>  <a shape="rect" href="chap32_mj.html">32</a>  <a shape="rect" href="chap33_mj.html">33</a>  <a shape="rect" href="chap34_mj.html">34</a>  <a shape="rect" href="chap35_mj.html">35</a>  <a shape="rect" href="chap36_mj.html">36</a>  <a shape="rect" href="chap37_mj.html">37</a>  <a shape="rect" href="chap38_mj.html">38</a>  <a shape="rect" href="chap39_mj.html">39</a>  <a shape="rect" href="chap40_mj.html">40</a>  <a shape="rect" href="chap41_mj.html">41</a>  <a shape="rect" href="chap42_mj.html">42</a>  <a shape="rect" href="chap43_mj.html">43</a>  <a shape="rect" href="chap44_mj.html">44</a>  <a shape="rect" href="chap45_mj.html">45</a>  <a shape="rect" href="chap46_mj.html">46</a>  <a shape="rect" href="chap47_mj.html">47</a>  <a shape="rect" href="chap48_mj.html">48</a>  <a shape="rect" href="chap49_mj.html">49</a>  <a shape="rect" href="chap50_mj.html">50</a>  <a shape="rect" href="chap51_mj.html">51</a>  <a shape="rect" href="chap52_mj.html">52</a>  <a shape="rect" href="chap53_mj.html">53</a>  <a shape="rect" href="chap54_mj.html">54</a>  <a shape="rect" href="chap55_mj.html">55</a>  <a shape="rect" href="chap56_mj.html">56</a>  <a shape="rect" href="chap57_mj.html">57</a>  <a shape="rect" href="chap58_mj.html">58</a>  <a shape="rect" href="chap59_mj.html">59</a>  <a shape="rect" href="chap60_mj.html">60</a>  <a shape="rect" href="chap61_mj.html">61</a>  <a shape="rect" href="chap62_mj.html">62</a>  <a shape="rect" href="chap63_mj.html">63</a>  <a shape="rect" href="chap64_mj.html">64</a>  <a shape="rect" href="chap65_mj.html">65</a>  <a shape="rect" href="chap66_mj.html">66</a>  <a shape="rect" href="chap67_mj.html">67</a>  <a shape="rect" href="chap68_mj.html">68</a>  <a shape="rect" href="chap69_mj.html">69</a>  <a shape="rect" href="chap70_mj.html">70</a>  <a shape="rect" href="chap71_mj.html">71</a>  <a shape="rect" href="chap72_mj.html">72</a>  <a shape="rect" href="chap73_mj.html">73</a>  <a shape="rect" href="chap74_mj.html">74</a>  <a shape="rect" href="chap75_mj.html">75</a>  <a shape="rect" href="chap76_mj.html">76</a>  <a shape="rect" href="chap77_mj.html">77</a>  <a shape="rect" href="chap78_mj.html">78</a>  <a shape="rect" href="chap79_mj.html">79</a>  <a shape="rect" href="chap80_mj.html">80</a>  <a shape="rect" href="chap81_mj.html">81</a>  <a shape="rect" href="chap82_mj.html">82</a>  <a shape="rect" href="chap83_mj.html">83</a>  <a shape="rect" href="chap84_mj.html">84</a>  <a shape="rect" href="chap85_mj.html">85</a>  <a shape="rect" href="chap86_mj.html">86</a>  <a shape="rect" href="chap87_mj.html">87</a>  <a shape="rect" href="chapBib_mj.html">Bib</a>  <a shape="rect" href="chapInd_mj.html">Ind</a>  </div><hr xmlns="http://www.w3.org/1999/xhtml"/><p class="foot" xmlns="http://www.w3.org/1999/xhtml">generated by <a shape="rect" href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p> </body>
+    </html>

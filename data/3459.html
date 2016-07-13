@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.19-7 IntersectSet</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X8473AA657FEC3D4D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.19-7 IntersectSet</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IntersectSet</code>( <var class="Arg">set</var>, <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">intersects the proper set <var class="Arg">set</var> with <var class="Arg">list</var>. This is equivalent to removing from <var class="Arg">set</var> all elements of <var class="Arg">set</var> that are not contained in <var class="Arg">list</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">set := [ 2, 3, 4, 5, 7, 8, 9, 11, 13, 16 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IntersectSet( set, [ 3, 5, 7, 9, 11, 13, 15, 17 ] );  set;</span>
+[ 3, 5, 7, 9, 11, 13 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IntersectSet( set, [ 9, 4, 6, 8 ] );  set;</span>
+[ 9 ]
+</pre></div> </body>
+    </html>

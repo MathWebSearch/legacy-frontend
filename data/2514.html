@@ -1,0 +1,399 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.4 Decompositions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X79F2EFEC7C3EA80C"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">25.4 <span class="Heading">Decompositions</span></h4><p xmlns="http://www.w3.org/1999/xhtml">For computing the decomposition of a vector of integers into the rows of a matrix of integers, with integral coefficients, one can use <math id="1382814149270556546" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-adic approximations, as follows.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="-937890642541010923" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> be a square integral matrix, and <math id="-1781301099963636321" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> an odd prime. The reduction of <math id="-4502948100430885827" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> modulo <math id="-7782612386549913786" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> is <math id="3665419331634074146" display="inline" alttext="\overline{A}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mover xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" accent="true">
+      <mi xref="p1.1.m1.1.1.2.cmml" id="p1.1.m1.1.1.2">A</mi>
+      <mo xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">¯</mo>
+    </mover>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">
+        <ci xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">¯</ci>
+        <ci xref="p1.1.m1.1.1.2" id="p1.1.m1.1.1.2.cmml">𝐴</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\overline{A}</annotation>
+  </semantics>
+</math>, its entries are chosen in the interval <math id="-621568413129544328" display="inline" alttext="[-(p-1)/2,(p-1)/2]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19.2">
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">-</mo>
+        <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19.2.1">
+          <mrow xref="p1.1.m1.1.19.2.1.1.2.cmml" id="p1.1.m1.1.19.2.1.1">
+            <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+            <mrow xref="p1.1.m1.1.19.2.1.1.2.cmml" id="p1.1.m1.1.19.2.1.1.2">
+              <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">p</mi>
+              <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">-</mo>
+              <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">1</mn>
+            </mrow>
+            <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+          </mrow>
+          <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">/</mo>
+          <mn xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">2</mn>
+        </mrow>
+      </mrow>
+      <mo id="p1.1.m1.1.10">,</mo>
+      <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19.3">
+        <mrow xref="p1.1.m1.1.19.3.1.2.cmml" id="p1.1.m1.1.19.3.1">
+          <mo id="p1.1.m1.1.11" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.19.3.1.2.cmml" id="p1.1.m1.1.19.3.1.2">
+            <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">p</mi>
+            <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">-</mo>
+            <mn xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">1</mn>
+          </mrow>
+          <mo id="p1.1.m1.1.15" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">/</mo>
+        <mn xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">2</mn>
+      </mrow>
+      <mo id="p1.1.m1.1.18" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.19" id="p1.1.m1.1.19.1.cmml" closure="closed">
+        <apply xref="p1.1.m1.1.19" id="p1.1.m1.1.19.2.cmml">
+          <minus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <apply xref="p1.1.m1.1.19" id="p1.1.m1.1.19.2.1.cmml">
+            <divide xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+            <apply xref="p1.1.m1.1.19.2.1.1" id="p1.1.m1.1.19.2.1.1.2.cmml">
+              <minus xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+              <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑝</ci>
+              <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">1</cn>
+            </apply>
+            <cn xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.19" id="p1.1.m1.1.19.3.cmml">
+          <divide xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml"/>
+          <apply xref="p1.1.m1.1.19.3.1" id="p1.1.m1.1.19.3.1.2.cmml">
+            <minus xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑝</ci>
+            <cn xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml" type="integer">1</cn>
+          </apply>
+          <cn xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml" type="integer">2</cn>
+        </apply>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[-(p-1)/2,(p-1)/2]</annotation>
+  </semantics>
+</math>. If <math id="-5632877012961192913" display="inline" alttext="\overline{A}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mover xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" accent="true">
+      <mi xref="p1.1.m1.1.1.2.cmml" id="p1.1.m1.1.1.2">A</mi>
+      <mo xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">¯</mo>
+    </mover>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">
+        <ci xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">¯</ci>
+        <ci xref="p1.1.m1.1.1.2" id="p1.1.m1.1.1.2.cmml">𝐴</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\overline{A}</annotation>
+  </semantics>
+</math> is regular over the field with <math id="-3767660828879964062" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> elements, we can form <math id="125097208122955368" display="inline" alttext="A^{\prime}=\overline{A}^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msup xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+        <mo xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">′</mo>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <msup xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mover xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" accent="true">
+          <mi xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4.2">A</mi>
+          <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">¯</mo>
+        </mover>
+        <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+          <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">-</mo>
+          <mn xref="p1.1.m1.1.5.1.2.cmml" id="p1.1.m1.1.5.1.2">1</mn>
+        </mrow>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <csymbol id="p1.1.m1.1.6.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">′</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+            <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">¯</ci>
+            <ci xref="p1.1.m1.1.4.2" id="p1.1.m1.1.4.2.cmml">𝐴</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+            <minus xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml"/>
+            <cn xref="p1.1.m1.1.5.1.2" id="p1.1.m1.1.5.1.2.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A^{\prime}=\overline{A}^{{-1}}</annotation>
+  </semantics>
+</math>. Now we consider the integral linear equation system <math id="-7277175696589472467" display="inline" alttext="xA=b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">A</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <times xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐴</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">xA=b</annotation>
+  </semantics>
+</math>, i.e., we look for an integral solution <math id="2055575880278118321" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math>. Define <math id="-3357800033045552554" display="inline" alttext="b_{0}=b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msub xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">0</mn>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">0</cn>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑏</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{0}=b</annotation>
+  </semantics>
+</math>, and then iteratively compute</p><p class="center" xmlns="http://www.w3.org/1999/xhtml">\[
+x_i = (b_i A') \bmod p,  b_{{i+1}} = (b_i - x_i A) / p,
+  i = 0, 1, 2, \ldots .
+\]</p><p xmlns="http://www.w3.org/1999/xhtml">By induction, we get</p><p class="center" xmlns="http://www.w3.org/1999/xhtml">\[
+p^{{i+1}} b_{{i+1}} + \left( \sum_{{j = 0}}^i p^j x_j \right) A = b.
+\]</p><p xmlns="http://www.w3.org/1999/xhtml">If there is an integral solution <math id="-4948597047221608348" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> then it is unique, and there is an index <math id="3131896061176198372" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> such that <math id="-7146466004711214681" display="inline" alttext="b_{{l+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+      <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+        <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">l</mi>
+        <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">+</mo>
+        <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">1</mn>
+      </mrow>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+        <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <plus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑙</ci>
+          <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{{l+1}}</annotation>
+  </semantics>
+</math> is zero and <math id="-4764851508517907272" display="inline" alttext="x=\sum_{{j=0}}^{l}p^{j}x_{j}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">
+        <msubsup xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">
+          <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3" symmetric="true" largeop="true">∑</mo>
+          <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">
+            <mi xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.4.1.1">j</mi>
+            <mo xref="p1.1.m1.1.4.1.2.cmml" id="p1.1.m1.1.4.1.2">=</mo>
+            <mn xref="p1.1.m1.1.4.1.3.cmml" id="p1.1.m1.1.4.1.3">0</mn>
+          </mrow>
+          <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">l</mi>
+        </msubsup>
+        <mrow xref="p1.1.m1.1.10.1.2.cmml" id="p1.1.m1.1.10.1.2">
+          <msup xref="p1.1.m1.1.10.1.2.2.cmml" id="p1.1.m1.1.10.1.2.2">
+            <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">p</mi>
+            <mi xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">j</mi>
+          </msup>
+          <mo xref="p1.1.m1.1.10.1.2.1.cmml" id="p1.1.m1.1.10.1.2.1">⁢</mo>
+          <msub xref="p1.1.m1.1.10.1.2.3.cmml" id="p1.1.m1.1.10.1.2.3">
+            <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">x</mi>
+            <mi xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">j</mi>
+          </msub>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <apply xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">
+          <apply xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml">
+            <csymbol id="p1.1.m1.1.10.1.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.10.1.1.2.cmml">
+              <csymbol id="p1.1.m1.1.10.1.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <sum xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+              <apply xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+                <eq xref="p1.1.m1.1.4.1.2" id="p1.1.m1.1.4.1.2.cmml"/>
+                <ci xref="p1.1.m1.1.4.1.1" id="p1.1.m1.1.4.1.1.cmml">𝑗</ci>
+                <cn xref="p1.1.m1.1.4.1.3" id="p1.1.m1.1.4.1.3.cmml" type="integer">0</cn>
+              </apply>
+            </apply>
+            <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝑙</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.10.1.2" id="p1.1.m1.1.10.1.2.cmml">
+            <times xref="p1.1.m1.1.10.1.2.1" id="p1.1.m1.1.10.1.2.1.cmml"/>
+            <apply xref="p1.1.m1.1.10.1.2.2" id="p1.1.m1.1.10.1.2.2.cmml">
+              <csymbol id="p1.1.m1.1.10.1.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑝</ci>
+              <ci xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">𝑗</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.10.1.2.3" id="p1.1.m1.1.10.1.2.3.cmml">
+              <csymbol id="p1.1.m1.1.10.1.2.3.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑥</ci>
+              <ci xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">𝑗</ci>
+            </apply>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x=\sum_{{j=0}}^{l}p^{j}x_{j}</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">There are two useful generalizations of this idea. First, <math id="-2423082552829152997" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> need not be square; it is only necessary that there is a square regular matrix formed by a subset of columns of <math id="252993112563433083" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>. Second, <math id="7921207465380996424" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> does not need to be integral; the entries may be cyclotomic integers as well, in this case one can replace each column of <math id="-5942829484568119940" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> by the columns formed by the coefficients w.r.t. an integral basis (which are integers). Note that this preprocessing must be performed compatibly for <math id="7821254990523615295" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> and <math id="-1525873567761203919" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> provides the following functions for this purpose (see also <code class="func">InverseMatMod</code> (<a shape="rect" href="chap24_mj.html#X7D8D1E0E83C7F872"><span class="RefLink">24.15-1</span></a>)).</p> </body>
+    </html>

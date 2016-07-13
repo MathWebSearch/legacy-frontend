@@ -1,0 +1,57 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.11-4 DecompositionMatrix</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X84701640811D2345"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.11-4 DecompositionMatrix</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DecompositionMatrix</code>( <var class="Arg">modtbl</var>[, <var class="Arg">blocknr</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">modtbl</var> be a Brauer character table.</p><p xmlns="http://www.w3.org/1999/xhtml">Called with one argument, <code class="func">DecompositionMatrix</code> returns the decomposition matrix of <var class="Arg">modtbl</var>, where the rows and columns are indexed by the irreducible characters of the ordinary character table of <var class="Arg">modtbl</var> and the irreducible characters of <var class="Arg">modtbl</var>, respectively,</p><p xmlns="http://www.w3.org/1999/xhtml">Called with two arguments, <code class="func">DecompositionMatrix</code> returns the decomposition matrix of the block of <var class="Arg">modtbl</var> with number <var class="Arg">blocknr</var>; the matrix is stored as value of the <code class="code">decmat</code> component of the <var class="Arg">blocknr</var>-th entry of the <code class="func">BlocksInfo</code> (<a shape="rect" href="chap71_mj.html#X7FF4CE4A7A272F88"><span class="RefLink">71.11-3</span></a>) list of <var class="Arg">modtbl</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">An ordinary irreducible character is in block <math id="7707742700132961540" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> if and only if all characters before the first character of the same block lie in <math id="652944426467001362" display="inline" alttext="i-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">-</mo>
+      <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <minus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+        <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i-1</annotation>
+  </semantics>
+</math> different blocks. An irreducible Brauer character is in block <math id="3766595821500959776" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> if it has nonzero scalar product with an ordinary irreducible character in block <math id="-2805704691983390526" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DecompositionMatrix</code> is based on the more general function <code class="func">Decomposition</code> (<a shape="rect" href="chap25_mj.html#X7911A60384C511AB"><span class="RefLink">25.4-1</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">modtbl:= CharacterTable( &quot;L3(2)&quot; ) mod 2;</span>
+BrauerTable( &quot;L3(2)&quot;, 2 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DecompositionMatrix( modtbl );</span>
+[ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 1, 1, 0 ], 
+  [ 1, 1, 1, 0 ], [ 0, 0, 0, 1 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DecompositionMatrix( modtbl, 1 );</span>
+[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], [ 0, 1, 1 ], [ 1, 1, 1 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DecompositionMatrix( modtbl, 2 );</span>
+[ [ 1 ] ]
+</pre></div> </body>
+    </html>

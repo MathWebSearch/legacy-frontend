@@ -1,0 +1,40 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 58: Fields and Division Rings-&gt;58.3-5 Traces of field elements and matrices</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap58.html#X7DD17EB581200AD6"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">58.3-5 <span class="Heading">Traces of field elements and matrices</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Trace</code>( [<var class="Arg">L</var>[, <var class="Arg">K</var>, ]]<var class="Arg">z</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Trace</code>( <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Trace</code> returns the trace of the field element <var class="Arg">z</var>. If two fields <var class="Arg">L</var> and <var class="Arg">K</var> are given then the trace is computed w.r.t. the field extension <math id="7570706165707607748" display="inline" alttext="\textit{L}&amp;gt;\textit{K}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mtext xref="p1.1.m1.1.1.1a.cmml" id="p1.1.m1.1.1.1">𝐿</mtext>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">g</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.5">;</mo>
+      <mtext xref="p1.1.m1.1.6.1a.cmml" id="p1.1.m1.1.6.1">𝐾</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml">
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <times xref="p1.1.m1.1.7.2.1" id="p1.1.m1.1.7.2.1.cmml"/>
+          <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">L</span>
+          </mtext>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑡</ci>
+        </apply>
+        <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.6.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">K</span>
+        </mtext>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{L}&amp;gt;\textit{K}</annotation>
+  </semantics>
+</math>, if only one field <var class="Arg">L</var> is given then <code class="code">LeftActingDomain( <var class="Arg">L</var> )</code> is taken as default for the subfield <var class="Arg">K</var>, and if no field is given then <code class="code">DefaultField( <var class="Arg">z</var> )</code> is taken as default for <var class="Arg">L</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>trace of a matrix</em> is the sum of its diagonal entries. Note that this is <em>not</em> compatible with the definition of <code class="func">Trace</code> for field elements, so the one-argument version is not suitable when matrices shall be regarded as field elements.</p> </body>
+    </html>

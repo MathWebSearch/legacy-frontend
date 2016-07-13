@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.7-4 ApplySimpleReflection</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X7829BC4D7F253649"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.7-4 ApplySimpleReflection</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ApplySimpleReflection</code>( <var class="Arg">SC</var>, <var class="Arg">i</var>, <var class="Arg">wt</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">SC</var> is the sparse Cartan matrix of a Weyl group. This function applies the <var class="Arg">i</var>-th simple reflection to the weight <var class="Arg">wt</var>, thus changing <var class="Arg">wt</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;F&quot;, 4, Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">W:= WeylGroup( RootSystem( L ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">C:= SparseCartanMatrix( W );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w:= [ 1, 1, 1, 1 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ApplySimpleReflection( C, 2, w );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w;</span>
+[ 1, -1, 1, 2 ]
+</pre></div> </body>
+    </html>

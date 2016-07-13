@@ -1,0 +1,55 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.20-13 Maximum</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X82CE0DE8828E4303"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.20-13 <span class="Heading">Maximum</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Maximum</code>( <var class="Arg">obj1</var>, <var class="Arg">obj2</var>, <var class="Arg">...</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Maximum</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">In the first form <code class="func">Maximum</code> returns the <em>maximum</em> of its arguments, i.e., one argument <var class="Arg">obj</var> for which <math id="6623160929447694384" display="inline" alttext="\textit{obj}\geq\textit{obj1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑜𝑏𝑗</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≥</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1" mathvariant="italic">obj1</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <geq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">obj</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">obj1</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{obj}\geq\textit{obj1}</annotation>
+  </semantics>
+</math>, <math id="403095524735110408" display="inline" alttext="\textit{obj}\geq\textit{obj2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑜𝑏𝑗</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≥</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1" mathvariant="italic">obj2</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <geq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">obj</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">obj2</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{obj}\geq\textit{obj2}</annotation>
+  </semantics>
+</math> etc.</p><p xmlns="http://www.w3.org/1999/xhtml">In the second form <code class="func">Maximum</code> takes a homogeneous list <var class="Arg">list</var> and returns the maximum of the elements in this list.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Maximum( -123, 700, 123, 0, -1000 );</span>
+700
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Maximum( [ -123, 700, 123, 0, -1000 ] );</span>
+700
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># lists are compared elementwise:</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Maximum( [1,2], [0,15], [1,5], [2,-11] );  </span>
+[ 2, -11 ]
+</pre></div> </body>
+    </html>

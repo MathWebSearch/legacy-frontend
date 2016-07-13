@@ -1,0 +1,411 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 18: Cyclotomic Numbers-&gt;18.4-5 NK</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap18.html#X844F0EBF849EDEB3"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">18.4-5 NK</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NK</code>( <var class="Arg">N</var>, <var class="Arg">k</var>, <var class="Arg">d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="7133874792135438008" display="inline" alttext="\textit{N}_{\textit{k}}^{(\textit{d})}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msubsup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑁</mtext>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑘</mtext>
+      <mrow xref="p1.1.m1.1.3.1.2.1.cmml" id="p1.1.m1.1.3.1">
+        <mo id="p1.1.m1.1.3.1.1" stretchy="false">(</mo>
+        <mtext xref="p1.1.m1.1.3.1.2.1a.cmml" id="p1.1.m1.1.3.1.2.1">𝑑</mtext>
+        <mo id="p1.1.m1.1.3.1.3" stretchy="false">)</mo>
+      </mrow>
+    </msubsup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <apply id="p1.1.m1.1.4.2.cmml">
+          <csymbol id="p1.1.m1.1.4.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+          </mtext>
+        </apply>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">d</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{N}_{\textit{k}}^{(\textit{d})}</annotation>
+  </semantics>
+</math> be the <math id="-9083140896373442987" display="inline" alttext="(\textit{d}+1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mtext xref="p1.1.m1.1.2.1a.cmml" id="p1.1.m1.1.2.1">𝑑</mtext>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">+</mo>
+        <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+      </mrow>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.2.cmml">
+        <plus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <mtext xref="p1.1.m1.1.6" id="p1.1.m1.1.2.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">d</span>
+        </mtext>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\textit{d}+1)</annotation>
+  </semantics>
+</math>-th integer with multiplicative order exactly <var class="Arg">k</var> modulo <var class="Arg">N</var>, chosen in the order of preference defined in Section <a shape="rect" href="chap18_mj.html#X842338F184E63894"><span class="RefLink">18.4-3</span></a>; <code class="func">NK</code> returns <math id="-5800612335666120996" display="inline" alttext="\textit{N}_{\textit{k}}^{(\textit{d})}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msubsup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑁</mtext>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑘</mtext>
+      <mrow xref="p1.1.m1.1.3.1.2.1.cmml" id="p1.1.m1.1.3.1">
+        <mo id="p1.1.m1.1.3.1.1" stretchy="false">(</mo>
+        <mtext xref="p1.1.m1.1.3.1.2.1a.cmml" id="p1.1.m1.1.3.1.2.1">𝑑</mtext>
+        <mo id="p1.1.m1.1.3.1.3" stretchy="false">)</mo>
+      </mrow>
+    </msubsup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <apply id="p1.1.m1.1.4.2.cmml">
+          <csymbol id="p1.1.m1.1.4.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+          </mtext>
+        </apply>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">d</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{N}_{\textit{k}}^{(\textit{d})}</annotation>
+  </semantics>
+</math>; if there is no integer with the required multiplicative order, <code class="func">NK</code> returns <code class="keyw">fail</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">We write <math id="8806863192768284996" display="inline" alttext="\textit{N}_{\textit{k}}=\textit{N}_{\textit{k}}^{(0)},\textit{N}_{\textit{k}}^%
+{\prime}=\textit{N}_{\textit{k}}^{(1)},\textit{N}_{\textit{k}}^{\prime\prime}=%
+\textit{N}_{\textit{k}}^{(2)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.23.1.cmml" id="p1.1.m1.1.23">
+      <mrow xref="p1.1.m1.1.23.1.cmml" id="p1.1.m1.1.23.2">
+        <msub xref="p1.1.m1.1.23.1.cmml" id="p1.1.m1.1.23.2.1">
+          <mtext xref="p1.1.m1.1.1.1a.cmml" id="p1.1.m1.1.1.1">𝑁</mtext>
+          <mtext xref="p1.1.m1.1.2.1a.cmml" id="p1.1.m1.1.2.1">𝑘</mtext>
+        </msub>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+        <msubsup xref="p1.1.m1.1.23.1.cmml" id="p1.1.m1.1.23.2.2">
+          <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝑁</mtext>
+          <mtext xref="p1.1.m1.1.5.1a.cmml" id="p1.1.m1.1.5.1">𝑘</mtext>
+          <mrow id="p1.1.m1.1.6.1">
+            <mo id="p1.1.m1.1.6.1.1" stretchy="false">(</mo>
+            <mn xref="p1.1.m1.1.6.1.2.cmml" id="p1.1.m1.1.6.1.2">0</mn>
+            <mo id="p1.1.m1.1.6.1.3" stretchy="false">)</mo>
+          </mrow>
+        </msubsup>
+      </mrow>
+      <mo xref="p1.1.m1.1.23.1a.cmml" id="p1.1.m1.1.7">,</mo>
+      <mrow xref="p1.1.m1.1.23.3.1.cmml" id="p1.1.m1.1.23.3">
+        <mrow xref="p1.1.m1.1.23.3.1.cmml" id="p1.1.m1.1.23.3.2">
+          <msubsup xref="p1.1.m1.1.23.3.1.cmml" id="p1.1.m1.1.23.3.2.1">
+            <mtext xref="p1.1.m1.1.8.1a.cmml" id="p1.1.m1.1.8.1">𝑁</mtext>
+            <mtext xref="p1.1.m1.1.9.1a.cmml" id="p1.1.m1.1.9.1">𝑘</mtext>
+            <mo xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">′</mo>
+          </msubsup>
+          <mo xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">=</mo>
+          <msubsup xref="p1.1.m1.1.23.3.1.cmml" id="p1.1.m1.1.23.3.2.2">
+            <mtext xref="p1.1.m1.1.12.1a.cmml" id="p1.1.m1.1.12.1">𝑁</mtext>
+            <mtext xref="p1.1.m1.1.13.1a.cmml" id="p1.1.m1.1.13.1">𝑘</mtext>
+            <mrow id="p1.1.m1.1.14.1">
+              <mo id="p1.1.m1.1.14.1.1" stretchy="false">(</mo>
+              <mn xref="p1.1.m1.1.14.1.2.cmml" id="p1.1.m1.1.14.1.2">1</mn>
+              <mo id="p1.1.m1.1.14.1.3" stretchy="false">)</mo>
+            </mrow>
+          </msubsup>
+        </mrow>
+        <mo xref="p1.1.m1.1.23.3.1a.cmml" id="p1.1.m1.1.15">,</mo>
+        <mrow xref="p1.1.m1.1.23.3.1.cmml" id="p1.1.m1.1.23.3.3">
+          <msubsup xref="p1.1.m1.1.23.3.1.cmml" id="p1.1.m1.1.23.3.3.1">
+            <mtext xref="p1.1.m1.1.16.1a.cmml" id="p1.1.m1.1.16.1">𝑁</mtext>
+            <mtext xref="p1.1.m1.1.17.1a.cmml" id="p1.1.m1.1.17.1">𝑘</mtext>
+            <mi xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.1">′′</mi>
+          </msubsup>
+          <mo xref="p1.1.m1.1.19.cmml" id="p1.1.m1.1.19">=</mo>
+          <msubsup xref="p1.1.m1.1.23.3.1.cmml" id="p1.1.m1.1.23.3.3.2">
+            <mtext xref="p1.1.m1.1.20.1a.cmml" id="p1.1.m1.1.20.1">𝑁</mtext>
+            <mtext xref="p1.1.m1.1.21.1a.cmml" id="p1.1.m1.1.21.1">𝑘</mtext>
+            <mrow id="p1.1.m1.1.22.1">
+              <mo id="p1.1.m1.1.22.1.1" stretchy="false">(</mo>
+              <mn xref="p1.1.m1.1.22.1.2.cmml" id="p1.1.m1.1.22.1.2">2</mn>
+              <mo id="p1.1.m1.1.22.1.3" stretchy="false">)</mo>
+            </mrow>
+          </msubsup>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.23" id="p1.1.m1.1.23.1.cmml">
+        <csymbol xref="p1.1.m1.1.7" id="p1.1.m1.1.23.1a.cmml" cd="ambiguous">formulae-sequence</csymbol>
+        <apply xref="p1.1.m1.1.23" id="p1.1.m1.1.23.2.cmml">
+          <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+          <apply xref="p1.1.m1.1.23" id="p1.1.m1.1.23.2.1.cmml">
+            <csymbol id="p1.1.m1.1.23.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <mtext xref="p1.1.m1.1.23" id="p1.1.m1.1.1.1.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+            </mtext>
+            <mtext xref="p1.1.m1.1.23" id="p1.1.m1.1.2.1.cmml">
+              <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+            </mtext>
+          </apply>
+          <apply xref="p1.1.m1.1.23" id="p1.1.m1.1.23.2.2.cmml">
+            <csymbol id="p1.1.m1.1.23.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply xref="p1.1.m1.1.23" id="p1.1.m1.1.23.2.2.2.cmml">
+              <csymbol id="p1.1.m1.1.23.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <mtext xref="p1.1.m1.1.23" id="p1.1.m1.1.4.1.cmml">
+                <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+              </mtext>
+              <mtext xref="p1.1.m1.1.23" id="p1.1.m1.1.5.1.cmml">
+                <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+              </mtext>
+            </apply>
+            <cn xref="p1.1.m1.1.6.1.2" id="p1.1.m1.1.6.1.2.cmml" type="integer">0</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.1.cmml">
+          <csymbol xref="p1.1.m1.1.15" id="p1.1.m1.1.23.3.1a.cmml" cd="ambiguous">formulae-sequence</csymbol>
+          <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.2.cmml">
+            <eq xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml"/>
+            <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.2.1.cmml">
+              <csymbol id="p1.1.m1.1.23.3.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+              <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.2.1.2.cmml">
+                <csymbol id="p1.1.m1.1.23.3.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <mtext xref="p1.1.m1.1.23.3" id="p1.1.m1.1.8.1.cmml">
+                  <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+                </mtext>
+                <mtext xref="p1.1.m1.1.23.3" id="p1.1.m1.1.9.1.cmml">
+                  <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+                </mtext>
+              </apply>
+              <ci xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">′</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.2.2.cmml">
+              <csymbol id="p1.1.m1.1.23.3.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.2.2.2.cmml">
+                <csymbol id="p1.1.m1.1.23.3.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <mtext xref="p1.1.m1.1.23.3" id="p1.1.m1.1.12.1.cmml">
+                  <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+                </mtext>
+                <mtext xref="p1.1.m1.1.23.3" id="p1.1.m1.1.13.1.cmml">
+                  <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+                </mtext>
+              </apply>
+              <cn xref="p1.1.m1.1.14.1.2" id="p1.1.m1.1.14.1.2.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.3.cmml">
+            <eq xref="p1.1.m1.1.19" id="p1.1.m1.1.19.cmml"/>
+            <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.3.1.cmml">
+              <csymbol id="p1.1.m1.1.23.3.3.1.1.cmml" cd="ambiguous">superscript</csymbol>
+              <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.3.1.2.cmml">
+                <csymbol id="p1.1.m1.1.23.3.3.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <mtext xref="p1.1.m1.1.23.3" id="p1.1.m1.1.16.1.cmml">
+                  <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+                </mtext>
+                <mtext xref="p1.1.m1.1.23.3" id="p1.1.m1.1.17.1.cmml">
+                  <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+                </mtext>
+              </apply>
+              <ci xref="p1.1.m1.1.18.1" id="p1.1.m1.1.18.1.cmml">′′</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.3.2.cmml">
+              <csymbol id="p1.1.m1.1.23.3.3.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <apply xref="p1.1.m1.1.23.3" id="p1.1.m1.1.23.3.3.2.2.cmml">
+                <csymbol id="p1.1.m1.1.23.3.3.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <mtext xref="p1.1.m1.1.23.3" id="p1.1.m1.1.20.1.cmml">
+                  <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+                </mtext>
+                <mtext xref="p1.1.m1.1.23.3" id="p1.1.m1.1.21.1.cmml">
+                  <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+                </mtext>
+              </apply>
+              <cn xref="p1.1.m1.1.22.1.2" id="p1.1.m1.1.22.1.2.cmml" type="integer">2</cn>
+            </apply>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{N}_{\textit{k}}=\textit{N}_{\textit{k}}^{(0)},\textit{N}_{\textit{k}}^%
+{\prime}=\textit{N}_{\textit{k}}^{(1)},\textit{N}_{\textit{k}}^{\prime\prime}=%
+\textit{N}_{\textit{k}}^{(2)}</annotation>
+  </semantics>
+</math> and so on.</p><p xmlns="http://www.w3.org/1999/xhtml">The algebraic numbers</p><p class="center" xmlns="http://www.w3.org/1999/xhtml">\[
+y_{<var class="Arg">N</var>}^{\prime} = y_{<var class="Arg">N</var>}^{(1)},
+y_{<var class="Arg">N</var>}^{\prime\prime} = y_{<var class="Arg">N</var>}^{(2)}, \ldots,
+x_{<var class="Arg">N</var>}^{\prime}, x_{<var class="Arg">N</var>}^{\prime\prime}, \ldots,
+j_{<var class="Arg">N</var>}^{\prime}, j_{<var class="Arg">N</var>}^{\prime\prime}, \ldots
+\]</p><p xmlns="http://www.w3.org/1999/xhtml">are obtained on replacing <math id="558222241992739896" display="inline" alttext="\textit{N}_{\textit{k}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑁</mtext>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑘</mtext>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{N}_{\textit{k}}</annotation>
+  </semantics>
+</math> in the definitions in the sections <a shape="rect" href="chap18_mj.html#X842338F184E63894"><span class="RefLink">18.4-3</span></a> and <a shape="rect" href="chap18_mj.html#X87CA3CA083D49AC7"><span class="RefLink">18.4-4</span></a> by <math id="-8456342662929922156" display="inline" alttext="\textit{N}_{\textit{k}}^{\prime},\textit{N}_{\textit{k}}^{\prime\prime},\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10">
+      <msubsup xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.2">
+        <mtext xref="p1.1.m1.1.1.1a.cmml" id="p1.1.m1.1.1.1">𝑁</mtext>
+        <mtext xref="p1.1.m1.1.2.1a.cmml" id="p1.1.m1.1.2.1">𝑘</mtext>
+        <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">′</mo>
+      </msubsup>
+      <mo id="p1.1.m1.1.4">,</mo>
+      <msubsup xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.3">
+        <mtext xref="p1.1.m1.1.5.1a.cmml" id="p1.1.m1.1.5.1">𝑁</mtext>
+        <mtext xref="p1.1.m1.1.6.1a.cmml" id="p1.1.m1.1.6.1">𝑘</mtext>
+        <mi xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">′′</mi>
+      </msubsup>
+      <mo id="p1.1.m1.1.8">,</mo>
+      <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">…</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.10" id="p1.1.m1.1.10.1.cmml">
+        <apply xref="p1.1.m1.1.10" id="p1.1.m1.1.10.2.cmml">
+          <csymbol id="p1.1.m1.1.10.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply xref="p1.1.m1.1.10" id="p1.1.m1.1.10.2.2.cmml">
+            <csymbol id="p1.1.m1.1.10.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <mtext xref="p1.1.m1.1.10" id="p1.1.m1.1.1.1.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+            </mtext>
+            <mtext xref="p1.1.m1.1.10" id="p1.1.m1.1.2.1.cmml">
+              <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+            </mtext>
+          </apply>
+          <ci xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">′</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.10" id="p1.1.m1.1.10.3.cmml">
+          <csymbol id="p1.1.m1.1.10.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply xref="p1.1.m1.1.10" id="p1.1.m1.1.10.3.2.cmml">
+            <csymbol id="p1.1.m1.1.10.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <mtext xref="p1.1.m1.1.10" id="p1.1.m1.1.5.1.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+            </mtext>
+            <mtext xref="p1.1.m1.1.10" id="p1.1.m1.1.6.1.cmml">
+              <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+            </mtext>
+          </apply>
+          <ci xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">′′</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">…</ci>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{N}_{\textit{k}}^{\prime},\textit{N}_{\textit{k}}^{\prime\prime},\ldots</annotation>
+  </semantics>
+</math>; they can be entered as</p><div class="pcenter" xmlns="http://www.w3.org/1999/xhtml"><table class="GAPDocTablenoborder"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="code">EY(</code><var class="Arg">N</var>,<var class="Arg">d</var><code class="code">)</code></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="4116290290969140517" display="inline" alttext="y_{\textit{N}}^{(\textit{d})}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msubsup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑁</mtext>
+      <mrow xref="p1.1.m1.1.3.1.2.1.cmml" id="p1.1.m1.1.3.1">
+        <mo id="p1.1.m1.1.3.1.1" stretchy="false">(</mo>
+        <mtext xref="p1.1.m1.1.3.1.2.1a.cmml" id="p1.1.m1.1.3.1.2.1">𝑑</mtext>
+        <mo id="p1.1.m1.1.3.1.3" stretchy="false">)</mo>
+      </mrow>
+    </msubsup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <apply id="p1.1.m1.1.4.2.cmml">
+          <csymbol id="p1.1.m1.1.4.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑦</ci>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+        </apply>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">d</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">y_{\textit{N}}^{(\textit{d})}</annotation>
+  </semantics>
+</math></td></tr><tr><td colspan="1" rowspan="1" class="tdleft"><code class="code">EX(</code><var class="Arg">N</var>,<var class="Arg">d</var><code class="code">)</code></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="-2046685295843891455" display="inline" alttext="x_{\textit{N}}^{(\textit{d})}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msubsup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑁</mtext>
+      <mrow xref="p1.1.m1.1.3.1.2.1.cmml" id="p1.1.m1.1.3.1">
+        <mo id="p1.1.m1.1.3.1.1" stretchy="false">(</mo>
+        <mtext xref="p1.1.m1.1.3.1.2.1a.cmml" id="p1.1.m1.1.3.1.2.1">𝑑</mtext>
+        <mo id="p1.1.m1.1.3.1.3" stretchy="false">)</mo>
+      </mrow>
+    </msubsup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <apply id="p1.1.m1.1.4.2.cmml">
+          <csymbol id="p1.1.m1.1.4.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+        </apply>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">d</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{\textit{N}}^{(\textit{d})}</annotation>
+  </semantics>
+</math></td></tr><tr><td colspan="1" rowspan="1" class="tdleft"/><td colspan="1" rowspan="1" class="tdcenter"><math id="-6034510655622679867" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math></td><td colspan="1" rowspan="1" class="tdleft"/></tr><tr><td colspan="1" rowspan="1" class="tdleft"><code class="code">EJ(</code><var class="Arg">N</var>,<var class="Arg">d</var><code class="code">)</code></td><td colspan="1" rowspan="1" class="tdcenter">=</td><td colspan="1" rowspan="1" class="tdleft"><math id="-8550592764556084641" display="inline" alttext="j_{\textit{N}}^{(\textit{d})}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msubsup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">j</mi>
+      <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑁</mtext>
+      <mrow xref="p1.1.m1.1.3.1.2.1.cmml" id="p1.1.m1.1.3.1">
+        <mo id="p1.1.m1.1.3.1.1" stretchy="false">(</mo>
+        <mtext xref="p1.1.m1.1.3.1.2.1a.cmml" id="p1.1.m1.1.3.1.2.1">𝑑</mtext>
+        <mo id="p1.1.m1.1.3.1.3" stretchy="false">)</mo>
+      </mrow>
+    </msubsup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <apply id="p1.1.m1.1.4.2.cmml">
+          <csymbol id="p1.1.m1.1.4.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑗</ci>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+          </mtext>
+        </apply>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.2.1.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">d</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">j_{\textit{N}}^{(\textit{d})}</annotation>
+  </semantics>
+</math></td></tr></tbody></table><br/><p> </p><br/>
+</div> </body>
+    </html>

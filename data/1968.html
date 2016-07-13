@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 43: Permutation Groups-&gt;43.3-1 IsomorphismPermGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43.html#X80B7B1C783AA1567"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">43.3-1 IsomorphismPermGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsomorphismPermGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns an isomorphism from the group <var class="Arg">G</var> onto a permutation group which is isomorphic to <var class="Arg">G</var>. The method will select a suitable permutation representation.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=SmallGroup(24,12);</span>
+&lt;pc group of size 24 with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">iso:=IsomorphismPermGroup(g);</span>
+&lt;action isomorphism&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Image(iso,g.3*g.4);</span>
+(1,12)(2,16)(3,19)(4,5)(6,22)(7,8)(9,23)(10,11)(13,24)(14,15)(17,
+18)(20,21)
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In many cases the permutation representation constructed by <code class="func">IsomorphismPermGroup</code> is regular.</p> </body>
+    </html>

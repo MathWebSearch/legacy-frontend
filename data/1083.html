@@ -1,0 +1,36 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 12: Objects and Elements-&gt;12.5-1 IsIdenticalObj</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap12.html#X7961183378DFB902"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">12.5-1 IsIdenticalObj</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsIdenticalObj</code>( <var class="Arg">obj1</var>, <var class="Arg">obj2</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsIdenticalObj</code> tests whether the objects <var class="Arg">obj1</var> and <var class="Arg">obj2</var> are identical (that is they are either equal immediate objects or are both stored at the same location in memory.</p><p xmlns="http://www.w3.org/1999/xhtml">If two copies of a simple constant object (see section <a shape="rect" href="chap12_mj.html#X7F0C119682196D65"><span class="RefLink">12.6</span></a>) are created, it is not defined whether <strong class="pkg">GAP</strong> will actually store two equal but non-identical objects, or just a single object. For mutable objects, however, it is important to know whether two values refer to identical or non-identical objects, and the documentation of operations that return mutable values should make clear whether the values returned are new, or may be identical to values stored elsewhere.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( 10^6, 10^6);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( 10^30, 10^30);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( true, true);</span>
+true
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Generally, one may compute with objects but think of the results in terms of the underlying elements because one is not interested in locations in memory, data formats or information beyond underlying equivalence relations. But there are cases where it is important to distinguish the relations identity and equality. This is best illustrated with an example. (The reader who is not familiar with lists in <strong class="pkg">GAP</strong>, in particular element access and assignment, is referred to Chapter <a shape="rect" href="chap21_mj.html#X7B256AE5780F140A"><span class="RefLink">21</span></a>.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l1:= [ 1, 2, 3 ];; l2:= [ 1, 2, 3 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l1 = l2;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( l1, l2 );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l1[3]:= 4;; l1; l2;</span>
+[ 1, 2, 4 ]
+[ 1, 2, 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l1 = l2;</span>
+false
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The two lists <code class="code">l1</code> and <code class="code">l2</code> are equal but not identical. Thus a change in <code class="code">l1</code> does not affect <code class="code">l2</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l1:= [ 1, 2, 3 ];; l2:= l1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l1 = l2;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( l1, l2 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l1[3]:= 4;; l1; l2;</span>
+[ 1, 2, 4 ]
+[ 1, 2, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l1 = l2;</span>
+true
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Here, <code class="code">l1</code> and <code class="code">l2</code> are identical objects, so changing <code class="code">l1</code> means a change to <code class="code">l2</code> as well.</p> </body>
+    </html>

@@ -1,0 +1,54 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 28: Dictionaries and General Hash Tables</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap28.html#X867203C5877489A2"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap28_mj.html#X867203C5877489A2">28 <span class="Heading">Dictionaries and General Hash Tables</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap28_mj.html#X81560C4083E27955">28.1 <span class="Heading">Using Dictionaries</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap28_mj.html#X7B571EA282AF70D7">28.2 <span class="Heading">Dictionaries</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X7E78E3E983A5C895">28.2-1 NewDictionary</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap28_mj.html#X86BD015B7B889329">28.3 <span class="Heading">Dictionaries via Binary Lists</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X865D5BE1830A448D">28.3-1 DictionaryByPosition</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X87F7247E784021C2">28.3-2 IsDictionary</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X7D776BC67ABDDCCE">28.3-3 IsLookupDictionary</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X86C4F0507AD98B8A">28.3-4 AddDictionary</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X808C885D7E267285">28.3-5 KnowsDictionary</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X863706BF847A47EB">28.3-6 LookupDictionary</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap28_mj.html#X8444087381BBA88A">28.4 <span class="Heading">General Hash Tables</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap28_mj.html#X85CD6C9B85DE7C54">28.5 <span class="Heading">Hash keys</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X79DEEB5783513838">28.5-1 DenseIntKey</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X87FC10AC81E5F6BA">28.5-2 SparseIntKey</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap28_mj.html#X84D1A83C8247E7FB">28.6 <span class="Heading">Dense hash tables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X874FAA447930C7DA">28.6-1 DenseHashTable</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap28_mj.html#X7FDB74417A19E674">28.7 <span class="Heading">Sparse hash tables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X8757D3A785290640">28.7-1 SparseHashTable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap28_mj.html#X80FDDF957887B4FC">28.7-2 DoubleHashArraySize</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">28 <span class="Heading">Dictionaries and General Hash Tables</span></h3><p xmlns="http://www.w3.org/1999/xhtml">People and computers spend a large amount of time with searching. Dictionaries are an abstract data structure which facilitates searching for objects. Depending on the kind of objects the implementation will use a variety of possible internal storage methods that will aim to provide the fastest possible access to objects. These internal methods include</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">Hash Tables</strong></dt><dd><p>for objects for which a hash function has been defined.</p>
+
+</dd><dt><strong class="Mark">Direct Indexing</strong></dt><dd><p>if the domain is small and cheaply enumerable</p>
+
+</dd><dt><strong class="Mark">Sorted Lists</strong></dt><dd><p>if a total order can be computed easily</p>
+
+</dd><dt><strong class="Mark">Plain lists</strong></dt><dd><p>for objects for which nothing but an equality test is available.</p>
+
+</dd></dl> </body>
+    </html>

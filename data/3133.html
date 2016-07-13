@@ -1,0 +1,23 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains-&gt;87.2-1 Internal representation of ordered partitions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87.html#X82E18F38824B5856"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">87.2-1 <span class="Heading">Internal representation of ordered partitions</span></h5><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> represents an ordered partition as a record with the following components.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">points</code></strong></dt><dd><p>a list of all points contained in the partition, such that the points of each cell from lie consecutively,</p>
+
+</dd><dt><strong class="Mark"><code class="code">cellno</code></strong></dt><dd><p>a list whose <var class="Arg">i</var>th entry is the number of the cell which contains the point <var class="Arg">i</var>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">firsts</code></strong></dt><dd><p>a list such that <code class="code">points[firsts[<var class="Arg">j</var>]]</code> is the first point in <code class="code">points</code> which is in cell <var class="Arg">j</var>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">lengths</code></strong></dt><dd><p>a list of the cell lengths.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">Some of the information is redundant, e.g., the <code class="code">lengths</code> could also be read off the <code class="code">firsts</code> list, but since this need not be increasing, it would require some searching. Similar for <code class="code">cellno</code>, which could be replaced by a systematic search of <code class="code">points</code>, keeping track of what cell is currently being traversed. With the above components, the <var class="Arg">m</var>th cell of a partition <var class="Arg">P</var> is expressed as <code class="code"><var class="Arg">P</var>.points{ [ <var class="Arg">P</var>.firsts[<var class="Arg">m</var>] .. <var class="Arg">P</var>.firsts[<var class="Arg">m</var>] + <var class="Arg">P</var>.lengths[<var class="Arg">m</var>] - 1 ] }</code>. The most important operations, however, to be performed upon <var class="Arg">P</var> are the splitting of a cell and the reuniting of the two parts. Following the strategy of J. Leon, this is done as follows:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">(1)</strong></dt><dd><p>The points which make up the cell that is to be split are sorted so that the ones that remain inside occupy positions <code class="code">[ <var class="Arg">P</var>.firsts[<var class="Arg">m</var>] .. <var class="Arg">last</var> ]</code> in the list <code class="code"><var class="Arg">P</var>.points</code> (for a suitable value of <var class="Arg">last</var>).</p>
+
+</dd><dt><strong class="Mark">(2)</strong></dt><dd><p>The points at positions <code class="code">[ <var class="Arg">last</var> + 1 .. <var class="Arg">P</var>.firsts[<var class="Arg">m</var>] + <var class="Arg">P</var>.lengths[<var class="Arg">m</var>] - 1 ]</code> will form the additional cell. For this new cell requires additional entries are added to the lists <code class="code"><var class="Arg">P</var>.firsts</code> (namely, <code class="code"><var class="Arg">last</var>+1</code>) and <code class="code"><var class="Arg">P</var>.lengths</code> (namely, <code class="code"><var class="Arg">P</var>.firsts[<var class="Arg">m</var>] + <var class="Arg">P</var>.lengths[<var class="Arg">m</var>] - <var class="Arg">last</var> - 1</code>).</p>
+
+</dd><dt><strong class="Mark">(3)</strong></dt><dd><p>The entries of the sublist <code class="code"><var class="Arg">P</var>.cellno{ [ <var class="Arg">last</var>+1 .. <var class="Arg">P</var>.firsts[<var class="Arg">m</var>] + P.lengths[<var class="Arg">m</var>]-1 ] }</code> must be set to the number of the new cell.</p>
+
+</dd><dt><strong class="Mark">(4)</strong></dt><dd><p>The entry <code class="code"><var class="Arg">P</var>.lengths[<var class="Arg">m</var>]</code> must be reduced to <code class="code"><var class="Arg">last</var> - <var class="Arg">P</var>.firsts[<var class="Arg">m</var>] + 1</code>.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">Then reuniting the two cells requires only the reversal of steps 2 to 4 above. The list <code class="code"><var class="Arg">P</var>.points</code> need not be rearranged.</p> </body>
+    </html>

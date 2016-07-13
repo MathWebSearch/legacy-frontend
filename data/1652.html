@@ -1,0 +1,176 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.6-5 MinusCharacter</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X805B6C1C78AA5DB6"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.6-5 MinusCharacter</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MinusCharacter</code>( <var class="Arg">character</var>, <var class="Arg">primepowermap</var>, <var class="Arg">prime</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">character</var> be (the list of values of) a class function <math id="3374529087336050561" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math>, <var class="Arg">prime</var> a prime integer <math id="-4089516193309895322" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>, and <var class="Arg">primepowermap</var> a parametrized map that is an approximation of the <math id="-2510074213184178114" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-th power map for the character table of <math id="-2508913343146384002" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math>. <code class="func">MinusCharacter</code> returns the parametrized map of values of <math id="4578192733359231562" display="inline" alttext="\chi^{{p-}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+      <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+        <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">p</mi>
+        <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">-</mo>
+      </mrow>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+        <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <csymbol id="p1.1.m1.1.2.1.3.cmml" cd="latexml">limit-from</csymbol>
+          <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑝</ci>
+          <minus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi^{{p-}}</annotation>
+  </semantics>
+</math>, which is defined by <math id="-3651807355281243450" display="inline" alttext="\chi^{{p-}}(g)=(\chi(g)^{p}-\chi(g^{p}))/p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22">
+      <mrow xref="p1.1.m1.1.22.1.cmml" id="p1.1.m1.1.22.1">
+        <msup xref="p1.1.m1.1.22.1.2.cmml" id="p1.1.m1.1.22.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+          <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+            <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">p</mi>
+            <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">-</mo>
+          </mrow>
+        </msup>
+        <mo xref="p1.1.m1.1.22.1.1.cmml" id="p1.1.m1.1.22.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.22.1.3">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">g</mi>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">=</mo>
+      <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2">
+        <mrow xref="p1.1.m1.1.22.2.1.2.cmml" id="p1.1.m1.1.22.2.1">
+          <mo id="p1.1.m1.1.7" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.22.2.1.2.cmml" id="p1.1.m1.1.22.2.1.2">
+            <mrow xref="p1.1.m1.1.22.2.1.2.cmml" id="p1.1.m1.1.22.2.1.2.1">
+              <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">χ</mi>
+              <mo xref="p1.1.m1.1.22.2.1.2.1.1.cmml" id="p1.1.m1.1.22.2.1.2.1.1">⁢</mo>
+              <msup xref="p1.1.m1.1.22.2.1.2.cmml" id="p1.1.m1.1.22.2.1.2.1.2">
+                <mrow id="p1.1.m1.1.22.2.1.2.1.2.2">
+                  <mo id="p1.1.m1.1.9" stretchy="false">(</mo>
+                  <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">g</mi>
+                  <mo id="p1.1.m1.1.11" stretchy="false">)</mo>
+                </mrow>
+                <mi xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">p</mi>
+              </msup>
+            </mrow>
+            <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">-</mo>
+            <mrow xref="p1.1.m1.1.22.2.1.2.cmml" id="p1.1.m1.1.22.2.1.2.2">
+              <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">χ</mi>
+              <mo xref="p1.1.m1.1.22.2.1.2.2.1.cmml" id="p1.1.m1.1.22.2.1.2.2.1">⁢</mo>
+              <mrow xref="p1.1.m1.1.22.2.1.2.2.2.2.cmml" id="p1.1.m1.1.22.2.1.2.2.2">
+                <mo id="p1.1.m1.1.15" stretchy="false">(</mo>
+                <msup xref="p1.1.m1.1.22.2.1.2.2.2.2.cmml" id="p1.1.m1.1.22.2.1.2.2.2.2">
+                  <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">g</mi>
+                  <mi xref="p1.1.m1.1.17.1.cmml" id="p1.1.m1.1.17.1">p</mi>
+                </msup>
+                <mo id="p1.1.m1.1.18" stretchy="false">)</mo>
+              </mrow>
+            </mrow>
+          </mrow>
+          <mo id="p1.1.m1.1.19" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">/</mo>
+        <mi xref="p1.1.m1.1.21.cmml" id="p1.1.m1.1.21">p</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml">
+        <eq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.22.1" id="p1.1.m1.1.22.1.cmml">
+          <times xref="p1.1.m1.1.22.1.1" id="p1.1.m1.1.22.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.22.1.2" id="p1.1.m1.1.22.1.2.cmml">
+            <csymbol id="p1.1.m1.1.22.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+            <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+              <csymbol id="p1.1.m1.1.2.1.3.cmml" cd="latexml">limit-from</csymbol>
+              <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑝</ci>
+              <minus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑔</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.22.2" id="p1.1.m1.1.22.2.cmml">
+          <divide xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml"/>
+          <apply xref="p1.1.m1.1.22.2.1" id="p1.1.m1.1.22.2.1.2.cmml">
+            <minus xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+            <apply xref="p1.1.m1.1.22.2.1" id="p1.1.m1.1.22.2.1.2.1.cmml">
+              <times xref="p1.1.m1.1.22.2.1.2.1.1" id="p1.1.m1.1.22.2.1.2.1.1.cmml"/>
+              <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝜒</ci>
+              <apply xref="p1.1.m1.1.22.2.1" id="p1.1.m1.1.22.2.1.2.1.2.cmml">
+                <csymbol id="p1.1.m1.1.22.2.1.2.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑔</ci>
+                <ci xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">𝑝</ci>
+              </apply>
+            </apply>
+            <apply xref="p1.1.m1.1.22.2.1" id="p1.1.m1.1.22.2.1.2.2.cmml">
+              <times xref="p1.1.m1.1.22.2.1.2.2.1" id="p1.1.m1.1.22.2.1.2.2.1.cmml"/>
+              <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝜒</ci>
+              <apply xref="p1.1.m1.1.22.2.1.2.2.2" id="p1.1.m1.1.22.2.1.2.2.2.2.cmml">
+                <csymbol id="p1.1.m1.1.22.2.1.2.2.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝑔</ci>
+                <ci xref="p1.1.m1.1.17.1" id="p1.1.m1.1.17.1.cmml">𝑝</ci>
+              </apply>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.21" id="p1.1.m1.1.21.cmml">𝑝</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi^{{p-}}(g)=(\chi(g)^{p}-\chi(g^{p}))/p</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;S7&quot; );;  pow:= InitPowerMap( tbl, 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pow;</span>
+[ 1, 1, 3, 4, [ 2, 9, 10 ], 6, 3, 8, 1, 1, [ 2, 9, 10 ], 3, [ 3, 4 ], 
+  6, [ 7, 12 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chars:= Irr( tbl ){ [ 2 .. 5 ] };;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( chars, x -&gt; MinusCharacter( x, pow, 2 ) );</span>
+[ [ 0, 0, 0, 0, [ 0, 1 ], 0, 0, 0, 0, 0, [ 0, 1 ], 0, 0, 0, [ 0, 1 ] ]
+    , 
+  [ 15, -1, 3, 0, [ -2, -1, 0 ], 0, -1, 1, 5, -3, [ 0, 1, 2 ], -1, 0, 
+      0, [ 0, 1 ] ], 
+  [ 15, -1, 3, 0, [ -1, 0, 2 ], 0, -1, 1, 5, -3, [ 1, 2, 4 ], -1, 0, 
+      0, 1 ], 
+  [ 190, -2, 1, 1, [ 0, 2 ], 0, 1, 1, -10, -10, [ 0, 2 ], -1, -1, 0, 
+      [ -1, 0 ] ] ]
+</pre></div> </body>
+    </html>

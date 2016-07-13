@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 58: Fields and Division Rings-&gt;58.1-2 IsField</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap58.html#X7A5AE30E7C0F457C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">58.1-2 IsField</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsField</code>( <var class="Arg">D</var> )</td><td colspan="1" rowspan="1" class="tdright">( filter )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A <em>field</em> is a commutative division ring (see <code class="func">IsDivisionRing</code> (<a shape="rect" href="chap58_mj.html#X7F2CAA9E7A16913D"><span class="RefLink">58.1-1</span></a>) and <code class="func">IsCommutative</code> (<a shape="rect" href="chap35_mj.html#X830A4A4C795FBC2D"><span class="RefLink">35.4-9</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsField( GaloisField(16) );           # the field with 16 elements</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsField( Rationals );                 # the field of rationals</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">q:= QuaternionAlgebra( Rationals );;  # noncommutative division ring</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsField( q );  IsDivisionRing( q );</span>
+false
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:= [ [ 1 ] ];;  a:= Algebra( Rationals, [ mat ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsDivisionRing( a );   # algebra not constructed as a division ring</span>
+false
+</pre></div> </body>
+    </html>

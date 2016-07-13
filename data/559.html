@@ -1,0 +1,48 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.4-1 IsNearlyCharacterTable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X82FF82C87CF82ADF"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.4-1 IsNearlyCharacterTable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsNearlyCharacterTable</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsCharacterTable</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsOrdinaryTable</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsBrauerTable</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsCharacterTableInProgress</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Every &quot;character table like object&quot; in <strong class="pkg">GAP</strong> lies in the category <code class="func">IsNearlyCharacterTable</code>. There are four important subcategories, namely the <em>ordinary</em> tables in <code class="func">IsOrdinaryTable</code>, the <em>Brauer</em> tables in <code class="func">IsBrauerTable</code>, the union of these two in <code class="func">IsCharacterTable</code>, and the <em>incomplete ordinary</em> tables in <code class="func">IsCharacterTableInProgress</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">We want to distinguish ordinary and Brauer tables because a Brauer table may delegate tasks to the ordinary table of the same group, for example the computation of power maps. A Brauer table is constructed from an ordinary table and stores this table upon construction (see <code class="func">OrdinaryCharacterTable</code> (<a shape="rect" href="chap71_mj.html#X8011EEB684848039"><span class="RefLink">71.8-4</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">Furthermore, <code class="func">IsOrdinaryTable</code> and <code class="func">IsBrauerTable</code> denote character tables that provide enough information to compute all power maps and irreducible characters (and in the case of Brauer tables to get the ordinary table), for example because the underlying group (see <code class="func">UnderlyingGroup</code> (<a shape="rect" href="chap71_mj.html#X7FF4826A82B667AF"><span class="RefLink">71.6-1</span></a>)) is known or because the table is a library table (see the manual of the <strong class="pkg">GAP</strong> Character Table Library). We want to distinguish these tables from partially known ordinary tables that cannot be asked for all power maps or all irreducible characters.</p><p xmlns="http://www.w3.org/1999/xhtml">The character table objects in <code class="func">IsCharacterTable</code> are always immutable (see <a shape="rect" href="chap12_mj.html#X7F0C119682196D65"><span class="RefLink">12.6</span></a>). This means mainly that the ordering of conjugacy classes used for the various attributes of the character table cannot be changed; see <a shape="rect" href="chap71_mj.html#X816FCD5A805F9FE8"><span class="RefLink">71.21</span></a> for how to compute a character table with a different ordering of classes.</p><p xmlns="http://www.w3.org/1999/xhtml">The <strong class="pkg">GAP</strong> objects in <code class="func">IsCharacterTableInProgress</code> represent incomplete ordinary character tables. This means that not all irreducible characters, not all power maps are known, and perhaps even the number of classes and the centralizer orders are known. Such tables occur when the character table of a group <math id="4770237166707164131" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is constructed using character tables of related groups and information about <math id="-9182081531702049986" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> but for example without explicitly computing the conjugacy classes of <math id="-7785569659419449229" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>. An object in <code class="func">IsCharacterTableInProgress</code> is first of all <em>mutable</em>, so <em>nothing is stored automatically</em> on such a table, since otherwise one has no control of side-effects when a hypothesis is changed. Operations for such tables may return more general values than for other tables, for example class functions may contain unknowns (see Chapter <a shape="rect" href="chap74_mj.html#X7C1FAB6280A02CCB"><span class="RefLink">74</span></a>) or lists of possible values in certain positions, the same may happen also for power maps and class fusions (see <a shape="rect" href="chap73_mj.html#X7F18772E86F06179"><span class="RefLink">73.5</span></a>). <em>Incomplete tables in this sense are currently not supported and will be described in a chapter of their own when they become available.</em> Note that the term &quot;incomplete table&quot; shall express that <strong class="pkg">GAP</strong> cannot compute certain values such as irreducible characters or power maps. A table with access to its group is therefore always complete, also if its irreducible characters are not yet stored.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= SymmetricGroup( 4 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( g );  modtbl:= tbl mod 2;</span>
+CharacterTable( Sym( [ 1 .. 4 ] ) )
+BrauerTable( Sym( [ 1 .. 4 ] ), 2 )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsCharacterTable( tbl );  IsCharacterTable( modtbl );</span>
+true
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsBrauerTable( modtbl );  IsBrauerTable( tbl );</span>
+true
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsOrdinaryTable( tbl );  IsOrdinaryTable( modtbl );</span>
+true
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsCharacterTable( g );  IsCharacterTable( Irr( g ) );</span>
+false
+false
+</pre></div> </body>
+    </html>

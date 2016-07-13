@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 9: Files and Filenames-&gt;9.7-3 PrintTo and AppendTo</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap9.html#X86956C577FFEE1F9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">9.7-3 <span class="Heading">PrintTo and AppendTo</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PrintTo</code>( <var class="Arg">filename</var>[, <var class="Arg">obj1</var>, <var class="Arg">...</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AppendTo</code>( <var class="Arg">filename</var>[, <var class="Arg">obj1</var>, <var class="Arg">...</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">PrintTo</code> works like <code class="func">Print</code> (<a shape="rect" href="chap6_mj.html#X7AFA64D97A1F39A3"><span class="RefLink">6.3-4</span></a>), except that the arguments <var class="Arg">obj1</var>, <math id="4045457468810632579" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math> (if present) are printed to the file with the name <var class="Arg">filename</var> instead of the standard output. This file must of course be writable by <strong class="pkg">GAP</strong>. Otherwise an error is signalled. Note that <code class="func">PrintTo</code> will <em>overwrite</em> the previous contents of this file if it already existed; in particular, <code class="func">PrintTo</code> with just the <var class="Arg">filename</var> argument empties that file.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">AppendTo</code> works like <code class="func">PrintTo</code>, except that the output does not overwrite the previous contents of the file, but is appended to the file.</p><p xmlns="http://www.w3.org/1999/xhtml">There is an upper limit of 15 on the number of output files that may be open simultaneously.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>Note</em> that one should be careful not to write to a logfile (see <code class="func">LogTo</code> (<a shape="rect" href="chap9_mj.html#X79813A6686894960"><span class="RefLink">9.7-4</span></a>)) with <code class="func">PrintTo</code> or <code class="func">AppendTo</code>.</p> </body>
+    </html>

@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.7-2 Action</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X85A8E93D786C3C9C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.7-2 Action</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Action</code>( <var class="Arg">G</var>, <var class="Arg">Omega</var>[, <var class="Arg">gens</var>, <var class="Arg">acts</var>][, <var class="Arg">act</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Action</code>( <var class="Arg">xset</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the image group of <code class="func">ActionHomomorphism</code> (<a shape="rect" href="chap41_mj.html#X78E6A002835288A4"><span class="RefLink">41.7-1</span></a>) called with the same parameters.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that (for compatibility reasons to be able to get the action homomorphism) this image group internally stores the action homomorphism. If <var class="Arg">G</var> or <var class="Arg">Omega</var> are extremely big, this can cause memory problems. In this case compute only generator images and form the image group yourself.</p><p xmlns="http://www.w3.org/1999/xhtml">(See Section <a shape="rect" href="chap41_mj.html#X81B8F9CD868CD953"><span class="RefLink">41.2</span></a> for information about specific actions.)</p><p xmlns="http://www.w3.org/1999/xhtml">The following code shows for example how to create the regular action of a group.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2,3),(1,2));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Action(g,AsList(g),OnRight);</span>
+Group([ (1,4,5)(2,3,6), (1,3)(2,4)(5,6) ])
+</pre></div> </body>
+    </html>

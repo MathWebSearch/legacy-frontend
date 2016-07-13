@@ -1,0 +1,37 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 27: Strings and Characters-&gt;27.1-4 Printing Strings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27.html#X7EA6CA7486D7E9DD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">27.1-4 <span class="Heading">Printing Strings</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ViewObj</code>( <var class="Arg">str</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PrintObj</code>( <var class="Arg">str</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If a string is displayed by <code class="func">View</code> (<a shape="rect" href="chap6_mj.html#X851902C583B84CDC"><span class="RefLink">6.3-3</span></a>), for example as result of an evaluation (see <a shape="rect" href="chap6_mj.html#X81667F568237B232"><span class="RefLink">6.1</span></a>), or by <code class="func">ViewObj</code> (<a shape="rect" href="chap6_mj.html#X815BF22186FD43C9"><span class="RefLink">6.3-5</span></a>) and <code class="func">PrintObj</code> (<a shape="rect" href="chap6_mj.html#X815BF22186FD43C9"><span class="RefLink">6.3-5</span></a>), it is displayed with enclosing doublequotes. (But note that there is an ambiguity for the empty string which is also an empty list of arbitrary <strong class="pkg">GAP</strong> objects; it is only printed like a string if it was input as empty string or converted to a string with <code class="func">ConvertToStringRep</code> (<a shape="rect" href="chap27_mj.html#X7CE2415F7FEC5809"><span class="RefLink">27.4-2</span></a>).) The output of <code class="func">PrintObj</code> can be read back into <strong class="pkg">GAP</strong>.</p><p xmlns="http://www.w3.org/1999/xhtml">Strings behave differently from other <strong class="pkg">GAP</strong> objects with respect to <code class="func">Print</code> (<a shape="rect" href="chap6_mj.html#X7AFA64D97A1F39A3"><span class="RefLink">6.3-4</span></a>), <code class="func">PrintTo</code> (<a shape="rect" href="chap9_mj.html#X86956C577FFEE1F9"><span class="RefLink">9.7-3</span></a>), or <code class="func">AppendTo</code> (<a shape="rect" href="chap9_mj.html#X86956C577FFEE1F9"><span class="RefLink">9.7-3</span></a>). These commands <em>interpret</em> a string in the sense that they essentially send the characters of the string directly to the output stream/file. (But depending on the type of the stream and the presence of some special characters used as hints for line breaks there may be sent some additional newline (or backslash and newline) characters.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s4:= &quot;abc\&quot;def\nghi&quot;;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">View( s4 );  Print( &quot;\n&quot; );</span>
+&quot;abc\&quot;def\nghi&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ViewObj( s4 );  Print( &quot;\n&quot; );</span>
+&quot;abc\&quot;def\nghi&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintObj( s4 );  Print( &quot;\n&quot; );</span>
+&quot;abc\&quot;def\nghi&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( s4 );  Print( &quot;\n&quot; );</span>
+abc&quot;def
+ghi
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s := &quot;German uses strange characters: äöüß\n&quot;;</span>
+&quot;German uses strange characters: äöüß\n&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(s);</span>
+German uses strange characters: äöüß
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintObj(s);  Print( &quot;\n&quot; );</span>
+&quot;German uses strange characters: \303\244\303\266\303\274\303\237\n&quot;
+</pre></div><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s := &quot;\007&quot;;</span>
+&quot;\007&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(s); # rings bell in many terminals</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that only those line breaks are printed by <code class="func">Print</code> (<a shape="rect" href="chap6_mj.html#X7AFA64D97A1F39A3"><span class="RefLink">6.3-4</span></a>) that are contained in the string (<code class="code">\n</code> characters, see <a shape="rect" href="chap27_mj.html#X82E5F5AB818F32DB"><span class="RefLink">27.2</span></a>), as is shown in the example below.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s1;</span>
+&quot;Hello world.&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( s1 );</span>
+Hello world.gap&gt; Print( s1, &quot;\n&quot; );
+Hello world.
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( s1, &quot;\nnext line\n&quot; );</span>
+Hello world.
+next line
+</pre></div> </body>
+    </html>

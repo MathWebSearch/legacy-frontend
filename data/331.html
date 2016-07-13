@@ -1,0 +1,46 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 59: Finite Fields-&gt;59.2-2 LogFFE</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap59.html#X7B049A3478B369E4"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">59.2-2 LogFFE</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LogFFE</code>( <var class="Arg">z</var>, <var class="Arg">r</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LogFFE</code> returns the discrete logarithm of the element <var class="Arg">z</var> in a finite field with respect to the root <var class="Arg">r</var>. An error is signalled if <var class="Arg">z</var> is zero. <code class="keyw">fail</code> is returned if <var class="Arg">z</var> is not a power of <var class="Arg">r</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>discrete logarithm</em> of the element <var class="Arg">z</var> with respect to the root <var class="Arg">r</var> is the smallest nonnegative integer <math id="4634209301926320486" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> such that <math id="6087688092280757561" display="inline" alttext="\textit{r}^{i}=\textit{z}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑟</mtext>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <mtext xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">𝑧</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">r</span>
+          </mtext>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+        </apply>
+        <mtext xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">z</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{r}^{i}=\textit{z}</annotation>
+  </semantics>
+</math> holds.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LogFFE( Z(409)^116, Z(409) );  LogFFE( Z(409)^116, Z(409)^2 );</span>
+116
+58
+</pre></div> </body>
+    </html>

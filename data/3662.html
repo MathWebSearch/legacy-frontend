@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 10: Streams-&gt;10.3-2 ReadAsFunction</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap10.html#X7D62F2877F0E45A7"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">10.3-2 ReadAsFunction</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReadAsFunction</code>( <var class="Arg">input-text-stream</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">reads the input-text-stream as function and returns this function. See <a shape="rect" href="chap9_mj.html#X81A0A4FF842B039B"><span class="RefLink">9.7</span></a> for details.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># a function with local `a' does not change the global one</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := 1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">i := InputTextString( &quot;local a; a := 10; return a*10;&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReadAsFunction(i)();</span>
+100
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a;</span>
+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># reading it via `Read' does</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">i := InputTextString( &quot;a := 10;&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Read(i);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a;</span>
+10
+</pre></div> </body>
+    </html>

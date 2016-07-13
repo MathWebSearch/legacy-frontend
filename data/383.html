@@ -1,0 +1,77 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 56: Rings-&gt;56.7-10 InterpolatedPolynomial</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap56.html#X87711E6F8024A358"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">56.7-10 InterpolatedPolynomial</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InterpolatedPolynomial</code>( <var class="Arg">R</var>, <var class="Arg">x</var>, <var class="Arg">y</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">InterpolatedPolynomial</code> returns, for given lists <var class="Arg">x</var>, <var class="Arg">y</var> of elements in a ring <var class="Arg">R</var> of the same length <math id="9099203326890982111" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>, say, the unique polynomial of degree less than <math id="-1343624735686379316" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> which has value <var class="Arg">y</var>[<math id="-5750312813021644060" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>] at <var class="Arg">x</var><math id="-7771364232427657972" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">i</mi>
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.4.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[i]</annotation>
+  </semantics>
+</math>, for all <math id="7149855749132945450" display="inline" alttext="i\in\{1,\ldots,n\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mrow xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1">
+        <mo id="p1.1.m1.1.3" stretchy="false">{</mo>
+        <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+        <mo id="p1.1.m1.1.5">,</mo>
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6" mathvariant="normal">…</mi>
+        <mo id="p1.1.m1.1.7">,</mo>
+        <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">n</mi>
+        <mo id="p1.1.m1.1.9" stretchy="false">}</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+        <set xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.1.cmml">
+          <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">…</ci>
+          <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑛</ci>
+        </set>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i\in\{1,\ldots,n\}</annotation>
+  </semantics>
+</math>. Note that the elements in <var class="Arg">x</var> must be distinct.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">InterpolatedPolynomial( Integers, [ 1, 2, 3 ], [ 5, 7, 0 ] );</span>
+-9/2*x^2+31/2*x-6
+</pre></div> </body>
+    </html>

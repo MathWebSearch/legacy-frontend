@@ -1,0 +1,32 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.2-4 AsSubspace</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X7D4F84C27EDAC89B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.2-4 AsSubspace</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsSubspace</code>( <var class="Arg">V</var>, <var class="Arg">U</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">V</var> be an <math id="5652674569448053360" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>-vector space, and <var class="Arg">U</var> a collection. If <var class="Arg">U</var> is a subset of <var class="Arg">V</var> such that the elements of <var class="Arg">U</var> form an <math id="-5370281390427710437" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>-vector space then <code class="func">AsSubspace</code> returns this vector space, with parent set to <var class="Arg">V</var> (see <code class="func">AsVectorSpace</code> (<a shape="rect" href="chap61_mj.html#X7B001BAF7D5FD5D0"><span class="RefLink">61.2-3</span></a>)). Otherwise <code class="keyw">fail</code> is returned.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= VectorSpace( Rationals, [ [ 1, 2, 3 ], [ 1, 1, 1 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">W:= VectorSpace( Rationals, [ [ 1/2, 1/2, 1/2 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">U:= AsSubspace( V, W );</span>
+&lt;vector space over Rationals, with 1 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Parent( U ) = V;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsSubspace( V, [ [ 1, 1, 1 ] ] );</span>
+fail
+</pre></div> </body>
+    </html>

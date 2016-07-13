@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 59: Finite Fields-&gt;59.2 Operations for Finite Field Elements</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap59.html#X7A79399283EF78D0"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">59.2 <span class="Heading">Operations for Finite Field Elements</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Since finite field elements are scalars, the operations <code class="func">Characteristic</code> (<a shape="rect" href="chap31_mj.html#X81278E53800BF64D"><span class="RefLink">31.10-1</span></a>), <code class="func">One</code> (<a shape="rect" href="chap31_mj.html#X8046262384895B2A"><span class="RefLink">31.10-2</span></a>), <code class="func">Zero</code> (<a shape="rect" href="chap31_mj.html#X8040AC7A79FFC442"><span class="RefLink">31.10-3</span></a>), <code class="func">Inverse</code> (<a shape="rect" href="chap31_mj.html#X78EE524E83624057"><span class="RefLink">31.10-8</span></a>), <code class="func">AdditiveInverse</code> (<a shape="rect" href="chap31_mj.html#X84BB723C81D55D63"><span class="RefLink">31.10-9</span></a>), <code class="func">Order</code> (<a shape="rect" href="chap31_mj.html#X84F59A2687C62763"><span class="RefLink">31.10-10</span></a>) can be applied to them (see <a shape="rect" href="chap31_mj.html#X7C2B0C1280237CB0"><span class="RefLink">31.10</span></a>). Contrary to the situation with other scalars, <code class="func">Order</code> (<a shape="rect" href="chap31_mj.html#X84F59A2687C62763"><span class="RefLink">31.10-10</span></a>) is defined also for the zero element in a finite field, with value <code class="code">0</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Characteristic( Z( 16 )^10 );  Characteristic( Z( 9 )^2 );</span>
+2
+3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Characteristic( [ Z(4), Z(8) ] );</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">One( Z(9) );  One( 0*Z(4) );</span>
+Z(3)^0
+Z(2)^0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Inverse( Z(9) );  AdditiveInverse( Z(9) );</span>
+Z(3^2)^7
+Z(3^2)^5
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Order( Z(9)^7 );</span>
+8
+</pre></div> </body>
+    </html>

@@ -1,0 +1,222 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.8-4 JenningsLieAlgebra</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X8692ADD581359CA1"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.8-4 JenningsLieAlgebra</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ JenningsLieAlgebra</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">G</var> be a nontrivial <math id="-516532801484643955" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-group, and let <math id="-8640081303545012686" display="inline" alttext="\textit{G}=G_{1}\supset G_{2}\supset\cdots\supset G_{m}=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝐺</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <msub xref="p1.1.m1.1.15.2.cmml" id="p1.1.m1.1.15.2">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">G</mi>
+        <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">1</mn>
+      </msub>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">⊃</mo>
+      <msub xref="p1.1.m1.1.15.3.cmml" id="p1.1.m1.1.15.3">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">G</mi>
+        <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">2</mn>
+      </msub>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">⊃</mo>
+      <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">⋯</mi>
+      <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">⊃</mo>
+      <msub xref="p1.1.m1.1.15.4.cmml" id="p1.1.m1.1.15.4">
+        <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">G</mi>
+        <mi xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">m</mi>
+      </msub>
+      <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">=</mo>
+      <mn xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">
+        <and xref="p1.1.m1.1.15" id="p1.1.m1.1.15a.cmml"/>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15b.cmml">
+          <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+          </mtext>
+          <apply xref="p1.1.m1.1.15.2" id="p1.1.m1.1.15.2.cmml">
+            <csymbol id="p1.1.m1.1.15.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐺</ci>
+            <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15c.cmml">
+          <csymbol xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" cd="latexml">superset-of</csymbol>
+          <share xref="p1.1.m1.1.15" id="p1.1.m1.1.15d.cmml" href="#p1.1.m1.1.15.2.cmml"/>
+          <apply xref="p1.1.m1.1.15.3" id="p1.1.m1.1.15.3.cmml">
+            <csymbol id="p1.1.m1.1.15.3.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝐺</ci>
+            <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15e.cmml">
+          <csymbol xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml" cd="latexml">superset-of</csymbol>
+          <share xref="p1.1.m1.1.15" id="p1.1.m1.1.15f.cmml" href="#p1.1.m1.1.15.3.cmml"/>
+          <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">⋯</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15g.cmml">
+          <csymbol xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml" cd="latexml">superset-of</csymbol>
+          <share xref="p1.1.m1.1.15" id="p1.1.m1.1.15h.cmml" href="#p1.1.m1.1.9.cmml"/>
+          <apply xref="p1.1.m1.1.15.4" id="p1.1.m1.1.15.4.cmml">
+            <csymbol id="p1.1.m1.1.15.4.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝐺</ci>
+            <ci xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">𝑚</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15i.cmml">
+          <eq xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+          <share xref="p1.1.m1.1.15" id="p1.1.m1.1.15j.cmml" href="#p1.1.m1.1.15.4.cmml"/>
+          <cn xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml" type="integer">1</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{G}=G_{1}\supset G_{2}\supset\cdots\supset G_{m}=1</annotation>
+  </semantics>
+</math> be its Jennings series (see <code class="func">JenningsSeries</code> (<a shape="rect" href="chap39_mj.html#X82A34BD681F24A94"><span class="RefLink">39.17-14</span></a>)). Then the quotients <math id="-5798611702006531602" display="inline" alttext="G_{i}/G_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msub xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">/</mo>
+      <msub xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">G</mi>
+        <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+          <mi xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">i</mi>
+          <mo xref="p1.1.m1.1.5.1.2.cmml" id="p1.1.m1.1.5.1.2">+</mo>
+          <mn xref="p1.1.m1.1.5.1.3.cmml" id="p1.1.m1.1.5.1.3">1</mn>
+        </mrow>
+      </msub>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <divide xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <csymbol id="p1.1.m1.1.6.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐺</ci>
+          <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+            <plus xref="p1.1.m1.1.5.1.2" id="p1.1.m1.1.5.1.2.cmml"/>
+            <ci xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml">𝑖</ci>
+            <cn xref="p1.1.m1.1.5.1.3" id="p1.1.m1.1.5.1.3.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G_{i}/G_{{i+1}}</annotation>
+  </semantics>
+</math> are elementary abelian <math id="502326890096183163" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-groups, i.e., they can be viewed as vector spaces over <code class="code">GF</code><math id="-2225046856008825745" display="inline" alttext="(p)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow id="p1.1.m1.1.4">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">p</mi>
+      <mo id="p1.1.m1.1.3" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(p)</annotation>
+  </semantics>
+</math>. Now the Jennings-Lie algebra <math id="-5988324778597134089" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math> of <var class="Arg">G</var> is the direct sum of those vector spaces. The Lie bracket on <math id="-5937099785852564251" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math> is induced by the commutator in <var class="Arg">G</var>. Furthermore, the map <math id="6364812897420013082" display="inline" alttext="g\mapsto g^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">↦</mo>
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">g</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">p</mi>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" cd="latexml">maps-to</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑝</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g\mapsto g^{p}</annotation>
+  </semantics>
+</math> in <var class="Arg">G</var> induces a <math id="5840674118508511042" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-map in <math id="-3279716141511511842" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math> making <math id="-3489721848359786029" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math> into a restricted Lie algebra. In the canonical basis of <math id="7583529941695205254" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math> this <math id="4148208159559890569" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-map is added as an attribute. A Lie algebra created by <code class="func">JenningsLieAlgebra</code> is naturally graded. The attribute <code class="func">Grading</code> (<a shape="rect" href="chap62_mj.html#X7DCA2568870A2D34"><span class="RefLink">62.9-20</span></a>) is set.</p> </body>
+    </html>

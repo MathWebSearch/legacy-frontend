@@ -1,0 +1,28 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.11-23 DirectSumOfAlgebraModules</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X85D0F3758551DADC"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.11-23 DirectSumOfAlgebraModules</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DirectSumOfAlgebraModules</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DirectSumOfAlgebraModules</code>( <var class="Arg">V</var>, <var class="Arg">W</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">list</var> must be a list of algebra modules. This function returns the direct sum of the elements in the list (as an algebra module). The modules must be defined over the same algebras.</p><p xmlns="http://www.w3.org/1999/xhtml">In the second form is short for <code class="code">DirectSumOfAlgebraModules( [ <var class="Arg">V</var>, <var class="Arg">W</var> ] )</code></p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= FullMatrixAlgebra( Rationals, 3 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= BiAlgebraModuleByGenerators( A, A, \*, \*, [ [1,0,0] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">W:= DirectSumOfAlgebraModules( V, V );</span>
+&lt;6-dimensional left-module over ( Rationals^[ 3, 3 ] )&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BasisVectors( Basis( W ) );</span>
+[ ( [ 1, 0, 0 ] )(+)( [ 0, 0, 0 ] ), ( [ 0, 1, 0 ] )(+)( [ 0, 0, 0 ] )
+    , ( [ 0, 0, 1 ] )(+)( [ 0, 0, 0 ] ), 
+  ( [ 0, 0, 0 ] )(+)( [ 1, 0, 0 ] ), ( [ 0, 0, 0 ] )(+)( [ 0, 1, 0 ] )
+    , ( [ 0, 0, 0 ] )(+)( [ 0, 0, 1 ] ) ]
+</pre></div><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;C&quot;, 3, Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= HighestWeightModule( L, [ 1, 1, 0 ] );</span>
+&lt;64-dimensional left-module over &lt;Lie algebra of dimension 
+21 over Rationals&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">W:= HighestWeightModule( L, [ 0, 0, 2 ] );</span>
+&lt;84-dimensional left-module over &lt;Lie algebra of dimension 
+21 over Rationals&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">U:= DirectSumOfAlgebraModules( V, W );</span>
+&lt;148-dimensional left-module over &lt;Lie algebra of dimension 
+21 over Rationals&gt;&gt;
+</pre></div> </body>
+    </html>

@@ -1,0 +1,33 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 5: Functions-&gt;5.2-1 CallFuncList</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap5.html#X7CF4DDB97D65AE52"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">5.2-1 CallFuncList</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CallFuncList</code>( <var class="Arg">func</var>, <var class="Arg">args</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the result, when calling function <var class="Arg">func</var> with the arguments given in the list <var class="Arg">args</var>, i.e. <var class="Arg">args</var> is &quot;unwrapped&quot; so that <var class="Arg">args</var> appears as several arguments to <var class="Arg">func</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CallFuncList(\+, [6, 7]);</span>
+13
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">#is equivalent to:</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">\+(6, 7);</span>
+13
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">A more useful application of <code class="func">CallFuncList</code> is for a function <code class="code">g</code> that is called in the body of a function <code class="code">f</code> with (a sublist of) the arguments of <code class="code">f</code>, where <code class="code">f</code> has been defined with a single formal argument <code class="code">arg</code> (see <a shape="rect" href="chap4_mj.html#X815F71EA7BC0EB6F"><span class="RefLink">4.23</span></a>), as in the following code fragment.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+f := function ( arg )
+       CallFuncList(g, arg);
+       ...
+     end;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In the body of <code class="code">f</code> the several arguments passed to <code class="code">f</code> become a list <code class="code">arg</code>. If <code class="code">g</code> were called instead via <code class="code">g( arg )</code> then <code class="code">g</code> would see a single list argument, so that <code class="code">g</code> would, in general, have to &quot;unwrap&quot; the passed list. The following (not particularly useful) example demonstrates both described possibilities for the call to <code class="code">g</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintNumberFromDigits := function ( arg )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    CallFuncList( Print, arg );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    Print( &quot;\n&quot; );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   end;</span>
+function( arg... ) ... end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintNumberFromDigits( 1, 9, 7, 3, 2 );</span>
+19732
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintDigits := function ( arg )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    Print( arg );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    Print( &quot;\n&quot; );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   end;</span>
+function( arg... ) ... end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintDigits( 1, 9, 7, 3, 2 );</span>
+[ 1, 9, 7, 3, 2 ]
+</pre></div> </body>
+    </html>

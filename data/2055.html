@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 27: Strings and Characters-&gt;27.7-12 SplitString</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27.html#X86E897D486DCFEAB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">27.7-12 SplitString</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SplitString</code>( <var class="Arg">string</var>, <var class="Arg">seps</var>[, <var class="Arg">wspace</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This function accepts a string <var class="Arg">string</var> and lists <var class="Arg">seps</var> and, optionally, <var class="Arg">wspace</var> of characters. Now <var class="Arg">string</var> is split into substrings at each occurrence of a character in <var class="Arg">seps</var> or <var class="Arg">wspace</var>. The characters in <var class="Arg">wspace</var> are interpreted as white space characters. Substrings of characters in <var class="Arg">wspace</var> are treated as one white space character and they are ignored at the beginning and end of a string.</p><p xmlns="http://www.w3.org/1999/xhtml">Both arguments <var class="Arg">seps</var> and <var class="Arg">wspace</var> can be single characters.</p><p xmlns="http://www.w3.org/1999/xhtml">Each string in the resulting list of substring does not contain any characters in <var class="Arg">seps</var> or <var class="Arg">wspace</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">A character that occurs both in <var class="Arg">seps</var> and <var class="Arg">wspace</var> is treated as a white space character.</p><p xmlns="http://www.w3.org/1999/xhtml">A separator at the end of a string is interpreted as a terminator; in this case, the separator does not produce a trailing empty string. Also see <code class="func">Chomp</code> (<a shape="rect" href="chap27_mj.html#X79F8FFC5876D854A"><span class="RefLink">27.7-18</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SplitString( &quot;substr1:substr2::substr4&quot;, &quot;:&quot; );</span>
+[ &quot;substr1&quot;, &quot;substr2&quot;, &quot;&quot;, &quot;substr4&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SplitString( &quot;a;b;c;d;&quot;, &quot;;&quot; );</span>
+[ &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SplitString( &quot;/home//user//dir/&quot;, &quot;&quot;, &quot;/&quot; );</span>
+[ &quot;home&quot;, &quot;user&quot;, &quot;dir&quot; ]
+</pre></div> </body>
+    </html>

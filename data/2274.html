@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.4-5 Info</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X864E4B6886E2697D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">7.4-5 Info</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Info</code>( <var class="Arg">infoclass</var>, <var class="Arg">level</var>, <var class="Arg">info</var>[, <var class="Arg">moreinfo</var>, <var class="Arg">...</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If the info level of <var class="Arg">infoclass</var> is at least <var class="Arg">level</var> the remaining arguments, <var class="Arg">info</var> and possibly <var class="Arg">moreinfo</var> and so on, are evaluated. (Technically, <code class="func">Info</code> is a keyword and not a function.)</p><p xmlns="http://www.w3.org/1999/xhtml">By default, they are viewed, preceded by the string <code class="code">&quot;#I &quot;</code> and followed by a newline. Otherwise the third and subsequent arguments are not evaluated. (The latter can save substantial time when displaying difficult results.)</p><p xmlns="http://www.w3.org/1999/xhtml">The behaviour can be customized with <code class="func">SetInfoHandler</code> (<a shape="rect" href="chap7_mj.html#X7A06511778457311"><span class="RefLink">7.4-6</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">InfoExample:=NewInfoClass(&quot;InfoExample&quot;);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Info(InfoExample,1,&quot;one&quot;);Info(InfoExample,2,&quot;two&quot;);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetInfoLevel(InfoExample,1);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Info(InfoExample,1,&quot;one&quot;);Info(InfoExample,2,&quot;two&quot;);</span>
+#I  one
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetInfoLevel(InfoExample,2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Info(InfoExample,1,&quot;one&quot;);Info(InfoExample,2,&quot;two&quot;);</span>
+#I  one
+#I  two
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">InfoLevel(InfoExample);</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Info(InfoExample,3,Length(Combinations([1..9999])));</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that the last <code class="func">Info</code> call is executed without problems, since the actual level <code class="code">2</code> of <code class="code">InfoExample</code> causes <code class="func">Info</code> to ignore the last argument, which prevents <code class="code">Length(Combinations([1..9999]))</code> from being evaluated; note that an evaluation would be impossible due to memory restrictions.</p><p xmlns="http://www.w3.org/1999/xhtml">A set of info classes (called an <em>info selector</em>) may be passed to a single <code class="func">Info</code> statement. As a shorthand, info classes and selectors may be combined with <code class="code">+</code> rather than <code class="func">Union</code> (<a shape="rect" href="chap30_mj.html#X799F0E2F7A502DBA"><span class="RefLink">30.5-3</span></a>). In this case, the message is triggered if the level of <em>any</em> of the classes is high enough.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">InfoExample:=NewInfoClass(&quot;InfoExample&quot;);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetInfoLevel(InfoExample,0);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Info(InfoExample + InfoWarning, 1, &quot;hello&quot;);</span>
+#I  hello
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Info(InfoExample + InfoWarning, 2, &quot;hello&quot;);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetInfoLevel(InfoExample,2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Info(InfoExample + InfoWarning, 2, &quot;hello&quot;);</span>
+#I  hello
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">InfoLevel(InfoWarning);</span>
+1
+</pre></div> </body>
+    </html>

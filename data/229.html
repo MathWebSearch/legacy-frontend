@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.6-2 NrTransitiveGroups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X871C27427F11B123"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">50.6-2 NrTransitiveGroups</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrTransitiveGroups</code>( <var class="Arg">deg</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the number of transitive groups of degree <var class="Arg">deg</var> stored in the library of transitive groups. The function returns <code class="keyw">fail</code> if <var class="Arg">deg</var> is beyond the range of the library.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TransitiveGroup(10,22);</span>
+S(5)[x]2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:=AllTransitiveGroups(NrMovedPoints,12,Size,1440,IsSolvable,false);</span>
+[ S(6)[x]2, M_10.2(12)=A_6.E_4(12)=[S_6[1/720]{M_10}S_6]2 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(l,IsSolvable);</span>
+[ false, false ]
+</pre></div> </body>
+    </html>

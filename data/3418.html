@@ -1,0 +1,342 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X78559D4C800AF58A"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap64_mj.html#X78559D4C800AF58A">64 <span class="Heading">Lie Algebras</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X80A607C47B7A2E69">64.1 <span class="Heading">Lie Objects</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X87F121978775AF48">64.1-1 LieObject</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X83E5DD4381D9A65D">64.1-2 IsLieObject</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X8725993C7BF386EE">64.1-3 LieFamily</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X81D9F5C6876FE93B">64.1-4 UnderlyingFamily</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X874B2B2A7F5A9A78">64.1-5 UnderlyingRingElement</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X789A44F283C16B2B">64.2 <span class="Heading">Constructing Lie algebras</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7D362350824FA115">64.2-1 LieAlgebraByStructureConstants</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7EEB79EE855E124C">64.2-2 RestrictedLieAlgebraByStructureConstants</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7C840A9F85D28C81">64.2-3 LieAlgebra</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7F7B34BD80F0F1C8">64.2-4 FreeLieAlgebra</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X8735EE937A0081F0">64.2-5 FullMatrixLieAlgebra</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X821B6C197C08878B">64.2-6 RightDerivations</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7933F05F7DE342AB">64.2-7 SimpleLieAlgebra</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X798391F47E835F85">64.3 <span class="Heading">Distinguished Subalgebras</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X8111F58E7DE3E25C">64.3-1 LieCentre</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X811444717EEDCC34">64.3-2 LieCentralizer</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7E62B6B37A75E09D">64.3-3 LieNormalizer</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7C95C0057C977747">64.3-4 LieDerivedSubalgebra</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7D072F6D7A3D0BAF">64.3-5 LieNilRadical</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X8445C9F17F7CBEA1">64.3-6 LieSolvableRadical</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X86114F157DFF6523">64.3-7 CartanSubalgebra</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X7A72840882F7A9B6">64.4 <span class="Heading">Series of Ideals</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7DEF89A8869809F5">64.4-1 LieDerivedSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7900D17E7BA26A48">64.4-2 LieLowerCentralSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X86A8701C868828C7">64.4-3 LieUpperCentralSeries</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X8208CE5F8286155F">64.5 <span class="Heading">Properties of a Lie Algebra</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7F97D08F7B738ADE">64.5-1 IsLieAbelian</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X78452F4E875A62A8">64.5-2 IsLieNilpotent</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X859FF1B3812B8FCC">64.5-3 IsLieSolvable</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X83F829017D46C544">64.6 <span class="Heading">Semisimple Lie Algebras and Root Systems</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X8401CDC2859F8A85">64.6-1 SemiSimpleType</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X82EBF10A7B3B6F6E">64.6-2 ChevalleyBasis</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X79B5D27681193625">64.6-3 IsRootSystem</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7D64D49479CBB203">64.6-4 IsRootSystemFromLieAlgebra</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X80D15C027BB8029B">64.6-5 RootSystem</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7CA021E28527763E">64.6-6 UnderlyingLieAlgebra</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7B6B0BBD8035D7E5">64.6-7 PositiveRoots</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X81F9E0E67DD2688F">64.6-8 NegativeRoots</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X829C78427A442C23">64.6-9 PositiveRootVectors</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7AB374DC87A39349">64.6-10 NegativeRootVectors</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7DBD179E7CCF6699">64.6-11 SimpleSystem</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X84E3FEF587CB66C3">64.6-12 CartanMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X878644D68571BF44">64.6-13 BilinearFormMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7FAE45B37C5779A0">64.6-14 CanonicalGenerators</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X7945D07786D1C4BB">64.7 <span class="Heading">Semisimple Lie Algebras and Weyl Groups of Root Systems</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X82AA29DD7969A935">64.7-1 IsWeylGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X81EF01E57E5DC18A">64.7-2 SparseCartanMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X86BED5098322EBEF">64.7-3 WeylGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7829BC4D7F253649">64.7-4 ApplySimpleReflection</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X80A7204F7D40D80F">64.7-5 LongestWeylWordPerm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7D4E213F82F73857">64.7-6 ConjugateDominantWeight</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7E000FA97949BFD5">64.7-7 WeylOrbitIterator</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X878080BB79BE3F2E">64.8 <span class="Heading">Restricted Lie algebras</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X81F28B1D830F28EB">64.8-1 IsRestrictedLieAlgebra</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7D7BD5908016461B">64.8-2 PthPowerImages</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X879BB01782E7D7A9">64.8-3 PthPowerImage</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X8692ADD581359CA1">64.8-4 JenningsLieAlgebra</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X785251E879E1BFC6">64.8-5 PCentralLieAlgebra</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X781ADBEC850C7DE7">64.8-6 NaturalHomomorphismOfLieAlgebraFromNilpotentGroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X7C419FFA835EBE12">64.9 <span class="Heading">The Adjoint Representation</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X786886D882795F78">64.9-1 AdjointMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X873A64307AC6C63E">64.9-2 AdjointAssociativeAlgebra</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X877CCFD5832E035D">64.9-3 KillingMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X8234046083B60F6E">64.9-4 KappaPerp</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7A00601387A060CF">64.9-5 IsNilpotentElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X86EF3E6F7BC0A8AD">64.9-6 NonNilpotentElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7A912D9E7B3BA874">64.9-7 FindSl2</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X7875070C85DD4E8E">64.10 <span class="Heading">Universal Enveloping Algebras</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X8226CD1680207A5F">64.10-1 UniversalEnvelopingAlgebra</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X7B8C71E07F50B286">64.11 <span class="Heading">Finitely Presented Lie Algebras</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X780A5B457A051110">64.11-1 FpLieAlgebraByCartanMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X79FD70C487EA9438">64.11-2 NilpotentQuotientOfFpLieAlgebra</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X7FBCB43C86BDD9C2">64.12 <span class="Heading">Modules over Lie Algebras and Their Cohomology</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X82CC31CF79F59FEE">64.12-1 IsCochain</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X79F3DF0D8791C2E3">64.12-2 Cochain</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7CF2919081600A3D">64.12-3 CochainSpace</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7D6760DA84683011">64.12-4 ValueCochain</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X851F5EF47FA90CBC">64.12-5 LieCoboundaryOperator</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7FB815F38143939E">64.12-6 Cocycles</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7C4F372C7AE2F739">64.12-7 Coboundaries</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X78A201238137E822">64.13 <span class="Heading">Modules over Semisimple Lie Algebras</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7D8522E37ED1024A">64.13-1 DominantWeights</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X79AAC71E8267E9F8">64.13-2 DominantCharacter</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7BE7129384B012DF">64.13-3 DecomposeTensorProduct</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7D67A9BC7E4714D9">64.13-4 DimensionOfHighestWeightModule</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X840E5FAE7D2C2702">64.14 <span class="Heading">Admissible Lattices in UEA</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X86E6722379576746">64.14-1 IsUEALatticeElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X79F4F58B7888B0A5">64.14-2 LatticeGeneratorsInUEA</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X875FD1627F3B72DB">64.14-3 ObjByExtRep</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X8248DB547B02B0FA">64.14-4 IsWeightRepElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7FB14F7F80EFF33F">64.14-5 HighestWeightModule</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap64_mj.html#X78515F448644204E">64.15 <span class="Heading">Tensor Products and Exterior and Symmetric Powers</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7A1E0AC4800E7FDA">64.15-1 TensorProductOfAlgebraModules</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X7F4AB6A1863E8FB2">64.15-2 ExteriorPowerOfAlgebraModule</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap64_mj.html#X842DF85687D61A56">64.15-3 SymmetricPowerOfAlgebraModule</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">64 <span class="Heading">Lie Algebras</span></h3><p xmlns="http://www.w3.org/1999/xhtml">A Lie algebra <math id="-7733433222821171581" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
+  </semantics>
+</math> is an algebra such that <math id="8742534472925324290" display="inline" alttext="xx=0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">x</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">0</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <times xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑥</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">0</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">xx=0</annotation>
+  </semantics>
+</math> and <math id="3156496335469804959" display="inline" alttext="x(yz)+y(zx)+z(xy)=0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">
+      <mrow xref="p1.1.m1.1.20.1.cmml" id="p1.1.m1.1.20.1">
+        <mrow xref="p1.1.m1.1.20.1.1.cmml" id="p1.1.m1.1.20.1.1">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+          <mo xref="p1.1.m1.1.20.1.1.1.cmml" id="p1.1.m1.1.20.1.1.1">⁢</mo>
+          <mrow xref="p1.1.m1.1.20.1.1.2.2.cmml" id="p1.1.m1.1.20.1.1.2">
+            <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+            <mrow xref="p1.1.m1.1.20.1.1.2.2.cmml" id="p1.1.m1.1.20.1.1.2.2">
+              <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">y</mi>
+              <mo xref="p1.1.m1.1.20.1.1.2.2.1.cmml" id="p1.1.m1.1.20.1.1.2.2.1">⁢</mo>
+              <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">z</mi>
+            </mrow>
+            <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">+</mo>
+        <mrow xref="p1.1.m1.1.20.1.2.cmml" id="p1.1.m1.1.20.1.2">
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">y</mi>
+          <mo xref="p1.1.m1.1.20.1.2.1.cmml" id="p1.1.m1.1.20.1.2.1">⁢</mo>
+          <mrow xref="p1.1.m1.1.20.1.2.2.2.cmml" id="p1.1.m1.1.20.1.2.2">
+            <mo id="p1.1.m1.1.8" stretchy="false">(</mo>
+            <mrow xref="p1.1.m1.1.20.1.2.2.2.cmml" id="p1.1.m1.1.20.1.2.2.2">
+              <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">z</mi>
+              <mo xref="p1.1.m1.1.20.1.2.2.2.1.cmml" id="p1.1.m1.1.20.1.2.2.2.1">⁢</mo>
+              <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">x</mi>
+            </mrow>
+            <mo id="p1.1.m1.1.11" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6a">+</mo>
+        <mrow xref="p1.1.m1.1.20.1.3.cmml" id="p1.1.m1.1.20.1.3">
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">z</mi>
+          <mo xref="p1.1.m1.1.20.1.3.1.cmml" id="p1.1.m1.1.20.1.3.1">⁢</mo>
+          <mrow xref="p1.1.m1.1.20.1.3.2.2.cmml" id="p1.1.m1.1.20.1.3.2">
+            <mo id="p1.1.m1.1.14" stretchy="false">(</mo>
+            <mrow xref="p1.1.m1.1.20.1.3.2.2.cmml" id="p1.1.m1.1.20.1.3.2.2">
+              <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">x</mi>
+              <mo xref="p1.1.m1.1.20.1.3.2.2.1.cmml" id="p1.1.m1.1.20.1.3.2.2.1">⁢</mo>
+              <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">y</mi>
+            </mrow>
+            <mo id="p1.1.m1.1.17" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">=</mo>
+      <mn xref="p1.1.m1.1.19.cmml" id="p1.1.m1.1.19">0</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml">
+        <eq xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml"/>
+        <apply xref="p1.1.m1.1.20.1" id="p1.1.m1.1.20.1.cmml">
+          <plus xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+          <apply xref="p1.1.m1.1.20.1.1" id="p1.1.m1.1.20.1.1.cmml">
+            <times xref="p1.1.m1.1.20.1.1.1" id="p1.1.m1.1.20.1.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+            <apply xref="p1.1.m1.1.20.1.1.2" id="p1.1.m1.1.20.1.1.2.2.cmml">
+              <times xref="p1.1.m1.1.20.1.1.2.2.1" id="p1.1.m1.1.20.1.1.2.2.1.cmml"/>
+              <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑦</ci>
+              <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑧</ci>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.20.1.2" id="p1.1.m1.1.20.1.2.cmml">
+            <times xref="p1.1.m1.1.20.1.2.1" id="p1.1.m1.1.20.1.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑦</ci>
+            <apply xref="p1.1.m1.1.20.1.2.2" id="p1.1.m1.1.20.1.2.2.2.cmml">
+              <times xref="p1.1.m1.1.20.1.2.2.2.1" id="p1.1.m1.1.20.1.2.2.2.1.cmml"/>
+              <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑧</ci>
+              <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑥</ci>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.20.1.3" id="p1.1.m1.1.20.1.3.cmml">
+            <times xref="p1.1.m1.1.20.1.3.1" id="p1.1.m1.1.20.1.3.1.cmml"/>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑧</ci>
+            <apply xref="p1.1.m1.1.20.1.3.2" id="p1.1.m1.1.20.1.3.2.2.cmml">
+              <times xref="p1.1.m1.1.20.1.3.2.2.1" id="p1.1.m1.1.20.1.3.2.2.1.cmml"/>
+              <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑥</ci>
+              <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝑦</ci>
+            </apply>
+          </apply>
+        </apply>
+        <cn xref="p1.1.m1.1.19" id="p1.1.m1.1.19.cmml" type="integer">0</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x(yz)+y(zx)+z(xy)=0</annotation>
+  </semantics>
+</math> for all <math id="796988509217363200" display="inline" alttext="x,y,z\in L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mo id="p1.1.m1.1.2">,</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">y</mi>
+        <mo id="p1.1.m1.1.4">,</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">z</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">∈</mo>
+      <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">L</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <in xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <list xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.1.cmml">
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑦</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑧</ci>
+        </list>
+        <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝐿</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x,y,z\in L</annotation>
+  </semantics>
+</math>. A common way of creating a Lie algebra is by taking an associative algebra together with the commutator as product. Therefore the product of two elements <math id="-2662257863869305059" display="inline" alttext="x,y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mo id="p1.1.m1.1.2">,</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">y</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑦</ci>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x,y</annotation>
+  </semantics>
+</math> of a Lie algebra is usually denoted by <math id="1122258470759823096" display="inline" alttext="[x,y]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">x</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">y</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="closed">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑦</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[x,y]</annotation>
+  </semantics>
+</math>, but in <strong class="pkg">GAP</strong> this denotes the list of the elements <math id="2182349881758101294" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> and <math id="-3726725802982840640" display="inline" alttext="y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑦</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">y</annotation>
+  </semantics>
+</math>; hence the product of elements is made by the usual <code class="code">*</code>. This gives no problems when dealing with Lie algebras given by a table of structure constants. However, for matrix Lie algebras the situation is not so easy as <code class="code">*</code> denotes the ordinary (associative) matrix multiplication. In <strong class="pkg">GAP</strong> this problem is solved by wrapping elements of a matrix Lie algebra up as <code class="code">LieObject</code>s, and then define the <code class="code">*</code> for <code class="code">LieObject</code>s to be the commutator (see <a shape="rect" href="chap64_mj.html#X80A607C47B7A2E69"><span class="RefLink">64.1</span></a>).</p> </body>
+    </html>

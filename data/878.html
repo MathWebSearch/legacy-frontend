@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 49: Group Products-&gt;49.5-1 FreeProduct</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap49.html#X837AC5A081EECF50"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">49.5-1 <span class="Heading">FreeProduct</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeProduct</code>( <var class="Arg">G</var>[, <var class="Arg">H</var>, <var class="Arg">...</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeProduct</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">constructs a finitely presented group which is the free product of the groups given as arguments. If the group arguments are not finitely presented groups, then <code class="func">IsomorphismFpGroup</code> (<a shape="rect" href="chap47_mj.html#X7F28268F850F454E"><span class="RefLink">47.11-1</span></a>) must be defined for them.</p><p xmlns="http://www.w3.org/1999/xhtml">The operation <code class="func">Embedding</code> (<a shape="rect" href="chap32_mj.html#X86452F8587CBAEA0"><span class="RefLink">32.2-10</span></a>) operates on this product.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := DihedralGroup(8);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h := CyclicGroup(5);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fp := FreeProduct(g,h,h);</span>
+&lt;fp group on the generators [ f1, f2, f3, f4, f5 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fp := FreeProduct([g,h,h]);</span>
+&lt;fp group on the generators [ f1, f2, f3, f4, f5 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Embedding(fp,2);</span>
+[ f1 ] -&gt; [ f4 ]
+</pre></div> </body>
+    </html>

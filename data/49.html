@@ -1,0 +1,38 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.9-18 DirectSumDecomposition</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7CFB230582C26DAA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.9-18 DirectSumDecomposition</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DirectSumDecomposition</code>( <var class="Arg">L</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This function calculates a list of ideals of the algebra <var class="Arg">L</var> such that <var class="Arg">L</var> is equal to their direct sum. Currently this is only implemented for semisimple associative algebras, and for Lie algebras (semisimple or not).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G:= SymmetricGroup( 4 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= GroupRing( Rationals, G );</span>
+&lt;algebra-with-one over Rationals, with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">dd:= DirectSumDecomposition( A );</span>
+[ &lt;two-sided ideal in 
+      &lt;algebra-with-one of dimension 24 over Rationals&gt;, 
+      (1 generators)&gt;, 
+  &lt;two-sided ideal in 
+      &lt;algebra-with-one of dimension 24 over Rationals&gt;, 
+      (1 generators)&gt;, 
+  &lt;two-sided ideal in 
+      &lt;algebra-with-one of dimension 24 over Rationals&gt;, 
+      (1 generators)&gt;, 
+  &lt;two-sided ideal in 
+      &lt;algebra-with-one of dimension 24 over Rationals&gt;, 
+      (1 generators)&gt;, 
+  &lt;two-sided ideal in 
+      &lt;algebra-with-one of dimension 24 over Rationals&gt;, 
+      (1 generators)&gt; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( dd, Dimension );</span>
+[ 1, 1, 4, 9, 9 ]
+</pre></div><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= FullMatrixLieAlgebra( Rationals, 5 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DirectSumDecomposition( L );</span>
+[ &lt;two-sided ideal in 
+      &lt;two-sided ideal in &lt;Lie algebra of dimension 25 over Rationals&gt;
+            , (dimension 1)&gt;, (dimension 1)&gt;, 
+  &lt;two-sided ideal in 
+      &lt;two-sided ideal in &lt;Lie algebra of dimension 25 over Rationals&gt;
+            , (dimension 24)&gt;, (dimension 24)&gt; ]
+</pre></div> </body>
+    </html>

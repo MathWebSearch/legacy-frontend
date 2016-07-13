@@ -1,0 +1,63 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.8 Line Editing</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X82234FD181899530"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">6.8 <span class="Heading">Line Editing</span></h4><p xmlns="http://www.w3.org/1999/xhtml">In most installations <strong class="pkg">GAP</strong> will be compiled to use the Gnu readline library (see the line <code class="code">Libs used:</code> on <strong class="pkg">GAP</strong> startup). In that case skip to the next section <a shape="rect" href="chap6_mj.html#X7E95EB017803F53C"><span class="RefLink">6.9</span></a>. (The line editing commands described in the rest of this section were available in previous versions of <strong class="pkg">GAP</strong>, they will work almost the same in the standard configuration of the Gnu readline library.)</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> allows one you to edit the current input line with a number of editing commands. Those commands are accessible either as <em>control keys</em> or as <em>escape keys</em>. You enter a control key by pressing the <strong class="button">Ctrl</strong> key, and, while still holding the <strong class="button">Ctrl</strong> key down, hitting another key <code class="code">key</code>. You enter an escape key by hitting <strong class="button">Esc</strong> and then hitting another key <code class="code">key</code>. Below we denote control keys by <strong class="button">Ctrl-</strong><code class="code">key</code> and escape keys by <strong class="button">Esc-</strong><code class="code">key</code>. The case of <code class="code">key</code> does not matter, i.e., <strong class="button">Ctrl-A</strong> and <strong class="button">Ctrl-a</strong> are equivalent.</p><p xmlns="http://www.w3.org/1999/xhtml">Normally, line editing will be enabled if the input is connected to a terminal. Line editing can be enabled or disabled using the command line options <code class="code">-f</code> and <code class="code">-n</code> respectively (see <a shape="rect" href="chap3_mj.html#X782751D5858A6EAF"><span class="RefLink">3.1</span></a>), however this is a machine dependent feature of <strong class="pkg">GAP</strong>.</p><p xmlns="http://www.w3.org/1999/xhtml">Typing <strong class="button">Ctrl-key</strong> or <strong class="button">Esc-key</strong> for characters not mentioned below always inserts <strong class="button">Ctrl-</strong><code class="code">key</code> resp. <strong class="button">Esc-</strong><code class="code">key</code> at the current cursor position.</p><p xmlns="http://www.w3.org/1999/xhtml">The first few commands allow you to move the cursor on the current line.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><strong class="button">Ctrl-A</strong></strong></dt><dd><p>move the cursor to the beginning of the line.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-B</strong></strong></dt><dd><p>move the cursor to the beginning of the previous word.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-B</strong></strong></dt><dd><p>move the cursor backward one character.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-F</strong></strong></dt><dd><p>move the cursor forward one character.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-F</strong></strong></dt><dd><p>move the cursor to the end of the next word.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-E</strong></strong></dt><dd><p>move the cursor to the end of the line.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The next commands delete or kill text. The last killed text can be reinserted, possibly at a different position, with the &quot;yank&quot; command <strong class="button">Ctrl-Y</strong>.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><strong class="button">Ctrl-H</strong> or <var class="Arg">del</var></strong></dt><dd><p>delete the character left of the cursor.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-D</strong></strong></dt><dd><p>delete the character under the cursor.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-K</strong></strong></dt><dd><p>kill up to the end of the line.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-D</strong></strong></dt><dd><p>kill forward to the end of the next word.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-del</strong></strong></dt><dd><p>kill backward to the beginning of the last word.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-X</strong></strong></dt><dd><p>kill entire input line, and discard all pending input.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-Y</strong></strong></dt><dd><p>insert (yank) a just killed text.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The next commands allow you to change the input.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><strong class="button">Ctrl-T</strong></strong></dt><dd><p>exchange (twiddle) current and previous character.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-U</strong></strong></dt><dd><p>uppercase next word.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-L</strong></strong></dt><dd><p>lowercase next word.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-C</strong></strong></dt><dd><p>capitalize next word.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The <strong class="button">Tab</strong> character, which is in fact the control key <strong class="button">Ctrl-I</strong>, looks at the characters before the cursor, interprets them as the beginning of an identifier and tries to complete this identifier. If there is more than one possible completion, it completes to the longest common prefix of all those completions. If the characters to the left of the cursor are already the longest common prefix of all completions hitting <strong class="button">Tab</strong> a second time will display all possible completions.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><strong class="button">tab</strong></strong></dt><dd><p>complete the identifier before the cursor.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The next commands allow you to fetch previous lines, e.g., to correct typos, etc.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><strong class="button">Ctrl-L</strong></strong></dt><dd><p>insert last input line before current character.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-P</strong></strong></dt><dd><p>redisplay the last input line, another <strong class="button">Ctrl-P</strong> will redisplay the line before that, etc. If the cursor is not in the first column only the lines starting with the string to the left of the cursor are taken.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-N</strong></strong></dt><dd><p>Like <strong class="button">Ctrl-P</strong> but goes the other way round through the history.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-&lt;</strong></strong></dt><dd><p>goes to the beginning of the history.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-&gt;</strong></strong></dt><dd><p>goes to the end of the history.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-O</strong></strong></dt><dd><p>accepts this line and perform a <strong class="button">Ctrl-N</strong>.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">Finally there are a few miscellaneous commands.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><strong class="button">Ctrl-V</strong></strong></dt><dd><p>enter next character literally, i.e., enter it even if it is one of the control keys.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Ctrl-U</strong></strong></dt><dd><p>execute the next line editing command 4 times.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-</strong><code class="code">num</code></strong></dt><dd><p>execute the next line editing command <code class="code">num</code> times.</p>
+
+</dd><dt><strong class="Mark"><strong class="button">Esc-Ctrl-L</strong></strong></dt><dd><p>redisplay input line.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The four arrow keys (cursor keys) can be used instead of <strong class="button">Ctrl-B</strong>, <strong class="button">Ctrl-F</strong>, <strong class="button">Ctrl-P</strong>, and <strong class="button">Ctrl-N</strong>, respectively.</p> </body>
+    </html>

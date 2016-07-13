@@ -1,0 +1,159 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.8-7 DisplayInformationPerfectGroups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X845419F07BB92867"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">50.8-7 <span class="Heading">DisplayInformationPerfectGroups</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DisplayInformationPerfectGroups</code>( <var class="Arg">size</var>[, <var class="Arg">n</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DisplayInformationPerfectGroups</code>( <var class="Arg">sizenumberpair</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DisplayInformationPerfectGroups</code> displays some invariants of the <var class="Arg">n</var>-th group of order <var class="Arg">size</var> from the perfect groups library.</p><p xmlns="http://www.w3.org/1999/xhtml">If no value of <var class="Arg">n</var> has been specified, the invariants will be displayed for all groups of size <var class="Arg">size</var> available in the library.</p><p xmlns="http://www.w3.org/1999/xhtml">Alternatively, also a list of length two may be entered as the only argument, with entries <var class="Arg">size</var> and <var class="Arg">n</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The information provided for <math id="-9202492746631624380" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> includes the following items:</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>a headline containing the size number <code class="code">[ <var class="Arg">size</var>, <var class="Arg">n</var> ]</code> of <math id="-3500357360030880131" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> in the form <code class="code"><var class="Arg">size</var>.<var class="Arg">n</var></code> (the suffix <code class="code">.<var class="Arg">n</var></code> will be suppressed if, up to isomorphism, <math id="409470623428996913" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is the only perfect group of order <var class="Arg">size</var>),</p>
+
+</li><li><p>a message if <math id="7495479440933682056" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is simple or quasisimple, i.e., if the factor group of <math id="-2190642718063116468" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> by its centre is simple,</p>
+
+</li><li><p>the &quot;description&quot; of the structure of <math id="74960186713773558" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> as it is given by Holt and Plesken in <a shape="rect" href="chapBib_mj.html#biBHP89">[HP89]</a> (see below),</p>
+
+</li><li><p>the size of the centre of <math id="549465473630457387" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> (suppressed, if <math id="-1214596580831602795" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is simple),</p>
+
+</li><li><p>the prime decomposition of the size of <math id="-6671723749378589086" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>,</p>
+
+</li><li><p>orbit sizes for a faithful permutation representation of <math id="-7408600349958347354" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> which is provided by the library (see below),</p>
+
+</li><li><p>a reference to each occurrence of <math id="1290996783268204514" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> in the tables of section 5.3 of <a shape="rect" href="chapBib_mj.html#biBHP89">[HP89]</a>. Each of these references consists of a class number and an internal number <math id="-5678280284726150852" display="inline" alttext="(i,j)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">i</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">j</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="open">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑖</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑗</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(i,j)</annotation>
+  </semantics>
+</math> under which <math id="-4312310293837212520" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is listed in that class. For some groups, there is more than one reference because these groups belong to more than one of the classes in the book.</p>
+
+</li></ul><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisplayInformationPerfectGroups( 30720, 3 );</span>
+#I Perfect group 30720:  A5 ( 2^4 E N 2^1 E 2^4 ) A
+#I   size = 2^11*3*5  orbit size = 240
+#I   Holt-Plesken class 1 (9,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisplayInformationPerfectGroups( 30720, 6 );</span>
+#I Perfect group 30720:  A5 ( 2^4 x 2^4 ) C N 2^1
+#I   centre = 2  size = 2^11*3*5  orbit size = 384
+#I   Holt-Plesken class 1 (9,6)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DisplayInformationPerfectGroups( Factorial( 8 ) / 2 );</span>
+#I Perfect group 20160.1:  A5 x L3(2) 2^1
+#I   centre = 2  size = 2^6*3^2*5*7  orbit sizes = 5 + 16
+#I   Holt-Plesken class 31 (1,1) (occurs also in class 32)
+#I Perfect group 20160.2:  A5 2^1 x L3(2)
+#I   centre = 2  size = 2^6*3^2*5*7  orbit sizes = 7 + 24
+#I   Holt-Plesken class 31 (1,2) (occurs also in class 32)
+#I Perfect group 20160.3:  ( A5 x L3(2) ) 2^1
+#I   centre = 2  size = 2^6*3^2*5*7  orbit size = 192
+#I   Holt-Plesken class 31 (1,3)
+#I Perfect group 20160.4:  simple group  A8
+#I   size = 2^6*3^2*5*7  orbit size = 8
+#I   Holt-Plesken class 26 (0,1)
+#I Perfect group 20160.5:  simple group  L3(4)
+#I   size = 2^6*3^2*5*7  orbit size = 21
+#I   Holt-Plesken class 27 (0,1)
+</pre></div> </body>
+    </html>

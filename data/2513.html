@@ -1,0 +1,178 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.4-1 Decomposition</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X7911A60384C511AB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.4-1 Decomposition</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Decomposition</code>( <var class="Arg">A</var>, <var class="Arg">B</var>, <var class="Arg">depth</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a <math id="8389669782223275627" display="inline" alttext="m\times n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m\times n</annotation>
+  </semantics>
+</math> matrix <var class="Arg">A</var> of cyclotomics that has rank <math id="-3249916958672398671" display="inline" alttext="m\leq n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≤</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <leq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m\leq n</annotation>
+  </semantics>
+</math>, and a list <var class="Arg">B</var> of cyclotomic vectors, each of length <math id="687010098545374729" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>, <code class="func">Decomposition</code> tries to find integral solutions of the linear equation systems <code class="code"><var class="Arg">x</var> * <var class="Arg">A</var> = <var class="Arg">B</var>[i]</code>, by computing the <math id="-3118881121437923140" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-adic series of hypothetical solutions.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">Decomposition( <var class="Arg">A</var>, <var class="Arg">B</var>, <var class="Arg">depth</var> )</code>, where <var class="Arg">depth</var> is a nonnegative integer, computes for each vector <code class="code"><var class="Arg">B</var>[i]</code> the initial part <math id="-5541618473000014021" display="inline" alttext="\sum_{{k=0}}^{\textit{depth}}x_{k}p^{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <msubsup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" symmetric="true" largeop="true">∑</mo>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">k</mi>
+          <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">=</mo>
+          <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">0</mn>
+        </mrow>
+        <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑑𝑒𝑝𝑡ℎ</mtext>
+      </msubsup>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <msub xref="p1.1.m1.1.8.2.2.cmml" id="p1.1.m1.1.8.2.2">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">x</mi>
+          <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">k</mi>
+        </msub>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <msup xref="p1.1.m1.1.8.2.3.cmml" id="p1.1.m1.1.8.2.3">
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">p</mi>
+          <mi xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">k</mi>
+        </msup>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <csymbol id="p1.1.m1.1.8.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <sum xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+            <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+              <eq xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑘</ci>
+              <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">0</cn>
+            </apply>
+          </apply>
+          <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">depth</span>
+          </mtext>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.2.2" id="p1.1.m1.1.8.2.2.cmml">
+            <csymbol id="p1.1.m1.1.8.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑥</ci>
+            <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝑘</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.8.2.3" id="p1.1.m1.1.8.2.3.cmml">
+            <csymbol id="p1.1.m1.1.8.2.3.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑝</ci>
+            <ci xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">𝑘</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\sum_{{k=0}}^{\textit{depth}}x_{k}p^{k}</annotation>
+  </semantics>
+</math>, with all <math id="-8530176544094610256" display="inline" alttext="x_{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">k</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑘</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{k}</annotation>
+  </semantics>
+</math> vectors of integers with entries bounded by <math id="-3629127605670866123" display="inline" alttext="\pm(p-1)/2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">±</mo>
+      <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">
+        <mrow xref="p1.1.m1.1.9.1.1.2.cmml" id="p1.1.m1.1.9.1.1">
+          <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.9.1.1.2.cmml" id="p1.1.m1.1.9.1.1.2">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">p</mi>
+            <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">-</mo>
+            <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">1</mn>
+          </mrow>
+          <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">/</mo>
+        <mn xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">2</mn>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" cd="latexml">plus-or-minus</csymbol>
+        <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">
+          <divide xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+          <apply xref="p1.1.m1.1.9.1.1" id="p1.1.m1.1.9.1.1.2.cmml">
+            <minus xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑝</ci>
+            <cn xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml" type="integer">1</cn>
+          </apply>
+          <cn xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml" type="integer">2</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\pm(p-1)/2</annotation>
+  </semantics>
+</math>. The prime <math id="-7058074746423179260" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> is set to 83 first; if the reduction of <var class="Arg">A</var> modulo <math id="3851419717101733318" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> is singular, the next prime is chosen automatically.</p><p xmlns="http://www.w3.org/1999/xhtml">A list <var class="Arg">X</var> is returned. If the computed initial part for <code class="code"><var class="Arg">x</var> * <var class="Arg">A</var> = <var class="Arg">B</var>[i]</code> <em>is</em> a solution, we have <code class="code"><var class="Arg">X</var>[i] = <var class="Arg">x</var></code>, otherwise <code class="code"><var class="Arg">X</var>[i] = fail</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">depth</var> is not an integer then it must be the string <code class="code">&quot;nonnegative&quot;</code>. <code class="code">Decomposition( <var class="Arg">A</var>, <var class="Arg">B</var>, &quot;nonnegative&quot; )</code> assumes that the solutions have only nonnegative entries, and that the first column of <var class="Arg">A</var> consists of positive integers. This is satisfied, e.g., for the decomposition of ordinary characters into Brauer characters. In this case the necessary number <var class="Arg">depth</var> of iterations can be computed; the <code class="code">i</code>-th entry of the returned list is <code class="keyw">fail</code> if there <em>exists</em> no nonnegative integral solution of the system <code class="code"><var class="Arg">x</var> * <var class="Arg">A</var> = <var class="Arg">B</var>[i]</code>, and it is the solution otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>Note</em> that the result is a list of <code class="keyw">fail</code> if <var class="Arg">A</var> has not full rank, even if there might be a unique integral solution for some equation system.</p> </body>
+    </html>

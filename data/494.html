@@ -1,0 +1,38 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.13-5 PrintCharacterTable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X79EC9603833AA2AB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.13-5 PrintCharacterTable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PrintCharacterTable</code>( <var class="Arg">tbl</var>, <var class="Arg">varname</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">tbl</var> be a nearly character table, and <var class="Arg">varname</var> a string. <code class="func">PrintCharacterTable</code> prints those values of the supported attributes (see <code class="func">SupportedCharacterTableInfo</code> (<a shape="rect" href="chap71_mj.html#X7DBEF4BF87F10CD6"><span class="RefLink">71.3-4</span></a>)) that are known for <var class="Arg">tbl</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The output of <code class="func">PrintCharacterTable</code> is <strong class="pkg">GAP</strong> readable; actually reading it into <strong class="pkg">GAP</strong> will bind the variable with name <var class="Arg">varname</var> to a character table that coincides with <var class="Arg">tbl</var> for all printed components.</p><p xmlns="http://www.w3.org/1999/xhtml">This is used mainly for saving character tables to files. A more human readable form is produced by <code class="func">Display</code> (<a shape="rect" href="chap6_mj.html#X83A5C59278E13248"><span class="RefLink">6.3-6</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintCharacterTable( CharacterTable( &quot;Cyclic&quot;, 2 ), &quot;tbl&quot; );</span>
+tbl:= function()
+local tbl, i;
+tbl:=rec();
+tbl.Irr:=
+[ [ 1, 1 ], [ 1, -1 ] ];
+tbl.NrConjugacyClasses:=
+2;
+tbl.Size:=
+2;
+tbl.OrdersClassRepresentatives:=
+[ 1, 2 ];
+tbl.SizesCentralizers:=
+[ 2, 2 ];
+tbl.UnderlyingCharacteristic:=
+0;
+tbl.ClassParameters:=
+[ [ 1, 0 ], [ 1, 1 ] ];
+tbl.CharacterParameters:=
+[ [ 1, 0 ], [ 1, 1 ] ];
+tbl.Identifier:=
+&quot;C2&quot;;
+tbl.InfoText:=
+&quot;computed using generic character table for cyclic groups&quot;;
+tbl.ComputedPowerMaps:=
+[ , [ 1, 1 ] ];
+ConvertToLibraryCharacterTableNC(tbl);
+return tbl;
+end;
+tbl:= tbl();
+</pre></div> </body>
+    </html>

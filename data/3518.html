@@ -1,0 +1,47 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.7 Duplication of Lists</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7ED7C0738495556F"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.7 <span class="Heading">Duplication of Lists</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Here we describe the meaning of <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) and <code class="func">StructuralCopy</code> (<a shape="rect" href="chap12_mj.html#X7C1E70587EBDD2CB"><span class="RefLink">12.7-2</span></a>) for lists. For the general definition of these functions, see <a shape="rect" href="chap12_mj.html#X786B942B82D684BD"><span class="RefLink">12.7</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">The subobjects (see <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>)) of a list are exactly its elements.</p><p xmlns="http://www.w3.org/1999/xhtml">This means that for any list <var class="Arg">list</var>, <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) returns a mutable <em>new</em> list <var class="Arg">new</var> that is <em>not identical</em> to any other list (see <a shape="rect" href="chap21_mj.html#X7DD65BEA7EDB0CD7"><span class="RefLink">21.6</span></a>), and whose elements are identical to the elements of <var class="Arg">list</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Analogously, for a <em>mutable</em> list <var class="Arg">list</var>, <code class="func">StructuralCopy</code> (<a shape="rect" href="chap12_mj.html#X7C1E70587EBDD2CB"><span class="RefLink">12.7-2</span></a>) returns a mutable <em>new</em> list <var class="Arg">scp</var> that is <em>not identical</em> to any other list, and whose elements are structural copies (defined recursively) of the elements of <var class="Arg">list</var>; an element of <var class="Arg">scp</var> is mutable (and then a <em>new</em> list) if and only if the corresponding element of <var class="Arg">list</var> is mutable.</p><p xmlns="http://www.w3.org/1999/xhtml">In both cases, modifying the copy <var class="Arg">new</var> resp. <var class="Arg">scp</var> by assignments (see <a shape="rect" href="chap21_mj.html#X8611EF768210625B"><span class="RefLink">21.4</span></a>) does not modify the original object <var class="Arg">list</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) basically executes the following code for lists.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+new := [];
+for i in [ 1 .. Length( list ) ] do
+  if IsBound( list[i] ) then
+    new[i] := list[i];
+  fi;
+od;
+</pre></div><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list1 := [ [ 1, 2 ], [ 3, 4 ] ];;  list2 := ShallowCopy( list1 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( list1, list2 );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( list1[1], list2[1] );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list2[1] := 0;;  list1;  list2;</span>
+[ [ 1, 2 ], [ 3, 4 ] ]
+[ 0, [ 3, 4 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">StructuralCopy</code> (<a shape="rect" href="chap12_mj.html#X7C1E70587EBDD2CB"><span class="RefLink">12.7-2</span></a>) basically executes the following code for lists.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+new := [];
+for i in [ 1 .. Length( list ) ] do
+  if IsBound( list[i] ) then
+    new[i] := StructuralCopy( list[i] );
+  fi;
+od;
+</pre></div><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list1 := [ [ 1, 2 ], [ 3, 4 ] ];;  list2 := StructuralCopy( list1 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( list1, list2 );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( list1[1], list2[1] );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list2[1][1] := 0;;  list1;  list2;</span>
+[ [ 1, 2 ], [ 3, 4 ] ]
+[ [ 0, 2 ], [ 3, 4 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The above code is not entirely correct. If the object <var class="Arg">list</var> contains a mutable object twice this object is not copied twice, as would happen with the above definition, but only once. This means that the copy <var class="Arg">new</var> and the object <var class="Arg">list</var> have exactly the same structure when viewed as a general graph.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sub := [ 1, 2 ];; list1 := [ sub, sub ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list2 := StructuralCopy( list1 );</span>
+[ [ 1, 2 ], [ 1, 2 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list2[1][1] := 0;; list2;</span>
+[ [ 0, 2 ], [ 0, 2 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list1;</span>
+[ [ 1, 2 ], [ 1, 2 ] ]
+</pre></div> </body>
+    </html>

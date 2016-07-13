@@ -1,0 +1,95 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.16 The Dixon-Schneider Algorithm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X86CDA4007A5EF704"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">71.16 <span class="Heading">The Dixon-Schneider Algorithm</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The <strong class="pkg">GAP</strong> library implementation of the Dixon-Schneider algorithm first computes the linear characters, using the commutator factor group. If irreducible characters are missing afterwards, they are computed using the techniques described in <a shape="rect" href="chapBib_mj.html#biBDix67">[Dix67]</a>, <a shape="rect" href="chapBib_mj.html#biBSch90">[Sch90]</a> and <a shape="rect" href="chapBib_mj.html#biBHulpke93">[Hul93]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Called with a group <math id="-1070050725105942597" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, the function <code class="func">CharacterTable</code> (<a shape="rect" href="chap71_mj.html#X7FCA7A7A822BDA33"><span class="RefLink">71.3-1</span></a>) returns a character table object that stores already information such as class lengths, but not the irreducible characters. The routines that compute the irreducibles may use the information that is already contained in this table object. In particular the ordering of classes in the computed characters coincides with the ordering of classes in the character table of <var class="Arg">G</var> (see <a shape="rect" href="chap71_mj.html#X793E0EBF84B07313"><span class="RefLink">71.6</span></a>). Thus it is possible to combine computations using the group with character theoretic computations (see <a shape="rect" href="chap71_mj.html#X7C083207868066C1"><span class="RefLink">71.17</span></a> for details), for example one can enter known characters. Note that the user is responsible for the correctness of the characters. (There is little use in providing the trivial character to the routine.)</p><p xmlns="http://www.w3.org/1999/xhtml">The computation of irreducible characters from the group needs to identify the classes of group elements very often, so it can be helpful to store a class list of all group elements. Since this is obviously limited by the group order, it is controlled by the global function <code class="func">IsDxLargeGroup</code> (<a shape="rect" href="chap71_mj.html#X8089009E7EA85BC8"><span class="RefLink">71.17-8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The routines compute in a prime field of size <math id="5309133255800328692" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>, such that the exponent of the group divides <math id="5904558648219007638" display="inline" alttext="(p-1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">p</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">-</mo>
+        <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+      </mrow>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.2.cmml">
+        <minus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑝</ci>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(p-1)</annotation>
+  </semantics>
+</math> and such that <math id="5061541912563299007" display="inline" alttext="2\sqrt{{|G|}}&amp;lt;p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
+        <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <msqrt xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.2">
+          <mrow xref="p1.1.m1.1.2.2.4.cmml" id="p1.1.m1.1.2.2">
+            <mo xref="p1.1.m1.1.2.2.4.1.cmml" id="p1.1.m1.1.2.2.1" stretchy="false">|</mo>
+            <mi xref="p1.1.m1.1.2.2.2.cmml" id="p1.1.m1.1.2.2.2">G</mi>
+            <mo xref="p1.1.m1.1.2.2.4.1.cmml" id="p1.1.m1.1.2.2.3" stretchy="false">|</mo>
+          </mrow>
+        </msqrt>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">l</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1c">⁢</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.6">;</mo>
+      <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">p</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml">
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+          <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.2.cmml">
+            <root id="p1.1.m1.1.2a.cmml"/>
+            <apply xref="p1.1.m1.1.2.2" id="p1.1.m1.1.2.2.4.cmml">
+              <abs xref="p1.1.m1.1.2.2.1" id="p1.1.m1.1.2.2.4.1.cmml"/>
+              <ci xref="p1.1.m1.1.2.2.2" id="p1.1.m1.1.2.2.2.cmml">𝐺</ci>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑡</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑝</ci>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2\sqrt{{|G|}}&amp;lt;p</annotation>
+  </semantics>
+</math>. Currently prime fields of size smaller than <math id="-118172263186487260" display="inline" alttext="65\,536" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">65 536</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="float">65 536</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">65\,536</annotation>
+  </semantics>
+</math> are handled more efficiently than larger prime fields, so the runtime of the character calculation depends on how large the chosen prime is.</p><p xmlns="http://www.w3.org/1999/xhtml">The routine stores a Dixon record (see <code class="func">DixonRecord</code> (<a shape="rect" href="chap71_mj.html#X7C398F2680C8616B"><span class="RefLink">71.17-1</span></a>)) in the group that helps routines that identify classes, for example <code class="func">FusionConjugacyClasses</code> (<a shape="rect" href="chap73_mj.html#X86CE53B681F13C63"><span class="RefLink">73.3-1</span></a>), to work much faster. Note that interrupting Dixon-Schneider calculations will prevent <strong class="pkg">GAP</strong> from cleaning up the Dixon record; when the computation by <code class="func">IrrDixonSchneider</code> (<a shape="rect" href="chap71_mj.html#X7ED39DB680BFEA96"><span class="RefLink">71.14-1</span></a>) is complete, the possibly large record is shrunk to an acceptable size.</p> </body>
+    </html>

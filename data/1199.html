@@ -1,0 +1,302 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 45: Polycyclic Groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap45.html#X86007B0083F60470"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap45_mj.html#X86007B0083F60470">45 <span class="Heading">Polycyclic Groups</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X7F18A01785DBAC4E">45.1 <span class="Heading">Polycyclic Generating Systems</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X87F7E31879AFA06C">45.2 <span class="Heading">Computing a Pcgs</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X84C3750C7A4EEC34">45.2-1 Pcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X8635E61A7DB73BA6">45.2-2 IsPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7B561B1685CEC2AB">45.2-3 CanEasilyComputePcgs</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X7CAAD6D2838354D9">45.3 <span class="Heading">Defining a Pcgs Yourself</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7E139C3D80847D76">45.3-1 PcgsByPcSequence</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X816C5E8E7F71C9D8">45.4 <span class="Heading">Elementary Operations for a Pcgs</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7DD0DF677AC1CF10">45.4-1 RelativeOrders</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X80D526848427A5C6">45.4-2 IsFiniteOrdersPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X866C3A5382FF231A">45.4-3 IsPrimeOrdersPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X827A7B097A959579">45.4-4 PcSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7903702E8194EF29">45.4-5 GroupOfPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X878FB11887524E2C">45.4-6 OneOfPcgs</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X84243AA07DA5A827">45.5 <span class="Heading">Elementary Operations for a Pcgs and an Element</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7B941D4A7CAFCD73">45.5-1 RelativeOrderOfPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X78134914842E2F5F">45.5-2 ExponentOfPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X848DAEBF7DC448A5">45.5-3 ExponentsOfPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X829BCB267CDBC5C0">45.5-4 DepthOfPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7D47966479EA2890">45.5-5 LeadingExponentOfPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X87AF746B8328F5D0">45.5-6 PcElementByExponents</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7F8BD7A87DB3933A">45.5-7 LinearCombinationPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X8066B66D8069BAB4">45.5-8 SiftedPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7B52ADE7878A749A">45.5-9 CanonicalPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7A94AA357DB2F86C">45.5-10 ReducedPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X8702D76D8284CF3E">45.5-11 CleanedTailPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X830A0D037DBEAA97">45.5-12 HeadPcElementByNumber</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X7EF61EA4822870E7">45.6 <span class="Heading">Exponents of Special Products</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X868D6DB07D349460">45.6-1 ExponentsConjugateLayer</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X874F70697FE7B6DF">45.6-2 ExponentsOfRelativePower</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X78CAF32F864EF656">45.6-3 ExponentsOfConjugate</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X875689897DD0CAFC">45.6-4 ExponentsOfCommutator</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X80AC58657E04FE9B">45.7 <span class="Heading">Subgroups of Polycyclic Groups - Induced Pcgs</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X81FA878C854D63F8">45.7-1 IsInducedPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X83F6759184937F1B">45.7-2 InducedPcgsByPcSequence</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X86308E80843BF9E5">45.7-3 ParentPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7F0EB20080590B23">45.7-4 InducedPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X8332F1197DF6FEDE">45.7-5 InducedPcgsByGenerators</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7AF82BD079D811E5">45.7-6 InducedPcgsByPcSequenceAndGenerators</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X845FF8CA783D6CB3">45.7-7 LeadCoeffsIGS</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X800287C680C5DEC3">45.7-8 ExtendedPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X817E16D67B31389B">45.7-9 SubgroupByPcgs</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X84068D2478C134C1">45.8 <span class="Heading">Subgroups of Polycyclic Groups – Canonical Pcgs</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X80D122B986B42F80">45.8-1 IsCanonicalPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X816F6B4187032A10">45.8-2 CanonicalPcgs</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X8294F5EF81B7ABA0">45.9 <span class="Heading">Factor Groups of Polycyclic Groups – Modulo Pcgs</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7FE689A37E559F66">45.9-1 ModuloPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X868207D77D09D915">45.9-2 IsModuloPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X8027CC9878031D74">45.9-3 NumeratorOfModuloPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X87DBE2797D51B2F1">45.9-4 DenominatorOfModuloPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7E923519832F2D08">45.9-5 \mod</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X876A41F97FBA7754">45.9-6 CorrespondingGeneratorsByModuloPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X8480852A7D49BC3F">45.9-7 CanonicalPcgsByGeneratorsWithImages</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X8254C0F485F945BD">45.10 <span class="Heading">Factor Groups of Polycyclic Groups in their Own Representation</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X806C2D827E04ACF3">45.10-1 ProjectedPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X82F39CCE7C928D3A">45.10-2 ProjectedInducedPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X816813A078B93A6B">45.10-3 LiftedPcElement</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X83C60F1587577D65">45.10-4 LiftedInducedPcgs</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X83FE235E7B208EC0">45.11 <span class="Heading">Pcgs and Normal Series</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7E7E89C278DDE20D">45.11-1 IsPcgsElementaryAbelianSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X863A20B57EA37BAC">45.11-2 PcgsElementaryAbelianSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7BCC1E2A80544CC7">45.11-3 IndicesEANormalSteps</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7FCE308887F621FC">45.11-4 EANormalSeriesByPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X79675266796D7254">45.11-5 IsPcgsCentralSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X8187FCF483659E69">45.11-6 PcgsCentralSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7FB73FEB7BED5BFA">45.11-7 IndicesCentralNormalSteps</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X82266ADA86B2A689">45.11-8 CentralNormalSeriesByPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X786E60AF7B61BF9E">45.11-9 IsPcgsPCentralSeriesPGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X86F19DBD7D346E7F">45.11-10 PcgsPCentralSeriesPGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X863968F08509E7D4">45.11-11 IndicesPCentralNormalStepsPGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7A92C9EA7BAF60CA">45.11-12 PCentralNormalSeriesByPcgsPGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7EA5BC3B7FE9D98D">45.11-13 IsPcgsChiefSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7E7326947EAE4BC9">45.11-14 PcgsChiefSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7C05E84A78CA405E">45.11-15 IndicesChiefNormalSteps</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X83C5ABC587074B14">45.11-16 ChiefNormalSeriesByPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7A954E3887189842">45.11-17 IndicesNormalSteps</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7947B0FB87F44042">45.11-18 NormalSeriesByPcgs</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X7E624B4E8224DE2D">45.12 <span class="Heading">Sum and Intersection of Pcgs</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7833DAAA7C07CFD7">45.12-1 SumFactorizationFunctionPcgs</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X83039CF97D27D819">45.13 <span class="Heading">Special Pcgs</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7C8A82FA786AC021">45.13-1 IsSpecialPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X827EB7767BACD023">45.13-2 <span class="Heading">SpecialPcgs</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X82DC7CE682140588">45.13-3 LGWeights</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X824645C97E347EEE">45.13-4 LGLayers</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7A655F4C7D9AE130">45.13-5 LGFirst</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7C3912F77B12C8B6">45.13-6 LGLength</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X814C35BF7C9A8DEF">45.13-7 IsInducedPcgsWrtSpecialPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7C14AE5C82FB0771">45.13-8 InducedPcgsWrtSpecialPcgs</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X7E86EB517DC08809">45.14 <span class="Heading">Action on Subfactors Defined by a Pcgs</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7A9BB9D0817CA949">45.14-1 VectorSpaceByPcgsOfElementaryAbelianGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X81FC09DD7FC06C6E">45.14-2 LinearAction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7C2135B98732BBC3">45.14-3 LinearActionLayer</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X79C2D6BF7DD69ED6">45.14-4 AffineAction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7E4CB1358524497B">45.14-5 AffineActionLayer</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X7EEA8D638492F432">45.15 <span class="Heading">Orbit Stabilizer Methods for Polycyclic Groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7CFCCF607A30B5EE">45.15-1 StabilizerPcgs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7A87E72F86813132">45.15-2 Pcgs_OrbitStabilizer</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X7A19DF1E7E841074">45.16 <span class="Heading">Operations which have Special Methods for Groups with Pcgs</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap45_mj.html#X79DCCF6D80351859">45.17 <span class="Heading">Conjugacy Classes in Solvable Groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X79593F667A68A21D">45.17-1 ClassesSolvableGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap45_mj.html#X7B358D3B7E236973">45.17-2 CentralizerSizeLimitConsiderFunction</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">45 <span class="Heading">Polycyclic Groups</span></h3><p xmlns="http://www.w3.org/1999/xhtml">A group <var class="Arg">G</var> is <em>polycyclic</em> if there exists a subnormal series <math id="3425894145049906023" display="inline" alttext="G=C_{1}&amp;gt;C_{2}&amp;gt;\ldots&amp;gt;C_{n}&amp;gt;C_{{n+1}}=\{1\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.32.1.cmml" id="p1.1.m1.1.32">
+      <mrow xref="p1.1.m1.1.32.1.cmml" id="p1.1.m1.1.32.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+        <mrow xref="p1.1.m1.1.32.2.1.1.cmml" id="p1.1.m1.1.32.2.1">
+          <mrow xref="p1.1.m1.1.32.2.1.1.cmml" id="p1.1.m1.1.32.2.1.2">
+            <msub xref="p1.1.m1.1.32.2.1.1.cmml" id="p1.1.m1.1.32.2.1.2.2">
+              <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">C</mi>
+              <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">1</mn>
+            </msub>
+            <mo xref="p1.1.m1.1.32.2.1.2.1.cmml" id="p1.1.m1.1.32.2.1.2.1">⁢</mo>
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5" mathvariant="normal">&amp;</mi>
+            <mo xref="p1.1.m1.1.32.2.1.2.1.cmml" id="p1.1.m1.1.32.2.1.2.1a">⁢</mo>
+            <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">g</mi>
+            <mo xref="p1.1.m1.1.32.2.1.2.1.cmml" id="p1.1.m1.1.32.2.1.2.1b">⁢</mo>
+            <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">t</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.8">;</mo>
+          <mrow xref="p1.1.m1.1.32.2.1.1.cmml" id="p1.1.m1.1.32.2.1.3">
+            <msub xref="p1.1.m1.1.32.2.1.1.cmml" id="p1.1.m1.1.32.2.1.3.2">
+              <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">C</mi>
+              <mn xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">2</mn>
+            </msub>
+            <mo xref="p1.1.m1.1.32.2.1.3.1.cmml" id="p1.1.m1.1.32.2.1.3.1">⁢</mo>
+            <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11" mathvariant="normal">&amp;</mi>
+            <mo xref="p1.1.m1.1.32.2.1.3.1.cmml" id="p1.1.m1.1.32.2.1.3.1a">⁢</mo>
+            <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">g</mi>
+            <mo xref="p1.1.m1.1.32.2.1.3.1.cmml" id="p1.1.m1.1.32.2.1.3.1b">⁢</mo>
+            <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">t</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.14">;</mo>
+          <mrow xref="p1.1.m1.1.32.2.1.1.cmml" id="p1.1.m1.1.32.2.1.4">
+            <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15" mathvariant="normal">…</mi>
+            <mo xref="p1.1.m1.1.32.2.1.4.1.cmml" id="p1.1.m1.1.32.2.1.4.1">⁢</mo>
+            <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16" mathvariant="normal">&amp;</mi>
+            <mo xref="p1.1.m1.1.32.2.1.4.1.cmml" id="p1.1.m1.1.32.2.1.4.1a">⁢</mo>
+            <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">g</mi>
+            <mo xref="p1.1.m1.1.32.2.1.4.1.cmml" id="p1.1.m1.1.32.2.1.4.1b">⁢</mo>
+            <mi xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">t</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.19">;</mo>
+          <mrow xref="p1.1.m1.1.32.2.1.1.cmml" id="p1.1.m1.1.32.2.1.5">
+            <msub xref="p1.1.m1.1.32.2.1.1.cmml" id="p1.1.m1.1.32.2.1.5.2">
+              <mi xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">C</mi>
+              <mi xref="p1.1.m1.1.21.1.cmml" id="p1.1.m1.1.21.1">n</mi>
+            </msub>
+            <mo xref="p1.1.m1.1.32.2.1.5.1.cmml" id="p1.1.m1.1.32.2.1.5.1">⁢</mo>
+            <mi xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22" mathvariant="normal">&amp;</mi>
+            <mo xref="p1.1.m1.1.32.2.1.5.1.cmml" id="p1.1.m1.1.32.2.1.5.1a">⁢</mo>
+            <mi xref="p1.1.m1.1.23.cmml" id="p1.1.m1.1.23">g</mi>
+            <mo xref="p1.1.m1.1.32.2.1.5.1.cmml" id="p1.1.m1.1.32.2.1.5.1b">⁢</mo>
+            <mi xref="p1.1.m1.1.24.cmml" id="p1.1.m1.1.24">t</mi>
+          </mrow>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.32.1a.cmml" id="p1.1.m1.1.25">;</mo>
+      <mrow xref="p1.1.m1.1.32.1.cmml" id="p1.1.m1.1.32.3">
+        <msub xref="p1.1.m1.1.32.1.cmml" id="p1.1.m1.1.32.3.1">
+          <mi xref="p1.1.m1.1.26.cmml" id="p1.1.m1.1.26">C</mi>
+          <mrow xref="p1.1.m1.1.32.1.cmml" id="p1.1.m1.1.27.1">
+            <mi xref="p1.1.m1.1.27.1.1.cmml" id="p1.1.m1.1.27.1.1">n</mi>
+            <mo xref="p1.1.m1.1.27.1.2.cmml" id="p1.1.m1.1.27.1.2">+</mo>
+            <mn xref="p1.1.m1.1.27.1.3.cmml" id="p1.1.m1.1.27.1.3">1</mn>
+          </mrow>
+        </msub>
+        <mo xref="p1.1.m1.1.28.cmml" id="p1.1.m1.1.28">=</mo>
+        <mrow xref="p1.1.m1.1.32.3.2.1.cmml" id="p1.1.m1.1.32.3.2">
+          <mo id="p1.1.m1.1.29" stretchy="false">{</mo>
+          <mn xref="p1.1.m1.1.30.cmml" id="p1.1.m1.1.30">1</mn>
+          <mo id="p1.1.m1.1.31" stretchy="false">}</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.32" id="p1.1.m1.1.32.1.cmml">
+        <csymbol xref="p1.1.m1.1.25" id="p1.1.m1.1.32.1a.cmml" cd="ambiguous">formulae-sequence</csymbol>
+        <apply xref="p1.1.m1.1.32" id="p1.1.m1.1.32.2.cmml">
+          <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+          <list xref="p1.1.m1.1.32.2.1" id="p1.1.m1.1.32.2.1.1.cmml">
+            <apply xref="p1.1.m1.1.32.2.1" id="p1.1.m1.1.32.2.1.2.cmml">
+              <times xref="p1.1.m1.1.32.2.1.2.1" id="p1.1.m1.1.32.2.1.2.1.cmml"/>
+              <apply xref="p1.1.m1.1.32.2.1" id="p1.1.m1.1.32.2.1.2.2.cmml">
+                <csymbol id="p1.1.m1.1.32.2.1.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐶</ci>
+                <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">1</cn>
+              </apply>
+              <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">&amp;</ci>
+              <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑔</ci>
+              <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑡</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.32.2.1" id="p1.1.m1.1.32.2.1.3.cmml">
+              <times xref="p1.1.m1.1.32.2.1.3.1" id="p1.1.m1.1.32.2.1.3.1.cmml"/>
+              <apply xref="p1.1.m1.1.32.2.1" id="p1.1.m1.1.32.2.1.3.2.cmml">
+                <csymbol id="p1.1.m1.1.32.2.1.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝐶</ci>
+                <cn xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml" type="integer">2</cn>
+              </apply>
+              <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">&amp;</ci>
+              <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑔</ci>
+              <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑡</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.32.2.1" id="p1.1.m1.1.32.2.1.4.cmml">
+              <times xref="p1.1.m1.1.32.2.1.4.1" id="p1.1.m1.1.32.2.1.4.1.cmml"/>
+              <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">…</ci>
+              <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">&amp;</ci>
+              <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝑔</ci>
+              <ci xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">𝑡</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.32.2.1" id="p1.1.m1.1.32.2.1.5.cmml">
+              <times xref="p1.1.m1.1.32.2.1.5.1" id="p1.1.m1.1.32.2.1.5.1.cmml"/>
+              <apply xref="p1.1.m1.1.32.2.1" id="p1.1.m1.1.32.2.1.5.2.cmml">
+                <csymbol id="p1.1.m1.1.32.2.1.5.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml">𝐶</ci>
+                <ci xref="p1.1.m1.1.21.1" id="p1.1.m1.1.21.1.cmml">𝑛</ci>
+              </apply>
+              <ci xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml">&amp;</ci>
+              <ci xref="p1.1.m1.1.23" id="p1.1.m1.1.23.cmml">𝑔</ci>
+              <ci xref="p1.1.m1.1.24" id="p1.1.m1.1.24.cmml">𝑡</ci>
+            </apply>
+          </list>
+        </apply>
+        <apply xref="p1.1.m1.1.32" id="p1.1.m1.1.32.3.cmml">
+          <eq xref="p1.1.m1.1.28" id="p1.1.m1.1.28.cmml"/>
+          <apply xref="p1.1.m1.1.32" id="p1.1.m1.1.32.3.1.cmml">
+            <csymbol id="p1.1.m1.1.32.3.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.26" id="p1.1.m1.1.26.cmml">𝐶</ci>
+            <apply xref="p1.1.m1.1.32" id="p1.1.m1.1.27.1.cmml">
+              <plus xref="p1.1.m1.1.27.1.2" id="p1.1.m1.1.27.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.27.1.1" id="p1.1.m1.1.27.1.1.cmml">𝑛</ci>
+              <cn xref="p1.1.m1.1.27.1.3" id="p1.1.m1.1.27.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <set xref="p1.1.m1.1.32.3.2" id="p1.1.m1.1.32.3.2.1.cmml">
+            <cn xref="p1.1.m1.1.30" id="p1.1.m1.1.30.cmml" type="integer">1</cn>
+          </set>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G=C_{1}&amp;gt;C_{2}&amp;gt;\ldots&amp;gt;C_{n}&amp;gt;C_{{n+1}}=\{1\}</annotation>
+  </semantics>
+</math> with cyclic factors. Such a series is called <em>pc series</em> of <var class="Arg">G</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Every polycyclic group is solvable and every finite solvable group is polycyclic. However, there are infinite solvable groups which are not polycyclic.</p><p xmlns="http://www.w3.org/1999/xhtml">In <strong class="pkg">GAP</strong> there exists a large number of methods for polycyclic groups which are based upon the polycyclic structure of these groups. These methods are usually very efficient, especially for groups which are given by a pc-presentation (see chapter <a shape="rect" href="chap46_mj.html#X7EAD57C97EBF7E67"><span class="RefLink">46</span></a>), and can be applied to many types of groups. Hence <strong class="pkg">GAP</strong> tries to use them whenever possible, for example, for permutation groups and matrix groups over finite fields that are known to be polycyclic (the only exception is the representation as finitely presented group for which the polycyclic methods cannot be used in general).</p><p xmlns="http://www.w3.org/1999/xhtml">At the current state of implementations the <strong class="pkg">GAP</strong> library contains methods to compute with finite polycyclic groups, while the <strong class="pkg">GAP</strong> package <strong class="pkg">Polycyclic</strong> by Bettina Eick and Werner Nickel allows also computations with infinite polycyclic groups which are given by a pc-presentation.</p> </body>
+    </html>

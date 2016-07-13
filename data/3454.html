@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.20-3 Collected</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7ECE9056792F28BA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.20-3 Collected</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Collected</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a new list <var class="Arg">new</var> that contains for each element <var class="Arg">elm</var> of the list <var class="Arg">list</var> a list of length two, the first element of this is <var class="Arg">elm</var> itself and the second element is the number of times <var class="Arg">elm</var> appears in <var class="Arg">list</var>. The order of those pairs in <var class="Arg">new</var> corresponds to the ordering of the elements elm, so that the result is sorted.</p><p xmlns="http://www.w3.org/1999/xhtml">For all pairs of elements in <var class="Arg">list</var> the comparison via <code class="code">&lt;</code> must be defined.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Factors( Factorial( 10 ) );</span>
+[ 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 5, 5, 7 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Collected( last );</span>
+[ [ 2, 8 ], [ 3, 4 ], [ 5, 2 ], [ 7, 1 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Collected( last );</span>
+[ [ [ 2, 8 ], 1 ], [ [ 3, 4 ], 1 ], [ [ 5, 2 ], 1 ], [ [ 7, 1 ], 1 ] ]
+</pre></div> </body>
+    </html>

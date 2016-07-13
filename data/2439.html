@@ -1,0 +1,53 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.4-3 OnBreak</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X82EBF01181C3C859"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.4-3 OnBreak</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OnBreak</code>(  )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">By default, when a break loop is entered, <strong class="pkg">GAP</strong> prints a trace of the innermost 5 commands currently being executed. This behaviour can be configured by changing the value of the global variable <code class="func">OnBreak</code>. When a break loop is entered, the value of <code class="func">OnBreak</code> is checked. If it is a function, then it is called with no arguments. By default, the value of <code class="func">OnBreak</code> is <code class="func">Where</code> (<a shape="rect" href="chap6_mj.html#X7A7FFA2B7C1EF5A3"><span class="RefLink">6.4-5</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OnBreak := function() Print(&quot;Hello\n&quot;); end;</span>
+function(  ) ... end
+</pre></div><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Error(&quot;!\n&quot;);</span>
+Error, !
+Hello
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">quit;</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In cases where a break loop is entered during a function that was called with options (see Chapter <a shape="rect" href="chap8_mj.html#X7FD84061873F72A2"><span class="RefLink">8</span></a>), a <code class="code">quit;</code> will also cause the options stack to be reset and an <code class="code">Info</code>-ed warning stating this is emitted at <code class="func">InfoWarning</code> (<a shape="rect" href="chap7_mj.html#X7A28F77C82D6A3E0"><span class="RefLink">7.4-7</span></a>) level 1 (see Chapter <a shape="rect" href="chap7_mj.html#X7A9C902479CB6F7C"><span class="RefLink">7.4</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Note that for break loops entered by a call to <code class="func">Error</code> (<a shape="rect" href="chap6_mj.html#X7E7AD8D87EBA1A08"><span class="RefLink">6.6-1</span></a>), the lines after &quot;<code class="code">Entering break read-eval-print loop ...</code>&quot; and before the <code class="code">brk&gt;</code> prompt can also be customised, namely by redefining <code class="func">OnBreakMessage</code> (<a shape="rect" href="chap6_mj.html#X80711C807C99C220"><span class="RefLink">6.4-4</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Also, note that one can achieve the effect of changing <code class="func">OnBreak</code> <em>locally</em>. As mentioned above, the default value of <code class="func">OnBreak</code> is <code class="func">Where</code> (<a shape="rect" href="chap6_mj.html#X7A7FFA2B7C1EF5A3"><span class="RefLink">6.4-5</span></a>). Thus, a call to <code class="func">Error</code> (<a shape="rect" href="chap6_mj.html#X7E7AD8D87EBA1A08"><span class="RefLink">6.6-1</span></a>) generally gives a trace back up to five levels of calling functions. Conceivably, we might like to have a function like <code class="func">Error</code> (<a shape="rect" href="chap6_mj.html#X7E7AD8D87EBA1A08"><span class="RefLink">6.6-1</span></a>) that does not trace back without globally changing <code class="func">OnBreak</code>. Such a function we might call <code class="code">ErrorNoTraceBack</code> and here is how we might define it. (Note <code class="code">ErrorNoTraceBack</code> is <em>not</em> a <strong class="pkg">GAP</strong> function.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ErrorNoTraceBack := function(arg) # arg is special variable that GAP</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">                                     # knows to treat as list of arg's</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     local SavedOnBreak, ENTBOnBreak;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     SavedOnBreak := OnBreak;        # save current value of OnBreak</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"/>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     ENTBOnBreak := function()       # our `local' OnBreak</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     local s;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">       for s in arg do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">         Print(s);</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">       od;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">       OnBreak := SavedOnBreak;      # restore OnBreak afterwards</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     end;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"/>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     OnBreak := ENTBOnBreak;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     Error();</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   end;</span>
+function( arg... ) ... end
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Here is a somewhat trivial demonstration of the use of <code class="code">ErrorNoTraceBack</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ErrorNoTraceBack(&quot;Gidday!&quot;, &quot; How's&quot;, &quot; it&quot;, &quot; going?\n&quot;);</span>
+Error, Gidday! How's it going?
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">quit;</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Now we call <code class="func">Error</code> (<a shape="rect" href="chap6_mj.html#X7E7AD8D87EBA1A08"><span class="RefLink">6.6-1</span></a>) with the same arguments to show the difference.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Error(&quot;Gidday!&quot;, &quot; How's&quot;, &quot; it&quot;, &quot; going?\n&quot;);</span>
+Error, Gidday! How's it going?
+Hello
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you can 'return;' to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">quit;</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Observe that the value of <code class="func">OnBreak</code> before the <code class="code">ErrorNoTraceBack</code> call was restored. However, we had changed <code class="func">OnBreak</code> from its default value; to restore <code class="func">OnBreak</code> to its default value, we should do the following.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OnBreak := Where;;</span>
+</pre></div> </body>
+    </html>

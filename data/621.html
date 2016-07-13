@@ -1,0 +1,137 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.8-19 EigenvaluesChar</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X861B435C7F68AE7D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.8-19 EigenvaluesChar</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EigenvaluesChar</code>( [<var class="Arg">tbl</var>, ]<var class="Arg">chi</var>, <var class="Arg">class</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">chi</var> be a character of the group <math id="-4196380633318641118" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, say. For an element <math id="-3549522932007201647" display="inline" alttext="g\in G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">G</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐺</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g\in G</annotation>
+  </semantics>
+</math> in the <var class="Arg">class</var>-th conjugacy class, of order <math id="2052341890932174356" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>, let <math id="4740036788207418388" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> be a matrix of a representation affording <var class="Arg">chi</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">EigenvaluesChar</code> returns the list of length <math id="-3401261303391872972" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> where at position <math id="-477723607933915363" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
+  </semantics>
+</math> the multiplicity of <code class="code">E</code><math id="6143843421052547362" display="inline" alttext="(n)^{k}=\exp(2\pi ik/n)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">
+      <msup xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.1">
+        <mrow id="p1.1.m1.1.15.1.2">
+          <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+          <mo id="p1.1.m1.1.3" stretchy="false">)</mo>
+        </mrow>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">k</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">=</mo>
+      <mrow xref="p1.1.m1.1.15.2.1.cmml" id="p1.1.m1.1.15.2.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">exp</mi>
+        <mo xref="p1.1.m1.1.15.2.1.cmml" id="p1.1.m1.1.15.2.2a">⁡</mo>
+        <mrow xref="p1.1.m1.1.15.2.1.cmml" id="p1.1.m1.1.15.2">
+          <mo xref="p1.1.m1.1.15.2.1.cmml" id="p1.1.m1.1.7" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.15.2.1.cmml" id="p1.1.m1.1.15.2.2.1">
+            <mrow xref="p1.1.m1.1.15.2.1.cmml" id="p1.1.m1.1.15.2.2.1.1">
+              <mn xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">2</mn>
+              <mo xref="p1.1.m1.1.15.2.2.1.1.1.cmml" id="p1.1.m1.1.15.2.2.1.1.1">⁢</mo>
+              <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">π</mi>
+              <mo xref="p1.1.m1.1.15.2.2.1.1.1.cmml" id="p1.1.m1.1.15.2.2.1.1.1a">⁢</mo>
+              <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">i</mi>
+              <mo xref="p1.1.m1.1.15.2.2.1.1.1.cmml" id="p1.1.m1.1.15.2.2.1.1.1b">⁢</mo>
+              <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">k</mi>
+            </mrow>
+            <mo xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">/</mo>
+            <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">n</mi>
+          </mrow>
+          <mo xref="p1.1.m1.1.15.2.1.cmml" id="p1.1.m1.1.14" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">
+        <eq xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.cmml">
+          <csymbol id="p1.1.m1.1.15.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑘</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.15.2.2" id="p1.1.m1.1.15.2.1.cmml">
+          <exp xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+          <apply xref="p1.1.m1.1.15.2.2" id="p1.1.m1.1.15.2.2.1.cmml">
+            <divide xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml"/>
+            <apply xref="p1.1.m1.1.15.2.2" id="p1.1.m1.1.15.2.2.1.1.cmml">
+              <times xref="p1.1.m1.1.15.2.2.1.1.1" id="p1.1.m1.1.15.2.2.1.1.1.cmml"/>
+              <cn xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml" type="integer">2</cn>
+              <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝜋</ci>
+              <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑖</ci>
+              <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑘</ci>
+            </apply>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑛</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(n)^{k}=\exp(2\pi ik/n)</annotation>
+  </semantics>
+</math> as an eigenvalue of <math id="5117827169125016427" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> is stored.</p><p xmlns="http://www.w3.org/1999/xhtml">We have <code class="code"><var class="Arg">chi</var>[ <var class="Arg">class</var> ] = List( [ 1 .. n ], k -&gt; E(n)^k ) * EigenvaluesChar( <var class="Arg">tbl</var>, <var class="Arg">chi</var>, <var class="Arg">class</var> )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">It is also possible to call <code class="func">Eigenvalues</code> (<a shape="rect" href="chap24_mj.html#X8413C6FB7CEE9D59"><span class="RefLink">24.8-3</span></a>) instead of <code class="func">EigenvaluesChar</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi:= Irr( CharacterTable( &quot;A5&quot; ) )[2];</span>
+Character( CharacterTable( &quot;A5&quot; ), 
+[ 3, -1, 0, -E(5)-E(5)^4, -E(5)^2-E(5)^3 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( [ 1 .. 5 ], i -&gt; Eigenvalues( chi, i ) );</span>
+[ [ 3 ], [ 2, 1 ], [ 1, 1, 1 ], [ 0, 1, 1, 0, 1 ], [ 1, 0, 0, 1, 1 ] ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,73 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.9-2 Test</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X87712F9D8732193C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">7.9-2 Test</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Test</code>( <var class="Arg">fname</var>[, <var class="Arg">optrec</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The argument <var class="Arg">fname</var> must be the name of a file or an open input stream. The content of this file or stream should contain <strong class="pkg">GAP</strong> input and output. The function <code class="func">Test</code> runs the input lines, compares the actual output with the output stored in <var class="Arg">fname</var> and reports differences. With an optional record as argument <var class="Arg">optrec</var> details of this process can be adjusted.</p><p xmlns="http://www.w3.org/1999/xhtml">More precisely, the content of <var class="Arg">fname</var> must have the following format. <br/> Lines starting with <code class="code">&quot;gap&gt; &quot;</code> are considered as <strong class="pkg">GAP</strong> input, they can be followed by lines starting with <code class="code">&quot;&gt; &quot;</code> if the input is continued over several lines. <br/> To allow for comments in <var class="Arg">fname</var> the following lines are ignored by default: lines at the beginning of <var class="Arg">fname</var> that start with <code class="code">&quot;#&quot;</code>, and one empty line together with one or more lines starting with <code class="code">&quot;#&quot;</code>.<br/> All other lines are considered as <strong class="pkg">GAP</strong> output from the preceding <strong class="pkg">GAP</strong> input.</p><p xmlns="http://www.w3.org/1999/xhtml">By default the actual <strong class="pkg">GAP</strong> output is compared exactly with the stored output, and if these are different some information about the differences is printed.</p><p xmlns="http://www.w3.org/1999/xhtml">If any differences are found then <code class="func">Test</code> returns <code class="keyw">false</code>, otherwise <code class="keyw">true</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the optional argument <var class="Arg">optrec</var> is given it must be a record. The following components of <var class="Arg">optrec</var> are recognized and can change the default behaviour of <code class="func">Test</code>:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">ignoreComments</code></strong></dt><dd><p>If set to <code class="keyw">false</code> then no lines in <var class="Arg">fname</var> are ignored as explained above (default is <code class="keyw">true</code>).</p>
+
+</dd><dt><strong class="Mark"><code class="code">width</code></strong></dt><dd><p>The screen width used for the new output (default is <code class="code">80</code>).</p>
+
+</dd><dt><strong class="Mark"><code class="code">compareFunction</code></strong></dt><dd><p>This must be a function that gets two strings as input, the newly generated and the stored output of some <strong class="pkg">GAP</strong> input. The function must return <code class="keyw">true</code> or <code class="keyw">false</code>, indicating if the strings should be considered equivalent or not. By default <code class="func">\=</code> (<a shape="rect" href="chap31_mj.html#X7EF67D047F03CA6F"><span class="RefLink">31.11-1</span></a>) is used. <br/> Two strings are recognized as abbreviations in this component: <code class="code">&quot;uptowhitespace&quot;</code> checks if the two strings become equal after removing all white space. And <code class="code">&quot;uptonl&quot;</code> compares the string up to trailing newline characters.</p>
+
+</dd><dt><strong class="Mark"><code class="code">reportDiff</code></strong></dt><dd><p>A function that gets six arguments and reports a difference in the output: the <strong class="pkg">GAP</strong> input, the expected <strong class="pkg">GAP</strong> output, the newly generated output, the name of tested file, the line number of the input, the time to run the input. (The default is demonstrated in the example below.)</p>
+
+</dd><dt><strong class="Mark"><code class="code">rewriteToFile</code></strong></dt><dd><p>If this is bound to a string it is considered as a file name and that file is written with the same input and comment lines as <var class="Arg">fname</var> but the output substituted by the newly generated version (default is <code class="keyw">false</code>).</p>
+
+</dd><dt><strong class="Mark"><code class="code">writeTimings</code></strong></dt><dd><p>If this is bound to a string it is considered as a file name, that file is written and contains timing information for each input in <var class="Arg">fname</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">compareTimings</code></strong></dt><dd><p>If this is bound to a string it is considered as name of a file to which timing information was stored via <code class="code">writeTimings</code> in a previous call. The new timings are compared to the stored ones. By default only commands which take more than a threshold of 100 milliseconds are considered, and only differences of more than 20% are considered significant. These defaults can be overwritten by assigning a list <code class="code">[timingfile, threshold, percentage]</code> to this component. (The default of <code class="code">compareTimings</code> is <code class="keyw">false</code>.)</p>
+
+</dd><dt><strong class="Mark"><code class="code">reportTimeDiff</code></strong></dt><dd><p>This component can be used to overwrite the default function to display timing differences. It must be a function with 5 arguments: <strong class="pkg">GAP</strong> input, name of test file, line number, stored time, new time.</p>
+
+</dd><dt><strong class="Mark"><code class="code">ignoreSTOP_TEST</code></strong></dt><dd><p>By default set to <code class="keyw">true</code>, in that case the output of <strong class="pkg">GAP</strong> input starting with <code class="code">&quot;STOP_TEST&quot;</code> is not checked.</p>
+
+</dd><dt><strong class="Mark"><code class="code">showProgress</code></strong></dt><dd><p>If this is <code class="keyw">true</code> then <strong class="pkg">GAP</strong> prints position information and the input line before it is processed (default is <code class="keyw">false</code>).</p>
+
+</dd><dt><strong class="Mark"><code class="code">subsWindowsLineBreaks</code></strong></dt><dd><p>If this is <code class="keyw">true</code> then <strong class="pkg">GAP</strong> substitutes DOS/Windows style line breaks &quot;\r\n&quot; by UNIX style line breaks &quot;\n&quot; after reading the test file. (default is <code class="keyw">true</code>).</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tnam := Filename(DirectoriesLibrary(), &quot;../doc/ref/demo.tst&quot;);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mask := function(str) return Concatenation(&quot;| &quot;, </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">         JoinStringsWithSeparator(SplitString(str, &quot;\n&quot;, &quot;&quot;), &quot;\n| &quot;),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">         &quot;\n&quot;); end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(mask(StringFile(tnam)));</span>
+| # this is a demo file for the 'Test' function
+| #
+| gap&gt; g := Group((1,2), (1,2,3));
+| Group([ (1,2), (1,2,3) ])
+| 
+| # another comment following an empty line
+| # the following fails:
+| gap&gt; a := 13+29;
+| 41
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ss := InputTextString(StringFile(tnam));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Test(ss);</span>
+########&gt; Diff in test stream, line 8:
+# Input is:
+a := 13+29;
+# Expected output:
+41
+# But found:
+42
+########
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RewindStream(ss);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">dtmp := DirectoryTemporary();;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ftmp := Filename(dtmp,&quot;demo.tst&quot;);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Test(ss, rec(reportDiff := Ignore, rewriteToFile := ftmp));</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Test(ftmp);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(mask(StringFile(ftmp)));</span>
+| # this is a demo file for the 'Test' function
+| #
+| gap&gt; g := Group((1,2), (1,2,3));
+| Group([ (1,2), (1,2,3) ])
+| 
+| # another comment following an empty line
+| # the following fails:
+| gap&gt; a := 13+29;
+| 42
+</pre></div> </body>
+    </html>

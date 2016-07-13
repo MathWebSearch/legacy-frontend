@@ -1,0 +1,71 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 32: Mappings-&gt;32.9-2 RespectsOne</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap32.html#X7EE4DA097AE9CBC1"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">32.9-2 RespectsOne</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RespectsOne</code>( <var class="Arg">mapp</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">mapp</var> be a general mapping with underlying relation <math id="-1360252411031892853" display="inline" alttext="F\subseteq\textit{S}\times\textit{R}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">⊆</mo>
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑆</mtext>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">×</mo>
+        <mtext xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">𝑅</mtext>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <subset xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <times xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+          <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">S</span>
+          </mtext>
+          <mtext xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">R</span>
+          </mtext>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F\subseteq\textit{S}\times\textit{R}</annotation>
+  </semantics>
+</math>, where <var class="Arg">S</var> and <var class="Arg">R</var> are the source and the range of <var class="Arg">mapp</var>, respectively. Then <code class="func">RespectsOne</code> returns <code class="keyw">true</code> if <var class="Arg">S</var> and <var class="Arg">R</var> are magmas-with-one such that <math id="3469046507173644148" display="inline" alttext="(" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">(</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">(</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(</annotation>
+  </semantics>
+</math><code class="code">One(<var class="Arg">S</var>)</code><math id="8847744175493358175" display="inline" alttext="," class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow id="p1.1.m1.1.2">
+      <mi xref="p1.1.m1.1.2.2.cmml" id="p1.1.m1.1.2.2"/>
+      <mo id="p1.1.m1.1.1">,</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <csymbol xref="p1.1.m1.1.2.2" id="p1.1.m1.1.2.2.cmml" cd="latexml">absent</csymbol>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">,</annotation>
+  </semantics>
+</math><code class="code">One(<var class="Arg">R</var>)</code><math id="4230305558610151282" display="inline" alttext=")\in F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow id="p1.1.m1.1b">
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">)</mo>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi id="p1.1.m1.1.3">F</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1c" encoding="MathML-Content">
+      <cerror id="p1.1.m1.1d">
+        <csymbol id="p1.1.m1.1e" cd="ambiguous">fragments</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">)</ci>
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <csymbol id="p1.1.m1.1f" cd="unknown">F</csymbol>
+      </cerror>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1g" encoding="application/x-tex">)\in F</annotation>
+  </semantics>
+</math>, and <code class="keyw">false</code> otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">mapp</var> is single-valued then <code class="func">RespectsOne</code> returns <code class="keyw">true</code> if and only if the equation <code class="code">One( <var class="Arg">S</var> )^<var class="Arg">mapp</var> = One( <var class="Arg">R</var> )</code> holds.</p> </body>
+    </html>

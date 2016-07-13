@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.3-20 ComponentRepsOfPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X7AAAAE4082B30E18"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.3-20 ComponentRepsOfPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ComponentRepsOfPartialPerm</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A list of positive integers.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">ComponentRepsOfPartialPerm</code> returns the representatives, in the following sense, of the components of the partial permutation <var class="Arg">f</var>. Every component of <var class="Arg">f</var> contains a unique element in the domain but not the image of <var class="Arg">f</var>; this element is called the <em>representative</em> of the component. If <code class="code">i</code> is a representative of a component of <var class="Arg">f</var>, then for every <code class="code">j</code><math id="-1531133283714865344" display="inline" alttext="\not=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≠</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <neq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\not=</annotation>
+  </semantics>
+</math><code class="code">i</code> in the component of <code class="code">i</code>, there exists a positive integer <code class="code">k</code> such that <code class="code">i ^ (<var class="Arg">f</var> ^ k) = j</code>. Unlike transformations, there is exactly one representative for every component of <var class="Arg">f</var>. <code class="code">ComponentRepsOfPartialPerm</code> returns the least number of representatives.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve"> 
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 19 ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 20, 4, 6, 19, 9, 14, 3, 12, 17, 5, 15, 13 ] );</span>
+[1,20][2,4,19,13,15][7,14][8,3,6][10,12,5,9][11,17]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentRepsOfPartialPerm(f);</span>
+[ 1, 2, 7, 8, 10, 11 ]</pre></div> </body>
+    </html>

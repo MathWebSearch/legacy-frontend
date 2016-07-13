@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.17 Properties and Attributes for Lists</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7865747A7CCF5812"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.17 <span class="Heading">Properties and Attributes for Lists</span></h4><p xmlns="http://www.w3.org/1999/xhtml">A list that contains mutable objects (like lists or records) <em>cannot</em> store attribute values that depend on the values of its entries, such as whether it is homogeneous, sorted, or strictly sorted, as changes in any of its entries could change such property values, like the following example shows.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:=[[1],[2]];</span>
+[ [ 1 ], [ 2 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSSortedList(l);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l[1][1]:=3;</span>
+3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSSortedList(l);</span>
+false
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">For such lists these property values must be computed anew each time the property is asked for. For example, if <var class="Arg">list</var> is a list of mutable row vectors then the call of <code class="func">Position</code> (<a shape="rect" href="chap21_mj.html#X79975EC6783B4293"><span class="RefLink">21.16-1</span></a>) with <var class="Arg">list</var> as first argument cannot take advantage of the fact that <var class="Arg">list</var> is in fact sorted. One solution is to call explicitly <code class="func">PositionSorted</code> (<a shape="rect" href="chap21_mj.html#X7A122E848464E534"><span class="RefLink">21.16-5</span></a>) in such a situation, another solution is to replace <var class="Arg">list</var> by an immutable copy using <code class="func">Immutable</code> (<a shape="rect" href="chap12_mj.html#X7F0ABF2C870B0CBB"><span class="RefLink">12.6-3</span></a>).</p> </body>
+    </html>

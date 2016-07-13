@@ -1,0 +1,10 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 9: Files and Filenames-&gt;9.7-7 CrcFile</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap9.html#X8241CEAD80415BB9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">9.7-7 CrcFile</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CrcFile</code>( <var class="Arg">filename</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">CRC (cyclic redundancy check) numbers provide a certain method of doing checksums. They are used by <strong class="pkg">GAP</strong> to check whether files have changed.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">CrcFile</code> computes a checksum value for the file with filename <var class="Arg">filename</var> and returns this value as an integer. The function returns <code class="keyw">fail</code> if a system error occurred, say, for example, if <var class="Arg">filename</var> does not exist. In this case the function <code class="func">LastSystemError</code> (<a shape="rect" href="chap9_mj.html#X87D278437A916905"><span class="RefLink">9.1-1</span></a>) can be used to get information about the error.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CrcFile( &quot;lib/morpheus.gi&quot; );</span>
+2705743645
+</pre></div> </body>
+    </html>

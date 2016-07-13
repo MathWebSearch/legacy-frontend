@@ -1,0 +1,30 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 10: Streams-&gt;10.8-2 InputOutputLocalProcess</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap10.html#X820799A3824684AC"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">10.8-2 InputOutputLocalProcess</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InputOutputLocalProcess</code>( <var class="Arg">dir</var>, <var class="Arg">executable</var>, <var class="Arg">args</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">starts up a slave process, whose executable file is <var class="Arg">executable</var>, with &quot;command line&quot; arguments <var class="Arg">args</var> in the directory <var class="Arg">dir</var>. (Suitable choices for <var class="Arg">dir</var> are <code class="code">DirectoryCurrent()</code> or <code class="code">DirectoryTemporary()</code> (see Section <a shape="rect" href="chap9_mj.html#X85030B35865A1080"><span class="RefLink">9.3</span></a>); <code class="code">DirectoryTemporary()</code> may be a good choice when <var class="Arg">executable</var> generates output files that it doesn't itself remove afterwards.) <code class="func">InputOutputLocalProcess</code> returns an InputOutputStream object. Bytes written to this stream are received by the slave process as if typed at a terminal on standard input. Bytes written to standard output by the slave process can be read from the stream.</p><p xmlns="http://www.w3.org/1999/xhtml">When the stream is closed, the signal SIGTERM is delivered to the child process, which is expected to exit.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d := DirectoryCurrent();</span>
+dir(&quot;./&quot;)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := Filename(DirectoriesSystemPrograms(), &quot;rev&quot;);</span>
+&quot;/usr/bin/rev&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s := InputOutputLocalProcess(d,f,[]);</span>
+&lt; input/output stream to rev &gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">WriteLine(s,&quot;The cat sat on the mat&quot;);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(ReadLine(s));</span>
+tam eht no tas tac ehT
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x := ListWithIdenticalEntries(10000,'x');;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConvertToStringRep(x);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">WriteLine(s,x);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">WriteByte(s,INT_CHAR('\n'));</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">y := ReadAll(s);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length(y);</span>
+4095
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CloseStream(s);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s;</span>
+&lt; closed input/output stream to rev &gt;
+</pre></div> </body>
+    </html>

@@ -1,0 +1,58 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.13-4 DisplayOptions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X85E883A87A190AA4"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.13-4 DisplayOptions</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DisplayOptions</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">There is no default method to compute a value, one can set a value with <code class="code">SetDisplayOptions</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;A5&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( tbl );</span>
+A5
+
+     2  2  2  .  .  .
+     3  1  .  1  .  .
+     5  1  .  .  1  1
+
+       1a 2a 3a 5a 5b
+    2P 1a 1a 3a 5b 5a
+    3P 1a 2a 1a 5b 5a
+    5P 1a 2a 3a 1a 1a
+
+X.1     1  1  1  1  1
+X.2     3 -1  .  A *A
+X.3     3 -1  . *A  A
+X.4     4  .  1 -1 -1
+X.5     5  1 -1  .  .
+
+A = -E(5)-E(5)^4
+  = (1-Sqrt(5))/2 = -b5
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CharacterTableDisplayDefaults.User:= rec(</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">       powermap:= &quot;ATLAS&quot;, centralizers:= &quot;ATLAS&quot;, chars:= false );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( CharacterTable( &quot;A5&quot; ) );</span>
+A5
+
+    60  4  3  5  5
+
+ p      A  A  A  A
+ p'     A  A  A  A
+    1A 2A 3A 5A B*
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">options:= rec( chars:= 4, classes:= [ tbl.3a .. tbl.5a ],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">                  centralizers:= false, indicator:= true,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">                  powermap:= [ 2 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( tbl, options );</span>
+A5
+
+          3a 5a
+       2P 3a 5b
+       2
+X.4    +   1 -1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetDisplayOptions( tbl, options );  Display( tbl );</span>
+A5
+
+          3a 5a
+       2P 3a 5b
+       2
+X.4    +   1 -1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Unbind( CharacterTableDisplayDefaults.User );</span>
+</pre></div> </body>
+    </html>

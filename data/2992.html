@@ -1,0 +1,26 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.2-3 Int</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X87CA734380B5F68C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.2-3 Int</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Int</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Int</code> returns an integer <code class="code">int</code> whose meaning depends on the type of <var class="Arg">elm</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">elm</var> is a rational number (see Chapter <a shape="rect" href="chap17_mj.html#X87003045878E74DF"><span class="RefLink">17</span></a>) then <code class="code">int</code> is the integer part of the quotient of numerator and denominator of <var class="Arg">elm</var> (see <code class="func">QuoInt</code> (<a shape="rect" href="chap14_mj.html#X849D0F807F697D35"><span class="RefLink">14.3-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">elm</var> is an element of a finite prime field (see Chapter <a shape="rect" href="chap59_mj.html#X7893ABF67A028802"><span class="RefLink">59</span></a>) then <code class="code">int</code> is the smallest nonnegative integer such that <code class="code"><var class="Arg">elm</var> = int * One( <var class="Arg">elm</var> )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">elm</var> is a string (see Chapter <a shape="rect" href="chap27_mj.html#X7D28329B7EDB8F47"><span class="RefLink">27</span></a>) consisting of digits <code class="code">'0'</code>, <code class="code">'1'</code>, <math id="-3625333214844646685" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math>, <code class="code">'9'</code> and <code class="code">'-'</code> (at the first position) then <code class="code">int</code> is the integer described by this string. The operation <code class="func">String</code> (<a shape="rect" href="chap27_mj.html#X81FB5BE27903EC32"><span class="RefLink">27.7-6</span></a>) can be used to compute a string for rational integers, in fact for all cyclotomics.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Int( 4/3 );  Int( -2/3 );</span>
+1
+0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">int:= Int( Z(5) );  int * One( Z(5) );</span>
+2
+Z(5)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Int( &quot;12345&quot; );  Int( &quot;-27&quot; );  Int( &quot;-27/3&quot; );</span>
+12345
+-27
+fail
+</pre></div> </body>
+    </html>

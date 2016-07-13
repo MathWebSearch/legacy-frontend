@@ -1,0 +1,50 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 29: Records</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap29.html#X7AA1073C7E943DD7"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap29_mj.html#X7AA1073C7E943DD7">29 <span class="Heading">Records</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap29_mj.html#X864F92347B5A3FF0">29.1 <span class="Heading">IsRecord and RecNames</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap29_mj.html#X782A998E7D9EC406">29.1-1 IsRecord</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap29_mj.html#X837F1E1F866FB1A0">29.1-2 RecNames</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap29_mj.html#X7EAAE25D7A17F778">29.2 <span class="Heading">Accessing Record Elements</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap29_mj.html#X806DE3BD78742CA4">29.3 <span class="Heading">Record Assignment</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap29_mj.html#X86BC2672803863FB">29.4 <span class="Heading">Identical Records</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap29_mj.html#X83A7E6607B1D63BC">29.5 <span class="Heading">Comparisons of Records</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap29_mj.html#X79BE8D0E829E7ACE">29.6 <span class="Heading">IsBound and Unbind for Records</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap29_mj.html#X7A13E8F87CAAA0AF">29.6-1 IsBound</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap29_mj.html#X7CA9AEFE7DB71604">29.6-2 Unbind</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap29_mj.html#X784897E180815EDA">29.7 <span class="Heading">Record Access Operations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap29_mj.html#X87BF90FA7F7A3B1B">29.7-1 NameRNam</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap29_mj.html#X78199B6B84A017B9">29.7-2 RNamObj</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap29_mj.html#X7821AC097821AC09">29.7-3 \.</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">29 <span class="Heading">Records</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><em>Records</em> are next to lists the most important way to collect objects together. A record is a collection of <em>components</em>. Each component has a unique <em>name</em>, which is an identifier that distinguishes this component, and a <em>value</em>, which is an object of arbitrary type. We often abbreviate <em>value of a component</em> to <em>element</em>. We also say that a record <em>contains</em> its elements. You can access and change the elements of a record using its name.</p><p xmlns="http://www.w3.org/1999/xhtml">Record literals are written by writing down the components in order between &quot;<code class="code">rec(</code>&quot; and &quot;<code class="code">)</code>&quot;, and separating them by commas &quot;<code class="code">,</code>&quot;. Each component consists of the name, the assignment operator &quot;<code class="code">:=</code>&quot;, and the value. The <em>empty record</em>, i.e., the record with no components, is written as <code class="code">rec()</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( a := 1, b := &quot;2&quot; ); # a record with two components</span>
+rec( a := 1, b := &quot;2&quot; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rec( a := 1, b := rec( c := 2 ) ); # record may contain records</span>
+rec( a := 1, b := rec( c := 2 ) )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We may use the <code class="func">Display</code> (<a shape="rect" href="chap6_mj.html#X83A5C59278E13248"><span class="RefLink">6.3-6</span></a>) function to illustrate the hierarchy of the record components.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( last );</span>
+rec(
+  a := 1,
+  b := rec(
+      c := 2 ) )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Records usually contain elements of various types, i.e., they are usually not homogeneous like lists.</p> </body>
+    </html>

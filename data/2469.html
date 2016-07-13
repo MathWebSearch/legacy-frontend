@@ -1,0 +1,10 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 30: Collections-&gt;30.5-4 Difference</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30.html#X825AC0F07E010B07"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.5-4 Difference</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Difference</code>( <var class="Arg">C1</var>, <var class="Arg">C2</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Difference</code> returns the set difference of the collections <var class="Arg">C1</var> and <var class="Arg">C2</var>. Either argument may also be a homogeneous list that is not a proper set, in which case <code class="func">Difference</code> silently applies <code class="func">Set</code> (<a shape="rect" href="chap30_mj.html#X7E399AC97FD98217"><span class="RefLink">30.3-7</span></a>) to it first.</p><p xmlns="http://www.w3.org/1999/xhtml">The result of <code class="func">Difference</code> is the set of elements that lie in <var class="Arg">C1</var> but not in <var class="Arg">C2</var>. Note that <var class="Arg">C2</var> need not be a subset of <var class="Arg">C1</var>. The elements of <var class="Arg">C2</var>, however, that are not elements of <var class="Arg">C1</var> play no role for the result. If the result is a list then it is mutable and new, i.e., not identical to <var class="Arg">C1</var> or <var class="Arg">C2</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Difference( [ (1,2,3), (1,2,3,4) ], Group( (1,2,3), (1,2) ) );</span>
+[ (1,2,3,4) ]
+</pre></div> </body>
+    </html>

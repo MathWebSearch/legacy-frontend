@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.5-17 ComponentsOfTransformation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X858E944481F6B591"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.5-17 ComponentsOfTransformation</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ComponentsOfTransformation</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A list of lists of positive integers.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">ComponentsOfTransformation</code> returns a list of the components of the transformation <var class="Arg">f</var>. Each component is a subset of <code class="code">[1..DegreeOfTransformation(f)]</code>, and the union of the components is <code class="code">[1..DegreeOfTransformation(f)]</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=Transformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] );</span>
+Transformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentsOfTransformation(f);  </span>
+[ [ 1, 4, 6, 9 ], [ 2, 3, 5, 7, 10, 11, 12 ], [ 8 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=AsTransformation((1,8,2,4,11,5,10)(3,7)(9,12));</span>
+Transformation( [ 8, 4, 7, 11, 10, 6, 3, 2, 12, 1, 5, 9 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentsOfTransformation(f);  </span>
+[ [ 1, 2, 4, 5, 8, 10, 11 ], [ 3, 7 ], [ 6 ], [ 9, 12 ] ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,51 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.1 Group Elements</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X822370B47DEA37B1"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">39.1 <span class="Heading">Group Elements</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Groups in <strong class="pkg">GAP</strong> are written multiplicatively. The elements from which a group can be generated must permit multiplication and multiplicative inversion (see <a shape="rect" href="chap31_mj.html#X7B97A0307EA161E5"><span class="RefLink">31.14</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:=(1,2,3);;b:=(2,3,4);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">One(a);</span>
+()
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Inverse(b);</span>
+(2,4,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a*b;</span>
+(1,3)(2,4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Order(a*b);</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Order( [ [ 1, 1 ], [ 0, 1 ] ] );</span>
+infinity
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The next example may run into an infinite loop because the given matrix in fact has infinite order.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Order( [ [ 1, 1 ], [ 0, 1 ] ] * Indeterminate( Rationals ) );</span>
+#I  Order: warning, order of &lt;mat&gt; might be infinite
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Since groups are domains, the recommended command to compute the order of a group is <code class="func">Size</code> (<a shape="rect" href="chap30_mj.html#X858ADA3B7A684421"><span class="RefLink">30.4-6</span></a>). For convenience, group orders can also be computed with <code class="func">Order</code> (<a shape="rect" href="chap31_mj.html#X84F59A2687C62763"><span class="RefLink">31.10-10</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The operation <code class="func">Comm</code> (<a shape="rect" href="chap31_mj.html#X80761843831B468E"><span class="RefLink">31.12-3</span></a>) can be used to compute the commutator of two elements, the operation <code class="func">LeftQuotient</code> (<a shape="rect" href="chap31_mj.html#X7A37082878DB3930"><span class="RefLink">31.12-2</span></a>) computes the product <math id="8285467645458968737" display="inline" alttext="x^{{-1}}y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <msup xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mo xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">-</mo>
+          <mn xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">1</mn>
+        </mrow>
+      </msup>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">y</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <apply xref="p1.1.m1.1.4.2" id="p1.1.m1.1.4.2.cmml">
+          <csymbol id="p1.1.m1.1.4.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <minus xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml"/>
+            <cn xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑦</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x^{{-1}}y</annotation>
+  </semantics>
+</math>.</p> </body>
+    </html>

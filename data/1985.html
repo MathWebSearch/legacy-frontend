@@ -1,0 +1,163 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 44: Matrix Groups-&gt;44.6-11 BravaisGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap44.html#X7AAE301C83116451"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">44.6-11 BravaisGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ BravaisGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the Bravais group of a finite integer matrix group <var class="Arg">G</var>. If <math id="85262554545393010" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
+  </semantics>
+</math> is the cone of positive definite quadratic forms <math id="-4936965923595655374" display="inline" alttext="Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q</annotation>
+  </semantics>
+</math> invariant under <math id="-6035761616564858118" display="inline" alttext="g\mapsto gQg^{tr}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">↦</mo>
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">g</mi>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">Q</mi>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1a">⁢</mo>
+        <msup xref="p1.1.m1.1.7.1.2.cmml" id="p1.1.m1.1.7.1.2">
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">g</mi>
+          <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+            <mi xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.6.1.1">t</mi>
+            <mo xref="p1.1.m1.1.6.1.3.cmml" id="p1.1.m1.1.6.1.3">⁢</mo>
+            <mi xref="p1.1.m1.1.6.1.2.cmml" id="p1.1.m1.1.6.1.2">r</mi>
+          </mrow>
+        </msup>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" cd="latexml">maps-to</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <times xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑄</ci>
+          <apply xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.2.cmml">
+            <csymbol id="p1.1.m1.1.7.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑔</ci>
+            <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+              <times xref="p1.1.m1.1.6.1.3" id="p1.1.m1.1.6.1.3.cmml"/>
+              <ci xref="p1.1.m1.1.6.1.1" id="p1.1.m1.1.6.1.1.cmml">𝑡</ci>
+              <ci xref="p1.1.m1.1.6.1.2" id="p1.1.m1.1.6.1.2.cmml">𝑟</ci>
+            </apply>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g\mapsto gQg^{tr}</annotation>
+  </semantics>
+</math> for all <math id="7661931758001437165" display="inline" alttext="g\in\textit{G}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝐺</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g\in\textit{G}</annotation>
+  </semantics>
+</math>, then the Bravais group of <var class="Arg">G</var> is the maximal subgroup of <math id="-5087139172541486216" display="inline" alttext="GL_{n}(?)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <msub xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">L</mi>
+        <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">n</mi>
+      </msub>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1a">⁢</mo>
+      <mrow id="p1.1.m1.1.7.3">
+        <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5" mathvariant="normal">?</mi>
+        <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐿</ci>
+          <ci xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">𝑛</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">?</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">GL_{n}(?)</annotation>
+  </semantics>
+</math> leaving the forms in that same cone invariant. Alternatively, the Bravais group of <var class="Arg">G</var> can also be defined with respect to the action <math id="6864887404955226480" display="inline" alttext="g\mapsto g^{tr}Qg" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">↦</mo>
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <msup xref="p1.1.m1.1.7.1.2.cmml" id="p1.1.m1.1.7.1.2">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">g</mi>
+          <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">
+            <mi xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.4.1.1">t</mi>
+            <mo xref="p1.1.m1.1.4.1.3.cmml" id="p1.1.m1.1.4.1.3">⁢</mo>
+            <mi xref="p1.1.m1.1.4.1.2.cmml" id="p1.1.m1.1.4.1.2">r</mi>
+          </mrow>
+        </msup>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">Q</mi>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">g</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" cd="latexml">maps-to</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <times xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.2.cmml">
+            <csymbol id="p1.1.m1.1.7.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑔</ci>
+            <apply xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+              <times xref="p1.1.m1.1.4.1.3" id="p1.1.m1.1.4.1.3.cmml"/>
+              <ci xref="p1.1.m1.1.4.1.1" id="p1.1.m1.1.4.1.1.cmml">𝑡</ci>
+              <ci xref="p1.1.m1.1.4.1.2" id="p1.1.m1.1.4.1.2.cmml">𝑟</ci>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑄</ci>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑔</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g\mapsto g^{tr}Qg</annotation>
+  </semantics>
+</math> on positive definite quadratic forms <math id="-710051468050950594" display="inline" alttext="Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q</annotation>
+  </semantics>
+</math>. This latter definition is appropriate for groups <var class="Arg">G</var> acting from the right on row vectors, whereas the former definition is appropriate for groups acting from the left on column vectors. Both definitions yield the same Bravais group.</p> </body>
+    </html>

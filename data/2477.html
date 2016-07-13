@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 30: Collections-&gt;30.4-5 IsWholeFamily</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30.html#X78EF6A137E8F66B0"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.4-5 IsWholeFamily</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsWholeFamily</code>( <var class="Arg">C</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsWholeFamily</code> returns <code class="keyw">true</code> if the collection <var class="Arg">C</var> contains the whole family (see <a shape="rect" href="chap13_mj.html#X846063757EC05986"><span class="RefLink">13.1</span></a>) of its elements.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWholeFamily( Integers )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   ;  # all rationals and cyclotomics lie in the family</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWholeFamily( Integers mod 3 )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   ;  # all finite field elements in char. 3 lie in this family</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWholeFamily( Integers mod 4 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWholeFamily( FreeGroup( 2 ) );</span>
+true
+</pre></div> </body>
+    </html>

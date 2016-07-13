@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.5-2 PreImagePartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X7C7F5EAB7E9A381D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.5-2 PreImagePartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PreImagePartialPerm</code>( <var class="Arg">f</var>, <var class="Arg">i</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A positive integer or <code class="keyw">fail</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">PreImagePartialPerm</code> returns the preimage of the positive integer <var class="Arg">i</var> under the partial permutation <var class="Arg">f</var> if <var class="Arg">i</var> belongs to the image of <var class="Arg">f</var>. If <var class="Arg">i</var> does not belong to the image of <var class="Arg">f</var>, then <code class="keyw">fail</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">The same result can be obtained by using <code class="code"><var class="Arg">i</var>/<var class="Arg">f</var></code> as described in Section <a shape="rect" href="chap54_mj.html#X848CD855802C6CE1"><span class="RefLink">54.5</span></a>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 3, 5, 9, 10 ], [ 5, 10, 7, 8, 9, 1 ] );</span>
+[2,10,1,5,8][3,7](9)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PreImagePartialPerm(f, 8);</span>
+5
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PreImagePartialPerm(f, 5);</span>
+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PreImagePartialPerm(f, 1);</span>
+10
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PreImagePartialPerm(f, 10);</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PreImagePartialPerm(f, 2); </span>
+fail</pre></div> </body>
+    </html>

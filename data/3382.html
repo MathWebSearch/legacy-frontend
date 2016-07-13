@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.6-5 RootSystem</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X80D15C027BB8029B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.6-5 RootSystem</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RootSystem</code>( <var class="Arg">L</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">RootSystem</code> calculates the root system of the semisimple Lie algebra <var class="Arg">L</var> with a split Cartan subalgebra.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;G&quot;, 2, Rationals );</span>
+&lt;Lie algebra of dimension 14 over Rationals&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R:= RootSystem( L );</span>
+&lt;root system of rank 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsRootSystem( R );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsRootSystemFromLieAlgebra( R );</span>
+true
+</pre></div> </body>
+    </html>

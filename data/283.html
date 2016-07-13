@@ -1,0 +1,162 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 3: Running GAP-&gt;3.1 Command Line Options</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap3.html#X782751D5858A6EAF"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">3.1 <span class="Heading">Command Line Options</span></h4><p xmlns="http://www.w3.org/1999/xhtml">When you start <strong class="pkg">GAP</strong> from a command line or from a script you may specify a number of options on the command-line to change the default behaviour of <strong class="pkg">GAP</strong>. All these options start with a hyphen <code class="code">-</code>, followed by a single letter. Options must not be grouped, e.g., <code class="code">gap -gq</code> is invalid, use <code class="code">gap -g -q</code> instead. Some options require an argument, this must follow the option and must be separated by whitespace, e.g., <code class="code">gap -m 256m</code>, it is not correct to say <code class="code">gap -m256m</code> instead. Certain Boolean options (<code class="code">-b</code>, <code class="code">-q</code>, <code class="code">-e</code>, <code class="code">-r</code>, <code class="code">-A</code>, <code class="code">-D</code>, <code class="code">-M</code>, <code class="code">-T</code>, <code class="code">-X</code>, <code class="code">-Y</code>) toggle the current value so that <code class="code">gap -b -b</code> is equivalent to <code class="code">gap</code> and to <code class="code">gap -b -q -b -q</code> etc.</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> for UNIX will distinguish between upper and lower case options.</p><p xmlns="http://www.w3.org/1999/xhtml">As described in the <strong class="pkg">GAP</strong> installation instructions (see the <code class="file">INSTALL</code> file in the <strong class="pkg">GAP</strong> root directory, or at <span class="URL"><a shape="rect" href="http://www.gap-system.org/Download/INSTALL">http://www.gap-system.org/Download/INSTALL</a></span>), usually you will not execute <strong class="pkg">GAP</strong> directly. Instead you will call a (shell) script, with the name <code class="code">gap</code>, which in turn executes <strong class="pkg">GAP</strong>. This script sets some options which are necessary to make <strong class="pkg">GAP</strong> work on your system. This means that the default settings mentioned below may not be what you experience when you execute <strong class="pkg">GAP</strong> on your system.</p><p xmlns="http://www.w3.org/1999/xhtml">During a <strong class="pkg">GAP</strong> session, one can find the current values of command line options in the record <code class="code">GAPInfo.CommandLineOptions</code> (see <code class="func">GAPInfo</code> (<a shape="rect" href="chap3_mj.html#X8354754E7935F935"><span class="RefLink">3.5-1</span></a>)), whose component names are the command line options (without the leading <code class="code">-</code>).</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">
+<code class="code">-A</code></strong></dt><dd><p>By default, some needed and suggested <strong class="pkg">GAP</strong> packages (see <a shape="rect" href="chap76_mj.html#X7B6CD527825945CD"><span class="RefLink">76</span></a>) are loaded, if present, into the <strong class="pkg">GAP</strong> session when it starts. This option disables (actually toggles) the loading of suggested packages, which can be useful for debugging or testing. The needed packages (and their needed packages, and so on) are loaded in any case.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-a </code><var class="Arg">memory</var></strong></dt><dd><p>GASMAN, the storage manager of <strong class="pkg">GAP</strong> uses <code class="code">sbrk</code> to get blocks of memory from (certain) operating systems and it is required that subsequent calls to <code class="code">sbrk</code> produce adjacent blocks of memory in this case because <strong class="pkg">GAP</strong> only wants to deal with one large block of memory. If the C function <code class="code">malloc</code> is called for whatever reason, it is likely that <code class="code">sbrk</code> will no longer produce adjacent blocks, therefore <strong class="pkg">GAP</strong> does not use <code class="code">malloc</code> itself.</p>
+
+<p>However some operating systems insist on calling <code class="code">malloc</code> to create a buffer when a file is opened, or for some other reason. In order to catch these cases <strong class="pkg">GAP</strong> preallocates a block of memory with <code class="code">malloc</code> which is immediately freed. The amount preallocated can be controlled with the <code class="code">-a</code> option. (Most users do not need this option.)</p>
+
+<p>The option argument <var class="Arg">memory</var> is specified as with the <code class="code">-m</code> option.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-B </code><var class="Arg">architecture</var></strong></dt><dd><p>Executable binary files that form part of <strong class="pkg">GAP</strong> or of a <strong class="pkg">GAP</strong> package are kept in a subdirectory of the <code class="file">bin</code> directory within the <strong class="pkg">GAP</strong> or package root directory. The subdirectory name is determined from the operating system, processor and compiler details when <strong class="pkg">GAP</strong> (resp. the package) is installed. Under rare circumstances, it may be necessary to override this name, and this can be done using the <code class="code">-B</code> option.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-b</code></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> to suppress the banner. That means that <strong class="pkg">GAP</strong> immediately prints the prompt. This is useful when, after a while, you get tired of the banner. This option can be repeated to enable the banner; each <code class="code">-b</code> toggles the state of banner display.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-D</code></strong></dt><dd><p>The <code class="code">-D</code> option tells <strong class="pkg">GAP</strong> to print short messages when it is reading files or loading modules. This option may be repeated to toggle this behavior on and off. The message,</p>
+
+
+<div class="example"><pre xml:space="preserve">
+#I  READ_GAP_ROOT: loading 'lib/kernel.g' as GAP file
+</pre></div>
+
+<p>tells you that <strong class="pkg">GAP</strong> has started to read the library file <code class="file">lib/kernel.g</code>.</p>
+
+
+<div class="example"><pre xml:space="preserve">
+#I  READ_GAP_ROOT: loading 'lib/kernel.g' statically
+</pre></div>
+
+<p>tells you that <strong class="pkg">GAP</strong> has used the compiled version of the library file <code class="file">lib/kernel.g</code>. This compiled module was statically linked to the <strong class="pkg">GAP</strong> kernel at the time the kernel was created.</p>
+
+
+<div class="example"><pre xml:space="preserve">
+#I  READ_GAP_ROOT: loading 'lib/kernel.g' dynamically
+</pre></div>
+
+<p>tells you that <strong class="pkg">GAP</strong> has loaded the compiled version of the library file <code class="file">lib/kernel.g</code>. This compiled module was dynamically loaded to the <strong class="pkg">GAP</strong> kernel at runtime from a corresponding <code class="code">.so</code> file.</p>
+
+<p>Obviously, this is a debugging option and most users will not need it.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-E</code></strong></dt><dd><p>If your <strong class="pkg">GAP</strong> installation uses the <code class="code">readline</code> library for command line editing (see <a shape="rect" href="chap6_mj.html#X7E95EB017803F53C"><span class="RefLink">6.9</span></a>), this may be disabled by using <code class="code">-E</code> option. This option may be repeated to toggle this behavior on and off. If your <strong class="pkg">GAP</strong> installation does not use the <code class="code">readline</code> library (you can check by <code class="code">IsBound(GAPInfo.UseReadline);</code> if this is the case), this option will have no effect at all.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-e</code></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> not to quit when receiving a <strong class="button">Ctrl-D</strong> on an empty input line (see <a shape="rect" href="chap6_mj.html#X83033EEB81CF4F49"><span class="RefLink">6.4-1</span></a>). This option should not be used when the input is a file or pipe. This option may be repeated to toggle this behavior on and off.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-f</code></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> to enable the line editing and history (see <a shape="rect" href="chap6_mj.html#X82234FD181899530"><span class="RefLink">6.8</span></a>).</p>
+
+<p>In general line editing will be enabled if the input is connected to a terminal. There are rare circumstances, for example when using a remote session with a corrupted telnet implementation, when this detection fails. Try using <code class="code">-f</code> in this case to enable line editing. This option does not toggle; you must use <code class="code">-n</code> to disable line editing.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-g</code></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> to print a message every time a full garbage collection is performed.</p>
+
+
+<div class="example"><pre xml:space="preserve">
+#G  FULL 44580/2479kb live   57304/4392kb dead   734/4096kb free
+</pre></div>
+
+<p>For example, this tells you that there are 44580 live objects that survived a full garbage collection, that 57304 unused objects were reclaimed by it, and that 734 kilobytes from a total allocated memory of 4096 kilobytes are available afterwards.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-g -g</code></strong></dt><dd><p>If you give the option <code class="code">-g</code> twice, <strong class="pkg">GAP</strong> prints a information message every time a partial or full garbage collection is performed. The message,</p>
+
+
+<div class="example"><pre xml:space="preserve">
+#G  PART 9405/961kb+live   7525/1324kb+dead   2541/4096kb free
+</pre></div>
+
+<p>for example, tells you that 9405 objects survived the partial garbage collection and 7525 objects were reclaimed, and that 2541 kilobytes from a total allocated memory of 4096 kilobytes are available afterwards.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-h</code></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> to print a summary of all available options (<code class="code">-h</code> is mnemonic for &quot;help&quot;). <strong class="pkg">GAP</strong> exits after printing the summary, all other options are ignored.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-i </code><var class="Arg">filename</var></strong></dt><dd><p>changes the name of the init file from the default <code class="file">init.g</code> to <var class="Arg">filename</var>. (Usually not needed.)</p>
+
+</dd><dt><strong class="Mark"> 
+<code class="code">-K </code><var class="Arg">memory</var></strong></dt><dd><p>is like the <code class="code">-o</code> option. But while the latter actually allocates more memory if the system allows it and then prints a warning inside a break loop the <code class="code">-K</code> options tells <strong class="pkg">GAP</strong> not even to try to allocate more memory. Instead <strong class="pkg">GAP</strong> just exits with an appropriate message. The default is that this feature is switched off. You have to set it explicitly when you want to enable it.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-L </code><var class="Arg">filename</var></strong></dt><dd><p>The option <code class="code">-L</code> tells <strong class="pkg">GAP</strong> to load a saved workspace. See section <a shape="rect" href="chap3_mj.html#X7CB282757ACB1C09"><span class="RefLink">3.3</span></a>.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-l </code><var class="Arg">path_list</var></strong></dt><dd><p>can be used to set or modify <strong class="pkg">GAP</strong>'s list of root directories (see <a shape="rect" href="chap9_mj.html#X7A4973627A5DB27D"><span class="RefLink">9.2</span></a>). The default if no <code class="code">-l </code> option is given is the current directory <code class="file">./</code>. This option can be used several times. Depending on the <code class="code">-r</code> option a further user specific path is prepended to the list of root directories (the path in <code class="code">GAPInfo.UserGapRoot</code>).</p>
+
+<p><var class="Arg">path_list</var> should be a list of directories separated by semicolons. No whitespace is permitted before or after a semicolon. If <var class="Arg">path_list</var> does not start or end with a semicolon, then <var class="Arg">path_list</var> replaces the existing list of root directories. If <var class="Arg">path_list</var> starts with a semicolon, then <var class="Arg">path_list</var> is appended to the existing list of root directories. If <var class="Arg">path_list</var> ends with a semicolon and does not start with one, then the new list of root directories is the concatenation of <var class="Arg">path_list</var> and the existing list of root directories. After <strong class="pkg">GAP</strong> has completed its startup procedure and displays the prompt, the list of root directories can be seen in the variable <code class="code">GAPInfo.RootPaths</code>, see <code class="func">GAPInfo</code> (<a shape="rect" href="chap3_mj.html#X8354754E7935F935"><span class="RefLink">3.5-1</span></a>).</p>
+
+<p>Usually this option is used inside a startup script to specify where <strong class="pkg">GAP</strong> is installed on the system. The <code class="code">-l</code> option can also be used by individual users to tell <strong class="pkg">GAP</strong> about privately installed modifications of the library, additional <strong class="pkg">GAP</strong> packages and so on. Section <a shape="rect" href="chap9_mj.html#X7A4973627A5DB27D"><span class="RefLink">9.2</span></a> explains how several root paths can be used to do this.</p>
+
+<p><strong class="pkg">GAP</strong> will attempt to read the file <var class="Arg">root_dir</var><code class="file">/lib/init.g</code> during startup where <var class="Arg">root_dir</var> is one of the directories in its list of root directories. If <strong class="pkg">GAP</strong> cannot find its <code class="file">init.g</code> file it will print the following warning.</p>
+
+
+<div class="example"><pre xml:space="preserve">
+gap: hmm, I cannot find 'lib/init.g' maybe use option '-l &lt;gaproot&gt;'?
+</pre></div>
+
+<p>It is not possible to use <strong class="pkg">GAP</strong> without the library files, so you must not ignore this warning. You should leave <strong class="pkg">GAP</strong> and start it again, specifying the correct root path using the <code class="code">-l</code> option.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-M</code></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> not to check for, nor to use, compiled versions of library files. This option may be repeated to toggle this behavior on and off.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-m </code><var class="Arg">memory</var></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> to allocate <var class="Arg">memory</var> bytes at startup time. If the last character of <var class="Arg">memory</var> is <code class="code">k</code> or <code class="code">K</code> it is taken as kilobytes, if the last character is <code class="code">m</code> or <code class="code">M</code> <var class="Arg">memory</var> is taken as megabytes and if it is <code class="code">g</code> or <code class="code">G</code> it is taken as gigabytes.</p>
+
+<p>This amount of memory should be large enough so that computations do not require too many garbage collections. On the other hand, if <strong class="pkg">GAP</strong> allocates more memory than is physically available, it will spend most of the time paging.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-n</code></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> to disable the line editing and history (see <a shape="rect" href="chap6_mj.html#X82234FD181899530"><span class="RefLink">6.8</span></a>).</p>
+
+<p>You may want to do this if the command line editing is incompatible with another program that is used to run <strong class="pkg">GAP</strong>. For example if <strong class="pkg">GAP</strong> is run from inside a GNU Emacs shell window, <code class="code">-n</code> should be used since otherwise every input line will be echoed twice, once by Emacs and once by <strong class="pkg">GAP</strong>. This option does not toggle; you must use <code class="code">-f</code> to enable line editing.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-O</code></strong></dt><dd><p>disables loading obsolete variables (see Chapter <a shape="rect" href="chap77_mj.html#X78C85ED17F00DCC1"><span class="RefLink">77</span></a>). This option is used mainly for testing purposes, for example in order to make sure that a <strong class="pkg">GAP</strong> package or one's own <strong class="pkg">GAP</strong> code does not rely on the obsolete variables.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-o </code><var class="Arg">memory</var></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> to allocate at most <var class="Arg">memory</var> bytes without asking. The option argument <var class="Arg">memory</var> is specified as with the <code class="code">-m</code> option.</p>
+
+<p>If more than this amount is required during the <strong class="pkg">GAP</strong> session, <strong class="pkg">GAP</strong> prints an error message and enters a break loop. In that case you can enter <code class="code">return;</code> which implicitly doubles the amount given with this option.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-q</code></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> to be quiet. This means that <strong class="pkg">GAP</strong> displays neither the banner nor the prompt <code class="code">gap&gt;</code>. This is useful if you want to run <strong class="pkg">GAP</strong> as a filter with input and output redirection and want to avoid the banner and the prompts appearing in the output file. This option may be repeated to disable quiet mode; each <code class="code">-q</code> toggles quiet mode.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-R</code></strong></dt><dd><p>The option <code class="code">-R</code> tells <strong class="pkg">GAP</strong> not to load a saved workspace previously specified via the <code class="code">-L</code> option. This option does not toggle.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-r</code></strong></dt><dd><p>The option <code class="code">-r</code> tells <strong class="pkg">GAP</strong> to ignore any user specific configuration files. In particular, the user specific root directory <code class="code">GAPInfo.UserGapRoot</code> is not added to the <strong class="pkg">GAP</strong> root directories and so <code class="file">gap.ini</code> and <code class="file">gaprc</code> files that may be contained in that directory are not read, see <a shape="rect" href="chap3_mj.html#X7FD66F977A3B02DF"><span class="RefLink">3.2</span></a>. Multiple <code class="code">-r</code> options toggle this behaviour.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-s </code><var class="Arg">memory</var></strong></dt><dd><p>With this option <strong class="pkg">GAP</strong> does not use <code class="code">sbrk</code> to get memory from the operating system. Instead it uses <code class="code">mmap</code>, <code class="code">malloc</code> or some other command for the amount given with this option to allocate space for the <code class="code">GASMAN</code> memory manager. Usually <strong class="pkg">GAP</strong> does not really use all of this memory, the options <code class="code">-m</code>, <code class="code">-o</code>, <code class="code">-K</code> still work as documented. This feature assumes that the operating system only assigns physical memory to the <strong class="pkg">GAP</strong> process when it is accessed, so that specifying a large amount of memory with <code class="code">-s</code> should not cause any performance problem. The advantage of using this option is that <strong class="pkg">GAP</strong> can work together with kernel modules which allocate a lot of memory with <code class="code">malloc</code>.</p>
+
+<p>The option argument <var class="Arg">memory</var> is specified as with the <code class="code">-m</code> option.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-T</code></strong></dt><dd><p>suppresses the usual break loop behaviour of <strong class="pkg">GAP</strong>. With this option <strong class="pkg">GAP</strong> behaves as if the user <code class="keyw">quit</code> immediately from every break loop. This is intended for automated testing of <strong class="pkg">GAP</strong>. This option may be repeated to toggle this behavior on and off.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-X</code></strong></dt><dd><p>tells <strong class="pkg">GAP</strong> to do a consistency check of the library file and the corresponding compiled module when loading the compiled module. This option may be repeated to toggle this behavior on and off.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-x </code><var class="Arg">length</var></strong></dt><dd><p>With this option you can tell <strong class="pkg">GAP</strong> how long lines are. <strong class="pkg">GAP</strong> uses this value to decide when to split long lines. After starting <strong class="pkg">GAP</strong> you may use <code class="func">SizeScreen</code> (<a shape="rect" href="chap6_mj.html#X8723E0A1837894F3"><span class="RefLink">6.12-1</span></a>) to alter the line length.</p>
+
+<p>The default value is 80, unless another value can be obtained from the Operating System, which is the right value if you have a standard terminal application. If you have a larger monitor, or use a smaller font, or redirect the output to a printer, you may want to increase this value.</p>
+
+</dd><dt><strong class="Mark">
+<code class="code">-y </code><var class="Arg">length</var></strong></dt><dd><p>With this option you can tell <strong class="pkg">GAP</strong> how many lines your screen has. <strong class="pkg">GAP</strong> uses this value to decide after how many lines of on-line help it should wait. After starting <strong class="pkg">GAP</strong> you may use <code class="func">SizeScreen</code> (<a shape="rect" href="chap6_mj.html#X8723E0A1837894F3"><span class="RefLink">6.12-1</span></a>) to alter the number of lines.</p>
+
+<p>The default value is 24, unless another value can be obtained from the Operating System, which is the right value if you have a standard terminal application. If you have a larger monitor, or use a smaller font, or redirect the output to a printer, you may want to increase this value.</p>
+
+</dd><dt><strong class="Mark">
+<var class="Arg">filename</var> ...</strong></dt><dd><p>Further arguments are taken as filenames of files that are read by <strong class="pkg">GAP</strong> during startup, after the system and private init files are read, but before the first prompt is printed. The files are read in the order in which they appear on the command line. <strong class="pkg">GAP</strong> only accepts up to 14 filenames on the command line. If a file cannot be opened <strong class="pkg">GAP</strong> will print an error message and will abort.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">Additional options, <code class="code">-C</code>, <code class="code">-U</code>, <code class="code">-P</code>, <code class="code">-W</code>, <code class="code">-p</code> and <code class="code">-z</code> are used internally by the <strong class="pkg">gac</strong> script (see <a shape="rect" href="chap76_mj.html#X79EF67107E40A130"><span class="RefLink">76.3-10</span></a>) and/or on specific operating systems.</p> </body>
+    </html>

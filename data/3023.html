@@ -1,0 +1,41 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 76: Using GAP Packages</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap76.html#X7B6CD527825945CD"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap76_mj.html#X7B6CD527825945CD">76 <span class="Heading">Using GAP Packages</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap76_mj.html#X82473E4B8756C6CD">76.1 <span class="Heading">Installing a GAP Package</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap76_mj.html#X825CBC5B86F8F811">76.2 <span class="Heading">Loading a GAP Package</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X79B373A77B29D1F5">76.2-1 LoadPackage</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X858E8985840BFA72">76.2-2 SetPackagePath</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X7CD0A2F27D19BA03">76.2-3 ExtendRootDirectories</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X7D162DDF813D2BBA">76.2-4 DisplayPackageLoadingLog</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap76_mj.html#X7C6CE28B7E142804">76.3 <span class="Heading">Functions for GAP Packages</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X870954577B27DCAB">76.3-1 ReadPackage</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X8580DF257E4D7046">76.3-2 TestPackageAvailability</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X866ADD4E814A54F0">76.3-3 TestPackage</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X7B79FEE57DBDBD71">76.3-4 InstalledPackageVersion</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X807D835C7B032D4E">76.3-5 DirectoriesPackageLibrary</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X794508E5811D3BC9">76.3-6 DirectoriesPackagePrograms</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X787DFEB383545A49">76.3-7 CompareVersionNumbers</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X8067348B836BAF37">76.3-8 IsPackageMarkedForLoading</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X8495E5327D563AC3">76.3-9 DeclareAutoreadableVariables</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X79EF67107E40A130">76.3-10 <span class="Heading">Kernel modules in <strong class="pkg">GAP</strong> packages</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X7C99782886B18C77">76.3-11 LoadDynamicModule</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X85C8DE357EE424D8">76.3-12 <span class="Heading">The PackageInfo.g File</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X79767C2482FF6F55">76.3-13 ValidatePackageInfo</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X7D34AC3287611B15">76.3-14 ShowPackageVariables</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X79EA4BD37940AD25">76.3-15 BibEntry</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap76_mj.html#X79637D9A7B1AD7F7">76.3-16 Cite</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">76 <span class="Heading">Using GAP Packages</span></h3><p xmlns="http://www.w3.org/1999/xhtml">The functionality of <strong class="pkg">GAP</strong> can be extended by loading <strong class="pkg">GAP</strong> packages. <strong class="pkg">GAP</strong> distribution already contains all currently redistributed with <strong class="pkg">GAP</strong> packages in the <code class="file">gap4r8/pkg</code> directory.</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> packages are written by (groups of) <strong class="pkg">GAP</strong> users which may not be members of the <strong class="pkg">GAP</strong> developer team. The responsibility and copyright of a <strong class="pkg">GAP</strong> package remains with the original author(s).</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> packages have their own documentation which is smoothly integrated into the <strong class="pkg">GAP</strong> help system.</p><p xmlns="http://www.w3.org/1999/xhtml">All <strong class="pkg">GAP</strong> users who develop new code are invited to share the results of their efforts with other <strong class="pkg">GAP</strong> users by making the code and its documentation available in form of a package. Information how to do this is available from the <strong class="pkg">GAP</strong> Web pages (<span class="URL"><a shape="rect" href="http://www.gap-system.org">http://www.gap-system.org</a></span>) and in the <strong class="pkg">GAP</strong> package <strong class="pkg">Example</strong> (see <span class="URL"><a shape="rect" href="http://www.gap-system.org/Packages/example.html">http://www.gap-system.org/Packages/example.html</a></span>). There are possibilities to get a package distributed together with <strong class="pkg">GAP</strong> and it is possible to submit a package to a formal refereeing process.</p><p xmlns="http://www.w3.org/1999/xhtml">In this chapter we describe how to use existing packages.</p> </body>
+    </html>

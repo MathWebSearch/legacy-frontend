@@ -1,0 +1,23 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 18: Cyclotomic Numbers-&gt;18.5-1 GaloisCyc</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap18.html#X79EE9097783128C4"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">18.5-1 GaloisCyc</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GaloisCyc</code>( <var class="Arg">cyc</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GaloisCyc</code>( <var class="Arg">list</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a cyclotomic <var class="Arg">cyc</var> and an integer <var class="Arg">k</var>, <code class="func">GaloisCyc</code> returns the cyclotomic obtained by raising the roots of unity in the Zumbroich basis representation of <var class="Arg">cyc</var> to the <var class="Arg">k</var>-th power. If <var class="Arg">k</var> is coprime to the integer <math id="3354022732984764789" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>, <code class="code">GaloisCyc( ., <var class="Arg">k</var> )</code> acts as a Galois automorphism of the <math id="990728871545005401" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>-th cyclotomic field (see <a shape="rect" href="chap60_mj.html#X7E4AB4B17C7BA10C"><span class="RefLink">60.4</span></a>); to get the Galois automorphisms themselves, use <code class="func">GaloisGroup</code> (<a shape="rect" href="chap58_mj.html#X80CAA5BA82F09ED2"><span class="RefLink">58.3-1</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>complex conjugate</em> of <var class="Arg">cyc</var> is <code class="code">GaloisCyc( <var class="Arg">cyc</var>, -1 )</code>, which can also be computed using <code class="func">ComplexConjugate</code> (<a shape="rect" href="chap18_mj.html#X7BE001A0811CD599"><span class="RefLink">18.5-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">For a list or matrix <var class="Arg">list</var> of cyclotomics, <code class="func">GaloisCyc</code> returns the list obtained by applying <code class="func">GaloisCyc</code> to the entries of <var class="Arg">list</var>.</p> </body>
+    </html>

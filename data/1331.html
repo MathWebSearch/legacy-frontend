@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 35: Magmas-&gt;35.4-11 MultiplicativeZero</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap35.html#X7B39F93C8136D642"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">35.4-11 MultiplicativeZero</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MultiplicativeZero</code>( <var class="Arg">M</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsMultiplicativeZero</code>( <var class="Arg">M</var>, <var class="Arg">z</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">MultiplicativeZero</code> returns the multiplicative zero of the magma <var class="Arg">M</var> which is the element <code class="code">z</code> in <var class="Arg">M</var> such that <code class="code"><var class="Arg">z</var> * <var class="Arg">m</var> = <var class="Arg">m</var> * <var class="Arg">z</var> = <var class="Arg">z</var></code> for all <var class="Arg">m</var> in <var class="Arg">M</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">IsMultiplicativeZero</code> returns <code class="keyw">true</code> if the element <var class="Arg">z</var> of the magma <var class="Arg">M</var> equals the multiplicative zero of <var class="Arg">M</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=Semigroup( Transformation( [ 1, 1, 1 ] ), </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Transformation( [ 2, 3, 1 ] ) );</span>
+&lt;transformation semigroup of degree 3 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MultiplicativeZero(S);</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=Semigroup( Transformation( [ 1, 1, 1 ] ), </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Transformation( [ 1, 3, 2 ] ) );</span>
+&lt;transformation semigroup of degree 3 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MultiplicativeZero(S);</span>
+Transformation( [ 1, 1, 1 ] )
+</pre></div> </body>
+    </html>

@@ -1,0 +1,23 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.12-2 Cochain</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X79F3DF0D8791C2E3"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.12-2 Cochain</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Cochain</code>( <var class="Arg">V</var>, <var class="Arg">s</var>, <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Constructs a <var class="Arg">s</var>-cochain given by the data in <var class="Arg">obj</var>, with respect to the Lie algebra module <var class="Arg">V</var>. If <var class="Arg">s</var> is non-zero, then <var class="Arg">obj</var> must be a list.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;A&quot;, 1, Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= AdjointModule( L );</span>
+&lt;3-dimensional left-module over &lt;Lie algebra of dimension 
+3 over Rationals&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c1:= Cochain( V, 2, </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">              [ [ [ [ 1, 3 ], -1 ] ], [ ], [ [ [ 2, 3 ], 1/2 ] ] ]);</span>
+&lt;2-cochain&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ExtRepOfObj( c1 );</span>
+[ [ [ [ 1, 3 ], -1 ] ], [  ], [ [ [ 2, 3 ], 1/2 ] ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c2:= Cochain( V, 0, Basis( V )[1] );</span>
+&lt;0-cochain&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ExtRepOfObj( c2 );</span>
+v.1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsCochain( c2 );</span>
+true
+</pre></div> </body>
+    </html>

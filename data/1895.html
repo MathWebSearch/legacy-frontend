@@ -1,0 +1,32 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 42: Permutations-&gt;42.5-4 RestrictedPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap42.html#X7EF8388E7DA8E600"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">42.5-4 RestrictedPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RestrictedPerm</code>( <var class="Arg">perm</var>, <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RestrictedPermNC</code>( <var class="Arg">perm</var>, <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">RestrictedPerm</code> returns the new permutation that acts on the points in the list <var class="Arg">list</var> in the same way as the permutation <var class="Arg">perm</var>, and that fixes those points that are not in <var class="Arg">list</var>. The resulting permutation is stored internally of degree given by the maximal entry of <var class="Arg">list</var>. <var class="Arg">list</var> must be a list of positive integers such that for each <math id="-4466802798837829974" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> in <var class="Arg">list</var> the image <math id="2381068987261289525" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">^</code><var class="Arg">perm</var> is also in <var class="Arg">list</var>, i.e., <var class="Arg">list</var> must be the union of cycles of <var class="Arg">perm</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">RestrictedPermNC</code> does not check whether <var class="Arg">list</var> is a union of cycles.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ListPerm((3,4,5));</span>
+[ 1, 2, 4, 5, 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PermList([1,2,4,5,3]);</span>
+(3,4,5)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MappingPermListList([2,5,1,6],[7,12,8,2]);</span>
+(1,8,5,12,11,10,9,6,2,7,4,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RestrictedPerm((1,2)(3,4),[3..5]);</span>
+(3,4)
+</pre></div> </body>
+    </html>

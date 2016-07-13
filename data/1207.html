@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.6 Displaying transformations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X810D23017A5527B7"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">53.6 <span class="Heading">Displaying transformations</span></h4><p xmlns="http://www.w3.org/1999/xhtml">It is possible to change the way that <strong class="pkg">GAP</strong> displays transformations using the user preferences <code class="code">TransformationDisplayLimit</code> and <code class="code">NotationForTransformations</code>; see Section <code class="func">UserPreference</code> (<a shape="rect" href="chap3_mj.html#X7B0AD104839B6C3C"><span class="RefLink">3.2-3</span></a>) for more information about user preferences.</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="code">f</code> is a transformation where degree <code class="code">n</code> exceeds the value of the user preference <code class="code">TransformationDisplayLimit</code>, then <code class="code">f</code> is displayed as:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">&lt;transformation on n pts with rank r&gt;</pre></div><p xmlns="http://www.w3.org/1999/xhtml">where <code class="code">r</code> is the rank of <code class="code">f</code> relative to <code class="code">n</code>. The idea is to abbreviate the display of transformations defined on many points. The default value for the <code class="code">TransformationDisplayLimit</code> is <code class="code">100</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the degree of <code class="code">f</code> does not exceed the value of <code class="code">TransformationDisplayLimit</code>, then how <code class="code">f</code> is displayed depends on the value of the user preference <code class="code">NotationForTransformations</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">There are two possible values for <code class="code">NotationForTransformations</code>:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">input</strong></dt><dd><p>With this option a transformation <var class="Arg">f</var> is displayed in as: <code class="code">Transformation(ImageListOfTransformation(<var class="Arg">f</var>, n)</code> where <code class="code">n</code> is the degree of <var class="Arg">f</var>. The only exception is the identity transformation, which is displayed as: <code class="code">IdentityTransformation</code>.</p>
+
+</dd><dt><strong class="Mark">fr</strong></dt><dd><p>With this option a transformation <var class="Arg">f</var> is displayed in as: <code class="code">&lt;transformation: ImageListOfTransformation(<var class="Arg">f</var>, n)&gt;</code> where <code class="code">n</code> is the largest moved point of <var class="Arg">f</var>. The only exception is the identity transformation, which is displayed as: <code class="code">&lt;identity transformation&gt;</code>.</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetUserPreference(&quot;TransformationDisplayLimit&quot;, 12);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=Transformation([ 3, 8, 12, 1, 11, 9, 9, 4, 10, 5, 10, 6 ]);</span>
+&lt;transformation on 12 pts with rank 10&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetUserPreference(&quot;TransformationDisplayLimit&quot;, 100);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f;</span>
+Transformation( [ 3, 8, 12, 1, 11, 9, 9, 4, 10, 5, 10, 6 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetUserPreference(&quot;NotationForTransformations&quot;, &quot;fr&quot;);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f;</span>
+&lt;transformation: 3,8,12,1,11,9,9,4,10,5,10,6&gt;
+</pre></div> </body>
+    </html>

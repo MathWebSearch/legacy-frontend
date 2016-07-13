@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.16-3 PositionCanonical</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7B4B10AE81602D4E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.16-3 PositionCanonical</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PositionCanonical</code>( <var class="Arg">list</var>, <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the position of the canonical associate of <var class="Arg">obj</var> in <var class="Arg">list</var>. The definition of this associate depends on <var class="Arg">list</var>. For internally represented lists it is defined as the element itself (and <code class="func">PositionCanonical</code> thus defaults to <code class="func">Position</code> (<a shape="rect" href="chap21_mj.html#X79975EC6783B4293"><span class="RefLink">21.16-1</span></a>), but for example for certain enumerators (see <a shape="rect" href="chap21_mj.html#X7EA3ACE27E43D174"><span class="RefLink">21.23</span></a>) other canonical associates can be defined.</p><p xmlns="http://www.w3.org/1999/xhtml">For example <code class="func">RightTransversal</code> (<a shape="rect" href="chap39_mj.html#X85C65D06822E716F"><span class="RefLink">39.8-1</span></a>) defines the canonical associate to be the element in the transversal defining the same coset of a subgroup in a group.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2,3,4),(1,2));;u:=Subgroup(g,[(1,2)(3,4),(1,3)(2,4)]);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rt:=RightTransversal(g,u);;AsList(rt);</span>
+[ (), (3,4), (2,3), (2,3,4), (2,4,3), (2,4) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Position(rt,(1,2));</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PositionCanonical(rt,(1,2));</span>
+2
+</pre></div> </body>
+    </html>

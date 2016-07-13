@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.4-12 DivisorsInt</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X809E0E1B83AF7695"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.4-12 DivisorsInt</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DivisorsInt</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DivisorsInt</code> returns a list of all divisors of the integer <var class="Arg">n</var>. The list is sorted, so that it starts with 1 and ends with <var class="Arg">n</var>. We define that <code class="code">DivisorsInt( -<var class="Arg">n</var> ) = DivisorsInt( <var class="Arg">n</var> )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Since the set of divisors of 0 is infinite calling <code class="code">DivisorsInt( 0 )</code> causes an error.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DivisorsInt</code> may call <code class="func">FactorsInt</code> (<a shape="rect" href="chap14_mj.html#X82C989DB84744B36"><span class="RefLink">14.4-7</span></a>) to obtain the prime factors. <code class="func">Sigma</code> (<a shape="rect" href="chap15_mj.html#X823707DF821E79A0"><span class="RefLink">15.5-1</span></a>) and <code class="func">Tau</code> (<a shape="rect" href="chap15_mj.html#X798C62847EE0372E"><span class="RefLink">15.5-2</span></a>) compute the sum and the number of positive divisors, respectively.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DivisorsInt( 1 ); DivisorsInt( 20 ); DivisorsInt( 541 );</span>
+[ 1 ]
+[ 1, 2, 4, 5, 10, 20 ]
+[ 1, 541 ]
+</pre></div> </body>
+    </html>

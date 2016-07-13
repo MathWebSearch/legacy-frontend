@@ -1,0 +1,23 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.22-2 TableAutomorphisms</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X8082DD827C673138"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.22-2 TableAutomorphisms</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TableAutomorphisms</code>( <var class="Arg">tbl</var>, <var class="Arg">characters</var>[, <var class="Arg">info</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">TableAutomorphisms</code> returns the permutation group of those matrix automorphisms (see <code class="func">MatrixAutomorphisms</code> (<a shape="rect" href="chap71_mj.html#X84353BB884AF0365"><span class="RefLink">71.22-1</span></a>)) of the list <var class="Arg">characters</var> that leave the element orders (see <code class="func">OrdersClassRepresentatives</code> (<a shape="rect" href="chap71_mj.html#X86F455DA7A9C30EE"><span class="RefLink">71.9-1</span></a>)) and all stored power maps (see <code class="func">ComputedPowerMaps</code> (<a shape="rect" href="chap73_mj.html#X781FAA497E3B4D1A"><span class="RefLink">73.1-1</span></a>)) of the character table <var class="Arg">tbl</var> invariant.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">characters</var> is closed under Galois conjugacy –this is always fulfilled for the list of all irreducible characters of ordinary character tables– the string <code class="code">&quot;closed&quot;</code> may be entered as the third argument <var class="Arg">info</var>. Alternatively, a known subgroup of the table automorphisms can be entered as the third argument <var class="Arg">info</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The attribute <code class="func">AutomorphismsOfTable</code> (<a shape="rect" href="chap71_mj.html#X7C2753DE8094F4BA"><span class="RefLink">71.9-4</span></a>) can be used to compute and store the table automorphisms for the case that <var class="Arg">characters</var> equals the <code class="func">Irr</code> (<a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492"><span class="RefLink">71.8-2</span></a>) value of <var class="Arg">tbl</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbld8:= CharacterTable( &quot;Dihedral&quot;, 8 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irrd8:= Irr( tbld8 );</span>
+[ Character( CharacterTable( &quot;Dihedral(8)&quot; ), [ 1, 1, 1, 1, 1 ] ), 
+  Character( CharacterTable( &quot;Dihedral(8)&quot; ), [ 1, 1, 1, -1, -1 ] ), 
+  Character( CharacterTable( &quot;Dihedral(8)&quot; ), [ 1, -1, 1, 1, -1 ] ), 
+  Character( CharacterTable( &quot;Dihedral(8)&quot; ), [ 1, -1, 1, -1, 1 ] ), 
+  Character( CharacterTable( &quot;Dihedral(8)&quot; ), [ 2, 0, -2, 0, 0 ] ) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">orders:= OrdersClassRepresentatives( tbld8 );</span>
+[ 1, 4, 2, 2, 2 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MatrixAutomorphisms( irrd8 );</span>
+Group([ (4,5), (2,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MatrixAutomorphisms( irrd8, [ orders ], Group( () ) );</span>
+Group([ (4,5) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TableAutomorphisms( tbld8, irrd8 );</span>
+Group([ (4,5) ])
+</pre></div> </body>
+    </html>

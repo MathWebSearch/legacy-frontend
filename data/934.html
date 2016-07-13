@@ -1,0 +1,30 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 77: Replaced and Removed Command Names</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap77.html#X78C85ED17F00DCC1"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap77_mj.html#X78C85ED17F00DCC1">77 <span class="Heading">Replaced and Removed Command Names</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap77_mj.html#X7AA51AC9870D2360">77.1 <span class="Heading">Group Actions – Name Changes</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap77_mj.html#X831734077B00CB3B">77.2 <span class="Heading">Package Interface – Obsolete Functions and Name Changes</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap77_mj.html#X79676CD27EF0F096">77.3 <span class="Heading">Normal Forms of Integer Matrices – Name Changes</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap77_mj.html#X7F6A6CBC7C9E91E5">77.4 <span class="Heading">Miscellaneous Name Changes or Removed Names</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap77_mj.html#X87348614848EAD64">77.4-1 InfoObsolete</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap77_mj.html#X7F2FF72A7AD60E0C">77.5 <span class="Heading">The former .gaprc file</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap77_mj.html#X7C89E03285799F40">77.6 <span class="Heading">Semigroup properties</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap77_mj.html#X7BF9F1BE87F0636D">77.6-1 IsSemilatticeAsSemigroup</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">77 <span class="Heading">Replaced and Removed Command Names</span></h3><p xmlns="http://www.w3.org/1999/xhtml">In general we try to keep <strong class="pkg">GAP</strong> 4 compatible with former releases as much as possible. Nevertheless, from time to time it seems appropriate to remove some commands or to change the names of some commands or variables. There are various reasons for that: Some functionality was improved and got another (hopefully better) interface, names turned out to be too special or too general for the underlying functionality, or names are found to be unintuitive or inconsistent with other names.</p><p xmlns="http://www.w3.org/1999/xhtml">In this chapter we collect such old names while pointing to the sections which explain how to substitute them. Usually, old names will be available for several releases; they may be removed when they don't seem to be used any more.</p><p xmlns="http://www.w3.org/1999/xhtml">The obsolete <strong class="pkg">GAP</strong> code is collected in two library files, <code class="file">lib/obsolete.gd</code> and <code class="file">lib/obsolete.gi</code>. By default, these files are read when <strong class="pkg">GAP</strong> is started. It may be useful to omit reading these files, for example in order to make sure that one's own <strong class="pkg">GAP</strong> code does not rely on the obsolete variables. For that, one can use the <code class="code">-O</code> command line option (see <a shape="rect" href="chap3_mj.html#X782751D5858A6EAF"><span class="RefLink">3.1</span></a>) or set the component <code class="code">ReadObsolete</code> in the file <code class="file">gap.ini</code> to <code class="keyw">false</code> (see <a shape="rect" href="chap3_mj.html#X7FD66F977A3B02DF"><span class="RefLink">3.2</span></a>). Note that <code class="code">-O</code> command line option overrides <code class="code">ReadObsolete</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">(Note that the condition whether the library files with the obsolete <strong class="pkg">GAP</strong> code shall be read has changed. In <strong class="pkg">GAP</strong> 4.3 and 4.4, the global variables <code class="code">GAP_OBSOLESCENT</code> and <code class="code">GAPInfo.ReadObsolete</code> –to be set in the user's <code class="file">.gaprc</code> file– were used to control this behaviour.)</p> </body>
+    </html>

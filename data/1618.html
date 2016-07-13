@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 31: Domains and their Elements-&gt;31.4 Changing the Structure</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap31.html#X7EA77DE17DD8A231"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">31.4 <span class="Heading">Changing the Structure</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The same set of elements can have different operational structures. For example, it may happen that a monoid <math id="8674525426872869487" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> does in fact contain the inverses of all of its elements; if <math id="2457460052209566740" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> has not been constructed as a group (see <a shape="rect" href="chap31_mj.html#X7D72F11B82F4A036"><span class="RefLink">31.6</span></a>) then it is reasonable to ask for the group that is equal to <math id="-2422264925204699797" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">As<var class="Arg">Struct</var>( [<var class="Arg">info</var>, ]<var class="Arg">D</var> )</code></p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">D</var> is a domain that is closed under the operational structure given by <var class="Arg">Struct</var> then <code class="code">As<var class="Arg">Struct</var></code> returns a domain <var class="Arg">E</var> that consists of the same elements (that is, <code class="code"><var class="Arg">D</var> = <var class="Arg">E</var></code>) and that has this operational structure (that is, <code class="code">Is<var class="Arg">Struct</var>( <var class="Arg">E</var> )</code> is <code class="keyw">true</code>); if <var class="Arg">D</var> is not closed under the structure given by <var class="Arg">Struct</var> then <code class="code">As<var class="Arg">Struct</var></code> returns <code class="keyw">fail</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If additional information besides generators are necessary to define <var class="Arg">D</var> then the argument <var class="Arg">info</var> describes the value of this information for the desired domain. For example, if we want to view <var class="Arg">D</var> as a vector space over the field with two elements then we may call <code class="code">AsVectorSpace( GF(2), <var class="Arg">D</var> )</code>; this allows us to change the underlying field of scalars, for example if <var class="Arg">D</var> is a vector space over the field with four elements. Again, if <var class="Arg">D</var> is not equal to a domain with the desired structure and additional information then <code class="keyw">fail</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">In the case that no additional information <var class="Arg">info</var> is related to the structure given by <var class="Arg">Struct</var>, the operation <code class="code">As<var class="Arg">Struct</var></code> is in fact an attribute (see <a shape="rect" href="chap13_mj.html#X7C701DBF7BAE649A"><span class="RefLink">13.5</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">See the index of the <strong class="pkg">GAP</strong> Reference Manual for an overview of the available <code class="code">As<var class="Arg">Struct</var></code> functions.</p> </body>
+    </html>

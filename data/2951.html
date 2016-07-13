@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.6-2 CheckDigitTestFunction</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X85F1A6A5870485B9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.6-2 CheckDigitTestFunction</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CheckDigitTestFunction</code>( <var class="Arg">l</var>, <var class="Arg">m</var>, <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This function creates check digit test functions such as <code class="func">CheckDigitISBN</code> (<a shape="rect" href="chap14_mj.html#X82BABA8F868BD425"><span class="RefLink">14.6-1</span></a>) for check digit schemes that use the inner products with a fixed vector modulo a number. The scheme creates will use strings of <var class="Arg">l</var> digits (including the check digits), the check consists of taking the standard product of the vector of digits with the fixed vector <var class="Arg">f</var> modulo <var class="Arg">m</var>; the result needs to be 0. The function returns a function that then can be used for testing or determining check digits.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">isbntest:=CheckDigitTestFunction(10,11,[1,2,3,4,5,6,7,8,9,-1]); </span>
+function( arg... ) ... end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">isbntest(&quot;038794680&quot;);</span>
+Check Digit is 2
+2
+</pre></div> </body>
+    </html>

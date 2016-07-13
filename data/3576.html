@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 85: Function-Operation-Attribute Triples-&gt;85.3 Operation Functions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap85.html#X7CD4A0867BD825F7"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">85.3 <span class="Heading">Operation Functions</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Chapter <a shape="rect" href="chap41_mj.html#X87115591851FB7F4"><span class="RefLink">41</span></a> and, in particular, the Section <a shape="rect" href="chap41_mj.html#X83661AFD7B7BD1D9"><span class="RefLink">41.1</span></a> explain that certain operations such as <a shape="rect" href="chap41_mj.html#X81E0FF0587C54543"><span class="RefLink">41.4</span></a>), besides their usual usage with arguments <var class="Arg">G</var>, <var class="Arg">D</var>, and <var class="Arg">opr</var>, can also be applied to an external set (<math id="-6513362987667073281" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>-set), in which case they can be interpreted as attributes. Moreover, they can also be interpreted as attributes for permutation groups, meaning the natural action on the set of its moved points.</p><p xmlns="http://www.w3.org/1999/xhtml">The definition of <a shape="rect" href="chap41_mj.html#X81E0FF0587C54543"><span class="RefLink">41.4</span></a> says that a method should be a function with arguments <var class="Arg">G</var>, <var class="Arg">D</var>, <var class="Arg">gens</var>, <var class="Arg">oprs</var>, and <var class="Arg">opr</var>, as in the case of the operation <code class="func">ExternalSet</code> (<a shape="rect" href="chap41_mj.html#X7C90F648793E47DD"><span class="RefLink">41.12-2</span></a>) when specified via <var class="Arg">gens</var> and <var class="Arg">oprs</var> (see <a shape="rect" href="chap41_mj.html#X7FD3D2D2788709B7"><span class="RefLink">41.12</span></a>). All other syntax variants allowed for <a shape="rect" href="chap41_mj.html#X81E0FF0587C54543"><span class="RefLink">41.4</span></a> (e.g., leaving out <var class="Arg">gens</var> and <var class="Arg">oprs</var>) are handled by default methods.</p><p xmlns="http://www.w3.org/1999/xhtml">The default methods for <a shape="rect" href="chap41_mj.html#X81E0FF0587C54543"><span class="RefLink">41.4</span></a> support the following behaviour.</p><ol xmlns="http://www.w3.org/1999/xhtml"><li><p>If the only argument is an external set <var class="Arg">xset</var> and the attribute tester <code class="code">HasOrbits( <var class="Arg">xset</var> )</code> returns <code class="keyw">true</code>, the stored value of that attribute is returned.</p>
+
+</li><li><p>If the only argument is an external set <var class="Arg">xset</var> and the attribute value is not known, the default arguments are obtained from the data of <var class="Arg">xset</var>.</p>
+
+</li><li><p>If <var class="Arg">gens</var> and <var class="Arg">oprs</var> are not specified, <var class="Arg">gens</var> is set to <code class="code">Pcgs( <var class="Arg">G</var> )</code> if <code class="code">CanEasilyComputePcgs( <var class="Arg">G</var> )</code> is <code class="keyw">true</code>, and to <code class="code">GeneratorsOfGroup( <var class="Arg">G</var> )</code> otherwise; <var class="Arg">oprs</var> is set to <var class="Arg">gens</var>.</p>
+
+</li><li><p>The default value of <var class="Arg">opr</var> is <code class="func">OnPoints</code> (<a shape="rect" href="chap41_mj.html#X7FE417DD837987B4"><span class="RefLink">41.2-1</span></a>).</p>
+
+</li><li><p>In the case of an operation of a permutation group <var class="Arg">G</var> on <code class="code">MovedPoints( <var class="Arg">G</var> )</code> via <code class="func">OnPoints</code> (<a shape="rect" href="chap41_mj.html#X7FE417DD837987B4"><span class="RefLink">41.2-1</span></a>), if the attribute tester <code class="code">HasOrbits( <var class="Arg">G</var> )</code> returns <code class="keyw">true</code>, the stored attribute value is returned.</p>
+
+</li><li><p>The operation is called as <code class="code"><var class="Arg">result</var>:= Orbits( <var class="Arg">G</var>, <var class="Arg">D</var>, <var class="Arg">gens</var>, <var class="Arg">oprs</var>, <var class="Arg">opr</var> )</code>.</p>
+
+</li><li><p>In the case of an external set <var class="Arg">xset</var> or a permutation group <var class="Arg">G</var> in its natural action, the attribute setter is called to store <var class="Arg">result</var>.</p>
+
+</li><li><p><var class="Arg">result</var> is returned.</p>
+
+</li></ol><p xmlns="http://www.w3.org/1999/xhtml">The declaration of operations that match the above pattern is done as follows.</p> </body>
+    </html>

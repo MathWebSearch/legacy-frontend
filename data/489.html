@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.14-4 IrreducibleRepresentations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X7F29C5447B5DC102"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.14-4 IrreducibleRepresentations</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IrreducibleRepresentations</code>( <var class="Arg">G</var>[, <var class="Arg">F</var>] )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Called with a finite group <var class="Arg">G</var> and a field <var class="Arg">F</var>, <code class="func">IrreducibleRepresentations</code> returns a list of representatives of the irreducible matrix representations of <var class="Arg">G</var> over <var class="Arg">F</var>, up to equivalence.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">G</var> is the only argument then <code class="func">IrreducibleRepresentations</code> returns a list of representatives of the absolutely irreducible complex representations of <var class="Arg">G</var>, up to equivalence.</p><p xmlns="http://www.w3.org/1999/xhtml">At the moment, methods are available for the following cases: If <var class="Arg">G</var> is abelian by supersolvable the method of <a shape="rect" href="chapBib_mj.html#biBBC94">[BC94]</a> is used.</p><p xmlns="http://www.w3.org/1999/xhtml">Otherwise, if <var class="Arg">F</var> and <var class="Arg">G</var> are both finite, the regular module of <var class="Arg">G</var> is split by MeatAxe methods which can make this an expensive operation.</p><p xmlns="http://www.w3.org/1999/xhtml">Finally, if <var class="Arg">F</var> is not given (i.e. it defaults to the cyclotomic numbers) and <var class="Arg">G</var> is a finite group, the method of <a shape="rect" href="chapBib_mj.html#biBDix93">[Dix93]</a> (see <code class="func">IrreducibleRepresentationsDixon</code> (<a shape="rect" href="chap71_mj.html#X8493ED7A86FFCB8A"><span class="RefLink">71.14-5</span></a>)) is used.</p><p xmlns="http://www.w3.org/1999/xhtml">For other cases no methods are implemented yet.</p><p xmlns="http://www.w3.org/1999/xhtml">The representations obtained are <em>not</em> guaranteed to be &quot;nice&quot; (for example preserving a unitary form) in any way.</p><p xmlns="http://www.w3.org/1999/xhtml">See also <code class="func">IrreducibleModules</code> (<a shape="rect" href="chap71_mj.html#X87E82F8085745523"><span class="RefLink">71.15-1</span></a>), which provides efficient methods for solvable groups.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= AlternatingGroup( 4 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">repr:= IrreducibleRepresentations( g );</span>
+[ Pcgs([ (2,4,3), (1,3)(2,4), (1,2)(3,4) ]) -&gt; 
+    [ [ [ 1 ] ], [ [ 1 ] ], [ [ 1 ] ] ], 
+  Pcgs([ (2,4,3), (1,3)(2,4), (1,2)(3,4) ]) -&gt; 
+    [ [ [ E(3) ] ], [ [ 1 ] ], [ [ 1 ] ] ], 
+  Pcgs([ (2,4,3), (1,3)(2,4), (1,2)(3,4) ]) -&gt; 
+    [ [ [ E(3)^2 ] ], [ [ 1 ] ], [ [ 1 ] ] ], 
+  Pcgs([ (2,4,3), (1,3)(2,4), (1,2)(3,4) ]) -&gt; 
+    [ [ [ 0, 0, 1 ], [ 1, 0, 0 ], [ 0, 1, 0 ] ], 
+      [ [ -1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, -1 ] ], 
+      [ [ 1, 0, 0 ], [ 0, -1, 0 ], [ 0, 0, -1 ] ] ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAll( repr, IsGroupHomomorphism );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( repr );</span>
+4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens:= GeneratorsOfGroup( g );</span>
+[ (1,2,3), (2,3,4) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( gens, x -&gt; x^repr[1] );</span>
+[ [ [ 1 ] ], [ [ 1 ] ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"> List( gens, x -&gt; x^repr[4] );</span>
+[ [ [ 0, 0, -1 ], [ 1, 0, 0 ], [ 0, -1, 0 ] ], 
+  [ [ 0, 1, 0 ], [ 0, 0, 1 ], [ 1, 0, 0 ] ] ]
+</pre></div> </body>
+    </html>

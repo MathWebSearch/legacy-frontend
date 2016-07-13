@@ -1,0 +1,91 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.21 The Defining Attributes of Rational Functions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X7F44CF87801DB965"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">66.21 <span class="Heading">The Defining Attributes of Rational Functions</span></h4><p xmlns="http://www.w3.org/1999/xhtml">In general, rational functions are given in terms of monomials. They are represented by lists, using numbers (see <a shape="rect" href="chap66_mj.html#X7A8FADCD875826DA"><span class="RefLink">66.1</span></a>) for the indeterminates.</p><p xmlns="http://www.w3.org/1999/xhtml">A monomial is a product of powers of indeterminates. A monomial is stored as a list (we call this the <em>expanded form</em> of the monomial) of the form <code class="code">[<var class="Arg">inum</var>,<var class="Arg">exp</var>,<var class="Arg">inum</var>,<var class="Arg">exp</var>,...]</code> where each <var class="Arg">inum</var> is the number of an indeterminate and <var class="Arg">exp</var> the corresponding exponent. The list must be sorted according to the numbers of the indeterminates. Thus for example, if <math id="-4266000840483957378" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math>, <math id="-8624220667651513403" display="inline" alttext="y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑦</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">y</annotation>
+  </semantics>
+</math> and <math id="-377494621565991981" display="inline" alttext="z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z</annotation>
+  </semantics>
+</math> are the first three indeterminates, the expanded form of the monomial <math id="-7546650001760485052" display="inline" alttext="x^{5}z^{8}=z^{8}x^{5}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">
+      <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">
+        <msup xref="p1.1.m1.1.10.1.2.cmml" id="p1.1.m1.1.10.1.2">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">5</mn>
+        </msup>
+        <mo xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">⁢</mo>
+        <msup xref="p1.1.m1.1.10.1.3.cmml" id="p1.1.m1.1.10.1.3">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">z</mi>
+          <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">8</mn>
+        </msup>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">=</mo>
+      <mrow xref="p1.1.m1.1.10.2.cmml" id="p1.1.m1.1.10.2">
+        <msup xref="p1.1.m1.1.10.2.2.cmml" id="p1.1.m1.1.10.2.2">
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">z</mi>
+          <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">8</mn>
+        </msup>
+        <mo xref="p1.1.m1.1.10.2.1.cmml" id="p1.1.m1.1.10.2.1">⁢</mo>
+        <msup xref="p1.1.m1.1.10.2.3.cmml" id="p1.1.m1.1.10.2.3">
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">x</mi>
+          <mn xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">5</mn>
+        </msup>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">
+        <eq xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">
+          <times xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.10.1.2" id="p1.1.m1.1.10.1.2.cmml">
+            <csymbol id="p1.1.m1.1.10.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+            <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">5</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.10.1.3" id="p1.1.m1.1.10.1.3.cmml">
+            <csymbol id="p1.1.m1.1.10.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑧</ci>
+            <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">8</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.10.2" id="p1.1.m1.1.10.2.cmml">
+          <times xref="p1.1.m1.1.10.2.1" id="p1.1.m1.1.10.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.10.2.2" id="p1.1.m1.1.10.2.2.cmml">
+            <csymbol id="p1.1.m1.1.10.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑧</ci>
+            <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">8</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.10.2.3" id="p1.1.m1.1.10.2.3.cmml">
+            <csymbol id="p1.1.m1.1.10.2.3.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑥</ci>
+            <cn xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml" type="integer">5</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x^{5}z^{8}=z^{8}x^{5}</annotation>
+  </semantics>
+</math> is <code class="code">[ 1, 5, 3, 8 ]</code>. The representation of a polynomials is a list of the form <code class="code">[<var class="Arg">mon</var>,<var class="Arg">coeff</var>,<var class="Arg">mon</var>,<var class="Arg">coeff</var>,...]</code> where <var class="Arg">mon</var> is a monomial in expanded form (that is given as list) and <var class="Arg">coeff</var> its coefficient. The monomials must be sorted according to the total degree/lexicographic order (This is the same as given by the &quot;grlex&quot; monomial ordering, see <code class="func">MonomialGrlexOrdering</code> (<a shape="rect" href="chap66_mj.html#X786C866C824D2688"><span class="RefLink">66.17-8</span></a>)). We call this the <em>external representation</em> of a polynomial. (The reason for ordering is that addition of polynomials becomes linear in the number of monomials instead of quadratic; the reason for the particular ordering chose is that it is compatible with multiplication and thus gives acceptable performance for quotient calculations.)</p><p xmlns="http://www.w3.org/1999/xhtml">The attributes that give a representation of a a rational function as a Laurent polynomial are <code class="func">CoefficientsOfLaurentPolynomial</code> (<a shape="rect" href="chap66_mj.html#X86D58AB67F86469F"><span class="RefLink">66.13-2</span></a>) and <code class="func">IndeterminateNumberOfUnivariateRationalFunction</code> (<a shape="rect" href="chap66_mj.html#X816C8D797C804380"><span class="RefLink">66.1-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Algorithms should use only the attributes <code class="func">ExtRepNumeratorRatFun</code> (<a shape="rect" href="chap66_mj.html#X7DF955C87CBFC12B"><span class="RefLink">66.21-2</span></a>), <code class="func">ExtRepDenominatorRatFun</code> (<a shape="rect" href="chap66_mj.html#X8059E74D7DCABDBC"><span class="RefLink">66.21-3</span></a>), <code class="func">ExtRepPolynomialRatFun</code> (<a shape="rect" href="chap66_mj.html#X8406EE2E8775FBAB"><span class="RefLink">66.21-6</span></a>), <code class="func">CoefficientsOfLaurentPolynomial</code> (<a shape="rect" href="chap66_mj.html#X86D58AB67F86469F"><span class="RefLink">66.13-2</span></a>) and –if the univariate function is not constant– <code class="func">IndeterminateNumberOfUnivariateRationalFunction</code> (<a shape="rect" href="chap66_mj.html#X816C8D797C804380"><span class="RefLink">66.1-2</span></a>) as the low-level interface to work with a polynomial. They should not refer to the actual representation used.</p> </body>
+    </html>

@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 3: Running GAP-&gt;3.3-1 SaveWorkspace</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap3.html#X876544A57C73C488"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">3.3-1 SaveWorkspace</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SaveWorkspace</code>( <var class="Arg">filename</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">will save a &quot;snapshot&quot; image of the current <strong class="pkg">GAP</strong> workspace in the file <var class="Arg">filename</var>. This image then can be loaded by another copy of <strong class="pkg">GAP</strong> which then will behave as at the point when <code class="func">SaveWorkspace</code> was called.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:=1;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SaveWorkspace(&quot;savefile&quot;);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">quit;</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SaveWorkspace</code> can only be used at the main <code class="code">gap&gt;</code> prompt. It cannot be included in the body of a loop or function, or called from a break loop.</p> </body>
+    </html>

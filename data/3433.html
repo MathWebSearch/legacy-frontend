@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.20-24 ForAny</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7AF82E747A8BDA75"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.20-24 ForAny</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ForAny</code>( <var class="Arg">listorcoll</var>, <var class="Arg">func</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">tests whether the unary function <var class="Arg">func</var> returns <code class="keyw">true</code> for at least one element in the list or collection <var class="Arg">listorcoll</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAny( [1..20], IsPrime );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAny( [2,3,4,5,8,9], IsPrimePowerInt );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAny( [2..14],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   n -&gt; IsPrimePowerInt(n) and n mod 5 = 0 and not IsPrime(n) );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ForAny( Integers, i -&gt;     i &gt; 0</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">                          and ForAll( [0,2..4], j -&gt; IsPrime(i+j) ) );</span>
+true
+</pre></div> </body>
+    </html>

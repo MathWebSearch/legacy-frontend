@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.5-3 ComponentPartialPermInt</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X797A6CC084068219"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.5-3 ComponentPartialPermInt</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ComponentPartialPermInt</code>( <var class="Arg">f</var>, <var class="Arg">i</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A set of positive integers.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">ComponentPartialPermInt</code> returns the elements of the component of <var class="Arg">f</var> containing <var class="Arg">i</var> that can be obtained by repeatedly applying <var class="Arg">f</var> to <var class="Arg">i</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 4, 5, 6, 7, 8, 10, 14, 15, 16, 17, 18 ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 11, 4, 14, 16, 15, 3, 20, 8, 17, 19, 1, 6, 12 ] );</span>
+[2,4,14,17,6,15,19][5,16,1,11][7,3][10,8,20][18,12]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentPartialPermInt(f, 4);</span>
+[ 4, 14, 17, 6, 15, 19 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentPartialPermInt(f, 3);</span>
+[  ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentPartialPermInt(f, 10);</span>
+[ 10, 8, 20 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComponentPartialPermInt(f, 100);</span>
+[  ]</pre></div> </body>
+    </html>

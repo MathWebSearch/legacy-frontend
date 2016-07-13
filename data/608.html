@@ -1,0 +1,36 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.10-4 LLL</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X85B360C085B360C0"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.10-4 LLL</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LLL</code>( <var class="Arg">tbl</var>, <var class="Arg">characters</var>[, <var class="Arg">y</var>][, <var class="Arg">&quot;sort&quot;</var>][, <var class="Arg">&quot;linearcomb&quot;</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LLL</code> calls the LLL algorithm (see <code class="func">LLLReducedBasis</code> (<a shape="rect" href="chap25_mj.html#X7D0FCEF8859E8637"><span class="RefLink">25.5-1</span></a>)) in the case of lattices spanned by the virtual characters <var class="Arg">characters</var> of the ordinary character table <var class="Arg">tbl</var> (see <code class="func">ScalarProduct</code> (<a shape="rect" href="chap72_mj.html#X855FD9F983D275CD"><span class="RefLink">72.8-5</span></a>)). By finding shorter vectors in the lattice spanned by <var class="Arg">characters</var>, i.e., virtual characters of smaller norm, in some cases <code class="func">LLL</code> is able to find irreducible characters.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LLL</code> returns a record with at least components <code class="code">irreducibles</code> (the list of found irreducible characters), <code class="code">remainders</code> (a list of reducible virtual characters), and <code class="code">norms</code> (the list of norms of the vectors in <code class="code">remainders</code>). <code class="code">irreducibles</code> together with <code class="code">remainders</code> form a basis of the <math id="7874044261172563032" display="inline" alttext="?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?</annotation>
+  </semantics>
+</math>-lattice spanned by <var class="Arg">characters</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the vectors in the <code class="code">remainders</code> list are in general <em>not</em> orthogonal (see <code class="func">ReducedClassFunctions</code> (<a shape="rect" href="chap72_mj.html#X86F360D983343C2A"><span class="RefLink">72.10-1</span></a>)) to the irreducible characters in <code class="code">irreducibles</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Optional arguments of <code class="func">LLL</code> are</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><var class="Arg">y</var></strong></dt><dd><p>controls the sensitivity of the algorithm, see <code class="func">LLLReducedBasis</code> (<a shape="rect" href="chap25_mj.html#X7D0FCEF8859E8637"><span class="RefLink">25.5-1</span></a>),</p>
+
+</dd><dt><strong class="Mark"><var class="Arg">&quot;sort&quot;</var></strong></dt><dd><p><code class="func">LLL</code> sorts <var class="Arg">characters</var> and the <code class="code">remainders</code> component of the result according to the degrees,</p>
+
+</dd><dt><strong class="Mark"><var class="Arg">&quot;linearcomb&quot;</var></strong></dt><dd><p>the returned record contains components <code class="code">irreddecomp</code> and <code class="code">reddecomp</code>, which are decomposition matrices of <code class="code">irreducibles</code> and <code class="code">remainders</code>, with respect to <var class="Arg">characters</var>.</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s4:= CharacterTable( &quot;Symmetric&quot;, 4 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chars:= [ [ 8, 0, 0, -1, 0 ], [ 6, 0, 2, 0, 2 ],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [ 12, 0, -4, 0, 0 ], [ 6, 0, -2, 0, 0 ], [ 24, 0, 0, 0, 0 ],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [ 12, 0, 4, 0, 0 ], [ 6, 0, 2, 0, -2 ], [ 12, -2, 0, 0, 0 ],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [ 8, 0, 0, 2, 0 ], [ 12, 2, 0, 0, 0 ], [ 1, 1, 1, 1, 1 ] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LLL( s4, chars );</span>
+rec( 
+  irreducibles := 
+    [ Character( CharacterTable( &quot;Sym(4)&quot; ), [ 2, 0, 2, -1, 0 ] ), 
+      Character( CharacterTable( &quot;Sym(4)&quot; ), [ 1, 1, 1, 1, 1 ] ), 
+      Character( CharacterTable( &quot;Sym(4)&quot; ), [ 3, 1, -1, 0, -1 ] ), 
+      Character( CharacterTable( &quot;Sym(4)&quot; ), [ 3, -1, -1, 0, 1 ] ), 
+      Character( CharacterTable( &quot;Sym(4)&quot; ), [ 1, -1, 1, 1, -1 ] ) ], 
+  norms := [  ], remainders := [  ] )
+</pre></div> </body>
+    </html>

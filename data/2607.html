@@ -1,0 +1,35 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.9-3 IsGaussianSpace</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X83724C157F4FDFB4"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.9-3 IsGaussianSpace</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsGaussianSpace</code>( <var class="Arg">V</var> )</td><td colspan="1" rowspan="1" class="tdright">( filter )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The filter <code class="func">IsGaussianSpace</code> (see <a shape="rect" href="chap13_mj.html#X84EFA4C07D4277BB"><span class="RefLink">13.2</span></a>) for the row space (see <code class="func">IsRowSpace</code> (<a shape="rect" href="chap61_mj.html#X79B305CE87511C4B"><span class="RefLink">61.9-1</span></a>)) or matrix space (see <code class="func">IsMatrixSpace</code> (<a shape="rect" href="chap61_mj.html#X7A2BBBA07B2BE8F8"><span class="RefLink">61.9-2</span></a>)) <var class="Arg">V</var> over the field <math id="-1247694690639358421" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>, say, indicates that the entries of all row vectors or matrices in <var class="Arg">V</var>, respectively, are all contained in <math id="-6272442451731691668" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>. In this case, <var class="Arg">V</var> is called a <em>Gaussian</em> vector space. Bases for Gaussian spaces can be computed using Gaussian elimination for a given list of vector space generators.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mats:= [ [[1,1],[2,2]], [[3,4],[0,1]] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= VectorSpace( Rationals, mats );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsGaussianSpace( V );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mats[1][1][1]:= E(4);;   # an element in an extension field</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= VectorSpace( Rationals, mats );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsGaussianSpace( V );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= VectorSpace( Field( Rationals, [ E(4) ] ), mats );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsGaussianSpace( V );</span>
+true
+</pre></div> </body>
+    </html>

@@ -1,0 +1,98 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 10: Streams</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap10.html#X839725177BF8B5B4"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap10_mj.html#X839725177BF8B5B4">10 <span class="Heading">Streams</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X7F89070B7CF52DE0">10.1 <span class="Heading">Categories for Streams and the StreamsFamily</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7E974B96785E91A8">10.1-1 IsStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7FE4096F8497B7F2">10.1-2 IsClosedStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7FB4391283847C3A">10.1-3 IsInputStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7C8956BB7FE2A89C">10.1-4 IsInputTextStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7DCD6ADC86CF2472">10.1-5 IsInputTextNone</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7D357CA07E7B1E78">10.1-6 IsOutputStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X8248B8A4844CB8AB">10.1-7 IsOutputTextStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7C89CDD47E33E741">10.1-8 IsOutputTextNone</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7F0F9DD47DE16DAB">10.1-9 StreamsFamily</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X8461F4DF7FC20C4B">10.2 <span class="Heading">Operations applicable to All Streams</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X786E5520803FDE00">10.2-1 CloseStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7F0459287E717456">10.2-2 FileDescriptorOfStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X87BC257A78F96828">10.2-3 UNIXSelect</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X7D1D33A587BFD93D">10.3 <span class="Heading">Operations for Input Streams</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7A5DC83D7E295568">10.3-1 Read</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7D62F2877F0E45A7">10.3-2 ReadAsFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X79E1E6A57AE58BB8">10.3-3 ReadByte</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7D2CA44C7D110C4F">10.3-4 ReadLine</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X85C603D7867430D0">10.3-5 ReadAll</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X81D4FB097F631A79">10.3-6 IsEndOfStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7B646FA3860521D1">10.3-7 PositionStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7A777E1186EB330B">10.3-8 RewindStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7A60AD8C7E0D0507">10.3-9 SeekPositionStream</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X7F454EB286947C85">10.4 <span class="Heading">Operations for Output Streams</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7D37C7A07E9C319C">10.4-1 WriteByte</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X79FA85498596CC99">10.4-2 WriteLine</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X78C113917936058D">10.4-3 WriteAll</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7F4E090C86AACCF7">10.4-4 <span class="Heading">PrintTo and AppendTo (for streams)</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7BF4E44C7D51E085">10.4-5 LogTo</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7B843516796B2A18">10.4-6 InputLogTo</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X834A6DD17B0E2062">10.4-7 OutputLogTo</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X8663FCD57E8BC390">10.4-8 SetPrintFormattingStatus</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X80B5F2E4856D8980">10.5 <span class="Heading">File Streams</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X8343D04981128784">10.5-1 InputTextFile</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X83F53291822B7126">10.5-2 OutputTextFile</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X808348977A05477A">10.6 <span class="Heading">User Streams</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X83531E4C7C53544F">10.6-1 InputTextUser</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X83E5FC9487766297">10.6-2 OutputTextUser</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7DAF5B7085F4F893">10.6-3 InputFromUser</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X8028E1D87CE2F059">10.7 <span class="Heading">String Streams</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7ABABCDF7ED81F7F">10.7-1 InputTextString</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7FEDA5167979B74D">10.7-2 OutputTextString</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X8563EF8387236417">10.8 <span class="Heading">Input-Output Streams</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X82822D3D8339F635">10.8-1 IsInputOutputStream</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X820799A3824684AC">10.8-2 InputOutputLocalProcess</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7CDF48447E823977">10.8-3 ReadAllLine</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X8724699C7D67BA47">10.9 <span class="Heading">Dummy Streams</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7C732324806716C6">10.9-1 InputTextNone</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X7CC5C1FC81715E38">10.9-2 OutputTextNone</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X7CB5832F8721ADF3">10.10 <span class="Heading">Handling of Streams in the Background</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X81FB42517E3EA96D">10.10-1 InstallCharReadHookFunc</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X8492474C7A0B10AD">10.10-2 UnInstallCharReadHookFunc</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap10_mj.html#X848DD7DC79363341">10.11 <span class="Heading">Comma separated files</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X86FDC1EF82CAD2DA">10.11-1 ReadCSV</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap10_mj.html#X8779DAC585E05A47">10.11-2 PrintCSV</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">10 <span class="Heading">Streams</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><em>Streams</em> provide flexible access to <strong class="pkg">GAP</strong>'s input and output processing. An <em>input stream</em> takes characters from some source and delivers them to <strong class="pkg">GAP</strong> which <em>reads</em> them from the stream. When an input stream has delivered all characters it is at <code class="code">end-of-stream</code>. An <em>output stream</em> receives characters from <strong class="pkg">GAP</strong> which <em>writes</em> them to the stream, and delivers them to some destination.</p><p xmlns="http://www.w3.org/1999/xhtml">A major use of streams is to provide efficient and flexible access to files. Files can be read and written using <code class="func">Read</code> (<a shape="rect" href="chap9_mj.html#X8373AC6B7D5F9167"><span class="RefLink">9.7-1</span></a>) and <code class="func">AppendTo</code> (<a shape="rect" href="chap9_mj.html#X86956C577FFEE1F9"><span class="RefLink">9.7-3</span></a>), however the former only allows a complete file to be read as <strong class="pkg">GAP</strong> input and the latter imposes a high time penalty if many small pieces of output are written to a large file. Streams allow input files in other formats to be read and processed, and files to be built up efficiently from small pieces of output. Streams may also be used for other purposes, for example to read from and print to <strong class="pkg">GAP</strong> strings, or to read input directly from the user.</p><p xmlns="http://www.w3.org/1999/xhtml">Any stream is either a <em>text stream</em>, which translates the <code class="code">end-of-line</code> character (<code class="code">\n</code>) to or from the system's representation of <code class="code">end-of-line</code> (e.g., <em>new-line</em> under UNIX and <em>carriage-return</em>-<em>new-line</em> under DOS), or a <em>binary stream</em>, which does not translate the <code class="code">end-of-line</code> character. The processing of other unprintable characters by text streams is undefined. Binary streams pass them unchanged.</p><p xmlns="http://www.w3.org/1999/xhtml">Whereas it is cheap to append to a stream, streams do consume system resources, and only a limited number can be open at any time, therefore it is necessary to close a stream as soon as possible using <code class="func">CloseStream</code> (<a shape="rect" href="chap10_mj.html#X786E5520803FDE00"><span class="RefLink">10.2-1</span></a>). If creating a stream failed then <code class="func">LastSystemError</code> (<a shape="rect" href="chap9_mj.html#X87D278437A916905"><span class="RefLink">9.1-1</span></a>) can be used to get information about the failure.</p> </body>
+    </html>

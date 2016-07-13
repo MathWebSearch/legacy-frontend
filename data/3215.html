@@ -1,0 +1,401 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X87115591851FB7F4"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap41_mj.html#X87115591851FB7F4">41 <span class="Heading">Group Actions</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X83661AFD7B7BD1D9">41.1 <span class="Heading">About Group Actions</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X81B8F9CD868CD953">41.2 <span class="Heading">Basic Actions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7FE417DD837987B4">41.2-1 OnPoints</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7960924D84B5B18F">41.2-2 OnRight</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X832DF5327ECA0E44">41.2-3 OnLeftInverse</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X85AA04347CD117F9">41.2-4 OnSets</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X832CC5F87EEA4A7E">41.2-5 OnTuples</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X80DAA1D2855B1456">41.2-6 OnPairs</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7C10492081D72376">41.2-7 OnSetsSets</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7E23686E7A9D3A20">41.2-8 OnSetsDisjointSets</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7ADE244E819035FF">41.2-9 OnSetsTuples</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7FF556CD7E6739A9">41.2-10 OnTuplesSets</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X844E902382EB4151">41.2-11 OnTuplesTuples</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X86DC2DD5829CAD9A">41.2-12 OnLines</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7FA394D27E721E2B">41.2-13 OnIndeterminates</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7BA8D76586F1F06E">41.2-14 Permuted</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X85124D197F0F9C4D">41.2-15 OnSubspacesByCanonicalBasis</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X82181CA07A5B2056">41.3 <span class="Heading">Action on canonical representatives</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X81E0FF0587C54543">41.4 <span class="Heading">Orbits</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X80E0234E7BD79409">41.4-1 Orbit</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X86BCAE17869BBEAA">41.4-2 Orbits</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X86BC8B958123F953">41.4-3 <span class="Heading">OrbitsDomain</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X799910CF832EDC45">41.4-4 OrbitLength</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X8032F73078DF2DDB">41.4-5 <span class="Heading">OrbitLengths</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X8520E2487F7E98AF">41.4-6 <span class="Heading">OrbitLengthsDomain</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X797BD60E7ACEF1B1">41.5 <span class="Heading">Stabilizers</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7C34EC437EF598BF">41.5-1 OrbitStabilizer</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X86FB962786397E02">41.5-2 Stabilizer</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X78C3A8568414BC44">41.5-3 OrbitStabilizerAlgorithm</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X7A9389097BAF670D">41.6 <span class="Heading">Elements with Prescribed Images</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X857DC7B085EB0539">41.6-1 RepresentativeAction</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X87F73CCA7921DE65">41.7 <span class="Heading">The Permutation Image of an Action</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X78E6A002835288A4">41.7-1 <span class="Heading">ActionHomomorphism</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X85A8E93D786C3C9C">41.7-2 Action</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X86FF54A383B73967">41.7-3 SparseActionHomomorphism</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X7FED50ED7ACA5FB2">41.8 <span class="Heading">Action of a group on itself</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X78C37C4C7B2BDC44">41.8-1 FactorCosetAction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X8561DEBA79E01ABD">41.8-2 RegularActionHomomorphism</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X835317A7847477D4">41.8-3 AbelianSubfactorAction</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X807AA91E841D132B">41.9 <span class="Heading">Permutations Induced by Elements and Cycles</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7807A33381DCAB26">41.9-1 <span class="Heading">Permutation</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X81D4EA42810974A0">41.9-2 PermutationCycle</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X80AF6E0683CA7F14">41.9-3 Cycle</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7F559E897B333758">41.9-4 CycleLength</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7F3B387A7FD8AE5E">41.9-5 Cycles</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X83040A6080C2C6C6">41.9-6 CycleLengths</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X87FDA6838065CDCB">41.9-7 <span class="Heading">CycleIndex</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X850A84618421392A">41.10 <span class="Heading">Tests for Actions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X79B15750851828CB">41.10-1 <span class="Heading">IsTransitive</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X8295D733796B7A37">41.10-2 <span class="Heading">Transitivity</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X8166A6A17C8D6E73">41.10-3 <span class="Heading">RankAction</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7B77040F8543CD6E">41.10-4 <span class="Heading">IsSemiRegular</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7CF02C4785F0EAB5">41.10-5 <span class="Heading">IsRegular</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7CB1D74280F92AFC">41.10-6 <span class="Heading">Earns</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X84C19AD68247B760">41.10-7 <span class="Heading">IsPrimitive</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X7E9D3D0B7A9A8572">41.11 <span class="Heading">Block Systems</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X84FE699F85371643">41.11-1 <span class="Heading">Blocks</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X79936EB97AAD1144">41.11-2 <span class="Heading">MaximalBlocks</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7941DB6380B74510">41.11-3 <span class="Heading">RepresentativesMinimalBlocks</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X835658B07B28EF3B">41.11-4 AllBlocks</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap41_mj.html#X7FD3D2D2788709B7">41.12 <span class="Heading">External Sets</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X8264C3C479FF0A8B">41.12-1 IsExternalSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7C90F648793E47DD">41.12-2 ExternalSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7B9DB15D80CE28B4">41.12-3 ActingDomain</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X86153CB087394DC1">41.12-4 FunctionAction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X86A0CC1479A5932A">41.12-5 HomeEnumerator</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X879DE63C7858453C">41.12-6 IsExternalSubset</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X87D1EA1486D86233">41.12-7 ExternalSubset</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7E081F568407317F">41.12-8 IsExternalOrbit</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7FB656AE7A066C35">41.12-9 ExternalOrbit</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7BAFF02B7D6DF9F2">41.12-10 StabilizerOfExternalSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X867262FA82FDD592">41.12-11 <span class="Heading">ExternalOrbits</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7A64EF807CE8893E">41.12-12 <span class="Heading">ExternalOrbitsStabilizers</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X8048AE727A7F1A2F">41.12-13 CanonicalRepresentativeOfExternalSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X8071A8D784DC8325">41.12-14 CanonicalRepresentativeDeterminatorOfExternalSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X85E9A6A77B8D00B8">41.12-15 ActorOfExternalSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X8190A8247F29A5C7">41.12-16 UnderlyingExternalSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap41_mj.html#X7A3D87DE809FBFD4">41.12-17 SurjectiveActionHomomorphismAttr</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">41 <span class="Heading">Group Actions</span></h3><p xmlns="http://www.w3.org/1999/xhtml">A <em>group action</em> is a triple <math id="-4375453540295880323" display="inline" alttext="(G,\Omega,\mu)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">G</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" mathvariant="normal">Ω</mi>
+      <mo id="p1.1.m1.1.5">,</mo>
+      <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">μ</mi>
+      <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <vector xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐺</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">Ω</ci>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝜇</ci>
+      </vector>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(G,\Omega,\mu)</annotation>
+  </semantics>
+</math>, where <math id="58780569027212975" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> is a group, <math id="-3759093834009160909" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Ω</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega</annotation>
+  </semantics>
+</math> a set and <math id="364630263877237753" display="inline" alttext="\mu\colon\Omega\times G\rightarrow\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">μ</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mrow xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3" mathvariant="normal">Ω</mi>
+          <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">×</mo>
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">G</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">→</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7" mathvariant="normal">Ω</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜇</ci>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">→</ci>
+          <apply xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml">
+            <times xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">Ω</ci>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐺</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">Ω</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\mu\colon\Omega\times G\rightarrow\Omega</annotation>
+  </semantics>
+</math> a function that is compatible with the group arithmetic. We call <math id="-9103291201213963509" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Ω</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega</annotation>
+  </semantics>
+</math> the <em>domain</em> of the action.</p><p xmlns="http://www.w3.org/1999/xhtml">In <strong class="pkg">GAP</strong>, <math id="7572959011270005972" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Ω</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega</annotation>
+  </semantics>
+</math> can be a duplicate-free collection (an object that permits access to its elements via the <math id="7709502267785557984" display="inline" alttext="\Omega[n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.5.2.1.cmml" id="p1.1.m1.1.5.2">
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.2" stretchy="false">[</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Ω</ci>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.1.cmml">
+          <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.5.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega[n]</annotation>
+  </semantics>
+</math> operation, for example a list), it does not need to be sorted (see <code class="func">IsSet</code> (<a shape="rect" href="chap21_mj.html#X80CDAF45782E8DCB"><span class="RefLink">21.17-4</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">The acting function <math id="6296948945093603905" display="inline" alttext="\mu" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">μ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\mu</annotation>
+  </semantics>
+</math> is a binary <strong class="pkg">GAP</strong> function that returns the image <math id="-3697783630420077864" display="inline" alttext="\mu(x,g)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">μ</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2">
+        <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">x</mi>
+        <mo id="p1.1.m1.1.4">,</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">g</mi>
+        <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜇</ci>
+        <interval xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.1.cmml" closure="open">
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑔</ci>
+        </interval>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\mu(x,g)</annotation>
+  </semantics>
+</math> for a point <math id="4492947397057901656" display="inline" alttext="x\in\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3" mathvariant="normal">Ω</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">Ω</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x\in\Omega</annotation>
+  </semantics>
+</math> and a group element <math id="-4133870265437734294" display="inline" alttext="g\in G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">G</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐺</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g\in G</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">In <strong class="pkg">GAP</strong>, groups always act from the right, that is <math id="4607432525479852287" display="inline" alttext="\mu(\mu(x,g),h)=\mu(x,gh)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">
+      <mrow xref="p1.1.m1.1.20.1.cmml" id="p1.1.m1.1.20.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">μ</mi>
+        <mo xref="p1.1.m1.1.20.1.1.cmml" id="p1.1.m1.1.20.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.20.1.2.1.cmml" id="p1.1.m1.1.20.1.2">
+          <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.20.1.2.1.cmml" id="p1.1.m1.1.20.1.2.2">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">μ</mi>
+            <mo xref="p1.1.m1.1.20.1.2.2.1.cmml" id="p1.1.m1.1.20.1.2.2.1">⁢</mo>
+            <mrow xref="p1.1.m1.1.20.1.2.2.2.1.cmml" id="p1.1.m1.1.20.1.2.2.2">
+              <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+              <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">x</mi>
+              <mo id="p1.1.m1.1.6">,</mo>
+              <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">g</mi>
+              <mo id="p1.1.m1.1.8" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+          <mo id="p1.1.m1.1.9">,</mo>
+          <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">h</mi>
+          <mo id="p1.1.m1.1.11" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">=</mo>
+      <mrow xref="p1.1.m1.1.20.2.cmml" id="p1.1.m1.1.20.2">
+        <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">μ</mi>
+        <mo xref="p1.1.m1.1.20.2.1.cmml" id="p1.1.m1.1.20.2.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.20.2.2.1.cmml" id="p1.1.m1.1.20.2.2">
+          <mo id="p1.1.m1.1.14" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">x</mi>
+          <mo id="p1.1.m1.1.16">,</mo>
+          <mrow xref="p1.1.m1.1.20.2.2.1.cmml" id="p1.1.m1.1.20.2.2.2">
+            <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">g</mi>
+            <mo xref="p1.1.m1.1.20.2.2.2.1.cmml" id="p1.1.m1.1.20.2.2.2.1">⁢</mo>
+            <mi xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">h</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.19" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml">
+        <eq xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml"/>
+        <apply xref="p1.1.m1.1.20.1" id="p1.1.m1.1.20.1.cmml">
+          <times xref="p1.1.m1.1.20.1.1" id="p1.1.m1.1.20.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜇</ci>
+          <interval xref="p1.1.m1.1.20.1.2" id="p1.1.m1.1.20.1.2.1.cmml" closure="open">
+            <apply xref="p1.1.m1.1.20.1.2" id="p1.1.m1.1.20.1.2.2.cmml">
+              <times xref="p1.1.m1.1.20.1.2.2.1" id="p1.1.m1.1.20.1.2.2.1.cmml"/>
+              <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝜇</ci>
+              <interval xref="p1.1.m1.1.20.1.2.2.2" id="p1.1.m1.1.20.1.2.2.2.1.cmml" closure="open">
+                <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑥</ci>
+                <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑔</ci>
+              </interval>
+            </apply>
+            <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">ℎ</ci>
+          </interval>
+        </apply>
+        <apply xref="p1.1.m1.1.20.2" id="p1.1.m1.1.20.2.cmml">
+          <times xref="p1.1.m1.1.20.2.1" id="p1.1.m1.1.20.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝜇</ci>
+          <interval xref="p1.1.m1.1.20.2.2" id="p1.1.m1.1.20.2.2.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑥</ci>
+            <apply xref="p1.1.m1.1.20.2.2" id="p1.1.m1.1.20.2.2.2.cmml">
+              <times xref="p1.1.m1.1.20.2.2.2.1" id="p1.1.m1.1.20.2.2.2.1.cmml"/>
+              <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝑔</ci>
+              <ci xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">ℎ</ci>
+            </apply>
+          </interval>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\mu(\mu(x,g),h)=\mu(x,gh)</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> does not test whether the acting function <math id="4678775057670089258" display="inline" alttext="\mu" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">μ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\mu</annotation>
+  </semantics>
+</math> satisfies the conditions for a group operation but silently assumes that is does. (If it does not, results are unpredictable.)</p><p xmlns="http://www.w3.org/1999/xhtml">The first section of this chapter, <a shape="rect" href="chap41_mj.html#X83661AFD7B7BD1D9"><span class="RefLink">41.1</span></a>, describes the various ways how operations for group actions can be called.</p><p xmlns="http://www.w3.org/1999/xhtml">Functions for several commonly used action are already built into <strong class="pkg">GAP</strong>. These are listed in section <a shape="rect" href="chap41_mj.html#X81B8F9CD868CD953"><span class="RefLink">41.2</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">The sections <a shape="rect" href="chap41_mj.html#X87F73CCA7921DE65"><span class="RefLink">41.7</span></a> and <a shape="rect" href="chap41_mj.html#X7FED50ED7ACA5FB2"><span class="RefLink">41.8</span></a> describe homomorphisms and mappings associated to group actions as well as the permutation group image of an action.</p><p xmlns="http://www.w3.org/1999/xhtml">The other sections then describe operations to compute orbits, stabilizers, as well as properties of actions.</p><p xmlns="http://www.w3.org/1999/xhtml">Finally section <a shape="rect" href="chap41_mj.html#X7FD3D2D2788709B7"><span class="RefLink">41.12</span></a> describes the concept of &quot;external sets&quot; which represent the concept of a <em><math id="3417808783922864275" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>-set</em> and underly the actions mechanism.</p> </body>
+    </html>

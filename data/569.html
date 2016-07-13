@@ -1,0 +1,203 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X7B7A9EE881E01C10"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap71_mj.html#X7B7A9EE881E01C10">71 <span class="Heading">Character Tables</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7D9C08FE81AE1102">71.1 <span class="Heading">Some Remarks about Character Theory in <strong class="pkg">GAP</strong></span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7F8AB7CB7A46002F">71.2 <span class="Heading">History of Character Theory Stuff in GAP</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X8701174D86B586AF">71.3 <span class="Heading">Creating Character Tables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7FCA7A7A822BDA33">71.3-1 <span class="Heading">CharacterTable</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8476B25A79D7A7FC">71.3-2 <span class="Heading">BrauerTable</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X85DB8AE7786A2DB5">71.3-3 CharacterTableRegular</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7DBEF4BF87F10CD6">71.3-4 SupportedCharacterTableInfo</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8195BC057B1DFAD5">71.3-5 ConvertToCharacterTable</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X789FAC077AEF088A">71.4 <span class="Heading">Character Table Categories</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X82FF82C87CF82ADF">71.4-1 IsNearlyCharacterTable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7C6F3D947E5188D1">71.4-2 InfoCharacterTable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7FA867637EBB30F9">71.4-3 NearlyCharacterTablesFamily</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X829C4B6E83998F40">71.5 <span class="Heading">Conventions for Character Tables</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X793E0EBF84B07313">71.6 <span class="Heading">The Interface between Character Tables and Groups</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7FF4826A82B667AF">71.6-1 UnderlyingGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X849A38F887F6EC86">71.6-2 ConjugacyClasses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X84DC12AA804C8085">71.6-3 IdentificationOfConjugacyClasses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8788C6C7829C1ADE">71.6-4 CharacterTableWithStoredGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X790019E87CFDDB98">71.6-5 CompatibleConjugacyClasses</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7CADCBC9824CB624">71.7 <span class="Heading">Operators for Character Tables</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7F9D58208241D35E">71.8 <span class="Heading">Attributes and Properties for Groups and Character Tables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X81FEFF768134481A">71.8-1 <span class="Heading">CharacterDegrees</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492">71.8-2 <span class="Heading">Irr</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8549899A7DE206BA">71.8-3 <span class="Heading">LinearCharacters</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8011EEB684848039">71.8-4 <span class="Heading">OrdinaryCharacterTable</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X81EFD9FE804AC6EE">71.8-5 <span class="Heading">Group Operations Applicable to Character Tables</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7995A2AD83BC58A0">71.9 <span class="Heading">Attributes and Properties only for Character Tables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X86F455DA7A9C30EE">71.9-1 OrdersClassRepresentatives</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7CF7907F790A5DE6">71.9-2 SizesCentralizers</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7D9D2A45879A6A62">71.9-3 SizesConjugacyClasses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7C2753DE8094F4BA">71.9-4 AutomorphismsOfTable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7F58A82F7D88000A">71.9-5 <span class="Heading">UnderlyingCharacteristic</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X804CFD597C795801">71.9-6 <span class="Heading">Class Names and Character Names</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8333E8038308947E">71.9-7 <span class="Heading">Class Parameters and Character Parameters</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X79C40EE97890202F">71.9-8 Identifier</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7932C35180C80953">71.9-9 InfoText</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7919E2897BE8234A">71.9-10 InverseClasses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X87FF547981456932">71.9-11 RealClasses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7ABB007C799F7C49">71.9-12 ClassOrbit</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7F863B15804E0835">71.9-13 ClassRoots</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X79CEBC3C7E0E63DF">71.10 <span class="Heading">Normal Subgroups Represented by Lists of Class Positions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X850C7D947B3DBFA2">71.10-1 ClassPositionsOfNormalSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8491DA0981D6F264">71.10-2 ClassPositionsOfAgemo</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7A6B1F8A84A495DC">71.10-3 ClassPositionsOfCentre</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7D53F60785AB22B1">71.10-4 ClassPositionsOfDirectProductDecompositions</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X79EE7BE17BD343D5">71.10-5 ClassPositionsOfDerivedSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X86ABB2E179D7F6E1">71.10-6 ClassPositionsOfElementaryAbelianSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7D2A55A584F955DB">71.10-7 ClassPositionsOfFittingSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X79AEFC4384769B72">71.10-8 ClassPositionsOfLowerCentralSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X86065D217A36CD9B">71.10-9 ClassPositionsOfUpperCentralSeries</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8392DD5B813250A4">71.10-10 ClassPositionsOfSupersolvableResiduum</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7BBE7EBA7A64A6B0">71.10-11 ClassPositionsOfPCore</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7FCF905D7FD7CC40">71.10-12 ClassPositionsOfNormalClosure</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X8733F0EA801785D4">71.11 <span class="Heading">Operations Concerning Blocks</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7ACB9306804F4E3F">71.11-1 PrimeBlocks</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7E80E35985275F35">71.11-2 SameBlock</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7FF4CE4A7A272F88">71.11-3 BlocksInfo</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X84701640811D2345">71.11-4 DecompositionMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X83EC921380AF9B3B">71.11-5 LaTeXStringDecompositionMatrix</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X873211618402ACF7">71.12 <span class="Heading">Other Operations for Character Tables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8441983C845F2176">71.12-1 Index</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8123650E817926FC">71.12-2 IsInternallyConsistent</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7A0CBD1884276882">71.12-3 IsPSolvableCharacterTable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X82F523E8784B3752">71.12-4 IsClassFusionOfNormalSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7FD3D3047DE6381E">71.12-5 Indicator</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X83AE05BF8085B3C8">71.12-6 NrPolyhedralSubgroups</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7E2EA9FE7D3062D3">71.12-7 ClassMultiplicationCoefficient</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7A19F56C7FD5EFC7">71.12-8 ClassStructureCharTable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X809E67E57D4933B3">71.12-9 MatClassMultCoeffsCharTable</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7C1941F17BE9FC21">71.13 <span class="Heading">Printing Character Tables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7D45224B86D802E5">71.13-1 ViewObj</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X836554207C678D41">71.13-2 PrintObj</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7B41F36478C47364">71.13-3 Display</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X85E883A87A190AA4">71.13-4 DisplayOptions</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X79EC9603833AA2AB">71.13-5 PrintCharacterTable</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X79BC08C6846718D9">71.14 <span class="Heading">Computing the Irreducible Characters of a Group</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7ED39DB680BFEA96">71.14-1 IrrDixonSchneider</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7E81BCD686561DF0">71.14-2 IrrConlon</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7BF15729839203FC">71.14-3 IrrBaumClausen</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7F29C5447B5DC102">71.14-4 IrreducibleRepresentations</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8493ED7A86FFCB8A">71.14-5 IrreducibleRepresentationsDixon</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7E51AACD79CE0BC8">71.15 <span class="Heading">Representations Given by Modules</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X87E82F8085745523">71.15-1 IrreducibleModules</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7D0BD5337D1C069B">71.15-2 AbsolutelyIrreducibleModules</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7EB88B2E87AF5556">71.15-3 RegularModule</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X86CDA4007A5EF704">71.16 <span class="Heading">The Dixon-Schneider Algorithm</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7C083207868066C1">71.17 <span class="Heading">Advanced Methods for Dixon-Schneider Calculations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7C398F2680C8616B">71.17-1 DixonRecord</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7E33C03E7BDDC9B0">71.17-2 DixonInit</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X868476037907918F">71.17-3 DixontinI</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X87ABE0B081DAD476">71.17-4 DixonSplit</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7BFD4C1A821731FB">71.17-5 BestSplittingMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7C85B56C80BFA2E3">71.17-6 DxIncludeIrreducibles</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X87A5B5C77F7F348E">71.17-7 SplitCharacters</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8089009E7EA85BC8">71.17-8 IsDxLargeGroup</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7C1153637E7D2133">71.18 <span class="Heading">Components of a Dixon Record</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X782B5E37848786BC">71.19 <span class="Heading">An Example of Advanced Dixon-Schneider Calculations</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7C38C5067941D496">71.20 <span class="Heading">Constructing Character Tables from Others</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7BE1572D7BBC6AC8">71.20-1 CharacterTableDirectProduct</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7C97CF727FBDFCAB">71.20-2 FactorsOfDirectProduct</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7C3A4E5283B240BE">71.20-3 CharacterTableFactorGroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X85BE46F784B83938">71.20-4 CharacterTableIsoclinic</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X79B75C8582426BC5">71.20-5 CharacterTableWreathSymmetric</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X816FCD5A805F9FE8">71.21 <span class="Heading">Sorted Character Tables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7D9C4A7F8086F671">71.21-1 CharacterTableWithSortedCharacters</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X87E3CF317D8E4EC7">71.21-2 SortedCharacters</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7E3DE0A47E62BE6B">71.21-3 CharacterTableWithSortedClasses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X82DCAAA882416E24">71.21-4 SortedCharacterTable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8099FEDC7DE03AEE">71.21-5 ClassPermutation</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X7B0A669484470D09">71.22 <span class="Heading">Automorphisms and Equivalence of Character Tables</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X84353BB884AF0365">71.22-1 MatrixAutomorphisms</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8082DD827C673138">71.22-2 TableAutomorphisms</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7D721E3D7AA319F5">71.22-3 TransformingPermutations</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X849731AA7EC9FA73">71.22-4 TransformingPermutationsCharacterTables</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X8117D940835B0B47">71.22-5 FamiliesOfRows</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap71_mj.html#X81272CEE79F13E7B">71.23 <span class="Heading">Storing Normal Subgroup Information</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7E66174C7C7A8C0C">71.23-1 NormalSubgroupClassesInfo</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X7C2A87E085111090">71.23-2 ClassPositionsOfNormalSubgroup</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X87E7391F7F92377C">71.23-3 NormalSubgroupClasses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap71_mj.html#X79D451F0808EB252">71.23-4 FactorGroupNormalSubgroupClasses</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">71 <span class="Heading">Character Tables</span></h3><p xmlns="http://www.w3.org/1999/xhtml">This chapter describes operations for <em>character tables of finite groups</em>.</p><p xmlns="http://www.w3.org/1999/xhtml">Operations for <em>characters</em> (or, more general, <em>class functions</em>) are described in Chapter <a shape="rect" href="chap72_mj.html#X7C91D0D17850E564"><span class="RefLink">72</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">For a description of the <strong class="pkg">GAP</strong> Library of Character Tables, see the separate manual for the <strong class="pkg">GAP</strong> package <strong class="pkg">CTblLib</strong>.</p><p xmlns="http://www.w3.org/1999/xhtml">Several examples in this chapter require the <strong class="pkg">GAP</strong> Character Table Library to be available. If it is not yet loaded then we load it now.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage( &quot;ctbllib&quot; );</span>
+true
+</pre></div> </body>
+    </html>

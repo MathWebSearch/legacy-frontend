@@ -1,0 +1,62 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.2-9 GeneralSemilinearGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X79C3C61A7D83A6D0"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">50.2-9 GeneralSemilinearGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GeneralSemilinearGroup</code>( [<var class="Arg">filt</var>, ]<var class="Arg">d</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GammaL</code>( [<var class="Arg">filt</var>, ]<var class="Arg">d</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">GeneralSemilinearGroup</code> returns a group isomorphic to the general semilinear group <math id="8806677126649798128" display="inline" alttext="\Gamma" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Γ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Γ</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Gamma</annotation>
+  </semantics>
+</math>L( <var class="Arg">d</var>, <var class="Arg">q</var> ) of semilinear mappings of the vector space <code class="code">GF( </code><var class="Arg">q</var><code class="code"> )^</code><var class="Arg">d</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">filt</var> is not given it defaults to <code class="func">IsMatrixGroup</code> (<a shape="rect" href="chap44_mj.html#X7E6093FF85F1C3A1"><span class="RefLink">44.1-1</span></a>), and the returned group consists of matrices of dimension <var class="Arg">d</var> <math id="4677198004510184260" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑓</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">f</annotation>
+  </semantics>
+</math> over the field with <math id="903459389263230719" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math> elements, where <var class="Arg">q</var> <math id="543706348042922974" display="inline" alttext="=p^{f}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1"/>
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">=</mo>
+      <msup xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">p</mi>
+        <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">f</mi>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <eq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" cd="latexml">absent</csymbol>
+        <apply xref="p1.1.m1.1.4.2" id="p1.1.m1.1.4.2.cmml">
+          <csymbol id="p1.1.m1.1.4.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">𝑓</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">=p^{f}</annotation>
+  </semantics>
+</math>, for a prime integer <math id="-4170113620480790513" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>.</p> </body>
+    </html>

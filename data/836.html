@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.6-6 Discriminant</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X7C7D790A7D6E11AD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.6-6 Discriminant</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Discriminant</code>( <var class="Arg">pol</var>[, <var class="Arg">ind</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">pol</var> is a univariate polynomial then <code class="func">Discriminant</code> returns the <em>discriminant</em> of <var class="Arg">pol</var> by its indeterminate. The two-argument form returns the discriminant of a polynomial <var class="Arg">pol</var> by the indeterminate number <var class="Arg">ind</var>, regarding <var class="Arg">pol</var> as univariate in this indeterminate. Instead of the indeterminate number, the indeterminate itself can also be given as <var class="Arg">ind</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Discriminant(f,1);</span>
+20503125*y^28+262144*y^25+27337500*y^22+19208040*y^21+1474560*y^17+136\
+68750*y^16+18225000*y^15+6075000*y^14+1105920*y^13+3037500*y^10+648972\
+0*y^9+4050000*y^8+900000*y^7+62208*y^5+253125*y^4+675000*y^3+675000*y^\
+2+300000*y+50000
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Discriminant(f,1) = Discriminant(f,x);</span>
+true
+</pre></div> </body>
+    </html>

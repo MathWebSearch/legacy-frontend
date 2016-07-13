@@ -1,0 +1,27 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.18-1 NaturalHomomorphismByNormalSubgroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X80FC390C7F38A13F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.18-1 NaturalHomomorphismByNormalSubgroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NaturalHomomorphismByNormalSubgroup</code>( <var class="Arg">G</var>, <var class="Arg">N</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NaturalHomomorphismByNormalSubgroupNC</code>( <var class="Arg">G</var>, <var class="Arg">N</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a homomorphism from <var class="Arg">G</var> to another group whose kernel is <var class="Arg">N</var>. <strong class="pkg">GAP</strong> will try to select the image group as to make computations in it as efficient as possible. As the factor group <math id="8203632364432475461" display="inline" alttext="\textit{G}/\textit{N}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝐺</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">/</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑁</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <divide xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">N</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{G}/\textit{N}</annotation>
+  </semantics>
+</math> can be identified with the image of <var class="Arg">G</var> this permits efficient computations in the factor group. The homomorphism returned is not necessarily surjective, so <code class="func">ImagesSource</code> (<a shape="rect" href="chap32_mj.html#X7D23C1CE863DACD8"><span class="RefLink">32.4-1</span></a>) should be used instead of <code class="func">Range</code> (<a shape="rect" href="chap32_mj.html#X7B6FD7277CDE9FCB"><span class="RefLink">32.3-7</span></a>) to get a group isomorphic to the factor group. The <code class="code">NC</code> variant does not check whether <var class="Arg">N</var> is normal in <var class="Arg">G</var>.</p> </body>
+    </html>

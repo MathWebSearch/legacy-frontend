@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 23: Row Vectors-&gt;23.4-2 AddCoeffs</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap23.html#X7854B2B67E3FE2CA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">23.4-2 AddCoeffs</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AddCoeffs</code>( <var class="Arg">list1</var>[, <var class="Arg">poss1</var>], <var class="Arg">list2</var>[, <var class="Arg">poss2</var>[, <var class="Arg">mul</var>]] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">AddCoeffs</code> adds the entries of <var class="Arg">list2</var><code class="code">{</code><var class="Arg">poss2</var><code class="code">}</code>, multiplied by the scalar <var class="Arg">mul</var>, to <var class="Arg">list1</var><code class="code">{</code><var class="Arg">poss1</var><code class="code">}</code>. Unbound entries in <var class="Arg">list1</var> are assumed to be zero. The position of the right-most non-zero element is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">If the ranges <var class="Arg">poss1</var> and <var class="Arg">poss2</var> are not given, they are assumed to span the whole vectors. If the scalar <var class="Arg">mul</var> is omitted, one is used as a default.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that it is the responsibility of the caller to ensure that <var class="Arg">list2</var> has elements at position <var class="Arg">poss2</var> and that the result (in <var class="Arg">list1</var>) will be a dense list.</p><p xmlns="http://www.w3.org/1999/xhtml">The function is free to remove trailing (right-most) zeros.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:=[1,2,3,4];;m:=[5,6,7];;AddCoeffs(l,m);</span>
+4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l;</span>
+[ 6, 8, 10, 4 ]
+</pre></div> </body>
+    </html>

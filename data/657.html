@@ -1,0 +1,106 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.4 Arithmetic Operations for Class Functions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X83B9F0C5871A5F7F"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">72.4 <span class="Heading">Arithmetic Operations for Class Functions</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Class functions are <em>row vectors</em> of cyclotomics. The <em>additive</em> behaviour of class functions is defined such that they are equal to the plain lists of class function values except that the results are represented again as class functions whenever this makes sense. The <em>multiplicative</em> behaviour, however, is different. This is motivated by the fact that the tensor product of class functions is a more interesting operation than the vector product of plain lists. (Another candidate for a multiplication of compatible class functions would have been the inner product, which is implemented via the function <code class="func">ScalarProduct</code> (<a shape="rect" href="chap72_mj.html#X855FD9F983D275CD"><span class="RefLink">72.8-5</span></a>). In terms of filters, the arithmetic of class functions is based on the decision that they lie in <code class="func">IsGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X87ABCEE9809585A0"><span class="RefLink">21.12-1</span></a>), with additive nesting depth <math id="7677227159522467424" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math>, but they do <em>not</em> lie in <code class="func">IsMultiplicativeGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X7FBCA5B58308C158"><span class="RefLink">21.12-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">More specifically, the scalar multiple of a class function with a cyclotomic is a class function, and the sum and the difference of two class functions of the same underlying character table (see <code class="func">UnderlyingCharacterTable</code> (<a shape="rect" href="chap72_mj.html#X81B55C067D123B76"><span class="RefLink">72.2-1</span></a>)) are again class functions of this table. The sum and the difference of a class function and a list that is <em>not</em> a class function are plain lists, as well as the sum and the difference of two class functions of different character tables.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= SymmetricGroup( 4 );;  tbl:= CharacterTable( g );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( tbl, &quot;S4&quot; );  irr:= Irr( g );</span>
+[ Character( S4, [ 1, -1, 1, 1, -1 ] ), 
+  Character( S4, [ 3, -1, -1, 0, 1 ] ), 
+  Character( S4, [ 2, 0, 2, -1, 0 ] ), 
+  Character( S4, [ 3, 1, -1, 0, -1 ] ), 
+  Character( S4, [ 1, 1, 1, 1, 1 ] ) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">2 * irr[5];</span>
+Character( S4, [ 2, 2, 2, 2, 2 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irr[1] / 7;</span>
+ClassFunction( S4, [ 1/7, -1/7, 1/7, 1/7, -1/7 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">lincomb:= irr[3] + irr[1] - irr[5];</span>
+VirtualCharacter( S4, [ 2, -2, 2, -1, -2 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">lincomb:= lincomb + 2 * irr[5];</span>
+VirtualCharacter( S4, [ 4, 0, 4, 1, 0 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsCharacter( lincomb );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">lincomb;</span>
+Character( S4, [ 4, 0, 4, 1, 0 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irr[5] + 2;</span>
+[ 3, 3, 3, 3, 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irr[5] + [ 1, 2, 3, 4, 5 ];</span>
+[ 2, 3, 4, 5, 6 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">zero:= 0 * irr[1];</span>
+VirtualCharacter( S4, [ 0, 0, 0, 0, 0 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">zero + Z(3);</span>
+[ Z(3), Z(3), Z(3), Z(3), Z(3) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irr[5] + TrivialCharacter( DihedralGroup( 8 ) );</span>
+[ 2, 2, 2, 2, 2 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The product of two class functions of the same character table is the tensor product (pointwise product) of these class functions. Thus the set of all class functions of a fixed group forms a ring, and for any field <math id="-8742449046593217704" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math> of cyclotomics, the <math id="-234538136944603090" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>-span of a given set of class functions forms an algebra.</p><p xmlns="http://www.w3.org/1999/xhtml">The product of two class functions of <em>different</em> tables and the product of a class function and a list that is <em>not</em> a class function are not defined, an error is signalled in these cases. Note that in this respect, class functions behave differently from their values lists, for which the product is defined as the standard scalar product.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tens:= irr[3] * irr[4];</span>
+Character( S4, [ 6, 0, -2, 0, 0 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ValuesOfClassFunction( irr[3] ) * ValuesOfClassFunction( irr[4] );</span>
+4
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Class functions without zero values are invertible, the <em>inverse</em> is defined pointwise. As a consequence, for example groups of linear characters can be formed.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tens / irr[1];</span>
+Character( S4, [ 6, 0, -2, 0, 0 ] )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Other (somewhat strange) implications of the definition of arithmetic operations for class functions, together with the general rules of list arithmetic (see <a shape="rect" href="chap21_mj.html#X845EEAF083D43CCE"><span class="RefLink">21.11</span></a>), apply to the case of products involving <em>lists</em> of class functions. No inverse of the list of irreducible characters as a matrix is defined; if one is interested in the inverse matrix then one can compute it from the matrix of class function values.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Inverse( List( irr, ValuesOfClassFunction ) );</span>
+[ [ 1/24, 1/8, 1/12, 1/8, 1/24 ], [ -1/4, -1/4, 0, 1/4, 1/4 ], 
+  [ 1/8, -1/8, 1/4, -1/8, 1/8 ], [ 1/3, 0, -1/3, 0, 1/3 ], 
+  [ -1/4, 1/4, 0, -1/4, 1/4 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Also the product of a class function with a list of class functions is <em>not</em> a vector-matrix product but the list of pointwise products.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irr[1] * irr{ [ 1 .. 3 ] };</span>
+[ Character( S4, [ 1, 1, 1, 1, 1 ] ), 
+  Character( S4, [ 3, 1, -1, 0, -1 ] ), 
+  Character( S4, [ 2, 0, 2, -1, 0 ] ) ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">And the product of two lists of class functions is <em>not</em> the matrix product but the sum of the pointwise products.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irr * irr;</span>
+Character( S4, [ 24, 4, 8, 3, 4 ] )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The <em>powering</em> operator <code class="func">\^</code> (<a shape="rect" href="chap31_mj.html#X8481C9B97B214C23"><span class="RefLink">31.12-1</span></a>) has several meanings for class functions. The power of a class function by a nonnegative integer is clearly the tensor power. The power of a class function by an element that normalizes the underlying group or by a Galois automorphism is the conjugate class function. (As a consequence, the application of the permutation induced by such an action cannot be denoted by <code class="func">\^</code> (<a shape="rect" href="chap31_mj.html#X8481C9B97B214C23"><span class="RefLink">31.12-1</span></a>); instead one can use <code class="func">Permuted</code> (<a shape="rect" href="chap21_mj.html#X7B5A19098406347A"><span class="RefLink">21.20-18</span></a>).) The power of a class function by a group or a character table is the induced class function (see <code class="func">InducedClassFunction</code> (<a shape="rect" href="chap72_mj.html#X7FE39D3D78855D3B"><span class="RefLink">72.9-3</span></a>)). The power of a group element by a class function is the class function value at (the conjugacy class containing) this element.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">irr[3] ^ 3;</span>
+Character( S4, [ 8, 0, 8, -1, 0 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">lin:= LinearCharacters( DerivedSubgroup( g ) );</span>
+[ Character( CharacterTable( Alt( [ 1 .. 4 ] ) ), [ 1, 1, 1, 1 ] ), 
+  Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),
+  [ 1, 1, E(3), E(3)^2 ] ),
+  Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),
+  [ 1, 1, E(3)^2, E(3) ] ) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( lin, chi -&gt; chi ^ (1,2) );</span>
+[ Character( CharacterTable( Alt( [ 1 .. 4 ] ) ), [ 1, 1, 1, 1 ] ), 
+  Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),
+  [ 1, 1, E(3)^2, E(3) ] ),
+  Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),
+  [ 1, 1, E(3), E(3)^2 ] ) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Orbit( GaloisGroup( CF(3) ), lin[2] );</span>
+[ Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),
+  [ 1, 1, E(3), E(3)^2 ] ),
+  Character( CharacterTable( Alt( [ 1 .. 4 ] ) ),
+  [ 1, 1, E(3)^2, E(3) ] ) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">lin[1]^g;</span>
+Character( S4, [ 2, 0, 2, 2, 0 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">(1,2,3)^lin[2];</span>
+E(3)
+</pre></div> </body>
+    </html>

@@ -1,0 +1,52 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.6-3 TzGoGo</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X801D3D8984E1CA55"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.6-3 TzGoGo</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TzGoGo</code>( <var class="Arg">P</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">calls the command <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) again and again until it does not reduce the presentation any more.</p><p xmlns="http://www.w3.org/1999/xhtml">The result of the Tietze transformations can be affected substantially by the options parameters (see <a shape="rect" href="chap48_mj.html#X856F37537E9927EE"><span class="RefLink">48.11</span></a>). To demonstrate the effect of the <code class="code">eliminationsLimit</code> parameter, we will give an example in which we handle a subgroup of index 240 in a group of order 40320 given by a presentation due to B. H. Neumann. First we construct a presentation of the subgroup, and then we apply to it the command <code class="func">TzGoGo</code> for different values of the parameter <code class="code">eliminationsLimit</code> (including the default value 100). In fact, we also alter the <code class="code">printLevel</code> parameter, but this is only done in order to suppress most of the output. In all cases the resulting presentations cannot be improved any more by applying the command <code class="func">TzGoGo</code> again, i.e., they are the best results which we can get without substituting new generators.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">F3 := FreeGroup( &quot;a&quot;, &quot;b&quot;, &quot;c&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := F3 / [ F3.1^3, F3.2^3, F3.3^3, (F3.1*F3.2)^5,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">(F3.1^-1*F3.2)^5, (F3.1*F3.3)^4, (F3.1*F3.3^-1)^4,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">F3.1*F3.2^-1*F3.1*F3.2*F3.3^-1*F3.1*F3.3*F3.1*F3.3^-1,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">(F3.2*F3.3)^3, (F3.2^-1*F3.3)^4 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := G.1;; b := G.2;; c := G.3;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := Subgroup( G, [ a, c ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [ 61, 62, 63, 90, 97 ] do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Pi := PresentationSubgroup( G, H );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">TzOptions( Pi ).eliminationsLimit := i;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Print(&quot;#I eliminationsLimit set to &quot;,i,&quot;\n&quot;);</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">TzOptions( Pi ).printLevel := 0;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">TzGoGo( Pi );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">TzPrintStatus( Pi );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">od;</span>
+#I eliminationsLimit set to 61
+#I  there are 2 generators and 104 relators of total length 7012
+#I eliminationsLimit set to 62
+#I  there are 2 generators and 7 relators of total length 56
+#I eliminationsLimit set to 63
+#I  there are 3 generators and 97 relators of total length 5998
+#I eliminationsLimit set to 90
+#I  there are 3 generators and 11 relators of total length 68
+#I eliminationsLimit set to 97
+#I  there are 4 generators and 109 relators of total length 3813
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Similarly, we demonstrate the influence of the <code class="code">saveLimit</code> parameter by just continuing the preceding example for some different values of the <code class="code">saveLimit</code> parameter (including its default value 10), but without changing the <code class="code">eliminationsLimit</code> parameter which keeps its default value 100.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [ 7 .. 11 ] do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Pi := PresentationSubgroup( G, H );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">TzOptions( Pi ).saveLimit := i;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Print( &quot;#I saveLimit set to &quot;, i, &quot;\n&quot; );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">TzOptions( Pi ).printLevel := 0;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">TzGoGo( Pi );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">TzPrintStatus( Pi );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">od;</span>
+#I saveLimit set to 7
+#I  there are 3 generators and 99 relators of total length 2713
+#I saveLimit set to 8
+#I  there are 2 generators and 103 relators of total length 11982
+#I saveLimit set to 9
+#I  there are 2 generators and 6 relators of total length 41
+#I saveLimit set to 10
+#I  there are 3 generators and 118 relators of total length 13713
+#I saveLimit set to 11
+#I  there are 3 generators and 11 relators of total length 58
+</pre></div> </body>
+    </html>

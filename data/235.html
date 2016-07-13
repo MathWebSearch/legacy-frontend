@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.3 Conjugacy Classes in Classical Groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X85B9F2D379616C35"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">50.3 <span class="Heading">Conjugacy Classes in Classical Groups</span></h4><p xmlns="http://www.w3.org/1999/xhtml">For general and special linear groups (see <code class="func">GeneralLinearGroup</code> (<a shape="rect" href="chap50_mj.html#X85D607DD82AF3E27"><span class="RefLink">50.2-1</span></a>) and <code class="func">SpecialLinearGroup</code> (<a shape="rect" href="chap50_mj.html#X7CA3F7BF83992C6B"><span class="RefLink">50.2-2</span></a>)) <strong class="pkg">GAP</strong> has an efficient method to generate representatives of the conjugacy classes. This uses results from linear algebra on normal forms of matrices. If you know how to do this for other types of classical groups, please, tell us.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := SL(4,9);</span>
+SL(4,9)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NrConjugacyClasses(g);</span>
+861
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cl := ConjugacyClasses(g);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length(cl);</span>
+861
+</pre></div> </body>
+    </html>

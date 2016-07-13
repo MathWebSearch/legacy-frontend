@@ -1,0 +1,95 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 49: Group Products-&gt;49.2-1 SemidirectProduct</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap49.html#X7D905A5778D7ACDE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">49.2-1 <span class="Heading">SemidirectProduct</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SemidirectProduct</code>( <var class="Arg">G</var>, <var class="Arg">alpha</var>, <var class="Arg">N</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SemidirectProduct</code>( <var class="Arg">autgp</var>, <var class="Arg">N</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">constructs the semidirect product of <var class="Arg">N</var> with <var class="Arg">G</var> acting via <var class="Arg">alpha</var>, which must be a homomorphism from <var class="Arg">G</var> into a group of automorphisms of <var class="Arg">N</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">N</var> is a group, <var class="Arg">alpha</var> must be a homomorphism from <var class="Arg">G</var> into a group of automorphisms of <var class="Arg">N</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">N</var> is a full row space over a field <var class="Arg">F</var>, <var class="Arg">alpha</var> must be a homomorphism from <var class="Arg">G</var> into a matrix group of the right dimension over a subfield of <var class="Arg">F</var>, or into a permutation group (in this case permutation matrices are taken).</p><p xmlns="http://www.w3.org/1999/xhtml">In the second variant, <var class="Arg">autgp</var> must be a group of automorphism of <var class="Arg">N</var>, it is a shorthand for <code class="code">SemidirectProduct(<var class="Arg">autgp</var>,IdentityMapping(<var class="Arg">autgp</var>),<var class="Arg">N</var>)</code>. Note that (unless <var class="Arg">autgrp</var> has been obtained by the operation <code class="func">AutomorphismGroup</code> (<a shape="rect" href="chap40_mj.html#X87677B0787B4461A"><span class="RefLink">40.7-1</span></a>)) you have to test <code class="func">IsGroupOfAutomorphisms</code> (<a shape="rect" href="chap40_mj.html#X7FC631B786C1DC8B"><span class="RefLink">40.7-2</span></a>) for <var class="Arg">autgrp</var> to ensure that <strong class="pkg">GAP</strong> knows that <var class="Arg">autgrp</var> consists of group automorphisms.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n:=AbelianGroup(IsPcGroup,[5,5]);</span>
+&lt;pc group of size 25 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">au:=DerivedSubgroup(AutomorphismGroup(n));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(au);</span>
+120
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">p:=SemidirectProduct(au,n);</span>
+&lt;permutation group with 5 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(p);</span>
+3000
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n:=Group((1,2),(3,4));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">au:=AutomorphismGroup(n);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">au:=First(Elements(au),i-&gt;Order(i)=3);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">au:=Group(au);</span>
+&lt;group with 1 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsGroupOfAutomorphisms(au);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SemidirectProduct(au,n);</span>
+&lt;pc group with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n:=AbelianGroup(IsPcGroup,[2,2]);</span>
+&lt;pc group of size 4 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">au:=AutomorphismGroup(n);</span>
+&lt;group of size 6 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">apc:=IsomorphismPcGroup(au);</span>
+CompositionMapping( Pcgs([ (2,3), (1,2,3) ]) -&gt; 
+[ f1, f2 ], &lt;action isomorphism&gt; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Image(apc);</span>
+Group([ f1, f2 ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">apci:=InverseGeneralMapping(apc);</span>
+[ f1*f2^2, f1*f2 ] -&gt; [ Pcgs([ f1, f2 ]) -&gt; [ f1*f2, f2 ], 
+  Pcgs([ f1, f2 ]) -&gt; [ f2, f1 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsGroupHomomorphism(apci);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">p:=SemidirectProduct(g,apci,n);</span>
+&lt;pc group of size 24 with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsomorphismGroups(p,Group((1,2,3,4),(1,2))) &lt;&gt; fail;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SemidirectProduct(SU(3,3),GF(9)^3);</span>
+&lt;matrix group of size 4408992 with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SemidirectProduct(Group((1,2,3),(2,3,4)),GF(5)^4);</span>
+&lt;matrix group of size 7500 with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((3,4,5),(1,2,3));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mats:=[[[Z(2^2),0*Z(2)],[0*Z(2),Z(2^2)^2]],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">         [[Z(2)^0,Z(2)^0], [Z(2)^0,0*Z(2)]]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=GroupHomomorphismByImages(g,Group(mats),[g.1,g.2],mats);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SemidirectProduct(g,hom,GF(4)^2);</span>
+&lt;matrix group of size 960 with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SemidirectProduct(g,hom,GF(16)^2);</span>
+&lt;matrix group of size 15360 with 4 generators&gt;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">For a semidirect product <math id="-6659007905133799815" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math> of <var class="Arg">G</var> with <var class="Arg">N</var>, calling <code class="func">Embedding</code> (<a shape="rect" href="chap32_mj.html#X86452F8587CBAEA0"><span class="RefLink">32.2-10</span></a>) with <math id="8254769252040402009" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math> and <code class="code">1</code> yields the embedding of <var class="Arg">G</var>, calling <code class="func">Embedding</code> (<a shape="rect" href="chap32_mj.html#X86452F8587CBAEA0"><span class="RefLink">32.2-10</span></a>) with <math id="-3423075976104513082" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math> and <code class="code">2</code> yields the embedding of <var class="Arg">N</var>; calling <code class="func">Projection</code> (<a shape="rect" href="chap32_mj.html#X8769E8DA80BC96C1"><span class="RefLink">32.2-11</span></a>) with <var class="Arg">P</var> yields the projection of <math id="9070749437513195062" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math> onto <var class="Arg">G</var>, see <a shape="rect" href="chap49_mj.html#X798FDA1386A0EAC6"><span class="RefLink">49.6</span></a>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(Image(Embedding(p,1)));</span>
+6
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Embedding(p,2);</span>
+[ f1, f2 ] -&gt; [ f3, f4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Projection(p);</span>
+[ f1, f2, f3, f4 ] -&gt; [ f1, f2, &lt;identity&gt; of ..., &lt;identity&gt; of ... ]
+</pre></div> </body>
+    </html>

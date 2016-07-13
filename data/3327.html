@@ -1,0 +1,38 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.14-4 IsWeightRepElement</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X8248DB547B02B0FA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.14-4 IsWeightRepElement</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsWeightRepElement</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsWeightRepElementCollection</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsWeightRepElementFamily</code>( <var class="Arg">fam</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Is a category of vectors, that is used to construct elements of highest-weight modules (by <code class="func">HighestWeightModule</code> (<a shape="rect" href="chap64_mj.html#X7FB14F7F80EFF33F"><span class="RefLink">64.14-5</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">WeightRepElement</code>s are represented by a list of the form <code class="code">[ v1, c1, v2, c2, ....]</code>, where the <code class="code">vi</code> are basis vectors, and the <code class="code">ci</code> are coefficients. Furthermore a basis vector <code class="code">v</code> is a weight vector. It is represented by a list of the form <code class="code">[ k, mon, wt ]</code>, where <code class="code">k</code> is an integer (the basis vectors are numbered from <math id="-8801820420876654996" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math> to <math id="7498376124061166668" display="inline" alttext="\dim V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">dim</mo>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3a">⁡</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">V</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" cd="latexml">dimension</csymbol>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑉</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\dim V</annotation>
+  </semantics>
+</math>, where <math id="-5460884031053522346" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑉</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
+  </semantics>
+</math> is the highest weight module), <code class="code">mon</code> is an <code class="code">UEALatticeElement</code> (which means that the result of applying <code class="code">mon</code> to a highest weight vector is <code class="code">v</code>; see <code class="func">IsUEALatticeElement</code> (<a shape="rect" href="chap64_mj.html#X86E6722379576746"><span class="RefLink">64.14-1</span></a>)) and <code class="code">wt</code> is the weight of <code class="code">v</code>. A <code class="code">WeightRepElement</code> is printed as <code class="code">mon*v0</code>, where <code class="code">v0</code> denotes a fixed highest weight vector.</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="code">v</code> is a <code class="code">WeightRepElement</code>, then <code class="code">ExtRepOfObj( v )</code> returns the corresponding list, and if <code class="code">list</code> is such a list and <var class="Arg">fam</var> a <code class="code">WeightRepElementFamily</code>, then <code class="code">ObjByExtRep( <var class="Arg">list</var>, <var class="Arg">fam</var> )</code> returns the corresponding <code class="code">WeightRepElement</code>.</p> </body>
+    </html>

@@ -1,0 +1,113 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 32: Mappings-&gt;32.6 Arithmetic Operations for General Mappings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap32.html#X7E2E16277940FA0B"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">32.6 <span class="Heading">Arithmetic Operations for General Mappings</span></h4><p xmlns="http://www.w3.org/1999/xhtml">General mappings are arithmetic objects. One can form groups and vector spaces of general mappings provided that they are invertible or can be added and admit scalar multiplication, respectively.</p><p xmlns="http://www.w3.org/1999/xhtml">For two general mappings with same source, range, preimage, and image, the <em>sum</em> is defined pointwise, i.e., the images of a point under the sum is the set of all sums with first summand in the images of the first general mapping and second summand in the images of the second general mapping.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>Scalar multiplication</em> of general mappings is defined likewise.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>product</em> of two general mappings is defined as the composition. This multiplication is always associative. In addition to the composition via <code class="code">*</code>, general mappings can be composed –in reversed order– via <code class="func">CompositionMapping</code> (<a shape="rect" href="chap32_mj.html#X7ED1E4E27CCE2DCA"><span class="RefLink">32.2-4</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">General mappings are in the category of multiplicative elements with inverses. Similar to matrices, not every general mapping has an inverse or an identity, and we define the behaviour of <code class="func">One</code> (<a shape="rect" href="chap31_mj.html#X8046262384895B2A"><span class="RefLink">31.10-2</span></a>) and <code class="func">Inverse</code> (<a shape="rect" href="chap31_mj.html#X78EE524E83624057"><span class="RefLink">31.10-8</span></a>) for general mappings as follows. <code class="func">One</code> (<a shape="rect" href="chap31_mj.html#X8046262384895B2A"><span class="RefLink">31.10-2</span></a>) returns <code class="keyw">fail</code> when called for a general mapping whose source and range differ, otherwise <code class="func">One</code> (<a shape="rect" href="chap31_mj.html#X8046262384895B2A"><span class="RefLink">31.10-2</span></a>) returns the identity mapping of the source. (Note that the source may differ from the preimage). <code class="func">Inverse</code> (<a shape="rect" href="chap31_mj.html#X78EE524E83624057"><span class="RefLink">31.10-8</span></a>) returns <code class="keyw">fail</code> when called for a non-bijective general mapping or for a general mapping whose source and range differ; otherwise <code class="func">Inverse</code> (<a shape="rect" href="chap31_mj.html#X78EE524E83624057"><span class="RefLink">31.10-8</span></a>) returns the inverse mapping.</p><p xmlns="http://www.w3.org/1999/xhtml">Besides the usual inverse of multiplicative elements, which means that <code class="code">Inverse( <var class="Arg">g</var> ) * <var class="Arg">g</var> = <var class="Arg">g</var> * Inverse( <var class="Arg">g</var> ) = One( <var class="Arg">g</var> )</code>, for general mappings we have the attribute <code class="func">InverseGeneralMapping</code> (<a shape="rect" href="chap32_mj.html#X865FC25A87D36F3D"><span class="RefLink">32.2-3</span></a>). If <var class="Arg">F</var> is a general mapping with source <math id="-5439629794822938011" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math>, range <math id="8349995401827263666" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>, and underlying relation <math id="-302416000524914714" display="inline" alttext="Rel" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">e</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">l</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑒</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑙</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Rel</annotation>
+  </semantics>
+</math> then <code class="code">InverseGeneralMapping( <var class="Arg">F</var> )</code> has source <math id="-2730648695439610597" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>, range <math id="6796718073057779873" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math>, and underlying relation <math id="6760045921857344201" display="inline" alttext="\{(r,s)\mid(s,r)\in Rel\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18">
+      <mo xref="p1.1.m1.1.18.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">{</mo>
+      <mrow xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2">
+        <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">r</mi>
+        <mo id="p1.1.m1.1.4">,</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">s</mi>
+        <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.18.1.1.cmml" id="p1.1.m1.1.7">∣</mo>
+      <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.3">
+        <mrow xref="p1.1.m1.1.18.3.1.1.cmml" id="p1.1.m1.1.18.3.1">
+          <mo id="p1.1.m1.1.8" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">s</mi>
+          <mo id="p1.1.m1.1.10">,</mo>
+          <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">r</mi>
+          <mo id="p1.1.m1.1.12" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">∈</mo>
+        <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.3.2">
+          <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">R</mi>
+          <mo xref="p1.1.m1.1.18.3.2.1.cmml" id="p1.1.m1.1.18.3.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">e</mi>
+          <mo xref="p1.1.m1.1.18.3.2.1.cmml" id="p1.1.m1.1.18.3.2.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">l</mi>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.18.1.1.cmml" id="p1.1.m1.1.17" stretchy="false">}</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.18" id="p1.1.m1.1.18.1.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.18.1.1.cmml" cd="latexml">conditional-set</csymbol>
+        <interval xref="p1.1.m1.1.18.2" id="p1.1.m1.1.18.2.1.cmml" closure="open">
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑟</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑠</ci>
+        </interval>
+        <apply xref="p1.1.m1.1.18" id="p1.1.m1.1.18.3.cmml">
+          <in xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+          <interval xref="p1.1.m1.1.18.3.1" id="p1.1.m1.1.18.3.1.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑠</ci>
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑟</ci>
+          </interval>
+          <apply xref="p1.1.m1.1.18" id="p1.1.m1.1.18.3.2.cmml">
+            <times xref="p1.1.m1.1.18.3.2.1" id="p1.1.m1.1.18.3.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑅</ci>
+            <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑒</ci>
+            <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝑙</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\{(r,s)\mid(s,r)\in Rel\}</annotation>
+  </semantics>
+</math>. For a general mapping that has an inverse in the usual sense, i.e., for a bijection of the source, of course both concepts coincide.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Inverse</code> (<a shape="rect" href="chap31_mj.html#X78EE524E83624057"><span class="RefLink">31.10-8</span></a>) may delegate to <code class="func">InverseGeneralMapping</code> (<a shape="rect" href="chap32_mj.html#X865FC25A87D36F3D"><span class="RefLink">32.2-3</span></a>). <code class="func">InverseGeneralMapping</code> (<a shape="rect" href="chap32_mj.html#X865FC25A87D36F3D"><span class="RefLink">32.2-3</span></a>) must not delegate to <code class="func">Inverse</code> (<a shape="rect" href="chap31_mj.html#X78EE524E83624057"><span class="RefLink">31.10-8</span></a>), but a known value of <code class="func">Inverse</code> (<a shape="rect" href="chap31_mj.html#X78EE524E83624057"><span class="RefLink">31.10-8</span></a>) may be fetched. So methods to compute the inverse of a general mapping should be installed for <code class="func">InverseGeneralMapping</code> (<a shape="rect" href="chap32_mj.html#X865FC25A87D36F3D"><span class="RefLink">32.2-3</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">(Note that in many respects, general mappings behave similar to matrices, for example one can define left and right identities and inverses, which do not fit into the current concepts of <strong class="pkg">GAP</strong>.)</p> </body>
+    </html>

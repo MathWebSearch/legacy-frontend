@@ -1,0 +1,128 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.3-7 CoefficientsQadic</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X79B466E984CD52D4"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.3-7 CoefficientsQadic</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CoefficientsQadic</code>( <var class="Arg">i</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the <var class="Arg">q</var>-adic representation of the integer <var class="Arg">i</var> as a list <math id="37014089576013157" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> of coefficients satisfying the equality <math id="-2035538813295127764" display="inline" alttext="\textit{i}=\sum_{{j=0}}\textit{q}^{j}\cdot l[j+1]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑖</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">
+        <msub xref="p1.1.m1.1.14.1.1.cmml" id="p1.1.m1.1.14.1.1">
+          <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3" symmetric="true" largeop="true">∑</mo>
+          <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">
+            <mi xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.4.1.1">j</mi>
+            <mo xref="p1.1.m1.1.4.1.2.cmml" id="p1.1.m1.1.4.1.2">=</mo>
+            <mn xref="p1.1.m1.1.4.1.3.cmml" id="p1.1.m1.1.4.1.3">0</mn>
+          </mrow>
+        </msub>
+        <mrow xref="p1.1.m1.1.14.1.2.cmml" id="p1.1.m1.1.14.1.2">
+          <mrow xref="p1.1.m1.1.14.1.2.2.cmml" id="p1.1.m1.1.14.1.2.2">
+            <msup xref="p1.1.m1.1.14.1.2.2.1.cmml" id="p1.1.m1.1.14.1.2.2.1">
+              <mtext xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">𝑞</mtext>
+              <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">j</mi>
+            </msup>
+            <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">⋅</mo>
+            <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">l</mi>
+          </mrow>
+          <mo xref="p1.1.m1.1.14.1.2.1.cmml" id="p1.1.m1.1.14.1.2.1">⁢</mo>
+          <mrow xref="p1.1.m1.1.14.1.2.3.1.cmml" id="p1.1.m1.1.14.1.2.3">
+            <mo xref="p1.1.m1.1.14.1.2.3.1.1.cmml" id="p1.1.m1.1.9" stretchy="false">[</mo>
+            <mrow xref="p1.1.m1.1.14.1.2.3.1.cmml" id="p1.1.m1.1.14.1.2.3.2">
+              <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">j</mi>
+              <mo xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">+</mo>
+              <mn xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">1</mn>
+            </mrow>
+            <mo xref="p1.1.m1.1.14.1.2.3.1.1.cmml" id="p1.1.m1.1.13" stretchy="false">]</mo>
+          </mrow>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">i</span>
+        </mtext>
+        <apply xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml">
+          <apply xref="p1.1.m1.1.14.1.1" id="p1.1.m1.1.14.1.1.cmml">
+            <csymbol id="p1.1.m1.1.14.1.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <sum xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+            <apply xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+              <eq xref="p1.1.m1.1.4.1.2" id="p1.1.m1.1.4.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.4.1.1" id="p1.1.m1.1.4.1.1.cmml">𝑗</ci>
+              <cn xref="p1.1.m1.1.4.1.3" id="p1.1.m1.1.4.1.3.cmml" type="integer">0</cn>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.14.1.2" id="p1.1.m1.1.14.1.2.cmml">
+            <times xref="p1.1.m1.1.14.1.2.1" id="p1.1.m1.1.14.1.2.1.cmml"/>
+            <apply xref="p1.1.m1.1.14.1.2.2" id="p1.1.m1.1.14.1.2.2.cmml">
+              <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">⋅</ci>
+              <apply xref="p1.1.m1.1.14.1.2.2.1" id="p1.1.m1.1.14.1.2.2.1.cmml">
+                <csymbol id="p1.1.m1.1.14.1.2.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+                <mtext xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+                  <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">q</span>
+                </mtext>
+                <ci xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">𝑗</ci>
+              </apply>
+              <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑙</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.14.1.2.3" id="p1.1.m1.1.14.1.2.3.1.cmml">
+              <csymbol xref="p1.1.m1.1.9" id="p1.1.m1.1.14.1.2.3.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+              <apply xref="p1.1.m1.1.14.1.2.3" id="p1.1.m1.1.14.1.2.3.2.cmml">
+                <plus xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml"/>
+                <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑗</ci>
+                <cn xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml" type="integer">1</cn>
+              </apply>
+            </apply>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{i}=\sum_{{j=0}}\textit{q}^{j}\cdot l[j+1]</annotation>
+  </semantics>
+</math> for an integer <math id="1666473671971616723" display="inline" alttext="\textit{q}&amp;gt;1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mtext xref="p1.1.m1.1.1.1a.cmml" id="p1.1.m1.1.1.1">𝑞</mtext>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">g</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.5">;</mo>
+      <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml">
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <times xref="p1.1.m1.1.7.2.1" id="p1.1.m1.1.7.2.1.cmml"/>
+          <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">q</span>
+          </mtext>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑡</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">1</cn>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{q}&amp;gt;1</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:=CoefficientsQadic(462,3);</span>
+[ 0, 1, 0, 2, 2, 1 ]
+</pre></div> </body>
+    </html>

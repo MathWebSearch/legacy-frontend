@@ -1,0 +1,111 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.17-13 PCentralSeries</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7809B7ED792669F3"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.17-13 PCentralSeries</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PCentralSeries</code>( <var class="Arg">G</var>, <var class="Arg">p</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The <var class="Arg">p</var>-central series of <var class="Arg">G</var> is defined by <math id="-6679246962927617032" display="inline" alttext="U_{1}:=\textit{G}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msub xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+      </msub>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">:=</mo>
+      <mtext xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">𝐺</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <csymbol xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" cd="latexml">assign</csymbol>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <csymbol id="p1.1.m1.1.6.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+        </apply>
+        <mtext xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U_{1}:=\textit{G}</annotation>
+  </semantics>
+</math>, <math id="-6292457635051385003" display="inline" alttext="U_{i}:=[\textit{G},U_{{i-1}}]U_{{i-1}}^{\textit{p}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">
+      <msub xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+      </msub>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">:=</mo>
+      <mrow xref="p1.1.m1.1.14.2.cmml" id="p1.1.m1.1.14.2">
+        <mrow xref="p1.1.m1.1.14.2.2.1.cmml" id="p1.1.m1.1.14.2.2">
+          <mo id="p1.1.m1.1.5" stretchy="false">[</mo>
+          <mtext xref="p1.1.m1.1.6.1a.cmml" id="p1.1.m1.1.6.1">𝐺</mtext>
+          <mo id="p1.1.m1.1.7">,</mo>
+          <msub xref="p1.1.m1.1.14.2.2.1.cmml" id="p1.1.m1.1.14.2.2.2">
+            <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">U</mi>
+            <mrow xref="p1.1.m1.1.14.2.2.1.cmml" id="p1.1.m1.1.9.1">
+              <mi xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1">i</mi>
+              <mo xref="p1.1.m1.1.9.1.2.cmml" id="p1.1.m1.1.9.1.2">-</mo>
+              <mn xref="p1.1.m1.1.9.1.3.cmml" id="p1.1.m1.1.9.1.3">1</mn>
+            </mrow>
+          </msub>
+          <mo id="p1.1.m1.1.10" stretchy="false">]</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.14.2.1.cmml" id="p1.1.m1.1.14.2.1">⁢</mo>
+        <msubsup xref="p1.1.m1.1.14.2.3.cmml" id="p1.1.m1.1.14.2.3">
+          <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">U</mi>
+          <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">
+            <mi xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1.1">i</mi>
+            <mo xref="p1.1.m1.1.12.1.2.cmml" id="p1.1.m1.1.12.1.2">-</mo>
+            <mn xref="p1.1.m1.1.12.1.3.cmml" id="p1.1.m1.1.12.1.3">1</mn>
+          </mrow>
+          <mtext xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">𝑝</mtext>
+        </msubsup>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">
+        <csymbol xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" cd="latexml">assign</csymbol>
+        <apply xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml">
+          <csymbol id="p1.1.m1.1.14.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.14.2" id="p1.1.m1.1.14.2.cmml">
+          <times xref="p1.1.m1.1.14.2.1" id="p1.1.m1.1.14.2.1.cmml"/>
+          <interval xref="p1.1.m1.1.14.2.2" id="p1.1.m1.1.14.2.2.1.cmml" closure="closed">
+            <mtext xref="p1.1.m1.1.14.2.2" id="p1.1.m1.1.6.1.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+            </mtext>
+            <apply xref="p1.1.m1.1.14.2.2" id="p1.1.m1.1.14.2.2.2.cmml">
+              <csymbol id="p1.1.m1.1.14.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑈</ci>
+              <apply xref="p1.1.m1.1.14.2.2" id="p1.1.m1.1.9.1.cmml">
+                <minus xref="p1.1.m1.1.9.1.2" id="p1.1.m1.1.9.1.2.cmml"/>
+                <ci xref="p1.1.m1.1.9.1.1" id="p1.1.m1.1.9.1.1.cmml">𝑖</ci>
+                <cn xref="p1.1.m1.1.9.1.3" id="p1.1.m1.1.9.1.3.cmml" type="integer">1</cn>
+              </apply>
+            </apply>
+          </interval>
+          <apply xref="p1.1.m1.1.14.2.3" id="p1.1.m1.1.14.2.3.cmml">
+            <csymbol id="p1.1.m1.1.14.2.3.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.14.2.3.2.cmml">
+              <csymbol id="p1.1.m1.1.14.2.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑈</ci>
+              <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">
+                <minus xref="p1.1.m1.1.12.1.2" id="p1.1.m1.1.12.1.2.cmml"/>
+                <ci xref="p1.1.m1.1.12.1.1" id="p1.1.m1.1.12.1.1.cmml">𝑖</ci>
+                <cn xref="p1.1.m1.1.12.1.3" id="p1.1.m1.1.12.1.3.cmml" type="integer">1</cn>
+              </apply>
+            </apply>
+            <mtext xref="p1.1.m1.1.13.1" id="p1.1.m1.1.13.1.cmml">
+              <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">p</span>
+            </mtext>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U_{i}:=[\textit{G},U_{{i-1}}]U_{{i-1}}^{\textit{p}}</annotation>
+  </semantics>
+</math>.</p> </body>
+    </html>

@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.2-5 NrArrangements</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X7DE1ABD47D19F140"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.2-5 NrArrangements</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrArrangements</code>( <var class="Arg">mset</var>[, <var class="Arg">k</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the number of <code class="code">Arrangements(<var class="Arg">mset</var>,<var class="Arg">k</var>)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">As an example of arrangements of a multiset, think of the game Scrabble. Suppose you have the six characters of the word <code class="code">&quot;settle&quot;</code> and you have to make a four letter word. Then the possibilities are given by</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Arrangements( [&quot;s&quot;,&quot;e&quot;,&quot;t&quot;,&quot;t&quot;,&quot;l&quot;,&quot;e&quot;], 4 );</span>
+[ [ &quot;e&quot;, &quot;e&quot;, &quot;l&quot;, &quot;s&quot; ], [ &quot;e&quot;, &quot;e&quot;, &quot;l&quot;, &quot;t&quot; ], [ &quot;e&quot;, &quot;e&quot;, &quot;s&quot;, &quot;l&quot; ],
+  [ &quot;e&quot;, &quot;e&quot;, &quot;s&quot;, &quot;t&quot; ], [ &quot;e&quot;, &quot;e&quot;, &quot;t&quot;, &quot;l&quot; ], [ &quot;e&quot;, &quot;e&quot;, &quot;t&quot;, &quot;s&quot; ],
+  ... 93 more possibilities ...
+  [ &quot;t&quot;, &quot;t&quot;, &quot;l&quot;, &quot;s&quot; ], [ &quot;t&quot;, &quot;t&quot;, &quot;s&quot;, &quot;e&quot; ], [ &quot;t&quot;, &quot;t&quot;, &quot;s&quot;, &quot;l&quot; ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Can you find the five proper English words, where <code class="code">&quot;lets&quot;</code> does not count? Note that the fact that the list returned by <code class="func">Arrangements</code> (<a shape="rect" href="chap16_mj.html#X7837B3357C7566C8"><span class="RefLink">16.2-4</span></a>) is a proper set means in this example that the possibilities are listed in the same order as they appear in the dictionary.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NrArrangements( [&quot;s&quot;,&quot;e&quot;,&quot;t&quot;,&quot;t&quot;,&quot;l&quot;,&quot;e&quot;] );</span>
+523
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The function <code class="func">Combinations</code> (<a shape="rect" href="chap16_mj.html#X8770F16D794C0ADB"><span class="RefLink">16.2-1</span></a>) computes unordered selections without repetitions, <code class="func">UnorderedTuples</code> (<a shape="rect" href="chap16_mj.html#X81601C6786120DDC"><span class="RefLink">16.2-6</span></a>) computes unordered selections with repetitions, and <code class="func">Tuples</code> (<a shape="rect" href="chap16_mj.html#X86A3CA0F7CC8C320"><span class="RefLink">16.2-8</span></a>) computes ordered selections with repetitions.</p> </body>
+    </html>

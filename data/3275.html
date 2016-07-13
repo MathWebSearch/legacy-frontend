@@ -1,0 +1,398 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 81: An Example – Residue Class Rings-&gt;81.1 A First Attempt to Implement Elements of Residue Class Rings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap81.html#X81008A74838A792E"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">81.1 <span class="Heading">A First Attempt to Implement Elements of Residue Class Rings</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Suppose we want to do computations with elements of a ring <math id="-4908601638688121322" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">/</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" mathvariant="normal">?</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.cmml">
+          <divide xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">?</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
+  </semantics>
+</math>, where <math id="2614436375747339460" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> is a positive integer.</p><p xmlns="http://www.w3.org/1999/xhtml">First we have to decide how to represent the element <math id="-2422837850990860674" display="inline" alttext="k+n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">+</mo>
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+        <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" mathvariant="normal">?</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <plus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <times xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">?</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k+n?</annotation>
+  </semantics>
+</math> in <strong class="pkg">GAP</strong>. If the modulus <math id="-2583451964112674760" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> is fixed then we can use the integer <math id="-3203498178613474349" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
+  </semantics>
+</math>. More precisely, we can use any integer <math id="6538576794514360947" display="inline" alttext="k^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+      <mo xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">′</mo>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">′</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k^{\prime}</annotation>
+  </semantics>
+</math> such that <math id="-3396433369282012459" display="inline" alttext="k-k^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">-</mo>
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">k</mi>
+        <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">′</mo>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <minus xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑘</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">′</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k-k^{\prime}</annotation>
+  </semantics>
+</math> is a multiple of <math id="-286604234201506604" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>. If different moduli are likely to occur then using a list of the form <math id="-5662941375139053857" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">k</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="closed">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑘</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k,n]</annotation>
+  </semantics>
+</math>, or a record of the form <code class="code">rec( residue := <var class="Arg">k</var>, modulus := <var class="Arg">n</var> )</code> is more appropriate. In the following, let us assume the list representation <math id="-3862559687038851387" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">k</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="closed">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑘</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k,n]</annotation>
+  </semantics>
+</math> is chosen. Moreover, we decide that the residue <math id="4004216109875559123" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
+  </semantics>
+</math> in all such lists satisfies <math id="-7734311727890489928" display="inline" alttext="0\leq k&amp;lt;n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≤</mo>
+      <mrow xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1">
+        <mrow xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.2">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">k</mi>
+          <mo xref="p1.1.m1.1.9.1.2.1.cmml" id="p1.1.m1.1.9.1.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" mathvariant="normal">&amp;</mi>
+          <mo xref="p1.1.m1.1.9.1.2.1.cmml" id="p1.1.m1.1.9.1.2.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">l</mi>
+          <mo xref="p1.1.m1.1.9.1.2.1.cmml" id="p1.1.m1.1.9.1.2.1b">⁢</mo>
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">t</mi>
+        </mrow>
+        <mo id="p1.1.m1.1.7">;</mo>
+        <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">n</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <leq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+        <list xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.1.cmml">
+          <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.2.cmml">
+            <times xref="p1.1.m1.1.9.1.2.1" id="p1.1.m1.1.9.1.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑘</ci>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">&amp;</ci>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑙</ci>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑡</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑛</ci>
+        </list>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">0\leq k&amp;lt;n</annotation>
+  </semantics>
+</math>, i.e., the result of adding two residue classes represented by <math id="-6753738766428028685" display="inline" alttext="[k_{1},n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <msub xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">k</mi>
+        <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">1</mn>
+      </msub>
+      <mo id="p1.1.m1.1.4">,</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">n</mi>
+      <mo id="p1.1.m1.1.6" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml" closure="closed">
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑘</ci>
+          <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">1</cn>
+        </apply>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑛</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k_{1},n]</annotation>
+  </semantics>
+</math> and <math id="5862434561337555905" display="inline" alttext="[k_{2},n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <msub xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">k</mi>
+        <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">2</mn>
+      </msub>
+      <mo id="p1.1.m1.1.4">,</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">n</mi>
+      <mo id="p1.1.m1.1.6" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml" closure="closed">
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑘</ci>
+          <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">2</cn>
+        </apply>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑛</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k_{2},n]</annotation>
+  </semantics>
+</math> (of course with same modulus <math id="-3782554788166346701" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>) will be <math id="-7908862123158557612" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">k</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="closed">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑘</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k,n]</annotation>
+  </semantics>
+</math> with <math id="-7882507384143521832" display="inline" alttext="k_{1}+k_{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msub xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">+</mo>
+      <msub xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">k</mi>
+        <mn xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">2</mn>
+      </msub>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <plus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <csymbol id="p1.1.m1.1.6.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑘</ci>
+          <cn xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml" type="integer">2</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k_{1}+k_{2}</annotation>
+  </semantics>
+</math> congruent to <math id="2575992967737851905" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
+  </semantics>
+</math> modulo <math id="-4975458935712033647" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> and <math id="-6509228092987928909" display="inline" alttext="0\leq k&amp;lt;n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">≤</mo>
+      <mrow xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1">
+        <mrow xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.2">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">k</mi>
+          <mo xref="p1.1.m1.1.9.1.2.1.cmml" id="p1.1.m1.1.9.1.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" mathvariant="normal">&amp;</mi>
+          <mo xref="p1.1.m1.1.9.1.2.1.cmml" id="p1.1.m1.1.9.1.2.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">l</mi>
+          <mo xref="p1.1.m1.1.9.1.2.1.cmml" id="p1.1.m1.1.9.1.2.1b">⁢</mo>
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">t</mi>
+        </mrow>
+        <mo id="p1.1.m1.1.7">;</mo>
+        <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">n</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <leq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+        <list xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.1.cmml">
+          <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.2.cmml">
+            <times xref="p1.1.m1.1.9.1.2.1" id="p1.1.m1.1.9.1.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑘</ci>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">&amp;</ci>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑙</ci>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑡</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑛</ci>
+        </list>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">0\leq k&amp;lt;n</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Now we can implement the arithmetic operations for residue classes. Note that the result of the <code class="keyw">mod</code> operator is normalized as required. The division by a noninvertible residue class results in <code class="keyw">fail</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">resclass_sum := function( c1, c2 )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   if c1[2] &lt;&gt; c2[2] then Error( &quot;different moduli&quot; ); fi;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   return [ ( c1[1] + c2[1] ) mod c1[2], c1[2] ];</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"/>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">resclass_diff := function( c1, c2 )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   if c1[2] &lt;&gt; c2[2] then Error( &quot;different moduli&quot; ); fi;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   return [ ( c1[1] - c2[1] ) mod c1[2], c1[2] ];</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"/>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">resclass_prod := function( c1, c2 )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   if c1[2] &lt;&gt; c2[2] then Error( &quot;different moduli&quot; ); fi;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   return [ ( c1[1] * c2[1] ) mod c1[2], c1[2] ];</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"/>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">resclass_quo := function( c1, c2 )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   local quo;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   if c1[2] &lt;&gt; c2[2] then Error( &quot;different moduli&quot; ); fi;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   quo:= QuotientMod( c1[1], c2[1], c1[2] );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   if quo &lt;&gt; fail then</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     quo:= [ quo, c1[2] ];</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   fi;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   return quo;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">end;;</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">With these functions, we can in principle compute with residue classes.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list:= List( [ 0 .. 3 ], k -&gt; [ k, 4 ] );</span>
+[ [ 0, 4 ], [ 1, 4 ], [ 2, 4 ], [ 3, 4 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">resclass_sum( list[2], list[4] );</span>
+[ 0, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">resclass_diff( list[1], list[2] );</span>
+[ 3, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">resclass_prod( list[2], list[4] );</span>
+[ 3, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">resclass_prod( list[3], list[4] );</span>
+[ 2, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( list, x -&gt; resclass_quo( list[2], x ) );</span>
+[ fail, [ 1, 4 ], fail, [ 3, 4 ] ]
+</pre></div> </body>
+    </html>

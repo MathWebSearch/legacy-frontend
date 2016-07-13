@@ -1,0 +1,61 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.2-1 Combinations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X8770F16D794C0ADB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.2-1 Combinations</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Combinations</code>( <var class="Arg">mset</var>[, <var class="Arg">k</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the set of all combinations of the multiset <var class="Arg">mset</var> (a list of objects which may contain the same object several times) with <var class="Arg">k</var> elements; if <var class="Arg">k</var> is not given it returns all combinations of <var class="Arg">mset</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>combination</em> of <var class="Arg">mset</var> is an unordered selection without repetitions and is represented by a sorted sublist of <var class="Arg">mset</var>. If <var class="Arg">mset</var> is a proper set, there are <math id="4895066368506109826" display="inline" alttext="{{|\textit{mset}|\choose\textit{k}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.5">
+      <mo xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.2">(</mo>
+      <mfrac xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.3" linethickness="0pt">
+        <mrow xref="p1.1.m1.1.1.3.2.4.cmml" id="p1.1.m1.1.1.3.2">
+          <mo xref="p1.1.m1.1.1.3.2.4.1.cmml" id="p1.1.m1.1.1.3.2.1" stretchy="false">|</mo>
+          <mtext xref="p1.1.m1.1.1.3.2.2.1a.cmml" id="p1.1.m1.1.1.3.2.2.1" mathsize="142%">𝑚𝑠𝑒𝑡</mtext>
+          <mo xref="p1.1.m1.1.1.3.2.4.1.cmml" id="p1.1.m1.1.1.3.2.3" stretchy="false">|</mo>
+        </mrow>
+        <mtext xref="p1.1.m1.1.1.3.3a.cmml" id="p1.1.m1.1.1.3.3">𝑘</mtext>
+      </mfrac>
+      <mo xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.4">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.1.5" id="p1.1.m1.1.1.1.cmml">
+        <csymbol id="p1.1.m1.1.1.3.1.cmml" cd="latexml">binomial</csymbol>
+        <apply xref="p1.1.m1.1.1.3.2" id="p1.1.m1.1.1.3.2.4.cmml">
+          <abs xref="p1.1.m1.1.1.3.2.1" id="p1.1.m1.1.1.3.2.4.1.cmml"/>
+          <mtext xref="p1.1.m1.1.1.3.2" id="p1.1.m1.1.1.3.2.2.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">mset</span>
+          </mtext>
+        </apply>
+        <mtext xref="p1.1.m1.1.1.5" id="p1.1.m1.1.1.3.3.cmml">
+          <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">{{|\textit{mset}|\choose\textit{k}}}</annotation>
+  </semantics>
+</math> (see <code class="func">Binomial</code> (<a shape="rect" href="chap16_mj.html#X7A9AF5F58682819D"><span class="RefLink">16.1-2</span></a>)) combinations with <var class="Arg">k</var> elements, and the set of all combinations is just the <em>power set</em> of <var class="Arg">mset</var>, which contains all <em>subsets</em> of <var class="Arg">mset</var> and has cardinality <math id="-1190782007464102714" display="inline" alttext="2^{{|\textit{mset}|}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+      <mrow xref="p1.1.m1.1.2.1.4.cmml" id="p1.1.m1.1.2.1">
+        <mo xref="p1.1.m1.1.2.1.4.1.cmml" id="p1.1.m1.1.2.1.1" stretchy="false">|</mo>
+        <mtext xref="p1.1.m1.1.2.1.2.1a.cmml" id="p1.1.m1.1.2.1.2.1">𝑚𝑠𝑒𝑡</mtext>
+        <mo xref="p1.1.m1.1.2.1.4.1.cmml" id="p1.1.m1.1.2.1.3" stretchy="false">|</mo>
+      </mrow>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+        <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.4.cmml">
+          <abs xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.4.1.cmml"/>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">mset</span>
+          </mtext>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2^{{|\textit{mset}|}}</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">To loop over combinations of a larger multiset use <code class="func">IteratorOfCombinations</code> (<a shape="rect" href="chap16_mj.html#X78DD5C0D81057540"><span class="RefLink">16.2-2</span></a>) which produces combinations one by one and may save a lot of memory. Another memory efficient representation of the list of all combinations is provided by <code class="func">EnumeratorOfCombinations</code> (<a shape="rect" href="chap16_mj.html#X78DD5C0D81057540"><span class="RefLink">16.2-2</span></a>).</p> </body>
+    </html>

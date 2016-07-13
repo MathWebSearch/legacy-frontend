@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 75: Monomiality Questions-&gt;75.4-4 TestMonomialQuick</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap75.html#X822E03EF7B8F92D3"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">75.4-4 <span class="Heading">TestMonomialQuick</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TestMonomialQuick</code>( <var class="Arg">chi</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TestMonomialQuick</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">TestMonomialQuick</code> does some cheap tests whether the irreducible character <var class="Arg">chi</var> or the group <var class="Arg">G</var>, respectively, is monomial. Here &quot;cheap&quot; means in particular that no computations of character tables are involved. The return value is a record with components</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">isMonomial</code></strong></dt><dd><p>either <code class="keyw">true</code> or <code class="keyw">false</code> or the string <code class="code">&quot;?&quot;</code>, depending on whether (non)monomiality could be proved, and</p>
+
+</dd><dt><strong class="Mark"><code class="code">comment</code></strong></dt><dd><p>a string telling the reason for the value of the <code class="code">isMonomial</code> component.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">A group <var class="Arg">G</var> is proved to be monomial by <code class="func">TestMonomialQuick</code> if <var class="Arg">G</var> is nilpotent or Sylow abelian by supersolvable, or if <var class="Arg">G</var> is solvable and its order is not divisible by the third power of a prime, Nonsolvable groups are proved to be nonmonomial by <code class="func">TestMonomialQuick</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">An irreducible character <var class="Arg">chi</var> is proved to be monomial if it is linear, or if its codegree is a prime power, or if its group knows to be monomial, or if the factor group modulo the kernel can be proved to be monomial by <code class="func">TestMonomialQuick</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TestMonomialQuick( Irr( S4 )[3] );</span>
+rec( comment := &quot;whole group is monomial&quot;, isMonomial := true )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TestMonomialQuick( S4 );</span>
+rec( comment := &quot;abelian by supersolvable group&quot;, isMonomial := true )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TestMonomialQuick( Sl23 );</span>
+rec( comment := &quot;no decision by cheap tests&quot;, isMonomial := &quot;?&quot; )
+</pre></div> </body>
+    </html>

@@ -1,0 +1,29 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.12 New Presentations and Presentations for Subgroups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X826604AA7F18BFA3"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">47.12 <span class="Heading">New Presentations and Presentations for Subgroups</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsomorphismFpGroup</code> (<a shape="rect" href="chap47_mj.html#X7F28268F850F454E"><span class="RefLink">47.11-1</span></a>) is also used to compute a new finitely presented group that is isomorphic to the given subgroup of a finitely presented group. (This is typically the only method to compute with subgroups of a finitely presented group.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=FreeGroup(2);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=f/[f.1^2,f.2^3,(f.1*f.2)^5];</span>
+&lt;fp group on the generators [ f1, f2 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">u:=Subgroup(g,[g.1*g.2]);</span>
+Group([ f1*f2 ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=IsomorphismFpGroup(u);</span>
+[ &lt;[ [ 1, 1 ] ]|f2^-1*f1^-1&gt; ] -&gt; [ F1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">new:=Range(hom);</span>
+&lt;fp group on the generators [ F1 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(GeneratorsOfGroup(new),i-&gt;PreImagesRepresentative(hom,i));</span>
+[ &lt;[ [ 1, 1 ] ]|f2^-1*f1^-1&gt; ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">When working with such homomorphisms, some subgroup elements are expressed as extremely long words in the group generators. Therefore the underlying words of subgroup generators stored in the isomorphism (as obtained by <code class="func">MappingGeneratorsImages</code> (<a shape="rect" href="chap40_mj.html#X863805187A24B5E3"><span class="RefLink">40.10-2</span></a>) and displayed when <code class="func">View</code> (<a shape="rect" href="chap6_mj.html#X851902C583B84CDC"><span class="RefLink">6.3-3</span></a>)ing the homomorphism) as well as preimages under the homomorphism are stored in the form of straight line program elements (see <a shape="rect" href="chap37_mj.html#X8188799182D82A92"><span class="RefLink">37.9</span></a>). These will behave like ordinary words and no extra treatment should be necessary.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r:=Range(hom).1^10;</span>
+F1^10
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">p:=PreImagesRepresentative(hom,r);</span>
+&lt;[ [ 1, 10 ] ]|(f2^-1*f1^-1)^10&gt;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If desired, it also is possible to convert these underlying words using <code class="func">EvalStraightLineProgElm</code> (<a shape="rect" href="chap37_mj.html#X7BEAE8AC809B27DC"><span class="RefLink">37.9-4</span></a>):</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r:=EvalStraightLineProgElm(UnderlyingElement(p));</span>
+(f2^-1*f1^-1)^10
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">p:=ElementOfFpGroup(FamilyObj(p),r);</span>
+(f2^-1*f1^-1)^10
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">(If you are only interested in a finitely presented group isomorphic to the given subgroup but not in the isomorphism, you may also use the functions <code class="func">PresentationViaCosetTable</code> (<a shape="rect" href="chap48_mj.html#X84E056C57AFEDEA8"><span class="RefLink">48.1-5</span></a>) and <code class="func">FpGroupPresentation</code> (<a shape="rect" href="chap48_mj.html#X7D6F40A87F24D3D6"><span class="RefLink">48.1-4</span></a>) (see <a shape="rect" href="chap48_mj.html#X867D00387957450F"><span class="RefLink">48.1</span></a>).)</p><p xmlns="http://www.w3.org/1999/xhtml">Homomorphisms can also be used to obtain an isomorphic finitely presented group with a (hopefully) simpler presentation.</p> </body>
+    </html>

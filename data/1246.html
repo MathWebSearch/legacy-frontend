@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.2-4 Idempotent</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X85D1071484CE004C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.2-4 Idempotent</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Idempotent</code>( <var class="Arg">im</var>, <var class="Arg">ker</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A transformation or <code class="keyw">fail</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Idempotent</code> returns the idempotent transformation with image set <var class="Arg">im</var> and flat kernel <var class="Arg">ker</var> if such a transformation exists and <code class="keyw">fail</code> if it does not.</p><p xmlns="http://www.w3.org/1999/xhtml">More specifically, a transformation is returned when the argument <var class="Arg">im</var> is a set of positive integers and <var class="Arg">ker</var> is the flat kernel of a transformation with rank equal to the length of <var class="Arg">im</var> and where <var class="Arg">im</var> has one element in every class of the kernel corresponding to <var class="Arg">ker</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that this is function does not always return the same transformation as <code class="code">TransformationByImageAndKernel</code> with the same arguments.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Idempotent([ 2, 4, 6, 7, 8, 10, 11 ],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 1, 2, 1, 3, 3, 4, 5, 1, 6, 6, 7, 5 ] );</span>
+Transformation( [ 8, 2, 8, 4, 4, 6, 7, 8, 10, 10, 11, 7 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TransformationByImageAndKernel([ 2, 4, 6, 7, 8, 10, 11 ],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 1, 2, 1, 3, 3, 4, 5, 1, 6, 6, 7, 5 ] );</span>
+Transformation( [ 2, 4, 2, 6, 6, 7, 8, 2, 10, 10, 11, 8 ] )
+</pre></div> </body>
+    </html>

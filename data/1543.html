@@ -1,0 +1,52 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 18: Cyclotomic Numbers-&gt;18.1-9 RoundCyc</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap18.html#X7808ECF37AA9004D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">18.1-9 RoundCyc</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RoundCyc</code>( <var class="Arg">cyc</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is a cyclotomic integer <math id="-9036002349714352757" display="inline" alttext="z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z</annotation>
+  </semantics>
+</math> (see <code class="func">IsIntegralCyclotomic</code> (<a shape="rect" href="chap18_mj.html#X869750DA81EA0E67"><span class="RefLink">18.1-4</span></a>)) near to the cyclotomic <var class="Arg">cyc</var> in the following sense: Let <code class="code">c</code> be the <math id="1678522940151498542" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th coefficient in the external representation (see <code class="func">CoeffsCyc</code> (<a shape="rect" href="chap18_mj.html#X7AE2933985BE4C3E"><span class="RefLink">18.1-10</span></a>)) of <var class="Arg">cyc</var>. Then the <math id="5070595872170236279" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th coefficient in the external representation of <math id="-1336261470875180823" display="inline" alttext="z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z</annotation>
+  </semantics>
+</math> is <code class="code">Int( c + 1/2 )</code> or <code class="code">Int( c - 1/2 )</code>, depending on whether <code class="code">c</code> is nonnegative or negative, respectively.</p><p xmlns="http://www.w3.org/1999/xhtml">Expressed in terms of the Zumbroich basis (see <a shape="rect" href="chap60_mj.html#X7D2421AC8491D2BE"><span class="RefLink">60.3</span></a>), rounding the coefficients of <var class="Arg">cyc</var> w.r.t. this basis to the nearest integer yields the coefficients of <math id="835508869894442422" display="inline" alttext="z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑧</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">z</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RoundCyc( E(5)+1/2*E(5)^2 ); RoundCyc( 2/3*E(7)+3/2*E(4) );</span>
+E(5)+E(5)^2
+-2*E(28)^3+E(28)^4-2*E(28)^11-2*E(28)^15-2*E(28)^19-2*E(28)^23
+ -2*E(28)^27
+</pre></div> </body>
+    </html>

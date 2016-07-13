@@ -1,0 +1,99 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.17 Monomial Orderings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X86E2ADEA784AD163"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">66.17 <span class="Heading">Monomial Orderings</span></h4><p xmlns="http://www.w3.org/1999/xhtml">It is often desirable to consider the monomials within a polynomial to be arranged with respect to a certain ordering. Such an ordering is called a <em>monomial ordering</em> if it is total, invariant under multiplication with other monomials and admits no infinite descending chains. For details on monomial orderings see <a shape="rect" href="chapBib_mj.html#biBcoxlittleoshea">[CLO97]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml">In <strong class="pkg">GAP</strong>, monomial orderings are represented by objects that provide a way to compare monomials (as polynomials as well as –for efficiency purposes within algorithms– in the internal representation as lists).</p><p xmlns="http://www.w3.org/1999/xhtml">Normally the ordering chosen should be <em>admissible</em>, i.e. it must be compatible with products: If <math id="-8367295872913822009" display="inline" alttext="a&amp;lt;b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">l</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.5">;</mo>
+      <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml">
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <times xref="p1.1.m1.1.7.2.1" id="p1.1.m1.1.7.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑡</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑏</ci>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a&amp;lt;b</annotation>
+  </semantics>
+</math> then <math id="-3334264180353214799" display="inline" alttext="ca&amp;lt;cb" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9">
+      <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+        <mo xref="p1.1.m1.1.9.2.1.cmml" id="p1.1.m1.1.9.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">a</mi>
+        <mo xref="p1.1.m1.1.9.2.1.cmml" id="p1.1.m1.1.9.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.9.2.1.cmml" id="p1.1.m1.1.9.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">l</mi>
+        <mo xref="p1.1.m1.1.9.2.1.cmml" id="p1.1.m1.1.9.2.1c">⁢</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.6">;</mo>
+      <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.3">
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">c</mi>
+        <mo xref="p1.1.m1.1.9.3.1.cmml" id="p1.1.m1.1.9.3.1">⁢</mo>
+        <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">b</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.9" id="p1.1.m1.1.9.1.cmml">
+        <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.2.cmml">
+          <times xref="p1.1.m1.1.9.2.1" id="p1.1.m1.1.9.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑎</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑡</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.3.cmml">
+          <times xref="p1.1.m1.1.9.3.1" id="p1.1.m1.1.9.3.1.cmml"/>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑐</ci>
+          <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑏</ci>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">ca&amp;lt;cb</annotation>
+  </semantics>
+</math> for all monomials <math id="4966056734718518373" display="inline" alttext="a,b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+      <mo id="p1.1.m1.1.2">,</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">b</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑏</ci>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a,b</annotation>
+  </semantics>
+</math> and <math id="3675985426780160642" display="inline" alttext="c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">c</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Each monomial ordering provides the two functions <code class="func">MonomialComparisonFunction</code> (<a shape="rect" href="chap66_mj.html#X7EDE941781BA7F8B"><span class="RefLink">66.17-5</span></a>) and <code class="func">MonomialExtrepComparisonFun</code> (<a shape="rect" href="chap66_mj.html#X7EDC3A457E7B591E"><span class="RefLink">66.17-6</span></a>) to compare monomials. These functions work as &quot;is less than&quot;, i.e. they return <code class="keyw">true</code> if and only if the left argument is smaller.</p> </body>
+    </html>

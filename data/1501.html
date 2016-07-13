@@ -1,0 +1,147 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 24: Matrices</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X812CCAB278643A59"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap24_mj.html#X812CCAB278643A59">24 <span class="Heading">Matrices</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X801E1B5D7EC8DDD3">24.1 <span class="Heading">InfoMatrix (Info Class)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X78EC82D27B4191DA">24.1-1 InfoMatrix</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X866E55A58164FAED">24.2 <span class="Heading">Categories of Matrices</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7E1AE46B862B185F">24.2-1 IsMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7CF42B8A845BC6A9">24.2-2 IsOrdinaryMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X86EC33E17DD12D0E">24.2-3 IsLieMatrix</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X7899335779A39A95">24.3 <span class="Heading">Operators for Matrices</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X7F5AD28E869B66CB">24.4 <span class="Heading">Properties and Attributes of Matrices</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X83A9DC2085D3A972">24.4-1 DimensionsMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X80AE547B8095A5CB">24.4-2 DefaultFieldOfMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X793D5E87870FFBCD">24.4-3 TraceMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X83045F6F82C180E1">24.4-4 DeterminantMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X84277D21848B7B7F">24.4-5 DeterminantMatDestructive</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7EEA7E7A7F6BE6F3">24.4-6 DeterminantMatDivFree</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X848B80437CE65FF3">24.4-7 IsMonomialMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7FF01BF686AD0623">24.4-8 IsDiagonalMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7ECFBD9F8664982B">24.4-9 IsUpperTriangularMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X81671CFD7CFE4819">24.4-10 IsLowerTriangularMat</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X823FB2398697B957">24.5 <span class="Heading">Matrix Constructions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7DB902CE848D1524">24.5-1 IdentityMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X86D343A77D9B3D4D">24.5-2 NullMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X8508A7EA812BA0CC">24.5-3 EmptyMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X81042E7A7F247ADE">24.5-4 DiagonalMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X806C62A67A7D5379">24.5-5 PermutationMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7C52A38C79C36C35">24.5-6 TransposedMatImmutable</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7DBB40847E2B6252">24.5-7 TransposedMatDestructive</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X8634C79E7DB22934">24.5-8 KroneckerProduct</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X845EC4D18054D140">24.5-9 ReflectionMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7DEBC9967DFDFC18">24.5-10 PrintArray</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X79CC5F568252D341">24.6 <span class="Heading">Random Matrices</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7F957F0280A87961">24.6-1 RandomMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7C939B4A7EDF015D">24.6-2 RandomInvertibleMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X84743732846ACB44">24.6-3 RandomUnimodularMat</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X85485DCE809E323A">24.7 <span class="Heading">Matrices Representing Linear Equations and the Gaussian Algorithm</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7B21AE7987D4FB31">24.7-1 RankMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7BA26C3387AB434E">24.7-2 TriangulizedMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X8384CA8E7B3850D3">24.7-3 TriangulizeMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7DA0D5887DB12DC4">24.7-4 NullspaceMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X87684B0F7AB7B7DB">24.7-5 NullspaceMatDestructive</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X838A519C7CD2969E">24.7-6 SolutionMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7A7880D27CE7C1FE">24.7-7 SolutionMatDestructive</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7AB5AC547809F999">24.7-8 BaseFixedSpace</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X871FCAA97C60B2BA">24.8 <span class="Heading">Eigenvectors and eigenvalues</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7A2462CC7B0C9D66">24.8-1 GeneralisedEigenvalues</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X845CA0457D65876D">24.8-2 GeneralisedEigenspaces</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X8413C6FB7CEE9D59">24.8-3 Eigenvalues</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7A6B047281B52FD7">24.8-4 Eigenspaces</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X8506584579D4EA18">24.8-5 Eigenvectors</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X7E5405D085661B29">24.9 <span class="Heading">Elementary Divisors</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7AC4D74F81908109">24.9-1 ElementaryDivisorsMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7AA1C9047B102204">24.9-2 ElementaryDivisorsTransformationsMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X85819D3F7A582180">24.9-3 DiagonalizeMat</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X7CA6B51D7AE3172B">24.10 <span class="Heading">Echelonized Matrices</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7D5D6BD07B7E981B">24.10-1 SemiEchelonMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X8251F6F57D346385">24.10-2 SemiEchelonMatDestructive</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7EFD1DB5861A54F0">24.10-3 SemiEchelonMatTransformation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X827D7971800DB661">24.10-4 SemiEchelonMats</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X808F493B839BC7A6">24.10-5 SemiEchelonMatsDestructive</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X86B0D4A886BC0C6E">24.11 <span class="Heading">Matrices as Basis of a Row Space</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7AD6B5F5794D9E46">24.11-1 BaseMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X78B094597E382A5F">24.11-2 BaseMatDestructive</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X78B94EFF87A455BE">24.11-3 BaseOrthogonalSpaceMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7AFF8BCF80C88B45">24.11-4 SumIntersectionMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X8245D54F7AC532EB">24.11-5 BaseSteinitzVectors</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X79D5E53685F0FBEE">24.12 <span class="Heading">Triangular Matrices</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X82B6B0298179D895">24.12-1 DiagonalOfMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X84A78C057F9DAE5E">24.12-2 UpperSubdiagonal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X84D74DEA798A9094">24.12-3 DepthOfUpperTriangularMatrix</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X85B403857F2855F7">24.13 <span class="Heading">Matrices as Linear Mappings</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X87FA0A727CDB060B">24.13-1 CharacteristicPolynomial</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X83F55D4E79BA5D1B">24.13-2 JordanDecomposition</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X85923C107A4569D0">24.13-3 BlownUpMat</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X82AC277D84EC5749">24.13-4 BlownUpVector</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X85A1026D7CB6ABAC">24.13-5 CompanionMat</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X873822B6830CE367">24.14 <span class="Heading">Matrices over Finite Fields</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7DED2522828B6C30">24.14-1 ImmutableMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X8587A62F818AA0D6">24.14-2 ConvertToMatrixRep</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X84A76F7A7B4166BC">24.14-3 ProjectiveOrder</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X847ADC6779E33A1C">24.14-4 SimultaneousEigenvalues</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X8593A5337D3B2C70">24.15 <span class="Heading">Inverse and Nullspace of an Integer Matrix Modulo an Ideal</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7D8D1E0E83C7F872">24.15-1 InverseMatMod</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X86AE919983B242E2">24.15-2 NullspaceModQ</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X787DF5F07DC7D86E">24.16 <span class="Heading">Special Multiplication Algorithms for Matrices over GF(2)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7C0C26027FAE0C83">24.16-1 PROD_GF2MAT_GF2MAT_SIMPLE</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X81965B7D7F45E088">24.16-2 PROD_GF2MAT_GF2MAT_ADVANCED</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap24_mj.html#X7F8A71F38201A250">24.17 <span class="Heading">Block Matrices</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X7D675B3C79CF8871">24.17-1 AsBlockMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X8633538685551E7A">24.17-2 BlockMatrix</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap24_mj.html#X83FAF4158180041F">24.17-3 MatrixByBlockMatrix</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">24 <span class="Heading">Matrices</span></h3><p xmlns="http://www.w3.org/1999/xhtml">Matrices are represented in <strong class="pkg">GAP</strong> by lists of row vectors (see <a shape="rect" href="chap23_mj.html#X82C7E6CF7BA03391"><span class="RefLink">23</span></a>) (for future changes to this policy see Chapter <a shape="rect" href="chap26_mj.html#X856C23B87E50F118"><span class="RefLink">26</span></a>). The vectors must all have the same length, and their elements must lie in a common ring. However, since checking rectangularness can be expensive functions and methods of operations for matrices often will not give an error message for non-rectangular lists of lists –in such cases the result is undefined.</p><p xmlns="http://www.w3.org/1999/xhtml">Because matrices are just a special case of lists, all operations and functions for lists are applicable to matrices also (see chapter <a shape="rect" href="chap21_mj.html#X7B256AE5780F140A"><span class="RefLink">21</span></a>). This especially includes accessing elements of a matrix (see <a shape="rect" href="chap21_mj.html#X7921047F83F5FA28"><span class="RefLink">21.3</span></a>), changing elements of a matrix (see <a shape="rect" href="chap21_mj.html#X8611EF768210625B"><span class="RefLink">21.4</span></a>), and comparing matrices (see <a shape="rect" href="chap21_mj.html#X8016D50F85147A77"><span class="RefLink">21.10</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Note that, since a matrix is a list of lists, the behaviour of <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) for matrices is just a special case of <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) for lists (see <a shape="rect" href="chap21_mj.html#X7ED7C0738495556F"><span class="RefLink">21.7</span></a>); called with an immutable matrix <var class="Arg">mat</var>, <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) returns a mutable matrix whose rows are identical to the rows of <var class="Arg">mat</var>. In particular the rows are still immutable. To get a matrix whose rows are mutable, one can use <code class="code">List( <var class="Arg">mat</var>, ShallowCopy )</code>.</p> </body>
+    </html>

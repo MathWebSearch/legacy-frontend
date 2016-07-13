@@ -1,0 +1,323 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.14-3 Multiplication of lists</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X84FDB95179BFE4CD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.14-3 <span class="Heading">Multiplication of lists</span></h5><p xmlns="http://www.w3.org/1999/xhtml">There are three possible computations that might be triggered by a multiplication involving a list in <code class="func">IsMultiplicativeGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X7FBCA5B58308C158"><span class="RefLink">21.12-2</span></a>). Namely, <math id="-4958624857150556357" display="inline" alttext="x*y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">*</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">y</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑦</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x*y</annotation>
+  </semantics>
+</math> might be</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">(I)</strong></dt><dd><p>the inner product <math id="-8251839272272655904" display="inline" alttext="x[1]*y[1]+x[2]*y[2]+\cdots+x[n]*y[n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.32.cmml" id="p1.1.m1.1.32">
+      <mrow xref="p1.1.m1.1.32.1.cmml" id="p1.1.m1.1.32.1">
+        <mrow xref="p1.1.m1.1.32.1.2.cmml" id="p1.1.m1.1.32.1.2">
+          <mrow xref="p1.1.m1.1.32.1.2.1.cmml" id="p1.1.m1.1.32.1.2.1">
+            <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+            <mo xref="p1.1.m1.1.32.1.2.1.1.cmml" id="p1.1.m1.1.32.1.2.1.1">⁢</mo>
+            <mrow xref="p1.1.m1.1.32.1.2.1.2.1.cmml" id="p1.1.m1.1.32.1.2.1.2">
+              <mo xref="p1.1.m1.1.32.1.2.1.2.1.1.cmml" id="p1.1.m1.1.2" stretchy="false">[</mo>
+              <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">1</mn>
+              <mo xref="p1.1.m1.1.32.1.2.1.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">]</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">*</mo>
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">y</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.32.1.1.cmml" id="p1.1.m1.1.32.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.32.1.3.1.cmml" id="p1.1.m1.1.32.1.3">
+          <mo xref="p1.1.m1.1.32.1.3.1.1.cmml" id="p1.1.m1.1.7" stretchy="false">[</mo>
+          <mn xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">1</mn>
+          <mo xref="p1.1.m1.1.32.1.3.1.1.cmml" id="p1.1.m1.1.9" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">+</mo>
+      <mrow xref="p1.1.m1.1.32.2.cmml" id="p1.1.m1.1.32.2">
+        <mrow xref="p1.1.m1.1.32.2.2.cmml" id="p1.1.m1.1.32.2.2">
+          <mrow xref="p1.1.m1.1.32.2.2.1.cmml" id="p1.1.m1.1.32.2.2.1">
+            <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">x</mi>
+            <mo xref="p1.1.m1.1.32.2.2.1.1.cmml" id="p1.1.m1.1.32.2.2.1.1">⁢</mo>
+            <mrow xref="p1.1.m1.1.32.2.2.1.2.1.cmml" id="p1.1.m1.1.32.2.2.1.2">
+              <mo xref="p1.1.m1.1.32.2.2.1.2.1.1.cmml" id="p1.1.m1.1.12" stretchy="false">[</mo>
+              <mn xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">2</mn>
+              <mo xref="p1.1.m1.1.32.2.2.1.2.1.1.cmml" id="p1.1.m1.1.14" stretchy="false">]</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">*</mo>
+          <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">y</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.32.2.1.cmml" id="p1.1.m1.1.32.2.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.32.2.3.1.cmml" id="p1.1.m1.1.32.2.3">
+          <mo xref="p1.1.m1.1.32.2.3.1.1.cmml" id="p1.1.m1.1.17" stretchy="false">[</mo>
+          <mn xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">2</mn>
+          <mo xref="p1.1.m1.1.32.2.3.1.1.cmml" id="p1.1.m1.1.19" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10a">+</mo>
+      <mi xref="p1.1.m1.1.21.cmml" id="p1.1.m1.1.21" mathvariant="normal">⋯</mi>
+      <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10b">+</mo>
+      <mrow xref="p1.1.m1.1.32.3.cmml" id="p1.1.m1.1.32.3">
+        <mrow xref="p1.1.m1.1.32.3.2.cmml" id="p1.1.m1.1.32.3.2">
+          <mrow xref="p1.1.m1.1.32.3.2.1.cmml" id="p1.1.m1.1.32.3.2.1">
+            <mi xref="p1.1.m1.1.23.cmml" id="p1.1.m1.1.23">x</mi>
+            <mo xref="p1.1.m1.1.32.3.2.1.1.cmml" id="p1.1.m1.1.32.3.2.1.1">⁢</mo>
+            <mrow xref="p1.1.m1.1.32.3.2.1.2.1.cmml" id="p1.1.m1.1.32.3.2.1.2">
+              <mo xref="p1.1.m1.1.32.3.2.1.2.1.1.cmml" id="p1.1.m1.1.24" stretchy="false">[</mo>
+              <mi xref="p1.1.m1.1.25.cmml" id="p1.1.m1.1.25">n</mi>
+              <mo xref="p1.1.m1.1.32.3.2.1.2.1.1.cmml" id="p1.1.m1.1.26" stretchy="false">]</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.27.cmml" id="p1.1.m1.1.27">*</mo>
+          <mi xref="p1.1.m1.1.28.cmml" id="p1.1.m1.1.28">y</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.32.3.1.cmml" id="p1.1.m1.1.32.3.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.32.3.3.1.cmml" id="p1.1.m1.1.32.3.3">
+          <mo xref="p1.1.m1.1.32.3.3.1.1.cmml" id="p1.1.m1.1.29" stretchy="false">[</mo>
+          <mi xref="p1.1.m1.1.30.cmml" id="p1.1.m1.1.30">n</mi>
+          <mo xref="p1.1.m1.1.32.3.3.1.1.cmml" id="p1.1.m1.1.31" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.32" id="p1.1.m1.1.32.cmml">
+        <plus xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml"/>
+        <apply xref="p1.1.m1.1.32.1" id="p1.1.m1.1.32.1.cmml">
+          <times xref="p1.1.m1.1.32.1.1" id="p1.1.m1.1.32.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.32.1.2" id="p1.1.m1.1.32.1.2.cmml">
+            <times xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+            <apply xref="p1.1.m1.1.32.1.2.1" id="p1.1.m1.1.32.1.2.1.cmml">
+              <times xref="p1.1.m1.1.32.1.2.1.1" id="p1.1.m1.1.32.1.2.1.1.cmml"/>
+              <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+              <apply xref="p1.1.m1.1.32.1.2.1.2" id="p1.1.m1.1.32.1.2.1.2.1.cmml">
+                <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.32.1.2.1.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+                <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">1</cn>
+              </apply>
+            </apply>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑦</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.32.1.3" id="p1.1.m1.1.32.1.3.1.cmml">
+            <csymbol xref="p1.1.m1.1.7" id="p1.1.m1.1.32.1.3.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <cn xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.32.2" id="p1.1.m1.1.32.2.cmml">
+          <times xref="p1.1.m1.1.32.2.1" id="p1.1.m1.1.32.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.32.2.2" id="p1.1.m1.1.32.2.2.cmml">
+            <times xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml"/>
+            <apply xref="p1.1.m1.1.32.2.2.1" id="p1.1.m1.1.32.2.2.1.cmml">
+              <times xref="p1.1.m1.1.32.2.2.1.1" id="p1.1.m1.1.32.2.2.1.1.cmml"/>
+              <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑥</ci>
+              <apply xref="p1.1.m1.1.32.2.2.1.2" id="p1.1.m1.1.32.2.2.1.2.1.cmml">
+                <csymbol xref="p1.1.m1.1.12" id="p1.1.m1.1.32.2.2.1.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+                <cn xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml" type="integer">2</cn>
+              </apply>
+            </apply>
+            <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝑦</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.32.2.3" id="p1.1.m1.1.32.2.3.1.cmml">
+            <csymbol xref="p1.1.m1.1.17" id="p1.1.m1.1.32.2.3.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <cn xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml" type="integer">2</cn>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.21" id="p1.1.m1.1.21.cmml">⋯</ci>
+        <apply xref="p1.1.m1.1.32.3" id="p1.1.m1.1.32.3.cmml">
+          <times xref="p1.1.m1.1.32.3.1" id="p1.1.m1.1.32.3.1.cmml"/>
+          <apply xref="p1.1.m1.1.32.3.2" id="p1.1.m1.1.32.3.2.cmml">
+            <times xref="p1.1.m1.1.27" id="p1.1.m1.1.27.cmml"/>
+            <apply xref="p1.1.m1.1.32.3.2.1" id="p1.1.m1.1.32.3.2.1.cmml">
+              <times xref="p1.1.m1.1.32.3.2.1.1" id="p1.1.m1.1.32.3.2.1.1.cmml"/>
+              <ci xref="p1.1.m1.1.23" id="p1.1.m1.1.23.cmml">𝑥</ci>
+              <apply xref="p1.1.m1.1.32.3.2.1.2" id="p1.1.m1.1.32.3.2.1.2.1.cmml">
+                <csymbol xref="p1.1.m1.1.24" id="p1.1.m1.1.32.3.2.1.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+                <ci xref="p1.1.m1.1.25" id="p1.1.m1.1.25.cmml">𝑛</ci>
+              </apply>
+            </apply>
+            <ci xref="p1.1.m1.1.28" id="p1.1.m1.1.28.cmml">𝑦</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.32.3.3" id="p1.1.m1.1.32.3.3.1.cmml">
+            <csymbol xref="p1.1.m1.1.29" id="p1.1.m1.1.32.3.3.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <ci xref="p1.1.m1.1.30" id="p1.1.m1.1.30.cmml">𝑛</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x[1]*y[1]+x[2]*y[2]+\cdots+x[n]*y[n]</annotation>
+  </semantics>
+</math>, where summands are omitted for which the entry in <math id="-7907169388645951702" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> or <math id="-3149474983477590720" display="inline" alttext="y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑦</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">y</annotation>
+  </semantics>
+</math> is unbound (if this leaves no summand then the multiplication is an error), or</p>
+
+</dd><dt><strong class="Mark">(L)</strong></dt><dd><p>the left scalar multiple, i.e., a list whose entry at position <math id="4324096998484124080" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> is <math id="-6405251559596651790" display="inline" alttext="x*y[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">*</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">y</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.7.3.1.cmml" id="p1.1.m1.1.7.3">
+        <mo xref="p1.1.m1.1.7.3.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">[</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">i</mi>
+        <mo xref="p1.1.m1.1.7.3.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑦</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.7.3" id="p1.1.m1.1.7.3.1.cmml">
+          <csymbol xref="p1.1.m1.1.4" id="p1.1.m1.1.7.3.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑖</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x*y[i]</annotation>
+  </semantics>
+</math> if <math id="3524515316280815202" display="inline" alttext="y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑦</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">y</annotation>
+  </semantics>
+</math> is bound at position <math id="4692555626033765692" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>, and is unbound if not, or</p>
+
+</dd><dt><strong class="Mark">(R)</strong></dt><dd><p>the right scalar multiple, i.e., a list whose entry at position <math id="5673625493840021496" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> is <math id="-1606616778458664350" display="inline" alttext="x[i]*y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.7.1.2.1.cmml" id="p1.1.m1.1.7.1.2">
+          <mo xref="p1.1.m1.1.7.1.2.1.1.cmml" id="p1.1.m1.1.2" stretchy="false">[</mo>
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+          <mo xref="p1.1.m1.1.7.1.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">*</mo>
+      <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">y</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <times xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+          <apply xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.2.1.cmml">
+            <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.7.1.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑦</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x[i]*y</annotation>
+  </semantics>
+</math> if <math id="3120487256476339037" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> is bound at position <math id="-5292001865847187009" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>, and is unbound if not.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">Our aim is to generalize the basic arithmetic of simple row vectors and matrices, so we first summarize the situations that shall be covered.</p><div class="pcenter" xmlns="http://www.w3.org/1999/xhtml"><table class="GAPDocTable"><tbody><tr><td colspan="1" rowspan="1" class="tdcenter"/><td colspan="1" rowspan="1" class="tdcenter">scl</td><td colspan="1" rowspan="1" class="tdcenter">vec</td><td colspan="1" rowspan="1" class="tdcenter">mat</td></tr><tr><td colspan="1" rowspan="1" class="tdcenter">scl</td><td colspan="1" rowspan="1" class="tdcenter"/><td colspan="1" rowspan="1" class="tdcenter">(L)</td><td colspan="1" rowspan="1" class="tdcenter">(L)</td></tr><tr><td colspan="1" rowspan="1" class="tdcenter">vec</td><td colspan="1" rowspan="1" class="tdcenter">(R)</td><td colspan="1" rowspan="1" class="tdcenter">(I)</td><td colspan="1" rowspan="1" class="tdcenter">(I)</td></tr><tr><td colspan="1" rowspan="1" class="tdcenter">mat</td><td colspan="1" rowspan="1" class="tdcenter">(R)</td><td colspan="1" rowspan="1" class="tdcenter">(R)</td><td colspan="1" rowspan="1" class="tdcenter">(R)</td></tr></tbody></table><br/><p> </p><br/>
+</div><p xmlns="http://www.w3.org/1999/xhtml">This means for example that the product of a scalar (scl) with a vector (vec) or a matrix (mat) is computed according to (L). Note that this is asymmetric.</p><p xmlns="http://www.w3.org/1999/xhtml">Now we can state the general multiplication rules.</p><p xmlns="http://www.w3.org/1999/xhtml">If exactly one argument is in <code class="func">IsMultiplicativeGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X7FBCA5B58308C158"><span class="RefLink">21.12-2</span></a>) then we regard the other argument (which is then neither a list nor a domain) as a scalar, and specify result (L) or (R), depending on ordering.</p><p xmlns="http://www.w3.org/1999/xhtml">In the remaining cases, both <math id="8383030240092715525" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
+  </semantics>
+</math> and <math id="-8650398427665518899" display="inline" alttext="y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑦</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">y</annotation>
+  </semantics>
+</math> are in <code class="func">IsMultiplicativeGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X7FBCA5B58308C158"><span class="RefLink">21.12-2</span></a>), and we distinguish the possibilities by their multiplicative nesting depths. An argument with <em>odd</em> multiplicative nesting depth is regarded as a vector, and an argument with <em>even</em> multiplicative nesting depth is regarded as a scalar or a matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">So if both arguments have odd multiplicative nesting depth, we specify result (I).</p><p xmlns="http://www.w3.org/1999/xhtml">If exactly one argument has odd nesting depth, the other is treated as a scalar if it has lower multiplicative nesting depth, and as a matrix otherwise. In the former case, we specify result (L) or (R), depending on ordering; in the latter case, we specify result (L) or (I), depending on ordering.</p><p xmlns="http://www.w3.org/1999/xhtml">We are left with the case that each argument has even multiplicative nesting depth. If the two depths are equal, we treat the computation as a matrix product, and specify result (R). Otherwise, we treat the less deeply nested argument as a scalar and the other as a matrix, and specify result (L) or (R), depending on ordering.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ (), (2,3), (1,2), (1,2,3), (1,3,2), (1,3) ] * (1,4);</span>
+[ (1,4), (1,4)(2,3), (1,2,4), (1,2,3,4), (1,3,2,4), (1,3,4) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ 1, 2, , 4 ] * 2;</span>
+[ 2, 4,, 8 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ 1, 2, 3 ] * [ 1, 3, 5, 7 ];</span>
+22
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:= [ [ 1, 2 ], 3 ];;  m * m;</span>
+[ [ 7, 8 ], [ [ 3, 6 ], 9 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m * m = [ m[1] * m, m[2] * m ];</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n:= [ 1, [ 2, 3 ] ];;  n * n;</span>
+14
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n * n = n[1] * n[1] + n[2] * n[2];</span>
+true
+</pre></div> </body>
+    </html>

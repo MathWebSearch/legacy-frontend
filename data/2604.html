@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.9-6 DimensionOfVectors</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X8534A750878478D0"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.9-6 DimensionOfVectors</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DimensionOfVectors</code>( <var class="Arg">M</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a left module <var class="Arg">M</var> that consists of row vectors (see <code class="func">IsRowModule</code> (<a shape="rect" href="chap57_mj.html#X7C8F844783F4FA09"><span class="RefLink">57.3-6</span></a>)), <code class="func">DimensionOfVectors</code> returns the common length of all row vectors in <var class="Arg">M</var>. For a left module <var class="Arg">M</var> that consists of matrices (see <code class="func">IsMatrixModule</code> (<a shape="rect" href="chap57_mj.html#X81FCC1D780435CF1"><span class="RefLink">57.3-7</span></a>)), <code class="func">DimensionOfVectors</code> returns the common matrix dimensions (see <code class="func">DimensionsMat</code> (<a shape="rect" href="chap24_mj.html#X83A9DC2085D3A972"><span class="RefLink">24.4-1</span></a>)) of all matrices in <var class="Arg">M</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DimensionOfVectors( GF(2)^5 );</span>
+5
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DimensionOfVectors( GF(2)^[2,3] );</span>
+[ 2, 3 ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,225 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.15-5 AbelianInvariantsNormalClosureFpGroupRrs</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X801635B28079E56A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">47.15-5 AbelianInvariantsNormalClosureFpGroupRrs</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AbelianInvariantsNormalClosureFpGroupRrs</code>( <var class="Arg">G</var>, <var class="Arg">H</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">uses the Reduced Reidemeister-Schreier method to compute the abelian invariants of the normal closure of a subgroup <var class="Arg">H</var> of a finitely presented group <var class="Arg">G</var>. See <a shape="rect" href="chap48_mj.html#X8118FECE7AD1879B"><span class="RefLink">48.2</span></a> for details on the different strategies.</p><p xmlns="http://www.w3.org/1999/xhtml">The following example shows a calculation for the Coxeter group <math id="3069637904462152352" display="inline" alttext="B_{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B_{1}</annotation>
+  </semantics>
+</math>. This calculation and a similar one for <math id="-635750405965594988" display="inline" alttext="B_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">0</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">0</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B_{0}</annotation>
+  </semantics>
+</math> have been used to prove that <math id="8545944219141861770" display="inline" alttext="B_{1}^{\prime}/B_{1}^{\prime\prime}\cong Z_{2}^{9}\times Z^{3}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">
+      <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.1">
+        <msubsup xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1.1">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">1</mn>
+          <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">′</mo>
+        </msubsup>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">/</mo>
+        <msubsup xref="p1.1.m1.1.15.1.2.cmml" id="p1.1.m1.1.15.1.2">
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">B</mi>
+          <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">1</mn>
+          <mi xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">′′</mi>
+        </msubsup>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">≅</mo>
+      <mrow xref="p1.1.m1.1.15.2.cmml" id="p1.1.m1.1.15.2">
+        <msubsup xref="p1.1.m1.1.15.2.1.cmml" id="p1.1.m1.1.15.2.1">
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">Z</mi>
+          <mn xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">2</mn>
+          <mn xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">9</mn>
+        </msubsup>
+        <mo xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">×</mo>
+        <msup xref="p1.1.m1.1.15.2.2.cmml" id="p1.1.m1.1.15.2.2">
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">Z</mi>
+          <mn xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">3</mn>
+        </msup>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">
+        <approx xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+        <apply xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.cmml">
+          <divide xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+          <apply xref="p1.1.m1.1.15.1.1" id="p1.1.m1.1.15.1.1.cmml">
+            <csymbol id="p1.1.m1.1.15.1.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.15.1.1.2.cmml">
+              <csymbol id="p1.1.m1.1.15.1.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+              <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">1</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">′</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.15.1.2" id="p1.1.m1.1.15.1.2.cmml">
+            <csymbol id="p1.1.m1.1.15.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.15.1.2.2.cmml">
+              <csymbol id="p1.1.m1.1.15.1.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐵</ci>
+              <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">1</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">′′</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.15.2" id="p1.1.m1.1.15.2.cmml">
+          <times xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml"/>
+          <apply xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.cmml">
+            <csymbol id="p1.1.m1.1.15.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.15.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.15.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑍</ci>
+              <cn xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml" type="integer">2</cn>
+            </apply>
+            <cn xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.cmml" type="integer">9</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.15.2.2" id="p1.1.m1.1.15.2.2.cmml">
+            <csymbol id="p1.1.m1.1.15.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑍</ci>
+            <cn xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml" type="integer">3</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B_{1}^{\prime}/B_{1}^{\prime\prime}\cong Z_{2}^{9}\times Z^{3}</annotation>
+  </semantics>
+</math> and <math id="-1046539783655525907" display="inline" alttext="B_{0}^{\prime}/B_{0}^{\prime\prime}\cong Z_{2}^{91}\times Z^{27}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">
+      <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.1">
+        <msubsup xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1.1">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+          <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">0</mn>
+          <mo xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">′</mo>
+        </msubsup>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">/</mo>
+        <msubsup xref="p1.1.m1.1.15.1.2.cmml" id="p1.1.m1.1.15.1.2">
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">B</mi>
+          <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">0</mn>
+          <mi xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">′′</mi>
+        </msubsup>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">≅</mo>
+      <mrow xref="p1.1.m1.1.15.2.cmml" id="p1.1.m1.1.15.2">
+        <msubsup xref="p1.1.m1.1.15.2.1.cmml" id="p1.1.m1.1.15.2.1">
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">Z</mi>
+          <mn xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">2</mn>
+          <mn xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">91</mn>
+        </msubsup>
+        <mo xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">×</mo>
+        <msup xref="p1.1.m1.1.15.2.2.cmml" id="p1.1.m1.1.15.2.2">
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">Z</mi>
+          <mn xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">27</mn>
+        </msup>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">
+        <approx xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+        <apply xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.cmml">
+          <divide xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+          <apply xref="p1.1.m1.1.15.1.1" id="p1.1.m1.1.15.1.1.cmml">
+            <csymbol id="p1.1.m1.1.15.1.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.15.1.1.2.cmml">
+              <csymbol id="p1.1.m1.1.15.1.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+              <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">0</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">′</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.15.1.2" id="p1.1.m1.1.15.1.2.cmml">
+            <csymbol id="p1.1.m1.1.15.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.15.1.2.2.cmml">
+              <csymbol id="p1.1.m1.1.15.1.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐵</ci>
+              <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">0</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">′′</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.15.2" id="p1.1.m1.1.15.2.cmml">
+          <times xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml"/>
+          <apply xref="p1.1.m1.1.15.2.1" id="p1.1.m1.1.15.2.1.cmml">
+            <csymbol id="p1.1.m1.1.15.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.15.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.15.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑍</ci>
+              <cn xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml" type="integer">2</cn>
+            </apply>
+            <cn xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.cmml" type="integer">91</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.15.2.2" id="p1.1.m1.1.15.2.2.cmml">
+            <csymbol id="p1.1.m1.1.15.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑍</ci>
+            <cn xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml" type="integer">27</cn>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B_{0}^{\prime}/B_{0}^{\prime\prime}\cong Z_{2}^{91}\times Z^{27}</annotation>
+  </semantics>
+</math> as stated in in <a shape="rect" href="chapBib_mj.html#biBFJNT95">[FJNT95, Proposition 5]</a>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># Define the Coxeter group E1.</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">F := FreeGroup( &quot;x1&quot;, &quot;x2&quot;, &quot;x3&quot;, &quot;x4&quot;, &quot;x5&quot; );</span>
+&lt;free group on the generators [ x1, x2, x3, x4, x5 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x1 := F.1;; x2 := F.2;; x3 := F.3;; x4 := F.4;; x5 := F.5;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rels := [ x1^2, x2^2, x3^2, x4^2, x5^2,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"> (x1 * x3)^2, (x2 * x4)^2, (x1 * x2)^3, (x2 * x3)^3, (x3 * x4)^3,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"> (x4 * x1)^3, (x1 * x5)^3, (x2 * x5)^2, (x3 * x5)^3, (x4 * x5)^2,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"> (x1 * x2 * x3 * x4 * x3 * x2)^2 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">E1 := F / rels;</span>
+&lt;fp group on the generators [ x1, x2, x3, x4, x5 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x1 := E1.1;; x2 := E1.2;; x3 := E1.3;; x4 := E1.4;; x5 := E1.5;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># Get normal subgroup generators for B1.</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := Subgroup( E1, [ x5 * x2^-1, x5 * x4^-1 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># Compute the abelian invariants of B1/B1'.</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AbelianInvariantsNormalClosureFpGroup( E1, H );</span>
+[ 2, 2, 2, 2, 2, 2, 2, 2 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># Compute a presentation for B1.</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := PresentationNormalClosure( E1, H );</span>
+&lt;presentation with 18 gens and 46 rels of total length 132&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SimplifyPresentation( P );</span>
+#I  there are 8 generators and 30 relators of total length 148
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B1 := FpGroupPresentation( P );</span>
+&lt;fp group on the generators [ _x1, _x2, _x3, _x4, _x6, _x7, _x8, _x11 
+ ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># Compute normal subgroup generators for B1'.</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens := GeneratorsOfGroup( B1 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">numgens := Length( gens );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">comms := [ ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [ 1 .. numgens - 1 ] do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    for j in [i+1 .. numgens ] do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        Add( comms, Comm( gens[i], gens[j] ) );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    od;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">od;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># Compute the abelian invariants of B1'/B1&quot;.</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">K := Subgroup( B1, comms );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AbelianInvariantsNormalClosureFpGroup( B1, K );</span>
+[ 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2 ]
+</pre></div> </body>
+    </html>

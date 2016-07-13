@@ -1,0 +1,24 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.1-2 IsDenseList</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X870AA9D8798C93DD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.1-2 IsDenseList</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsDenseList</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A list is <em>dense</em> if it has no holes, i.e., contains an element at every position up to the length. It is absolutely legal to have lists with holes. They are created by leaving the entry between the commas empty. Holes at the end of a list are ignored. Lists with holes are sometimes convenient when the list represents a mapping from a finite, but not consecutive, subset of the positive integers.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsDenseList( [ 1, 2, 3 ] );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := [ , 4, 9,, 25,, 49,,,, 121 ];;  IsDenseList( l );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l[3];</span>
+9
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l[4];</span>
+List Element: &lt;list&gt;[4] must have an assigned value
+not in any function
+Entering break read-eval-print loop ...
+you can 'quit;' to quit to outer loop, or
+you can 'return;' after assigning a value to continue
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">l[4] := 16;;  # assigning a value</span>
+<span class="GAPbrkprompt">brk&gt;</span> <span class="GAPinput">return;       # to escape the break-loop</span>
+16
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"/>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Observe that requesting the value of <code class="code">l[4]</code>, which was not assigned, caused the entry of a <code class="keyw">break</code>-loop (see Section <a shape="rect" href="chap6_mj.html#X8593B49F8705B486"><span class="RefLink">6.4</span></a>). After assigning a value and typing <code class="code">return;</code>, <strong class="pkg">GAP</strong> is finally able to comply with our request (by responding with <code class="code">16</code>).</p> </body>
+    </html>

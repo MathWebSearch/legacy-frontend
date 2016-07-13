@@ -1,0 +1,22 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 10: Streams-&gt;10.7-2 OutputTextString</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap10.html#X7FEDA5167979B74D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">10.7-2 OutputTextString</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OutputTextString</code>( <var class="Arg">list</var>, <var class="Arg">append</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns an output stream that puts all received characters into the list <var class="Arg">list</var>. If <var class="Arg">append</var> is <code class="keyw">false</code>, then the list is emptied first, otherwise received characters are added at the end of the list.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># read input from a string</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">input := InputTextString( &quot;Hallo\nYou\n&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReadLine(input);</span>
+&quot;Hallo\n&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReadLine(input);</span>
+&quot;You\n&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># print to a string</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">str := &quot;&quot;;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">out := OutputTextString( str, true );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrintTo( out, 1, &quot;\n&quot;, (1,2,3,4)(5,6), &quot;\n&quot; );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CloseStream(out);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( str );</span>
+1
+(1,2,3,4)(5,6)
+</pre></div> </body>
+    </html>

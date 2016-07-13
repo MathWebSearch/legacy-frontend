@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.3-4 Print</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X7AFA64D97A1F39A3"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.3-4 Print</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Print</code>( <var class="Arg">obj1</var>, <var class="Arg">obj2</var>, <var class="Arg">...</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Also <code class="func">Print</code> shows the objects <var class="Arg">obj1</var>, <var class="Arg">obj2</var>... etc. on the standard output. The difference compared to <code class="func">View</code> (<a shape="rect" href="chap6_mj.html#X851902C583B84CDC"><span class="RefLink">6.3-3</span></a>) is in general that the shown form is not required to be short, and that in many cases the form shown by <code class="func">Print</code> is <strong class="pkg">GAP</strong> readable.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">z:= Z(2);</span>
+Z(2)^0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">v:= [ z, z, z, z, z, z, z ];</span>
+[ Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConvertToVectorRep(v);; v;</span>
+&lt;a GF2 vector of length 7&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( v, &quot;\n&quot; );</span>
+[ Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Another difference is that <code class="func">Print</code> shows strings without the enclosing quotes, so <code class="func">Print</code> can be used to produce formatted text on the standard output (see also chapter <a shape="rect" href="chap27_mj.html#X7D28329B7EDB8F47"><span class="RefLink">27</span></a>). Some characters preceded by a backslash, such as <code class="code">\n</code>, are processed specially (see chapter <a shape="rect" href="chap27_mj.html#X82E5F5AB818F32DB"><span class="RefLink">27.2</span></a>). <code class="func">PrintTo</code> (<a shape="rect" href="chap9_mj.html#X86956C577FFEE1F9"><span class="RefLink">9.7-3</span></a>) can be used to print to a file.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in [1..5] do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">     Print( i, &quot; &quot;, i^2, &quot; &quot;, i^3, &quot;\n&quot; );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">   od;</span>
+1 1 1
+2 4 8
+3 9 27
+4 16 64
+5 25 125
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= SmallGroup(12,5);</span>
+&lt;pc group of size 12 with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( g, &quot;\n&quot; );</span>
+Group( [ f1, f2, f3 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">View( g );  Print( &quot;\n&quot; );</span>
+&lt;pc group of size 12 with 3 generators&gt;
+</pre></div> </body>
+    </html>

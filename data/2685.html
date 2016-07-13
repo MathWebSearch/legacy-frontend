@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.7-2 DegreeOfPartialPermSemigroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X7D7F0BAB82F0D820"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.7-2 DegreeOfPartialPermSemigroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DegreeOfPartialPermSemigroup</code>( <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CodegreeOfPartialPermSemigroup</code>( <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RankOfPartialPermSemigroup</code>( <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A non-negative integer.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>degree</em> of a partial permutation semigroup <var class="Arg">S</var> is the largest degree of any partial permutation in <var class="Arg">S</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>codegree</em> of a partial permutation semigroup <var class="Arg">S</var> is the largest positive integer in its image.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>rank</em> of a partial permutation semigroup <var class="Arg">S</var> is the number of points on which it acts.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := Semigroup( PartialPerm( [ 1, 5 ], [ 10000, 3 ] ) );</span>
+&lt;commutative partial perm semigroup of rank 2 with 1 generator&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DegreeOfPartialPermSemigroup(S);</span>
+5
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CodegreeOfPartialPermSemigroup(S);</span>
+10000
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RankOfPartialPermSemigroup(S);</span>
+2</pre></div> </body>
+    </html>

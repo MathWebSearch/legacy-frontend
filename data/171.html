@@ -1,0 +1,22 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.4-2 ExponentSumWord</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X7F5ED4357A9C12E6"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">37.4-2 ExponentSumWord</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ExponentSumWord</code>( <var class="Arg">w</var>, <var class="Arg">gen</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For an associative word <var class="Arg">w</var> and a generator <var class="Arg">gen</var>, <code class="func">ExponentSumWord</code> returns the number of times <var class="Arg">gen</var> appears in <var class="Arg">w</var> minus the number of times its inverse appears in <var class="Arg">w</var>. If both <var class="Arg">gen</var> and its inverse do not occur in <var class="Arg">w</var> then <math id="3696188478962909855" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+    </annotation-xml>
+  </semantics>
+</math> is returned. <var class="Arg">gen</var> may also be the inverse of a generator.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w;  ExponentSumWord( w, a );  ExponentSumWord( w, b );</span>
+a^5*b*a^2*b^-4*a
+8
+-3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ExponentSumWord( (a*b*a^-1)^3, a );  ExponentSumWord( w, b^-1 );</span>
+0
+3
+</pre></div> </body>
+    </html>

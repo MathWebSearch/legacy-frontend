@@ -1,0 +1,108 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.17-2 BlockMatrix</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X8633538685551E7A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.17-2 BlockMatrix</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ BlockMatrix</code>( <var class="Arg">blocks</var>, <var class="Arg">nrb</var>, <var class="Arg">ncb</var>[, <var class="Arg">rpb</var>, <var class="Arg">cpb</var>, <var class="Arg">zero</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">BlockMatrix</code> returns an immutable matrix in the sparse representation <code class="code">IsBlockMatrixRep</code>. The nonzero blocks are described by the list <var class="Arg">blocks</var> of triples <math id="7303304766759476735" display="inline" alttext="[\textit{i},\textit{j},M(i,j)]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mtext xref="p1.1.m1.1.2.1a.cmml" id="p1.1.m1.1.2.1">𝑖</mtext>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝑗</mtext>
+      <mo id="p1.1.m1.1.5">,</mo>
+      <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">M</mi>
+        <mo xref="p1.1.m1.1.13.2.1.cmml" id="p1.1.m1.1.13.2.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.13.2.2.1.cmml" id="p1.1.m1.1.13.2.2">
+          <mo id="p1.1.m1.1.7" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">i</mi>
+          <mo id="p1.1.m1.1.9">,</mo>
+          <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">j</mi>
+          <mo id="p1.1.m1.1.11" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo id="p1.1.m1.1.12" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.13" id="p1.1.m1.1.13.1.cmml">
+        <mtext xref="p1.1.m1.1.13" id="p1.1.m1.1.2.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">i</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.13" id="p1.1.m1.1.4.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">j</span>
+        </mtext>
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.2.cmml">
+          <times xref="p1.1.m1.1.13.2.1" id="p1.1.m1.1.13.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑀</ci>
+          <interval xref="p1.1.m1.1.13.2.2" id="p1.1.m1.1.13.2.2.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑖</ci>
+            <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑗</ci>
+          </interval>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[\textit{i},\textit{j},M(i,j)]</annotation>
+  </semantics>
+</math> each consisting of a matrix <math id="-1045636373585529912" display="inline" alttext="M(i,j)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2">
+        <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+        <mo id="p1.1.m1.1.4">,</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">j</mi>
+        <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+        <interval xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.1.cmml" closure="open">
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑗</ci>
+        </interval>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M(i,j)</annotation>
+  </semantics>
+</math> and its block coordinates in the block matrix to be constructed. All matrices <math id="-776453504726081904" display="inline" alttext="M(i,j)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2">
+        <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">i</mi>
+        <mo id="p1.1.m1.1.4">,</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">j</mi>
+        <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+        <interval xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.1.cmml" closure="open">
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑖</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑗</ci>
+        </interval>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M(i,j)</annotation>
+  </semantics>
+</math> must have the same dimensions. As usual the first coordinate specifies the row and the second one the column. The resulting matrix has <var class="Arg">nrb</var> row blocks and <var class="Arg">ncb</var> column blocks.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">blocks</var> is empty (i.e., if the matrix is a zero matrix) then the dimensions of the blocks must be entered as <var class="Arg">rpb</var> and <var class="Arg">cpb</var>, and the zero element as <var class="Arg">zero</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that all blocks must be ordinary matrices (see <code class="func">IsOrdinaryMatrix</code> (<a shape="rect" href="chap24_mj.html#X7CF42B8A845BC6A9"><span class="RefLink">24.2-2</span></a>)), and also the block matrix is an ordinary matrix.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M := BlockMatrix([[1,1,[[1, 2],[ 3, 4]]],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">                     [1,2,[[9,10],[11,12]]],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">                     [2,2,[[5, 6],[ 7, 8]]]],2,2);</span>
+&lt;block matrix of dimensions (2*2)x(2*2)&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display(M);</span>
+[ [   1,   2,   9,  10 ],
+  [   3,   4,  11,  12 ],
+  [   0,   0,   5,   6 ],
+  [   0,   0,   7,   8 ] ]
+</pre></div> </body>
+    </html>

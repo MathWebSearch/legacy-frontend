@@ -1,0 +1,22 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.1-6 SimplifiedFpGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X7E1F2658827FC228"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.1-6 SimplifiedFpGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SimplifiedFpGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">applies Tietze transformations to a copy of the presentation of the given finitely presented group <var class="Arg">G</var> in order to reduce it with respect to the number of generators, the number of relators, and the relator lengths.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SimplifiedFpGroup</code> returns a group isomorphic to the given one with a presentation which has been tried to simplify via Tietze transformations.</p><p xmlns="http://www.w3.org/1999/xhtml">If the connection to the original group is important, then the operation <code class="func">IsomorphismSimplifiedFpGroup</code> (<a shape="rect" href="chap47_mj.html#X78D87FA68233C401"><span class="RefLink">47.12-1</span></a>) should be used instead.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">F6 := FreeGroup( 6, &quot;G&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := F6 / [ F6.1^2, F6.2^2, F6.4*F6.6^-1, F6.5^2, F6.6^2,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">F6.1*F6.2^-1*F6.3, F6.1*F6.5*F6.3^-1, F6.2*F6.4^-1*F6.3,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">F6.3*F6.4*F6.5^-1, F6.1*F6.6*F6.3^-2, F6.3^4 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := SimplifiedFpGroup( G );</span>
+&lt;fp group on the generators [ G1, G3 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RelatorsOfFpGroup( H );</span>
+[ G1^2, (G1*G3^-1)^2, G3^4 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In fact, the command</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+H := SimplifiedFpGroup( G );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">is an abbreviation of the command sequence</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+P := PresentationFpGroup( G, 0 );;
+SimplifyPresentation( P );
+H := FpGroupPresentation( P );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">which applies a rather simple-minded strategy of Tietze transformations to the intermediate presentation <var class="Arg">P</var>. If, for some concrete group, the resulting presentation is unsatisfying, then you should try a more sophisticated, interactive use of the available Tietze transformation commands (see <a shape="rect" href="chap48_mj.html#X829B634286471AB7"><span class="RefLink">48.6</span></a>).</p> </body>
+    </html>

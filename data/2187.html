@@ -1,0 +1,29 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.9-8 DecomposedFixedPointVector</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X80890C247EB1E35C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.9-8 DecomposedFixedPointVector</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DecomposedFixedPointVector</code>( <var class="Arg">tom</var>, <var class="Arg">fix</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">tom</var> be the table of marks of the group <math id="-7987869056957464385" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, say, and let <var class="Arg">fix</var> be a vector of fixed point numbers w.r.t. an action of <math id="6292983678948153406" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, i.e., a vector which contains for each class of subgroups the number of fixed points under the given action. <code class="func">DecomposedFixedPointVector</code> returns the decomposition of <var class="Arg">fix</var> into rows of the table of marks. This decomposition corresponds to a decomposition of the action into transitive constituents. Trailing zeros in <var class="Arg">fix</var> may be omitted.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DecomposedFixedPointVector( a5, [ 16, 4, 1, 0, 1, 1, 1 ] );</span>
+[ 0, 0, 0, 0, 0, 1, 1 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The vector <var class="Arg">fix</var> may be any vector of integers. The resulting decomposition, however, will not be integral, in general.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DecomposedFixedPointVector( a5, [ 0, 0, 0, 0, 1, 1 ] );</span>
+[ 2/5, -1, -1/2, 0, 1/2, 1 ]
+</pre></div> </body>
+    </html>

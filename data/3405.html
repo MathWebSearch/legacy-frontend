@@ -1,0 +1,183 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.2-6 RightDerivations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X821B6C197C08878B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.2-6 RightDerivations</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RightDerivations</code>( <var class="Arg">B</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LeftDerivations</code>( <var class="Arg">B</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Derivations</code>( <var class="Arg">B</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">These functions all return the matrix Lie algebra of derivations of the algebra <math id="-7829676650621551558" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> with basis <var class="Arg">B</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">RightDerivations( <var class="Arg">B</var> )</code> returns the algebra of derivations represented by their right action on the algebra <math id="-5935468703167376662" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>. This means that with respect to the basis <math id="-2393244887056953414" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math> of <math id="4209071421642984797" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>, the derivation <math id="-1818673808869907465" display="inline" alttext="D" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">D</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐷</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">D</annotation>
+  </semantics>
+</math> is described by the matrix <math id="-2868675464336421183" display="inline" alttext="[d_{{i,j}}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5">
+      <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <msub xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">d</mi>
+        <mrow xref="p1.1.m1.1.3.1.4.cmml" id="p1.1.m1.1.3.1">
+          <mi xref="p1.1.m1.1.3.1.1.cmml" id="p1.1.m1.1.3.1.1">i</mi>
+          <mo id="p1.1.m1.1.3.1.2">,</mo>
+          <mi xref="p1.1.m1.1.3.1.3.cmml" id="p1.1.m1.1.3.1.3">j</mi>
+        </mrow>
+      </msub>
+      <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.1.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.5.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+        <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.2.cmml">
+          <csymbol id="p1.1.m1.1.5.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑑</ci>
+          <list xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.4.cmml">
+            <ci xref="p1.1.m1.1.3.1.1" id="p1.1.m1.1.3.1.1.cmml">𝑖</ci>
+            <ci xref="p1.1.m1.1.3.1.3" id="p1.1.m1.1.3.1.3.cmml">𝑗</ci>
+          </list>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[d_{{i,j}}]</annotation>
+  </semantics>
+</math> which means that <math id="2938941855902598008" display="inline" alttext="D" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">D</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐷</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">D</annotation>
+  </semantics>
+</math> maps the <math id="7894229862291854030" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th basis element <math id="6548518294091394546" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
+  </semantics>
+</math> to <math id="-5521268203550980379" display="inline" alttext="\sum_{{j=1}}^{n}d_{{i,j}}b_{j}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <msubsup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" symmetric="true" largeop="true">∑</mo>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">j</mi>
+          <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">=</mo>
+          <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">1</mn>
+        </mrow>
+        <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">n</mi>
+      </msubsup>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <msub xref="p1.1.m1.1.8.2.2.cmml" id="p1.1.m1.1.8.2.2">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">d</mi>
+          <mrow xref="p1.1.m1.1.5.1.4.cmml" id="p1.1.m1.1.5.1">
+            <mi xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">i</mi>
+            <mo id="p1.1.m1.1.5.1.2">,</mo>
+            <mi xref="p1.1.m1.1.5.1.3.cmml" id="p1.1.m1.1.5.1.3">j</mi>
+          </mrow>
+        </msub>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <msub xref="p1.1.m1.1.8.2.3.cmml" id="p1.1.m1.1.8.2.3">
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">b</mi>
+          <mi xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">j</mi>
+        </msub>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <csymbol id="p1.1.m1.1.8.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <apply id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <sum xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+            <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+              <eq xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑗</ci>
+              <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">𝑛</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.2.2" id="p1.1.m1.1.8.2.2.cmml">
+            <csymbol id="p1.1.m1.1.8.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑑</ci>
+            <list xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.4.cmml">
+              <ci xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml">𝑖</ci>
+              <ci xref="p1.1.m1.1.5.1.3" id="p1.1.m1.1.5.1.3.cmml">𝑗</ci>
+            </list>
+          </apply>
+          <apply xref="p1.1.m1.1.8.2.3" id="p1.1.m1.1.8.2.3.cmml">
+            <csymbol id="p1.1.m1.1.8.2.3.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑏</ci>
+            <ci xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">𝑗</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\sum_{{j=1}}^{n}d_{{i,j}}b_{j}</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">LeftDerivations( <var class="Arg">B</var> )</code> returns the Lie algebra of derivations represented by their left action on the algebra <math id="4292905341349498242" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>. So the matrices contained in the algebra output by <code class="code">LeftDerivations( <var class="Arg">B</var> )</code> are the transposes of the matrices contained in the output of <code class="code">RightDerivations( <var class="Arg">B</var> )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Derivations</code> is just a synonym for <code class="func">RightDerivations</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= OctaveAlgebra( Rationals );</span>
+&lt;algebra of dimension 8 over Rationals&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= Derivations( Basis( A ) );</span>
+&lt;Lie algebra of dimension 14 over Rationals&gt;
+</pre></div> </body>
+    </html>

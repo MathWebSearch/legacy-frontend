@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 5: Functions-&gt;5.1-4 FilenameFunc</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap5.html#X80E108C57F90FAA3"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">5.1-4 FilenameFunc</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FilenameFunc</code>( <var class="Arg">func</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a function <var class="Arg">func</var>, <code class="func">FilenameFunc</code> returns either <code class="keyw">fail</code> or the absolute path of the file from which <var class="Arg">func</var> has been read. The return value <code class="keyw">fail</code> occurs if <var class="Arg">func</var> is a compiled function or an operation. For functions that have been entered interactively, the string <code class="code">&quot;*stdin*&quot;</code> is returned, see Section <a shape="rect" href="chap9_mj.html#X85EC7D9087C481B0"><span class="RefLink">9.5</span></a>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FilenameFunc( LEN_LIST );  # a kernel function</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FilenameFunc( Size );      # an operation</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FilenameFunc( x -&gt; x^2 );  # an interactively entered function</span>
+&quot;*stdin*&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">meth:= ApplicableMethod( Size, [ Group( () ) ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FilenameFunc( meth );</span>
+&quot;... some path .../grpperm.gi&quot;
+</pre></div> </body>
+    </html>

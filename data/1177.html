@@ -1,0 +1,75 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 45: Polycyclic Groups-&gt;45.5-7 LinearCombinationPcgs</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap45.html#X7F8BD7A87DB3933A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">45.5-7 LinearCombinationPcgs</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LinearCombinationPcgs</code>( <var class="Arg">pcgs</var>, <var class="Arg">list</var>[, <var class="Arg">one</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the product <math id="-8787141012271637038" display="inline" alttext="\prod_{i}\textit{pcgs}[i]^{{\textit{list}[i]}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <msub xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" symmetric="true" largeop="true">∏</mo>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+      </msub>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑝𝑐𝑔𝑠</mtext>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <msup xref="p1.1.m1.1.8.2.2.cmml" id="p1.1.m1.1.8.2.2">
+          <mrow xref="p1.1.m1.1.8.2.2.2.1.cmml" id="p1.1.m1.1.8.2.2.2">
+            <mo xref="p1.1.m1.1.8.2.2.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">[</mo>
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">i</mi>
+            <mo xref="p1.1.m1.1.8.2.2.2.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">]</mo>
+          </mrow>
+          <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+            <mtext xref="p1.1.m1.1.7.1.1.1.cmml" id="p1.1.m1.1.7.1.1.1">𝑙𝑖𝑠𝑡</mtext>
+            <mo xref="p1.1.m1.1.7.1.5.cmml" id="p1.1.m1.1.7.1.5">⁢</mo>
+            <mrow xref="p1.1.m1.1.7.1.6.1.cmml" id="p1.1.m1.1.7.1.6">
+              <mo xref="p1.1.m1.1.7.1.6.1.1.cmml" id="p1.1.m1.1.7.1.2" stretchy="false">[</mo>
+              <mi xref="p1.1.m1.1.7.1.3.cmml" id="p1.1.m1.1.7.1.3">i</mi>
+              <mo xref="p1.1.m1.1.7.1.6.1.1.cmml" id="p1.1.m1.1.7.1.4" stretchy="false">]</mo>
+            </mrow>
+          </mrow>
+        </msup>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <csymbol id="p1.1.m1.1.8.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" cd="latexml">product</csymbol>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">pcgs</span>
+          </mtext>
+          <apply xref="p1.1.m1.1.8.2.2" id="p1.1.m1.1.8.2.2.cmml">
+            <csymbol id="p1.1.m1.1.8.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply xref="p1.1.m1.1.8.2.2.2" id="p1.1.m1.1.8.2.2.2.1.cmml">
+              <csymbol xref="p1.1.m1.1.4" id="p1.1.m1.1.8.2.2.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+              <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑖</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+              <times xref="p1.1.m1.1.7.1.5" id="p1.1.m1.1.7.1.5.cmml"/>
+              <mtext xref="p1.1.m1.1.7.1.1.1" id="p1.1.m1.1.7.1.1.1.cmml">
+                <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">list</span>
+              </mtext>
+              <apply xref="p1.1.m1.1.7.1.6" id="p1.1.m1.1.7.1.6.1.cmml">
+                <csymbol xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.6.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+                <ci xref="p1.1.m1.1.7.1.3" id="p1.1.m1.1.7.1.3.cmml">𝑖</ci>
+              </apply>
+            </apply>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\prod_{i}\textit{pcgs}[i]^{{\textit{list}[i]}}</annotation>
+  </semantics>
+</math>. In contrast to <code class="func">PcElementByExponents</code> (<a shape="rect" href="chap45_mj.html#X87AF746B8328F5D0"><span class="RefLink">45.5-6</span></a>) this permits negative exponents. <var class="Arg">pcgs</var> might be a list of group elements. In this case, an appropriate identity element <var class="Arg">one</var> must be given. <var class="Arg">list</var> can be empty.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := Group( (1,2,3,4),(1,2) );; P := Pcgs(G);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := PcElementByExponents(P, [0,1,1,1]);</span>
+(1,2,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ExponentsOfPcElement(P, g);</span>
+[ 0, 1, 1, 1 ]
+</pre></div> </body>
+    </html>

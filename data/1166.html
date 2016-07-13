@@ -1,0 +1,333 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 45: Polycyclic Groups-&gt;45.7 Subgroups of Polycyclic Groups - Induced Pcgs</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap45.html#X80AC58657E04FE9B"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">45.7 <span class="Heading">Subgroups of Polycyclic Groups - Induced Pcgs</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">U</var> be a subgroup of <var class="Arg">G</var> and let <var class="Arg">P</var> be a pcgs of <var class="Arg">G</var> as above such that <var class="Arg">P</var> determines the subnormal series <math id="4273999462161778594" display="inline" alttext="G=C_{1}&amp;gt;\ldots&amp;gt;C_{{n+1}}=\{1\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.20.1.cmml" id="p1.1.m1.1.20">
+      <mrow xref="p1.1.m1.1.20.1.cmml" id="p1.1.m1.1.20.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+        <mrow xref="p1.1.m1.1.20.2.1.1.cmml" id="p1.1.m1.1.20.2.1">
+          <mrow xref="p1.1.m1.1.20.2.1.1.cmml" id="p1.1.m1.1.20.2.1.2">
+            <msub xref="p1.1.m1.1.20.2.1.1.cmml" id="p1.1.m1.1.20.2.1.2.2">
+              <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">C</mi>
+              <mn xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">1</mn>
+            </msub>
+            <mo xref="p1.1.m1.1.20.2.1.2.1.cmml" id="p1.1.m1.1.20.2.1.2.1">⁢</mo>
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5" mathvariant="normal">&amp;</mi>
+            <mo xref="p1.1.m1.1.20.2.1.2.1.cmml" id="p1.1.m1.1.20.2.1.2.1a">⁢</mo>
+            <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">g</mi>
+            <mo xref="p1.1.m1.1.20.2.1.2.1.cmml" id="p1.1.m1.1.20.2.1.2.1b">⁢</mo>
+            <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">t</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.8">;</mo>
+          <mrow xref="p1.1.m1.1.20.2.1.1.cmml" id="p1.1.m1.1.20.2.1.3">
+            <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9" mathvariant="normal">…</mi>
+            <mo xref="p1.1.m1.1.20.2.1.3.1.cmml" id="p1.1.m1.1.20.2.1.3.1">⁢</mo>
+            <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10" mathvariant="normal">&amp;</mi>
+            <mo xref="p1.1.m1.1.20.2.1.3.1.cmml" id="p1.1.m1.1.20.2.1.3.1a">⁢</mo>
+            <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">g</mi>
+            <mo xref="p1.1.m1.1.20.2.1.3.1.cmml" id="p1.1.m1.1.20.2.1.3.1b">⁢</mo>
+            <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">t</mi>
+          </mrow>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.20.1a.cmml" id="p1.1.m1.1.13">;</mo>
+      <mrow xref="p1.1.m1.1.20.1.cmml" id="p1.1.m1.1.20.3">
+        <msub xref="p1.1.m1.1.20.1.cmml" id="p1.1.m1.1.20.3.1">
+          <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">C</mi>
+          <mrow xref="p1.1.m1.1.20.1.cmml" id="p1.1.m1.1.15.1">
+            <mi xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1.1">n</mi>
+            <mo xref="p1.1.m1.1.15.1.2.cmml" id="p1.1.m1.1.15.1.2">+</mo>
+            <mn xref="p1.1.m1.1.15.1.3.cmml" id="p1.1.m1.1.15.1.3">1</mn>
+          </mrow>
+        </msub>
+        <mo xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">=</mo>
+        <mrow xref="p1.1.m1.1.20.3.2.1.cmml" id="p1.1.m1.1.20.3.2">
+          <mo id="p1.1.m1.1.17" stretchy="false">{</mo>
+          <mn xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">1</mn>
+          <mo id="p1.1.m1.1.19" stretchy="false">}</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.20" id="p1.1.m1.1.20.1.cmml">
+        <csymbol xref="p1.1.m1.1.13" id="p1.1.m1.1.20.1a.cmml" cd="ambiguous">formulae-sequence</csymbol>
+        <apply xref="p1.1.m1.1.20" id="p1.1.m1.1.20.2.cmml">
+          <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+          <list xref="p1.1.m1.1.20.2.1" id="p1.1.m1.1.20.2.1.1.cmml">
+            <apply xref="p1.1.m1.1.20.2.1" id="p1.1.m1.1.20.2.1.2.cmml">
+              <times xref="p1.1.m1.1.20.2.1.2.1" id="p1.1.m1.1.20.2.1.2.1.cmml"/>
+              <apply xref="p1.1.m1.1.20.2.1" id="p1.1.m1.1.20.2.1.2.2.cmml">
+                <csymbol id="p1.1.m1.1.20.2.1.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐶</ci>
+                <cn xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml" type="integer">1</cn>
+              </apply>
+              <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">&amp;</ci>
+              <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑔</ci>
+              <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑡</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.20.2.1" id="p1.1.m1.1.20.2.1.3.cmml">
+              <times xref="p1.1.m1.1.20.2.1.3.1" id="p1.1.m1.1.20.2.1.3.1.cmml"/>
+              <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">…</ci>
+              <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">&amp;</ci>
+              <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑔</ci>
+              <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑡</ci>
+            </apply>
+          </list>
+        </apply>
+        <apply xref="p1.1.m1.1.20" id="p1.1.m1.1.20.3.cmml">
+          <eq xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml"/>
+          <apply xref="p1.1.m1.1.20" id="p1.1.m1.1.20.3.1.cmml">
+            <csymbol id="p1.1.m1.1.20.3.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝐶</ci>
+            <apply xref="p1.1.m1.1.20" id="p1.1.m1.1.15.1.cmml">
+              <plus xref="p1.1.m1.1.15.1.2" id="p1.1.m1.1.15.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.15.1.1" id="p1.1.m1.1.15.1.1.cmml">𝑛</ci>
+              <cn xref="p1.1.m1.1.15.1.3" id="p1.1.m1.1.15.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <set xref="p1.1.m1.1.20.3.2" id="p1.1.m1.1.20.3.2.1.cmml">
+            <cn xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml" type="integer">1</cn>
+          </set>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G=C_{1}&amp;gt;\ldots&amp;gt;C_{{n+1}}=\{1\}</annotation>
+  </semantics>
+</math>. Then the series of subgroups <math id="4976683963976572312" display="inline" alttext="U\cap C_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∩</mo>
+      <msub xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">C</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">i</mi>
+      </msub>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <intersect xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐶</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑖</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U\cap C_{i}</annotation>
+  </semantics>
+</math> is a subnormal series of <var class="Arg">U</var> with cyclic or trivial factors. Hence, if we choose an element <math id="6418324398902556193" display="inline" alttext="u_{{i_{j}}}\in(U\cap C_{{i_{j}}})\setminus(U\cap C_{{i_{j}+1}})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">
+      <msub xref="p1.1.m1.1.17.1.cmml" id="p1.1.m1.1.17.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+        <msub xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">i</mi>
+          <mi xref="p1.1.m1.1.2.1.2.1.cmml" id="p1.1.m1.1.2.1.2.1">j</mi>
+        </msub>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">∈</mo>
+      <mrow xref="p1.1.m1.1.17.2.cmml" id="p1.1.m1.1.17.2">
+        <mrow xref="p1.1.m1.1.17.2.1.2.cmml" id="p1.1.m1.1.17.2.1">
+          <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.17.2.1.2.cmml" id="p1.1.m1.1.17.2.1.2">
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">U</mi>
+            <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">∩</mo>
+            <msub xref="p1.1.m1.1.17.2.1.2.cmml" id="p1.1.m1.1.17.2.1.2.1">
+              <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">C</mi>
+              <msub xref="p1.1.m1.1.17.2.1.2.cmml" id="p1.1.m1.1.8.1">
+                <mi xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">i</mi>
+                <mi xref="p1.1.m1.1.8.1.2.1.cmml" id="p1.1.m1.1.8.1.2.1">j</mi>
+              </msub>
+            </msub>
+          </mrow>
+          <mo id="p1.1.m1.1.9" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">∖</mo>
+        <mrow xref="p1.1.m1.1.17.2.2.2.cmml" id="p1.1.m1.1.17.2.2">
+          <mo id="p1.1.m1.1.11" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.17.2.2.2.cmml" id="p1.1.m1.1.17.2.2.2">
+            <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">U</mi>
+            <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">∩</mo>
+            <msub xref="p1.1.m1.1.17.2.2.2.cmml" id="p1.1.m1.1.17.2.2.2.1">
+              <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">C</mi>
+              <mrow xref="p1.1.m1.1.17.2.2.2.cmml" id="p1.1.m1.1.15.1">
+                <msub xref="p1.1.m1.1.17.2.2.2.cmml" id="p1.1.m1.1.15.1.5">
+                  <mi xref="p1.1.m1.1.15.1.1.cmml" id="p1.1.m1.1.15.1.1">i</mi>
+                  <mi xref="p1.1.m1.1.15.1.2.1.cmml" id="p1.1.m1.1.15.1.2.1">j</mi>
+                </msub>
+                <mo xref="p1.1.m1.1.15.1.3.cmml" id="p1.1.m1.1.15.1.3">+</mo>
+                <mn xref="p1.1.m1.1.15.1.4.cmml" id="p1.1.m1.1.15.1.4">1</mn>
+              </mrow>
+            </msub>
+          </mrow>
+          <mo id="p1.1.m1.1.16" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">
+        <in xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.17.1" id="p1.1.m1.1.17.1.cmml">
+          <csymbol id="p1.1.m1.1.17.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+          <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <csymbol id="p1.1.m1.1.2.1.3.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑖</ci>
+            <ci xref="p1.1.m1.1.2.1.2.1" id="p1.1.m1.1.2.1.2.1.cmml">𝑗</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.17.2" id="p1.1.m1.1.17.2.cmml">
+          <setdiff xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml"/>
+          <apply xref="p1.1.m1.1.17.2.1" id="p1.1.m1.1.17.2.1.2.cmml">
+            <intersect xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑈</ci>
+            <apply xref="p1.1.m1.1.17.2.1" id="p1.1.m1.1.17.2.1.2.1.cmml">
+              <csymbol id="p1.1.m1.1.17.2.1.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝐶</ci>
+              <apply xref="p1.1.m1.1.17.2.1" id="p1.1.m1.1.8.1.cmml">
+                <csymbol id="p1.1.m1.1.8.1.3.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml">𝑖</ci>
+                <ci xref="p1.1.m1.1.8.1.2.1" id="p1.1.m1.1.8.1.2.1.cmml">𝑗</ci>
+              </apply>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.17.2.2" id="p1.1.m1.1.17.2.2.2.cmml">
+            <intersect xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑈</ci>
+            <apply xref="p1.1.m1.1.17.2.2" id="p1.1.m1.1.17.2.2.2.1.cmml">
+              <csymbol id="p1.1.m1.1.17.2.2.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝐶</ci>
+              <apply xref="p1.1.m1.1.17.2.2" id="p1.1.m1.1.15.1.cmml">
+                <plus xref="p1.1.m1.1.15.1.3" id="p1.1.m1.1.15.1.3.cmml"/>
+                <apply xref="p1.1.m1.1.17.2.2" id="p1.1.m1.1.15.1.5.cmml">
+                  <csymbol id="p1.1.m1.1.15.1.5.1.cmml" cd="ambiguous">subscript</csymbol>
+                  <ci xref="p1.1.m1.1.15.1.1" id="p1.1.m1.1.15.1.1.cmml">𝑖</ci>
+                  <ci xref="p1.1.m1.1.15.1.2.1" id="p1.1.m1.1.15.1.2.1.cmml">𝑗</ci>
+                </apply>
+                <cn xref="p1.1.m1.1.15.1.4" id="p1.1.m1.1.15.1.4.cmml" type="integer">1</cn>
+              </apply>
+            </apply>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u_{{i_{j}}}\in(U\cap C_{{i_{j}}})\setminus(U\cap C_{{i_{j}+1}})</annotation>
+  </semantics>
+</math> whenever this factor is non-trivial, then we obtain a pcgs <math id="-8174930572318258830" display="inline" alttext="Q=(u_{{i_{1}}},\ldots,u_{{i_{m}}})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1">
+        <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+        <msub xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1.2">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">u</mi>
+          <msub xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.5.1">
+            <mi xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">i</mi>
+            <mn xref="p1.1.m1.1.5.1.2.1.cmml" id="p1.1.m1.1.5.1.2.1">1</mn>
+          </msub>
+        </msub>
+        <mo id="p1.1.m1.1.6">,</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7" mathvariant="normal">…</mi>
+        <mo id="p1.1.m1.1.8">,</mo>
+        <msub xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1.3">
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">u</mi>
+          <msub xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.10.1">
+            <mi xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">i</mi>
+            <mi xref="p1.1.m1.1.10.1.2.1.cmml" id="p1.1.m1.1.10.1.2.1">m</mi>
+          </msub>
+        </msub>
+        <mo id="p1.1.m1.1.11" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+        <vector xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.1.cmml">
+          <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.2.cmml">
+            <csymbol id="p1.1.m1.1.12.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑢</ci>
+            <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.5.1.cmml">
+              <csymbol id="p1.1.m1.1.5.1.3.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml">𝑖</ci>
+              <cn xref="p1.1.m1.1.5.1.2.1" id="p1.1.m1.1.5.1.2.1.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">…</ci>
+          <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.3.cmml">
+            <csymbol id="p1.1.m1.1.12.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑢</ci>
+            <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.10.1.cmml">
+              <csymbol id="p1.1.m1.1.10.1.3.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml">𝑖</ci>
+              <ci xref="p1.1.m1.1.10.1.2.1" id="p1.1.m1.1.10.1.2.1.cmml">𝑚</ci>
+            </apply>
+          </apply>
+        </vector>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q=(u_{{i_{1}}},\ldots,u_{{i_{m}}})</annotation>
+  </semantics>
+</math> of <math id="-5886974819614756385" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
+  </semantics>
+</math>. We say that <math id="-2855478555646716980" display="inline" alttext="Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q</annotation>
+  </semantics>
+</math> is an <em>induced pcgs</em> with respect to <var class="Arg">P</var>. The pcgs <var class="Arg">P</var> is the <em>parent pcgs</em> to the induced pcgs <var class="Arg">Q</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the pcgs <math id="-3960326868373213526" display="inline" alttext="Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q</annotation>
+  </semantics>
+</math> is induced with respect to <var class="Arg">P</var> if and only if the matrix of exponent vectors of the elements <math id="6594851854460998146" display="inline" alttext="u_{{i_{j}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+      <msub xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+        <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">i</mi>
+        <mi xref="p1.1.m1.1.2.1.2.1.cmml" id="p1.1.m1.1.2.1.2.1">j</mi>
+      </msub>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+        <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <csymbol id="p1.1.m1.1.2.1.3.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑖</ci>
+          <ci xref="p1.1.m1.1.2.1.2.1" id="p1.1.m1.1.2.1.2.1.cmml">𝑗</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u_{{i_{j}}}</annotation>
+  </semantics>
+</math> with respect to <var class="Arg">P</var> is in upper triangular form. Thus <math id="5217268695254293068" display="inline" alttext="Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑄</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Q</annotation>
+  </semantics>
+</math> is not unique in general.</p><p xmlns="http://www.w3.org/1999/xhtml">In particular, the elements of an induced pcgs do <em>not necessarily</em> have leading coefficient 1 relative to the inducing pcgs. The attribute <code class="func">LeadCoeffsIGS</code> (<a shape="rect" href="chap45_mj.html#X845FF8CA783D6CB3"><span class="RefLink">45.7-7</span></a>) holds the leading coefficients in case they have to be renormed in an algorithm.</p><p xmlns="http://www.w3.org/1999/xhtml">Each induced pcgs is a pcgs and hence allows all elementary operations for pcgs. On the other hand each pcgs could be transformed into an induced pcgs for the group defined by the pcgs, but note that an arbitrary pcgs is in general not an induced pcgs for technical reasons.</p><p xmlns="http://www.w3.org/1999/xhtml">An induced pcgs is &quot;compatible&quot; with its parent, see <code class="func">ParentPcgs</code> (<a shape="rect" href="chap45_mj.html#X86308E80843BF9E5"><span class="RefLink">45.7-3</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">In <a shape="rect" href="chapBib_mj.html#biBSOGOS">[LNS84]</a> a &quot;non-commutative Gauss&quot; algorithm is described to compute an induced pcgs of a subgroup <var class="Arg">U</var> from a generating set of <var class="Arg">U</var>. For calling this in <strong class="pkg">GAP</strong>, see <a shape="rect" href="chap45_mj.html#X7F0EB20080590B23"><span class="RefLink">45.7-4</span></a> to <a shape="rect" href="chap45_mj.html#X800287C680C5DEC3"><span class="RefLink">45.7-8</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">To create a subgroup generated by an induced pcgs such that the induced pcgs gets stored automatically, use <code class="func">SubgroupByPcgs</code> (<a shape="rect" href="chap45_mj.html#X817E16D67B31389B"><span class="RefLink">45.7-9</span></a>).</p> </body>
+    </html>

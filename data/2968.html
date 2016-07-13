@@ -1,0 +1,113 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.4-3 PrimalityProof</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X7CD977B17B4A7A4B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.4-3 PrimalityProof</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PrimalityProof</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Construct a machine verifiable proof of the primality of (the probable prime) <var class="Arg">n</var>, following the ideas of <a shape="rect" href="chapBib_mj.html#biBBLS1975">[BLS75]</a>. The proof consists of various Fermat and Lucas pseudoprimality tests, which taken as a whole prove the primality. The proof is represented as a list of witnesses of two kinds. The first kind, <code class="code">[ &quot;F&quot;, divisor, base ]</code>, indicates a successful Fermat pseudoprimality test, where <var class="Arg">n</var> is a strong pseudoprime at <code class="keyw">base</code> with order not divisible by <math id="-5091365110578175276" display="inline" alttext="(\textit{n}-1)/divisor" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">
+      <mrow xref="p1.1.m1.1.14.2.cmml" id="p1.1.m1.1.14.2">
+        <mrow xref="p1.1.m1.1.14.2.1.2.cmml" id="p1.1.m1.1.14.2.1">
+          <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.14.2.1.2.cmml" id="p1.1.m1.1.14.2.1.2">
+            <mtext xref="p1.1.m1.1.2.1a.cmml" id="p1.1.m1.1.2.1">𝑛</mtext>
+            <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">-</mo>
+            <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+          </mrow>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">/</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">d</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">⁢</mo>
+      <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">i</mi>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">v</mi>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">i</mi>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1c">⁢</mo>
+      <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">s</mi>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1d">⁢</mo>
+      <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">o</mi>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1e">⁢</mo>
+      <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">r</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">
+        <times xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml"/>
+        <apply xref="p1.1.m1.1.14.2" id="p1.1.m1.1.14.2.cmml">
+          <divide xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+          <apply xref="p1.1.m1.1.14.2.1" id="p1.1.m1.1.14.2.1.2.cmml">
+            <minus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+            <mtext xref="p1.1.m1.1.14.2.1" id="p1.1.m1.1.2.1.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+            </mtext>
+            <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑑</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑖</ci>
+        <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑣</ci>
+        <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑖</ci>
+        <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑜</ci>
+        <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑟</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\textit{n}-1)/divisor</annotation>
+  </semantics>
+</math>. The second kind, <code class="code">[ &quot;L&quot;, divisor, discriminant, P ]</code> indicates a successful Lucas pseudoprimality test, for a quadratic form of given <code class="keyw">discriminant</code> and middle term <code class="keyw">P</code> with an extra check at <math id="-75865969404831054" display="inline" alttext="(\textit{n}+1)/divisor" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">
+      <mrow xref="p1.1.m1.1.14.2.cmml" id="p1.1.m1.1.14.2">
+        <mrow xref="p1.1.m1.1.14.2.1.2.cmml" id="p1.1.m1.1.14.2.1">
+          <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.14.2.1.2.cmml" id="p1.1.m1.1.14.2.1.2">
+            <mtext xref="p1.1.m1.1.2.1a.cmml" id="p1.1.m1.1.2.1">𝑛</mtext>
+            <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">+</mo>
+            <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+          </mrow>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">/</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">d</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">⁢</mo>
+      <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">i</mi>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">v</mi>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">i</mi>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1c">⁢</mo>
+      <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">s</mi>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1d">⁢</mo>
+      <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">o</mi>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1e">⁢</mo>
+      <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">r</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">
+        <times xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml"/>
+        <apply xref="p1.1.m1.1.14.2" id="p1.1.m1.1.14.2.cmml">
+          <divide xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+          <apply xref="p1.1.m1.1.14.2.1" id="p1.1.m1.1.14.2.1.2.cmml">
+            <plus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+            <mtext xref="p1.1.m1.1.14.2.1" id="p1.1.m1.1.2.1.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+            </mtext>
+            <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑑</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑖</ci>
+        <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑣</ci>
+        <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑖</ci>
+        <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑜</ci>
+        <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑟</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\textit{n}+1)/divisor</annotation>
+  </semantics>
+</math>.</p> </body>
+    </html>

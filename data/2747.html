@@ -1,0 +1,46 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.24-8 Covering groups of symmetric groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7F4240CD782B6032"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.24-8 <span class="Heading">Covering groups of symmetric groups</span></h5><p xmlns="http://www.w3.org/1999/xhtml">The covering groups of symmetric groups were classified in <a shape="rect" href="chapBib_mj.html#biBSchur1911">[Sch11]</a>; an inductive procedure to construct faithful, irreducible representations of minimal degree over all fields was presented in <a shape="rect" href="chapBib_mj.html#biBMaas2010">[Maa10]</a>. Methods for <code class="func">EpimorphismSchurCover</code> (<a shape="rect" href="chap39_mj.html#X7F619DDA7DD6C43B"><span class="RefLink">39.24-1</span></a>) are provided for natural symmetric groups which use these representations. For alternating groups, the restriction of these representations are provided, but they may not be irreducible. In the case of degree <math id="-7185650931443692181" display="inline" alttext="6" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">6</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">6</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">6</annotation>
+  </semantics>
+</math> and <math id="-4868938943355667297" display="inline" alttext="7" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">7</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">7</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">7</annotation>
+  </semantics>
+</math>, they are not the full covering groups and so matrix representations are just stored explicitly for the six-fold covers.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">EpimorphismSchurCover(SymmetricGroup(15));</span>
+[ &lt; immutable compressed matrix 64x64 over GF(9) &gt;, 
+  &lt; immutable compressed matrix 64x64 over GF(9) &gt; ] -&gt; 
+[ (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15), (1,2) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">EpimorphismSchurCover(AlternatingGroup(15));</span>
+[ &lt; immutable compressed matrix 64x64 over GF(9) &gt;, 
+  &lt; immutable compressed matrix 64x64 over GF(9) &gt; ] -&gt; 
+[ (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15), (13,14,15) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SchurCoverOfSymmetricGroup(12);</span>
+&lt;matrix group of size 958003200 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DoubleCoverOfAlternatingGroup(12);</span>
+&lt;matrix group of size 479001600 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BasicSpinRepresentationOfSymmetricGroup( 10, 3, -1 );</span>
+[ &lt; immutable compressed matrix 16x16 over GF(9) &gt;, 
+  &lt; immutable compressed matrix 16x16 over GF(9) &gt;, 
+  &lt; immutable compressed matrix 16x16 over GF(9) &gt;, 
+  &lt; immutable compressed matrix 16x16 over GF(9) &gt;, 
+  &lt; immutable compressed matrix 16x16 over GF(9) &gt;, 
+  &lt; immutable compressed matrix 16x16 over GF(9) &gt;, 
+  &lt; immutable compressed matrix 16x16 over GF(9) &gt;, 
+  &lt; immutable compressed matrix 16x16 over GF(9) &gt;, 
+  &lt; immutable compressed matrix 16x16 over GF(9) &gt; ]
+</pre></div> </body>
+    </html>

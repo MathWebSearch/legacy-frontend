@@ -1,0 +1,171 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 51: Semigroups and Monoids-&gt;51.9-7 IsReesMatrixSemigroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap51.html#X780BB78A79275244"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">51.9-7 IsReesMatrixSemigroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsReesMatrixSemigroup</code>( <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsReesZeroMatrixSemigroup</code>( <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">A subsemigroup of a Rees matrix semigroup <math id="-98252929889674055" display="inline" alttext="I\times U\times J" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">U</mi>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4a">×</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">J</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐼</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑈</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐽</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">I\times U\times J</annotation>
+  </semantics>
+</math> satisfies <code class="func">IsReesMatrixSemigroup</code> if and only if it is equal to <math id="1517558949711713810" display="inline" alttext="I^{\prime}\times U^{\prime}\times J^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <msup xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
+        <mo xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">′</mo>
+      </msup>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">×</mo>
+      <msup xref="p1.1.m1.1.9.2.cmml" id="p1.1.m1.1.9.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">U</mi>
+        <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">′</mo>
+      </msup>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6a">×</mo>
+      <msup xref="p1.1.m1.1.9.3.cmml" id="p1.1.m1.1.9.3">
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">J</mi>
+        <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">′</mo>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <times xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">
+          <csymbol id="p1.1.m1.1.9.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐼</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">′</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.9.2" id="p1.1.m1.1.9.2.cmml">
+          <csymbol id="p1.1.m1.1.9.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑈</ci>
+          <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">′</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.9.3" id="p1.1.m1.1.9.3.cmml">
+          <csymbol id="p1.1.m1.1.9.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝐽</ci>
+          <ci xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">′</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">I^{\prime}\times U^{\prime}\times J^{\prime}</annotation>
+  </semantics>
+</math> where <math id="-4919417344062189465" display="inline" alttext="I^{\prime}\subseteq I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
+        <mo xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">′</mo>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">⊆</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">I</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <subset xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐼</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">′</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐼</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">I^{\prime}\subseteq I</annotation>
+  </semantics>
+</math>, <math id="-7633252772860069432" display="inline" alttext="J^{\prime}\subseteq J" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">J</mi>
+        <mo xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">′</mo>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">⊆</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">J</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <subset xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐽</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">′</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐽</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">J^{\prime}\subseteq J</annotation>
+  </semantics>
+</math>, and <math id="-3560362500331442503" display="inline" alttext="U^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+      <mo xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">′</mo>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">′</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U^{\prime}</annotation>
+  </semantics>
+</math> is a subsemigroup of <math id="-6990406745538443554" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
+  </semantics>
+</math>. It can be costly to check that a subsemigroup defined by generators satisfies <code class="code">IsReesMatrixSemigroup</code>. The analogous statements holds for Rees 0-matrix semigroups.</p><p xmlns="http://www.w3.org/1999/xhtml">It is not necessarily the case that a simple subsemigroups of Rees matrix semigroups satisfies <code class="func">IsReesMatrixSemigroup</code>. A Rees matrix semigroup is simple if and only if its underlying semigroup is simple. A finite semigroup is simple if and only if it is isomorphic to a Rees matrix semigroup over a group; this isomorphism can be obtained explicitly using <code class="func">IsomorphismReesMatrixSemigroup</code> (<a shape="rect" href="chap51_mj.html#X7964B5C97FB9C07D"><span class="RefLink">51.9-3</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Similarly, 0-simple subsemigroups of Rees 0-matrix semigroups do not have to satisfy <code class="func">IsReesZeroMatrixSemigroup</code>. A Rees 0-matrix semigroup with more than 2 elements is 0-simple if and only if every row and every column of its matrix contains a non-zero entry, and its underlying semigroup is simple. A finite semigroup is 0-simple if and only if it is isomorphic to a Rees 0-matrix semigroup over a group; again this isomorphism can be found by using <code class="func">IsomorphismReesMatrixSemigroup</code> (<a shape="rect" href="chap51_mj.html#X7964B5C97FB9C07D"><span class="RefLink">51.9-3</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G:=PSL(2,5);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=[ [ 0, (), 0, (2,6,3,5,4) ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ (), 0, (), 0 ], [ 0, 0, 0, () ] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R:=ReesZeroMatrixSemigroup(G, mat);</span>
+&lt;Rees 0-matrix semigroup 4x3 over Group([ (3,5)(4,6), (1,2,5)
+(3,4,6) ])&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsReesZeroMatrixSemigroup(R);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">U:=ReesZeroMatrixSubsemigroup(R, [1..3], Group(()), [1..2]);</span>
+&lt;subsemigroup of 4x3 Rees 0-matrix semigroup with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsReesZeroMatrixSemigroup(U);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:=Semigroup(GeneratorsOfSemigroup(U));</span>
+&lt;subsemigroup of 4x3 Rees 0-matrix semigroup with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsReesZeroMatrixSemigroup(V);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=Semigroup(Transformation([1,1]), Transformation([1,2]));</span>
+&lt;commutative transformation monoid of degree 2 with 1 generator&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSimpleSemigroup(S);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=[[0, One(S), 0, One(S)], [One(S), 0, One(S), 0], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[0, 0, 0, One(S)]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R:=ReesZeroMatrixSemigroup(S, mat);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">U:=ReesZeroMatrixSubsemigroup(R, [1..3], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Semigroup(Transformation([1,1])), [1..2]);</span>
+&lt;subsemigroup of 4x3 Rees 0-matrix semigroup with 6 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:=Semigroup(GeneratorsOfSemigroup(U));</span>
+&lt;subsemigroup of 4x3 Rees 0-matrix semigroup with 6 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsReesZeroMatrixSemigroup(V);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T:=Semigroup(</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">ReesZeroMatrixSemigroupElement(R, 3, Transformation( [ 1, 1 ] ), 3), </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">ReesZeroMatrixSemigroupElement(R, 2, Transformation( [ 1, 1 ] ), 2));</span>
+&lt;subsemigroup of 4x3 Rees 0-matrix semigroup with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsReesZeroMatrixSemigroup(T);</span>
+false</pre></div> </body>
+    </html>

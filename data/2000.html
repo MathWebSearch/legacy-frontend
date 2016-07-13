@@ -1,0 +1,139 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 44: Matrix Groups-&gt;44.5-3 InvariantSesquilinearForm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap44.html#X82F22079852130C9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">44.5-3 InvariantSesquilinearForm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InvariantSesquilinearForm</code>( <var class="Arg">matgrp</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This attribute describes a sesquilinear form that is invariant under the matrix group <var class="Arg">matgrp</var> over the field <math id="-3666700901114795854" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math> with <math id="-6613404485318379906" display="inline" alttext="q^{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑞</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">q^{2}</annotation>
+  </semantics>
+</math> elements, say. The form is given by a record with the component <code class="code">matrix</code> which is is a matrix <math id="-6620721237114418692" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑀</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
+  </semantics>
+</math> such that for every generator <math id="5875677292018076891" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
+  </semantics>
+</math> of <var class="Arg">matgrp</var> the equation <math id="1273137066015557233" display="inline" alttext="g\cdot M\cdot(g^{tr})^{f}=M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
+      <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">⋅</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">M</mi>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4a">⋅</mo>
+        <msup xref="p1.1.m1.1.12.1.1.cmml" id="p1.1.m1.1.12.1.1">
+          <mrow xref="p1.1.m1.1.12.1.1.2.2.cmml" id="p1.1.m1.1.12.1.1.2">
+            <mo id="p1.1.m1.1.5" stretchy="false">(</mo>
+            <msup xref="p1.1.m1.1.12.1.1.2.2.cmml" id="p1.1.m1.1.12.1.1.2.2">
+              <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">g</mi>
+              <mrow xref="p1.1.m1.1.12.1.1.2.2.cmml" id="p1.1.m1.1.7.1">
+                <mi xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">t</mi>
+                <mo xref="p1.1.m1.1.7.1.3.cmml" id="p1.1.m1.1.7.1.3">⁢</mo>
+                <mi xref="p1.1.m1.1.7.1.2.cmml" id="p1.1.m1.1.7.1.2">r</mi>
+              </mrow>
+            </msup>
+            <mo id="p1.1.m1.1.8" stretchy="false">)</mo>
+          </mrow>
+          <mi xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">f</mi>
+        </msup>
+      </mrow>
+      <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">=</mo>
+      <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">M</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">
+        <eq xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml"/>
+        <apply xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">⋅</ci>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑀</ci>
+          <apply xref="p1.1.m1.1.12.1.1" id="p1.1.m1.1.12.1.1.cmml">
+            <csymbol id="p1.1.m1.1.12.1.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply xref="p1.1.m1.1.12.1.1.2" id="p1.1.m1.1.12.1.1.2.2.cmml">
+              <csymbol id="p1.1.m1.1.12.1.1.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑔</ci>
+              <apply xref="p1.1.m1.1.12.1.1.2" id="p1.1.m1.1.7.1.cmml">
+                <times xref="p1.1.m1.1.7.1.3" id="p1.1.m1.1.7.1.3.cmml"/>
+                <ci xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml">𝑡</ci>
+                <ci xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.2.cmml">𝑟</ci>
+              </apply>
+            </apply>
+            <ci xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">𝑓</ci>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑀</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g\cdot M\cdot(g^{tr})^{f}=M</annotation>
+  </semantics>
+</math> holds, where <math id="4048662129466968652" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑓</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">f</annotation>
+  </semantics>
+</math> is the automorphism of <math id="554760055057374672" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math> that raises each element to its <math id="6818766902012117672" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑞</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
+  </semantics>
+</math>-th power. (<math id="8345008584268037079" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑓</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">f</annotation>
+  </semantics>
+</math> can be obtained as a power of the <code class="func">FrobeniusAutomorphism</code> (<a shape="rect" href="chap59_mj.html#X8758E4AB7D0A1955"><span class="RefLink">59.4-1</span></a>) value of <math id="-6473514818085874657" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>.)</p> </body>
+    </html>

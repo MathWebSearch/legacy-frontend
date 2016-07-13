@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.9 Editing using the readline library</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X7E95EB017803F53C"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">6.9 <span class="Heading">Editing using the <code class="code">readline</code> library</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The descriptions in this section are valid only if your <strong class="pkg">GAP</strong> installation uses the <code class="code">readline</code> library for command line editing. You can check by <code class="code">IsBound(GAPInfo.UseReadline);</code> if this is the case.</p><p xmlns="http://www.w3.org/1999/xhtml">You can use all the features of <code class="code">readline</code>, as for example explained in <span class="URL"><a shape="rect" href="http://tiswww.case.edu/php/chet/readline/rluserman.html">http://tiswww.case.edu/php/chet/readline/rluserman.html</a></span>. Therefore the command line editing in <strong class="pkg">GAP</strong> is similar to the <code class="code">bash</code> shell and many other programs. On a Unix/Linux system you may also have a manpage, try <code class="code">man readline</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Compared to the command line editing which was used in <strong class="pkg">GAP</strong> up to version 4.4 (or compared to not using the <code class="code">readline</code> library) using <code class="code">readline</code> has several advantages:</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>Most keys still do the same as explained in <a shape="rect" href="chap6_mj.html#X82234FD181899530"><span class="RefLink">6.8</span></a> (in the default configuration).</p>
+
+</li><li><p>There are many additional commands, e.g. undoing (<strong class="button">Ctrl-_</strong>, keyboard macros (<strong class="button">Ctrl-x(</strong>, <strong class="button">Ctrl-x)</strong> and <strong class="button">Ctrl-xe</strong>), file name completion (hit <strong class="button">Esc</strong> two or four times), showing matching parentheses, <code class="code">vi</code>-style key bindings, deleting and yanking text, ...</p>
+
+</li><li><p>Lines which are longer than a physical terminal row can be edited more conveniently.</p>
+
+</li><li><p>Arbitrary unicode characters can be typed into string literals.</p>
+
+</li><li><p>The key bindings can be configured, either via your <code class="file">~/.inputrc</code> file or by <strong class="pkg">GAP</strong> commands, see <a shape="rect" href="chap6_mj.html#X7C38F9E0783D9442"><span class="RefLink">6.9-1</span></a>.</p>
+
+</li><li><p>The command line history can be saved to and read from a file, see <a shape="rect" href="chap6_mj.html#X846C3DED84AD7593"><span class="RefLink">6.9-2</span></a>.</p>
+
+</li><li><p>Adventurous users can even implement completely new command line editing functions on <strong class="pkg">GAP</strong> level, see <a shape="rect" href="chap6_mj.html#X87D4EA197A263FB7"><span class="RefLink">6.9-4</span></a>.</p>
+
+</li></ul> </body>
+    </html>

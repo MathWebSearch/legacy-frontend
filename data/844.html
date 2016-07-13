@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.5-7 UnivariatenessTestRationalFunction</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X7DDADF157879EFBF"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.5-7 UnivariatenessTestRationalFunction</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ UnivariatenessTestRationalFunction</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">takes a rational function <var class="Arg">f</var> and tests whether it is univariate rational function (or even a Laurent polynomial). It returns a list <code class="code">[isunivariate, indet, islaurent, cofs]</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">f</var> is a univariate rational function then <code class="code">isunivariate</code> is <code class="keyw">true</code> and <code class="code">indet</code> is the number of the appropriate indeterminate.</p><p xmlns="http://www.w3.org/1999/xhtml">Furthermore, if <var class="Arg">f</var> is a Laurent polynomial, then <code class="code">islaurent</code> is also <code class="keyw">true</code>. In this case the fourth entry, <code class="code">cofs</code>, is the value of the attribute <code class="func">CoefficientsOfLaurentPolynomial</code> (<a shape="rect" href="chap66_mj.html#X86D58AB67F86469F"><span class="RefLink">66.13-2</span></a>) for <var class="Arg">f</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="code">isunivariate</code> is <code class="keyw">true</code> but <code class="code">islaurent</code> is <code class="keyw">false</code>, then <code class="code">cofs</code> is the value of the attribute <code class="func">CoefficientsOfUnivariateRationalFunction</code> (<a shape="rect" href="chap66_mj.html#X7F1F67527A35A9CE"><span class="RefLink">66.4-7</span></a>) for <var class="Arg">f</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Otherwise, each entry of the returned list is equal to <code class="keyw">fail</code>. As there is no proper multivariate gcd, this may also happen for the rational function which may be reduced to univariate (see example).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnivariatenessTestRationalFunction( 50-45*x-6*x^2+x^3 );</span>
+[ true, 1, true, [ [ 50, -45, -6, 1 ], 0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnivariatenessTestRationalFunction( (-6*y^2+y^3) / (y+1) );</span>
+[ true, 2, false, [ [ -6, 1 ], [ 1, 1 ], 2 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnivariatenessTestRationalFunction( (-6*y^2+y^3) / (x+1));</span>
+[ fail, fail, fail, fail ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnivariatenessTestRationalFunction( ((y+2)*(x+1)) / ((y-1)*(x+1)) );</span>
+[ fail, fail, fail, fail ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 5: Functions-&gt;5.5-1 IsFunction</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap5.html#X85E40340806C2B8C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">5.5-1 IsFunction</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsFunction</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is the category of functions.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFunction(x-&gt;x^2);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFunction(Factorial);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=One(AutomorphismGroup(SymmetricGroup(3)));</span>
+IdentityMapping( Sym( [ 1 .. 3 ] ) )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFunction(f);         </span>
+false
+</pre></div> </body>
+    </html>

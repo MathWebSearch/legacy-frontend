@@ -1,0 +1,181 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.4-2 IsPrimeInt</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X78FDA4437EDCA70C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.4-2 IsPrimeInt</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsPrimeInt</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsProbablyPrimeInt</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsPrimeInt</code> returns <code class="keyw">false</code> if it can prove that the integer <var class="Arg">n</var> is composite and <code class="keyw">true</code> otherwise. By convention <code class="code">IsPrimeInt(0) = IsPrimeInt(1) = false</code> and we define <code class="code">IsPrimeInt(-</code><var class="Arg">n</var><code class="code">) = IsPrimeInt(</code><var class="Arg">n</var><code class="code">)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsPrimeInt</code> will return <code class="keyw">true</code> for every prime <var class="Arg">n</var>. <code class="func">IsPrimeInt</code> will return <code class="keyw">false</code> for all composite <var class="Arg">n</var> <math id="3133640231991731657" display="inline" alttext="&amp;lt;10^{18}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.4">;</mo>
+      <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.3">
+        <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">10</mn>
+        <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">18</mn>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml">
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑡</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.3.cmml">
+          <csymbol id="p1.1.m1.1.8.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">10</cn>
+          <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">18</cn>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">&amp;lt;10^{18}</annotation>
+  </semantics>
+</math> and for all composite <var class="Arg">n</var> that have a factor <math id="-567951782174552679" display="inline" alttext="p&amp;lt;1000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10">
+      <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+        <mo xref="p1.1.m1.1.10.2.1.cmml" id="p1.1.m1.1.10.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.10.2.1.cmml" id="p1.1.m1.1.10.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">l</mi>
+        <mo xref="p1.1.m1.1.10.2.1.cmml" id="p1.1.m1.1.10.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.5">;</mo>
+      <mn xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">1000</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.10" id="p1.1.m1.1.10.1.cmml">
+        <apply xref="p1.1.m1.1.10" id="p1.1.m1.1.10.2.cmml">
+          <times xref="p1.1.m1.1.10.2.1" id="p1.1.m1.1.10.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑡</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml" type="integer">1000</cn>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p&amp;lt;1000</annotation>
+  </semantics>
+</math>. So for integers <var class="Arg">n</var> <math id="3338000933550338362" display="inline" alttext="&amp;lt;10^{18}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.4">;</mo>
+      <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.3">
+        <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">10</mn>
+        <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">18</mn>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml">
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑡</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.3.cmml">
+          <csymbol id="p1.1.m1.1.8.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">10</cn>
+          <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">18</cn>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">&amp;lt;10^{18}</annotation>
+  </semantics>
+</math>, <code class="func">IsPrimeInt</code> is a proper primality test. It is conceivable that <code class="func">IsPrimeInt</code> may return <code class="keyw">true</code> for some composite <var class="Arg">n</var> <math id="8473295259819413420" display="inline" alttext="&amp;gt;10^{18}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">g</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.4">;</mo>
+      <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.3">
+        <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">10</mn>
+        <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">18</mn>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml">
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑡</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.3.cmml">
+          <csymbol id="p1.1.m1.1.8.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">10</cn>
+          <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">18</cn>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">&amp;gt;10^{18}</annotation>
+  </semantics>
+</math>, but no such <var class="Arg">n</var> is currently known. So for integers <var class="Arg">n</var> <math id="5983405396459270636" display="inline" alttext="&amp;gt;10^{18}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">g</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.4">;</mo>
+      <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.3">
+        <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">10</mn>
+        <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">18</mn>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml">
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑡</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.3.cmml">
+          <csymbol id="p1.1.m1.1.8.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" type="integer">10</cn>
+          <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">18</cn>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">&amp;gt;10^{18}</annotation>
+  </semantics>
+</math>, <code class="func">IsPrimeInt</code> is a probable-primality test. <code class="func">IsPrimeInt</code> will issue a warning when its argument is probably prime but not a proven prime. (The function <code class="func">IsProbablyPrimeInt</code> will do a similar calculation but not issue a warning.) The warning can be switched off by <code class="code">SetInfoLevel( InfoPrimeInt, 0 );</code>, the default level is <math id="3934992223484999381" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math> (also see <code class="func">SetInfoLevel</code> (<a shape="rect" href="chap7_mj.html#X7A43B9E68765EE9E"><span class="RefLink">7.4-3</span></a>) ).</p><p xmlns="http://www.w3.org/1999/xhtml">If composites that fool <code class="func">IsPrimeInt</code> do exist, they would be extremely rare, and finding one by pure chance might be less likely than finding a bug in <strong class="pkg">GAP</strong>. We would appreciate being informed about any example of a composite number <var class="Arg">n</var> for which <code class="func">IsPrimeInt</code> returns <code class="keyw">true</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsPrimeInt</code> is a deterministic algorithm, i.e., the computations involve no random numbers, and repeated calls will always return the same result. <code class="func">IsPrimeInt</code> first does trial divisions by the primes less than 1000. Then it tests that <var class="Arg">n</var> is a strong pseudoprime w.r.t. the base 2. Finally it tests whether <var class="Arg">n</var> is a Lucas pseudoprime w.r.t. the smallest quadratic nonresidue of <var class="Arg">n</var>. A better description can be found in the comment in the library file <code class="file">primality.gi</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The time taken by <code class="func">IsPrimeInt</code> is approximately proportional to the third power of the number of digits of <var class="Arg">n</var>. Testing numbers with several hundreds digits is quite feasible.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsPrimeInt</code> is a method for the general operation <code class="func">IsPrime</code> (<a shape="rect" href="chap56_mj.html#X7AA107AE7F79C6D8"><span class="RefLink">56.5-8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Remark: In future versions of <strong class="pkg">GAP</strong> we hope to change the definition of <code class="func">IsPrimeInt</code> to return <code class="keyw">true</code> only for proven primes (currently, we lack a sufficiently good primality proving function). In applications, use explicitly <code class="func">IsPrimeInt</code> or <code class="func">IsProbablyPrimeInt</code> with this change in mind.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPrimeInt( 2^31 - 1 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPrimeInt( 10^42 + 1 );</span>
+false
+</pre></div> </body>
+    </html>

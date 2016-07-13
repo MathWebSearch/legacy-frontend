@@ -1,0 +1,65 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 45: Polycyclic Groups-&gt;45.6-2 ExponentsOfRelativePower</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap45.html#X874F70697FE7B6DF"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">45.6-2 ExponentsOfRelativePower</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ExponentsOfRelativePower</code>( <var class="Arg">pcgs</var>, <var class="Arg">i</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For <math id="-6979962388657101058" display="inline" alttext="p=\textit{pcgs}[\textit{i}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑝𝑐𝑔𝑠</mtext>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.7.1.2.1.cmml" id="p1.1.m1.1.7.1.2">
+          <mo xref="p1.1.m1.1.7.1.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">[</mo>
+          <mtext xref="p1.1.m1.1.5.1a.cmml" id="p1.1.m1.1.5.1">𝑖</mtext>
+          <mo xref="p1.1.m1.1.7.1.2.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">]</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <times xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml"/>
+          <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">pcgs</span>
+          </mtext>
+          <apply xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.2.1.cmml">
+            <csymbol xref="p1.1.m1.1.4" id="p1.1.m1.1.7.1.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+            <mtext xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.5.1.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">i</span>
+            </mtext>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p=\textit{pcgs}[\textit{i}]</annotation>
+  </semantics>
+</math> this function returns the exponent vector with respect to <var class="Arg">pcgs</var> of the element <math id="-5506267915319373083" display="inline" alttext="p^{e}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">e</mi>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑒</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p^{e}</annotation>
+  </semantics>
+</math> where <math id="-7795621143568970992" display="inline" alttext="e" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">e</annotation>
+  </semantics>
+</math> is the relative order of <var class="Arg">p</var> in <var class="Arg">pcgs</var>. For the family pcgs or pcgs induced by it (see section <a shape="rect" href="chap45_mj.html#X80AC58657E04FE9B"><span class="RefLink">45.7</span></a>), this might be faster than computing the element and computing its exponent vector.</p> </body>
+    </html>

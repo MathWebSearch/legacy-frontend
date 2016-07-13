@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.7-2 DegreeOfTransformationSemigroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X7EA699C687952544"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.7-2 DegreeOfTransformationSemigroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DegreeOfTransformationSemigroup</code>( <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A non-negative integer.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>degree</em> of a transformation semigroup <var class="Arg">S</var> is just the maximum of the degrees of the elements of <var class="Arg">S</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := Semigroup(</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Transformation( [ 3, 8, 1, 4, 5, 6, 7, 1, 10, 10, 11 ] ),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">Transformation( [ 1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 11 ] ) );</span>
+&lt;transformation semigroup of degree 10 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DegreeOfTransformationSemigroup(S);</span>
+10
+</pre></div> </body>
+    </html>

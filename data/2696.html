@@ -1,0 +1,29 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.4-2 AsPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X87EC67747B260E98"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.4-2 AsPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsPartialPerm</code>( <var class="Arg">f</var>, <var class="Arg">set</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsPartialPerm</code>( <var class="Arg">f</var>, <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsPartialPerm</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A partial permutation or <code class="keyw">fail</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">A transformation <var class="Arg">f</var> defines a partial permutation when it is restricted to a set of positive integers where it is injective. <code class="code">AsPartialPerm</code> can be used to obtain this partial permutation.</p><p xmlns="http://www.w3.org/1999/xhtml">There are several possible arguments for <code class="code">AsPartialPerm</code>:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">for a transformation and set of positive integers</strong></dt><dd><p><code class="code">AsPartialPerm</code> returns the partial permutation obtained by restricting <var class="Arg">f</var> to the set of positive integers <var class="Arg">set</var> when:</p>
+
+
+<ul><li><p><var class="Arg">set</var> contains no elements exceeding the degree of <var class="Arg">f</var>;</p>
+
+</li><li><p><var class="Arg">f</var> is injective on <var class="Arg">set</var>.</p>
+
+</li></ul>
+</dd><dt><strong class="Mark">for a transformation and a positive integer</strong></dt><dd><p><code class="code">AsPartialPerm</code> returns the partial permutation that agrees with <var class="Arg">f</var> on <code class="code">[1..<var class="Arg">n</var>]</code> when <var class="Arg">A</var> is a positive integer and this set satisfies the conditions given above.</p>
+
+</dd><dt><strong class="Mark">for a transformation</strong></dt><dd><p>Let <code class="code">n</code> denote the degree of <var class="Arg">f</var>. If <code class="code">n^<var class="Arg">f</var>=n</code> and <var class="Arg">f</var> is injective on those <code class="code">i</code> such that <code class="code">i^<var class="Arg">f</var>&lt;&gt;n</code>, then <code class="code">AsPartialPerm</code> returns the partial permutation obtained by restricting <var class="Arg">f</var> to those <code class="code">i</code> such that <code class="code">i^<var class="Arg">f</var>&lt;&gt;n</code>.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">AsPartialPerm</code> returns <code class="keyw">fail</code> if the arguments do not describe a partial permutation.</p><p xmlns="http://www.w3.org/1999/xhtml">The operation <code class="func">PartialPermOp</code> (<a shape="rect" href="chap54_mj.html#X81188D9F83F64222"><span class="RefLink">54.2-2</span></a>) can also be used to convert transformations into partial permutations.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=Transformation( [ 8, 3, 5, 9, 6, 2, 9, 7, 9 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsPartialPerm(f);</span>
+[1,8,7](2,3,5,6)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsPartialPerm(f, 3);</span>
+[1,8][2,3,5]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsPartialPerm(f, [ 2 .. 4 ] );</span>
+[2,3,5][4,9]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=Transformation( [ 2, 10, 2, 4, 4, 7, 6, 9, 10, 1 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsPartialPerm(f);</span>
+fail</pre></div> </body>
+    </html>

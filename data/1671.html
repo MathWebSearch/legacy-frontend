@@ -1,0 +1,42 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.5-4 Indirected</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X7D9CA09385467EDE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.5-4 Indirected</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Indirected</code>( <var class="Arg">character</var>, <var class="Arg">paramap</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a map <var class="Arg">character</var> and a parametrized map <var class="Arg">paramap</var>, <code class="func">Indirected</code> returns a parametrized map whose entry at position <math id="2183752566548311540" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> is <var class="Arg">character</var><code class="code">[ </code><var class="Arg">paramap</var><code class="code">[</code><math id="-8045879168499882662" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">] ]</code> if <var class="Arg">paramap</var><code class="code">[</code><math id="558083558826270247" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">]</code> is an integer, and an unknown (see Chapter <a shape="rect" href="chap74_mj.html#X7C1FAB6280A02CCB"><span class="RefLink">74</span></a>) otherwise.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;M12&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus:= [ 1, 3, 4, [ 6, 7 ], 8, 10, [ 11, 12 ], [ 11, 12 ],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">           [ 14, 15 ], [ 14, 15 ] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( Irr( tbl ){ [ 1 .. 6 ] }, x -&gt; Indirected( x, fus ) );</span>
+[ [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ], 
+  [ 11, 3, 2, Unknown(9), 1, 0, Unknown(10), Unknown(11), 0, 0 ], 
+  [ 11, 3, 2, Unknown(12), 1, 0, Unknown(13), Unknown(14), 0, 0 ], 
+  [ 16, 0, -2, 0, 1, 0, 0, 0, Unknown(15), Unknown(16) ], 
+  [ 16, 0, -2, 0, 1, 0, 0, 0, Unknown(17), Unknown(18) ], 
+  [ 45, -3, 0, 1, 0, 0, -1, -1, 1, 1 ] ]
+</pre></div> </body>
+    </html>

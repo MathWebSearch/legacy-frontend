@@ -1,0 +1,25 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 18: Cyclotomic Numbers-&gt;18.2-1 IsInfinity</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap18.html#X8511B8DF83324C27"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">18.2-1 IsInfinity</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsInfinity</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsNegInfinity</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ infinity</code></td><td colspan="1" rowspan="1" class="tdright">( global variable )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ -infinity</code></td><td colspan="1" rowspan="1" class="tdright">( global variable )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">infinity</code> and <code class="func">-infinity</code> are special <strong class="pkg">GAP</strong> objects that lie in <code class="code">CyclotomicsFamily</code>. They are larger or smaller than all other objects in this family respectively. <code class="func">infinity</code> is mainly used as return value of operations such as <code class="func">Size</code> (<a shape="rect" href="chap30_mj.html#X858ADA3B7A684421"><span class="RefLink">30.4-6</span></a>) and <code class="func">Dimension</code> (<a shape="rect" href="chap57_mj.html#X7E6926C6850E7C4E"><span class="RefLink">57.3-3</span></a>) for infinite and infinite dimensional domains, respectively.</p><p xmlns="http://www.w3.org/1999/xhtml">Some arithmetic operations are provided for convenience when using <code class="func">infinity</code> and <code class="func">-infinity</code> as top and bottom element respectively.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">-infinity + 1;</span>
+-infinity
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">infinity + infinity;</span>
+infinity
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Often it is useful to distinguish <code class="func">infinity</code> from &quot;proper&quot; cyclotomics. For that, <code class="func">infinity</code> lies in the category <code class="func">IsInfinity</code> but not in <code class="func">IsCyc</code> (<a shape="rect" href="chap18_mj.html#X841C425281A6F775"><span class="RefLink">18.1-3</span></a>), and the other cyclotomics lie in the category <code class="func">IsCyc</code> (<a shape="rect" href="chap18_mj.html#X841C425281A6F775"><span class="RefLink">18.1-3</span></a>) but not in <code class="func">IsInfinity</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s:= Size( Rationals );</span>
+infinity
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s = infinity; IsCyclotomic( s ); IsCyc( s ); IsInfinity( s );</span>
+true
+true
+false
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s in Rationals; s &gt; 17;</span>
+false
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Set( [ s, 2, s, E(17), s, 19 ] );</span>
+[ 2, 19, E(17), infinity ]
+</pre></div> </body>
+    </html>

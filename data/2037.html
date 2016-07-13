@@ -1,0 +1,24 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 27: Strings and Characters-&gt;27.9-3 EvalString</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27.html#X7DE4CCD285440659"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">27.9-3 EvalString</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EvalString</code>( <var class="Arg">expr</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">passes the string <var class="Arg">expr</var> through an input text stream so that <strong class="pkg">GAP</strong> interprets it, and returns the result.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:=10;</span>
+10
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">EvalString(&quot;a^2&quot;);</span>
+100
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">EvalString</code> is intended for <em>single</em> expressions. A sequence of commands may be interpreted by using the functions <code class="func">InputTextString</code> (<a shape="rect" href="chap10_mj.html#X7ABABCDF7ED81F7F"><span class="RefLink">10.7-1</span></a>) and <code class="func">ReadAsFunction</code> (<a shape="rect" href="chap10_mj.html#X7D62F2877F0E45A7"><span class="RefLink">10.3-2</span></a>) together; see <a shape="rect" href="chap10_mj.html#X7D1D33A587BFD93D"><span class="RefLink">10.3</span></a> for an example.</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="func">EvalString</code> is used inside a function, then it doesn't know about the local variables and the arguments of the function. A possible workaround is to define global variables in advance, and then to assign the values of the local variables to the global ones, like in the example below.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">global_a := 0;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">global_b := 0;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">example := function ( local_a )</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    local  local_b;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    local_b := 5;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    global_a := local_a;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    global_b := local_b;</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    return EvalString( &quot;global_a * global_b&quot; );</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">end;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">example( 2 );</span>
+10
+</pre></div> </body>
+    </html>

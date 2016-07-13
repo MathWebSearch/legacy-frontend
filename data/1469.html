@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.6-2 RandomInvertibleMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X7C939B4A7EDF015D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.6-2 RandomInvertibleMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RandomInvertibleMat</code>( <var class="Arg">m</var>[, <var class="Arg">R</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">RandomInvertibleMat</code> returns a new mutable invertible random matrix with <var class="Arg">m</var> rows and columns with elements taken from the ring <var class="Arg">R</var>, which defaults to <code class="func">Integers</code> (<a shape="rect" href="chap14_mj.html#X853DF11B80068ED5"><span class="RefLink">14</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := RandomInvertibleMat(4);</span>
+[ [ -4, 1, 0, -1 ], [ -1, -1, 1, -1 ], [ 1, -2, -1, -2 ], 
+  [ 0, -1, 2, -2 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m^-1;</span>
+[ [ -1/8, -11/24, 1/24, 1/4 ], [ 1/4, -13/12, -1/12, 1/2 ], 
+  [ -1/8, 5/24, -7/24, 1/4 ], [ -1/4, 3/4, -1/4, -1/2 ] ]
+</pre></div> </body>
+    </html>

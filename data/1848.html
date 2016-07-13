@@ -1,0 +1,397 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 32: Mappings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap32.html#X7C9734B880042C73"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap32_mj.html#X7C9734B880042C73">32 <span class="Heading">Mappings</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X783BAB2683EEA0CC">32.1 <span class="Heading">IsDirectProductElement (Filter)</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X87FD9FE787023FF0">32.1-1 IsDirectProductElement</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X7CF6FEFB8290D5CB">32.2 <span class="Heading">Creating Mappings</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X79D0D2F07A14D039">32.2-1 GeneralMappingByElements</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7D55E1977ED70E01">32.2-2 <span class="Heading">MappingByFunction</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X865FC25A87D36F3D">32.2-3 InverseGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7ED1E4E27CCE2DCA">32.2-4 CompositionMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X86486B687B7077AC">32.2-5 CompositionMapping2</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7A926D167C3155F6">32.2-6 IsCompositionMappingRep</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X87775B438008DCA5">32.2-7 ConstituentsCompositionMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X795FF8DC785F110A">32.2-8 ZeroMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7EBAE0368470A603">32.2-9 IdentityMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X86452F8587CBAEA0">32.2-10 <span class="Heading">Embedding</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X8769E8DA80BC96C1">32.2-11 <span class="Heading">Projection</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X800014D683A81009">32.2-12 RestrictedMapping</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X7E5A430D7F838F1C">32.3 <span class="Heading">Properties and Attributes of (General) Mappings</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X83C7494E828CC9C8">32.3-1 IsTotal</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X86D44C8A78BF1981">32.3-2 IsSingleValued</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7CC95EB282854385">32.3-3 IsMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7F065FD7822C0A12">32.3-4 IsInjective</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X784ECE847E005B8F">32.3-5 IsSurjective</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X878F56AB7B342767">32.3-6 IsBijective</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7B6FD7277CDE9FCB">32.3-7 Range</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7DE8173F80E07AB1">32.3-8 Source</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X784F871383FB599B">32.3-9 UnderlyingRelation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X786581DE871A47D0">32.3-10 UnderlyingGeneralMapping</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X83B4FF15847F06FC">32.4 <span class="Heading">Images under Mappings</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7D23C1CE863DACD8">32.4-1 ImagesSource</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X85ADB89B7C8DD7D0">32.4-2 ImagesRepresentative</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7D51184B7EE5B2CF">32.4-3 ImagesElm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X8781348F7F5796A0">32.4-4 ImagesSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7CFAB0157BFB1806">32.4-5 ImageElm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X87F4D35A826599C6">32.4-6 <span class="Heading">Image</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X86114B2E7E77488C">32.4-7 <span class="Heading">Images</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X79BB1EC07C828667">32.5 <span class="Heading">Preimages under Mappings</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X78EF1FE77B0973C0">32.5-1 PreImagesRange</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7FBB830C8729E995">32.5-2 PreImagesElm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7D212F727CAE971A">32.5-3 PreImageElm</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7AE24A1586B7DE79">32.5-4 PreImagesRepresentative</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X856BAFC87B2D2811">32.5-5 PreImagesSet</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X836FAEAC78B55BF4">32.5-6 <span class="Heading">PreImage</span></a>
+</span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X85C8590E832002EF">32.5-7 <span class="Heading">PreImages</span></a>
+</span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X7E2E16277940FA0B">32.6 <span class="Heading">Arithmetic Operations for General Mappings</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X834E02BB7D4B4AE5">32.7 <span class="Heading">Mappings which are Compatible with Algebraic Structures</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X8008FCCC7F4C731F">32.8 <span class="Heading">Magma Homomorphisms</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7DC72CF28539A251">32.8-1 IsMagmaHomomorphism</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X8181676787E760A2">32.8-2 MagmaHomomorphismByFunctionNC</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X79D0216E871B7051">32.8-3 NaturalHomomorphismByGenerators</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X806F892C862F29F9">32.9 <span class="Heading">Mappings that Respect Multiplication</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7BEFF95883EAEC78">32.9-1 RespectsMultiplication</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7EE4DA097AE9CBC1">32.9-2 RespectsOne</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7F27AE9C84A4DF90">32.9-3 RespectsInverses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X819DD174829BF3AE">32.9-4 IsGroupGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X81A5A5CF846E5FBF">32.9-5 KernelOfMultiplicativeGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7F09B6E28080DCB4">32.9-6 CoKernelOfMultiplicativeGeneralMapping</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X8455A5A67C35178B">32.10 <span class="Heading">Mappings that Respect Addition</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7A3321E878925C3A">32.10-1 RespectsAddition</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X8130D8907B92F746">32.10-2 RespectsAdditiveInverses</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7D342736781EB280">32.10-3 RespectsZero</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7B99EF287A8A0BD9">32.10-4 IsAdditiveGroupGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7EC0E9907D6631D6">32.10-5 KernelOfAdditiveGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X813C6D7980213F41">32.10-6 CoKernelOfAdditiveGeneralMapping</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X7C24431C81532575">32.11 <span class="Heading">Linear Mappings</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X87842ED97FA19973">32.11-1 RespectsScalarMultiplication</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X780BE6307A3271A9">32.11-2 IsLeftModuleGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7F6841107E59107F">32.11-3 IsLinearMapping</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X7E88C32A82E942DA">32.12 <span class="Heading">Ring Homomorphisms</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7C8DA031799B79D5">32.12-1 IsRingGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7988102883675606">32.12-2 IsRingWithOneGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X86B14F908601DEA9">32.12-3 IsAlgebraGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X842AD44679C5BDC2">32.12-4 IsAlgebraWithOneGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X8324DA78879DF4D7">32.12-5 IsFieldHomomorphism</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X7E4A55567BED0F88">32.13 <span class="Heading">General Mappings</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X8656AB8A7D672CAE">32.13-1 IsGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X791690817E23D90C">32.13-2 IsConstantTimeAccessGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X81CFF5F87BBEA8AD">32.13-3 IsEndoGeneralMapping</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X7D6F78587C00CDD0">32.14 <span class="Heading">Technical Matters Concerning General Mappings</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7D28581F82481163">32.14-1 IsSPGeneralMapping</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X80D02AD183E01F16">32.14-2 IsGeneralMappingFamily</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X86CFADBA7F2FE446">32.14-3 FamilyRange</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7C3736E281A9E505">32.14-4 FamilySource</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7AE54FB67E2E6374">32.14-5 FamiliesOfGeneralMappingsAndRanges</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7E1E26E37C413F6F">32.14-6 GeneralMappingsFamily</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7CF92CC37A6BBDA5">32.14-7 TypeOfDefaultGeneralMapping</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">32 <span class="Heading">Mappings</span></h3><p xmlns="http://www.w3.org/1999/xhtml">A <em>mapping</em> in <strong class="pkg">GAP</strong> is what is called a &quot;function&quot; in mathematics. <strong class="pkg">GAP</strong> also implements <em>generalized mappings</em> in which one element might have several images, these can be imagined as subsets of the cartesian product and are often called &quot;relations&quot;.</p><p xmlns="http://www.w3.org/1999/xhtml">Most operations are declared for general mappings and therefore this manual often refers to &quot;(general) mappings&quot;, unless you deliberately need the generalization you can ignore the &quot;general&quot; bit and just read it as &quot;mappings&quot;.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>general mapping</em> <math id="7605938713724343476" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math> in <strong class="pkg">GAP</strong> is described by its source <math id="-1451534290042047596" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math>, its range <math id="8461531646918363496" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>, and a subset <math id="1565483666400550150" display="inline" alttext="Rel" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">e</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">l</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑒</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑙</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Rel</annotation>
+  </semantics>
+</math> of the direct product <math id="6953817503352799345" display="inline" alttext="S\times R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">R</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑅</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S\times R</annotation>
+  </semantics>
+</math>, which is called the underlying relation of <math id="-8098335453745009563" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math>. <math id="3966694306134155752" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math>, <math id="2879095349504831983" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>, and <math id="-8635386248327959974" display="inline" alttext="Rel" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">e</mi>
+      <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">l</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑒</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑙</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Rel</annotation>
+  </semantics>
+</math> are generalized domains (see <a shape="rect" href="chap12_mj.html#X7BAF69417BB925F6"><span class="RefLink">12.4</span></a>). The corresponding attributes for general mappings are <code class="func">Source</code> (<a shape="rect" href="chap32_mj.html#X7DE8173F80E07AB1"><span class="RefLink">32.3-8</span></a>), <code class="func">Range</code> (<a shape="rect" href="chap32_mj.html#X7B6FD7277CDE9FCB"><span class="RefLink">32.3-7</span></a>), and <code class="func">UnderlyingRelation</code> (<a shape="rect" href="chap32_mj.html#X784F871383FB599B"><span class="RefLink">32.3-9</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Note that general mappings themselves are <em>not</em> domains. One reason for this is that two general mappings with same underlying relation are regarded as equal only if also the sources are equal and the ranges are equal. Other, more technical, reasons are that general mappings and domains have different basic operations, and that general mappings are arithmetic objects (see <a shape="rect" href="chap32_mj.html#X7E2E16277940FA0B"><span class="RefLink">32.6</span></a>); both should not apply to domains.</p><p xmlns="http://www.w3.org/1999/xhtml">Each element of an underlying relation of a general mapping lies in the category of direct product elements (see <code class="func">IsDirectProductElement</code> (<a shape="rect" href="chap32_mj.html#X87FD9FE787023FF0"><span class="RefLink">32.1-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">For each <math id="-2813475617955867810" display="inline" alttext="s\in S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">S</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑠</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑆</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">s\in S</annotation>
+  </semantics>
+</math>, the set <math id="-5673762494490791337" display="inline" alttext="\{r\in R|(s,r)\in Rel\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16">
+      <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">{</mo>
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">r</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">∈</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">R</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.5" stretchy="false">|</mo>
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.3">
+        <mrow xref="p1.1.m1.1.16.3.1.1.cmml" id="p1.1.m1.1.16.3.1">
+          <mo id="p1.1.m1.1.6" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">s</mi>
+          <mo id="p1.1.m1.1.8">,</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">r</mi>
+          <mo id="p1.1.m1.1.10" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">∈</mo>
+        <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.3.2">
+          <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">R</mi>
+          <mo xref="p1.1.m1.1.16.3.2.1.cmml" id="p1.1.m1.1.16.3.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">e</mi>
+          <mo xref="p1.1.m1.1.16.3.2.1.cmml" id="p1.1.m1.1.16.3.2.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">l</mi>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.15" stretchy="false">}</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.1.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.16.1.1.cmml" cd="latexml">conditional-set</csymbol>
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.cmml">
+          <in xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑟</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑅</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.3.cmml">
+          <in xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml"/>
+          <interval xref="p1.1.m1.1.16.3.1" id="p1.1.m1.1.16.3.1.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑠</ci>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑟</ci>
+          </interval>
+          <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.3.2.cmml">
+            <times xref="p1.1.m1.1.16.3.2.1" id="p1.1.m1.1.16.3.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑅</ci>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑒</ci>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑙</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\{r\in R|(s,r)\in Rel\}</annotation>
+  </semantics>
+</math> is called the set of <em>images</em> of <math id="-8890309052116216324" display="inline" alttext="s" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑠</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">s</annotation>
+  </semantics>
+</math>. Analogously, for <math id="8734207153064091492" display="inline" alttext="r\in R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">R</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑟</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑅</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">r\in R</annotation>
+  </semantics>
+</math>, the set <math id="-4064959135580699081" display="inline" alttext="\{s\in S|(s,r)\in Rel\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16">
+      <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">{</mo>
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">s</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">∈</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">S</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.5" stretchy="false">|</mo>
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.3">
+        <mrow xref="p1.1.m1.1.16.3.1.1.cmml" id="p1.1.m1.1.16.3.1">
+          <mo id="p1.1.m1.1.6" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">s</mi>
+          <mo id="p1.1.m1.1.8">,</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">r</mi>
+          <mo id="p1.1.m1.1.10" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">∈</mo>
+        <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.3.2">
+          <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">R</mi>
+          <mo xref="p1.1.m1.1.16.3.2.1.cmml" id="p1.1.m1.1.16.3.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">e</mi>
+          <mo xref="p1.1.m1.1.16.3.2.1.cmml" id="p1.1.m1.1.16.3.2.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">l</mi>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.15" stretchy="false">}</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.1.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.16.1.1.cmml" cd="latexml">conditional-set</csymbol>
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.cmml">
+          <in xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑠</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑆</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.3.cmml">
+          <in xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml"/>
+          <interval xref="p1.1.m1.1.16.3.1" id="p1.1.m1.1.16.3.1.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑠</ci>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑟</ci>
+          </interval>
+          <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.3.2.cmml">
+            <times xref="p1.1.m1.1.16.3.2.1" id="p1.1.m1.1.16.3.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑅</ci>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑒</ci>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑙</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\{s\in S|(s,r)\in Rel\}</annotation>
+  </semantics>
+</math> is called the set of <em>preimages</em> of <math id="-4365985004114825426" display="inline" alttext="r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑟</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">r</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>ordering</em> of general mappings via <code class="code">&lt;</code> is defined by the ordering of source, range, and underlying relation. Specifically, if the source and range domains of <var class="Arg">map1</var> and <var class="Arg">map2</var> are the same, then one considers the union of the preimages of <var class="Arg">map1</var> and <var class="Arg">map2</var> as a strictly ordered set. The smaller of <var class="Arg">map1</var> and <var class="Arg">map2</var> is the one whose image is smaller on the first point of this sequence where they differ.</p><p xmlns="http://www.w3.org/1999/xhtml">For mappings which preserve an algebraic structure a <em>kernel</em> is defined. Depending on the structure preserved the operation to compute this kernel is called differently, see Section <a shape="rect" href="chap32_mj.html#X834E02BB7D4B4AE5"><span class="RefLink">32.7</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Some technical details of general mappings are described in section <a shape="rect" href="chap32_mj.html#X7E4A55567BED0F88"><span class="RefLink">32.13</span></a>.</p> </body>
+    </html>

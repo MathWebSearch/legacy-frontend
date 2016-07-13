@@ -1,0 +1,25 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 46: Pc Groups-&gt;46.8-3 TwoCohomology</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap46.html#X838065F97F60468F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">46.8-3 TwoCohomology</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TwoCohomology</code>( <var class="Arg">G</var>, <var class="Arg">M</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a record defining the second cohomology group as factor space of the space of cocycles by the space of coboundaries. <var class="Arg">G</var> must be a pc group and the generators of <var class="Arg">M</var> must correspond to the pcgs of <var class="Arg">G</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := SmallGroup( 4, 2 );</span>
+&lt;pc group of size 4 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mats := List( Pcgs( G ), x -&gt; IdentityMat( 1, GF(2) ) );</span>
+[ [ &lt;a GF2 vector of length 1&gt; ], [ &lt;a GF2 vector of length 1&gt; ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M := GModuleByMats( mats, GF(2) );</span>
+rec( IsOverFiniteField := true, dimension := 1, field := GF(2), 
+  generators := [ &lt;an immutable 1x1 matrix over GF2&gt;, 
+      &lt;an immutable 1x1 matrix over GF2&gt; ], isMTXModule := true )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TwoCoboundaries( G, M );</span>
+[  ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TwoCocycles( G, M );</span>
+[ [ Z(2)^0, 0*Z(2), 0*Z(2) ], [ 0*Z(2), Z(2)^0, 0*Z(2) ], 
+  [ 0*Z(2), 0*Z(2), Z(2)^0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cc := TwoCohomology( G, M );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cc.cohom;</span>
+&lt;linear mapping by matrix, &lt;vector space of dimension 3 over GF(
+2)&gt; -&gt; ( GF(2)^3 )&gt;
+</pre></div> </body>
+    </html>

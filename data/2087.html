@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 27: Strings and Characters-&gt;27.1-2 IsString</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27.html#X78723B5D795A3B6D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">27.1-2 IsString</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsString</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( filter )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A <em>string</em> is a dense list (see <code class="func">IsList</code> (<a shape="rect" href="chap21_mj.html#X7C4CC4EA8299701E"><span class="RefLink">21.1-1</span></a>), <code class="func">IsDenseList</code> (<a shape="rect" href="chap21_mj.html#X870AA9D8798C93DD"><span class="RefLink">21.1-2</span></a>)) of characters (see <code class="func">IsChar</code> (<a shape="rect" href="chap27_mj.html#X80CFAE128560E064"><span class="RefLink">27.1-1</span></a>)); thus strings are always homogeneous (see <code class="func">IsHomogeneousList</code> (<a shape="rect" href="chap21_mj.html#X7C71596C82B6EF35"><span class="RefLink">21.1-3</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">A string literal can either be entered as the list of characters or by writing the characters between <em>doublequotes</em> <code class="code">&quot;</code>. <strong class="pkg">GAP</strong> will always output strings in the latter format. However, the input via the double quote syntax enables <strong class="pkg">GAP</strong> to store the string in an efficient compact internal representation. See <code class="func">IsStringRep</code> (<a shape="rect" href="chap27_mj.html#X7A17EDF8785C9F58"><span class="RefLink">27.4-1</span></a>) below for more details.</p><p xmlns="http://www.w3.org/1999/xhtml">Each character, in particular those which cannot be typed directly from the keyboard, can also be typed in three digit octal notation. And for some special characters (like the newline character) there is a further possibility to type them, see section <a shape="rect" href="chap27_mj.html#X82E5F5AB818F32DB"><span class="RefLink">27.2</span></a>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s1 := ['H','e','l','l','o',' ','w','o','r','l','d','.'];</span>
+&quot;Hello world.&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsString( s1 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s2 := &quot;Hello world.&quot;;</span>
+&quot;Hello world.&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s1 = s2;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3 := &quot;&quot;;  # the empty string</span>
+&quot;&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3 = [];</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsString( [] );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsString( &quot;123&quot; );  IsString( 123 );</span>
+true
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsString( [ '1', '2', '3' ] );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsString( [ '1', '2', , '4' ] );  # strings must be dense</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsString( [ '1', '2', 3 ] );  # strings must only contain characters</span>
+false
+</pre></div> </body>
+    </html>

@@ -1,0 +1,29 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 76: Using GAP Packages-&gt;76.3-15 BibEntry</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap76.html#X79EA4BD37940AD25"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">76.3-15 BibEntry</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ BibEntry</code>( <var class="Arg">pkgname</var>[, <var class="Arg">key</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: a string in BibXMLext format (see <a shape="rect" href="../../pkg/GAPDoc-1.5.1/doc/chap7_mj.html#X7FB8F6BD80D859D1"><span class="RefLink">GAPDoc: The BibXMLext Format</span></a>) that can be used for referencing the <strong class="pkg">GAP</strong> system or a <strong class="pkg">GAP</strong> package.</p><p xmlns="http://www.w3.org/1999/xhtml">If the argument <var class="Arg">pkgname</var> is the string <code class="code">&quot;GAP&quot;</code>, the function returns an entry for the current version of <strong class="pkg">GAP</strong>.</p><p xmlns="http://www.w3.org/1999/xhtml">Otherwise, if a string <var class="Arg">pkgname</var> is given, which is the name of a <strong class="pkg">GAP</strong> package, an entry for this package is returned; this entry is computed from the <code class="file">PackageInfo.g</code> file of <em>the current version</em> of the package, see <code class="func">InstalledPackageVersion</code> (<a shape="rect" href="chap76_mj.html#X7B79FEE57DBDBD71"><span class="RefLink">76.3-4</span></a>). If no package with name <var class="Arg">pkgname</var> is installed then the empty string is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">A string for <em>a different version</em> of <strong class="pkg">GAP</strong> or a package can be computed by entering, as the argument <var class="Arg">pkgname</var>, the desired record from the <code class="file">PackageInfo.g</code> file. (One can access these records using the function <code class="code">PackageInfo</code>.)</p><p xmlns="http://www.w3.org/1999/xhtml">In each of the above cases, an optional argument <var class="Arg">key</var> can be given, a string which is then used as the key of the BibTeX entry instead of the default key that is generated from the system/package name and the version number.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">BibEntry</code> requires the functions <code class="func">FormatParagraph</code> (<a shape="rect" href="../../pkg/GAPDoc-1.5.1/doc/chap6_mj.html#X812058CE7C8E9022"><span class="RefLink">GAPDoc: FormatParagraph</span></a>) and <code class="func">NormalizedNameAndKey</code> (<a shape="rect" href="../../pkg/GAPDoc-1.5.1/doc/chap7_mj.html#X7C9F0C337A0A0FF0"><span class="RefLink">GAPDoc: NormalizedNameAndKey</span></a>) from the <strong class="pkg">GAP</strong> package <strong class="pkg">GAPDoc</strong>.</p><p xmlns="http://www.w3.org/1999/xhtml">The functions <code class="func">ParseBibXMLextString</code> (<a shape="rect" href="../../pkg/GAPDoc-1.5.1/doc/chap7_mj.html#X86BD29AE7A453721"><span class="RefLink">GAPDoc: ParseBibXMLextString</span></a>) and <code class="func">StringBibXMLEntry</code> (<a shape="rect" href="../../pkg/GAPDoc-1.5.1/doc/chap7_mj.html#X790A295680F7CD24"><span class="RefLink">GAPDoc: StringBibXMLEntry</span></a>) can be used to create for example a BibTeX entry from the return value, as follows.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">bib:= BibEntry( &quot;GAP&quot;, &quot;GAP4.5&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( bib, &quot;\n&quot; );</span>
+&lt;entry id=&quot;GAP4.5&quot;&gt;&lt;misc&gt;
+  &lt;title&gt;&lt;C&gt;GAP&lt;/C&gt; &amp;ndash; &lt;C&gt;G&lt;/C&gt;roups, &lt;C&gt;A&lt;/C&gt;lgorithms,
+         and &lt;C&gt;P&lt;/C&gt;rogramming, &lt;C&gt;V&lt;/C&gt;ersion 4.5.1&lt;/title&gt;
+  &lt;howpublished&gt;&lt;URL&gt;http://www.gap-system.org&lt;/URL&gt;&lt;/howpublished&gt;
+  &lt;key&gt;GAP&lt;/key&gt;
+  &lt;keywords&gt;groups; *; gap; manual&lt;/keywords&gt;
+  &lt;other type=&quot;organization&quot;&gt;The GAP &lt;C&gt;G&lt;/C&gt;roup&lt;/other&gt;
+&lt;/misc&gt;&lt;/entry&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">parse:= ParseBibXMLextString( bib );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( StringBibXMLEntry( parse.entries[1], &quot;BibTeX&quot; ) );</span>
+@misc{ GAP4.5,
+  title =            {{GAP}   {\textendash}   {G}roups,   {A}lgorithms,  and
+                      {P}rogramming, {V}ersion 4.5.1},
+  organization =     {The GAP {G}roup},
+  howpublished =     {\href                      {http://www.gap-system.org}
+                      {\texttt{http://www.gap-system.org}}},
+  key =              {GAP},
+  keywords =         {groups; *; gap; manual}
+}
+</pre></div> </body>
+    </html>

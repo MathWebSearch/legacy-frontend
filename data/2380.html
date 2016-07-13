@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 46: Pc Groups-&gt;46.2-2 Arithmetic operations for elements of pc groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap46.html#X7D1B700882FC6C78"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">46.2-2 <span class="Heading">Arithmetic operations for elements of pc groups</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ \*</code>( <var class="Arg">pcword1</var>, <var class="Arg">pcword2</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Inverse</code>( <var class="Arg">pcword</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">However, multiplication and inversion of elements in pc groups is not as straightforward as in arbitrary finitely presented groups where a simple concatenation or reversion of the corresponding words is sufficient (but one cannot solve the word problem).</p><p xmlns="http://www.w3.org/1999/xhtml">To multiply two elements in a pc group, we first concatenate the corresponding words and then use an algorithm called <em>collection</em> to transform the new word into a word in normal form.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g := FamilyPcgs( SmallGroup( 24, 12 ) );</span>
+Pcgs([ f1, f2, f3, f4 ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g[4] * g[1];</span>
+f1*f3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">(g[2] * g[3])^-1;</span>
+f2^2*f3*f4
+</pre></div> </body>
+    </html>

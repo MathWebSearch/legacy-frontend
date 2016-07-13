@@ -1,0 +1,108 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 33: Relations-&gt;33.5 Equivalence Relations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap33.html#X7DAA67338458BB64"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">33.5 <span class="Heading">Equivalence Relations</span></h4><p xmlns="http://www.w3.org/1999/xhtml">An <em>equivalence relation</em> <var class="Arg">E</var> over the set <var class="Arg">X</var> is a relation on <var class="Arg">X</var> which is reflexive, symmetric, and transitive. A <em>partition</em> <var class="Arg">P</var> is a set of subsets of <var class="Arg">X</var> such that for all <math id="-2490422162909212272" display="inline" alttext="R,S\in P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mrow xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+        <mo id="p1.1.m1.1.2">,</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">S</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">∈</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">P</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <in xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <list xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.1.cmml">
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑆</ci>
+        </list>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑃</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R,S\in P</annotation>
+  </semantics>
+</math>, <math id="-1460596995053896064" display="inline" alttext="R\cap S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∩</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">S</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <intersect xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑆</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R\cap S</annotation>
+  </semantics>
+</math> is the empty set and <math id="336712072816198038" display="inline" alttext="\cup P=X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">∪</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">P</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">X</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <union xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑃</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑋</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\cup P=X</annotation>
+  </semantics>
+</math>. An equivalence relation induces a partition such that if <math id="1851565564191860030" display="inline" alttext="(x,y)\in E" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1">
+        <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">x</mi>
+        <mo id="p1.1.m1.1.3">,</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">y</mi>
+        <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">∈</mo>
+      <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">E</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <in xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <interval xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.1.cmml" closure="open">
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑦</ci>
+        </interval>
+        <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝐸</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(x,y)\in E</annotation>
+  </semantics>
+</math> then <math id="284684464534492987" display="inline" alttext="x,y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mo id="p1.1.m1.1.2">,</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">y</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑦</ci>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x,y</annotation>
+  </semantics>
+</math> are in the same element of <var class="Arg">P</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Like all binary relations in <strong class="pkg">GAP</strong> equivalence relations are regarded as general endomorphic mappings (and the operations, properties and attributes of general mappings are available). However, partitions provide an efficient way of representing equivalence relations. Moreover, only the non-singleton classes or blocks are listed allowing for small equivalence relations to be represented on infinite sets. Hence the main attribute of equivalence relations is <code class="func">EquivalenceRelationPartition</code> (<a shape="rect" href="chap33_mj.html#X877389B683DD8F1A"><span class="RefLink">33.6-1</span></a>) which provides the partition induced by the given equivalence.</p> </body>
+    </html>

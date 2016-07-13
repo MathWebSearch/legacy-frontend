@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.7-1 Function Profiling</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X7939F6F182FDA5F1"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">7.7-1 <span class="Heading">Function Profiling</span></h5><p xmlns="http://www.w3.org/1999/xhtml">This section describes how to profiling at the function level. The idea is that</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>first one switches on profiling for those <strong class="pkg">GAP</strong> functions the performance of which one wants to check,</p>
+
+</li><li><p>then one runs some <strong class="pkg">GAP</strong> computations,</p>
+
+</li><li><p>then one looks at the profile information collected during these computations,</p>
+
+</li><li><p>then one runs more computations (perhaps clearing all profile information before, see <code class="func">ClearProfile</code> (<a shape="rect" href="chap7_mj.html#X7DAF9AB9793AE203"><span class="RefLink">7.7-10</span></a>)),</p>
+
+</li><li><p>and finally one switches off profiling.</p>
+
+</li></ul><p xmlns="http://www.w3.org/1999/xhtml">For switching on and off profiling, <strong class="pkg">GAP</strong> supports entering a list of functions (see <code class="func">ProfileFunctions</code> (<a shape="rect" href="chap7_mj.html#X81E8A8627C34FD3B"><span class="RefLink">7.7-5</span></a>), <code class="func">UnprofileFunctions</code> (<a shape="rect" href="chap7_mj.html#X79D394EC7BE8D008"><span class="RefLink">7.7-6</span></a>)) or a list of operations whose methods shall be (un)profiled (<code class="func">ProfileMethods</code> (<a shape="rect" href="chap7_mj.html#X787AC3BE7F991344"><span class="RefLink">7.7-7</span></a>), <code class="func">UnprofileMethods</code> (<a shape="rect" href="chap7_mj.html#X87A05F977F033693"><span class="RefLink">7.7-8</span></a>)), and <code class="func">DisplayProfile</code> (<a shape="rect" href="chap7_mj.html#X80FEA6A08775A48E"><span class="RefLink">7.7-9</span></a>) can be used to show profile information about functions in a given list.</p><p xmlns="http://www.w3.org/1999/xhtml">Besides these functions, <code class="func">ProfileGlobalFunctions</code> (<a shape="rect" href="chap7_mj.html#X79D6CB927BBEB940"><span class="RefLink">7.7-2</span></a>), <code class="func">ProfileOperations</code> (<a shape="rect" href="chap7_mj.html#X7C893F68841B990B"><span class="RefLink">7.7-3</span></a>), and <code class="func">ProfileOperationsAndMethods</code> (<a shape="rect" href="chap7_mj.html#X79D41E977DCA2BEE"><span class="RefLink">7.7-4</span></a>) can be used for switching on or off profiling for <em>all</em> global functions, operations, and operations together with all their methods, respectively, and for showing profile information about these functions.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that <strong class="pkg">GAP</strong> will perform more slowly when profiling than when not.</p> </body>
+    </html>

@@ -1,0 +1,22 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.11-19 AdjointModule</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X8729F0A678A4A09C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.11-19 AdjointModule</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AdjointModule</code>( <var class="Arg">A</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the <var class="Arg">A</var>-module defined by the left action of <var class="Arg">A</var> on itself.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:= NullMat( 2, 2 );; m1[1][1]:= 1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2:= NullMat( 2, 2 );; m2[2][2]:= 1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m3:= NullMat( 2, 2 );; m3[1][2]:= 1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= Algebra( Rationals, [ m1, m2, m3 ] );</span>
+&lt;algebra over Rationals, with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= AdjointModule( A );</span>
+&lt;3-dimensional left-module over &lt;algebra of dimension 
+3 over Rationals&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">v:= Basis( V )[3];</span>
+[ [ 0, 1 ], [ 0, 0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">W:= SubAlgebraModule( V, [ v ] );</span>
+&lt;left-module over &lt;algebra of dimension 3 over Rationals&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Dimension( W );</span>
+1
+</pre></div> </body>
+    </html>

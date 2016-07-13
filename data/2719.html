@@ -1,0 +1,11 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.3-3 RankOfPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X7C1ABD8A80E95B39"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.3-3 RankOfPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RankOfPartialPerm</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RankOfPartialPermCollection</code>( <var class="Arg">coll</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A non-negative integer.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>rank</em> of a partial permutation <var class="Arg">f</var> is the size of its domain, or equivalently the size of its image set or image list.</p><p xmlns="http://www.w3.org/1999/xhtml">The rank of a partial permutation collection <var class="Arg">coll</var> is the size of the union of the domains of the elements of <var class="Arg">coll</var>, or equivalently, the total number of points on which the elements of <var class="Arg">coll</var> act. Note that this is value may not the same as the size of the union of the images of the elements in <var class="Arg">coll</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 4, 6, 8, 9 ], [ 7, 10, 1, 9, 4, 2 ] );</span>
+[6,9,2,10][8,4,1,7]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RankOfPartialPerm(f);</span>
+6</pre></div> </body>
+    </html>

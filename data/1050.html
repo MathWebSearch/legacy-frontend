@@ -1,0 +1,50 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 5: Functions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap5.html#X86FA580F8055B274"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap5_mj.html#X86FA580F8055B274">5 <span class="Heading">Functions</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap5_mj.html#X870553EF8605792F">5.1 <span class="Heading">Information about a function</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X79C3BDC4781FA0FD">5.1-1 NameFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X877F03F77FD74C98">5.1-2 NumberArgumentsFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X818BAB817A4FB346">5.1-3 NamesLocalVariablesFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X80E108C57F90FAA3">5.1-4 FilenameFunc</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X7FF7643781D2C194">5.1-5 StartlineFunc</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X845A929B83D46E01">5.1-6 PageSource</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap5_mj.html#X851B58408520700D">5.2 <span class="Heading">Calling a function with a list argument that is interpreted as
+several arguments</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X7CF4DDB97D65AE52">5.2-1 CallFuncList</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap5_mj.html#X7B3D856B7DCAEB8F">5.3 <span class="Heading">Calling a function with a time limit</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X782F88AC7B6DC4F9">5.3-1 CallWithTimeout</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X781D10C77D11A03C">5.3-2 GAPInfo.TimeoutsSupported</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap5_mj.html#X7EB0A85F7D128BE0">5.4 <span class="Heading">Functions that do nothing</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X7DB422A2876CCC4D">5.4-1 ReturnTrue</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X7C131FB17D7518FC">5.4-2 ReturnFalse</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X7A0994DE7C258E55">5.4-3 ReturnFail</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X818EA8C47B46A634">5.4-4 ReturnNothing</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X8788D7D780FCE169">5.4-5 ReturnFirst</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X810325697BDEF899">5.4-6 IdFunc</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap5_mj.html#X80FE39D27CE3DE1B">5.5 <span class="Heading">Function Types</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X85E40340806C2B8C">5.5-1 IsFunction</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X874C7C6D8650D648">5.5-2 IsOperation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap5_mj.html#X87838FE885A9AAF9">5.5-3 FunctionsFamily</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap5_mj.html#X81F732457F7BC851">5.6 <span class="Heading">Naming Conventions</span></a>
+</span>
+</div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">5 <span class="Heading">Functions</span></h3><p xmlns="http://www.w3.org/1999/xhtml">The section <a shape="rect" href="chap4_mj.html#X815F71EA7BC0EB6F"><span class="RefLink">4.23</span></a> describes how to define a function. In this chapter we describe functions that give information about functions, and various utility functions used either when defining functions or calling functions.</p> </body>
+    </html>

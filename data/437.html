@@ -1,0 +1,153 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 56: Rings-&gt;56.2 Ideals of Rings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap56.html#X8776C3F97A731E70"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">56.2 <span class="Heading">Ideals of Rings</span></h4><p xmlns="http://www.w3.org/1999/xhtml">A <em>left ideal</em> in a ring <math id="2645556796778376465" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> is a subring of <math id="-9202304885357480045" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> that is closed under multiplication with elements of <math id="2158548103464161053" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> from the left.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>right ideal</em> in a ring <math id="6972027249015045378" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> is a subring of <math id="823492861296913025" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> that is closed under multiplication with elements of <math id="696809452228969176" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> from the right.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>two-sided ideal</em> or simply <em>ideal</em> in a ring <math id="-120022619359129708" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math> is both a left ideal and a right ideal in <math id="-2581819508970822911" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">So being a (left/right/two-sided) ideal is not a property of a domain but refers to the acting ring(s). Hence we must ask, e. g., <code class="code">IsIdeal( </code><math id="2657322058262471145" display="inline" alttext="R,I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+      <mo id="p1.1.m1.1.2">,</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">I</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐼</ci>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R,I</annotation>
+  </semantics>
+</math><code class="code"> )</code> if we want to know whether the ring <math id="67303302131620961" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐼</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">I</annotation>
+  </semantics>
+</math> is an ideal in the ring <math id="-1428969900558982842" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>. The property <code class="func">IsTwoSidedIdealInParent</code> (<a shape="rect" href="chap56_mj.html#X7DF623847B338850"><span class="RefLink">56.2-3</span></a>) can be used to store whether a ring is an ideal in its parent.</p><p xmlns="http://www.w3.org/1999/xhtml">(Whenever the term <code class="code">&quot;Ideal&quot;</code> occurs in an identifier without a specifying prefix <code class="code">&quot;Left&quot;</code> or <code class="code">&quot;Right&quot;</code>, this means the same as <code class="code">&quot;TwoSidedIdeal&quot;</code>. Conversely, any occurrence of <code class="code">&quot;TwoSidedIdeal&quot;</code> can be substituted by <code class="code">&quot;Ideal&quot;</code>.)</p><p xmlns="http://www.w3.org/1999/xhtml">For any of the above kinds of ideals, there is a notion of generators, namely <code class="func">GeneratorsOfLeftIdeal</code> (<a shape="rect" href="chap56_mj.html#X7B20BD2B7FAFBD64"><span class="RefLink">56.2-8</span></a>), <code class="func">GeneratorsOfRightIdeal</code> (<a shape="rect" href="chap56_mj.html#X80F2239F8653FF74"><span class="RefLink">56.2-9</span></a>), and <code class="func">GeneratorsOfTwoSidedIdeal</code> (<a shape="rect" href="chap56_mj.html#X86AAF5F9800E97EE"><span class="RefLink">56.2-7</span></a>). The acting rings can be accessed as <code class="func">LeftActingRingOfIdeal</code> (<a shape="rect" href="chap56_mj.html#X81D81D027C2F8D06"><span class="RefLink">56.2-10</span></a>) and <code class="func">RightActingRingOfIdeal</code> (<a shape="rect" href="chap56_mj.html#X81D81D027C2F8D06"><span class="RefLink">56.2-10</span></a>), respectively. Note that ideals are detected from known values of these attributes, especially it is assumed that whenever a domain has both a left and a right acting ring then these two are equal.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that we cannot use <code class="func">LeftActingDomain</code> (<a shape="rect" href="chap57_mj.html#X86F070E0807DC34E"><span class="RefLink">57.1-11</span></a>) and <code class="code">RightActingDomain</code> here, since ideals in algebras are themselves vector spaces, and such a space can of course also be a module for an action from the right. In order to make the usual vector space functionality automatically available for ideals, we have to distinguish the left and right module structure from the additional closure properties of the ideal.</p><p xmlns="http://www.w3.org/1999/xhtml">Further note that the attributes denoting ideal generators and acting ring are used to create ideals if this is explicitly wanted, but the ideal relation in the sense of <code class="func">IsTwoSidedIdeal</code> (<a shape="rect" href="chap56_mj.html#X7DF623847B338850"><span class="RefLink">56.2-3</span></a>) is of course independent of the presence of the attribute values.</p><p xmlns="http://www.w3.org/1999/xhtml">Ideals are constructed with <code class="func">LeftIdeal</code> (<a shape="rect" href="chap56_mj.html#X7C486A7C821D79F0"><span class="RefLink">56.2-1</span></a>), <code class="func">RightIdeal</code> (<a shape="rect" href="chap56_mj.html#X7C486A7C821D79F0"><span class="RefLink">56.2-1</span></a>), <code class="func">TwoSidedIdeal</code> (<a shape="rect" href="chap56_mj.html#X7C486A7C821D79F0"><span class="RefLink">56.2-1</span></a>). Principal ideals of the form <math id="3933454467837485865" display="inline" alttext="x*R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">*</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">R</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑅</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x*R</annotation>
+  </semantics>
+</math>, <math id="5669982862779577248" display="inline" alttext="R*x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">*</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">x</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑥</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R*x</annotation>
+  </semantics>
+</math>, <math id="-2499485936605225967" display="inline" alttext="R*x*R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">*</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">x</mi>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4a">*</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">R</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑅</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R*x*R</annotation>
+  </semantics>
+</math> can also be constructed with a simple multiplication.</p><p xmlns="http://www.w3.org/1999/xhtml">Currently many methods for dealing with ideals need linear algebra to work, so they are mainly applicable to ideals in algebras.</p> </body>
+    </html>

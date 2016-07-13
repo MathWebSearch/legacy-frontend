@@ -1,0 +1,29 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.10-7 IsFullHomModule</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X7A9A08EA79259659"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.10-7 IsFullHomModule</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsFullHomModule</code>( <var class="Arg">M</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A <em>full hom module</em> is a module of all <math id="-903451871007624669" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>-linear mappings between two left <math id="-6124658412612034441" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
+  </semantics>
+</math>-modules. The function <code class="func">Hom</code> (<a shape="rect" href="chap61_mj.html#X80015C78876B4F1E"><span class="RefLink">61.10-5</span></a>) can be used to construct a full hom module.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= Rationals^2;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">W:= VectorSpace( Rationals, [ [ 1, 0, 1 ], [ 1, 2, 3 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H:= Hom( Rationals, V, W );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFullHomModule( H );</span>
+true
+</pre></div> </body>
+    </html>

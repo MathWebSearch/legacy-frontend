@@ -1,0 +1,22 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.3-4 StoreFusion</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X808970FE87C3432F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.3-4 StoreFusion</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StoreFusion</code>( <var class="Arg">source</var>, <var class="Arg">fusion</var>, <var class="Arg">destination</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For two character tables <var class="Arg">source</var> and <var class="Arg">destination</var>, <code class="func">StoreFusion</code> stores the fusion <var class="Arg">fusion</var> from <var class="Arg">source</var> to <var class="Arg">destination</var> in the <code class="func">ComputedClassFusions</code> (<a shape="rect" href="chap73_mj.html#X7F71402285B7DE8E"><span class="RefLink">73.3-2</span></a>) list of <var class="Arg">source</var>, and adds the <code class="func">Identifier</code> (<a shape="rect" href="chap71_mj.html#X79C40EE97890202F"><span class="RefLink">71.9-8</span></a>) string of <var class="Arg">destination</var> to the <code class="func">NamesOfFusionSources</code> (<a shape="rect" href="chap73_mj.html#X7F6569D5786A9D49"><span class="RefLink">73.3-5</span></a>) list of <var class="Arg">destination</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">fusion</var> can either be a fusion map (that is, the list of positions of the image classes) or a record as described in <code class="func">ComputedClassFusions</code> (<a shape="rect" href="chap73_mj.html#X7F71402285B7DE8E"><span class="RefLink">73.3-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">If fusions to <var class="Arg">destination</var> are already stored on <var class="Arg">source</var> then another fusion can be stored only if it has a record component <code class="code">specification</code> that distinguishes it from the stored fusions. In the case of such an ambiguity, <code class="func">StoreFusion</code> raises an error.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbld8:= CharacterTable( d8 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ComputedClassFusions( tbld8 );</span>
+[ rec( map := [ 1, 2, 3, 3, 5 ], name := &quot;CT1&quot; ) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Identifier( tbls4 );</span>
+&quot;CT1&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GetFusionMap( tbld8, tbls4 );</span>
+[ 1, 2, 3, 3, 5 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GetFusionMap( tbls4, tbls5 );</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">poss:= PossibleClassFusions( tbls4, tbls5 );</span>
+[ [ 1, 5, 2, 3, 6 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StoreFusion( tbls4, poss[1], tbls5 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GetFusionMap( tbls4, tbls5 );</span>
+[ 1, 5, 2, 3, 6 ]
+</pre></div> </body>
+    </html>

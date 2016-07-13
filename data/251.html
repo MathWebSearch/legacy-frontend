@@ -1,0 +1,40 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.2-1 GeneralLinearGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X85D607DD82AF3E27"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">50.2-1 <span class="Heading">GeneralLinearGroup</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GeneralLinearGroup</code>( [<var class="Arg">filt</var>, ]<var class="Arg">d</var>, <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GL</code>( [<var class="Arg">filt</var>, ]<var class="Arg">d</var>, <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GeneralLinearGroup</code>( [<var class="Arg">filt</var>, ]<var class="Arg">d</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GL</code>( [<var class="Arg">filt</var>, ]<var class="Arg">d</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The first two forms construct a group isomorphic to the general linear group GL( <var class="Arg">d</var>, <var class="Arg">R</var> ) of all <math id="-7997971532159154695" display="inline" alttext="\textit{d}\times\textit{d}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑑</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑑</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">d</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">d</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{d}\times\textit{d}</annotation>
+  </semantics>
+</math> matrices that are invertible over the ring <var class="Arg">R</var>, in the category given by the filter <var class="Arg">filt</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The third and the fourth form construct the general linear group over the finite field with <var class="Arg">q</var> elements.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">filt</var> is not given it defaults to <code class="func">IsMatrixGroup</code> (<a shape="rect" href="chap44_mj.html#X7E6093FF85F1C3A1"><span class="RefLink">44.1-1</span></a>), and the returned group is the general linear group as a matrix group in its natural action (see also <code class="func">IsNaturalGL</code> (<a shape="rect" href="chap44_mj.html#X86F9A27D7AFAEB5A"><span class="RefLink">44.4-2</span></a>), <code class="func">IsNaturalGLnZ</code> (<a shape="rect" href="chap44_mj.html#X86F9CC1E7DB97CB6"><span class="RefLink">44.6-4</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">Currently supported rings <var class="Arg">R</var> are finite fields, the ring <code class="func">Integers</code> (<a shape="rect" href="chap14_mj.html#X853DF11B80068ED5"><span class="RefLink">14</span></a>), and residue class rings <code class="code">Integers mod <var class="Arg">m</var></code>, see <a shape="rect" href="chap14_mj.html#X864BF040862409FC"><span class="RefLink">14.5</span></a>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GL(4,3);</span>
+GL(4,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GL(2,Integers);</span>
+GL(2,Integers)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GL(3,Integers mod 12);</span>
+GL(3,Z/12Z)
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Using the <code class="func">OnLines</code> (<a shape="rect" href="chap41_mj.html#X86DC2DD5829CAD9A"><span class="RefLink">41.2-12</span></a>) operation it is possible to obtain the corresponding projective groups in a permutation action:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=GL(4,3);;Size(g);</span>
+24261120
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pgl:=Action(g,Orbit(g,Z(3)^0*[1,0,0,0],OnLines),OnLines);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(pgl);</span>
+12130560
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If you are interested only in the projective group as a permutation group and not in the correspondence between its moved points and the points in the projective space, you can also use <code class="func">PGL</code> (<a shape="rect" href="chap50_mj.html#X7F0DBEB880D2D574"><span class="RefLink">50.2-11</span></a>).</p> </body>
+    </html>

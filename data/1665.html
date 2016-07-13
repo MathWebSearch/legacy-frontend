@@ -1,0 +1,33 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.5-10 CheckFixedPoints</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X7B6EC10C7F7411E9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.5-10 CheckFixedPoints</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CheckFixedPoints</code>( <var class="Arg">inside1</var>, <var class="Arg">between</var>, <var class="Arg">inside2</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">inside1</var>, <var class="Arg">between</var>, <var class="Arg">inside2</var> be parametrized maps, where <var class="Arg">between</var> is assumed to map each fixed point of <var class="Arg">inside1</var> (that is, <var class="Arg">inside1</var><code class="code">[</code><math id="782628097016693712" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">] = </code><var class="Arg">i</var>) to a fixed point of <var class="Arg">inside2</var> (that is, <var class="Arg">between</var><code class="code">[</code><math id="387690344361474152" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">]</code> is either an integer that is fixed by <var class="Arg">inside2</var> or a list that has nonempty intersection with the union of its images under <var class="Arg">inside2</var>). <code class="func">CheckFixedPoints</code> changes <var class="Arg">between</var> and <var class="Arg">inside2</var> by removing all those entries violate this condition.</p><p xmlns="http://www.w3.org/1999/xhtml">When an inconsistency is detected, <code class="func">CheckFixedPoints</code> immediately returns <code class="keyw">fail</code>. Otherwise the list of positions is returned where changes occurred.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">subtbl:= CharacterTable( &quot;L4(3).2_2&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;O7(3)&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus:= InitFusion( subtbl, tbl );;  fus{ [ 48, 49 ] };</span>
+[ [ 54, 55, 56, 57 ], [ 54, 55, 56, 57 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CheckFixedPoints( ComputedPowerMaps( subtbl )[5], fus,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">       ComputedPowerMaps( tbl )[5] );</span>
+[ 48, 49 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus{ [ 48, 49 ] };</span>
+[ [ 56, 57 ], [ 56, 57 ] ]
+</pre></div> </body>
+    </html>

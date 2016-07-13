@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 3: Running GAP-&gt;3.2-2 The gaprc file</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap3.html#X84D4CF587D437C00"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">3.2-2 <span class="Heading">The gaprc file</span></h5><p xmlns="http://www.w3.org/1999/xhtml">If a file <code class="file">gaprc</code> is found it is read after <strong class="pkg">GAP</strong>'s <code class="file">init.g</code>, but before any of the files mentioned on the command line are read. You can use this file for your private customizations. (Many users may be happy with using just user preferences in the <code class="file">gap.ini</code> file (see above) for private customization.) For example, if you have a file containing functions or data that you always need, you could read this from <code class="file">gaprc</code>. Or if you find some of the names in the library too long, you could define abbreviations for those names in <code class="file">gaprc</code>. The following sample <code class="file">gaprc</code> file does both.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+Read( &quot;/usr/you/dat/mygroups.grp&quot; );
+Ac := Action;
+AcHom := ActionHomomorphism;
+RepAc := RepresentativeAction;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that only one <code class="file">gaprc</code> file is read when <strong class="pkg">GAP</strong> is started. When a workspace is created in a <strong class="pkg">GAP</strong> session after a <code class="file">gaprc</code> file has been read then no more <code class="file">gaprc</code> file will be read when <strong class="pkg">GAP</strong> is started with this workspace.</p><p xmlns="http://www.w3.org/1999/xhtml">Also note that the file must be called <code class="file">gaprc</code>. If you use a Windows text editor, in particular if your default is not to show file suffixes, you might accidentally create a file <code class="file">gaprc.txt</code> or <code class="file">gaprc.doc</code> which GAP will not recognize.</p> </body>
+    </html>

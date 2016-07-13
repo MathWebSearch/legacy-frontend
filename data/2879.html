@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.11-4 NormalClosure</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7BDEA0A98720D1BB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.11-4 NormalClosure</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NormalClosure</code>( <var class="Arg">G</var>, <var class="Arg">U</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The normal closure of <var class="Arg">U</var> in <var class="Arg">G</var> is the smallest normal subgroup of the closure of <var class="Arg">G</var> and <var class="Arg">U</var> which contains <var class="Arg">U</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NormalClosure(g,Subgroup(g,[(1,2,3)]));</span>
+Group([ (1,2,3), (2,3,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NormalClosure(g,Group((3,4,5)));</span>
+Group([ (3,4,5), (1,5,4), (1,2,5) ])
+</pre></div> </body>
+    </html>

@@ -1,0 +1,43 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.10-9 DnLatticeIterative</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X78754D007F3572A7"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.10-9 DnLatticeIterative</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DnLatticeIterative</code>( <var class="Arg">tbl</var>, <var class="Arg">reducibles</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">tbl</var> be an ordinary character table, and <var class="Arg">reducibles</var> either a list of virtual characters of <var class="Arg">tbl</var> or a record with components <code class="code">remainders</code> and <code class="code">norms</code>, for example a record returned by <code class="func">LLL</code> (<a shape="rect" href="chap72_mj.html#X85B360C085B360C0"><span class="RefLink">72.10-4</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DnLatticeIterative</code> was designed for iterative use of <code class="func">DnLattice</code> (<a shape="rect" href="chap72_mj.html#X85D510DC873A99B4"><span class="RefLink">72.10-8</span></a>). <code class="func">DnLatticeIterative</code> selects the vectors of norm <math id="5137897812070926655" display="inline" alttext="2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2</annotation>
+  </semantics>
+</math> among the given virtual character, calls <code class="func">DnLattice</code> (<a shape="rect" href="chap72_mj.html#X85D510DC873A99B4"><span class="RefLink">72.10-8</span></a>) for them, reduces the virtual characters with found irreducibles, calls <code class="func">DnLattice</code> (<a shape="rect" href="chap72_mj.html#X85D510DC873A99B4"><span class="RefLink">72.10-8</span></a>) again for the remaining virtual characters, and so on, until no new irreducibles are found.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DnLatticeIterative</code> returns a record with the same components and meaning of components as <code class="func">LLL</code> (<a shape="rect" href="chap72_mj.html#X85B360C085B360C0"><span class="RefLink">72.10-4</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">In the following example we temporarily decrease the line length limit from its default value <math id="6119652509423047734" display="inline" alttext="80" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">80</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">80</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">80</annotation>
+  </semantics>
+</math> to <math id="-2570124617382522513" display="inline" alttext="62" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">62</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">62</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">62</annotation>
+  </semantics>
+</math> in order to get a nicer output format.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s4:= CharacterTable( &quot;Symmetric&quot;, 4 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">red:= [ [ 2, 0, 2, 2, 0 ], [ 4, 0, 0, 1, 2 ],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">           [ 5, -1, 1, -1, 1 ], [ -1, 1, 3, -1, -1 ] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">dn:= DnLatticeIterative( s4, red );</span>
+rec( 
+  irreducibles := 
+    [ Character( CharacterTable( &quot;Sym(4)&quot; ), [ 2, 0, 2, -1, 0 ] ), 
+      Character( CharacterTable( &quot;Sym(4)&quot; ), [ 1, -1, 1, 1, -1 ] ), 
+      Character( CharacterTable( &quot;Sym(4)&quot; ), [ 1, 1, 1, 1, 1 ] ), 
+      Character( CharacterTable( &quot;Sym(4)&quot; ), [ 3, -1, -1, 0, 1 ] ) ], 
+  norms := [  ], remainders := [  ] )
+</pre></div> </body>
+    </html>

@@ -1,0 +1,58 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 60: Abelian Number Fields-&gt;60.1-3 GaussianRationals</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap60.html#X82F53C65802FF551"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">60.1-3 GaussianRationals</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GaussianRationals</code></td><td colspan="1" rowspan="1" class="tdright">( global variable )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsGaussianRationals</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">GaussianRationals</code> is the field <math id="4677183352108941205" display="inline" alttext="?_{4}=?(\sqrt{{-1}})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <msub xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">4</mn>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" mathvariant="normal">?</mi>
+        <mo xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.8.2.2">
+          <mo id="p1.1.m1.1.5" stretchy="false">(</mo>
+          <msqrt xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+            <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6.2">
+              <mo xref="p1.1.m1.1.6.2.1.cmml" id="p1.1.m1.1.6.2.1">-</mo>
+              <mn xref="p1.1.m1.1.6.2.2.cmml" id="p1.1.m1.1.6.2.2">1</mn>
+            </mrow>
+          </msqrt>
+          <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <csymbol id="p1.1.m1.1.8.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">4</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <times xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">?</ci>
+          <apply xref="p1.1.m1.1.8.2.2" id="p1.1.m1.1.6.cmml">
+            <root id="p1.1.m1.1.6a.cmml"/>
+            <apply xref="p1.1.m1.1.8.2.2" id="p1.1.m1.1.6.2.cmml">
+              <minus xref="p1.1.m1.1.6.2.1" id="p1.1.m1.1.6.2.1.cmml"/>
+              <cn xref="p1.1.m1.1.6.2.2" id="p1.1.m1.1.6.2.2.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?_{4}=?(\sqrt{{-1}})</annotation>
+  </semantics>
+</math> of Gaussian rationals, as a set of cyclotomic numbers, see Chapter <a shape="rect" href="chap18_mj.html#X7DFC03C187DE4841"><span class="RefLink">18</span></a> for basic operations. This field can also be obtained as <code class="code">CF(4)</code> (see <code class="func">CyclotomicField</code> (<a shape="rect" href="chap60_mj.html#X80D21D80850EFA4B"><span class="RefLink">60.1-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">The filter <code class="func">IsGaussianRationals</code> returns <code class="keyw">true</code> for the <strong class="pkg">GAP</strong> object <code class="func">GaussianRationals</code>, and <code class="keyw">false</code> for all other <strong class="pkg">GAP</strong> objects.</p><p xmlns="http://www.w3.org/1999/xhtml">(For details about the field of rationals, see Chapter <code class="func">Rationals</code> (<a shape="rect" href="chap17_mj.html#X7B6029D18570C08A"><span class="RefLink">17.1-1</span></a>).)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CF(4) = GaussianRationals;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Sqrt(-1) in GaussianRationals;</span>
+true
+</pre></div> </body>
+    </html>

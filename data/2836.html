@@ -1,0 +1,36 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.15-16 AllSmallNonabelianSimpleGroups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7EB47BF27D8CBF72"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.15-16 AllSmallNonabelianSimpleGroups</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AllSmallNonabelianSimpleGroups</code>( <var class="Arg">orders</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A list of all nonabelian simple groups whose order lies in the range <var class="Arg">orders</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The groups are given in small-degree permutation representations. The returned list is sorted by ascending group order. Currently, all simple groups of order less than <math id="60094535609555148" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
+      <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">6</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">10</cn>
+        <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">6</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">10^{6}</annotation>
+  </semantics>
+</math> are available via this function.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(AllSmallNonabelianSimpleGroups([1..1000000]),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">        StructureDescription);</span>
+[ &quot;A5&quot;, &quot;PSL(3,2)&quot;, &quot;A6&quot;, &quot;PSL(2,8)&quot;, &quot;PSL(2,11)&quot;, &quot;PSL(2,13)&quot;, 
+  &quot;PSL(2,17)&quot;, &quot;A7&quot;, &quot;PSL(2,19)&quot;, &quot;PSL(2,16)&quot;, &quot;PSL(3,3)&quot;, 
+  &quot;PSU(3,3)&quot;, &quot;PSL(2,23)&quot;, &quot;PSL(2,25)&quot;, &quot;M11&quot;, &quot;PSL(2,27)&quot;, 
+  &quot;PSL(2,29)&quot;, &quot;PSL(2,31)&quot;, &quot;A8&quot;, &quot;PSL(3,4)&quot;, &quot;PSL(2,37)&quot;, &quot;O(5,3)&quot;, 
+  &quot;Sz(8)&quot;, &quot;PSL(2,32)&quot;, &quot;PSL(2,41)&quot;, &quot;PSL(2,43)&quot;, &quot;PSL(2,47)&quot;, 
+  &quot;PSL(2,49)&quot;, &quot;PSU(3,4)&quot;, &quot;PSL(2,53)&quot;, &quot;M12&quot;, &quot;PSL(2,59)&quot;, 
+  &quot;PSL(2,61)&quot;, &quot;PSU(3,5)&quot;, &quot;PSL(2,67)&quot;, &quot;J1&quot;, &quot;PSL(2,71)&quot;, &quot;A9&quot;, 
+  &quot;PSL(2,73)&quot;, &quot;PSL(2,79)&quot;, &quot;PSL(2,64)&quot;, &quot;PSL(2,81)&quot;, &quot;PSL(2,83)&quot;, 
+  &quot;PSL(2,89)&quot;, &quot;PSL(3,5)&quot;, &quot;M22&quot;, &quot;PSL(2,97)&quot;, &quot;PSL(2,101)&quot;, 
+  &quot;PSL(2,103)&quot;, &quot;HJ&quot;, &quot;PSL(2,107)&quot;, &quot;PSL(2,109)&quot;, &quot;PSL(2,113)&quot;, 
+  &quot;PSL(2,121)&quot;, &quot;PSL(2,125)&quot;, &quot;O(5,4)&quot; ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,54 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.2-4 JoinOfPartialPerms</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X849668DD7B0B9E3B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.2-4 JoinOfPartialPerms</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ JoinOfPartialPerms</code>( <var class="Arg">arg</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ JoinOfIdempotentPartialPermsNC</code>( <var class="Arg">arg</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A partial permutation or <code class="keyw">fail</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The join of partial permutations <var class="Arg">f</var> and <var class="Arg">g</var> is just the join, or supremum, of <var class="Arg">f</var> and <var class="Arg">g</var> under the natural partial ordering of partial permutations.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">JoinOfPartialPerms</code> returns the union of the partial permutations in its argument if this defines a partial permutation, and <code class="keyw">fail</code> if it is not. The argument <var class="Arg">arg</var> can be a partial permutation collection or a number of partial permutations.</p><p xmlns="http://www.w3.org/1999/xhtml">The function <code class="code">JoinOfIdempotentPartialPermsNC</code> returns the join of its argument which is assumed to be a collection of idempotent partial permutations or a number of idempotent partial permutations. It is not checked that the arguments are idempotents. The performance of this function is higher than <code class="code">JoinOfPartialPerms</code> when it is known <em>a priori</em> that the argument consists of idempotents.</p><p xmlns="http://www.w3.org/1999/xhtml">The union of <var class="Arg">f</var> and <var class="Arg">g</var> is a partial permutation if and only if <var class="Arg">f</var> and <var class="Arg">g</var> agree on the intersection dom(<var class="Arg">f</var>)<math id="-5335515101462651719" display="inline" alttext="\cap" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">∩</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <intersect xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\cap</annotation>
+  </semantics>
+</math> dom(<var class="Arg">g</var>) of their domains and the images of dom(<var class="Arg">f</var>)<math id="-6635148040244544397" display="inline" alttext="\setminus" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">∖</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <setdiff xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\setminus</annotation>
+  </semantics>
+</math> dom(<var class="Arg">g</var>) and dom(<var class="Arg">g</var>)<math id="-8856952457352341283" display="inline" alttext="\setminus" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">∖</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <setdiff xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\setminus</annotation>
+  </semantics>
+</math> dom(<var class="Arg">f</var>) under <var class="Arg">f</var> and <var class="Arg">g</var>, respectively, are disjoint.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 3, 6, 8, 10 ], [ 2, 6, 7, 9, 1, 5 ] );</span>
+[3,7][8,1,2,6,9][10,5]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=PartialPerm( [ 11, 12, 14, 16, 18, 19 ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 17, 20, 11, 19, 14, 12 ] );</span>
+[16,19,12,20][18,14,11,17]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">JoinOfPartialPerms(f, g);</span>
+[3,7][8,1,2,6,9][10,5][16,19,12,20][18,14,11,17]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 4, 5, 6, 7 ], [ 5, 7, 3, 1, 4 ] );</span>
+[6,1,5,3](4,7)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=PartialPerm( [ 100 ], [ 1 ] );</span>
+[100,1]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">JoinOfPartialPerms(f, g);</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 3, 4 ], [ 3, 2, 4 ] );</span>
+[1,3,2](4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=PartialPerm( [ 1, 2, 4 ], [ 2, 3, 4 ] );</span>
+[1,2,3](4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">JoinOfPartialPerms(f, g);</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1 ], [ 2 ] ); </span>
+[1,2]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">JoinOfPartialPerms(f, f^-1);</span>
+(1,2)</pre></div> </body>
+    </html>

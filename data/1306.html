@@ -1,0 +1,10 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.5-1 PseudoRandom</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X7AB7187779EDC9BA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">47.5-1 PseudoRandom</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PseudoRandom</code>( <var class="Arg">F:</var> <var class="Arg">radius</var> <var class="Arg">:=</var> <var class="Arg">l</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The default algorithm for <code class="func">PseudoRandom</code> (<a shape="rect" href="chap30_mj.html#X811B5BD47DC5356B"><span class="RefLink">30.7-2</span></a>) makes little sense for finitely presented or free groups, as it produces words that are extremely long.</p><p xmlns="http://www.w3.org/1999/xhtml">By specifying the option <code class="code">radius</code>, instead elements are taken as words in the generators of <var class="Arg">F</var> in the ball of radius <var class="Arg">l</var> with equal distribution in the free group.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PseudoRandom(g:radius:=20);</span>
+a^3*b^2*a^-2*b^-1*a*b^-4*a*b^-1*a*b^-4
+</pre></div> </body>
+    </html>

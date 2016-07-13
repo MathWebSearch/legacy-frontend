@@ -1,0 +1,57 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.3 List Elements</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7921047F83F5FA28"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.3 <span class="Heading">List Elements</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>[ <var class="Arg">ix</var> ]</code></p><p xmlns="http://www.w3.org/1999/xhtml">The above construct evaluates to the element of the list <var class="Arg">list</var> with index <var class="Arg">ix</var>. For built-in list types and collections, indexing is done with origin 1, i.e., the first element of the list is the element with index 1.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := [ 2, 3, 5, 7, 11, 13 ];;  l[1];  l[2];  l[6];</span>
+2
+3
+13
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">list</var> is not a built-in list, or <var class="Arg">ix</var> does not evaluate to a positive integer, method selection is invoked to try and find a way of indexing <var class="Arg">list</var> with index <var class="Arg">ix</var>. If this fails, or the selected method finds that <code class="code"><var class="Arg">list</var>[<var class="Arg">ix</var>]</code> is unbound, an error is signalled.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>[ <var class="Arg">ix1</var>,<var class="Arg">ix2</var>,...]</code></p><p xmlns="http://www.w3.org/1999/xhtml">is a short-hand for <code class="code"><var class="Arg">list</var>[[<var class="Arg">ix1</var>,<var class="Arg">ix2</var>,...]]</code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>{ <var class="Arg">poss</var> }</code></p><p xmlns="http://www.w3.org/1999/xhtml">The above construct evaluates to a new list <var class="Arg">new</var> whose first element is <code class="code"><var class="Arg">list</var>[<var class="Arg">poss</var>[1]]</code>, whose second element is <code class="code"><var class="Arg">list</var>[<var class="Arg">poss</var>[2]]</code>, and so on. However, it does not need to be sorted and may contain duplicate elements. If for any <math id="-607615367545810996" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>, <code class="code"><var class="Arg">list</var>[ <var class="Arg">poss</var>[</code><math id="-484588816377675323" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">] ]</code> is unbound, an error is signalled.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := [ 2, 3, 5, 7, 11, 13, 17, 19 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l{[4..6]};  l{[1,7,1,8]};</span>
+[ 7, 11, 13 ]
+[ 2, 17, 2, 19 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The result is a <em>new</em> list, that is not identical to any other list. The elements of that list, however, are identical to the corresponding elements of the left operand (see <a shape="rect" href="chap21_mj.html#X7DD65BEA7EDB0CD7"><span class="RefLink">21.6</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">It is possible to nest such <em>sublist extractions</em>, as can be seen in the example below.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := [ [1,2,3], [4,5,6], [7,8,9], [10,11,12] ];;  m{[1,2,3]}{[3,2]};</span>
+[ [ 3, 2 ], [ 6, 5 ], [ 9, 8 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := m{[1,2,3]};; l{[3,2]};</span>
+[ [ 7, 8, 9 ], [ 4, 5, 6 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note the difference between the two examples. The latter extracts elements 1, 2, and 3 from <var class="Arg">m</var> and then extracts the elements 3 and 2 from <em>this list</em>. The former extracts elements 1, 2, and 3 from <var class="Arg">m</var> and then extracts the elements 3 and 2 from <em>each of those element lists</em>.</p><p xmlns="http://www.w3.org/1999/xhtml">To be precise: With each selector <code class="code">[<var class="Arg">pos</var>]</code> or <code class="code">{<var class="Arg">poss</var>}</code> we associate a <em>level</em> that is defined as the number of selectors of the form <code class="code">{<var class="Arg">poss</var>}</code> to its left in the same expression. For example</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+    l[pos1]{poss2}{poss3}[pos4]{poss5}[pos6]
+level   0      0      1     2      2     3
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Then a selector <code class="code"><var class="Arg">list</var>[<var class="Arg">pos</var>]</code> of level <var class="Arg">level</var> is computed as <code class="code">ListElement(<var class="Arg">list</var>,<var class="Arg">pos</var>,<var class="Arg">level</var>)</code>, where <code class="code">ListElement</code> is defined as follows. (Note that <code class="code">ListElement</code> is <em>not</em> a <strong class="pkg">GAP</strong> function.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+ListElement := function ( list, pos, level )
+ if level = 0 then
+  return list[pos];
+ else
+  return List( list, elm -&gt; ListElement(elm,pos,level-1) );
+ fi;
+end;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">and a selector <code class="code"><var class="Arg">list</var>{<var class="Arg">poss</var>}</code> of level <var class="Arg">level</var> is computed as <code class="code">ListElements(<var class="Arg">list</var>,<var class="Arg">poss</var>,<var class="Arg">level</var>)</code>, where <code class="code">ListElements</code> is defined as follows. (Note that <code class="code">ListElements</code> is <em>not</em> a <strong class="pkg">GAP</strong> function.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+ListElements := function ( list, poss, level )
+ if level = 0 then
+  return list{poss};
+  else
+   return List( list, elm -&gt; ListElements(elm,poss,level-1) );
+  fi;
+end;
+</pre></div> </body>
+    </html>

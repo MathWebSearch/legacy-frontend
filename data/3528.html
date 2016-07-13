@@ -1,0 +1,55 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.4 List Assignment</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X8611EF768210625B"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.4 <span class="Heading">List Assignment</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>[ <var class="Arg">ix</var> ] := <var class="Arg">object</var>;</code></p><p xmlns="http://www.w3.org/1999/xhtml">The list element assignment assigns the object <var class="Arg">object</var>, which can be of any type, to the list with index <var class="Arg">ix</var>, in the mutable (see <a shape="rect" href="chap12_mj.html#X7F0C119682196D65"><span class="RefLink">12.6</span></a>) list <var class="Arg">list</var>. That means that accessing the <var class="Arg">ix</var>-th element of the list <var class="Arg">list</var> will return <var class="Arg">object</var> after this assignment.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := [ 1, 2, 3 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l[1] := 3;; l;             # assign a new object</span>
+[ 3, 2, 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l[2] := [ 4, 5, 6 ];; l;   # &lt;object&gt; may be of any type</span>
+[ 3, [ 4, 5, 6 ], 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l[ l[1] ] := 10;; l;       # &lt;index&gt; may be an expression</span>
+[ 3, [ 4, 5, 6 ], 10 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If the index <var class="Arg">ix</var> is an integer larger than the length of the list <var class="Arg">list</var> (see <code class="func">Length</code> (<a shape="rect" href="chap21_mj.html#X780769238600AFD1"><span class="RefLink">21.17-5</span></a>)), the list is automatically enlarged to make room for the new element. Note that it is possible to generate lists with holes that way.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l[4] := &quot;another entry&quot;;; l;  # &lt;list&gt; is enlarged</span>
+[ 3, [ 4, 5, 6 ], 10, &quot;another entry&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l[ 10 ] := 1;; l;             # now &lt;list&gt; has a hole</span>
+[ 3, [ 4, 5, 6 ], 10, &quot;another entry&quot;,,,,,, 1 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The function <code class="func">Add</code> (<a shape="rect" href="chap21_mj.html#X795EC9D67E34DAB0"><span class="RefLink">21.4-2</span></a>) should be used if you want to add an element to the end of the list.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that assigning to a list changes the list, thus this list must be mutable (see <a shape="rect" href="chap12_mj.html#X7F0C119682196D65"><span class="RefLink">12.6</span></a>). See <a shape="rect" href="chap21_mj.html#X7DD65BEA7EDB0CD7"><span class="RefLink">21.6</span></a> for subtleties of changing lists.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">list</var> does not evaluate to a list, <var class="Arg">pos</var> does not evaluate to a positive integer or <var class="Arg">object</var> is a call to a function which does not return a value (for example <code class="code">Print</code>) an error is signalled.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>[ <var class="Arg">ix1</var>,<var class="Arg">ix2</var>,...] := <var class="Arg">obj</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">is a short-hand for <code class="code"><var class="Arg">list</var>[[<var class="Arg">ix1</var>,<var class="Arg">ix2</var>,...]] := <var class="Arg">obj</var></code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>{ <var class="Arg">poss</var> } := <var class="Arg">objects</var>;</code></p><p xmlns="http://www.w3.org/1999/xhtml">The sublist assignment assigns the object <code class="code"><var class="Arg">objects</var>[1]</code>, which can be of any type, to the list <var class="Arg">list</var> at the position <code class="code"><var class="Arg">poss</var>[1]</code>, the object <code class="code"><var class="Arg">objects</var>[2]</code> to <code class="code"><var class="Arg">list</var>[<var class="Arg">poss</var>[2]]</code>, and so on. <var class="Arg">poss</var> must be a dense list of positive integers, it need, however, not be sorted and may contain duplicate elements. <var class="Arg">objects</var> must be a dense list and must have the same length as <var class="Arg">poss</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := [ 2, 3, 5, 7, 11, 13, 17, 19 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l{[1..4]} := [10..13];; l;</span>
+[ 10, 11, 12, 13, 11, 13, 17, 19 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l{[1,7,1,10]} := [ 1, 2, 3, 4 ];; l;</span>
+[ 3, 11, 12, 13, 11, 13, 2, 19,, 4 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The next example shows that it is possible to nest such sublist assignments.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := [ [1,2,3], [4,5,6], [7,8,9], [10,11,12] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m{[1,2,3]}{[3,2]} := [ [11,12], [13,14], [15,16] ];; m;</span>
+[ [ 1, 12, 11 ], [ 4, 14, 13 ], [ 7, 16, 15 ], [ 10, 11, 12 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The exact behaviour is defined in the same way as for list extractions (see <a shape="rect" href="chap21_mj.html#X7921047F83F5FA28"><span class="RefLink">21.3</span></a>). Namely, with each selector <code class="code">[<var class="Arg">pos</var>]</code> or <code class="code">{<var class="Arg">poss</var>}</code> we associate a <em>level</em> that is defined as the number of selectors of the form <code class="code">{<var class="Arg">poss</var>}</code> to its left in the same expression. For example</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+    l[pos1]{poss2}{poss3}[pos4]{poss5}[pos6]
+level   0      0      1     1      1     2
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Then a list assignment <code class="code"><var class="Arg">list</var>[<var class="Arg">pos</var>] := <var class="Arg">vals</var>;</code> of level <var class="Arg">level</var> is computed as <code class="code">ListAssignment( <var class="Arg">list</var>, <var class="Arg">pos</var>, <var class="Arg">vals</var>, <var class="Arg">level</var> )</code>, where <code class="code">ListAssignment</code> is defined as follows. (Note that <code class="code">ListAssignment</code> is <em>not</em> a <strong class="pkg">GAP</strong> function.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+ListAssignment := function ( list, pos, vals, level )
+ local i;
+ if level = 0 then
+  list[pos] := vals;
+ else
+  for i in [1..Length(list)] do
+   ListAssignment( list[i], pos, vals[i], level-1 );
+  od;
+ fi;
+end;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">and a list assignment <code class="code"><var class="Arg">list</var>{<var class="Arg">poss</var>} := <var class="Arg">vals</var></code> of level <var class="Arg">level</var> is computed as <code class="code">ListAssignments( <var class="Arg">list</var>, <var class="Arg">poss</var>, <var class="Arg">vals</var>, <var class="Arg">level</var> )</code>, where <code class="code">ListAssignments</code> is defined as follows. (Note that <code class="code">ListAssignments</code> is <em>not</em> a <strong class="pkg">GAP</strong> function.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+ListAssignments := function ( list, poss, vals, level )
+ local i;
+ if level = 0 then
+  list{poss} := vals;
+ else
+  for i in [1..Length(list)] do
+   ListAssignments( list[i], poss, vals[i], level-1 );
+  od;
+ fi;
+end;
+</pre></div> </body>
+    </html>

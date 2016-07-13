@@ -1,0 +1,66 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.20-5 MinimalSupergroupsLattice</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X8138997C871EDF96"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.20-5 MinimalSupergroupsLattice</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MinimalSupergroupsLattice</code>( <var class="Arg">lat</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a lattice <var class="Arg">lat</var> of subgroups this attribute contains the minimal supergroup relations among the subgroups of the lattice. It is a list corresponding to the <code class="func">ConjugacyClassesSubgroups</code> (<a shape="rect" href="chap39_mj.html#X7E986BF48393113A"><span class="RefLink">39.19-3</span></a>) value of the lattice, each entry giving a list of the minimal supergroups of the representative of this class. Every minimal supergroup is indicated by a list of the form <math id="1136512800151670233" display="inline" alttext="[c,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">c</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="closed">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑐</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[c,n]</annotation>
+  </semantics>
+</math>, which means that the <math id="2342506904179813797" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>-th subgroup in class number <math id="4591105992004879193" display="inline" alttext="c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">c</annotation>
+  </semantics>
+</math> is a minimal supergroup of the representative.</p><p xmlns="http://www.w3.org/1999/xhtml">The number <math id="5561436577418438495" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> corresponds to access via <code class="func">ClassElementLattice</code> (<a shape="rect" href="chap39_mj.html#X78928A3582882BFD"><span class="RefLink">39.20-2</span></a>) and <em>not</em> necessarily the <code class="func">AsList</code> (<a shape="rect" href="chap30_mj.html#X8289FCCC8274C89D"><span class="RefLink">30.3-8</span></a>) arrangement! See also <code class="func">MaximalSubgroupsLattice</code> (<a shape="rect" href="chap39_mj.html#X815CDA447C5DB285"><span class="RefLink">39.20-4</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MinimalSupergroupsLattice(l);</span>
+[ [ [ 2, 1 ], [ 2, 2 ], [ 2, 3 ], [ 3, 1 ], [ 3, 2 ], [ 3, 3 ], 
+      [ 3, 4 ], [ 3, 5 ], [ 3, 6 ], [ 4, 1 ], [ 4, 2 ], [ 4, 3 ], 
+      [ 4, 4 ] ], [ [ 5, 1 ], [ 6, 2 ], [ 7, 2 ] ], 
+  [ [ 6, 1 ], [ 8, 1 ], [ 8, 3 ] ], [ [ 8, 1 ], [ 10, 1 ] ], 
+  [ [ 9, 1 ], [ 9, 2 ], [ 9, 3 ], [ 10, 1 ] ], [ [ 9, 1 ] ], 
+  [ [ 9, 1 ] ], [ [ 11, 1 ] ], [ [ 11, 1 ] ], [ [ 11, 1 ] ], [  ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">last[3];</span>
+[ [ 6, 1 ], [ 8, 1 ], [ 8, 3 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">u5:=ClassElementLattice(ConjugacyClassesSubgroups(l)[8],1);</span>
+Group([ (3,4), (2,4,3) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">u6:=ClassElementLattice(ConjugacyClassesSubgroups(l)[8],3);</span>
+Group([ (1,3), (1,3,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSubgroup(u5,u2);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSubgroup(u6,u2);</span>
+true
+</pre></div> </body>
+    </html>

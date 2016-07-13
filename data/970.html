@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 19: Floats-&gt;19.3 High-precision-specific methods</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap19.html#X845ACF3A78BD2771"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">19.3 <span class="Heading">High-precision-specific methods</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> provides a mechanism for packages to implement new floating-point numerical interfaces. The following describes that mechanism, actual examples of packages are documented separately.</p><p xmlns="http://www.w3.org/1999/xhtml">A package must create a record with fields (all optional)</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">creator</strong></dt><dd><p>a function converting strings to floating-point;</p>
+
+</dd><dt><strong class="Mark">eager</strong></dt><dd><p>a character allowing immediate conversion to floating-point;</p>
+
+</dd><dt><strong class="Mark">objbyextrep</strong></dt><dd><p>a function creating a floating-point number out of a list <code class="code">[mantissa,exponent]</code>;</p>
+
+</dd><dt><strong class="Mark">filter</strong></dt><dd><p>a filter for the new floating-point objects;</p>
+
+</dd><dt><strong class="Mark">constants</strong></dt><dd><p>a record containing numerical constants, such as <code class="code">MANT_DIG</code>, <code class="code">MAX</code>, <code class="code">MIN</code>, <code class="code">NAN</code>.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The package must install methods <code class="code">Int</code>, <code class="code">Rat</code>, <code class="code">String</code> for its objects, and creators <code class="code">NewFloat(filter,IsRat)</code>, <code class="code">NewFloat(IsString)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">It must then install methods for all arithmetic and numerical operations: <code class="code">PLUS</code>, <code class="code">Exp</code>, ...</p><p xmlns="http://www.w3.org/1999/xhtml">The user chooses that implementation by calling <code class="func">SetFloats</code> (<a shape="rect" href="chap19_mj.html#X7A962B0983FA66E8"><span class="RefLink">19.2-9</span></a>) with the record as argument, and with an optional second argument requesting a precision in binary digits.</p> </body>
+    </html>

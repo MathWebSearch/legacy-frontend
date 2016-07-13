@@ -1,0 +1,35 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.5-7 UpdateMap</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X80C7328C85BFC20B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.5-7 UpdateMap</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ UpdateMap</code>( <var class="Arg">character</var>, <var class="Arg">paramap</var>, <var class="Arg">indirected</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">character</var> be a map, <var class="Arg">paramap</var> a parametrized map, and <var class="Arg">indirected</var> a parametrized map that is contained in <code class="code">CompositionMaps( <var class="Arg">character</var>, <var class="Arg">paramap</var> )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Then <code class="func">UpdateMap</code> changes <var class="Arg">paramap</var> to the parametrized map containing exactly the maps whose composition with <var class="Arg">character</var> is equal to <var class="Arg">indirected</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If a contradiction is detected then <code class="keyw">false</code> is returned immediately, otherwise <code class="keyw">true</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">subtbl:= CharacterTable(&quot;S4(4).2&quot;);; tbl:= CharacterTable(&quot;He&quot;);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus:= InitFusion( subtbl, tbl );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus;</span>
+[ 1, 2, 2, [ 2, 3 ], 4, 4, [ 7, 8 ], [ 7, 8 ], 9, 9, 9, [ 10, 11 ], 
+  [ 10, 11 ], 18, 18, 25, 25, [ 26, 27 ], [ 26, 27 ], 2, [ 6, 7 ], 
+  [ 6, 7 ], [ 6, 7, 8 ], 10, 10, 17, 17, 18, [ 19, 20 ], [ 19, 20 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">chi:= Irr( tbl )[2];</span>
+Character( CharacterTable( &quot;He&quot; ), [ 51, 11, 3, 6, 0, 3, 3, -1, 1, 2, 
+  0, 3*E(7)+3*E(7)^2+3*E(7)^4, 3*E(7)^3+3*E(7)^5+3*E(7)^6, 2, 
+  E(7)+E(7)^2+2*E(7)^3+E(7)^4+2*E(7)^5+2*E(7)^6, 
+  2*E(7)+2*E(7)^2+E(7)^3+2*E(7)^4+E(7)^5+E(7)^6, 1, 1, 0, 0, 
+  -E(7)-E(7)^2-E(7)^4, -E(7)^3-E(7)^5-E(7)^6, E(7)+E(7)^2+E(7)^4, 
+  E(7)^3+E(7)^5+E(7)^6, 1, 0, 0, -1, -1, 0, 0, E(7)+E(7)^2+E(7)^4, 
+  E(7)^3+E(7)^5+E(7)^6 ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">filt:= Filtered( Irr( subtbl ), x -&gt; x[1] = 50 );</span>
+[ Character( CharacterTable( &quot;S4(4).2&quot; ), 
+    [ 50, 10, 10, 2, 5, 5, -2, 2, 0, 0, 0, 1, 1, 0, 0, 0, 0, -1, -1, 
+      10, 2, 2, 2, 1, 1, 0, 0, 0, -1, -1 ] ), 
+  Character( CharacterTable( &quot;S4(4).2&quot; ), 
+    [ 50, 10, 10, 2, 5, 5, -2, 2, 0, 0, 0, 1, 1, 0, 0, 0, 0, -1, -1, 
+      -10, -2, -2, -2, -1, -1, 0, 0, 0, 1, 1 ] ) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UpdateMap( chi, fus, filt[1] + TrivialCharacter( subtbl ) );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus;</span>
+[ 1, 2, 2, 3, 4, 4, 8, 7, 9, 9, 9, 10, 10, 18, 18, 25, 25, 
+  [ 26, 27 ], [ 26, 27 ], 2, [ 6, 7 ], [ 6, 7 ], [ 6, 7 ], 10, 10, 
+  17, 17, 18, [ 19, 20 ], [ 19, 20 ] ]
+</pre></div> </body>
+    </html>

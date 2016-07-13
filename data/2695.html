@@ -1,0 +1,25 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.5 Operators and operations for partial permutations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X848CD855802C6CE1"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">54.5 <span class="Heading">Operators and operations for partial permutations</span></h4><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> ^ -1</code></strong></dt><dd><p>returns the inverse of the partial permutation <var class="Arg">f</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">i</var> ^ <var class="Arg">f</var></code></strong></dt><dd><p>returns the image of the positive integer <var class="Arg">i</var> under the partial permutation <var class="Arg">f</var> if it is defined and <code class="code">0</code> if it is not.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">i</var> / <var class="Arg">f</var></code></strong></dt><dd><p>returns the preimage of the positive integer <var class="Arg">i</var> under the partial permutation <var class="Arg">f</var> if it is defined and <code class="code">0</code> if it is not. Note that the inverse of <var class="Arg">f</var> is not calculated to find the preimage of <var class="Arg">i</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> ^ <var class="Arg">g</var></code></strong></dt><dd><p>returns <code class="code"><var class="Arg">g</var>^-1*<var class="Arg">f</var>*<var class="Arg">g</var></code> when <var class="Arg">f</var> is a partial permutation and <var class="Arg">g</var> is a permutation or partial permutation; see <code class="func">\^</code> (<a shape="rect" href="chap31_mj.html#X8481C9B97B214C23"><span class="RefLink">31.12-1</span></a>). This operation requires essentially the same number of steps as multiplying partial permutations, which is around one third as many as inverting and multiplying twice.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> * <var class="Arg">g</var></code></strong></dt><dd><p>returns the composition of <var class="Arg">f</var> and <var class="Arg">g</var> when <var class="Arg">f</var> and <var class="Arg">g</var> are partial permutations or permutations. The product of a permutation and a partial permutation is returned as a partial permutation.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> / <var class="Arg">g</var></code></strong></dt><dd><p>returns <code class="code"><var class="Arg">f</var>*<var class="Arg">g</var>^-1</code> when <var class="Arg">f</var> is a partial permutation and <var class="Arg">g</var> is a permutation or partial permutation. This operation requires essentially the same number of steps as multiplying partial permutations, which is approximately half that required to first invert <var class="Arg">g</var> and then take the product with <var class="Arg">f</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">LQUO(<var class="Arg">g</var>, <var class="Arg">f</var>)</code></strong></dt><dd><p>returns <code class="code"><var class="Arg">g</var>^-1*<var class="Arg">f</var></code> when <var class="Arg">f</var> is a partial permutation and <var class="Arg">g</var> is a permutation or partial permutation. This operation requires essentially the same number of steps as multiplying partial permutations, which is approximately half that required to first invert <var class="Arg">g</var> and then take the product with <var class="Arg">f</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> &lt; <var class="Arg">g</var></code></strong></dt><dd><p>returns <code class="keyw">true</code> if the image of <var class="Arg">f</var> on the range from 1 to the degree of <var class="Arg">f</var> is lexicographically less than the corresponding image for <var class="Arg">g</var> and <code class="keyw">false</code> if it is not. See <code class="func">NaturalLeqPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X87B1ED93785257C1"><span class="RefLink">54.5-4</span></a>) and <code class="func">ShortLexLeqPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X81BD69307D294A1C"><span class="RefLink">54.5-5</span></a>) for additional orders for partial permutations.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> = <var class="Arg">g</var></code></strong></dt><dd><p>returns <code class="keyw">true</code> if the partial permutation <var class="Arg">f</var> equals the partial permutation <var class="Arg">g</var> and returns <code class="keyw">false</code> if it does not.</p>
+
+</dd></dl> </body>
+    </html>

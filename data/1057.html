@@ -1,0 +1,7 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 78: Method Selection-&gt;78.5 Redispatching</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap78.html#X7B85DD797A907106"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">78.5 <span class="Heading">Redispatching</span></h4><p xmlns="http://www.w3.org/1999/xhtml">As mentioned above the method selection will not test unknown properties. In situations, in which algorithms are only known (or implemented) under certain conditions, however such a test might be actually desired.</p><p xmlns="http://www.w3.org/1999/xhtml">One way to achieve this would be to install the method under weaker conditions and explicitly test the properties first, exiting via <code class="func">TryNextMethod</code> (<a shape="rect" href="chap78_mj.html#X7EED949B83046A7F"><span class="RefLink">78.4-1</span></a>) if some of them are not fulfilled. A problem of this approach however is that such methods then automatically are ranked lower and that the code does not look nice.</p><p xmlns="http://www.w3.org/1999/xhtml">A much better way is to use redispatching: Before deciding that no method has been found one tests these properties and if they turn out to be true the method selection is started anew (and will then find a method).</p><p xmlns="http://www.w3.org/1999/xhtml">This can be achieved via the following function:</p> </body>
+    </html>

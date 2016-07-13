@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 4: The Programming Language-&gt;4.4 Whitespaces</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap4.html#X7C53CEFC8641B919"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">4.4 <span class="Heading">Whitespaces</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The characters <strong class="button">Space</strong>, <strong class="button">Tab</strong>, <strong class="button">Newline</strong>, and <strong class="button">Return</strong> are called <em>whitespace characters</em>. Whitespace is used as necessary to separate lexical symbols, such as integers, identifiers, or keywords. For example <code class="code">Thorondor</code> is a single identifier, while <code class="code">Th or ondor</code> is the keyword <code class="keyw">or</code> between the two identifiers <code class="code">Th</code> and <code class="code">ondor</code>. Whitespace may occur between any two symbols, but not within a symbol. Two or more adjacent whitespace characters are equivalent to a single whitespace. Apart from the role as separator of symbols, whitespace characters are otherwise insignificant. Whitespace characters may also occur inside a string, where they are significant. Whitespace characters should also be used freely for improved readability.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>comment</em> starts with the character <code class="code">#</code>, which is sometimes called sharp or hatch, and continues to the end of the line on which the comment character appears. The whole comment, including <code class="code">#</code> and the <strong class="button">Newline</strong> character is treated as a single whitespace. Inside a string, the comment character <code class="code">#</code> loses its role and is just an ordinary character.</p><p xmlns="http://www.w3.org/1999/xhtml">For example, the following statement</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+if i&lt;0 then a:=-i;else a:=i;fi;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">is equivalent to</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+if i &lt; 0 then   # if i is negative
+  a := -i;      #   take its additive inverse
+else            # otherwise
+  a := i;       #   take itself
+fi;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">(which by the way shows that it is possible to write superfluous comments). However the first statement is <em>not</em> equivalent to</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+ifi&lt;0thena:=-i;elsea:=i;fi;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">since the keyword <code class="keyw">if</code> must be separated from the identifier <code class="code">i</code> by a whitespace, and similarly <code class="keyw">then</code> and <code class="code">a</code>, and <code class="keyw">else</code> and <code class="code">a</code> must be separated.</p> </body>
+    </html>

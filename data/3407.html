@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.2-4 FreeLieAlgebra</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X7F7B34BD80F0F1C8"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.2-4 FreeLieAlgebra</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeLieAlgebra</code>( <var class="Arg">R</var>, <var class="Arg">rank</var>[, <var class="Arg">name</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeLieAlgebra</code>( <var class="Arg">R</var>, <var class="Arg">name1</var>, <var class="Arg">name2</var>, <var class="Arg">...</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns a free Lie algebra of rank <var class="Arg">rank</var> over the ring <var class="Arg">R</var>. <code class="code">FreeLieAlgebra( <var class="Arg">R</var>, <var class="Arg">name1</var>, <var class="Arg">name2</var>,...)</code> returns a free Lie algebra over <var class="Arg">R</var> with generators named <var class="Arg">name1</var>, <var class="Arg">name2</var>, and so on. The elements of a free Lie algebra are written on the Hall-Lyndon basis.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= FreeLieAlgebra( Rationals, &quot;x&quot;, &quot;y&quot;, &quot;z&quot; );</span>
+&lt;Lie algebra over Rationals, with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= GeneratorsOfAlgebra( L );; x:= g[1];; y:=g[2];; z:= g[3];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">z*(y*(x*(z*y)));</span>
+(-1)*((x*(y*z))*(y*z))+(-1)*((x*((y*z)*z))*y)+(-1)*(((x*z)*(y*z))*y)
+</pre></div> </body>
+    </html>

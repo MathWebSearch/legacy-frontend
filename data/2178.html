@@ -1,0 +1,49 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.10-3 IsTableOfMarksWithGens</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X7889DB6D790593B9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.10-3 IsTableOfMarksWithGens</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsTableOfMarksWithGens</code>( <var class="Arg">tom</var> )</td><td colspan="1" rowspan="1" class="tdright">( filter )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This filter shall express the union of the filters <code class="code">IsTableOfMarks and HasStraightLineProgramsTom</code> and <code class="code">IsTableOfMarks and HasGeneratorsSubgroupsTom</code>. If a table of marks <var class="Arg">tom</var> has this filter set then <var class="Arg">tom</var> can be asked to compute information that is in general not uniquely determined by a table of marks, for example the positions of derived subgroups or normalizers of subgroups (see <code class="func">DerivedSubgroupTom</code> (<a shape="rect" href="chap70_mj.html#X8528D9397FFAF477"><span class="RefLink">70.9-2</span></a>), <code class="func">NormalizerTom</code> (<a shape="rect" href="chap70_mj.html#X7CE6C45881F7F7D4"><span class="RefLink">70.9-4</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a5:= TableOfMarks( &quot;A5&quot; );;  IsTableOfMarksWithGens( a5 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasGeneratorsSubgroupsTom( a5 );  HasStraightLineProgramsTom( a5 );</span>
+false
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">alt5:= TableOfMarks( AlternatingGroup( 5 ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsTableOfMarksWithGens( alt5 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasGeneratorsSubgroupsTom(alt5); HasStraightLineProgramsTom(alt5);</span>
+true
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">progs:= StraightLineProgramsTom( a5 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OrdersTom( a5 );</span>
+[ 1, 2, 3, 4, 5, 6, 10, 12, 60 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsCyclicTom( a5, 4 );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( progs[4] );</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">progs[4][1];</span>
+&lt;straight line program&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># first generator of an el. ab group of order 4:</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( progs[4][1] );</span>
+# input:
+r:= [ g1, g2 ];
+# program:
+r[3]:= r[2]*r[1];
+r[4]:= r[3]*r[2]^-1*r[1]*r[3]*r[2]^-1*r[1]*r[2];
+# return value:
+r[4]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x:= [ [ Z(2)^0, 0*Z(2) ], [ Z(2^2), Z(2)^0 ] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">y:= [ [ Z(2^2), Z(2)^0 ], [ 0*Z(2), Z(2^2)^2 ] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">res1:= ResultOfStraightLineProgram( progs[4][1], [ x, y ] );</span>
+[ [ Z(2)^0, 0*Z(2) ], [ Z(2^2)^2, Z(2)^0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">res2:= ResultOfStraightLineProgram( progs[4][2], [ x, y ] );</span>
+[ [ Z(2)^0, 0*Z(2) ], [ Z(2^2), Z(2)^0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w:= y*x;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">res1 = w*y^-1*x*w*y^-1*x*y;</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">subgrp:= Group( res1, res2 );;  Size( subgrp );  IsCyclic( subgrp );</span>
+4
+false
+</pre></div> </body>
+    </html>

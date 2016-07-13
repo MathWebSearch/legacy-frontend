@@ -1,0 +1,74 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.5-2 InverseMap</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X7877EE167A711AB6"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.5-2 InverseMap</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseMap</code>( <var class="Arg">paramap</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a parametrized map <var class="Arg">paramap</var>, <code class="func">InverseMap</code> returns a mutable parametrized map whose <math id="5944102349517733141" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th entry is unbound if <math id="-8412748035010738886" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> is not in the image of <var class="Arg">paramap</var>, equal to <math id="-4568750272967612608" display="inline" alttext="j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">j</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑗</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">j</annotation>
+  </semantics>
+</math> if <math id="-1459985563835377572" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> is (in) the image of <code class="code"><var class="Arg">paramap</var>[<var class="Arg">j</var>]</code> exactly for <math id="-5196024493563517815" display="inline" alttext="j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">j</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑗</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">j</annotation>
+  </semantics>
+</math>, and equal to the set of all preimages of <math id="5251874117282404763" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math> under <var class="Arg">paramap</var> otherwise.</p><p xmlns="http://www.w3.org/1999/xhtml">We have <code class="code">CompositionMaps( <var class="Arg">paramap</var>, InverseMap( <var class="Arg">paramap</var> ) )</code> the identity map.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;2.A5&quot; );;  f:= CharacterTable( &quot;A5&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus:= GetFusionMap( tbl, f );</span>
+[ 1, 1, 2, 3, 3, 4, 4, 5, 5 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">inv:= InverseMap( fus );</span>
+[ [ 1, 2 ], 3, [ 4, 5 ], [ 6, 7 ], [ 8, 9 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CompositionMaps( fus, inv );</span>
+[ 1, 2, 3, 4, 5 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># transfer a power map ``up'' to the factor group</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pow:= PowerMap( tbl, 2 );</span>
+[ 1, 1, 2, 4, 4, 8, 8, 6, 6 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CompositionMaps( fus, CompositionMaps( pow, inv ) );</span>
+[ 1, 1, 3, 5, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">last = PowerMap( f, 2 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># transfer a power map of the factor group ``down'' to the group</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CompositionMaps( inv, CompositionMaps( PowerMap( f, 2 ), fus ) );</span>
+[ [ 1, 2 ], [ 1, 2 ], [ 1, 2 ], [ 4, 5 ], [ 4, 5 ], [ 8, 9 ], 
+  [ 8, 9 ], [ 6, 7 ], [ 6, 7 ] ]
+</pre></div> </body>
+    </html>

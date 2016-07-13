@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.18-4 SortingPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X800209E881E7CECB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.18-4 SortingPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SortingPerm</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SortingPerm</code> returns the same as <code class="func">Sortex</code> (<a shape="rect" href="chap21_mj.html#X87287FCA81E2B06A"><span class="RefLink">21.18-3</span></a>) but does <em>not</em> change the argument.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list1 := [ 5, 4, 6, 1, 7, 5 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list2 := ShallowCopy( list1 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">perm := SortingPerm( list1 );</span>
+(1,3,5,6,4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list1;</span>
+[ 5, 4, 6, 1, 7, 5 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Permuted( list2, perm );</span>
+[ 1, 4, 5, 5, 6, 7 ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The default methods for all of these sorting operations currently use Shell sort as it has a comparable performance to Quicksort for lists of length at most a few thousands, and has better worst-case behaviour.</p> </body>
+    </html>

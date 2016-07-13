@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.2-11 NrTuples</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X85E18A9A87FD4CA2"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.2-11 NrTuples</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrTuples</code>( <var class="Arg">set</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the number of <code class="code">Tuples(<var class="Arg">set</var>,<var class="Arg">k</var>)</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Tuples( [1,2,3], 2 );</span>
+[ [ 1, 1 ], [ 1, 2 ], [ 1, 3 ], [ 2, 1 ], [ 2, 2 ], [ 2, 3 ], 
+  [ 3, 1 ], [ 3, 2 ], [ 3, 3 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NrTuples( [1..10], 5 );</span>
+100000
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">Tuples(<var class="Arg">set</var>,<var class="Arg">k</var>)</code> can also be viewed as the <var class="Arg">k</var>-fold cartesian product of <var class="Arg">set</var> (see <code class="func">Cartesian</code> (<a shape="rect" href="chap21_mj.html#X7E1593B979BDF2CD"><span class="RefLink">21.20-16</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">The function <code class="func">Combinations</code> (<a shape="rect" href="chap16_mj.html#X8770F16D794C0ADB"><span class="RefLink">16.2-1</span></a>) computes unordered selections without repetitions, <code class="func">Arrangements</code> (<a shape="rect" href="chap16_mj.html#X7837B3357C7566C8"><span class="RefLink">16.2-4</span></a>) computes ordered selections without repetitions, and finally the function <code class="func">UnorderedTuples</code> (<a shape="rect" href="chap16_mj.html#X81601C6786120DDC"><span class="RefLink">16.2-6</span></a>) computes unordered selections with repetitions.</p> </body>
+    </html>

@@ -1,0 +1,45 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.22-2 ConvertToRangeRep</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7D22B2298167A58F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.22-2 ConvertToRangeRep</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ConvertToRangeRep</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For some lists the <strong class="pkg">GAP</strong> kernel knows that they are in fact ranges. Those lists are represented internally in a compact way instead of the ordinary way.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">list</var> is a range then <code class="func">ConvertToRangeRep</code> changes the representation of <var class="Arg">list</var> to this compact representation.</p><p xmlns="http://www.w3.org/1999/xhtml">This is important since this representation needs only 12 bytes for the entire range while the ordinary representation needs <math id="8998209531007811619" display="inline" alttext="4length" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">4</mn>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">e</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">n</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1c">⁢</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">g</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1d">⁢</mo>
+      <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">t</mi>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1e">⁢</mo>
+      <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">h</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <times xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml"/>
+        <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">4</cn>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑒</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑛</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑔</ci>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑡</ci>
+        <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">ℎ</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">4length</annotation>
+  </semantics>
+</math> bytes.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that a list that is represented in the ordinary way might still be a range. It is just that <strong class="pkg">GAP</strong> does not know this. The following rules tell you under which circumstances a range is represented in the compact way, so you can write your program in such a way that you make best use of this compact representation for ranges.</p><p xmlns="http://www.w3.org/1999/xhtml">Lists created by the syntactic construct <code class="code">[ <var class="Arg">first</var>, <var class="Arg">second</var> .. <var class="Arg">last</var> ]</code> are of course known to be ranges and are represented in the compact way.</p><p xmlns="http://www.w3.org/1999/xhtml">If you call <code class="func">ConvertToRangeRep</code> for a list represented the ordinary way that is indeed a range, the representation is changed from the ordinary to the compact representation. A call of <code class="func">ConvertToRangeRep</code> for a list that is not a range is ignored.</p><p xmlns="http://www.w3.org/1999/xhtml">If you change a mutable range that is represented in the compact way, by assignment, <code class="func">Add</code> (<a shape="rect" href="chap21_mj.html#X795EC9D67E34DAB0"><span class="RefLink">21.4-2</span></a>) or <code class="func">Append</code> (<a shape="rect" href="chap21_mj.html#X79E31DB27C82D6E1"><span class="RefLink">21.4-5</span></a>), the range will be converted to the ordinary representation, even if the change is such that the resulting list is still a proper range.</p><p xmlns="http://www.w3.org/1999/xhtml">Suppose you have built a proper range in such a way that it is represented in the ordinary way and that you now want to convert it to the compact representation to save space. Then you should call <code class="func">ConvertToRangeRep</code> with that list as an argument. You can think of the call to <code class="func">ConvertToRangeRep</code> as a hint to <strong class="pkg">GAP</strong> that this list is a proper range.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r:= [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];</span>
+[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConvertToRangeRep( r );  r;</span>
+[ 1 .. 10 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:= [ 1, 2, 4, 5 ];;  ConvertToRangeRep( l );  l;</span>
+[ 1, 2, 4, 5 ]
+</pre></div> </body>
+    </html>

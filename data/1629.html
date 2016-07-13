@@ -1,0 +1,25 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 36: Words-&gt;36.2-2 \&lt;</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap36.html#X82D4C7BE803166D6"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">36.2-2 \&lt;</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ \&lt;</code>( <var class="Arg">w1</var>, <var class="Arg">w2</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Words are ordered according to their external representation. More precisely, two words can be compared if they are words over the same alphabet, and the word with smaller external representation is smaller. For nonassociative words, the ordering is defined in <a shape="rect" href="chap36_mj.html#X84C2F9037EEE9CED"><span class="RefLink">36.5</span></a>; associative words are ordered by the shortlex ordering via <code class="code">&lt;</code> (see <a shape="rect" href="chap37_mj.html#X7934D3D5797102EC"><span class="RefLink">37.7</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the alphabet of a word is determined by its family (see <a shape="rect" href="chap13_mj.html#X846063757EC05986"><span class="RefLink">13.1</span></a>), and that the result of each call to <code class="func">FreeMagma</code> (<a shape="rect" href="chap36_mj.html#X7CFFD9027DDD1555"><span class="RefLink">36.4-1</span></a>), <code class="func">FreeGroup</code> (<a shape="rect" href="chap37_mj.html#X8215999E835290F0"><span class="RefLink">37.2-1</span></a>) etc. consists of words over a new alphabet. In particular, there is no &quot;universal&quot; empty word, every families of words in <code class="func">IsWordWithOne</code> (<a shape="rect" href="chap36_mj.html#X843F5C3A82239398"><span class="RefLink">36.1-1</span></a>) has its own empty word.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:= FreeMagma( &quot;a&quot;, &quot;b&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x:= FreeMagma( &quot;a&quot;, &quot;b&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mgens:= GeneratorsOfMagma( m );</span>
+[ a, b ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">xgens:= GeneratorsOfMagma( x );</span>
+[ a, b ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a:= mgens[1];;  b:= mgens[2];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a = xgens[1];</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a*(a*a) = (a*a)*a;  a*b = b*a;  a*a = a*a;</span>
+false
+false
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a &lt; b;  b &lt; a;  a &lt; a*b;</span>
+true
+false
+true
+</pre></div> </body>
+    </html>

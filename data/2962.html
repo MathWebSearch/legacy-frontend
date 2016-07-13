@@ -1,0 +1,112 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.4-9 PartialFactorization</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X786FF92C7C54BF97"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.4-9 PartialFactorization</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PartialFactorization</code>( <var class="Arg">n</var>[, <var class="Arg">effort</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">PartialFactorization</code> returns a partial factorization of the integer <var class="Arg">n</var>. No assertions are made about the primality of the factors, except of those mentioned below.</p><p xmlns="http://www.w3.org/1999/xhtml">The argument <var class="Arg">effort</var>, if given, specifies how intensively the function should try to determine factors of <var class="Arg">n</var>. The default is <var class="Arg">effort</var> = 5.</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>If <var class="Arg">effort</var> = 0, trial division by the primes below 100 is done. Returned factors below <math id="-1649713540277064577" display="inline" alttext="10^{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
+      <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">4</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">10</cn>
+        <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">4</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">10^{4}</annotation>
+  </semantics>
+</math> are guaranteed to be prime.</p>
+
+</li><li><p>If <var class="Arg">effort</var> = 1, trial division by the primes below 1000 is done. Returned factors below <math id="-5326802680666283019" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
+      <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">6</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">10</cn>
+        <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">6</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">10^{6}</annotation>
+  </semantics>
+</math> are guaranteed to be prime.</p>
+
+</li><li><p>If <var class="Arg">effort</var> = 2, additionally trial division by the numbers in the lists <code class="code">Primes2</code> and <code class="code">ProbablePrimes2</code> is done, and perfect powers are detected. Returned factors below <math id="-4278635439772079040" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
+      <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">6</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">10</cn>
+        <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">6</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">10^{6}</annotation>
+  </semantics>
+</math> are guaranteed to be prime.</p>
+
+</li><li><p>If <var class="Arg">effort</var> = 3, additionally <code class="code">FactorsRho</code> (Pollard's Rho) with <code class="code">RhoTrials</code> = 256 is used.</p>
+
+</li><li><p>If <var class="Arg">effort</var> = 4, as above, but <code class="code">RhoTrials</code> = 2048.</p>
+
+</li><li><p>If <var class="Arg">effort</var> = 5, as above, but <code class="code">RhoTrials</code> = 8192. Returned factors below <math id="3049807508031994040" display="inline" alttext="10^{12}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
+      <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">12</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">10</cn>
+        <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">12</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">10^{12}</annotation>
+  </semantics>
+</math> are guaranteed to be prime, and all prime factors below <math id="3883051688343122303" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
+      <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">6</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">10</cn>
+        <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">6</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">10^{6}</annotation>
+  </semantics>
+</math> are guaranteed to be found.</p>
+
+</li><li><p>If <var class="Arg">effort</var> = 6 and the package <strong class="pkg">FactInt</strong> is loaded, in addition to the above quite a number of special cases are handled.</p>
+
+</li><li><p>If <var class="Arg">effort</var> = 7 and the package <strong class="pkg">FactInt</strong> is loaded, the only thing which is not attempted to obtain a full factorization into Baillie-Pomerance-Selfridge-Wagstaff pseudoprimes is the application of the MPQS to a remaining composite with more than 50 decimal digits.</p>
+
+</li></ul><p xmlns="http://www.w3.org/1999/xhtml">Increasing the value of the argument <var class="Arg">effort</var> by one usually results in an increase of the runtime requirements by a factor of (very roughly!) 3 to 10. (Also see <code class="func">CheapFactorsInt</code> (<a shape="rect" href="../../pkg/edim/doc/chap1_mj.html#X7BAB977C7EB05067"><span class="RefLink">EDIM: CheapFactorsInt</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List([0..5],i-&gt;PartialFactorization(97^35-1,i)); </span>
+[ [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 
+      2446338959059521520901826365168917110105972824229555319002965029 ], 
+  [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 967, 
+      2529823122088440042297648774735177983563570655873376751812787 ],
+  [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 967, 
+      2529823122088440042297648774735177983563570655873376751812787 ],
+  [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 967, 39761, 262321, 
+      242549173950325921859769421435653153445616962914227 ], 
+  [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 967, 39761, 262321, 687121, 
+      352993394104278463123335513593170858474150787 ], 
+  [ 2, 2, 2, 2, 2, 3, 11, 31, 43, 967, 39761, 262321, 687121, 
+      20241187, 504769301, 34549173843451574629911361501 ] ]
+</pre></div> </body>
+    </html>

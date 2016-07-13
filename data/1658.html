@@ -1,0 +1,179 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.5-17 ContainedDecomposables</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X81F1137A874EB962"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.5-17 ContainedDecomposables</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ContainedDecomposables</code>( <var class="Arg">constituents</var>, <var class="Arg">moduls</var>, <var class="Arg">parachar</var>, <var class="Arg">func</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ContainedCharacters</code>( <var class="Arg">tbl</var>, <var class="Arg">constituents</var>, <var class="Arg">parachar</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For these functions, let <var class="Arg">constituents</var> be a list of <em>rational</em> class functions, <var class="Arg">moduls</var> a list of positive integers, <var class="Arg">parachar</var> a parametrized rational class function, <var class="Arg">func</var> a function that returns either <code class="keyw">true</code> or <code class="keyw">false</code> when called with (a values list of) a class function, and <var class="Arg">tbl</var> a character table.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ContainedDecomposables</code> returns the set of all elements <math id="938457886116140027" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
+  </semantics>
+</math> of <var class="Arg">parachar</var> that satisfy <var class="Arg">func</var><math id="339067156275824854" display="inline" alttext="(\chi)=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mrow id="p1.1.m1.1.5.1">
+        <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">χ</mi>
+        <mo id="p1.1.m1.1.3" stretchy="false">)</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">=</mo>
+      <mi xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2"/>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝜒</ci>
+        <csymbol xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.cmml" cd="latexml">absent</csymbol>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\chi)=</annotation>
+  </semantics>
+</math> <code class="keyw">true</code> and that lie in the <math id="-2700644215909663930" display="inline" alttext="?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?</annotation>
+  </semantics>
+</math>-lattice spanned by <var class="Arg">constituents</var>, modulo <var class="Arg">moduls</var>. The latter means they lie in the <math id="-4676457889706670876" display="inline" alttext="?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?</annotation>
+  </semantics>
+</math>-lattice spanned by <var class="Arg">constituents</var> and the set <math id="-7401326865883029550" display="inline" alttext="\{\textit{moduls}[i]\cdot e_{i};1\leq i\leq n\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16">
+      <mo id="p1.1.m1.1.1" stretchy="false">{</mo>
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.2">
+        <mrow xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2">
+          <mrow xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2.2">
+            <mrow xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2.2.1">
+              <mtext xref="p1.1.m1.1.2.1a.cmml" id="p1.1.m1.1.2.1">𝑚𝑜𝑑𝑢𝑙𝑠</mtext>
+              <mo xref="p1.1.m1.1.16.2.2.2.1.1.cmml" id="p1.1.m1.1.16.2.2.2.1.1">⁢</mo>
+              <mrow xref="p1.1.m1.1.16.2.2.2.1.2.1.cmml" id="p1.1.m1.1.16.2.2.2.1.2">
+                <mo xref="p1.1.m1.1.16.2.2.2.1.2.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">[</mo>
+                <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">i</mi>
+                <mo xref="p1.1.m1.1.16.2.2.2.1.2.1.1.cmml" id="p1.1.m1.1.5" stretchy="false">]</mo>
+              </mrow>
+            </mrow>
+            <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">⋅</mo>
+            <msub xref="p1.1.m1.1.16.2.2.1.cmml" id="p1.1.m1.1.16.2.2.2.2">
+              <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">e</mi>
+              <mi xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">i</mi>
+            </msub>
+          </mrow>
+          <mo id="p1.1.m1.1.9">;</mo>
+          <mn xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">1</mn>
+        </mrow>
+        <mo xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">≤</mo>
+        <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">i</mi>
+        <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">≤</mo>
+        <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">n</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.15" stretchy="false">}</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <set xref="p1.1.m1.1.16" id="p1.1.m1.1.16.1.cmml">
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.cmml">
+          <and id="p1.1.m1.1.16.2a.cmml"/>
+          <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2b.cmml">
+            <leq xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml"/>
+            <list xref="p1.1.m1.1.16.2.2" id="p1.1.m1.1.16.2.2.1.cmml">
+              <apply xref="p1.1.m1.1.16.2.2" id="p1.1.m1.1.16.2.2.2.cmml">
+                <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">⋅</ci>
+                <apply xref="p1.1.m1.1.16.2.2" id="p1.1.m1.1.16.2.2.2.1.cmml">
+                  <times xref="p1.1.m1.1.16.2.2.2.1.1" id="p1.1.m1.1.16.2.2.2.1.1.cmml"/>
+                  <mtext xref="p1.1.m1.1.16.2.2" id="p1.1.m1.1.2.1.cmml">
+                    <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">moduls</span>
+                  </mtext>
+                  <apply xref="p1.1.m1.1.16.2.2.2.1.2" id="p1.1.m1.1.16.2.2.2.1.2.1.cmml">
+                    <csymbol xref="p1.1.m1.1.3" id="p1.1.m1.1.16.2.2.2.1.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+                    <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑖</ci>
+                  </apply>
+                </apply>
+                <apply xref="p1.1.m1.1.16.2.2" id="p1.1.m1.1.16.2.2.2.2.cmml">
+                  <csymbol id="p1.1.m1.1.16.2.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                  <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑒</ci>
+                  <ci xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">𝑖</ci>
+                </apply>
+              </apply>
+              <cn xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml" type="integer">1</cn>
+            </list>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑖</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2c.cmml">
+            <leq xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+            <share id="p1.1.m1.1.16.2d.cmml" href="#p1.1.m1.1.12.cmml"/>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑛</ci>
+          </apply>
+        </apply>
+      </set>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\{\textit{moduls}[i]\cdot e_{i};1\leq i\leq n\}</annotation>
+  </semantics>
+</math> where <math id="3454157379675855653" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> is the length of <var class="Arg">parachar</var> and <math id="-8463327727439724591" display="inline" alttext="e_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑒</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">e_{i}</annotation>
+  </semantics>
+</math> is the <math id="-1477584223081429356" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th standard basis vector.</p><p xmlns="http://www.w3.org/1999/xhtml">One application of <code class="func">ContainedDecomposables</code> is the following. <var class="Arg">constituents</var> is a list of (values lists of) rational characters of an ordinary character table <var class="Arg">tbl</var>, <var class="Arg">moduls</var> is the list of centralizer orders of <var class="Arg">tbl</var> (see <code class="func">SizesCentralizers</code> (<a shape="rect" href="chap71_mj.html#X7CF7907F790A5DE6"><span class="RefLink">71.9-2</span></a>)), and <var class="Arg">func</var> checks whether a vector in the lattice mentioned above has nonnegative integral scalar product in <var class="Arg">tbl</var> with all entries of <var class="Arg">constituents</var>. This situation is handled by <code class="func">ContainedCharacters</code>. Note that the entries of the result list are <em>not</em> necessary linear combinations of <var class="Arg">constituents</var>, and they are <em>not</em> necessarily characters of <var class="Arg">tbl</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">subtbl:= CharacterTable( &quot;HSM12&quot; );;  tbl:= CharacterTable( &quot;HS&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rat:= RationalizedMat( Irr( subtbl ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus:= InitFusion( subtbl, tbl );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rest:= CompositionMaps( Irr( tbl )[8], fus );</span>
+[ 231, [ -9, 7 ], [ -9, 7 ], [ -9, 7 ], 6, 15, 15, [ -1, 15 ], 
+  [ -1, 15 ], 1, [ 1, 6 ], [ 1, 6 ], [ 1, 6 ], [ 1, 6 ], [ -2, 0 ], 
+  [ 1, 2 ], [ 1, 2 ], [ 1, 2 ], 0, 0, 1, 0, 0, 0, 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># compute all vectors in the lattice</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ContainedDecomposables( rat, SizesCentralizers( subtbl ), rest,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">       ReturnTrue );</span>
+[ [ 231, 7, -9, -9, 6, 15, 15, -1, -1, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ], 
+  [ 231, 7, -9, -9, 6, 15, 15, 15, 15, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ], 
+  [ 231, 7, -9, 7, 6, 15, 15, -1, -1, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ], 
+  [ 231, 7, -9, 7, 6, 15, 15, 15, 15, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># compute only those vectors that are characters</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ContainedDecomposables( rat, SizesCentralizers( subtbl ), rest,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">       x -&gt; NonnegIntScalarProducts( subtbl, Irr( subtbl ), x ) );</span>
+[ [ 231, 7, -9, -9, 6, 15, 15, -1, -1, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ], 
+  [ 231, 7, -9, 7, 6, 15, 15, -1, -1, 1, 6, 6, 1, 1, -2, 1, 2, 2, 0, 
+      0, 1, 0, 0, 0, 0 ] ]
+</pre></div> </body>
+    </html>

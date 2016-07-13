@@ -1,0 +1,33 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 44: Matrix Groups-&gt;44.5-6 IsFullSubgroupGLorSLRespectingQuadraticForm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap44.html#X84AB04A67DFC0274"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">44.5-6 IsFullSubgroupGLorSLRespectingQuadraticForm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsFullSubgroupGLorSLRespectingQuadraticForm</code>( <var class="Arg">matgrp</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This property tests, whether the matrix group <var class="Arg">matgrp</var> is the full subgroup of GL or SL (the property <code class="func">IsSubgroupSL</code> (<a shape="rect" href="chap44_mj.html#X7ED43D4F7E993A31"><span class="RefLink">44.4-5</span></a>) determines which it is) respecting the <code class="func">InvariantQuadraticForm</code> (<a shape="rect" href="chap44_mj.html#X7BCACC007EB9B613"><span class="RefLink">44.5-5</span></a>) value of <var class="Arg">matgrp</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= Sp( 2, 3 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:= InvariantBilinearForm( g ).matrix;</span>
+[ [ 0*Z(3), Z(3)^0 ], [ Z(3), 0*Z(3) ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ 0, 1 ] * m * [ 1, -1 ];           # evaluate the bilinear form</span>
+Z(3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFullSubgroupGLorSLRespectingBilinearForm( g );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= SU( 2, 4 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:= InvariantSesquilinearForm( g ).matrix;</span>
+[ [ 0*Z(2), Z(2)^0 ], [ Z(2)^0, 0*Z(2) ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ 0, 1 ] * m * [ 1, 1 ];            # evaluate the bilinear form</span>
+Z(2)^0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFullSubgroupGLorSLRespectingSesquilinearForm( g );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= GO( 1, 2, 3 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:= InvariantBilinearForm( g ).matrix;</span>
+[ [ 0*Z(3), Z(3)^0 ], [ Z(3)^0, 0*Z(3) ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ 0, 1 ] * m * [ 1, 1 ];            # evaluate the bilinear form</span>
+Z(3)^0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">q:= InvariantQuadraticForm( g ).matrix;</span>
+[ [ 0*Z(3), Z(3)^0 ], [ 0*Z(3), 0*Z(3) ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ 0, 1 ] * q * [ 0, 1 ];            # evaluate the quadratic form</span>
+0*Z(3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFullSubgroupGLorSLRespectingQuadraticForm( g );</span>
+true
+</pre></div> </body>
+    </html>

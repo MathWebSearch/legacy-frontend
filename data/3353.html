@@ -1,0 +1,119 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.9-4 KappaPerp</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X8234046083B60F6E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.9-4 KappaPerp</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ KappaPerp</code>( <var class="Arg">L</var>, <var class="Arg">U</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is the orthogonal complement of the subspace <var class="Arg">U</var> of the Lie algebra <var class="Arg">L</var> with respect to the Killing form <math id="-7344124088570993515" display="inline" alttext="\kappa" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">κ</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜅</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\kappa</annotation>
+  </semantics>
+</math>, that is, the set <math id="5395236747307700121" display="inline" alttext="U^{{\perp}}=\{x\in L;\kappa(x,y)=0\hbox{ for all }y\in L\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow id="p1.1.m1.1b">
+      <msup xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+        <mo xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">⟂</mo>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <mrow xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4" stretchy="false">{</mo>
+        <mi id="p1.1.m1.1.5">x</mi>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">∈</mo>
+        <mi id="p1.1.m1.1.7">L</mi>
+        <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">;</mo>
+        <mi id="p1.1.m1.1.9">κ</mi>
+        <mrow xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">
+          <mo xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10" stretchy="false">(</mo>
+          <mi id="p1.1.m1.1.11">x</mi>
+          <mo xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">,</mo>
+          <mi id="p1.1.m1.1.13">y</mi>
+          <mo xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">=</mo>
+        <mn xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">0</mn>
+        <mtext xref="p1.1.m1.1.17.1.cmml" id="p1.1.m1.1.17.1"> for all </mtext>
+        <mi id="p1.1.m1.1.18">y</mi>
+        <mo xref="p1.1.m1.1.19.cmml" id="p1.1.m1.1.19">∈</mo>
+        <mi id="p1.1.m1.1.20">L</mi>
+        <mo xref="p1.1.m1.1.21.cmml" id="p1.1.m1.1.21" stretchy="false">}</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1c" encoding="MathML-Content">
+      <cerror id="p1.1.m1.1d">
+        <csymbol id="p1.1.m1.1e" cd="ambiguous">fragments</csymbol>
+        <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml">
+          <csymbol id="p1.1.m1.1.22.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+          <csymbol xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" cd="latexml">perpendicular-to</csymbol>
+        </apply>
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <cerror xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">
+          <csymbol xref="p1.1.m1.1.17" id="p1.1.m1.1.17a.cmml" cd="ambiguous">fragments</csymbol>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">{</ci>
+          <csymbol xref="p1.1.m1.1.17" id="p1.1.m1.1.17b.cmml" cd="unknown">x</csymbol>
+          <in xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+          <csymbol xref="p1.1.m1.1.17" id="p1.1.m1.1.17c.cmml" cd="unknown">L</csymbol>
+          <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">;</ci>
+          <csymbol xref="p1.1.m1.1.17" id="p1.1.m1.1.17d.cmml" cd="unknown">κ</csymbol>
+          <cerror xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">
+            <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.2a.cmml" cd="ambiguous">fragments</csymbol>
+            <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">(</ci>
+            <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.2b.cmml" cd="unknown">x</csymbol>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">,</ci>
+            <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.2c.cmml" cd="unknown">y</csymbol>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">)</ci>
+          </cerror>
+          <eq xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml"/>
+          <cn xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml" type="integer">0</cn>
+          <mtext xref="p1.1.m1.1.17.1" id="p1.1.m1.1.17.1.cmml"> for all </mtext>
+          <csymbol xref="p1.1.m1.1.17" id="p1.1.m1.1.17e.cmml" cd="unknown">y</csymbol>
+          <in xref="p1.1.m1.1.19" id="p1.1.m1.1.19.cmml"/>
+          <csymbol xref="p1.1.m1.1.17" id="p1.1.m1.1.17f.cmml" cd="unknown">L</csymbol>
+          <ci xref="p1.1.m1.1.21" id="p1.1.m1.1.21.cmml">}</ci>
+        </cerror>
+      </cerror>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1f" encoding="application/x-tex">U^{{\perp}}=\{x\in L;\kappa(x,y)=0\hbox{ for all }y\in L\}</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><math id="-4861604755971157450" display="inline" alttext="U^{{\perp}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+      <mo xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">⟂</mo>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+        <csymbol xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" cd="latexml">perpendicular-to</csymbol>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U^{{\perp}}</annotation>
+  </semantics>
+</math> is a subspace of <var class="Arg">L</var>, and if <var class="Arg">U</var> is an ideal of <var class="Arg">L</var> then <math id="4264037116661595457" display="inline" alttext="U^{{\perp}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+      <mo xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">⟂</mo>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+        <csymbol xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" cd="latexml">perpendicular-to</csymbol>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U^{{\perp}}</annotation>
+  </semantics>
+</math> is a subalgebra of <var class="Arg">L</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;A&quot;, 1, Rationals );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b:= BasisVectors( Basis( L ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= VectorSpace( Rationals, [b[1],b[2]] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KappaPerp( L, V );</span>
+&lt;vector space of dimension 1 over Rationals&gt;
+</pre></div> </body>
+    </html>

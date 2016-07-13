@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 10: Streams-&gt;10.4-3 WriteAll</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap10.html#X78C113917936058D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">10.4-3 WriteAll</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ WriteAll</code>( <var class="Arg">output-stream</var>, <var class="Arg">string</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">appends <var class="Arg">string</var> to <var class="Arg">output-stream</var>. No final newline is written. The function returns <code class="keyw">true</code> if the write succeeds and <code class="keyw">fail</code> otherwise. It will block as long as necessary for the write operation to complete (for example for a child process to clear its input buffer )</p><p xmlns="http://www.w3.org/1999/xhtml">A default method is installed which implements <code class="func">WriteAll</code> by repeated calls to <code class="func">WriteByte</code> (<a shape="rect" href="chap10_mj.html#X7D37C7A07E9C319C"><span class="RefLink">10.4-1</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">When printing or appending to a stream (using <code class="func">PrintTo</code> (<a shape="rect" href="chap9_mj.html#X86956C577FFEE1F9"><span class="RefLink">9.7-3</span></a>), or <code class="func">AppendTo</code> (<a shape="rect" href="chap9_mj.html#X86956C577FFEE1F9"><span class="RefLink">9.7-3</span></a>) or when logging to a stream), the kernel generates a call to <code class="func">WriteAll</code> for each line output.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">str := &quot;&quot;;; a := OutputTextString(str,true);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">WriteByte(a,INT_CHAR('H'));</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">WriteLine(a,&quot;allo&quot;);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">WriteAll(a,&quot;You\n&quot;);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CloseStream(a);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(str);</span>
+Hallo
+You
+</pre></div> </body>
+    </html>

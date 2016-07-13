@@ -1,0 +1,51 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.2-9 RootInt</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X83D9B5C87EEA2A77"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.2-9 RootInt</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RootInt</code>( <var class="Arg">n</var>[, <var class="Arg">k</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">RootInt</code> returns the integer part of the <var class="Arg">k</var>th root of the integer <var class="Arg">n</var>. If the optional integer argument <var class="Arg">k</var> is not given it defaults to 2, i.e., <code class="func">RootInt</code> returns the integer part of the square root in this case.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">n</var> is positive, <code class="func">RootInt</code> returns the largest positive integer <math id="7458675518466628247" display="inline" alttext="r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑟</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">r</annotation>
+  </semantics>
+</math> such that <math id="217150552447901217" display="inline" alttext="r^{\textit{k}}\leq\textit{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
+        <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑘</mtext>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">≤</mo>
+      <mtext xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">𝑛</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <leq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑟</ci>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">k</span>
+          </mtext>
+        </apply>
+        <mtext xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">r^{\textit{k}}\leq\textit{n}</annotation>
+  </semantics>
+</math>. If <var class="Arg">n</var> is negative and <var class="Arg">k</var> is odd <code class="func">RootInt</code> returns <code class="code">-RootInt( -<var class="Arg">n</var>, <var class="Arg">k</var> )</code>. If <var class="Arg">n</var> is negative and <var class="Arg">k</var> is even <code class="func">RootInt</code> will cause an error. <code class="func">RootInt</code> will also cause an error if <var class="Arg">k</var> is 0 or negative.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RootInt( 361 );</span>
+19
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RootInt( 2 * 10^12 );</span>
+1414213
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RootInt( 17000, 5 );</span>
+7
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">7^5;</span>
+16807
+</pre></div> </body>
+    </html>

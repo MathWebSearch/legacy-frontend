@@ -1,0 +1,59 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 49: Group Products-&gt;49.4-2 WreathProductImprimitiveAction</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap49.html#X8589DCFA7C2E5FAA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">49.4-2 WreathProductImprimitiveAction</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ WreathProductImprimitiveAction</code>( <var class="Arg">G</var>, <var class="Arg">H</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For two permutation groups <var class="Arg">G</var> and <var class="Arg">H</var>, this function constructs the wreath product of <var class="Arg">G</var> and <var class="Arg">H</var> in the imprimitive action. If <var class="Arg">G</var> acts on <math id="3708272117426723663" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> points and <var class="Arg">H</var> on <math id="-8803300387240279412" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
+  </semantics>
+</math> points this action will be on <math id="1118997668359927186" display="inline" alttext="l\cdot m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">⋅</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">m</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">⋅</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑚</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l\cdot m</annotation>
+  </semantics>
+</math> points, it will be imprimitive with <math id="1459045728631761312" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑚</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
+  </semantics>
+</math> blocks of size <math id="7910818256326045712" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> each.</p><p xmlns="http://www.w3.org/1999/xhtml">The operations <code class="func">Embedding</code> (<a shape="rect" href="chap32_mj.html#X86452F8587CBAEA0"><span class="RefLink">32.2-10</span></a>) and <code class="func">Projection</code> (<a shape="rect" href="chap32_mj.html#X8769E8DA80BC96C1"><span class="RefLink">32.2-11</span></a>) operate on this product as described for general wreath products.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w:=WreathProductImprimitiveAction(g,p);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LargestMovedPoint(w);</span>
+9
+</pre></div> </body>
+    </html>

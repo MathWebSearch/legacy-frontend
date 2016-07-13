@@ -1,0 +1,29 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.6-1 CheckDigitISBN</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X82BABA8F868BD425"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.6-1 CheckDigitISBN</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CheckDigitISBN</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CheckDigitISBN13</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CheckDigitPostalMoneyOrder</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CheckDigitUPC</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">These functions can be used to compute, or check, check digits for some everyday items. In each case what is submitted as input is either the number with check digit (in which case the function returns <code class="code">true</code> or <code class="code">false</code>), or the number without check digit (in which case the function returns the missing check digit). The number can be specified as integer, as string (for example in case of leading zeros) or as a sequence of arguments, each representing a single digit. The check digits tested are the 10-digit ISBN (International Standard Book Number) using <code class="func">CheckDigitISBN</code> (since arithmetic is module 11, a digit 11 is represented by an X); the newer 13-digit ISBN-13 using <code class="func">CheckDigitISBN13</code>; the numbers of 11-digit US postal money orders using <code class="func">CheckDigitPostalMoneyOrder</code>; and the 12-digit UPC bar code found on groceries using <code class="func">CheckDigitUPC</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CheckDigitISBN(&quot;052166103&quot;);</span>
+Check Digit is 'X'
+'X'
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CheckDigitISBN(&quot;052166103X&quot;);</span>
+Checksum test satisfied
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CheckDigitISBN(0,5,2,1,6,6,1,0,3,1);</span>
+Checksum test failed
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CheckDigitISBN(0,5,2,1,6,6,1,0,3,'X'); # note single quotes!</span>
+Checksum test satisfied
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CheckDigitISBN13(&quot;9781420094527&quot;);</span>
+Checksum test satisfied
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CheckDigitUPC(&quot;07164183001&quot;);</span>
+Check Digit is 1
+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CheckDigitPostalMoneyOrder(16786457155);</span>
+Checksum test satisfied
+true
+</pre></div> </body>
+    </html>

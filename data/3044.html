@@ -1,0 +1,38 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.6-2 SimplifyPresentation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X78C3D23387DAC35A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.6-2 SimplifyPresentation</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SimplifyPresentation</code>( <var class="Arg">P</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SimplifyPresentation</code> is a synonym for <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">F2 := FreeGroup( &quot;a&quot;, &quot;b&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := F2 / [ F2.1^9, F2.2^2, (F2.1*F2.2)^4, (F2.1^2*F2.2)^3 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := G.1;; b := G.2;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := Subgroup( G, [ (a*b)^2, (a^-1*b)^2 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Index( G, H );</span>
+408
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := PresentationSubgroup( G, H );</span>
+&lt;presentation with 8 gens and 36 rels of total length 111&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PrimaryGeneratorWords( P );</span>
+[ b, a*b*a ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzOptions( P ).protected := 2;</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzOptions( P ).printLevel := 2;</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SimplifyPresentation( P );</span>
+#I  eliminating _x7 = _x5^-1
+#I  eliminating _x5 = _x4
+#I  eliminating _x18 = _x3
+#I  eliminating _x8 = _x3
+#I  there are 4 generators and 8 relators of total length 21
+#I  there are 4 generators and 7 relators of total length 18
+#I  eliminating _x4 = _x3^-1*_x2^-1
+#I  eliminating _x3 = _x2*_x1^-1
+#I  there are 2 generators and 4 relators of total length 14
+#I  there are 2 generators and 4 relators of total length 13
+#I  there are 2 generators and 3 relators of total length 9
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzPrintRelators( P );</span>
+#I  1. _x1^2
+#I  2. _x2^3
+#I  3. (_x2*_x1)^2
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Roughly speaking, <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) consists of a loop over a procedure which involves two phases: In the <em>search phase</em> it calls <code class="func">TzSearch</code> (<a shape="rect" href="chap48_mj.html#X7DF4BBDF839643DD"><span class="RefLink">48.7-2</span></a>) and <code class="func">TzSearchEqual</code> (<a shape="rect" href="chap48_mj.html#X87F7A87A7ACF2445"><span class="RefLink">48.7-3</span></a>) described below which try to reduce the relator lengths by substituting common subwords of relators, in the <em>elimination phase</em> it calls the command <code class="func">TzEliminate</code> (<a shape="rect" href="chap48_mj.html#X85989AF886EC2BF6"><span class="RefLink">48.7-1</span></a>) described below (or, more precisely, a subroutine of <code class="func">TzEliminate</code> (<a shape="rect" href="chap48_mj.html#X85989AF886EC2BF6"><span class="RefLink">48.7-1</span></a>) in order to save some administrative overhead) which tries to eliminate generators that can be expressed as words in the remaining generators.</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) succeeds in reducing the number of generators, the number of relators, or the total length of all relators, it displays the new status before returning (provided that you did not set the print level to zero). However, it does not provide any output if all these three values have remained unchanged, even if the command <code class="func">TzSearchEqual</code> (<a shape="rect" href="chap48_mj.html#X87F7A87A7ACF2445"><span class="RefLink">48.7-3</span></a>) involved has changed the presentation such that another call of <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) might provide further progress. Hence, in such a case it makes sense to repeat the call of the command for several times (or to call the command <code class="func">TzGoGo</code> (<a shape="rect" href="chap48_mj.html#X801D3D8984E1CA55"><span class="RefLink">48.6-3</span></a>) instead).</p> </body>
+    </html>

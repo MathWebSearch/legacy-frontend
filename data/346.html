@@ -1,0 +1,25 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 84: Interface to the GAP Help System</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap84.html#X79A6CE6C86A976AE"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap84_mj.html#X79A6CE6C86A976AE">84 <span class="Heading">Interface to the GAP Help System</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap84_mj.html#X7AFEAB6B84387635">84.1 <span class="Heading">Installing and Removing a Help Book</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap84_mj.html#X7CD0B8507A3D231D">84.1-1 HELP_ADD_BOOK</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap84_mj.html#X7BDEB25D7AFC4322">84.1-2 HELP_REMOVE_BOOK</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap84_mj.html#X8713EEAE840CEDA3">84.2 <span class="Heading">The manual.six File</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap84_mj.html#X7AD7541E7C30D5B3">84.3 <span class="Heading">The Help Book Handler</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap84_mj.html#X861927BF822FB162">84.4 <span class="Heading">Introducing new Viewer for the Online Help</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap84_mj.html#X84B011847A4D90F0">84.4-1 HELP_VIEWER_INFO</a></span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">84 <span class="Heading">Interface to the GAP Help System</span></h3><p xmlns="http://www.w3.org/1999/xhtml">In this chapter we describe which information the help system needs about a manual book and how to tell it this information. The code which implements this interface can be found in <code class="file">lib/helpbase.gi</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If you are intending to use a documentation format that is already used by some other help book you probably don't need to know anything from this chapter. However, if you want to create a new format and make it available to <strong class="pkg">GAP</strong> then hopefully you will find the necessary information here.</p><p xmlns="http://www.w3.org/1999/xhtml">The basic idea of the help system is as follows: One tells <strong class="pkg">GAP</strong> a directory which contains a file <code class="file">manual.six</code>, see <a shape="rect" href="chap84_mj.html#X7AFEAB6B84387635"><span class="RefLink">84.1</span></a>. When the <strong class="pkg">GAP</strong> help is asked something about this book it reads in some basic information from the file <code class="file">manual.six</code>: strings like section headers, function names, and index entries to be searched by the online help; information about the available formats of this book like text, html, dvi, and pdf; the actual files containing the documentation, corresponding section numbers, and page numbers: and so on. See <a shape="rect" href="chap84_mj.html#X8713EEAE840CEDA3"><span class="RefLink">84.2</span></a> for a description of the format of the <code class="file">manual.six</code> file.</p><p xmlns="http://www.w3.org/1999/xhtml">It turns out that there is almost no restriction on the format of the <code class="file">manual.six</code> file, except that it must provide a string, say <code class="code">&quot;myownformat&quot;</code> which identifies the format of the help book. Then the basic actions on a help book are delegated by the help system to handler functions stored in a record <code class="code">HELP_BOOK_HANDLER.myownformat</code>. See <a shape="rect" href="chap84_mj.html#X7AD7541E7C30D5B3"><span class="RefLink">84.3</span></a> for information which functions must be provided by the handler and what they are supposed to do. The main work to teach <strong class="pkg">GAP</strong> to use a new document format is to write these handler functions and to produce an appropriate <code class="file">manual.six</code> file.</p> </body>
+    </html>

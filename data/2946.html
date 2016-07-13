@@ -1,0 +1,46 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.7-4 IsMersenneTwister</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X7F772E2686B35865"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.7-4 IsMersenneTwister</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsMersenneTwister</code>( <var class="Arg">rs</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsGAPRandomSource</code>( <var class="Arg">rs</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsGlobalRandomSource</code>( <var class="Arg">rs</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GlobalMersenneTwister</code></td><td colspan="1" rowspan="1" class="tdright">( global variable )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GlobalRandomSource</code></td><td colspan="1" rowspan="1" class="tdright">( global variable )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Currently, the <strong class="pkg">GAP</strong> library provides three types of random sources, distinguished by the three listed categories.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsMersenneTwister</code> are random sources which use a fast random generator of 32 bit numbers, called the Mersenne twister. The pseudo random sequence has a period of <math id="-9029613537226132274" display="inline" alttext="2^{19937}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">19937</mn>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">-</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <minus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">2</cn>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">19937</cn>
+        </apply>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">2^{19937}-1</annotation>
+  </semantics>
+</math> and the numbers have a <math id="-7390178328005149805" display="inline" alttext="623" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">623</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml" type="integer">623</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">623</annotation>
+  </semantics>
+</math>-dimensional equidistribution. For more details and the origin of the code used in the <strong class="pkg">GAP</strong> kernel, see: <span class="URL"><a shape="rect" href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html">http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html</a></span>.</p><p xmlns="http://www.w3.org/1999/xhtml">Use the Mersenne twister if possible, in particular for generating many large random integers.</p><p xmlns="http://www.w3.org/1999/xhtml">There is also a predefined global random source <code class="func">GlobalMersenneTwister</code> which is used by most of the library methods for <code class="func">Random</code> (<a shape="rect" href="chap30_mj.html#X7FF906E57D6936F8"><span class="RefLink">30.7-1</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsGAPRandomSource</code> uses the same number generator as <code class="func">IsGlobalRandomSource</code>, but you can create several of these random sources which generate their random numbers independently of all other random sources.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsGlobalRandomSource</code> gives access to the <em>classical</em> global random generator which was used by <strong class="pkg">GAP</strong> in former releases. You do not need to construct new random sources of this kind which would all use the same global data structure. Just use the existing random source <code class="func">GlobalRandomSource</code>. This uses the additive random number generator described in <a shape="rect" href="chapBib_mj.html#biBTACP2">[Knu98]</a> (Algorithm A in 3.2.2 with lag <math id="-3714361613698185387" display="inline" alttext="30" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">30</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">30</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">30</annotation>
+  </semantics>
+</math>).</p> </body>
+    </html>

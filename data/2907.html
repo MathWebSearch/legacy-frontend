@@ -1,0 +1,37 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.7-2 RightCosets</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X835F48248571364F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.7-2 RightCosets</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RightCosets</code>( <var class="Arg">G</var>, <var class="Arg">U</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RightCosetsNC</code>( <var class="Arg">G</var>, <var class="Arg">U</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes a duplicate free list of right cosets <var class="Arg">U</var> <math id="-6125036900285559975" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
+  </semantics>
+</math> for <math id="-4714203680597506713" display="inline" alttext="g\in" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑔</ci>
+        <csymbol xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" cd="latexml">absent</csymbol>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">g\in</annotation>
+  </semantics>
+</math> <var class="Arg">G</var>. A set of representatives for the elements in this list forms a right transversal of <var class="Arg">U</var> in <var class="Arg">G</var>. (By inverting the representatives one obtains a list of representatives of the left cosets of <var class="Arg">U</var>.) The <code class="code">NC</code> version does not check whether <var class="Arg">U</var> is a subgroup of <var class="Arg">G</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RightCosets(g,u);</span>
+[ RightCoset(Group( [ (1,2,3), (1,2) ] ),()), 
+  RightCoset(Group( [ (1,2,3), (1,2) ] ),(1,3)(2,4)), 
+  RightCoset(Group( [ (1,2,3), (1,2) ] ),(1,4)(2,3)), 
+  RightCoset(Group( [ (1,2,3), (1,2) ] ),(1,2)(3,4)) ]
+</pre></div> </body>
+    </html>

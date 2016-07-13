@@ -1,0 +1,45 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.8-8 IntegratedStraightLineProgram</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X7A582FA97C786640"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">37.8-8 IntegratedStraightLineProgram</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IntegratedStraightLineProgram</code>( <var class="Arg">listofprogs</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a nonempty dense list <var class="Arg">listofprogs</var> of straight line programs that have the same number <math id="-1559570573853319665" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>, say, of inputs (see <code class="func">NrInputsOfStraightLineProgram</code> (<a shape="rect" href="chap37_mj.html#X820A592881D57802"><span class="RefLink">37.8-4</span></a>)) and for which the results (see <code class="func">ResultOfStraightLineProgram</code> (<a shape="rect" href="chap37_mj.html#X7847D32B863E822F"><span class="RefLink">37.8-5</span></a>)) are single elements (i.e., <em>not</em> lists of elements), <code class="func">IntegratedStraightLineProgram</code> returns a straight line program <var class="Arg">prog</var> with <math id="-198487900417127295" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> inputs such that for each <math id="-2213797834665700877" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>-tuple <var class="Arg">gens</var> of generators, <code class="code">ResultOfStraightLineProgram( <var class="Arg">prog</var>, <var class="Arg">gens</var> )</code> is equal to the list <code class="code">List( <var class="Arg">listofprogs</var>, <var class="Arg">p</var> -&gt; ResultOfStraightLineProgram( <var class="Arg">p</var>, <var class="Arg">gens</var> )</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= FreeGroup( &quot;x&quot;, &quot;y&quot; );;  gens:= GeneratorsOfGroup( f );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">prg1:= StraightLineProgram([ [ [ 1, 2 ], 1 ], [ 1, 2, 2, -1 ] ], 2);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">prg2:= StraightLineProgram([ [ [ 2, 2 ], 3 ], [ 1, 3, 3, 2 ] ], 2);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">prg3:= StraightLineProgram([ [ 2, 2 ], [ 1, 3, 3, 2 ] ], 2);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">prg:= IntegratedStraightLineProgram( [ prg1, prg2, prg3 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ResultOfStraightLineProgram( prg, gens );</span>
+[ x^4*y^-1, x^3*y^4, x^3*y^4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">prg:= IntegratedStraightLineProgram( [ prg2, prg3, prg1 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ResultOfStraightLineProgram( prg, gens );</span>
+[ x^3*y^4, x^3*y^4, x^4*y^-1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">prg:= IntegratedStraightLineProgram( [ prg3, prg1, prg2 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ResultOfStraightLineProgram( prg, gens );</span>
+[ x^3*y^4, x^4*y^-1, x^3*y^4 ]
+</pre></div> </body>
+    </html>

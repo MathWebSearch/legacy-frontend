@@ -1,0 +1,126 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.4-3 PadicCoefficients</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X8285776B7DD86925"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.4-3 PadicCoefficients</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PadicCoefficients</code>( <var class="Arg">A</var>, <var class="Arg">Amodpinv</var>, <var class="Arg">b</var>, <var class="Arg">prime</var>, <var class="Arg">depth</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">A</var> be an integral matrix, <var class="Arg">prime</var> a prime integer, <var class="Arg">Amodpinv</var> an inverse of <var class="Arg">A</var> modulo <var class="Arg">prime</var>, <var class="Arg">b</var> an integral vector, and <var class="Arg">depth</var> a nonnegative integer. <code class="func">PadicCoefficients</code> returns the list <math id="-1131388552929334253" display="inline" alttext="[x_{0},x_{1},\ldots,x_{l},b_{{l+1}}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <msub xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">x</mi>
+        <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">0</mn>
+      </msub>
+      <mo id="p1.1.m1.1.4">,</mo>
+      <msub xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.3">
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">x</mi>
+        <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">1</mn>
+      </msub>
+      <mo id="p1.1.m1.1.7">,</mo>
+      <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8" mathvariant="normal">…</mi>
+      <mo id="p1.1.m1.1.9">,</mo>
+      <msub xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.4">
+        <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">x</mi>
+        <mi xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">l</mi>
+      </msub>
+      <mo id="p1.1.m1.1.12">,</mo>
+      <msub xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.5">
+        <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">b</mi>
+        <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.14.1">
+          <mi xref="p1.1.m1.1.14.1.1.cmml" id="p1.1.m1.1.14.1.1">l</mi>
+          <mo xref="p1.1.m1.1.14.1.2.cmml" id="p1.1.m1.1.14.1.2">+</mo>
+          <mn xref="p1.1.m1.1.14.1.3.cmml" id="p1.1.m1.1.14.1.3">1</mn>
+        </mrow>
+      </msub>
+      <mo id="p1.1.m1.1.15" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.16" id="p1.1.m1.1.16.1.cmml">
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.cmml">
+          <csymbol id="p1.1.m1.1.16.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑥</ci>
+          <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">0</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.3.cmml">
+          <csymbol id="p1.1.m1.1.16.3.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑥</ci>
+          <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">1</cn>
+        </apply>
+        <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">…</ci>
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.4.cmml">
+          <csymbol id="p1.1.m1.1.16.4.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑥</ci>
+          <ci xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.cmml">𝑙</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.5.cmml">
+          <csymbol id="p1.1.m1.1.16.5.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑏</ci>
+          <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.14.1.cmml">
+            <plus xref="p1.1.m1.1.14.1.2" id="p1.1.m1.1.14.1.2.cmml"/>
+            <ci xref="p1.1.m1.1.14.1.1" id="p1.1.m1.1.14.1.1.cmml">𝑙</ci>
+            <cn xref="p1.1.m1.1.14.1.3" id="p1.1.m1.1.14.1.3.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[x_{0},x_{1},\ldots,x_{l},b_{{l+1}}]</annotation>
+  </semantics>
+</math> describing the <var class="Arg">prime</var>-adic approximation of <var class="Arg">b</var> (see above), where <math id="7314175506290390947" display="inline" alttext="l=\textit{depth}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">=</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑑𝑒𝑝𝑡ℎ</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <eq xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">depth</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l=\textit{depth}</annotation>
+  </semantics>
+</math> or <math id="-4864283535539712413" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑙</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
+  </semantics>
+</math> is minimal with the property that <math id="-2076392381082830997" display="inline" alttext="b_{{l+1}}=0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msub xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+        <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+          <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">l</mi>
+          <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">+</mo>
+          <mn xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">1</mn>
+        </mrow>
+      </msub>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">=</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">0</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <eq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+          <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <plus xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+            <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑙</ci>
+            <cn xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml" type="integer">1</cn>
+          </apply>
+        </apply>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">0</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{{l+1}}=0</annotation>
+  </semantics>
+</math>.</p> </body>
+    </html>

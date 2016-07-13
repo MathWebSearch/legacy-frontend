@@ -1,0 +1,10 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 23: Row Vectors-&gt;23.4-4 CoeffsMod</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap23.html#X8264B3EE7D56EEDD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">23.4-4 CoeffsMod</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CoeffsMod</code>( <var class="Arg">list1</var>[, <var class="Arg">len1</var>], <var class="Arg">modulus</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the coefficient list obtained by reducing the entries in <var class="Arg">list1</var> modulo <var class="Arg">modulus</var>. After reducing it shrinks the list to remove trailing zeroes. If the optional argument <var class="Arg">len1</var> is used, it reduces only first <var class="Arg">len1</var> elements of the list.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:=[1,2,3,4];;CoeffsMod(l,2);</span>
+[ 1, 0, 1 ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 17: Rational Numbers-&gt;17.2-6 Rat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap17.html#X7EB4C646806A2BDE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">17.2-6 Rat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Rat</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Rat</code> returns a rational number <var class="Arg">rat</var> whose meaning depends on the type of <var class="Arg">elm</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">elm</var> is a string consisting of digits <code class="code">'0'</code>, <code class="code">'1'</code>, <math id="3733194753887608591" display="inline" alttext="\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">…</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">…</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\ldots</annotation>
+  </semantics>
+</math>, <code class="code">'9'</code> and <code class="code">'-'</code> (at the first position), <code class="code">'/'</code> and the decimal dot <code class="code">'.'</code> then <var class="Arg">rat</var> is the rational described by this string. The operation <code class="func">String</code> (<a shape="rect" href="chap27_mj.html#X81FB5BE27903EC32"><span class="RefLink">27.7-6</span></a>) can be used to compute a string for rational numbers, in fact for all cyclotomics.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Rat( &quot;1/2&quot; );  Rat( &quot;35/14&quot; );  Rat( &quot;35/-27&quot; );  Rat( &quot;3.14159&quot; );</span>
+1/2
+5/2
+-35/27
+314159/100000
+</pre></div> </body>
+    </html>

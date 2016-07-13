@@ -1,0 +1,89 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.2-8 Omega</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X8365E0AB8338DA3F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">50.2-8 Omega</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Omega</code>( [<var class="Arg">filt</var>, ][<var class="Arg">e</var>, ]<var class="Arg">d</var>, <var class="Arg">q</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">constructs a group isomorphic to the group <math id="3576597502632922575" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Ω</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega</annotation>
+  </semantics>
+</math>( <var class="Arg">e</var>, <var class="Arg">d</var>, <var class="Arg">q</var> ) of those <math id="4074251687412316100" display="inline" alttext="\textit{d}\times\textit{d}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑑</mtext>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mtext xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">𝑑</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">d</span>
+        </mtext>
+        <mtext xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">d</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{d}\times\textit{d}</annotation>
+  </semantics>
+</math> matrices over the field with <var class="Arg">q</var> elements that respect a non-singular quadratic form (see <code class="func">InvariantQuadraticForm</code> (<a shape="rect" href="chap44_mj.html#X7BCACC007EB9B613"><span class="RefLink">44.5-5</span></a>)) specified by <var class="Arg">e</var>, and that have square spinor norm in odd characteristic or Dickson invariant <math id="-4576503654455836610" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+    </annotation-xml>
+  </semantics>
+</math> in even characteristic, respectively, in the category given by the filter <var class="Arg">filt</var>. This group has always index two in SO( <var class="Arg">e</var>, <var class="Arg">d</var>, <var class="Arg">q</var> ), see <code class="func">SpecialOrthogonalGroup</code> (<a shape="rect" href="chap50_mj.html#X78D4EEF27AA2DCFD"><span class="RefLink">50.2-7</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The value of <var class="Arg">e</var> must be <math id="-1875964389142564185" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+    </annotation-xml>
+  </semantics>
+</math> for odd <var class="Arg">d</var> (and can optionally be omitted in this case), respectively one of <math id="8162251933849015583" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math> or <math id="-8465694749020360401" display="inline" alttext="-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">-</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <minus xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">-1</annotation>
+  </semantics>
+</math> for even <var class="Arg">d</var>. If <var class="Arg">filt</var> is not given it defaults to <code class="func">IsMatrixGroup</code> (<a shape="rect" href="chap44_mj.html#X7E6093FF85F1C3A1"><span class="RefLink">44.1-1</span></a>), and the returned group is the group <math id="1508107956617980885" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">Ω</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega</annotation>
+  </semantics>
+</math>( <var class="Arg">e</var>, <var class="Arg">d</var>, <var class="Arg">q</var> ) itself.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= Omega( 3, 5 );  StructureDescription( g );</span>
+Omega(0,3,5)
+&quot;A5&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= Omega( 1, 4, 4 );  StructureDescription( g );</span>
+Omega(+1,4,4)
+&quot;A5 x A5&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= Omega( -1, 4, 3 );  StructureDescription( g );</span>
+Omega(-1,4,3)
+&quot;A6&quot;
+</pre></div> </body>
+    </html>

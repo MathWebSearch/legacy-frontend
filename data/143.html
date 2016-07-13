@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.8-7 CompositionOfStraightLinePrograms</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X8274C7948248C053"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">37.8-7 CompositionOfStraightLinePrograms</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CompositionOfStraightLinePrograms</code>( <var class="Arg">prog2</var>, <var class="Arg">prog1</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For two straight line programs <var class="Arg">prog1</var> and <var class="Arg">prog2</var>, <code class="func">CompositionOfStraightLinePrograms</code> returns a straight line program <var class="Arg">prog</var> with the properties that <var class="Arg">prog1</var> and <var class="Arg">prog</var> have the same number of inputs, and the result of <var class="Arg">prog</var> when applied to given generators <var class="Arg">gens</var> equals the result of <var class="Arg">prog2</var> when this is applied to the output of <var class="Arg">prog1</var> applied to <var class="Arg">gens</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">(Of course the number of outputs of <var class="Arg">prog1</var> must be the same as the number of inputs of <var class="Arg">prog2</var>.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">prg1:= StraightLineProgram( &quot;a^2b&quot;, [ &quot;a&quot;,&quot;b&quot; ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">prg2:= StraightLineProgram( &quot;c^5&quot;, [ &quot;c&quot; ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">comp:= CompositionOfStraightLinePrograms( prg2, prg1 );</span>
+&lt;straight line program&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StringOfResultOfStraightLineProgram( comp, [ &quot;a&quot;, &quot;b&quot; ] );</span>
+&quot;(a^2b)^5&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">prg:= StraightLineProgram( [ [2,3], [ [3,1,1,4], [1,2,3,1] ] ], 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StringOfResultOfStraightLineProgram( prg, [ &quot;a&quot;, &quot;b&quot; ] );</span>
+&quot;[ b^3a^4, a^2b^3 ]&quot;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">comp:= CompositionOfStraightLinePrograms( prg, prg );</span>
+&lt;straight line program&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StringOfResultOfStraightLineProgram( comp, [ &quot;a&quot;, &quot;b&quot; ] );</span>
+&quot;[ (a^2b^3)^3(b^3a^4)^4, (b^3a^4)^2(a^2b^3)^3 ]&quot;
+</pre></div> </body>
+    </html>

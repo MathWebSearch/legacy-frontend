@@ -1,0 +1,41 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 36: Words-&gt;36.4-2 FreeMagmaWithOne</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap36.html#X86DB748080B4A9B9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">36.4-2 <span class="Heading">FreeMagmaWithOne</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeMagmaWithOne</code>( <var class="Arg">rank</var>[, <var class="Arg">name</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeMagmaWithOne</code>( <var class="Arg">name1</var>, <var class="Arg">name2</var>, <var class="Arg">...</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeMagmaWithOne</code>( <var class="Arg">names</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FreeMagmaWithOne</code>( <var class="Arg">infinity</var>, <var class="Arg">name</var>, <var class="Arg">init</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Called with a positive integer <var class="Arg">rank</var>, <code class="func">FreeMagmaWithOne</code> returns a free magma-with-one on <var class="Arg">rank</var> generators. If the optional argument <var class="Arg">name</var> is given then the generators are printed as <var class="Arg">name</var><code class="code">1</code>, <var class="Arg">name</var><code class="code">2</code> etc., that is, each name is the concatenation of the string <var class="Arg">name</var> and an integer from <code class="code">1</code> to <var class="Arg">range</var>. The default for <var class="Arg">name</var> is the string <code class="code">&quot;m&quot;</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Called in the second form, <code class="func">FreeMagmaWithOne</code> returns a free magma-with-one on as many generators as arguments, printed as <var class="Arg">name1</var>, <var class="Arg">name2</var> etc.</p><p xmlns="http://www.w3.org/1999/xhtml">Called in the third form, <code class="func">FreeMagmaWithOne</code> returns a free magma-with-one on as many generators as the length of the list <var class="Arg">names</var>, the <math id="6489309195855659830" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th generator being printed as <var class="Arg">names</var><code class="code">[</code><math id="-7246799030957132478" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math><code class="code">]</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Called in the fourth form, <code class="func">FreeMagmaWithOne</code> returns a free magma-with-one on infinitely many generators, where the first generators are printed by the names in the list <var class="Arg">init</var>, and the other generators by <var class="Arg">name</var> and an appended number.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeMagma( 3 );</span>
+&lt;free magma on the generators [ x1, x2, x3 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeMagma( &quot;a&quot;, &quot;b&quot; );</span>
+&lt;free magma on the generators [ a, b ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeMagma( infinity );</span>
+&lt;free magma with infinity generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeMagmaWithOne( 3 );</span>
+&lt;free magma-with-one on the generators [ x1, x2, x3 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeMagmaWithOne( &quot;a&quot;, &quot;b&quot; );</span>
+&lt;free magma-with-one on the generators [ a, b ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FreeMagmaWithOne( infinity );</span>
+&lt;free magma-with-one with infinity generators&gt;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Remember that the names of generators used for printing do not necessarily distinguish letters of the alphabet; so it is possible to create arbitrarily weird situations by choosing strange letter names.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m:= FreeMagma( &quot;x&quot;, &quot;x&quot; );  gens:= GeneratorsOfMagma( m );;</span>
+&lt;free magma on the generators [ x, x ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens[1] = gens[2];</span>
+false
+</pre></div> </body>
+    </html>

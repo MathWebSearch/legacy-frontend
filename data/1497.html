@@ -1,0 +1,17 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.2-1 IsMatrix</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X7E1AE46B862B185F"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.2-1 IsMatrix</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsMatrix</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A <em>matrix</em> is a list of lists of equal length whose entries lie in a common ring.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that matrices may have different multiplications, besides the usual matrix product there is for example the Lie product. So there are categories such as <code class="func">IsOrdinaryMatrix</code> (<a shape="rect" href="chap24_mj.html#X7CF42B8A845BC6A9"><span class="RefLink">24.2-2</span></a>) and <code class="func">IsLieMatrix</code> (<a shape="rect" href="chap24_mj.html#X86EC33E17DD12D0E"><span class="RefLink">24.2-3</span></a>) that describe the matrix multiplication. One can form the product of two matrices only if they support the same multiplication.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=[[1,2,3],[4,5,6],[7,8,9]];</span>
+[ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMatrix(mat);</span>
+true
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note also the filter <code class="func">IsTable</code> (<a shape="rect" href="chap21_mj.html#X80872FAF80EB5DF9"><span class="RefLink">21.1-4</span></a>) which may be more appropriate than <code class="func">IsMatrix</code> for some purposes.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the empty list <code class="code">[]</code> and more complex &quot;empty&quot; structures such as <code class="code">[[]]</code> are <em>not</em> matrices, although special methods allow them be used in place of matrices in some situations. See <code class="func">EmptyMatrix</code> (<a shape="rect" href="chap24_mj.html#X8508A7EA812BA0CC"><span class="RefLink">24.5-3</span></a>) below.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[[0]]*[[]];</span>
+[ [  ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMatrix([[]]);</span>
+false
+</pre></div> </body>
+    </html>

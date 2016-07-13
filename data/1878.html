@@ -1,0 +1,42 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.2-7 NrUnorderedTuples</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X7959281584C42C52"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.2-7 NrUnorderedTuples</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NrUnorderedTuples</code>( <var class="Arg">set</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the number of <code class="code">UnorderedTuples(<var class="Arg">set</var>,<var class="Arg">k</var>)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">As an example for unordered tuples think of a poker-like game played with 5 dice. Then each possible hand corresponds to an unordered five-tuple from the set <math id="3616501738371553454" display="inline" alttext="\{1,2,\ldots,6\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10">
+      <mo id="p1.1.m1.1.1" stretchy="false">{</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">1</mn>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">2</mn>
+      <mo id="p1.1.m1.1.5">,</mo>
+      <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6" mathvariant="normal">…</mi>
+      <mo id="p1.1.m1.1.7">,</mo>
+      <mn xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">6</mn>
+      <mo id="p1.1.m1.1.9" stretchy="false">}</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <set xref="p1.1.m1.1.10" id="p1.1.m1.1.10.1.cmml">
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">1</cn>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">2</cn>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">…</ci>
+        <cn xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml" type="integer">6</cn>
+      </set>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\{1,2,\ldots,6\}</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NrUnorderedTuples( [1..6], 5 );</span>
+252
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnorderedTuples( [1..6], 5 );</span>
+[ [ 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 2 ], [ 1, 1, 1, 1, 3 ], [ 1, 1, 1, 1, 4 ],
+  [ 1, 1, 1, 1, 5 ], [ 1, 1, 1, 1, 6 ], [ 1, 1, 1, 2, 2 ], [ 1, 1, 1, 2, 3 ],
+  ... 100 more tuples ...
+  [ 1, 3, 5, 5, 6 ], [ 1, 3, 5, 6, 6 ], [ 1, 3, 6, 6, 6 ], [ 1, 4, 4, 4, 4 ],
+  ... 100 more tuples ...
+  [ 3, 3, 5, 5, 5 ], [ 3, 3, 5, 5, 6 ], [ 3, 3, 5, 6, 6 ], [ 3, 3, 6, 6, 6 ],
+  ... 32 more tuples ...
+  [ 5, 5, 5, 6, 6 ], [ 5, 5, 6, 6, 6 ], [ 5, 6, 6, 6, 6 ], [ 6, 6, 6, 6, 6 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The function <code class="func">Combinations</code> (<a shape="rect" href="chap16_mj.html#X8770F16D794C0ADB"><span class="RefLink">16.2-1</span></a>) computes unordered selections without repetitions, <code class="func">Arrangements</code> (<a shape="rect" href="chap16_mj.html#X7837B3357C7566C8"><span class="RefLink">16.2-4</span></a>) computes ordered selections without repetitions, and <code class="func">Tuples</code> (<a shape="rect" href="chap16_mj.html#X86A3CA0F7CC8C320"><span class="RefLink">16.2-8</span></a>) computes ordered selections with repetitions.</p> </body>
+    </html>

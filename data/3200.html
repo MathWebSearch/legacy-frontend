@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.2-13 OnIndeterminates</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X7FA394D27E721E2B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.2-13 OnIndeterminates</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OnIndeterminates</code>( <var class="Arg">poly</var>, <var class="Arg">perm</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A permutation <var class="Arg">perm</var> acts on the multivariate polynomial <var class="Arg">poly</var> by permuting the indeterminates as it permutes points.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x:=Indeterminate(Rationals,1);; y:=Indeterminate(Rationals,2);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OnIndeterminates(x^7*y+x*y^4,(1,17)(2,28));</span>
+x_17^7*x_28+x_17*x_28^4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Stabilizer(Group((1,2,3,4),(1,2)),x*y,OnIndeterminates);</span>
+Group([ (1,2), (3,4) ])
+</pre></div> </body>
+    </html>

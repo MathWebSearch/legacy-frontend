@@ -1,0 +1,46 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.5-4 NaturalLeqPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X87B1ED93785257C1"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.5-4 NaturalLeqPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NaturalLeqPartialPerm</code>( <var class="Arg">f</var>, <var class="Arg">g</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The <em>natural partial order</em> <math id="2544870250155648268" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <leq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\leq</annotation>
+  </semantics>
+</math> on an inverse semigroup <code class="code">S</code> is defined by <code class="code">s</code><math id="-6534144726659217925" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <leq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\leq</annotation>
+  </semantics>
+</math><code class="code">t</code> if there exists an idempotent <code class="code">e</code> in <code class="code">S</code> such that <code class="code">s=et</code>. Hence if <var class="Arg">f</var> and <var class="Arg">g</var> are partial permutations, then <var class="Arg">f</var><math id="-456273369893098131" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <leq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\leq</annotation>
+  </semantics>
+</math><var class="Arg">g</var> if and only if <var class="Arg">f</var> is a restriction of <var class="Arg">g</var>; see <code class="func">RestrictedPartialPerm</code> (<a shape="rect" href="chap54_mj.html#X80ABBF4883C79060"><span class="RefLink">54.2-3</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">NaturalLeqPartialPerm</code> returns <code class="keyw">true</code> if <var class="Arg">f</var> is a restriction of <var class="Arg">g</var> and <code class="keyw">false</code> if it is not. Note that since this is a partial order and not a total order, it is possible that <var class="Arg">f</var> and <var class="Arg">g</var> are incomparable with respect to the natural partial order.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 16, 17, 18, 19 ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 3, 12, 14, 4, 11, 18, 17, 2, 9, 5, 15, 8, 20, 10, 19 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=RestrictedPartialPerm(f, [ 1, 2, 3, 9, 13, 20 ] );</span>
+[1,3,14][2,12]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NaturalLeqPartialPerm(g,f);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NaturalLeqPartialPerm(f,g);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=PartialPerm( [ 1, 2, 3, 4, 5, 8, 10 ], </span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ 7, 1, 4, 3, 2, 6, 5 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NaturalLeqPartialPerm(f, g);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NaturalLeqPartialPerm(g, f);</span>
+false</pre></div> </body>
+    </html>

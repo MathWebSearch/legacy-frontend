@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.6-1 BasisVectors</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X7B1F17AE8027A590"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.6-1 BasisVectors</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ BasisVectors</code>( <var class="Arg">B</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a vector space basis <var class="Arg">B</var>, <code class="code">BasisVectors</code> returns the list of basis vectors of <var class="Arg">B</var>. The lists <var class="Arg">B</var> and <code class="code">BasisVectors( <var class="Arg">B</var> )</code> are equal; the main purpose of <code class="code">BasisVectors</code> is to provide access to a list of vectors that does <em>not</em> know about an underlying vector space.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= VectorSpace( Rationals, [ [ 1, 2, 7 ], [ 1/2, 1/3, 5 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= Basis( V, [ [ 1, 2, 7 ], [ 0, 1, -9/4 ] ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BasisVectors( B );</span>
+[ [ 1, 2, 7 ], [ 0, 1, -9/4 ] ]
+</pre></div> </body>
+    </html>

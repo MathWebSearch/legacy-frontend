@@ -1,0 +1,50 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.14 Matrices over Finite Fields</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X873822B6830CE367"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">24.14 <span class="Heading">Matrices over Finite Fields</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Just as for row vectors, (see section <a shape="rect" href="chap23_mj.html#X8679F7DD7DFCBD9C"><span class="RefLink">23.3</span></a>), <strong class="pkg">GAP</strong> has a special representation for matrices over small finite fields.</p><p xmlns="http://www.w3.org/1999/xhtml">To be eligible to be represented in this way, each row of a matrix must be able to be represented as a compact row vector of the same length over <em>the same</em> finite field.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">v := Z(2)*[1,0,0,1,1];</span>
+[ Z(2)^0, 0*Z(2), 0*Z(2), Z(2)^0, Z(2)^0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConvertToVectorRep(v,2);</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">v;</span>
+&lt;a GF2 vector of length 5&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := [v];; ConvertToMatrixRep(m,GF(2));; m;</span>
+&lt;a 1x5 matrix over GF2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := [v,v];; ConvertToMatrixRep(m,GF(2));; m;</span>
+&lt;a 2x5 matrix over GF2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := [v,v,v];; ConvertToMatrixRep(m,GF(2));; m;</span>
+&lt;a 3x5 matrix over GF2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">v := Z(3)*[1..8];</span>
+[ Z(3), Z(3)^0, 0*Z(3), Z(3), Z(3)^0, 0*Z(3), Z(3), Z(3)^0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConvertToVectorRep(v);</span>
+3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := [v];; ConvertToMatrixRep(m,GF(3));; m;</span>
+[ [ Z(3), Z(3)^0, 0*Z(3), Z(3), Z(3)^0, 0*Z(3), Z(3), Z(3)^0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RepresentationsOfObject(m);</span>
+[ &quot;IsPositionalObjectRep&quot;, &quot;Is8BitMatrixRep&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := [v,v,v,v];; ConvertToMatrixRep(m,GF(3));; m;</span>
+&lt; mutable compressed matrix 4x8 over GF(3) &gt;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">All compressed matrices over GF(2) are viewed as <code class="code">&lt;a <var class="Arg">n</var>x<var class="Arg">m</var> matrix over GF2&gt;</code>, while over fields GF(q) for q between 3 and 256, matrices with 25 or more entries are viewed in this way, and smaller ones as lists of lists.</p><p xmlns="http://www.w3.org/1999/xhtml">Matrices can be converted to this special representation via the following functions.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the main advantage of this special representation of matrices is in low dimensions, where various overheads can be reduced. In higher dimensions, a list of compressed vectors will be almost as fast. Note also that list access and assignment will be somewhat slower for compressed matrices than for plain lists.</p><p xmlns="http://www.w3.org/1999/xhtml">In order to form a row of a compressed matrix a vector must accept certain restrictions. Specifically, it cannot change its length or change the field over which it is compressed. The main consequences of this are: that only elements of the appropriate field can be assigned to entries of the vector, and only to positions between 1 and the original length; that the vector cannot be shared between two matrices compressed over different fields.</p><p xmlns="http://www.w3.org/1999/xhtml">This is enforced by the filter <code class="code">IsLockedRepresentationVector</code>. When a vector becomes part of a compressed matrix, this filter is set for it. Assignment, <code class="func">Unbind</code> (<a shape="rect" href="chap21_mj.html#X78B72FDF7BD63C0B"><span class="RefLink">21.5-2</span></a>), <code class="func">ConvertToVectorRep</code> (<a shape="rect" href="chap23_mj.html#X810E46927F9E8F75"><span class="RefLink">23.3-1</span></a>) and <code class="func">ConvertToMatrixRep</code> (<a shape="rect" href="chap24_mj.html#X8587A62F818AA0D6"><span class="RefLink">24.14-2</span></a>) are all prevented from altering a vector with this filter.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">v := [Z(2),Z(2)];; ConvertToVectorRep(v,GF(2));; v;</span>
+&lt;a GF2 vector of length 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := [v,v]; </span>
+[ &lt;a GF2 vector of length 2&gt;, &lt;a GF2 vector of length 2&gt; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConvertToMatrixRep(m,GF(2)); </span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2 := [m[1], [Z(4),Z(4)]]; # now try and mix in some GF(4)</span>
+[ &lt;a GF2 vector of length 2&gt;, [ Z(2^2), Z(2^2) ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConvertToMatrixRep(m2); # but m2[1] is locked</span>
+#I  ConvertToVectorRep: locked vector not converted to different field
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2 := [ShallowCopy(m[1]), [Z(4),Z(4)]]; # a fresh copy of row 1</span>
+[ &lt;a GF2 vector of length 2&gt;, [ Z(2^2), Z(2^2) ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ConvertToMatrixRep(m2); # now it works</span>
+4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2;</span>
+[ [ Z(2)^0, Z(2)^0 ], [ Z(2^2), Z(2^2) ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RepresentationsOfObject(m2);</span>
+[ &quot;IsPositionalObjectRep&quot;, &quot;Is8BitMatrixRep&quot; ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Arithmetic operations (see <a shape="rect" href="chap21_mj.html#X845EEAF083D43CCE"><span class="RefLink">21.11</span></a> and the following sections) preserve the compression status of matrices in the sense that if all arguments are compressed matrices written over the same field and the result is a matrix then also the result is a compressed matrix written over this field.</p><p xmlns="http://www.w3.org/1999/xhtml">There are also two operations that are only available for matrices written over finite fields.</p> </body>
+    </html>

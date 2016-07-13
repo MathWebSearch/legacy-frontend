@@ -1,0 +1,36 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.18-2 ReducedGroebnerBasis</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X7DEF286384967C9E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.18-2 <span class="Heading">ReducedGroebnerBasis</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReducedGroebnerBasis</code>( <var class="Arg">L</var>, <var class="Arg">O</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReducedGroebnerBasis</code>( <var class="Arg">I</var>, <var class="Arg">O</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">a Groebner basis <math id="-8482714979462369316" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math> (see <code class="func">GroebnerBasis</code> (<a shape="rect" href="chap66_mj.html#X7A43611E876B7560"><span class="RefLink">66.18-1</span></a>)) is <em>reduced</em> if no monomial in a polynomial in <var class="Arg">B</var> is divisible by the leading monomial of another polynomial in <math id="-2404869284065812677" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐵</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
+  </semantics>
+</math>. This operation computes a Groebner basis with respect to the monomial ordering <var class="Arg">O</var> and then reduces it.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReducedGroebnerBasis(l,MonomialGrlexOrdering());</span>
+[ x-y, z^2-2*y+1, y^2+y-1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReducedGroebnerBasis(l,MonomialLexOrdering());    </span>
+[ z^4+4*z^2-1, -1/2*z^2+y-1/2, -1/2*z^2+x-1/2 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReducedGroebnerBasis(l,MonomialLexOrdering([y,z,x]));</span>
+[ x^2+x-1, z^2-2*x+1, -x+y ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">For performance reasons it can be advantageous to define monomial orderings once and then to reuse them:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ord:=MonomialGrlexOrdering();;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GroebnerBasis(l,ord);</span>
+[ x^2+y^2+z^2-1, x^2+z^2-y, x-y, -y^2-y+1, -z^2+2*y-1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ReducedGroebnerBasis(l,ord);</span>
+[ x-y, z^2-2*y+1, y^2+y-1 ]
+</pre></div> </body>
+    </html>

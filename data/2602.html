@@ -1,0 +1,31 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.9-8 SemiEchelonBasis</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X87DCA09579589106"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.9-8 SemiEchelonBasis</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SemiEchelonBasis</code>( <var class="Arg">V</var>[, <var class="Arg">vectors</var>] )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SemiEchelonBasisNC</code>( <var class="Arg">V</var>, <var class="Arg">vectors</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">V</var> be a Gaussian row or matrix vector space over the field <math id="3728104010712308692" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
+  </semantics>
+</math> (see <code class="func">IsGaussianSpace</code> (<a shape="rect" href="chap61_mj.html#X83724C157F4FDFB4"><span class="RefLink">61.9-3</span></a>), <code class="func">IsRowSpace</code> (<a shape="rect" href="chap61_mj.html#X79B305CE87511C4B"><span class="RefLink">61.9-1</span></a>), <code class="func">IsMatrixSpace</code> (<a shape="rect" href="chap61_mj.html#X7A2BBBA07B2BE8F8"><span class="RefLink">61.9-2</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">Called with <var class="Arg">V</var> as the only argument, <code class="func">SemiEchelonBasis</code> returns a basis of <var class="Arg">V</var> that has the property <code class="func">IsSemiEchelonized</code> (<a shape="rect" href="chap61_mj.html#X865A540F85FAE2DF"><span class="RefLink">61.9-7</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">If additionally a list <var class="Arg">vectors</var> of vectors in <var class="Arg">V</var> is given that forms a semi-echelonized basis of <var class="Arg">V</var> then <code class="func">SemiEchelonBasis</code> returns this basis; if <var class="Arg">vectors</var> do not form a basis of <var class="Arg">V</var> then <code class="keyw">fail</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SemiEchelonBasisNC</code> does the same as the two argument version of <code class="func">SemiEchelonBasis</code>, except that it is not checked whether <var class="Arg">vectors</var> form a semi-echelonized basis.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= GF(2)^2;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= SemiEchelonBasis( V );</span>
+SemiEchelonBasis( ( GF(2)^2 ), ... )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( BasisVectors( B ), &quot;\n&quot; );</span>
+[ [ Z(2)^0, 0*Z(2) ], [ 0*Z(2), Z(2)^0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= SemiEchelonBasis( V, [ [ 1, 1 ], [ 0, 1 ] ] * Z(2) );</span>
+SemiEchelonBasis( ( GF(2)^2 ), &lt;an immutable 2x2 matrix over GF2&gt; )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( BasisVectors( B ), &quot;\n&quot; );</span>
+[ [ Z(2)^0, Z(2)^0 ], [ 0*Z(2), Z(2)^0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Coefficients( B, [ 0, 1 ] * Z(2) );</span>
+[ 0*Z(2), Z(2)^0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Coefficients( B, [ 1, 0 ] * Z(2) );</span>
+[ Z(2)^0, Z(2)^0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SemiEchelonBasis( V, [ [ 0, 1 ], [ 1, 1 ] ] * Z(2) );</span>
+fail
+</pre></div> </body>
+    </html>

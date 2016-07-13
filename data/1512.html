@@ -1,0 +1,24 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 29: Records-&gt;29.2 Accessing Record Elements</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap29.html#X7EAAE25D7A17F778"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">29.2 <span class="Heading">Accessing Record Elements</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">r</var>.<var class="Arg">name</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">The above construct evaluates to the value of the record component with the name <var class="Arg">name</var> in the record <var class="Arg">r</var>. Note that the <var class="Arg">name</var> is not evaluated, i.e. it is taken literal.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r := rec( a := 1, b := 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r.a;</span>
+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r.b;</span>
+2
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">r</var>.(<var class="Arg">name</var>)</code></p><p xmlns="http://www.w3.org/1999/xhtml">This construct is similar to the above construct. The difference is that the second operand <var class="Arg">name</var> is evaluated. It must evaluate to a string or an integer otherwise an error is signalled. The construct then evaluates to the element of the record <var class="Arg">r</var> whose name is, as a string, equal to <var class="Arg">name</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">old := rec( a := 1, b := 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">new := rec();</span>
+rec(  )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">for i in RecNames( old ) do</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput"> new.(i) := old.(i);</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">od;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( new );</span>
+rec(
+  a := 1,
+  b := 2 )
+</pre></div> </body>
+    </html>

@@ -1,0 +1,15 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.12-1 IsGeneralizedRowVector</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X87ABCEE9809585A0"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.12-1 IsGeneralizedRowVector</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsGeneralizedRowVector</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a list <var class="Arg">list</var>, the value <code class="keyw">true</code> for <code class="func">IsGeneralizedRowVector</code> indicates that the additive arithmetic behaviour of <var class="Arg">list</var> is as defined in <a shape="rect" href="chap21_mj.html#X7E6A1F66781BE923"><span class="RefLink">21.13</span></a>, and that the attribute <code class="func">NestingDepthA</code> (<a shape="rect" href="chap21_mj.html#X8428E77B86722D52"><span class="RefLink">21.12-4</span></a>) will return a nonzero value when called with <var class="Arg">list</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsList( &quot;abc&quot; ); IsGeneralizedRowVector( &quot;abc&quot; );</span>
+true
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">liemat:= LieObject( [ [ 1, 2 ], [ 3, 4 ] ] );</span>
+LieObject( [ [ 1, 2 ], [ 3, 4 ] ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsGeneralizedRowVector( liemat );</span>
+true
+</pre></div> </body>
+    </html>

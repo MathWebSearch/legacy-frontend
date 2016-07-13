@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 30: Collections-&gt;30.3-9 AsSortedList</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30.html#X7BCA5C6181391007"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.3-9 AsSortedList</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsSortedList</code>( <var class="Arg">listorcoll</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">AsSortedList</code> returns a dense and immutable list <var class="Arg">imm</var>. The argument must be a collection or list <var class="Arg">listorcoll</var> which may contain holes but whose elements lie in the same family (see <a shape="rect" href="chap13_mj.html#X846063757EC05986"><span class="RefLink">13.1</span></a>). <code class="code">Length( <var class="Arg">imm</var> )</code> is the number of elements of the argument, and <var class="Arg">imm</var> contains the elements in sorted order, w.r.t. <code class="code">&lt;=</code>. <code class="code"><var class="Arg">new</var>[<var class="Arg">pos</var>]</code> executes in constant time (see <code class="func">IsConstantTimeAccessList</code> (<a shape="rect" href="chap21_mj.html#X7C84E16A85C99C8C"><span class="RefLink">21.1-6</span></a>)), and the size of <var class="Arg">imm</var> in memory is proportional to its length.</p><p xmlns="http://www.w3.org/1999/xhtml">The only difference to the operation <code class="func">SortedList</code> (<a shape="rect" href="chap30_mj.html#X82CE157A7FAD8036"><span class="RefLink">30.3-6</span></a>) is that <code class="func">AsSortedList</code> returns an <em>immutable</em> list.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:= AsSortedList( [ 1, 3, 3,, 2 ] );</span>
+[ 1, 2, 3, 3 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMutable( l );  IsSortedList( l );  IsConstantTimeAccessList( l );</span>
+false
+true
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSSortedList( l );</span>
+false
+</pre></div> </body>
+    </html>

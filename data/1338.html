@@ -1,0 +1,23 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 35: Magmas-&gt;35.4-4 Centralizer</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap35.html#X7DE33AFC823C7873"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">35.4-4 Centralizer</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Centralizer</code>( <var class="Arg">M</var>, <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Centralizer</code>( <var class="Arg">M</var>, <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Centralizer</code>( <var class="Arg">class</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For an element <var class="Arg">elm</var> of the magma <var class="Arg">M</var> this operation returns the <em>centralizer</em> of <var class="Arg">elm</var>. This is the domain of those elements <var class="Arg">m</var> <math id="4912159574672043284" display="inline" alttext="\in" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">∈</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <in xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\in</annotation>
+  </semantics>
+</math> <var class="Arg">M</var> that commute with <var class="Arg">elm</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">For a submagma <var class="Arg">S</var> it returns the domain of those elements that commute with <em>all</em> elements <var class="Arg">s</var> of <var class="Arg">S</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">class</var> is a class of objects of a magma (this magma then is stored as the <code class="code">ActingDomain</code> of <var class="Arg">class</var>) such as given by <code class="func">ConjugacyClass</code> (<a shape="rect" href="chap39_mj.html#X7B2F207F7F85F5B8"><span class="RefLink">39.10-1</span></a>), <code class="func">Centralizer</code> returns the centralizer of <code class="code">Representative(<var class="Arg">class</var>)</code> (which is a slight abuse of the notation).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2,3,4),(1,2));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Centralizer(g,(1,2,3));</span>
+Group([ (1,2,3) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Centralizer(g,Subgroup(g,[(1,2,3)]));</span>
+Group([ (1,2,3) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Centralizer(g,Subgroup(g,[(1,2,3),(1,2)]));</span>
+Group(())
+</pre></div> </body>
+    </html>

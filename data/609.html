@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.10-3 IrreducibleDifferences</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X7D3289BB865BCF98"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.10-3 IrreducibleDifferences</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IrreducibleDifferences</code>( <var class="Arg">tbl</var>, <var class="Arg">reducibles</var>, <var class="Arg">reducibles2</var>[, <var class="Arg">scprmat</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IrreducibleDifferences</code> returns the list of irreducible characters which occur as difference of an element of <var class="Arg">reducibles</var> and an element of <var class="Arg">reducibles2</var>, where these two arguments are lists of class functions of the character table <var class="Arg">tbl</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">reducibles2</var> is the string <code class="code">&quot;triangle&quot;</code> then the differences of elements in <var class="Arg">reducibles</var> are considered.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">scprmat</var> is not specified then it will be calculated, otherwise we must have <code class="code"><var class="Arg">scprmat</var> = MatScalarProducts( <var class="Arg">tbl</var>, <var class="Arg">reducibles</var>, <var class="Arg">reducibles2</var> )</code> or <code class="code"><var class="Arg">scprmat</var> = MatScalarProducts( <var class="Arg">tbl</var>, <var class="Arg">reducibles</var> )</code>, respectively.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IrreducibleDifferences( a5, chars, &quot;triangle&quot; );</span>
+[ Character( CharacterTable( &quot;A5&quot; ), 
+    [ 3, -1, 0, -E(5)-E(5)^4, -E(5)^2-E(5)^3 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), 
+    [ 3, -1, 0, -E(5)^2-E(5)^3, -E(5)-E(5)^4 ] ) ]
+</pre></div> </body>
+    </html>

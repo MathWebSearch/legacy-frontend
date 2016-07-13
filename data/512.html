@@ -1,0 +1,53 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.11-3 BlocksInfo</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X7FF4CE4A7A272F88"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.11-3 BlocksInfo</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ BlocksInfo</code>( <var class="Arg">modtbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a Brauer character table <var class="Arg">modtbl</var>, the value of <code class="func">BlocksInfo</code> is a list of (mutable) records, the <math id="8882875779899087954" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th entry containing information about the <math id="7814305956723576932" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑖</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
+  </semantics>
+</math>-th block. Each record has the following components.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">defect</code></strong></dt><dd><p>the defect of the block,</p>
+
+</dd><dt><strong class="Mark"><code class="code">ordchars</code></strong></dt><dd><p>the list of positions of the ordinary characters that belong to the block, relative to <code class="code">Irr( OrdinaryCharacterTable( <var class="Arg">modtbl</var> ) )</code>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">modchars</code></strong></dt><dd><p>the list of positions of the Brauer characters that belong to the block, relative to <code class="code">IBr( <var class="Arg">modtbl</var> )</code>.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">Optional components are</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">basicset</code></strong></dt><dd><p>a list of positions of ordinary characters in the block whose restriction to <var class="Arg">modtbl</var> is maximally linearly independent, relative to <code class="code">Irr( OrdinaryCharacterTable( <var class="Arg">modtbl</var> ) )</code>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">decmat</code></strong></dt><dd><p>the decomposition matrix of the block, it is stored automatically when <code class="func">DecompositionMatrix</code> (<a shape="rect" href="chap71_mj.html#X84701640811D2345"><span class="RefLink">71.11-4</span></a>) is called for the block,</p>
+
+</dd><dt><strong class="Mark"><code class="code">decinv</code></strong></dt><dd><p>inverse of the decomposition matrix of the block, restricted to the ordinary characters described by <code class="code">basicset</code>,</p>
+
+</dd><dt><strong class="Mark"><code class="code">brauertree</code></strong></dt><dd><p>a list that describes the Brauer tree of the block, in the case that the block is of defect <math id="2459285744958150393" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math>.</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">BlocksInfo( CharacterTable( &quot;L3(2)&quot; ) mod 2 );</span>
+[ rec( basicset := [ 1, 2, 3 ], 
+      decinv := [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ], 
+      defect := 3, modchars := [ 1, 2, 3 ], 
+      ordchars := [ 1, 2, 3, 4, 5 ] ), 
+  rec( basicset := [ 6 ], decinv := [ [ 1 ] ], defect := 0, 
+      modchars := [ 4 ], ordchars := [ 6 ] ) ]
+</pre></div> </body>
+    </html>

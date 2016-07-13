@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.5-8 LargestMovedPoint</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X8383A7727AC97724"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.5-8 LargestMovedPoint</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LargestMovedPoint</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LargestMovedPoint</code>( <var class="Arg">coll</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A positive integer.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">LargestMovedPoint</code> returns the largest positive integers <code class="code">i</code> such that <code class="code">i^<var class="Arg">f</var>&lt;&gt;i</code> if such an <code class="code">i</code> exists. If <var class="Arg">f</var> is the identity transformation, then <code class="code">0</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">If the argument is a collection of transformations <var class="Arg">coll</var>, then the largest point which is moved by at least one element of <var class="Arg">coll</var> is returned, if such a point exists. If <var class="Arg">coll</var> only contains identity transformations, then <code class="code">LargestMovedPoint</code> returns <code class="code">0</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := FullTransformationSemigroup(5);    </span>
+&lt;full transformation monoid of degree 5&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LargestMovedPoint(S);</span>
+5
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := Semigroup(IdentityTransformation);</span>
+&lt;trivial transformation group of degree 0 with 1 generator&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LargestMovedPoint(S);</span>
+0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := Transformation( [ 1, 2, 3, 6, 6, 6 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LargestMovedPoint(f); </span>
+5
+</pre></div> </body>
+    </html>

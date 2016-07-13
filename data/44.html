@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.10-2 AlgebraHomomorphismByImages</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7A7F97ED8608C882"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.10-2 AlgebraHomomorphismByImages</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AlgebraHomomorphismByImages</code>( <var class="Arg">A</var>, <var class="Arg">B</var>, <var class="Arg">gens</var>, <var class="Arg">imgs</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">AlgebraHomomorphismByImages</code> returns the algebra homomorphism with source <var class="Arg">A</var> and range <var class="Arg">B</var> that is defined by mapping the list <var class="Arg">gens</var> of generators of <var class="Arg">A</var> to the list <var class="Arg">imgs</var> of images in <var class="Arg">B</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">gens</var> does not generate <var class="Arg">A</var> or if the homomorphism does not exist (i.e., if mapping the generators describes only a multi-valued mapping) then <code class="keyw">fail</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">One can avoid the checks by calling <code class="func">AlgebraHomomorphismByImagesNC</code> (<a shape="rect" href="chap62_mj.html#X8326D1BD79725462"><span class="RefLink">62.10-3</span></a>), and one can construct multi-valued mappings with <code class="func">AlgebraGeneralMappingByImages</code> (<a shape="rect" href="chap62_mj.html#X83CE798C7D39E368"><span class="RefLink">62.10-1</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T:= EmptySCTable( 2, 0 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetEntrySCTable( T, 1, 1, [1,1] ); SetEntrySCTable( T, 2, 2, [1,2] );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= AlgebraByStructureConstants( Rationals, T );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:= NullMat( 2, 2 );; m1[1][1]:= 1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m2:= NullMat( 2, 2 );; m2[2][2]:= 1;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:= AlgebraByGenerators( Rationals, [ m1, m2 ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">bA:= BasisVectors( Basis( A ) );; bB:= BasisVectors( Basis( B ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= AlgebraHomomorphismByImages( A, B, bA, bB );</span>
+[ v.1, v.2 ] -&gt; [ [ [ 1, 0 ], [ 0, 0 ] ], [ [ 0, 0 ], [ 0, 1 ] ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Image( f, bA[1]+bA[2] );</span>
+[ [ 1, 0 ], [ 0, 1 ] ]
+</pre></div> </body>
+    </html>

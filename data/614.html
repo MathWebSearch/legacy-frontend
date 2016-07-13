@@ -1,0 +1,48 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.9-5 InducedClassFunctionsByFusionMap</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X7C72003880743D28"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.9-5 InducedClassFunctionsByFusionMap</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InducedClassFunctionsByFusionMap</code>( <var class="Arg">subtbl</var>, <var class="Arg">tbl</var>, <var class="Arg">chars</var>, <var class="Arg">fusionmap</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">subtbl</var> and <var class="Arg">tbl</var> be two character tables of groups <math id="501221960198466198" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> and <math id="-6961688055518382489" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, such that <math id="744305933871031119" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
+  </semantics>
+</math> is a subgroup of <math id="-6206859834764759187" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>, let <var class="Arg">chars</var> be a list of class functions of <var class="Arg">subtbl</var>, and let <var class="Arg">fusionmap</var> be a fusion map from <var class="Arg">subtbl</var> to <var class="Arg">tbl</var>. The function returns the list of induced class functions of <var class="Arg">tbl</var> that correspond to <var class="Arg">chars</var>, w.r.t. the given fusion map.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">InducedClassFunctionsByFusionMap</code> is the function that does the work for <code class="func">InducedClassFunction</code> (<a shape="rect" href="chap72_mj.html#X7FE39D3D78855D3B"><span class="RefLink">72.9-3</span></a>) and <code class="func">InducedClassFunctions</code> (<a shape="rect" href="chap72_mj.html#X8484C0F985AD2D28"><span class="RefLink">72.9-4</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus:= PossibleClassFusions( a5, s5 );</span>
+[ [ 1, 2, 3, 4, 4 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">InducedClassFunctionsByFusionMap( a5, s5, Irr( a5 ), fus[1] );</span>
+[ Character( CharacterTable( &quot;A5.2&quot; ), [ 2, 2, 2, 2, 0, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5.2&quot; ), [ 6, -2, 0, 1, 0, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5.2&quot; ), [ 6, -2, 0, 1, 0, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5.2&quot; ), [ 8, 0, 2, -2, 0, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5.2&quot; ), [ 10, 2, -2, 0, 0, 0, 0 ] ) ]
+</pre></div> </body>
+    </html>

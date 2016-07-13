@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.18-5 HasAbelianFactorGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7FC83E4C783572E7"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.18-5 HasAbelianFactorGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ HasAbelianFactorGroup</code>( <var class="Arg">G</var>, <var class="Arg">N</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">tests whether <var class="Arg">G</var> <math id="-7914771701095747935" display="inline" alttext="/" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">/</mo>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <divide xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">/</annotation>
+  </semantics>
+</math> <var class="Arg">N</var> is abelian (without explicitly constructing the factor group and without testing whether <var class="Arg">N</var> is in fact a normal subgroup).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasAbelianFactorGroup(g,n);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasAbelianFactorGroup(DerivedSubgroup(g),n);</span>
+true
+</pre></div> </body>
+    </html>

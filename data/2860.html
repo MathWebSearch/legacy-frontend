@@ -1,0 +1,43 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.13-2 SylowComplement</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X8605F3FE7A3B8E12"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.13-2 SylowComplement</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SylowComplement</code>( <var class="Arg">G</var>, <var class="Arg">p</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a Sylow <var class="Arg">p</var>-complement of the finite group <var class="Arg">G</var>. This is a subgroup <math id="2794403144685110529" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
+  </semantics>
+</math> of order coprime to <var class="Arg">p</var> such that the index <math id="-2402531992956148194" display="inline" alttext="[\textit{G}:U]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.2">
+        <mtext xref="p1.1.m1.1.2.1a.cmml" id="p1.1.m1.1.2.1">𝐺</mtext>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">:</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">U</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.1.1.cmml" id="p1.1.m1.1.5" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml">
+        <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.6.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+        <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.2.cmml">
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">:</ci>
+          <mtext xref="p1.1.m1.1.6" id="p1.1.m1.1.2.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+          </mtext>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑈</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[\textit{G}:U]</annotation>
+  </semantics>
+</math> is a <var class="Arg">p</var>-power.</p><p xmlns="http://www.w3.org/1999/xhtml">At the moment methods exist only if <var class="Arg">G</var> is solvable and <strong class="pkg">GAP</strong> will issue an error if <var class="Arg">G</var> is not solvable.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SylowComplement(g,3);</span>
+Group([ (1,2), (3,4), (1,3)(2,4) ])
+</pre></div> </body>
+    </html>

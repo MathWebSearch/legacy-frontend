@@ -1,0 +1,79 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 39: Groups-&gt;39.11-1 Normalizer</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X87B5370C7DFD401D"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.11-1 <span class="Heading">Normalizer</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Normalizer</code>( <var class="Arg">G</var>, <var class="Arg">U</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Normalizer</code>( <var class="Arg">G</var>, <var class="Arg">g</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For two groups <var class="Arg">G</var>, <var class="Arg">U</var>, <code class="func">Normalizer</code> computes the normalizer <math id="8973121113701327882" display="inline" alttext="N_{\textit{G}}(\textit{U})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msub xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+        <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝐺</mtext>
+      </msub>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.6.3">
+        <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+        <mtext xref="p1.1.m1.1.4.1a.cmml" id="p1.1.m1.1.4.1">𝑈</mtext>
+        <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml"/>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+          </mtext>
+        </apply>
+        <mtext xref="p1.1.m1.1.6.3" id="p1.1.m1.1.4.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">U</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N_{\textit{G}}(\textit{U})</annotation>
+  </semantics>
+</math>, that is, the stabilizer of <var class="Arg">U</var> under the conjugation action of <var class="Arg">G</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">For a group <var class="Arg">G</var> and a group element <var class="Arg">g</var>, <code class="func">Normalizer</code> computes <math id="-2112454509013745942" display="inline" alttext="N_{\textit{G}}(\langle\textit{g}\rangle)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <msub xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
+        <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝐺</mtext>
+      </msub>
+      <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">⁢</mo>
+      <mrow id="p1.1.m1.1.8.3">
+        <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+        <mrow xref="p1.1.m1.1.8.3.2.1.cmml" id="p1.1.m1.1.8.3.2">
+          <mo xref="p1.1.m1.1.8.3.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">⟨</mo>
+          <mtext xref="p1.1.m1.1.5.1a.cmml" id="p1.1.m1.1.5.1">𝑔</mtext>
+          <mo xref="p1.1.m1.1.8.3.2.1.1.cmml" id="p1.1.m1.1.6" stretchy="false">⟩</mo>
+        </mrow>
+        <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <times xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml"/>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <csymbol id="p1.1.m1.1.8.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑁</ci>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">G</span>
+          </mtext>
+        </apply>
+        <apply xref="p1.1.m1.1.8.3.2" id="p1.1.m1.1.8.3.2.1.cmml">
+          <csymbol xref="p1.1.m1.1.4" id="p1.1.m1.1.8.3.2.1.1.cmml" cd="latexml">delimited-⟨⟩</csymbol>
+          <mtext xref="p1.1.m1.1.8.3.2" id="p1.1.m1.1.5.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">g</span>
+          </mtext>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">N_{\textit{G}}(\langle\textit{g}\rangle)</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Normalizer(g,Subgroup(g,[(1,2,3)]));</span>
+Group([ (1,2,3), (2,3) ])
+</pre></div> </body>
+    </html>

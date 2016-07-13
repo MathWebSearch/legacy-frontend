@@ -1,0 +1,28 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 46: Pc Groups-&gt;46.8-7 ModuleOfExtension</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap46.html#X7EAC6B8B7ABEEB86"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">46.8-7 ModuleOfExtension</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ModuleOfExtension</code>( <var class="Arg">E</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the module of an extension <var class="Arg">E</var> of <var class="Arg">G</var> by <var class="Arg">M</var>. This is the normal subgroup of <var class="Arg">E</var> which corresponds to <var class="Arg">M</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := SmallGroup( 4, 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mats := List( Pcgs( G ), x -&gt; IdentityMat( 1, GF(2) ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M := GModuleByMats( mats, GF(2) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">co := TwoCocycles( G, M );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Extension( G, M, co[2] );</span>
+&lt;pc group of size 8 with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SplitExtension( G, M );</span>
+&lt;pc group of size 8 with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Extensions( G, M );</span>
+[ &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt;, 
+  &lt;pc group of size 8 with 3 generators&gt; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(last, IdSmallGroup);</span>
+[ [ 8, 5 ], [ 8, 2 ], [ 8, 3 ], [ 8, 3 ], [ 8, 2 ], [ 8, 2 ], 
+  [ 8, 3 ], [ 8, 4 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that the extensions returned by <code class="func">Extensions</code> (<a shape="rect" href="chap46_mj.html#X8236AD927A5A0E5A"><span class="RefLink">46.8-4</span></a>) are computed up to equivalence, but not up to isomorphism.</p> </body>
+    </html>

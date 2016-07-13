@@ -1,0 +1,65 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 14: Integers-&gt;14.2-8 LogInt</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X8197C4E882BAF14E"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.2-8 LogInt</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LogInt</code>( <var class="Arg">n</var>, <var class="Arg">base</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LogInt</code> returns the integer part of the logarithm of the positive integer <var class="Arg">n</var> with respect to the positive integer <var class="Arg">base</var>, i.e., the largest positive integer <math id="-673878986406944241" display="inline" alttext="e" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑒</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">e</annotation>
+  </semantics>
+</math> such that <math id="-6725537981583538672" display="inline" alttext="\textit{base}^{e}\leq\textit{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑏𝑎𝑠𝑒</mtext>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">e</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">≤</mo>
+      <mtext xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">𝑛</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <leq xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">base</span>
+          </mtext>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑒</ci>
+        </apply>
+        <mtext xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+        </mtext>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{base}^{e}\leq\textit{n}</annotation>
+  </semantics>
+</math>. The function <code class="func">LogInt</code> will signal an error if either <var class="Arg">n</var> or <var class="Arg">base</var> is not positive.</p><p xmlns="http://www.w3.org/1999/xhtml">For <var class="Arg">base</var> <math id="-6129091436052686078" display="inline" alttext="=2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">=</mo>
+      <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">2</mn>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <eq xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <csymbol xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" cd="latexml">absent</csymbol>
+        <cn xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">=2</annotation>
+  </semantics>
+</math> this is very efficient because the internal binary representation of the integer is used.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LogInt( 1030, 2 );</span>
+10
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">2^10;</span>
+1024
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LogInt( 1, 10 );</span>
+0
+</pre></div> </body>
+    </html>

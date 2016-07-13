@@ -1,0 +1,152 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 79: Creating New Objects-&gt;79.13 Example – Constructing Enumerators</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap79.html#X849D8BC278649EA5"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">79.13 <span class="Heading">Example – Constructing Enumerators</span></h4><p xmlns="http://www.w3.org/1999/xhtml">When dealing with countable sets, a usual task is to define enumerations, i.e., bijections to the positive integers. In <strong class="pkg">GAP</strong>, this can be implemented via <em>enumerators</em> (see <a shape="rect" href="chap21_mj.html#X7EA3ACE27E43D174"><span class="RefLink">21.23</span></a>). These are lists containing the elements in a specified ordering, and the operations <code class="func">Position</code> (<a shape="rect" href="chap21_mj.html#X79975EC6783B4293"><span class="RefLink">21.16-1</span></a>) and list access via <code class="func">\[\]</code> (<a shape="rect" href="chap21_mj.html#X8297BBCD79642BE6"><span class="RefLink">21.2-1</span></a>) define the desired bijection. For implementing such an enumerator, one mainly needs to install the appropriate functions for these operations.</p><p xmlns="http://www.w3.org/1999/xhtml">A general setup for creating such lists is given by <code class="func">EnumeratorByFunctions</code> (<a shape="rect" href="chap30_mj.html#X85E149177AC547C3"><span class="RefLink">30.3-4</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">If the set in question is a domain <var class="Arg">D</var> for which a <code class="func">Size</code> (<a shape="rect" href="chap30_mj.html#X858ADA3B7A684421"><span class="RefLink">30.4-6</span></a>) method is available then all one has to do is to write down the functions for computing the <math id="-8543962396936529783" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>-th element of the list and for computing the position of a given <strong class="pkg">GAP</strong> object in the list, to put them into the components <code class="code">ElementNumber</code> and <code class="code">NumberElement</code> of a record, and to call <code class="func">EnumeratorByFunctions</code> (<a shape="rect" href="chap30_mj.html#X85E149177AC547C3"><span class="RefLink">30.3-4</span></a>) with the domain <var class="Arg">D</var> and this record as arguments. For example, the following lines of code install an <code class="func">Enumerator</code> (<a shape="rect" href="chap30_mj.html#X7EF8910F82B45EC7"><span class="RefLink">30.3-2</span></a>) method for the case that <var class="Arg">D</var> is the domain of rational integers. (Note that <code class="func">IsIntegers</code> (<a shape="rect" href="chap14_mj.html#X818683B17F8C97F3"><span class="RefLink">14.1-2</span></a>) is a filter that describes exactly the domain of rational integers.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+InstallMethod( Enumerator,
+    &quot;for integers&quot;,
+    [ IsIntegers ],
+    Integers -&gt; EnumeratorByFunctions( Integers, rec(
+                    ElementNumber := function( e, n ) ... end,
+                    NumberElement := function( e, x ) ... end ) ) );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The bodies of the functions have been omitted above; here is the code that is actually used in <strong class="pkg">GAP</strong>. (The ordering coincides with that for the iterators for the domain of rational integers that have been discussed in <a shape="rect" href="chap79_mj.html#X866E223484649E5A"><span class="RefLink">79.10</span></a> and <a shape="rect" href="chap79_mj.html#X834893D07FAA6FD2"><span class="RefLink">79.11</span></a>.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">enum:= Enumerator( Integers );</span>
+&lt;enumerator of Integers&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( enum!.NumberElement, &quot;\n&quot; );</span>
+function ( e, x )
+    local  pos;
+    if not IsInt( x )  then
+        return fail;
+    elif 0 &lt; x  then
+        pos := 2 * x;
+    else
+        pos := -2 * x + 1;
+    fi;
+    return pos;
+end
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( enum!.ElementNumber, &quot;\n&quot; );</span>
+function ( e, n )
+    if n mod 2 = 0  then
+        return n / 2;
+    else
+        return (1 - n) / 2;
+    fi;
+    return;
+end
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The situation becomes slightly more complicated if the set <math id="-1024681428967395279" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> in question is not a domain. This is because one must provide also at least a method for computing the length of the list, and because one has to determine the family in which it lies (see <a shape="rect" href="chap79_mj.html#X82E86CF37B123FD4"><span class="RefLink">79.9</span></a>). The latter should usually not be a problem since either <math id="-5937278727819867727" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> is nonempty and all its elements lie in the same family –in this case one takes the collections family of any element in <math id="6802566803988639158" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math>– or the family of the enumerator must be <code class="code">ListsFamily</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">An example in the <strong class="pkg">GAP</strong> library is an enumerator for the set of <math id="4260333887239601418" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
+  </semantics>
+</math>-tuples over a finite set; the function is called <code class="func">EnumeratorOfTuples</code> (<a shape="rect" href="chap16_mj.html#X7BA135297E8DA819"><span class="RefLink">16.2-9</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( EnumeratorOfTuples, &quot;\n&quot; );</span>
+function ( set, k )
+    local  enum;
+    if k = 0  then
+        return Immutable( [ [  ] ] );
+    elif IsEmpty( set )  then
+        return Immutable( [  ] );
+    fi;
+    enum 
+     := EnumeratorByFunctions( CollectionsFamily( FamilyObj( set ) ), 
+       rec(
+          ElementNumber := function ( enum, n )
+                local  nn, t, i;
+                nn := n - 1;
+                t := [  ];
+                for i  in [ 1 .. enum!.k ]  do
+                    t[i] := RemInt( nn, Length( enum!.set ) ) + 1;
+                    nn := QuoInt( nn, Length( enum!.set ) );
+                od;
+                if nn &lt;&gt; 0  then
+                    Error( &quot;&lt;enum&gt;[&quot;, n, 
+                     &quot;] must have an assigned value&quot; );
+                fi;
+                nn := enum!.set{Reversed( t )};
+                MakeImmutable( nn );
+                return nn;
+            end,
+          NumberElement := function ( enum, elm )
+                local  n, i;
+                if not IsList( elm )  then
+                    return fail;
+                fi;
+                elm := List( elm, function ( x )
+                        return Position( enum!.set, x );
+                    end );
+                if fail in elm or Length( elm ) &lt;&gt; enum!.k  then
+                    return fail;
+                fi;
+                n := 0;
+                for i  in [ 1 .. enum!.k ]  do
+                    n := Length( enum!.set ) * n + elm[i] - 1;
+                od;
+                return n + 1;
+            end,
+          Length := function ( enum )
+                return Length( enum!.set ) ^ enum!.k;
+            end,
+          PrintObj := function ( enum )
+                Print( &quot;EnumeratorOfTuples( &quot;, enum!.set, &quot;, &quot;, 
+                 enum!.k, &quot; )&quot; );
+                return;
+            end,
+          set := Set( set ),
+          k := k ) );
+    SetIsSSortedList( enum, true );
+    return enum;
+end
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We see that the enumerator is a homogeneous list that stores individual functions <code class="code">ElementNumber</code>, <code class="code">NumberElement</code>, <code class="code">Length</code>, and <code class="code">PrintObj</code>; besides that, the data components <math id="458634697579662255" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑆</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
+  </semantics>
+</math> and <math id="-5452404046826978243" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑘</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
+  </semantics>
+</math> are contained.</p> </body>
+    </html>

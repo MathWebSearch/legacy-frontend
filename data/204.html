@@ -1,0 +1,204 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.9-4 COHORTS_PRIMITIVE_GROUPS</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X81329B9B7F5FF8DE"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">50.9-4 COHORTS_PRIMITIVE_GROUPS</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ COHORTS_PRIMITIVE_GROUPS</code></td><td colspan="1" rowspan="1" class="tdright">( global variable )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">In <a shape="rect" href="chapBib_mj.html#biBDixonMortimer88">[DM88]</a> the primitive groups are sorted in &quot;cohorts&quot; according to their socle. For each degree, the variable <code class="func">COHORTS_PRIMITIVE_GROUPS</code> contains a list of the cohorts for the primitive groups of this degree. Each cohort is represented by a list of length 2, the first entry specifies the socle type (see <code class="func">SocleTypePrimitiveGroup</code> (<a shape="rect" href="chap43_mj.html#X7E89A46A86A3F4A2"><span class="RefLink">43.5-2</span></a>)), the second entry listing the index numbers of the groups in this degree.</p><p xmlns="http://www.w3.org/1999/xhtml">For example in degree 49, we have four cohorts with socles <math id="6182645744697508661" display="inline" alttext="(?/7?)^{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.2.2.cmml" id="p1.1.m1.1.8.2">
+        <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+        <mrow xref="p1.1.m1.1.8.2.2.cmml" id="p1.1.m1.1.8.2.2">
+          <mrow xref="p1.1.m1.1.8.2.2.cmml" id="p1.1.m1.1.8.2.2.2">
+            <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">?</mi>
+            <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">/</mo>
+            <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">7</mn>
+          </mrow>
+          <mo xref="p1.1.m1.1.8.2.2.1.cmml" id="p1.1.m1.1.8.2.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5" mathvariant="normal">?</mi>
+        </mrow>
+        <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+      </mrow>
+      <mn xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">2</mn>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <csymbol id="p1.1.m1.1.8.1.cmml" cd="ambiguous">superscript</csymbol>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.2.cmml">
+          <times xref="p1.1.m1.1.8.2.2.1" id="p1.1.m1.1.8.2.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.2.2.cmml">
+            <divide xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+            <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">?</ci>
+            <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">7</cn>
+          </apply>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">?</ci>
+        </apply>
+        <cn xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(?/7?)^{2}</annotation>
+  </semantics>
+</math>, <math id="-1645524191480310393" display="inline" alttext="L_{2}(7)^{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <msub xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">2</mn>
+      </msub>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <msup xref="p1.1.m1.1.7.3.cmml" id="p1.1.m1.1.7.3">
+        <mrow id="p1.1.m1.1.7.3.2">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">7</mn>
+          <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+        </mrow>
+        <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">2</mn>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐿</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">2</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.7.3" id="p1.1.m1.1.7.3.cmml">
+          <csymbol id="p1.1.m1.1.7.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">7</cn>
+          <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">2</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">L_{2}(7)^{2}</annotation>
+  </semantics>
+</math>, <math id="-9069548287383099338" display="inline" alttext="A_{7}^{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msubsup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">7</mn>
+      <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">2</mn>
+    </msubsup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <csymbol id="p1.1.m1.1.4.1.cmml" cd="ambiguous">superscript</csymbol>
+        <apply id="p1.1.m1.1.4.2.cmml">
+          <csymbol id="p1.1.m1.1.4.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">7</cn>
+        </apply>
+        <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">2</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A_{7}^{2}</annotation>
+  </semantics>
+</math> and <math id="7110245126454585630" display="inline" alttext="A_{49}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+      <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">49</mn>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+        <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">49</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A_{49}</annotation>
+  </semantics>
+</math> respectively. the group <code class="code">PrimitiveGroup(49,36)</code>, which is isomorphic to <math id="-7955904558639598500" display="inline" alttext="(A_{7}\times A_{7}):2^{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">
+      <mrow xref="p1.1.m1.1.11.1.2.cmml" id="p1.1.m1.1.11.1">
+        <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+        <mrow xref="p1.1.m1.1.11.1.2.cmml" id="p1.1.m1.1.11.1.2">
+          <msub xref="p1.1.m1.1.11.1.2.cmml" id="p1.1.m1.1.11.1.2.1">
+            <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">A</mi>
+            <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">7</mn>
+          </msub>
+          <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">×</mo>
+          <msub xref="p1.1.m1.1.11.1.2.cmml" id="p1.1.m1.1.11.1.2.2">
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">A</mi>
+            <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">7</mn>
+          </msub>
+        </mrow>
+        <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">:</mo>
+      <msup xref="p1.1.m1.1.11.2.cmml" id="p1.1.m1.1.11.2">
+        <mn xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">2</mn>
+        <mn xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">2</mn>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">
+        <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">:</ci>
+        <apply xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.2.cmml">
+          <times xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+          <apply xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.2.1.cmml">
+            <csymbol id="p1.1.m1.1.11.1.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐴</ci>
+            <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">7</cn>
+          </apply>
+          <apply xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.2.2.cmml">
+            <csymbol id="p1.1.m1.1.11.1.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐴</ci>
+            <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">7</cn>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.11.2" id="p1.1.m1.1.11.2.cmml">
+          <csymbol id="p1.1.m1.1.11.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <cn xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml" type="integer">2</cn>
+          <cn xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml" type="integer">2</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(A_{7}\times A_{7}):2^{2}</annotation>
+  </semantics>
+</math>, lies in the third cohort with socle <math id="-4478599238629462413" display="inline" alttext="(A_{7}\times A_{7})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <msub xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2.1">
+          <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">A</mi>
+          <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">7</mn>
+        </msub>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">×</mo>
+        <msub xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2.2">
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">A</mi>
+          <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">7</mn>
+        </msub>
+      </mrow>
+      <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.cmml">
+        <times xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.1.cmml">
+          <csymbol id="p1.1.m1.1.8.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐴</ci>
+          <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">7</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.2.2.cmml">
+          <csymbol id="p1.1.m1.1.8.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐴</ci>
+          <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">7</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(A_{7}\times A_{7})</annotation>
+  </semantics>
+</math>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">COHORTS_PRIMITIVE_GROUPS[49];</span>
+[ [ rec( parameter := 7, series := &quot;Z&quot;, width := 2 ), 
+      [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 
+          18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 
+          33 ] ], 
+  [ rec( parameter := [ 2, 7 ], series := &quot;L&quot;, width := 2 ), [ 34 ] ],
+  [ rec( parameter := 7, series := &quot;A&quot;, width := 2 ), 
+      [ 35, 36, 37, 38 ] ], 
+  [ rec( parameter := 49, series := &quot;A&quot;, width := 1 ), [ 39, 40 ] ] ]
+</pre></div> </body>
+    </html>

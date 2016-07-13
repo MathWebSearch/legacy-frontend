@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.8-3 LinearCharacters</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X8549899A7DE206BA"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.8-3 <span class="Heading">LinearCharacters</span></h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LinearCharacters</code>( <var class="Arg">G</var>[, <var class="Arg">p</var>] )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LinearCharacters</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LinearCharacters</code> returns the linear (i.e., degree <math id="2061197935727425452" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math>) characters in the <code class="func">Irr</code> (<a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492"><span class="RefLink">71.8-2</span></a>) list of the group <var class="Arg">G</var> or the character table <var class="Arg">tbl</var>, respectively. In the second form, <code class="func">LinearCharacters</code> returns the <var class="Arg">p</var>-modular linear characters of the group <var class="Arg">G</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">For a character table <var class="Arg">tbl</var> with underlying group, <code class="func">LinearCharacters</code> may delegate to the group. For a group <var class="Arg">G</var>, <code class="func">LinearCharacters</code> may delegate to its character table only if the irreducibles are already stored there.</p><p xmlns="http://www.w3.org/1999/xhtml">The ordering of linear characters in <var class="Arg">tbl</var> need not coincide with the ordering of linear characters in the irreducibles of <var class="Arg">tbl</var> (see <code class="func">Irr</code> (<a shape="rect" href="chap71_mj.html#X873B3CC57E9A5492"><span class="RefLink">71.8-2</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LinearCharacters( SymmetricGroup( 4 ) );</span>
+[ Character( CharacterTable( Sym( [ 1 .. 4 ] ) ), [ 1, 1, 1, 1, 1 ] ),
+  Character( CharacterTable( Sym( [ 1 .. 4 ] ) ), [ 1, -1, 1, 1, -1 
+     ] ) ]
+</pre></div> </body>
+    </html>

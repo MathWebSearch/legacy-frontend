@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.5-2 Stabilizer</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X86FB962786397E02"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.5-2 Stabilizer</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Stabilizer</code>( <var class="Arg">G</var>[, <var class="Arg">Omega</var>], <var class="Arg">pnt</var>[, <var class="Arg">gens</var>, <var class="Arg">acts</var>][, <var class="Arg">act</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes the stabilizer in <var class="Arg">G</var> of the point <var class="Arg">pnt</var>, that is the subgroup of those elements of <var class="Arg">G</var> that fix <var class="Arg">pnt</var>. The stabilizer will have <var class="Arg">G</var> as its parent.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,3,2),(2,4,3));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Stabilizer(g,4);</span>
+Group([ (1,3,2) ])
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The stabilizer of a set or tuple of points can be computed by specifying an action of sets or tuples of points.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Stabilizer(g,[1,2],OnSets);</span>
+Group([ (1,2)(3,4) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Stabilizer(g,[1,2],OnTuples);</span>
+Group(())
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OrbitStabilizer(g,[1,2],OnSets);</span>
+rec( 
+  orbit := [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 3, 4 ], 
+      [ 2, 4 ] ], stabilizer := Group([ (1,2)(3,4) ]) )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">(See Section <a shape="rect" href="chap41_mj.html#X81B8F9CD868CD953"><span class="RefLink">41.2</span></a> for information about specific actions.)</p><p xmlns="http://www.w3.org/1999/xhtml">The standard methods for all these actions are an orbit-stabilizer algorithm. For permutation groups backtrack algorithms are used. For solvable groups an orbit-stabilizer algorithm for solvable groups, which uses the fact that the orbits of a normal subgroup form a block system (see <a shape="rect" href="chapBib_mj.html#biBSOGOS">[LNS84]</a>) is used.</p> </body>
+    </html>

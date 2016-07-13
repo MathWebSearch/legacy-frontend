@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.11-4 AllBlocks</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X835658B07B28EF3B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.11-4 AllBlocks</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AllBlocks</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes a list of representatives of all block systems for a permutation group <var class="Arg">G</var> acting transitively on the points moved by the group.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AllBlocks(g);</span>
+[ [ 1, 8 ], [ 1, 2, 3, 8 ], [ 1, 4, 5, 8 ], [ 1, 6, 7, 8 ], [ 1, 3 ], 
+  [ 1, 3, 5, 7 ], [ 1, 3, 4, 6 ], [ 1, 5 ], [ 1, 2, 5, 6 ], [ 1, 2 ], 
+  [ 1, 2, 4, 7 ], [ 1, 4 ], [ 1, 7 ], [ 1, 6 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The stabilizer of a block can be computed via the action <code class="func">OnSets</code> (<a shape="rect" href="chap41_mj.html#X85AA04347CD117F9"><span class="RefLink">41.2-4</span></a>):</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Stabilizer(g,[1,8],OnSets);</span>
+Group([ (1,8)(2,3)(4,5)(6,7) ])
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If <code class="code">bs</code> is a partition of the action domain, given as a set of sets, the stabilizer under the action <code class="func">OnSetsDisjointSets</code> (<a shape="rect" href="chap41_mj.html#X7E23686E7A9D3A20"><span class="RefLink">41.2-8</span></a>) returns the largest subgroup which preserves <code class="code">bs</code> as a block system.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2,3,4,5,6,7,8),(1,2));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">bs:=[[1,2,3,4],[5,6,7,8]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Stabilizer(g,bs,OnSetsDisjointSets);</span>
+Group([ (6,7), (5,6), (5,8), (2,3), (3,4)(5,7), (1,4), 
+  (1,5,4,8)(2,6,3,7) ])
+</pre></div> </body>
+    </html>

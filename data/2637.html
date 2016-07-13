@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.3-2 TrivialSubspace</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X86DC71A9835430FD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.3-2 TrivialSubspace</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TrivialSubspace</code>( <var class="Arg">V</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a vector space <var class="Arg">V</var>, <code class="func">TrivialSubspace</code> returns the subspace of <var class="Arg">V</var> that consists of the zero vector in <var class="Arg">V</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= GF(3)^3;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">triv:= TrivialSubspace( V );</span>
+&lt;vector space over GF(3), with 0 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AsSet( triv );</span>
+[ [ 0*Z(3), 0*Z(3), 0*Z(3) ] ]
+</pre></div> </body>
+    </html>

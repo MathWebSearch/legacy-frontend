@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.20-21 Number</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X8179B13D80E935FC"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.20-21 Number</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Number</code>( <var class="Arg">listorcoll</var>[, <var class="Arg">func</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Called with a list <var class="Arg">listorcoll</var>, <code class="func">Number</code> returns the number of bound entries in this list. For dense lists <code class="func">Number</code>, <code class="func">Length</code> (<a shape="rect" href="chap21_mj.html#X780769238600AFD1"><span class="RefLink">21.17-5</span></a>), and <code class="func">Size</code> (<a shape="rect" href="chap30_mj.html#X858ADA3B7A684421"><span class="RefLink">30.4-6</span></a>) return the same value; for lists with holes <code class="func">Number</code> returns the number of bound entries, <code class="func">Length</code> (<a shape="rect" href="chap21_mj.html#X780769238600AFD1"><span class="RefLink">21.17-5</span></a>) returns the largest index of a bound entry, and <code class="func">Size</code> (<a shape="rect" href="chap30_mj.html#X858ADA3B7A684421"><span class="RefLink">30.4-6</span></a>) signals an error.</p><p xmlns="http://www.w3.org/1999/xhtml">Called with two arguments, a list or collection <var class="Arg">listorcoll</var> and a unary function <var class="Arg">func</var>, <code class="func">Number</code> returns the number of elements of <var class="Arg">listorcoll</var> for which <var class="Arg">func</var> returns <code class="keyw">true</code>. If an element for which <var class="Arg">func</var> returns <code class="keyw">true</code> appears several times in <var class="Arg">listorcoll</var> it will also be counted the same number of times.</p><p xmlns="http://www.w3.org/1999/xhtml">For each element of <var class="Arg">listorcoll</var>, <var class="Arg">func</var> must return either <code class="keyw">true</code> or <code class="keyw">false</code>, otherwise an error is signalled.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Filtered</code> (<a shape="rect" href="chap21_mj.html#X7C86D7F7795125F0"><span class="RefLink">21.20-20</span></a>) allows you to extract the elements of a list that have a certain property.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Number( [ 2, 3, 5, 7 ] );</span>
+4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Number( [, 2, 3,, 5,, 7,,,, 11 ] );</span>
+5
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Number( [1..20], IsPrime );</span>
+8
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Number( [ 1, 3, 4, -4, 4, 7, 10, 6 ], IsPrimePowerInt );</span>
+4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Number( [ 1, 3, 4, -4, 4, 7, 10, 6 ],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">           n -&gt; IsPrimePowerInt(n) and n mod 2 &lt;&gt; 0 );</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Number( Group( (1,2), (1,2,3) ), x -&gt; Order( x ) = 2 );</span>
+3
+</pre></div> </body>
+    </html>

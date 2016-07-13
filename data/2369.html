@@ -1,0 +1,26 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 46: Pc Groups-&gt;46.4-7 IsConfluent</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap46.html#X7DF4835F79667099"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">46.4-7 IsConfluent</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsConfluent</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">checks whether the pc group <var class="Arg">G</var> has been built from a collector with a confluent power-commutator presentation.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">F := FreeGroup(IsSyllableWordsFamily, 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">coll1 := SingleCollector( F, [2,3] );</span>
+&lt;&lt;single collector, 8 Bits&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetConjugate( coll1, 2, 1, F.2 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetPower( coll1, 1, F.2 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G1 := GroupByRws( coll1 );</span>
+&lt;pc group of size 6 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsConfluent(G1);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsAbelian(G1);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">coll2 := SingleCollector( F, [2,3] );</span>
+&lt;&lt;single collector, 8 Bits&gt;&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetConjugate( coll2, 2, 1, F.2^2 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G2 := GroupByRws( coll2 );</span>
+&lt;pc group of size 6 with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsAbelian(G2);</span>
+false
+</pre></div> </body>
+    </html>

@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.13-2 JordanDecomposition</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X83F55D4E79BA5D1B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.13-2 JordanDecomposition</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ JordanDecomposition</code>( <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">JordanDecomposition( <var class="Arg">mat </var> )</code> returns a list <code class="code">[S,N]</code> such that <code class="code">S</code> is a semisimple matrix and <code class="code">N</code> is nilpotent. Furthermore, <code class="code">S</code> and <code class="code">N</code> commute and <code class="code"><var class="Arg">mat</var>=S+N</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=[[1,2,3],[4,5,6],[7,8,9]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">JordanDecomposition(mat);</span>
+[ [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ], 
+  [ [ 0, 0, 0 ], [ 0, 0, 0 ], [ 0, 0, 0 ] ] ]
+</pre></div> </body>
+    </html>

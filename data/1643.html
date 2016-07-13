@@ -1,0 +1,28 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 86: Weak Pointers-&gt;86.1-1 WeakPointerObj</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap86.html#X8155EE1386F46063"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">86.1-1 WeakPointerObj</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ WeakPointerObj</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">WeakPointerObj</code> returns a weak pointer object which contains the same subobjects as the list <var class="Arg">list</var>, that is it returns a <em>shallow</em> weak copy of <var class="Arg">list</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w := WeakPointerObj( [ 1, , [2,3], fail, rec( a := 1) ] );</span>
+WeakPointerObj( [ 1, , [ 2, 3 ], fail, rec( a := 1 ) ] )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">After some computations involving garbage collections (but not necessarily in the <em>first</em> garbage collection after the above assignment), <strong class="pkg">GAP</strong> will notice that the list and the record stored in <code class="code">w</code> are not referenced by other objects than <code class="code">w</code>, and that therefore these entries may disappear.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GASMAN(&quot;collect&quot;);</span>
+
+... (perhaps more computations and garbage collections) ...
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GASMAN(&quot;collect&quot;);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w;</span>
+WeakPointerObj( [ 1, , , fail ] )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that <code class="code">w</code> has failed to keep its list and record subobjects alive during the garbage collections. Certain subobjects, such as small integers and elements of small finite fields, are not stored in the workspace, and so are not subject to garbage collection, while certain other objects, such as the Boolean values, are always reachable from global variables or the kernel and so are never garbage collected.</p><p xmlns="http://www.w3.org/1999/xhtml">Subobjects reachable without going through a weak pointer object do not evaporate, as in:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w := WeakPointerObj( [ 1, , , fail ] );</span>
+WeakPointerObj( [ 1, , , fail ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := [1,2,3];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w[1] := l;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w;</span>
+WeakPointerObj( [ [ 1, 2, 3 ], , , fail ] )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GASMAN(&quot;collect&quot;);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w;                </span>
+WeakPointerObj( [ [ 1, 2, 3 ], , , fail ] )
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note also that the global variables <code class="code">last</code>, <code class="code">last2</code> and <code class="code">last3</code> will keep things alive –this can be confusing when debugging.</p> </body>
+    </html>

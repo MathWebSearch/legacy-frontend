@@ -1,0 +1,13 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 83: Library Files-&gt;83.1 File Types</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap83.html#X7FF5DC397C79392C"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">83.1 <span class="Heading">File Types</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The <strong class="pkg">GAP</strong> library consists of the following types of files, distinguished by their suffixes:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">.g</code> </strong></dt><dd><p>Files which contain parts of the &quot;inner workings&quot; of <strong class="pkg">GAP</strong>. These files usually do not contain mathematical functionality, except for providing links to kernel functions.</p>
+
+</dd><dt><strong class="Mark"><code class="code">.gd</code> </strong></dt><dd><p>Declaration files. These files contain declarations of all categories, attributes, operations, and global functions. These files also contain the operation definitions in comments.</p>
+
+</dd><dt><strong class="Mark"><code class="code">.gi</code> </strong></dt><dd><p>Implementation files. These files contain all installations of methods and global functions. Usually declarations of representations are also considered to be part of the implementation and are therefore found in the <code class="code">.gi</code> files.</p>
+
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">As a rule of thumb, all <code class="code">.gd</code> files are read in before the <code class="code">.gi</code> files are read. Therefore a <code class="code">.gi</code> file usually may use any operation or global function (it has been declared before), and no care has to be taken towards the order in which the <code class="code">.gi</code> files are read.</p> </body>
+    </html>

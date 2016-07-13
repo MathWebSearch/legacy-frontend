@@ -1,0 +1,43 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 13: Types of Objects-&gt;13.7-2 KnownTruePropertiesOfObject</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap13.html#X86711BC77B62EB02"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">13.7-2 KnownTruePropertiesOfObject</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ KnownTruePropertiesOfObject</code>( <var class="Arg">object</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a list of the names of the properties known to be <code class="keyw">true</code> for <var class="Arg">object</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2),(1,2,3));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownPropertiesOfObject(g);</span>
+[ &quot;IsFinite&quot;, &quot;CanEasilyCompareElements&quot;, &quot;CanEasilySortElements&quot;, 
+  &quot;IsDuplicateFree&quot;, &quot;IsGeneratorsOfMagmaWithInverses&quot;, 
+  &quot;IsAssociative&quot;, &quot;IsGeneratorsOfSemigroup&quot;, &quot;IsSimpleSemigroup&quot;, 
+  &quot;IsRegularSemigroup&quot;, &quot;IsInverseSemigroup&quot;, 
+  &quot;IsCompletelyRegularSemigroup&quot;, &quot;IsCompletelySimpleSemigroup&quot;, 
+  &quot;IsGroupAsSemigroup&quot;, &quot;IsMonoidAsSemigroup&quot;, &quot;IsOrthodoxSemigroup&quot;, 
+  &quot;IsFinitelyGeneratedGroup&quot;, &quot;IsSubsetLocallyFiniteGroup&quot;, 
+  &quot;KnowsHowToDecompose&quot;, &quot;IsNilpotentByFinite&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(g);</span>
+6
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownPropertiesOfObject(g);</span>
+[ &quot;IsEmpty&quot;, &quot;IsTrivial&quot;, &quot;IsNonTrivial&quot;, &quot;IsFinite&quot;, 
+  &quot;CanEasilyCompareElements&quot;, &quot;CanEasilySortElements&quot;, 
+  &quot;IsDuplicateFree&quot;, &quot;IsGeneratorsOfMagmaWithInverses&quot;, 
+  &quot;IsAssociative&quot;, &quot;IsGeneratorsOfSemigroup&quot;, &quot;IsSimpleSemigroup&quot;, 
+  &quot;IsRegularSemigroup&quot;, &quot;IsInverseSemigroup&quot;, 
+  &quot;IsCompletelyRegularSemigroup&quot;, &quot;IsCompletelySimpleSemigroup&quot;, 
+  &quot;IsGroupAsSemigroup&quot;, &quot;IsMonoidAsSemigroup&quot;, &quot;IsOrthodoxSemigroup&quot;, 
+  &quot;IsFinitelyGeneratedGroup&quot;, &quot;IsSubsetLocallyFiniteGroup&quot;, 
+  &quot;KnowsHowToDecompose&quot;, &quot;IsPerfectGroup&quot;, &quot;IsSolvableGroup&quot;, 
+  &quot;IsPolycyclicGroup&quot;, &quot;IsNilpotentByFinite&quot;, &quot;IsTorsionFree&quot;, 
+  &quot;IsFreeAbelian&quot; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownTruePropertiesOfObject(g);</span>
+[ &quot;IsNonTrivial&quot;, &quot;IsFinite&quot;, &quot;CanEasilyCompareElements&quot;, 
+  &quot;CanEasilySortElements&quot;, &quot;IsDuplicateFree&quot;, 
+  &quot;IsGeneratorsOfMagmaWithInverses&quot;, &quot;IsAssociative&quot;, 
+  &quot;IsGeneratorsOfSemigroup&quot;, &quot;IsSimpleSemigroup&quot;, 
+  &quot;IsRegularSemigroup&quot;, &quot;IsInverseSemigroup&quot;, 
+  &quot;IsCompletelyRegularSemigroup&quot;, &quot;IsCompletelySimpleSemigroup&quot;, 
+  &quot;IsGroupAsSemigroup&quot;, &quot;IsMonoidAsSemigroup&quot;, &quot;IsOrthodoxSemigroup&quot;, 
+  &quot;IsFinitelyGeneratedGroup&quot;, &quot;IsSubsetLocallyFiniteGroup&quot;, 
+  &quot;KnowsHowToDecompose&quot;, &quot;IsSolvableGroup&quot;, &quot;IsPolycyclicGroup&quot;, 
+  &quot;IsNilpotentByFinite&quot; ]
+</pre></div> </body>
+    </html>

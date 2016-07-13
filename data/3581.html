@@ -1,0 +1,26 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 85: Function-Operation-Attribute Triples</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap85.html#X8350247A8501969F"></meta>
+      </head>
+      <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap85_mj.html#X8350247A8501969F">85 <span class="Heading">Function-Operation-Attribute Triples</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap85_mj.html#X86F03E0D7C18C6B0">85.1 <span class="Heading">Key Dependent Operations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap85_mj.html#X7CABFDAA8596757E">85.1-1 KeyDependentOperation</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap85_mj.html#X78D4D0FF780C8A85">85.2 <span class="Heading">In Parent Attributes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap85_mj.html#X7C0E62D8813A4EE6">85.2-1 InParentFOA</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap85_mj.html#X7CD4A0867BD825F7">85.3 <span class="Heading">Operation Functions</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap85_mj.html#X7CA3826A7EBDE208">85.3-1 OrbitsishOperation</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap85_mj.html#X7B23C48482ADB237">85.3-2 OrbitishFO</a></span>
+<span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap85_mj.html#X834E92F07DD0BF04">85.3-3 <span class="Heading">Example: Orbit and OrbitOp</span></a>
+</span>
+</div></div>
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">85 <span class="Heading">Function-Operation-Attribute Triples</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> is eager to maintain information that it has gathered about an object, possibly by lengthy calculations. The most important mechanism for information maintenance is the automatic storage and look-up that takes place for <em>attributes</em>; and this was already mentioned in section <a shape="rect" href="../../doc/tut/chap8_mj.html#X7C701DBF7BAE649A"><span class="RefLink">Tutorial: Attributes</span></a>. In this chapter we will describe further mechanisms that allow storage of results that are not values of attributes.</p><p xmlns="http://www.w3.org/1999/xhtml">The idea which is common to all sections is that certain operations, which are not themselves attributes, have an attribute associated with them. To automatically delegate tasks to the attribute, <strong class="pkg">GAP</strong> knows, in addition to the <em>operation</em> and the <em>attributes</em> also a <em>function</em>, which is &quot;wrapped around&quot; the other two. This &quot;wrapper function&quot; is called by the user and decides whether to call the operation or the attribute or possibly both. The whole <em>f</em>unction-<em>o</em>peration-<em>a</em>ttribute triple (or <em>FOA triple</em>) is set up by a single <strong class="pkg">GAP</strong> command which writes the wrapper function and already installs some methods, e.g., for the attribute to fall back on the operation. The idea is then that subsequent methods, which perform the actual computation, are installed only for the operation, whereas the wrapper function remains unaltered, and in general no additional methods for the attribute are required either.</p> </body>
+    </html>

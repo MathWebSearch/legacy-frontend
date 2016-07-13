@@ -1,0 +1,47 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.12-5 NestingDepthM</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X84B383B97FD986CD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.12-5 NestingDepthM</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NestingDepthM</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a <strong class="pkg">GAP</strong> object <var class="Arg">obj</var>, <code class="func">NestingDepthM</code> returns the <em>multiplicative nesting depth</em> of <var class="Arg">obj</var>. This is defined recursively as the integer <math id="1743786775612794993" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
+    </annotation-xml>
+  </semantics>
+</math> if <var class="Arg">obj</var> is not in <code class="func">IsMultiplicativeGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X7FBCA5B58308C158"><span class="RefLink">21.12-2</span></a>), as the integer <math id="-6860403170204940181" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math> if <var class="Arg">obj</var> is an empty list in <code class="func">IsMultiplicativeGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X7FBCA5B58308C158"><span class="RefLink">21.12-2</span></a>), and as <math id="1951736314240438578" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">1</cn>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
+  </semantics>
+</math> plus the multiplicative nesting depth of the first bound entry in <var class="Arg">obj</var> otherwise.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NestingDepthA( v );  NestingDepthM( v );</span>
+1
+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NestingDepthA( m );  NestingDepthM( m );</span>
+2
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NestingDepthA( liemat );  NestingDepthM( liemat );</span>
+2
+0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l1:= [ [ 1, 2 ], 3 ];;  l2:= [ 1, [ 2, 3 ] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NestingDepthA( l1 );  NestingDepthM( l1 );</span>
+2
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NestingDepthA( l2 );  NestingDepthM( l2 );</span>
+1
+1
+</pre></div> </body>
+    </html>

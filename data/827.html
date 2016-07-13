@@ -1,0 +1,27 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.10-1 Factors</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X83511D517B544F36"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.10-1 Factors</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Factors</code>( [<var class="Arg">R</var>, ]<var class="Arg">poly</var>[, <var class="Arg">opt</var>] )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a list of the irreducible factors of the polynomial <var class="Arg">poly</var> in the polynomial ring <var class="Arg">R</var>. (That is factors over the <code class="func">CoefficientsRing</code> (<a shape="rect" href="chap66_mj.html#X8235D10781BE8003"><span class="RefLink">66.15-3</span></a>) value of <var class="Arg">R</var>.)</p><p xmlns="http://www.w3.org/1999/xhtml">For univariate factorizations, it is possible to pass a record <var class="Arg">opt</var> as a third argument. This record can contain the following components:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">onlydegs</code></strong></dt><dd><p>is a set of positive integers. The factorization assumes that all irreducible factors have a degree in this set.</p>
+
+</dd><dt><strong class="Mark"><code class="code">stopdegs</code></strong></dt><dd><p>is a set of positive integers. The factorization will stop once a factor of degree in <code class="code">stopdegs</code> has been found and will return the factorization found so far.</p>
+
+</dd></dl><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= CyclotomicPolynomial( GF(2), 7 );</span>
+x_1^6+x_1^5+x_1^4+x_1^3+x_1^2+x_1+Z(2)^0
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Factors( f );</span>
+[ x_1^3+x_1+Z(2)^0, x_1^3+x_1^2+Z(2)^0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Factors( PolynomialRing( GF(8) ), f );</span>
+[ x_1+Z(2^3), x_1+Z(2^3)^2, x_1+Z(2^3)^3, x_1+Z(2^3)^4, x_1+Z(2^3)^5, 
+  x_1+Z(2^3)^6 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= MinimalPolynomial( Rationals, E(4) );</span>
+x^2+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Factors( f );</span>
+[ x^2+1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Factors( PolynomialRing( Rationals ), f );</span>
+[ x^2+1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Factors( PolynomialRing( CF(4) ), f );</span>
+[ x+(-E(4)), x+E(4) ]
+</pre></div> </body>
+    </html>

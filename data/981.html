@@ -1,0 +1,33 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 19: Floats-&gt;19.1 A sample run</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap19.html#X7B4092CA7ABB93B0"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">19.1 <span class="Heading">A sample run</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Floating-point numbers can be input into <strong class="pkg">GAP</strong> in the standard floating-point notation:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">3.14;</span>
+3.14
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">last^2/6;</span>
+1.64327
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h := 6.62606896e-34;</span>
+6.62607e-34
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pi := 4*Atan(1.0);</span>
+3.14159
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hbar := h/(2*pi);</span>
+1.05457e-34
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Floating-point numbers can also be created using <code class="code">Float</code>, from strings or rational numbers; and can be converted back using <code class="code">String,Rat,Int</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> allows rational and floating-point numbers to be mixed in the elementary operations <code class="code">+,-,*,/</code>. However, floating-point numbers and rational numbers may not be compared. Conversions are performed using the creator <code class="code">Float</code>:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Float(&quot;3.1416&quot;);</span>
+3.1416
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Float(355/113);</span>
+3.14159
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Rat(last);</span>
+355/113
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Rat(0.33333);</span>
+1/3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Int(1.e10);</span>
+10000000000
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Int(1.e20);</span>
+100000000000000000000
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Int(1.e30);</span>
+1000000000000000019884624838656
+</pre></div> </body>
+    </html>

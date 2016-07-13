@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.1-4 IsTable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X80872FAF80EB5DF9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.1-4 IsTable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsTable</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A <em>table</em> is a nonempty list of homogeneous lists which lie in the same family. Typical examples of tables are matrices (see <a shape="rect" href="chap24_mj.html#X812CCAB278643A59"><span class="RefLink">24</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsTable( [ [ 1, 2 ], [ 3, 4 ] ] );    # in fact a matrix</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsTable( [ [ 1 ], [ 2, 3 ] ] );       # not rectangular but a table</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsTable( [ [ 1, 2 ], [ () , (1,2) ] ] );  # not homogeneous</span>
+false
+</pre></div> </body>
+    </html>

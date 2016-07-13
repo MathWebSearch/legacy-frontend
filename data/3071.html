@@ -1,0 +1,107 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.1-5 PresentationViaCosetTable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X84E056C57AFEDEA8"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.1-5 PresentationViaCosetTable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PresentationViaCosetTable</code>( <var class="Arg">G</var>[, <var class="Arg">F</var>, <var class="Arg">words</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">constructs a presentation for a given concrete finite group. It applies the relations finding algorithm which has been described in <a shape="rect" href="chapBib_mj.html#biBCan73">[Can73]</a> and <a shape="rect" href="chapBib_mj.html#biBNeu82">[Neu82]</a>. It automatically applies Tietze transformations to the presentation found.</p><p xmlns="http://www.w3.org/1999/xhtml">If only a group <var class="Arg">G</var> has been specified, the single stage algorithm is applied.</p><p xmlns="http://www.w3.org/1999/xhtml">The operation <code class="func">IsomorphismFpGroup</code> (<a shape="rect" href="chap47_mj.html#X7F28268F850F454E"><span class="RefLink">47.11-1</span></a>) in contrast uses a multiple-stage algorithm using a chief series and stabilizer chains. It usually should be used rather than <code class="func">PresentationViaCosetTable</code>. (It does not apply Tietze transformations automatically.)</p><p xmlns="http://www.w3.org/1999/xhtml">If the two stage algorithm is to be used, <code class="func">PresentationViaCosetTable</code> expects a subgroup <var class="Arg">H</var> of <var class="Arg">G</var> to be provided in form of two additional arguments <var class="Arg">F</var> and <var class="Arg">words</var>, where <var class="Arg">F</var> is a free group with the same number of generators as <var class="Arg">G</var>, and <var class="Arg">words</var> is a list of words in the generators of <var class="Arg">F</var> which supply a list of generators of <var class="Arg">H</var> if they are evaluated as words in the corresponding generators of <var class="Arg">G</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := GeneralLinearGroup( 2, 7 );</span>
+GL(2,7)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfGroup( G );</span>
+[ [ [ Z(7), 0*Z(7) ], [ 0*Z(7), Z(7)^0 ] ], 
+  [ [ Z(7)^3, Z(7)^0 ], [ Z(7)^3, 0*Z(7) ] ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( G );</span>
+2016
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := PresentationViaCosetTable( G );</span>
+&lt;presentation with 2 gens and 5 rels of total length 46&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzPrintRelators( P );</span>
+#I  1. f2^3
+#I  2. f1^6
+#I  3. (f1^-1*f2^-1)^6
+#I  4. f1*f2*f1^-1*f2^-1*f1*f2^-1*f1^-1*f2*f1*f2^-1*f1^-1*f2^-1
+#I  5. f1^-3*f2*f1*f2*(f1^-1*f2^-1)^2*f1^-2*f2
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The two stage algorithm saves an essential amount of space by constructing two coset tables of lengths <math id="-5715606192134023962" display="inline" alttext="|H|" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">|</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">H</mi>
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">|</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <abs xref="p1.1.m1.1.1" id="p1.1.m1.1.4.1.1.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐻</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">|H|</annotation>
+  </semantics>
+</math> and <math id="-4864457818274576377" display="inline" alttext="|G|/|H|" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1">
+        <mo xref="p1.1.m1.1.8.1.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">|</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">G</mi>
+        <mo xref="p1.1.m1.1.8.1.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">|</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">/</mo>
+      <mrow xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2">
+        <mo xref="p1.1.m1.1.8.2.1.1.cmml" id="p1.1.m1.1.5" stretchy="false">|</mo>
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">H</mi>
+        <mo xref="p1.1.m1.1.8.2.1.1.cmml" id="p1.1.m1.1.7" stretchy="false">|</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <divide xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.1.cmml">
+          <abs xref="p1.1.m1.1.1" id="p1.1.m1.1.8.1.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐺</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.1.cmml">
+          <abs xref="p1.1.m1.1.5" id="p1.1.m1.1.8.2.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝐻</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">|G|/|H|</annotation>
+  </semantics>
+</math> instead of just one coset table of length <math id="9176488084764150292" display="inline" alttext="|G|" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">|</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">G</mi>
+      <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.3" stretchy="false">|</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.1.cmml">
+        <abs xref="p1.1.m1.1.1" id="p1.1.m1.1.4.1.1.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐺</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">|G|</annotation>
+  </semantics>
+</math>. The next example shows an application of this option in the case of a subgroup of size 7920 and index 12 in a permutation group of size 95040.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">M12 := Group( [ (1,2,3,4,5,6,7,8,9,10,11), (3,7,11,8)(4,10,5,6),</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">(1,12)(2,11)(3,6)(4,8)(5,9)(7,10) ], () );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">F := FreeGroup( &quot;a&quot;, &quot;b&quot;, &quot;c&quot; );</span>
+&lt;free group on the generators [ a, b, c ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">words := [ F.1, F.2 ];</span>
+[ a, b ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := PresentationViaCosetTable( M12, F, words );</span>
+&lt;presentation with 3 gens and 10 rels of total length 97&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := FpGroupPresentation( P );</span>
+&lt;fp group on the generators [ a, b, c ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RelatorsOfFpGroup( G );</span>
+[ c^2, b^4, (a*c)^3, (a*b^-2)^3, a^11, 
+  a^2*b*a^-2*b^-1*(b^-1*a)^2*a*b^-1, (a*(b*a^-1)^2*b^-1)^2, 
+  a^2*b*a^2*b^-2*a^-1*b*(a^-1*b^-1)^2, 
+  (a*b)^2*a^2*b^-1*a^-1*b^-1*a*c*b*c, a^2*(a^2*b)^2*a^-2*c*a*b*a^-1*c 
+ ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Before it is returned, the resulting presentation is being simplified by appropriate calls of the function <code class="func">SimplifyPresentation</code> (<a shape="rect" href="chap48_mj.html#X78C3D23387DAC35A"><span class="RefLink">48.6-2</span></a>) (see <a shape="rect" href="chap48_mj.html#X829B634286471AB7"><span class="RefLink">48.6</span></a>), but without allowing any eliminations of generators. This restriction guarantees that we get a bijection between the list of generators of <var class="Arg">G</var> and the list of generators in the presentation. Hence, if the generators of <var class="Arg">G</var> are redundant and if you don't care for the bijection, you may get a shorter presentation by calling the function <code class="func">SimplifyPresentation</code> (<a shape="rect" href="chap48_mj.html#X78C3D23387DAC35A"><span class="RefLink">48.6-2</span></a>), now without this restriction, once more yourself.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := Group(</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">[ (2,5,3), (2,7,5), (1,8,4), (1,8,6), (4,8,6), (3,5,7) ], () );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := PresentationViaCosetTable( H );</span>
+&lt;presentation with 6 gens and 12 rels of total length 42&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SimplifyPresentation( P );</span>
+#I  there are 4 generators and 10 relators of total length 36
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If you apply the function <code class="func">FpGroupPresentation</code> (<a shape="rect" href="chap48_mj.html#X7D6F40A87F24D3D6"><span class="RefLink">48.1-4</span></a>) to the resulting presentation you will get a finitely presented group isomorphic to <var class="Arg">G</var>. Note, however, that the function <code class="func">IsomorphismFpGroup</code> (<a shape="rect" href="chap47_mj.html#X7F28268F850F454E"><span class="RefLink">47.11-1</span></a>) is recommended for this purpose.</p> </body>
+    </html>

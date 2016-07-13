@@ -1,0 +1,68 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 49: Group Products-&gt;49.3-1 SubdirectProduct</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap49.html#X82112D768085AD98"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">49.3-1 SubdirectProduct</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SubdirectProduct</code>( <var class="Arg">G</var>, <var class="Arg">H</var>, <var class="Arg">Ghom</var>, <var class="Arg">Hhom</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">constructs the subdirect product of <var class="Arg">G</var> and <var class="Arg">H</var> with respect to the epimorphisms <var class="Arg">Ghom</var> from <var class="Arg">G</var> onto a group <math id="-7968153323471753320" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math> and <var class="Arg">Hhom</var> from <var class="Arg">H</var> onto the same group <math id="5012020957986416206" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">For a subdirect product <math id="2860751959668260993" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math>, calling <code class="func">Projection</code> (<a shape="rect" href="chap32_mj.html#X8769E8DA80BC96C1"><span class="RefLink">32.2-11</span></a>) with <math id="6976325295098508380" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑃</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
+  </semantics>
+</math> and <math id="-1036576390834578048" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> yields the projection on the <math id="2807117190309701079" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math>-th factor. (In general the factors do not embed into a subdirect product.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2,3),(1,2));</span>
+Group([ (1,2,3), (1,2) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=GroupHomomorphismByImagesNC(g,g,[(1,2,3),(1,2)],[(),(1,2)]);</span>
+[ (1,2,3), (1,2) ] -&gt; [ (), (1,2) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s:=SubdirectProduct(g,g,hom,hom);</span>
+Group([ (1,2,3), (1,2)(4,5), (4,5,6) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(s);</span>
+18
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">p:=Projection(s,2);</span>
+2nd projection of Group([ (1,2,3), (1,2)(4,5), (4,5,6) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Image(p,(1,3,2)(4,5,6));</span>
+(1,2,3)
+</pre></div> </body>
+    </html>

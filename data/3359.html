@@ -1,0 +1,39 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.8-5 PCentralLieAlgebra</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X785251E879E1BFC6"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.8-5 PCentralLieAlgebra</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PCentralLieAlgebra</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">G</var> is a nontrivial <math id="3066740525569278660" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-group. <code class="code">PCentralLieAlgebra( <var class="Arg">G</var> )</code> does the same as <code class="func">JenningsLieAlgebra</code> (<a shape="rect" href="chap64_mj.html#X8692ADD581359CA1"><span class="RefLink">64.8-4</span></a>) except that the <math id="-1213530292943001468" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑝</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
+  </semantics>
+</math>-central series is used instead of the Jennings series (see <code class="func">PCentralSeries</code> (<a shape="rect" href="chap39_mj.html#X7809B7ED792669F3"><span class="RefLink">39.17-13</span></a>)). This function also returns a graded Lie algebra. However, it is not necessarily restricted.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G:= SmallGroup( 3^6, 123 );</span>
+&lt;pc group of size 729 with 6 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= JenningsLieAlgebra( G );</span>
+&lt;Lie algebra of dimension 6 over GF(3)&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasPthPowerImages( Basis( L ) );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PthPowerImages( Basis( L ) );</span>
+[ v.6, 0*v.1, 0*v.1, 0*v.1, 0*v.1, 0*v.1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= Grading( L );</span>
+rec( hom_components := function( d ) ... end, max_degree := 3, 
+  min_degree := 1, source := Integers )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( [1,2,3], g.hom_components );</span>
+[ &lt;vector space over GF(3), with 3 generators&gt;, 
+  &lt;vector space over GF(3), with 2 generators&gt;, 
+  &lt;vector space over GF(3), with 1 generators&gt; ]
+</pre></div> </body>
+    </html>

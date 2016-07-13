@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.7-13 Line by Line profiling example</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X7E9C65B17B8EF993"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">7.7-13 <span class="Heading">Line by Line profiling example</span></h5><p xmlns="http://www.w3.org/1999/xhtml">There are two kinds of profiles GAP can build:</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>Coverage : This records which lines of code are executed</p>
+
+</li><li><p>Timing : This records how much time is spend executing each line of code</p>
+
+</li></ul><p xmlns="http://www.w3.org/1999/xhtml">A timing profile provides more information, but will take longer to generate and parse. A timing profile is generated using the functions <code class="func">ProfileLineByLine</code> (<a shape="rect" href="chap7_mj.html#X86557887796F66FA"><span class="RefLink">7.7-14</span></a>) and <code class="func">UnprofileLineByLine</code> (<a shape="rect" href="chap7_mj.html#X7C5DED9C7CC77504"><span class="RefLink">7.7-16</span></a>), as follows:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ProfileLineByLine(&quot;output.gz&quot;);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size(AlternatingGroup(10)); ; # Execute some GAP code you want to profile</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnprofileLineByLine();</span>
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">For code coverage, use instead the functions <code class="func">CoverageLineByLine</code> (<a shape="rect" href="chap7_mj.html#X87CC48807DB4C008"><span class="RefLink">7.7-15</span></a>) and <code class="func">UncoverageLineByLine</code> (<a shape="rect" href="chap7_mj.html#X7B705B2D8670A9C5"><span class="RefLink">7.7-17</span></a>). The profiler will only record lines which are read and executed while the profiler is running. If you want to perform code coverage or profile GAP's library, then you can use the GAP command line option '--cover filename.gz', which executes <code class="func">CoverageLineByLine</code> (<a shape="rect" href="chap7_mj.html#X87CC48807DB4C008"><span class="RefLink">7.7-15</span></a>) before GAP starts. Similarly the option '--prof filename.gz' executes <code class="func">ProfileLineByLine</code> (<a shape="rect" href="chap7_mj.html#X86557887796F66FA"><span class="RefLink">7.7-14</span></a>) before GAP starts. The profiler is designed for high performance, because of this, there are some limitations which users should be aware of:</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>By default the profiler records the wall-clock time which has passed, rather than the CPU time taken (because it is lower overhead), so any time taken writing commands will be charged to the last GAP statement which was executed. Therefore it is better to write a function which starts profiling, executes your code, and then stops profiling.</p>
+
+</li><li><p>If you end the filename with &quot;.gz&quot;, the resulting file will automatically be compressed. This is highly recommended!</p>
+
+</li><li><p>The profiler can only track GAP code which occurs in a function -- this is most obvious when looking at code coverage examples, which will appear to miss lines of code in files not in a function.</p>
+
+</li></ul><p xmlns="http://www.w3.org/1999/xhtml">Profiles are transformed into a human-readable form with 'profiling' package, for example with the 'OutputAnnotatedCodeCoverageFiles' function.</p> </body>
+    </html>

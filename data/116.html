@@ -1,0 +1,195 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 60: Abelian Number Fields-&gt;60.3-2 LenstraBase</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap60.html#X87DB9C2C858B722A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">60.3-2 LenstraBase</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LenstraBase</code>( <var class="Arg">n</var>, <var class="Arg">stabilizer</var>, <var class="Arg">super</var>, <var class="Arg">m</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">n</var> and <var class="Arg">m</var> be positive integers such that <var class="Arg">m</var> divides <var class="Arg">n</var>, <var class="Arg">stabilizer</var> be a list of prime residues modulo <var class="Arg">n</var>, which describes a subfield of the <var class="Arg">n</var>-th cyclotomic field (see <code class="func">GaloisStabilizer</code> (<a shape="rect" href="chap60_mj.html#X87E7313D8070B9CC"><span class="RefLink">60.2-5</span></a>)), and <var class="Arg">super</var> be a list representing a supergroup of the group given by <var class="Arg">stabilizer</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LenstraBase</code> returns a list <math id="-4353932271810011140" display="inline" alttext="[b_{1},b_{2},\ldots,b_{k}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13">
+      <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
+      <msub xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">b</mi>
+        <mn xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">1</mn>
+      </msub>
+      <mo id="p1.1.m1.1.4">,</mo>
+      <msub xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.3">
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">b</mi>
+        <mn xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">2</mn>
+      </msub>
+      <mo id="p1.1.m1.1.7">,</mo>
+      <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8" mathvariant="normal">…</mi>
+      <mo id="p1.1.m1.1.9">,</mo>
+      <msub xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.4">
+        <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">b</mi>
+        <mi xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">k</mi>
+      </msub>
+      <mo id="p1.1.m1.1.12" stretchy="false">]</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.13" id="p1.1.m1.1.13.1.cmml">
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.2.cmml">
+          <csymbol id="p1.1.m1.1.13.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑏</ci>
+          <cn xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" type="integer">1</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.3.cmml">
+          <csymbol id="p1.1.m1.1.13.3.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑏</ci>
+          <cn xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml" type="integer">2</cn>
+        </apply>
+        <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">…</ci>
+        <apply xref="p1.1.m1.1.13" id="p1.1.m1.1.13.4.cmml">
+          <csymbol id="p1.1.m1.1.13.4.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑏</ci>
+          <ci xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.cmml">𝑘</ci>
+        </apply>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">[b_{1},b_{2},\ldots,b_{k}]</annotation>
+  </semantics>
+</math> of lists, each <math id="-7669340676150697995" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
+  </semantics>
+</math> consisting of integers such that the elements <math id="-6246061636215172326" display="inline" alttext="\sum_{{j\in b_{i}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" symmetric="true" largeop="true">∑</mo>
+      <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+        <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">j</mi>
+        <mo xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">∈</mo>
+        <msub xref="p1.1.m1.1.2.1.5.cmml" id="p1.1.m1.1.2.1.5">
+          <mi xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">b</mi>
+          <mi xref="p1.1.m1.1.2.1.4.1.cmml" id="p1.1.m1.1.2.1.4.1">i</mi>
+        </msub>
+      </mrow>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <sum xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+        <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+          <in xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑗</ci>
+          <apply xref="p1.1.m1.1.2.1.5" id="p1.1.m1.1.2.1.5.cmml">
+            <csymbol id="p1.1.m1.1.2.1.5.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml">𝑏</ci>
+            <ci xref="p1.1.m1.1.2.1.4.1" id="p1.1.m1.1.2.1.4.1.cmml">𝑖</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\sum_{{j\in b_{i}}}</annotation>
+  </semantics>
+</math><code class="code">E(n)</code><math id="-1523052023149505714" display="inline" alttext="{}^{j}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1a"/>
+      <mi xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">j</mi>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">
+        <ci xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">𝑗</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">{}^{j}</annotation>
+  </semantics>
+</math> form a basis of the abelian number field <code class="code">NF( <var class="Arg">n</var>, <var class="Arg">stabilizer</var> )</code>, as a vector space over the <var class="Arg">m</var>-th cyclotomic field (see <code class="func">AbelianNumberField</code> (<a shape="rect" href="chap60_mj.html#X80E5AD028143E11E"><span class="RefLink">60.1-2</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">This basis is an integral basis, that is, exactly the integral elements in <code class="code">NF( <var class="Arg">n</var>, <var class="Arg">stabilizer</var> )</code> have integral coefficients. (For details about this basis, see <a shape="rect" href="chapBib_mj.html#biBBre97">[Bre97]</a>.)</p><p xmlns="http://www.w3.org/1999/xhtml">If possible then the result is chosen such that the group described by <var class="Arg">super</var> acts on it, consistently with the action of <var class="Arg">stabilizer</var>, i.e., each orbit of <var class="Arg">super</var> is a union of orbits of <var class="Arg">stabilizer</var>. (A usual case is <var class="Arg">super</var><code class="code"> = </code><var class="Arg">stabilizer</var>, so there is no additional condition.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>Note:</em> The <math id="-1343224484252728977" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">i</mi>
+    </msub>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">subscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑏</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑖</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
+  </semantics>
+</math> are in general not sets, since for <code class="code"><var class="Arg">stabilizer</var> = <var class="Arg">super</var></code>, the first entry is always an element of <code class="code">ZumbroichBase( <var class="Arg">n</var>, <var class="Arg">m</var> )</code>; this property is used by <code class="func">NF</code> (<a shape="rect" href="chap60_mj.html#X80E5AD028143E11E"><span class="RefLink">60.1-2</span></a>) and <code class="func">Coefficients</code> (<a shape="rect" href="chap61_mj.html#X80B32F667BF6AFD8"><span class="RefLink">61.6-3</span></a>) (see <a shape="rect" href="chap60_mj.html#X7D2421AC8491D2BE"><span class="RefLink">60.3</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">stabilizer</var> must not contain the stabilizer of a proper cyclotomic subfield of the <var class="Arg">n</var>-th cyclotomic field, i.e., the result must describe a basis for a field with conductor <var class="Arg">n</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LenstraBase( 24, [ 1, 19 ], [ 1, 19 ], 1 );</span>
+[ [ 1, 19 ], [ 8 ], [ 11, 17 ], [ 16 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LenstraBase( 24, [ 1, 19 ], [ 1, 5, 19, 23 ], 1 );</span>
+[ [ 1, 19 ], [ 5, 23 ], [ 8 ], [ 16 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LenstraBase( 15, [ 1, 4 ], PrimeResidues( 15 ), 1 );</span>
+[ [ 1, 4 ], [ 2, 8 ], [ 7, 13 ], [ 11, 14 ] ]
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The first two results describe two bases of the field <math id="-3773132618992125872" display="inline" alttext="?_{3}(\sqrt{{6}})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msub xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">3</mn>
+      </msub>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.6.3">
+        <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+        <msqrt xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+          <mn xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4.2">6</mn>
+        </msqrt>
+        <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml"/>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">3</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.6.3" id="p1.1.m1.1.4.cmml">
+          <root id="p1.1.m1.1.4a.cmml"/>
+          <cn xref="p1.1.m1.1.4.2" id="p1.1.m1.1.4.2.cmml" type="integer">6</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?_{3}(\sqrt{{6}})</annotation>
+  </semantics>
+</math>, the third result describes a normal basis of <math id="-6255584411822196124" display="inline" alttext="?_{3}(\sqrt{{5}})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msub xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
+        <mn xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">3</mn>
+      </msub>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.6.3">
+        <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+        <msqrt xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+          <mn xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4.2">5</mn>
+        </msqrt>
+        <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml"/>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">?</ci>
+          <cn xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml" type="integer">3</cn>
+        </apply>
+        <apply xref="p1.1.m1.1.6.3" id="p1.1.m1.1.4.cmml">
+          <root id="p1.1.m1.1.4a.cmml"/>
+          <cn xref="p1.1.m1.1.4.2" id="p1.1.m1.1.4.2.cmml" type="integer">5</cn>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">?_{3}(\sqrt{{5}})</annotation>
+  </semantics>
+</math>.</p> </body>
+    </html>

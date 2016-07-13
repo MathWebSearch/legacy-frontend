@@ -1,0 +1,41 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.6 Identical Lists</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7DD65BEA7EDB0CD7"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.6 <span class="Heading">Identical Lists</span></h4><p xmlns="http://www.w3.org/1999/xhtml">With the list assignment (see <a shape="rect" href="chap21_mj.html#X8611EF768210625B"><span class="RefLink">21.4</span></a>) it is possible to change a mutable list. This section describes the semantic consequences of this fact. (See also <a shape="rect" href="chap12_mj.html#X84545F3985C60F5B"><span class="RefLink">12.5</span></a>.)</p><p xmlns="http://www.w3.org/1999/xhtml">First we define what it means when we say that &quot;an object is changed&quot;. You may think that in the following example the second assignment changes the integer.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+i := 3;
+i := i + 1;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">But in this example it is not the <em>integer</em> <code class="code">3</code> which is changed, by adding one to it. Instead the <em>variable</em> <code class="code">i</code> is changed by assigning the value of <code class="code">i+1</code>, which happens to be <code class="code">4</code>, to <code class="code">i</code>. The same thing happens in the example below.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+l := [ 1, 2 ];
+l := [ 1, 2, 3 ];
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The second assignment does not change the first list, instead it assigns a new list to the variable <code class="code">l</code>. On the other hand, in the following example the list <em>is</em> changed by the second assignment.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+l := [ 1, 2 ];
+l[3] := 3;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">To understand the difference, think of a variable as a name for an object. The important point is that a list can have several names at the same time. An assignment <code class="code"><var class="Arg">var</var>:= <var class="Arg">list</var>;</code> means in this interpretation that <var class="Arg">var</var> is a name for the object <var class="Arg">list</var>. At the end of the following example <code class="code">l2</code> still has the value <code class="code">[ 1, 2 ]</code> as this list has not been changed and nothing else has been assigned to it.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+l1 := [ 1, 2 ];
+l2 := l1;
+l1 := [ 1, 2, 3 ];
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">But after the following example the list for which <code class="code">l2</code> is a name has been changed and thus the value of <code class="code">l2</code> is now <code class="code">[ 1, 2, 3 ]</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+l1 := [ 1, 2 ];
+l2 := l1;
+l1[3] := 3;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We say that two lists are <em>identical</em> if changing one of them by a list assignment also changes the other one. This is slightly incorrect, because if <em>two</em> lists are identical, there are actually only two names for <em>one</em> list. However, the correct usage would be very awkward and would only add to the confusion. Note that two identical lists must be equal, because there is only one list with two different names. Thus identity is an equivalence relation that is a refinement of equality. Identity of objects can be detected using <code class="func">IsIdenticalObj</code> (<a shape="rect" href="chap12_mj.html#X7961183378DFB902"><span class="RefLink">12.5-1</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Let us now consider under which circumstances two lists are identical.</p><p xmlns="http://www.w3.org/1999/xhtml">If you enter a list literal then the list denoted by this literal is a new list that is not identical to any other list. Thus in the following example <code class="code">l1</code> and <code class="code">l2</code> are not identical, though they are equal of course.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+l1 := [ 1, 2 ];
+l2 := [ 1, 2 ];
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Also in the following example, no lists in the list <code class="code">l</code> are identical.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+l := [];
+for i in [1..10] do l[i] := [ 1, 2 ]; od;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If you assign a list to a variable no new list is created. Thus the list value of the variable on the left hand side and the list on the right hand side of the assignment are identical. So in the following example <code class="code">l1</code> and <code class="code">l2</code> are identical lists.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+l1 := [ 1, 2 ];
+l2 := l1;
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If you pass a list as an argument, the old list and the argument of the function are identical. Also if you return a list from a function, the old list and the value of the function call are identical. So in the following example <code class="code">l1</code> and <code class="code">l2</code> are identical lists:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+l1 := [ 1, 2 ];
+f := function ( l ) return l; end;
+l2 := f( l1 );
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If you change a list it keeps its identity. Thus if two lists are identical and you change one of them, you also change the other, and they are still identical afterwards. On the other hand, two lists that are not identical will never become identical if you change one of them. So in the following example both <code class="code">l1</code> and <code class="code">l2</code> are changed, and are still identical.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+l1 := [ 1, 2 ];
+l2 := l1;
+l1[1] := 2;
+</pre></div> </body>
+    </html>

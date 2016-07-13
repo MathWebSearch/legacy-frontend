@@ -1,0 +1,12 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.4-5 Append</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X79E31DB27C82D6E1"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.4-5 Append</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Append</code>( <var class="Arg">list1</var>, <var class="Arg">list2</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">adds the elements of the list <var class="Arg">list2</var> to the end of the mutable list <var class="Arg">list1</var>, see <a shape="rect" href="chap21_mj.html#X8611EF768210625B"><span class="RefLink">21.4</span></a>. <var class="Arg">list2</var> may contain holes, in which case the corresponding entries in <var class="Arg">list1</var> will be left unbound. <code class="func">Append</code> returns nothing, it is only called for its side effect.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that <code class="func">Append</code> changes its first argument, while <code class="func">Concatenation</code> (<a shape="rect" href="chap21_mj.html#X840C55A77D1BB2E1"><span class="RefLink">21.20-1</span></a>) creates a new list and leaves its arguments unchanged.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := [ 2, 3, 5 ];; Append( l, [ 7, 11, 13 ] ); l;</span>
+[ 2, 3, 5, 7, 11, 13 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Append( l, [ 17,, 23 ] ); l;</span>
+[ 2, 3, 5, 7, 11, 13, 17,, 23 ]
+</pre></div> </body>
+    </html>

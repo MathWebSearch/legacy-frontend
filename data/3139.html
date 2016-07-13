@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 41: Group Actions-&gt;41.12-15 ActorOfExternalSet</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap41.html#X85E9A6A77B8D00B8"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">41.12-15 ActorOfExternalSet</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ActorOfExternalSet</code>( <var class="Arg">xset</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns an element mapping <code class="code">Representative(<var class="Arg">xset</var>)</code> to <code class="code">CanonicalRepresentativeOfExternalSet(<var class="Arg">xset</var>)</code> under the given action.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">u:=Subgroup(g,[(1,2,3)]);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">e:=RightCoset(u,(1,2)(3,4));;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CanonicalRepresentativeOfExternalSet(e);</span>
+(2,4,3)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ActorOfExternalSet(e);</span>
+(1,3,2)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FunctionAction(e)((1,2)(3,4),last);</span>
+(2,4,3)
+</pre></div> </body>
+    </html>

@@ -1,0 +1,52 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.20-5 CharacterTableWreathSymmetric</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X79B75C8582426BC5"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.20-5 CharacterTableWreathSymmetric</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CharacterTableWreathSymmetric</code>( <var class="Arg">tbl</var>, <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the character table of the wreath product of a group <math id="-1145641898571542658" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math> with the full symmetric group on <var class="Arg">n</var> points, where <var class="Arg">tbl</var> is the character table of <math id="-1789018057457204073" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐺</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
+  </semantics>
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">The result has values for <code class="func">ClassParameters</code> (<a shape="rect" href="chap71_mj.html#X8333E8038308947E"><span class="RefLink">71.9-7</span></a>) and <code class="func">CharacterParameters</code> (<a shape="rect" href="chap71_mj.html#X8333E8038308947E"><span class="RefLink">71.9-7</span></a>) stored, the entries in these lists are sequences of partitions. Note that this parametrization prevents the principal character from being the first one in the list of irreducibles.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c3:= CharacterTable( &quot;Cyclic&quot;, 3 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">wr:= CharacterTableWreathSymmetric( c3, 2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( wr );</span>
+C3wrS2
+
+     2  1   .   .   1  .   1  1   1   1
+     3  2   2   2   2  2   2  1   1   1
+
+       1a  3a  3b  3c 3d  3e 2a  6a  6b
+    2P 1a  3b  3a  3e 3d  3c 1a  3c  3e
+    3P 1a  1a  1a  1a 1a  1a 2a  2a  2a
+
+X.1     1   1   1   1  1   1 -1  -1  -1
+X.2     2   A  /A   B -1  /B  .   .   .
+X.3     2  /A   A  /B -1   B  .   .   .
+X.4     1 -/A  -A  -A  1 -/A -1  /A   A
+X.5     2  -1  -1   2 -1   2  .   .   .
+X.6     1  -A -/A -/A  1  -A -1   A  /A
+X.7     1   1   1   1  1   1  1   1   1
+X.8     1 -/A  -A  -A  1 -/A  1 -/A  -A
+X.9     1  -A -/A -/A  1  -A  1  -A -/A
+
+A = -E(3)^2
+  = (1+Sqrt(-3))/2 = 1+b3
+B = 2*E(3)
+  = -1+Sqrt(-3) = 2b3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CharacterParameters( wr )[1];</span>
+[ [ 1, 1 ], [  ], [  ] ]
+</pre></div> </body>
+    </html>

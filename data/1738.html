@@ -1,0 +1,39 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 58: Fields and Division Rings-&gt;58.3-2 MinimalPolynomial</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap58.html#X8738C6687D784BB5"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">58.3-2 MinimalPolynomial</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MinimalPolynomial</code>( <var class="Arg">F</var>, <var class="Arg">z</var>[, <var class="Arg">ind</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the minimal polynomial of <var class="Arg">z</var> over the field <var class="Arg">F</var>. This is a generator of the ideal in <math id="-5152053398957020414" display="inline" alttext="\textit{F}[x]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝐹</mtext>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mrow xref="p1.1.m1.1.5.2.1.cmml" id="p1.1.m1.1.5.2">
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.2" stretchy="false">[</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">x</mi>
+        <mo xref="p1.1.m1.1.5.2.1.1.cmml" id="p1.1.m1.1.4" stretchy="false">]</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">F</span>
+        </mtext>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.1.cmml">
+          <csymbol xref="p1.1.m1.1.2" id="p1.1.m1.1.5.2.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑥</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{F}[x]</annotation>
+  </semantics>
+</math> of all polynomials which vanish on <var class="Arg">z</var>. (This definition is consistent with the general definition of <code class="func">MinimalPolynomial</code> (<a shape="rect" href="chap66_mj.html#X8643915A8424DAF8"><span class="RefLink">66.8-1</span></a>) for rings.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MinimalPolynomial( Rationals, E(8) );</span>
+x_1^4+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MinimalPolynomial( CF(4), E(8) );</span>
+x_1^2+(-E(4))
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MinimalPolynomial( CF(8), E(8) );</span>
+x_1+(-E(8))
+</pre></div> </body>
+    </html>

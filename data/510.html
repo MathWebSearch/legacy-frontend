@@ -1,0 +1,40 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.11-5 LaTeXStringDecompositionMatrix</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X83EC921380AF9B3B"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.11-5 LaTeXStringDecompositionMatrix</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LaTeXStringDecompositionMatrix</code>( <var class="Arg">modtbl</var>[, <var class="Arg">blocknr</var>][, <var class="Arg">options</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is a string that contains LaTeX code to print a decomposition matrix (see <code class="func">DecompositionMatrix</code> (<a shape="rect" href="chap71_mj.html#X84701640811D2345"><span class="RefLink">71.11-4</span></a>)) nicely.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">options</var>, if present, must be a record with components <code class="code">phi</code>, <code class="code">chi</code> (strings used in each label for columns and rows), <code class="code">collabels</code>, <code class="code">rowlabels</code> (subscripts for the labels). The defaults for <code class="code">phi</code> and <code class="code">chi</code> are <code class="code">&quot;{\\tt Y}&quot;</code> and <code class="code">&quot;{\\tt X}&quot;</code>, the defaults for <code class="code">collabels</code> and <code class="code">rowlabels</code> are the lists of positions of the Brauer characters and ordinary characters in the respective lists of irreducibles in the character tables.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional components <code class="code">nrows</code> and <code class="code">ncols</code> denote the maximal number of rows and columns per array; if they are present then each portion of <code class="code">nrows</code> rows and <code class="code">ncols</code> columns forms an array of its own which is enclosed in <code class="code">\[</code>, <code class="code">\]</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the component <code class="code">decmat</code> is bound in <var class="Arg">options</var> then it must be the decomposition matrix in question, in this case the matrix is not computed from the information in <var class="Arg">modtbl</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">For those character tables from the <strong class="pkg">GAP</strong> table library that belong to the <strong class="pkg">Atlas</strong> of Finite Groups <a shape="rect" href="chapBib_mj.html#biBCCN85">[CCNPW85]</a>, <code class="func">AtlasLabelsOfIrreducibles</code> (<a shape="rect" href="../../pkg/ctbllib/doc/chap4.html#X7ADC9DC980CF0685"><span class="RefLink">CTblLib: AtlasLabelsOfIrreducibles</span></a>) constructs character labels that are compatible with those used in the <strong class="pkg">Atlas</strong> (see <a shape="rect" href="../../pkg/ctbllib/doc/chap4.html#X81FE89697EAAB1EA"><span class="RefLink">CTblLib: Atlas Tables</span></a> in the manual of the <strong class="pkg">GAP</strong> Character Table Library).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">modtbl:= CharacterTable( &quot;L3(2)&quot; ) mod 2;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( LaTeXStringDecompositionMatrix( modtbl, 1 ) );</span>
+\[
+\begin{array}{r|rrr} \hline
+ &amp; {\tt Y}_{1}
+ &amp; {\tt Y}_{2}
+ &amp; {\tt Y}_{3}
+ \rule[-7pt]{0pt}{20pt} \\ \hline
+{\tt X}_{1} &amp; 1 &amp; . &amp; . \rule[0pt]{0pt}{13pt} \\
+{\tt X}_{2} &amp; . &amp; 1 &amp; . \\
+{\tt X}_{3} &amp; . &amp; . &amp; 1 \\
+{\tt X}_{4} &amp; . &amp; 1 &amp; 1 \\
+{\tt X}_{5} &amp; 1 &amp; 1 &amp; 1 \rule[-7pt]{0pt}{5pt} \\
+\hline
+\end{array}
+\]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">options:= rec( phi:= &quot;\\varphi&quot;, chi:= &quot;\\chi&quot; );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( LaTeXStringDecompositionMatrix( modtbl, 1, options ) );</span>
+\[
+\begin{array}{r|rrr} \hline
+ &amp; \varphi_{1}
+ &amp; \varphi_{2}
+ &amp; \varphi_{3}
+ \rule[-7pt]{0pt}{20pt} \\ \hline
+\chi_{1} &amp; 1 &amp; . &amp; . \rule[0pt]{0pt}{13pt} \\
+\chi_{2} &amp; . &amp; 1 &amp; . \\
+\chi_{3} &amp; . &amp; . &amp; 1 \\
+\chi_{4} &amp; . &amp; 1 &amp; 1 \\
+\chi_{5} &amp; 1 &amp; 1 &amp; 1 \rule[-7pt]{0pt}{5pt} \\
+\hline
+\end{array}
+\]
+</pre></div> </body>
+    </html>

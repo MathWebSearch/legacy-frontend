@@ -1,0 +1,18 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 51: Semigroups and Monoids-&gt;51.9-8 Matrix</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap51.html#X879384D479EB1D82"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">51.9-8 Matrix</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Matrix</code>( <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">R</var> is a Rees matrix or 0-matrix semigroup, then <code class="code">Matrix</code> returns the matrix used to define multiplication in <var class="Arg">R</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">More specifically, if <var class="Arg">R</var> is a Rees matrix or 0-matrix semigroup, which is a proper subsemigroup of another such semigroup, then <code class="code">Matrix</code> returns the matrix used to define the Rees matrix (or 0-matrix) semigroup consisting of the whole family to which the elements of <var class="Arg">R</var> belong. Thus, for example, a <code class="code">1</code> by <code class="code">1</code> Rees matrix semigroup can have a <code class="code">65</code> by <code class="code">15</code> matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">Arbitrary subsemigroups of Rees matrix or 0-matrix semigroups do not have a matrix. Such a subsemigroup <var class="Arg">R</var> has a matrix if and only if it satisfies <code class="func">IsReesMatrixSemigroup</code> (<a shape="rect" href="chap51_mj.html#X780BB78A79275244"><span class="RefLink">51.9-7</span></a>) or <code class="func">IsReesZeroMatrixSemigroup</code> (<a shape="rect" href="chap51_mj.html#X780BB78A79275244"><span class="RefLink">51.9-7</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G:=AlternatingGroup(5);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:=[[(), (), ()], [(), (), ()]];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R:=ReesMatrixSemigroup(G, mat);</span>
+&lt;Rees matrix semigroup 3x2 over Alt( [ 1 .. 5 ] )&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Matrix(R); </span>
+[ [ (), (), () ], [ (), (), () ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R:=ReesMatrixSubsemigroup(R, [1,2], Group(()), [2]);</span>
+&lt;subsemigroup of 3x2 Rees matrix semigroup with 2 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Matrix(R);</span>
+[ [ (), (), () ], [ (), (), () ] ]
+</pre></div> </body>
+    </html>

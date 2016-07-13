@@ -1,0 +1,63 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 15: Number Theory-&gt;15.3-2 LogMod</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap15.html#X81AD9C7779A7BA89"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">15.3-2 LogMod</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LogMod</code>( <var class="Arg">n</var>, <var class="Arg">r</var>, <var class="Arg">m</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LogModShanks</code>( <var class="Arg">n</var>, <var class="Arg">r</var>, <var class="Arg">m</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes the discrete <var class="Arg">r</var>-logarithm of the integer <var class="Arg">n</var> modulo the integer <var class="Arg">m</var>. It returns a number <var class="Arg">l</var> such that <math id="-6920052217073861241" display="inline" alttext="\textit{r}^{\textit{l}}\equiv\textit{n}\pmod{\textit{m}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <msup xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑟</mtext>
+        <mtext xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">𝑙</mtext>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">≡</mo>
+      <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mtext xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">𝑛</mtext>
+        <mspace xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2a" width="veryverythickmathspace"/>
+        <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.10">
+          <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.4" stretchy="false" lspace="8.1pt">(</mo>
+          <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.10.2">
+            <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.7">mod</mo>
+            <mtext xref="p1.1.m1.1.5.8a.cmml" id="p1.1.m1.1.5.8">𝑚</mtext>
+          </mrow>
+          <mo xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.9" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <equivalent xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <csymbol id="p1.1.m1.1.6.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <mtext xref="p1.1.m1.1.1.1" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">r</span>
+          </mtext>
+          <mtext xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+            <span style="font-size:70%;" class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">l</span>
+          </mtext>
+        </apply>
+        <apply xref="p1.1.m1.1.6.2" id="p1.1.m1.1.6.2.cmml">
+          <csymbol id="p1.1.m1.1.6.2.1.cmml" cd="latexml">annotated</csymbol>
+          <mtext xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">n</span>
+          </mtext>
+          <apply xref="p1.1.m1.1.5.10" id="p1.1.m1.1.5.1.cmml">
+            <ci xref="p1.1.m1.1.5.4" id="p1.1.m1.1.5.1.1.cmml">pmod</ci>
+            <mtext xref="p1.1.m1.1.5.10" id="p1.1.m1.1.5.8.cmml">
+              <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">m</span>
+            </mtext>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{r}^{\textit{l}}\equiv\textit{n}\pmod{\textit{m}}</annotation>
+  </semantics>
+</math> if such a number exists. Otherwise <code class="keyw">fail</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LogModShanks</code> uses the Baby Step - Giant Step Method of Shanks (see for example <a shape="rect" href="chapBib_mj.html#biBCoh93">[Coh93, section 5.4.1]</a>) and in general requires more memory than a call to <code class="func">LogMod</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:= LogMod( 2, 5, 7 );  5^l mod 7 = 2;</span>
+4
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LogMod( 1, 3, 3 );  LogMod( 2, 3, 3 );</span>
+0
+fail
+</pre></div> </body>
+    </html>

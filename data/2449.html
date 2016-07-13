@@ -1,0 +1,19 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.3-1 Default delegations in the library</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X8082880F824292E9"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.3-1 <span class="Heading">Default delegations in the library</span></h5><p xmlns="http://www.w3.org/1999/xhtml">The library contains the following low ranked default methods:</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>A method for <code class="func">DisplayString</code> (<a shape="rect" href="chap27_mj.html#X792FB3A1849FD739"><span class="RefLink">27.7-1</span></a>) which returns the constant value of the global variable <code class="func">DEFAULTDISPLAYSTRING</code> (<a shape="rect" href="chap27_mj.html#X8482132779EA7A23"><span class="RefLink">27.7-2</span></a>).</p>
+
+</li><li><p>A method for <code class="func">ViewString</code> (<a shape="rect" href="chap27_mj.html#X7803FBCA79DB5529"><span class="RefLink">27.7-3</span></a>) which returns the constant value of the global variable <code class="func">DEFAULTVIEWSTRING</code> (<a shape="rect" href="chap27_mj.html#X7BBDF9D383595425"><span class="RefLink">27.7-4</span></a>).</p>
+
+</li><li><p>A method for <code class="func">Display</code> (<a shape="rect" href="chap6_mj.html#X83A5C59278E13248"><span class="RefLink">6.3-6</span></a>) which first calls <code class="func">DisplayString</code> (<a shape="rect" href="chap27_mj.html#X792FB3A1849FD739"><span class="RefLink">27.7-1</span></a>) and prints the result, if it is a different object than <code class="func">DEFAULTDISPLAYSTRING</code> (<a shape="rect" href="chap27_mj.html#X8482132779EA7A23"><span class="RefLink">27.7-2</span></a>). Otherwise the method delegates to <code class="func">PrintObj</code> (<a shape="rect" href="chap6_mj.html#X815BF22186FD43C9"><span class="RefLink">6.3-5</span></a>).</p>
+
+</li><li><p>A method for <code class="func">ViewObj</code> (<a shape="rect" href="chap6_mj.html#X815BF22186FD43C9"><span class="RefLink">6.3-5</span></a>) which first calls <code class="func">ViewString</code> (<a shape="rect" href="chap27_mj.html#X7803FBCA79DB5529"><span class="RefLink">27.7-3</span></a>) and prints the result, if it is a different object than <code class="func">DEFAULTVIEWSTRING</code> (<a shape="rect" href="chap27_mj.html#X7BBDF9D383595425"><span class="RefLink">27.7-4</span></a>). Otherwise the method delegates to <code class="func">PrintObj</code> (<a shape="rect" href="chap6_mj.html#X815BF22186FD43C9"><span class="RefLink">6.3-5</span></a>).</p>
+
+</li><li><p>A method for <code class="func">PrintObj</code> (<a shape="rect" href="chap6_mj.html#X815BF22186FD43C9"><span class="RefLink">6.3-5</span></a>) which prints the result of <code class="func">PrintString</code> (<a shape="rect" href="chap27_mj.html#X7B3CC87285DEC23D"><span class="RefLink">27.7-5</span></a>).</p>
+
+</li><li><p>A method for <code class="func">PrintString</code> (<a shape="rect" href="chap27_mj.html#X7B3CC87285DEC23D"><span class="RefLink">27.7-5</span></a>) which returns the result of <code class="func">String</code> (<a shape="rect" href="chap27_mj.html#X81FB5BE27903EC32"><span class="RefLink">27.7-6</span></a>)</p>
+
+</li></ul> </body>
+    </html>

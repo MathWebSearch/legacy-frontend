@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.4 Operators for transformations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X812CEC008609A8A2"></meta>
+      </head>
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">53.4 <span class="Heading">Operators for transformations</span></h4><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code"><var class="Arg">i</var> ^ <var class="Arg">f</var></code></strong></dt><dd><p>returns the image of the positive integer <var class="Arg">i</var> under the transformation <var class="Arg">f</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> ^ <var class="Arg">g</var></code></strong></dt><dd><p>returns <code class="code"><var class="Arg">g</var>^-1*<var class="Arg">f</var>*<var class="Arg">g</var></code> when <var class="Arg">f</var> is a transformation and <var class="Arg">g</var> is a permutation <code class="func">\^</code> (<a shape="rect" href="../../doc/ref/chap4_mj.html#X7B66C8707B5DE10A"><span class="RefLink">Reference: ^</span></a>). This operation requires essentially the same number of steps as multiplying a transformation by a permutation, which is approximately one third of the number required to first invert <var class="Arg">g</var>, take the produce with <var class="Arg">f</var>, and then the product with <var class="Arg">g</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> * <var class="Arg">g</var></code></strong></dt><dd><p>returns the composition of <var class="Arg">f</var> and <var class="Arg">g</var> when <var class="Arg">f</var> and <var class="Arg">g</var> are transformations or permutations. The product of a permutation and a transformation is returned as a transformation.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> / <var class="Arg">g</var></code></strong></dt><dd><p>returns <code class="code"><var class="Arg">f</var>*<var class="Arg">g</var>^-1</code> when <var class="Arg">f</var> is a transformation and <var class="Arg">g</var> is a permutation. This operation requires essentially the same number of steps as multiplying a transformation by a permutation, which is approximately half the number required to first invert <var class="Arg">g</var> and then take the produce with <var class="Arg">f</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code">LQUO(<var class="Arg">g</var>, <var class="Arg">f</var>)</code></strong></dt><dd><p>returns <code class="code"><var class="Arg">g</var>^-1*<var class="Arg">f</var></code> when <var class="Arg">f</var> is a transformation and <var class="Arg">g</var> is a permutation. This operation uses essentially the same number of steps as multiplying a transformation by a permutation, which is approximately half the number required to first invert <var class="Arg">g</var> and then take the produce with <var class="Arg">f</var>.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> &lt; <var class="Arg">g</var></code></strong></dt><dd><p>returns <code class="keyw">true</code> if the image list of <var class="Arg">f</var> is lexicographically less than the image list of <var class="Arg">g</var> and <code class="keyw">false</code> if it is not.</p>
+
+</dd><dt><strong class="Mark"><code class="code"><var class="Arg">f</var> = <var class="Arg">g</var></code></strong></dt><dd><p>returns <code class="keyw">true</code> if the transformation <var class="Arg">f</var> equals the transformation <var class="Arg">g</var> and returns <code class="keyw">false</code> if it does not.</p>
+
+</dd></dl> </body>
+    </html>

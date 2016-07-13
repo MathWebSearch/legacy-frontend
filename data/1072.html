@@ -1,0 +1,21 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 12: Objects and Elements-&gt;12.7-2 StructuralCopy</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap12.html#X7C1E70587EBDD2CB"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">12.7-2 StructuralCopy</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StructuralCopy</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">In a few situations, one wants to make a <em>structural copy</em> <code class="code">scp</code> of an object <var class="Arg">obj</var>. This is defined as follows. <code class="code">scp</code> and <var class="Arg">obj</var> are identical if <var class="Arg">obj</var> is immutable. Otherwise, <code class="code">scp</code> is a mutable copy of <var class="Arg">obj</var> such that each subobject of <code class="code">scp</code> is a structural copy of the corresponding subobject of <var class="Arg">obj</var>. Furthermore, if two subobjects of <var class="Arg">obj</var> are identical then also the corresponding subobjects of <code class="code">scp</code> are identical.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">obj:= [ [ 0, 1 ] ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">obj[2]:= obj[1];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">obj[3]:= Immutable( obj[1] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">scp:= StructuralCopy( obj );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">scp = obj; IsIdenticalObj( scp, obj );</span>
+true
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( scp[1], obj[1] );</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( scp[3], obj[3] );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIdenticalObj( scp[1], scp[2] );</span>
+true
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">That both <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) and <code class="func">StructuralCopy</code> return the argument <var class="Arg">obj</var> itself if it is not copyable is consistent with this definition, since there is no way to change <var class="Arg">obj</var> by modifying the result of any of the two functions, because in fact there is no way to change this result at all.</p> </body>
+    </html>

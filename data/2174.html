@@ -1,0 +1,20 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.11-2 PermCharsTom</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X8016499282F0BA37"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.11-2 PermCharsTom</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PermCharsTom</code>( <var class="Arg">fus</var>, <var class="Arg">tom</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PermCharsTom</code>( <var class="Arg">tbl</var>, <var class="Arg">tom</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">PermCharsTom</code> returns the list of transitive permutation characters from the table of marks <var class="Arg">tom</var>. In the first form, <var class="Arg">fus</var> must be the fusion map from the ordinary character table of the group of <var class="Arg">tom</var> to <var class="Arg">tom</var> (see <code class="func">FusionCharTableTom</code> (<a shape="rect" href="chap70_mj.html#X7A82CB487DBDDC53"><span class="RefLink">70.11-1</span></a>)). In the second form, <var class="Arg">tbl</var> must be the character table of the group of which <var class="Arg">tom</var> is the table of marks. If the fusion map is not uniquely determined (see <code class="func">FusionCharTableTom</code> (<a shape="rect" href="chap70_mj.html#X7A82CB487DBDDC53"><span class="RefLink">70.11-1</span></a>)) then <code class="keyw">fail</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">If the fusion map <var class="Arg">fus</var> is given as first argument then each transitive permutation character is represented by its values list. If the character table <var class="Arg">tbl</var> is given then the permutation characters are class function objects (see Chapter <a shape="rect" href="chap72_mj.html#X7C91D0D17850E564"><span class="RefLink">72</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PermCharsTom( a5c, a5 );</span>
+[ Character( CharacterTable( &quot;A5&quot; ), [ 60, 0, 0, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 30, 2, 0, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 20, 0, 2, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 15, 3, 0, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 12, 0, 0, 2, 2 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 10, 2, 1, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 6, 2, 0, 1, 1 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 5, 1, 2, 0, 0 ] ), 
+  Character( CharacterTable( &quot;A5&quot; ), [ 1, 1, 1, 1, 1 ] ) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PermCharsTom( fus, a5 )[1];</span>
+[ 60, 0, 0, 0, 0 ]
+</pre></div> </body>
+    </html>

@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 59: Finite Fields-&gt;59.2-1 DegreeFFE</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap59.html#X828E846E7C1EA3DD"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">59.2-1 DegreeFFE</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DegreeFFE</code>( <var class="Arg">z</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DegreeFFE</code>( <var class="Arg">vec</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DegreeFFE</code>( <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">DegreeFFE</code> returns the degree of the smallest finite field <var class="Arg">F</var> containing the element <var class="Arg">z</var>, respectively all elements of the row vector <var class="Arg">vec</var> over a finite field (see <a shape="rect" href="chap23_mj.html#X82C7E6CF7BA03391"><span class="RefLink">23</span></a>), or the matrix <var class="Arg">mat</var> over a finite field (see <a shape="rect" href="chap24_mj.html#X812CCAB278643A59"><span class="RefLink">24</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DegreeFFE( Z( 16 )^10 );</span>
+2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DegreeFFE( Z( 16 )^11 );</span>
+4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DegreeFFE( [ Z(2^13), Z(2^10) ] );</span>
+130
+</pre></div> </body>
+    </html>

@@ -1,0 +1,73 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 58: Fields and Division Rings-&gt;58.3-3 TracePolynomial</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap58.html#X80FE7E017C2D255C"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">58.3-3 TracePolynomial</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TracePolynomial</code>( <var class="Arg">L</var>, <var class="Arg">K</var>, <var class="Arg">z</var>[, <var class="Arg">inum</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the polynomial that is the product of <math id="6328917601866969101" display="inline" alttext="(X-c)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">X</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">-</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">c</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.2.cmml">
+        <minus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑋</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑐</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(X-c)</annotation>
+  </semantics>
+</math> where <math id="-6161079714681625444" display="inline" alttext="c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑐</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">c</annotation>
+  </semantics>
+</math> runs over the conjugates of <var class="Arg">z</var> in the field extension <var class="Arg">L</var> over <var class="Arg">K</var>. The polynomial is returned as a univariate polynomial over <var class="Arg">K</var> in the indeterminate number <var class="Arg">inum</var> (defaulting to 1).</p><p xmlns="http://www.w3.org/1999/xhtml">This polynomial is sometimes also called the <em>characteristic polynomial</em> of <var class="Arg">z</var> w.r.t. the field extension <math id="3131032133012072713" display="inline" alttext="\textit{L}&amp;gt;\textit{K}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mtext xref="p1.1.m1.1.1.1a.cmml" id="p1.1.m1.1.1.1">𝐿</mtext>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">&amp;</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">g</mi>
+        <mo xref="p1.1.m1.1.7.2.1.cmml" id="p1.1.m1.1.7.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">t</mi>
+      </mrow>
+      <mo id="p1.1.m1.1.5">;</mo>
+      <mtext xref="p1.1.m1.1.6.1a.cmml" id="p1.1.m1.1.6.1">𝐾</mtext>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <list xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml">
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <times xref="p1.1.m1.1.7.2.1" id="p1.1.m1.1.7.2.1.cmml"/>
+          <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.1.1.cmml">
+            <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">L</span>
+          </mtext>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">&amp;</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑔</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑡</ci>
+        </apply>
+        <mtext xref="p1.1.m1.1.7" id="p1.1.m1.1.6.1.cmml">
+          <span class="ltx_text ltx_font_italic" xmlns="http://www.w3.org/1999/xhtml">K</span>
+        </mtext>
+      </list>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{L}&amp;gt;\textit{K}</annotation>
+  </semantics>
+</math>. Therefore methods are installed for <code class="func">CharacteristicPolynomial</code> (<a shape="rect" href="chap24_mj.html#X87FA0A727CDB060B"><span class="RefLink">24.13-1</span></a>) that call <code class="func">TracePolynomial</code> in the case of field extensions.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TracePolynomial( CF(8), Rationals, E(8) );</span>
+x_1^4+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TracePolynomial( CF(16), Rationals, E(8) );</span>
+x_1^8+2*x_1^4+1
+</pre></div> </body>
+    </html>

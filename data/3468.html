@@ -1,0 +1,16 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 21: Lists-&gt;21.18-3 Sortex</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X87287FCA81E2B06A"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.18-3 Sortex</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Sortex</code>( <var class="Arg">list</var>[, <var class="Arg">func</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">sorts the list <var class="Arg">list</var> and returns a permutation that can be applied to <var class="Arg">list</var> to obtain the sorted list. The one argument form sorts via the operator <code class="code">&lt;</code>, the two argument form sorts w.r.t. the function <var class="Arg">func</var>. (If the list is not homogeneous it is the user's responsibility to ensure that <code class="code">&lt;</code> is defined for all element pairs, see <a shape="rect" href="chap31_mj.html#X7B3BC7BA7BB2646D"><span class="RefLink">31.11</span></a>)</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Permuted</code> (<a shape="rect" href="chap21_mj.html#X7B5A19098406347A"><span class="RefLink">21.20-18</span></a>) allows you to rearrange a list according to a given permutation.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list1 := [ 5, 4, 6, 1, 7, 5 ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list2 := ShallowCopy( list1 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">perm := Sortex( list1 );</span>
+(1,3,5,6,4)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">list1;</span>
+[ 1, 4, 5, 5, 6, 7 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Permuted( list2, perm );</span>
+[ 1, 4, 5, 5, 6, 7 ]
+</pre></div> </body>
+    </html>

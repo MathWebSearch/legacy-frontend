@@ -1,0 +1,45 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.5-3 DegreeOfLaurentPolynomial</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X78AF77C383245254"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.5-3 DegreeOfLaurentPolynomial</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ DegreeOfLaurentPolynomial</code>( <var class="Arg">pol</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The degree of a univariate (Laurent) polynomial <var class="Arg">pol</var> is the largest exponent <math id="838708496526343035" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑛</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
+  </semantics>
+</math> of a monomial <math id="420869404992927945" display="inline" alttext="x^{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">n</mi>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x^{n}</annotation>
+  </semantics>
+</math> of <var class="Arg">pol</var>. The degree of a zero polynomial is defined to be <code class="code">-infinity</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">p:=UnivariatePolynomial(Rationals,[1,2,3,4],1);</span>
+4*x^3+3*x^2+2*x+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnivariatePolynomialByCoefficients(FamilyObj(1),[9,2,3,4],73);</span>
+4*x_73^3+3*x_73^2+2*x_73+9
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CoefficientsOfUnivariatePolynomial(p);</span>
+[ 1, 2, 3, 4 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DegreeOfLaurentPolynomial(p);</span>
+3
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DegreeOfLaurentPolynomial(Zero(p));</span>
+-infinity
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IndeterminateNumberOfLaurentPolynomial(p);</span>
+1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IndeterminateOfLaurentPolynomial(p);</span>
+x
+</pre></div> </body>
+    </html>

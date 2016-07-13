@@ -1,0 +1,14 @@
+<html> 
+      <head>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.5-4 RootsOfPolynomial</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X7CBB760C87B04F75"></meta>
+      </head>
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.5-4 RootsOfPolynomial</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RootsOfPolynomial</code>( [<var class="Arg">R</var>, ]<var class="Arg">p</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a univariate polynomial <var class="Arg">p</var>, this function returns all roots of <var class="Arg">p</var> over the ring <var class="Arg">R</var>. If the ring is not specified, it defaults to the ring specified by the coefficients of <var class="Arg">p</var> via <code class="func">DefaultRing</code> (<a shape="rect" href="chap56_mj.html#X83AFFCC77DE6ABDA"><span class="RefLink">56.1-3</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">x:=X(Rationals,&quot;x&quot;);;p:=x^4-1;    </span>
+x^4-1
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RootsOfPolynomial(p);</span>
+[ 1, -1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RootsOfPolynomial(CF(4),p);</span>
+[ 1, -1, E(4), -E(4) ]
+</pre></div> </body>
+    </html>
