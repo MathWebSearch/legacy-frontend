@@ -463,10 +463,10 @@ MWS.gui = {
 //			"<strong class='thema-ignore'>Language: </strong>"+res.data.language+" <br />"
 		);
 
-		$(link_data).each(function(i, e){
+		/*$(link_data).each(function(i, e){
 			//console.log(e);
 			$(e).appendTo(body);
-		});
+		});*/
 
 		var qvar_names = [];
 		var qvars = all_results.qvars;
