@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.5-9 ReflectionMat</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X845EC4D18054D140"></meta>
+        <title>GAP (ref) - Chapter 24: Matrices &amp;#8614; 24.5-9 ReflectionMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24_mj.html#X845EC4D18054D140"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.5-9 ReflectionMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReflectionMat</code>( <var class="Arg">coeffs</var>[, <var class="Arg">conj</var>][, <var class="Arg">root</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">coeffs</var> be a row vector. <code class="func">ReflectionMat</code> returns the matrix of the reflection in this vector.</p><p xmlns="http://www.w3.org/1999/xhtml">More precisely, if <var class="Arg">coeffs</var> is the coefficients list of a vector <math id="6801109597450837402" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.5-9 ReflectionMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReflectionMat</code>( <var class="Arg">coeffs</var>[, <var class="Arg">conj</var>][, <var class="Arg">root</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">coeffs</var> be a row vector. <code class="func">ReflectionMat</code> returns the matrix of the reflection in this vector.</p><p xmlns="http://www.w3.org/1999/xhtml">More precisely, if <var class="Arg">coeffs</var> is the coefficients list of a vector <math id="-8078456652528360765" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">v</annotation>
   </semantics>
-</math> w.r.t. a basis <math id="-4207030949347998602" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> w.r.t. a basis <math id="6252708720032486843" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
   </semantics>
-</math> (see <code class="func">Basis</code> (<a shape="rect" href="chap61_mj.html#X837BE54C80DE368E"><span class="RefLink">61.5-2</span></a>)), say, then the returned matrix describes the reflection in <math id="-3929168634461168916" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (see <code class="func">Basis</code> (<a shape="rect" href="chap61_mj.html#X837BE54C80DE368E"><span class="RefLink">61.5-2</span></a>)), say, then the returned matrix describes the reflection in <math id="-4121311064695468878" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">v</annotation>
   </semantics>
-</math> w.r.t. <math id="6526125157264762720" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> w.r.t. <math id="9075887452260375660" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -35,7 +35,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
   </semantics>
-</math> as a map on a row space, with action from the right.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">root</var> is a root of unity that determines the order of the reflection. The default is a reflection of order 2. For triflections one should choose a third root of unity etc. (see <code class="func">E</code> (<a shape="rect" href="chap18_mj.html#X8631458886314588"><span class="RefLink">18.1-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">conj</var> is a function of one argument that conjugates a ring element. The default is <code class="func">ComplexConjugate</code> (<a shape="rect" href="chap18_mj.html#X7BE001A0811CD599"><span class="RefLink">18.5-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The matrix of the reflection in <math id="-7640626705723811637" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> as a map on a row space, with action from the right.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">root</var> is a root of unity that determines the order of the reflection. The default is a reflection of order 2. For triflections one should choose a third root of unity etc. (see <code class="func">E</code> (<a shape="rect" href="chap18_mj.html#X8631458886314588"><span class="RefLink">18.1-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">conj</var> is a function of one argument that conjugates a ring element. The default is <code class="func">ComplexConjugate</code> (<a shape="rect" href="chap18_mj.html#X7BE001A0811CD599"><span class="RefLink">18.5-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The matrix of the reflection in <math id="-3858753870895645209" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -46,7 +46,7 @@
 </math> is defined as</p><p class="center" xmlns="http://www.w3.org/1999/xhtml">\[
 M = I_n +
   \overline{{v^{tr}}} \cdot (w-1) / ( v \overline{{v^{tr}}} ) \cdot v
-\]</p><p xmlns="http://www.w3.org/1999/xhtml">where <math id="3742844398500457938" display="inline" alttext="w" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+\]</p><p xmlns="http://www.w3.org/1999/xhtml">where <math id="-5971000872684417031" display="inline" alttext="w" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">w</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -54,7 +54,7 @@ M = I_n +
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">w</annotation>
   </semantics>
-</math> equals <var class="Arg">root</var>, <math id="-3204648554424935500" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> equals <var class="Arg">root</var>, <math id="2421660888733963788" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -62,7 +62,7 @@ M = I_n +
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> is the length of the coefficient list, and <math id="3739296005612137974" display="inline" alttext="\overline{{\vphantom{x}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the length of the coefficient list, and <math id="-7887930766627099004" display="inline" alttext="\overline{{\vphantom{x}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mover xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" accent="true">
       <mi xref="p1.1.m1.1.1.2.cmml" id="p1.1.m1.1.1.2"/>
@@ -76,7 +76,7 @@ M = I_n +
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\overline{{\vphantom{x}}}</annotation>
   </semantics>
-</math> denotes the conjugation.</p><p xmlns="http://www.w3.org/1999/xhtml">So <math id="-7483999440513665622" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> denotes the conjugation.</p><p xmlns="http://www.w3.org/1999/xhtml">So <math id="-7285570995361541611" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -84,7 +84,7 @@ M = I_n +
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">v</annotation>
   </semantics>
-</math> is mapped to <math id="7130293016090349847" display="inline" alttext="wv" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is mapped to <math id="-8983630898868091282" display="inline" alttext="wv" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">w</mi>
@@ -100,7 +100,7 @@ M = I_n +
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">wv</annotation>
   </semantics>
-</math>, with default <math id="4673518719196362790" display="inline" alttext="-v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, with default <math id="3978128743579828074" display="inline" alttext="-v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">-</mo>
@@ -114,7 +114,7 @@ M = I_n +
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">-v</annotation>
   </semantics>
-</math>, and any vector <math id="5319675786977448131" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and any vector <math id="2177232420027387483" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -122,7 +122,7 @@ M = I_n +
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
   </semantics>
-</math> with the property <math id="93013446499375710" display="inline" alttext="x\overline{{v^{tr}}}=0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> with the property <math id="-7903369538113852716" display="inline" alttext="x\overline{{v^{tr}}}=0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">

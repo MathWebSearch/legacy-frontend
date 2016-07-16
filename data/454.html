@@ -1,11 +1,11 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.22-5 FamiliesOfRows</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X8117D940835B0B47"></meta>
+        <title>GAP (ref) - Chapter 71: Character Tables &amp;#8614; 71.22-5 FamiliesOfRows</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71_mj.html#X8117D940835B0B47"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.22-5 FamiliesOfRows</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FamiliesOfRows</code>( <var class="Arg">mat</var>, <var class="Arg">maps</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">distributes the rows of the matrix <var class="Arg">mat</var> into families, as follows. Two rows of <var class="Arg">mat</var> belong to the same family if there is a permutation of columns that maps one row to the other row. Each entry in the list <var class="Arg">maps</var> is regarded to form a family of length 1.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">FamiliesOfRows</code> returns a record with the components</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">famreps</code></strong></dt><dd><p>the list of representatives for each family,</p>
 
-</dd><dt><strong class="Mark"><code class="code">permutations</code></strong></dt><dd><p>the list that contains at position <math id="-2368484478854522290" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">permutations</code></strong></dt><dd><p>the list that contains at position <math id="-1164190394714696408" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -13,7 +13,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> a list of permutations that map the members of the family with representative <code class="code">famreps</code><math id="-141099053447021781" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> a list of permutations that map the members of the family with representative <code class="code">famreps</code><math id="2478532691094826949" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
       <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -30,7 +30,7 @@
   </semantics>
 </math> to that representative,</p>
 
-</dd><dt><strong class="Mark"><code class="code">families</code></strong></dt><dd><p>the list that contains at position <math id="-3622135355452313868" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">families</code></strong></dt><dd><p>the list that contains at position <math id="-2562756125439323813" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -38,7 +38,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> the list of positions of members of the family of representative <code class="code">famreps</code><math id="168963534994546619" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> the list of positions of members of the family of representative <code class="code">famreps</code><math id="-1811390336611993946" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
       <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -53,7 +53,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[i]</annotation>
   </semantics>
-</math>; (for the element <var class="Arg">maps</var><math id="-8199468882481172857" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>; (for the element <var class="Arg">maps</var><math id="6389450431208426670" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
       <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -68,7 +68,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[i]</annotation>
   </semantics>
-</math> the only member of the family will get the number <code class="code">Length( <var class="Arg">mat</var> ) + </code><math id="-3765536748614644976" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> the only member of the family will get the number <code class="code">Length( <var class="Arg">mat</var> ) + </code><math id="4408234919340648571" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

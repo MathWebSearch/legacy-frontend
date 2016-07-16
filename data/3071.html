@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.1-5 PresentationViaCosetTable</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X84E056C57AFEDEA8"></meta>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations &amp;#8614; 48.1-5 PresentationViaCosetTable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48_mj.html#X84E056C57AFEDEA8"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.1-5 PresentationViaCosetTable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PresentationViaCosetTable</code>( <var class="Arg">G</var>[, <var class="Arg">F</var>, <var class="Arg">words</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">constructs a presentation for a given concrete finite group. It applies the relations finding algorithm which has been described in <a shape="rect" href="chapBib_mj.html#biBCan73">[Can73]</a> and <a shape="rect" href="chapBib_mj.html#biBNeu82">[Neu82]</a>. It automatically applies Tietze transformations to the presentation found.</p><p xmlns="http://www.w3.org/1999/xhtml">If only a group <var class="Arg">G</var> has been specified, the single stage algorithm is applied.</p><p xmlns="http://www.w3.org/1999/xhtml">The operation <code class="func">IsomorphismFpGroup</code> (<a shape="rect" href="chap47_mj.html#X7F28268F850F454E"><span class="RefLink">47.11-1</span></a>) in contrast uses a multiple-stage algorithm using a chief series and stabilizer chains. It usually should be used rather than <code class="func">PresentationViaCosetTable</code>. (It does not apply Tietze transformations automatically.)</p><p xmlns="http://www.w3.org/1999/xhtml">If the two stage algorithm is to be used, <code class="func">PresentationViaCosetTable</code> expects a subgroup <var class="Arg">H</var> of <var class="Arg">G</var> to be provided in form of two additional arguments <var class="Arg">F</var> and <var class="Arg">words</var>, where <var class="Arg">F</var> is a free group with the same number of generators as <var class="Arg">G</var>, and <var class="Arg">words</var> is a list of words in the generators of <var class="Arg">F</var> which supply a list of generators of <var class="Arg">H</var> if they are evaluated as words in the corresponding generators of <var class="Arg">G</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := GeneralLinearGroup( 2, 7 );</span>
@@ -19,7 +19,7 @@ GL(2,7)
 #I  3. (f1^-1*f2^-1)^6
 #I  4. f1*f2*f1^-1*f2^-1*f1*f2^-1*f1^-1*f2*f1*f2^-1*f1^-1*f2^-1
 #I  5. f1^-3*f2*f1*f2*(f1^-1*f2^-1)^2*f1^-2*f2
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The two stage algorithm saves an essential amount of space by constructing two coset tables of lengths <math id="-5715606192134023962" display="inline" alttext="|H|" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The two stage algorithm saves an essential amount of space by constructing two coset tables of lengths <math id="4441046425120898401" display="inline" alttext="|H|" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
       <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">|</mo>
@@ -34,7 +34,7 @@ GL(2,7)
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">|H|</annotation>
   </semantics>
-</math> and <math id="-4864457818274576377" display="inline" alttext="|G|/|H|" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-2144506738517766311" display="inline" alttext="|G|/|H|" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <mrow xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1">
@@ -64,7 +64,7 @@ GL(2,7)
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">|G|/|H|</annotation>
   </semantics>
-</math> instead of just one coset table of length <math id="9176488084764150292" display="inline" alttext="|G|" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> instead of just one coset table of length <math id="3381865507237870718" display="inline" alttext="|G|" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
       <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">|</mo>

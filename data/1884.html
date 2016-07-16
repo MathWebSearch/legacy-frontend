@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.2-1 Combinations</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X8770F16D794C0ADB"></meta>
+        <title>GAP (ref) - Chapter 16: Combinatorics &amp;#8614; 16.2-1 Combinations</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16_mj.html#X8770F16D794C0ADB"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.2-1 Combinations</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Combinations</code>( <var class="Arg">mset</var>[, <var class="Arg">k</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the set of all combinations of the multiset <var class="Arg">mset</var> (a list of objects which may contain the same object several times) with <var class="Arg">k</var> elements; if <var class="Arg">k</var> is not given it returns all combinations of <var class="Arg">mset</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>combination</em> of <var class="Arg">mset</var> is an unordered selection without repetitions and is represented by a sorted sublist of <var class="Arg">mset</var>. If <var class="Arg">mset</var> is a proper set, there are <math id="4895066368506109826" display="inline" alttext="{{|\textit{mset}|\choose\textit{k}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.2-1 Combinations</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Combinations</code>( <var class="Arg">mset</var>[, <var class="Arg">k</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the set of all combinations of the multiset <var class="Arg">mset</var> (a list of objects which may contain the same object several times) with <var class="Arg">k</var> elements; if <var class="Arg">k</var> is not given it returns all combinations of <var class="Arg">mset</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>combination</em> of <var class="Arg">mset</var> is an unordered selection without repetitions and is represented by a sorted sublist of <var class="Arg">mset</var>. If <var class="Arg">mset</var> is a proper set, there are <math id="106495235191755504" display="inline" alttext="{{|\textit{mset}|\choose\textit{k}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.5">
       <mo xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.2">(</mo>
@@ -33,7 +33,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">{{|\textit{mset}|\choose\textit{k}}}</annotation>
   </semantics>
-</math> (see <code class="func">Binomial</code> (<a shape="rect" href="chap16_mj.html#X7A9AF5F58682819D"><span class="RefLink">16.1-2</span></a>)) combinations with <var class="Arg">k</var> elements, and the set of all combinations is just the <em>power set</em> of <var class="Arg">mset</var>, which contains all <em>subsets</em> of <var class="Arg">mset</var> and has cardinality <math id="-1190782007464102714" display="inline" alttext="2^{{|\textit{mset}|}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (see <code class="func">Binomial</code> (<a shape="rect" href="chap16_mj.html#X7A9AF5F58682819D"><span class="RefLink">16.1-2</span></a>)) combinations with <var class="Arg">k</var> elements, and the set of all combinations is just the <em>power set</em> of <var class="Arg">mset</var>, which contains all <em>subsets</em> of <var class="Arg">mset</var> and has cardinality <math id="-2059569592416181581" display="inline" alttext="2^{{|\textit{mset}|}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>

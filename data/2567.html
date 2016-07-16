@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 15: Number Theory-&gt;15.3-1 OrderMod</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap15.html#X82373F3D8277EE9E"></meta>
+        <title>GAP (ref) - Chapter 15: Number Theory &amp;#8614; 15.3-1 OrderMod</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap15_mj.html#X82373F3D8277EE9E"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">15.3-1 OrderMod</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OrderMod</code>( <var class="Arg">n</var>, <var class="Arg">m</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">OrderMod</code> returns the multiplicative order of the integer <var class="Arg">n</var> modulo the positive integer <var class="Arg">m</var>. If <var class="Arg">n</var> and <var class="Arg">m</var> are not coprime the order of <var class="Arg">n</var> is not defined and <code class="func">OrderMod</code> will return <code class="code">0</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">n</var> and <var class="Arg">m</var> are relatively prime the multiplicative order of <var class="Arg">n</var> modulo <var class="Arg">m</var> is the smallest positive integer <math id="2470808852068686627" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">15.3-1 OrderMod</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OrderMod</code>( <var class="Arg">n</var>, <var class="Arg">m</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">OrderMod</code> returns the multiplicative order of the integer <var class="Arg">n</var> modulo the positive integer <var class="Arg">m</var>. If <var class="Arg">n</var> and <var class="Arg">m</var> are not coprime the order of <var class="Arg">n</var> is not defined and <code class="func">OrderMod</code> will return <code class="code">0</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">n</var> and <var class="Arg">m</var> are relatively prime the multiplicative order of <var class="Arg">n</var> modulo <var class="Arg">m</var> is the smallest positive integer <math id="-8989463122640747884" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> such that <math id="3143430007800314987" display="inline" alttext="\textit{n}^{i}\equiv 1\pmod{\textit{m}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that <math id="2345241121002635686" display="inline" alttext="\textit{n}^{i}\equiv 1\pmod{\textit{m}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <msup xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
@@ -56,7 +56,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{n}^{i}\equiv 1\pmod{\textit{m}}</annotation>
   </semantics>
-</math>. If the group of prime residues modulo <var class="Arg">m</var> is cyclic then each element of maximal order is called a primitive root modulo <var class="Arg">m</var> (see <code class="func">IsPrimitiveRootMod</code> (<a shape="rect" href="chap15_mj.html#X790466C07BD90E20"><span class="RefLink">15.3-4</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">OrderMod</code> usually spends most of its time factoring <var class="Arg">m</var> and <math id="4344164349852638754" display="inline" alttext="\phi(\textit{m})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. If the group of prime residues modulo <var class="Arg">m</var> is cyclic then each element of maximal order is called a primitive root modulo <var class="Arg">m</var> (see <code class="func">IsPrimitiveRootMod</code> (<a shape="rect" href="chap15_mj.html#X790466C07BD90E20"><span class="RefLink">15.3-4</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">OrderMod</code> usually spends most of its time factoring <var class="Arg">m</var> and <math id="933895786100751343" display="inline" alttext="\phi(\textit{m})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ϕ</mi>

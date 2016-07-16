@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 56: Rings-&gt;56.7-8 QuotientMod</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap56.html#X8555913A83D716A4"></meta>
+        <title>GAP (ref) - Chapter 56: Rings &amp;#8614; 56.7-8 QuotientMod</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap56_mj.html#X8555913A83D716A4"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">56.7-8 QuotientMod</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ QuotientMod</code>( [<var class="Arg">R</var>, ]<var class="Arg">r</var>, <var class="Arg">s</var>, <var class="Arg">m</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">QuotientMod</code> returns the quotient of the ring elements <var class="Arg">r</var> and <var class="Arg">s</var> modulo the ring element <var class="Arg">m</var> in the ring <var class="Arg">R</var>, if given, and otherwise in their default ring, see <code class="func">DefaultRing</code> (<a shape="rect" href="chap56_mj.html#X83AFFCC77DE6ABDA"><span class="RefLink">56.1-3</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">R</var> must be a Euclidean ring (see <code class="func">IsEuclideanRing</code> (<a shape="rect" href="chap56_mj.html#X808B8E8E80D48E4A"><span class="RefLink">56.6-1</span></a>)) so that <code class="func">EuclideanRemainder</code> (<a shape="rect" href="chap56_mj.html#X7B5E9639865E91BA"><span class="RefLink">56.6-4</span></a>) can be applied. If the modular quotient does not exist (i.e. when <var class="Arg">s</var> and <var class="Arg">m</var> are not coprime), <code class="keyw">fail</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">The quotient <math id="-6516300684092489152" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">56.7-8 QuotientMod</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ QuotientMod</code>( [<var class="Arg">R</var>, ]<var class="Arg">r</var>, <var class="Arg">s</var>, <var class="Arg">m</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">QuotientMod</code> returns the quotient of the ring elements <var class="Arg">r</var> and <var class="Arg">s</var> modulo the ring element <var class="Arg">m</var> in the ring <var class="Arg">R</var>, if given, and otherwise in their default ring, see <code class="func">DefaultRing</code> (<a shape="rect" href="chap56_mj.html#X83AFFCC77DE6ABDA"><span class="RefLink">56.1-3</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">R</var> must be a Euclidean ring (see <code class="func">IsEuclideanRing</code> (<a shape="rect" href="chap56_mj.html#X808B8E8E80D48E4A"><span class="RefLink">56.6-1</span></a>)) so that <code class="func">EuclideanRemainder</code> (<a shape="rect" href="chap56_mj.html#X7B5E9639865E91BA"><span class="RefLink">56.6-4</span></a>) can be applied. If the modular quotient does not exist (i.e. when <var class="Arg">s</var> and <var class="Arg">m</var> are not coprime), <code class="keyw">fail</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">The quotient <math id="6640983432536561417" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
   </semantics>
-</math> of <var class="Arg">r</var> and <var class="Arg">s</var> modulo <var class="Arg">m</var> is an element of <var class="Arg">R</var> such that <math id="8376877475266247766" display="inline" alttext="q\textit{s}=\textit{r}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <var class="Arg">r</var> and <var class="Arg">s</var> modulo <var class="Arg">m</var> is an element of <var class="Arg">R</var> such that <math id="-5246842203854101561" display="inline" alttext="q\textit{s}=\textit{r}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -39,7 +39,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q\textit{s}=\textit{r}</annotation>
   </semantics>
-</math> modulo <math id="-8871746946496720788" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> modulo <math id="-5931296416027334834" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -47,7 +47,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
   </semantics>
-</math>, i.e., such that <math id="-4350272544032869880" display="inline" alttext="q\textit{s}-\textit{r}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, i.e., such that <math id="6934111803222286146" display="inline" alttext="q\textit{s}-\textit{r}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -75,7 +75,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q\textit{s}-\textit{r}</annotation>
   </semantics>
-</math> is divisible by <var class="Arg">m</var> in <var class="Arg">R</var> and that <math id="-5843235139897618786" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is divisible by <var class="Arg">m</var> in <var class="Arg">R</var> and that <math id="5350698709236871392" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -83,7 +83,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
   </semantics>
-</math> is either zero (if <var class="Arg">r</var> is divisible by <var class="Arg">m</var>) or the Euclidean degree of <math id="-3458862306059718915" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is either zero (if <var class="Arg">r</var> is divisible by <var class="Arg">m</var>) or the Euclidean degree of <math id="6950595233278395341" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

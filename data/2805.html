@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 39: Groups-&gt;39.17-18 IntermediateSubgroups</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X781661FB78DC83B5"></meta>
+        <title>GAP (ref) - Chapter 39: Groups &amp;#8614; 39.17-18 IntermediateSubgroups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39_mj.html#X781661FB78DC83B5"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.17-18 IntermediateSubgroups</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IntermediateSubgroups</code>( <var class="Arg">G</var>, <var class="Arg">U</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a list of all subgroups of <var class="Arg">G</var> that properly contain <var class="Arg">U</var>; that is all subgroups between <var class="Arg">G</var> and <var class="Arg">U</var>. It returns a record with a component <code class="code">subgroups</code>, which is a list of these subgroups, as well as a component <code class="code">inclusions</code>, which lists all maximality inclusions among these subgroups. A maximality inclusion is given as a list <math id="7993801700101012264" display="inline" alttext="[i,j]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.17-18 IntermediateSubgroups</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IntermediateSubgroups</code>( <var class="Arg">G</var>, <var class="Arg">U</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns a list of all subgroups of <var class="Arg">G</var> that properly contain <var class="Arg">U</var>; that is all subgroups between <var class="Arg">G</var> and <var class="Arg">U</var>. It returns a record with a component <code class="code">subgroups</code>, which is a list of these subgroups, as well as a component <code class="code">inclusions</code>, which lists all maximality inclusions among these subgroups. A maximality inclusion is given as a list <math id="6851779455402888" display="inline" alttext="[i,j]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -20,7 +20,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[i,j]</annotation>
   </semantics>
-</math> indicating that the subgroup number <math id="5126293166294178020" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> indicating that the subgroup number <math id="-4476280192857713850" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -28,7 +28,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> is a maximal subgroup of the subgroup number <math id="1133556402134052232" display="inline" alttext="j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a maximal subgroup of the subgroup number <math id="3362563781483281631" display="inline" alttext="j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">j</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -36,14 +36,14 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">j</annotation>
   </semantics>
-</math>, the numbers <math id="-4694068544964378909" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, the numbers <math id="8483635392233384159" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
       <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
     </annotation-xml>
   </semantics>
-</math> and <math id="-6116448987099004485" display="inline" alttext="1+" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="5772898429107266645" display="inline" alttext="1+" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>

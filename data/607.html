@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.10-5 Extract</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X808D71A57D104ED7"></meta>
+        <title>GAP (ref) - Chapter 72: Class Functions &amp;#8614; 72.10-5 Extract</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72_mj.html#X808D71A57D104ED7"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.10-5 Extract</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Extract</code>( <var class="Arg">tbl</var>, <var class="Arg">reducibles</var>, <var class="Arg">grammat</var>[, <var class="Arg">missing</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">tbl</var> be an ordinary character table, <var class="Arg">reducibles</var> a list of characters of <var class="Arg">tbl</var>, and <var class="Arg">grammat</var> the matrix of scalar products of <var class="Arg">reducibles</var> (see <code class="func">MatScalarProducts</code> (<a shape="rect" href="chap72_mj.html#X858DF4E67EBB99DA"><span class="RefLink">72.8-6</span></a>)). <code class="func">Extract</code> tries to find irreducible characters by drawing conclusions out of the scalar products, using combinatorial and backtrack means.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">missing</var> is the maximal number of irreducible characters that occur as constituents of <var class="Arg">reducibles</var>. Specification of <var class="Arg">missing</var> may accelerate <code class="func">Extract</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Extract</code> returns a record <var class="Arg">ext</var> with the components <code class="code">solution</code> and <code class="code">choice</code>, where the value of <code class="code">solution</code> is a list <math id="2328472234040226234" display="inline" alttext="[M_{1},\ldots,M_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.10-5 Extract</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Extract</code>( <var class="Arg">tbl</var>, <var class="Arg">reducibles</var>, <var class="Arg">grammat</var>[, <var class="Arg">missing</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">tbl</var> be an ordinary character table, <var class="Arg">reducibles</var> a list of characters of <var class="Arg">tbl</var>, and <var class="Arg">grammat</var> the matrix of scalar products of <var class="Arg">reducibles</var> (see <code class="func">MatScalarProducts</code> (<a shape="rect" href="chap72_mj.html#X858DF4E67EBB99DA"><span class="RefLink">72.8-6</span></a>)). <code class="func">Extract</code> tries to find irreducible characters by drawing conclusions out of the scalar products, using combinatorial and backtrack means.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">missing</var> is the maximal number of irreducible characters that occur as constituents of <var class="Arg">reducibles</var>. Specification of <var class="Arg">missing</var> may accelerate <code class="func">Extract</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Extract</code> returns a record <var class="Arg">ext</var> with the components <code class="code">solution</code> and <code class="code">choice</code>, where the value of <code class="code">solution</code> is a list <math id="-2768893072375933322" display="inline" alttext="[M_{1},\ldots,M_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -37,7 +37,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[M_{1},\ldots,M_{n}]</annotation>
   </semantics>
-</math> of decomposition matrices <math id="2723274742435647580" display="inline" alttext="M_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of decomposition matrices <math id="-3189373747069700904" display="inline" alttext="M_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
@@ -52,7 +52,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">M_{i}</annotation>
   </semantics>
-</math> (up to permutations of rows) with the property that <math id="-7091960240806073543" display="inline" alttext="M_{i}^{tr}\cdot X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (up to permutations of rows) with the property that <math id="-6180322912766251059" display="inline" alttext="M_{i}^{tr}\cdot X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <msubsup xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
@@ -88,7 +88,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">M_{i}^{tr}\cdot X</annotation>
   </semantics>
-</math> is equal to the sublist at the positions <var class="Arg">ext</var><code class="code">.choice[i]</code> of <var class="Arg">reducibles</var>, for a matrix <math id="-1288753012175257396" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is equal to the sublist at the positions <var class="Arg">ext</var><code class="code">.choice[i]</code> of <var class="Arg">reducibles</var>, for a matrix <math id="1987551754838815521" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">X</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -96,7 +96,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">X</annotation>
   </semantics>
-</math> of irreducible characters; the value of <code class="code">choice</code> is a list of length <math id="-7405644758328806961" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of irreducible characters; the value of <code class="code">choice</code> is a list of length <math id="-6598294123874857549" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -104,7 +104,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> whose entries are lists of indices.</p><p xmlns="http://www.w3.org/1999/xhtml">So the <math id="-999863792269967088" display="inline" alttext="j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> whose entries are lists of indices.</p><p xmlns="http://www.w3.org/1999/xhtml">So the <math id="-5847150052705032063" display="inline" alttext="j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">j</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -112,7 +112,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">j</annotation>
   </semantics>
-</math>-th column in each matrix <math id="1641368889333757277" display="inline" alttext="M_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>-th column in each matrix <math id="6343066036201653087" display="inline" alttext="M_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
@@ -127,7 +127,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">M_{i}</annotation>
   </semantics>
-</math> corresponds to <math id="-94786799737209267" display="inline" alttext="\textit{reducibles}[j]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> corresponds to <math id="1989663518109636712" display="inline" alttext="\textit{reducibles}[j]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑟𝑒𝑑𝑢𝑐𝑖𝑏𝑙𝑒𝑠</mtext>
@@ -152,7 +152,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{reducibles}[j]</annotation>
   </semantics>
-</math>, and each row in <math id="4370240399644013549" display="inline" alttext="M_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and each row in <math id="-3063952778696508854" display="inline" alttext="M_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>

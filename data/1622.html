@@ -1,7 +1,7 @@
 <html> 
       <head>
         <title>GAP (ref) - Chapter 31: Domains and their Elements</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap31.html#X7E651AC287AFDCC1"></meta>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap31_mj.html#X7E651AC287AFDCC1"></meta>
       </head>
       <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap31_mj.html#X7E651AC287AFDCC1">31 <span class="Heading">Domains and their Elements</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap31_mj.html#X859C7AB97B34F55F">31.1 <span class="Heading">Operational Structure of Domains</span></a>
@@ -112,7 +112,7 @@
 <span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap31_mj.html#X796957D0805A0221">31.15-5 IsJacobianElement</a></span>
 <span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap31_mj.html#X7844399D7847AB24">31.15-6 IsZeroSquaredElement</a></span>
 </div></div>
-</div><h3 xmlns="http://www.w3.org/1999/xhtml">31 <span class="Heading">Domains and their Elements</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><em>Domain</em> is <strong class="pkg">GAP</strong>'s name for structured sets. The ring of Gaussian integers <math id="-4209149704379081688" display="inline" alttext="?[\sqrt{{-1}}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">31 <span class="Heading">Domains and their Elements</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><em>Domain</em> is <strong class="pkg">GAP</strong>'s name for structured sets. The ring of Gaussian integers <math id="-8104654465226585954" display="inline" alttext="?[\sqrt{{-1}}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">?</mi>
@@ -146,7 +146,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?[\sqrt{{-1}}]</annotation>
   </semantics>
-</math> is an example of a domain, the group <math id="-4457828509487020980" display="inline" alttext="D_{12}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is an example of a domain, the group <math id="-4775833977725994099" display="inline" alttext="D_{12}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">D</mi>
@@ -161,7 +161,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">D_{12}</annotation>
   </semantics>
-</math> of symmetries of a regular hexahedron is another.</p><p xmlns="http://www.w3.org/1999/xhtml">The <strong class="pkg">GAP</strong> library predefines some domains. For example the ring of Gaussian integers is predefined as <code class="func">GaussianIntegers</code> (<a shape="rect" href="chap60_mj.html#X80BD5EAB879F096E"><span class="RefLink">60.5-1</span></a>) (see <a shape="rect" href="chap60_mj.html#X85E9E90D7FE877CC"><span class="RefLink">60.5</span></a>) and the field of rationals is predefined as <code class="func">Rationals</code> (<a shape="rect" href="chap17_mj.html#X7B6029D18570C08A"><span class="RefLink">17.1-1</span></a>) (see <a shape="rect" href="chap17_mj.html#X87003045878E74DF"><span class="RefLink">17</span></a>). Most domains are constructed by functions, which are called <em>domain constructors</em> (see <a shape="rect" href="chap31_mj.html#X82039A218274826F"><span class="RefLink">31.3</span></a>). For example the group <math id="-3173897875939623985" display="inline" alttext="D_{12}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of symmetries of a regular hexahedron is another.</p><p xmlns="http://www.w3.org/1999/xhtml">The <strong class="pkg">GAP</strong> library predefines some domains. For example the ring of Gaussian integers is predefined as <code class="func">GaussianIntegers</code> (<a shape="rect" href="chap60_mj.html#X80BD5EAB879F096E"><span class="RefLink">60.5-1</span></a>) (see <a shape="rect" href="chap60_mj.html#X85E9E90D7FE877CC"><span class="RefLink">60.5</span></a>) and the field of rationals is predefined as <code class="func">Rationals</code> (<a shape="rect" href="chap17_mj.html#X7B6029D18570C08A"><span class="RefLink">17.1-1</span></a>) (see <a shape="rect" href="chap17_mj.html#X87003045878E74DF"><span class="RefLink">17</span></a>). Most domains are constructed by functions, which are called <em>domain constructors</em> (see <a shape="rect" href="chap31_mj.html#X82039A218274826F"><span class="RefLink">31.3</span></a>). For example the group <math id="8830485758497660439" display="inline" alttext="D_{12}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">D</mi>
@@ -176,7 +176,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">D_{12}</annotation>
   </semantics>
-</math> is constructed by the construction <code class="code">Group( (1,2,3,4,5,6), (2,6)(3,5) )</code> (see <code class="func">Group</code> (<a shape="rect" href="chap39_mj.html#X7D8E473384DE9CD4"><span class="RefLink">39.2-1</span></a>)) and the finite field with 16 elements is constructed by <code class="code">GaloisField( 16 )</code> (see <code class="func">GaloisField</code> (<a shape="rect" href="chap59_mj.html#X8592DBB086A8A9BE"><span class="RefLink">59.3-2</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">The first place where you need domains in <strong class="pkg">GAP</strong> is the obvious one. Sometimes you simply want to deal with a domain. For example if you want to compute the size of the group <math id="-2511101436195641590" display="inline" alttext="D_{12}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is constructed by the construction <code class="code">Group( (1,2,3,4,5,6), (2,6)(3,5) )</code> (see <code class="func">Group</code> (<a shape="rect" href="chap39_mj.html#X7D8E473384DE9CD4"><span class="RefLink">39.2-1</span></a>)) and the finite field with 16 elements is constructed by <code class="code">GaloisField( 16 )</code> (see <code class="func">GaloisField</code> (<a shape="rect" href="chap59_mj.html#X8592DBB086A8A9BE"><span class="RefLink">59.3-2</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">The first place where you need domains in <strong class="pkg">GAP</strong> is the obvious one. Sometimes you simply want to deal with a domain. For example if you want to compute the size of the group <math id="-5979210100653403969" display="inline" alttext="D_{12}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">D</mi>
@@ -191,7 +191,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">D_{12}</annotation>
   </semantics>
-</math>, you had better be able to represent this group in a way that the <code class="func">Size</code> (<a shape="rect" href="chap30_mj.html#X858ADA3B7A684421"><span class="RefLink">30.4-6</span></a>) function can understand.</p><p xmlns="http://www.w3.org/1999/xhtml">The second place where you need domains in <strong class="pkg">GAP</strong> is when you want to be able to specify that an operation or computation takes place in a certain domain. For example suppose you want to factor 10 in the ring of Gaussian integers. Saying <code class="code">Factors( 10 )</code> will not do, because this will return the factorization <code class="code">[ 2, 5 ]</code> in the ring of integers. To allow operations and computations to happen in a specific domain, <code class="func">Factors</code> (<a shape="rect" href="chap56_mj.html#X82D6EDC685D12AE2"><span class="RefLink">56.5-9</span></a>), and many other functions as well, accept this domain as optional first argument. Thus <code class="code">Factors( GaussianIntegers, 10 )</code> yields the desired result <code class="code">[ 1+E(4), 1-E(4), 2+E(4), 2-E(4) ]</code>. (The imaginary unit <math id="4275941037371111860" display="inline" alttext="\sqrt{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, you had better be able to represent this group in a way that the <code class="func">Size</code> (<a shape="rect" href="chap30_mj.html#X858ADA3B7A684421"><span class="RefLink">30.4-6</span></a>) function can understand.</p><p xmlns="http://www.w3.org/1999/xhtml">The second place where you need domains in <strong class="pkg">GAP</strong> is when you want to be able to specify that an operation or computation takes place in a certain domain. For example suppose you want to factor 10 in the ring of Gaussian integers. Saying <code class="code">Factors( 10 )</code> will not do, because this will return the factorization <code class="code">[ 2, 5 ]</code> in the ring of integers. To allow operations and computations to happen in a specific domain, <code class="func">Factors</code> (<a shape="rect" href="chap56_mj.html#X82D6EDC685D12AE2"><span class="RefLink">56.5-9</span></a>), and many other functions as well, accept this domain as optional first argument. Thus <code class="code">Factors( GaussianIntegers, 10 )</code> yields the desired result <code class="code">[ 1+E(4), 1-E(4), 2+E(4), 2-E(4) ]</code>. (The imaginary unit <math id="-1941719808024314680" display="inline" alttext="\sqrt{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msqrt xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">
       <mrow xref="p1.1.m1.1.1.2.cmml" id="p1.1.m1.1.1.2">

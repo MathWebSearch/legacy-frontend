@@ -1,7 +1,7 @@
 <html> 
       <head>
         <title>GAP (ref) - Chapter 42: Permutations</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap42.html#X80F808307A2D5AB8"></meta>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap42_mj.html#X80F808307A2D5AB8"></meta>
       </head>
       <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap42_mj.html#X80F808307A2D5AB8">42 <span class="Heading">Permutations</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap42_mj.html#X80F07BE2811D4BAC">42.1 <span class="Heading">IsPerm (Filter)</span></a>
@@ -41,7 +41,7 @@
 <span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X7EF8388E7DA8E600">42.5-4 RestrictedPerm</a></span>
 <span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap42_mj.html#X8353AB8987E35DF3">42.5-5 AsPermutation</a></span>
 </div></div>
-</div><h3 xmlns="http://www.w3.org/1999/xhtml">42 <span class="Heading">Permutations</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> offers a data type <em>permutation</em> to describe the elements of permutation groups.</p><p xmlns="http://www.w3.org/1999/xhtml">The points on which permutations in <strong class="pkg">GAP</strong> act are the positive integers up to a certain architecture dependent limit, and the image of a point <math id="4397143202281678237" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">42 <span class="Heading">Permutations</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> offers a data type <em>permutation</em> to describe the elements of permutation groups.</p><p xmlns="http://www.w3.org/1999/xhtml">The points on which permutations in <strong class="pkg">GAP</strong> act are the positive integers up to a certain architecture dependent limit, and the image of a point <math id="-1198194692715057698" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -49,7 +49,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> under a permutation <math id="7088258602189223754" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> under a permutation <math id="621637869004657035" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -57,7 +57,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math> is written <math id="6534802450587029909" display="inline" alttext="i^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is written <math id="1798603005028567082" display="inline" alttext="i^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -72,7 +72,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i^{p}</annotation>
   </semantics>
-</math>, which is expressed as <math id="-6388859526886970713" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, which is expressed as <math id="7634058600329063592" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -80,7 +80,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math><code class="code">^</code><math id="-376598922901489164" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">^</code><math id="-4258706549902217992" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -88,7 +88,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math> in <strong class="pkg">GAP</strong>. (This action is also implemented by the function <code class="func">OnPoints</code> (<a shape="rect" href="chap41_mj.html#X7FE417DD837987B4"><span class="RefLink">41.2-1</span></a>).) If <math id="8432990838759694888" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in <strong class="pkg">GAP</strong>. (This action is also implemented by the function <code class="func">OnPoints</code> (<a shape="rect" href="chap41_mj.html#X7FE417DD837987B4"><span class="RefLink">41.2-1</span></a>).) If <math id="-6680331405503299785" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -96,7 +96,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math><code class="code">^</code><math id="7364350517672893877" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">^</code><math id="5690438763013292619" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -104,7 +104,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math> is different from <math id="1944472657481957971" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is different from <math id="2867611197311466569" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -112,7 +112,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math>, we say that <math id="-8038761453732768437" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, we say that <math id="3504122873830754798" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -120,7 +120,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> is <em>moved</em> by <math id="-5770514634649074682" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is <em>moved</em> by <math id="3688354782703373186" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -128,7 +128,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math>, otherwise it is <em>fixed</em>. Permutations in <strong class="pkg">GAP</strong> are entered and displayed in cycle notation, such as <code class="code">(1,2,3)(4,5)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The preimage of the point <math id="5577191253379225630" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, otherwise it is <em>fixed</em>. Permutations in <strong class="pkg">GAP</strong> are entered and displayed in cycle notation, such as <code class="code">(1,2,3)(4,5)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The preimage of the point <math id="-1241635068562568375" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -136,7 +136,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> under the permutation <math id="7488564157016438306" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> under the permutation <math id="1953620981536663740" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -144,7 +144,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math> can be computed as <math id="6566410485031107006" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> can be computed as <math id="6101471336720161288" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -152,7 +152,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math><code class="code">/</code><math id="8601161319635143793" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">/</code><math id="-5254134409862928064" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -160,7 +160,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math>, without constructing the inverse of <math id="-7837848017787528424" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, without constructing the inverse of <math id="-2930454100780726833" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

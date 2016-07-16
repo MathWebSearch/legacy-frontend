@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 21: Lists-&gt;21.19-4 AddSet</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X832C23CC7FCD8892"></meta>
+        <title>GAP (ref) - Chapter 21: Lists &amp;#8614; 21.19-4 AddSet</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21_mj.html#X832C23CC7FCD8892"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.19-4 AddSet</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AddSet</code>( <var class="Arg">set</var>, <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">adds the element <var class="Arg">obj</var> to the proper set <var class="Arg">set</var>. If <var class="Arg">obj</var> is already contained in <var class="Arg">set</var> then <var class="Arg">set</var> is not changed. Otherwise <var class="Arg">obj</var> is inserted at the correct position such that <var class="Arg">set</var> is again a proper set afterwards.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that <var class="Arg">obj</var> must be in the same family as each element of <var class="Arg">set</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s := [2,3,7,11];;</span>

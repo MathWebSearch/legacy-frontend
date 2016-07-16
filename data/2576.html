@@ -1,7 +1,7 @@
 <html> 
       <head>
         <title>GAP (ref) - Chapter 15: Number Theory</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap15.html#X7FB995737B7ED8A2"></meta>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap15_mj.html#X7FB995737B7ED8A2"></meta>
       </head>
       <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap15_mj.html#X7FB995737B7ED8A2">15 <span class="Heading">Number Theory</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap15_mj.html#X7845C1F97A1742C7">15.1 <span class="Heading">InfoNumtheor (Info Class)</span></a>
@@ -52,7 +52,7 @@
 <div class="ContSSBlock">
 <span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap15_mj.html#X85E1EFC484F648A4">15.7-1 TwoSquares</a></span>
 </div></div>
-</div><h3 xmlns="http://www.w3.org/1999/xhtml">15 <span class="Heading">Number Theory</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> provides a couple of elementary number theoretic functions. Most of these deal with the group of integers coprime to <math id="3088110667375820827" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">15 <span class="Heading">Number Theory</span></h3><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> provides a couple of elementary number theoretic functions. Most of these deal with the group of integers coprime to <math id="9155699648769405847" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -60,7 +60,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
   </semantics>
-</math>, called the <em>prime residue group</em>. The order of this group is <math id="7478609726519539472" display="inline" alttext="\phi(m)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, called the <em>prime residue group</em>. The order of this group is <math id="-8115869468097167379" display="inline" alttext="\phi(m)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ϕ</mi>
@@ -80,7 +80,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\phi(m)</annotation>
   </semantics>
-</math> (see <code class="func">Phi</code> (<a shape="rect" href="chap15_mj.html#X85A0C67982D9057A"><span class="RefLink">15.2-2</span></a>)), and <math id="-1641256303725680065" display="inline" alttext="\lambda(m)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (see <code class="func">Phi</code> (<a shape="rect" href="chap15_mj.html#X85A0C67982D9057A"><span class="RefLink">15.2-2</span></a>)), and <math id="8299435850542786448" display="inline" alttext="\lambda(m)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">λ</mi>
@@ -100,7 +100,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\lambda(m)</annotation>
   </semantics>
-</math> (see <code class="func">Lambda</code> (<a shape="rect" href="chap15_mj.html#X85296F3087611B03"><span class="RefLink">15.2-3</span></a>)) is its exponent. This group is cyclic if and only if <math id="7360351115414083341" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (see <code class="func">Lambda</code> (<a shape="rect" href="chap15_mj.html#X85296F3087611B03"><span class="RefLink">15.2-3</span></a>)) is its exponent. This group is cyclic if and only if <math id="1158825000025787422" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -108,7 +108,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
   </semantics>
-</math> is 2, 4, an odd prime power <math id="-7885916276449698186" display="inline" alttext="p^{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is 2, 4, an odd prime power <math id="1385444925048466767" display="inline" alttext="p^{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
@@ -123,7 +123,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p^{n}</annotation>
   </semantics>
-</math>, or twice an odd prime power <math id="-6240629602863049976" display="inline" alttext="2p^{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, or twice an odd prime power <math id="1916822937587502468" display="inline" alttext="2p^{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
@@ -146,7 +146,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">2p^{n}</annotation>
   </semantics>
-</math>. In this case the generators of the group, i.e., elements of order <math id="-6465252837171698713" display="inline" alttext="\phi(m)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. In this case the generators of the group, i.e., elements of order <math id="8168612120783129268" display="inline" alttext="\phi(m)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ϕ</mi>

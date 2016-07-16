@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.11-14 IsBasisOfAlgebraModuleElementSpace</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7C325A507EC9BA18"></meta>
+        <title>GAP (ref) - Chapter 62: Algebras &amp;#8614; 62.11-14 IsBasisOfAlgebraModuleElementSpace</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62_mj.html#X7C325A507EC9BA18"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.11-14 IsBasisOfAlgebraModuleElementSpace</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsBasisOfAlgebraModuleElementSpace</code>( <var class="Arg">B</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If a basis <var class="Arg">B</var> lies in the category <code class="code">IsBasisOfAlgebraModuleElementSpace</code>, then <var class="Arg">B</var> is a basis of a subspace of an algebra module. This means that <var class="Arg">B</var> has the record field <code class="code"><var class="Arg">B</var>!.delegateBasis</code> set. This last object is a basis of the corresponding subspace of the vector space underlying the algebra module (i.e., the vector space spanned by all <code class="code">ExtRepOfObj( v )</code> for <code class="code">v</code> in the algebra module).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= Rationals^[3,3];;</span>

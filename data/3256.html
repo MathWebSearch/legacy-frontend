@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 40: Group Homomorphisms-&gt;40.4 Homomorphism for very large groups</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap40.html#X7BA90DA481A1C6D6"></meta>
+        <title>GAP (ref) - Chapter 40: Group Homomorphisms &amp;#8614; 40.4 Homomorphism for very large groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap40_mj.html#X7BA90DA481A1C6D6"></meta>
       </head>
       <body> <h4 xmlns="http://www.w3.org/1999/xhtml">40.4 <span class="Heading">Homomorphism for very large groups</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Some homomorphisms (notably particular actions) transfer known information about the source group (such as a stabilizer chain) to the image group if this is substantially cheaper than to compute the information in the image group anew. In most cases this is no problem and in fact speeds up further calculations notably.</p><p xmlns="http://www.w3.org/1999/xhtml">For a huge source group, however this can be time consuming or take a large amount of extra memory for storage. In this case it can be helpful to avoid as much automatism as possible.</p><p xmlns="http://www.w3.org/1999/xhtml">The following list of tricks might be useful in such a case. (However you will lose much automatic deduction. So please restrict the use of these to cases where the standard approach does not work.)</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>Compute only images (or the <code class="func">PreImagesRepresentative</code> (<a shape="rect" href="chap32_mj.html#X7AE24A1586B7DE79"><span class="RefLink">32.5-4</span></a>)) of group elements. Do not compute the images of (sub)groups or the full preimage of a subgroup.</p>
 

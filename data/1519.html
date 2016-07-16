@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 18: Cyclotomic Numbers-&gt;18.5-6 RationalizedMat</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap18.html#X7BB9F5957AA8C082"></meta>
+        <title>GAP (ref) - Chapter 18: Cyclotomic Numbers &amp;#8614; 18.5-6 RationalizedMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap18_mj.html#X7BB9F5957AA8C082"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">18.5-6 RationalizedMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RationalizedMat</code>( <var class="Arg">mat</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the list of rationalized rows of <var class="Arg">mat</var>, which must be a matrix of cyclotomics. This is the set of sums over orbits under the action of the Galois group of the entries of <var class="Arg">mat</var> (see <code class="func">GaloisMat</code> (<a shape="rect" href="chap18_mj.html#X7DDDEC3F80543B7D"><span class="RefLink">18.5-5</span></a>)), so the operation may be viewed as a kind of trace on the rows.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that no two rows of <var class="Arg">mat</var> should be equal.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:= [ [ 1, 1, 1 ], [ 1, E(3), E(3)^2 ], [ 1, E(3)^2, E(3) ] ];;</span>

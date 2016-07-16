@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 4: The Programming Language-&gt;4.9-7 BindGlobal</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap4.html#X7D39D3E17CF49F5B"></meta>
+        <title>GAP (ref) - Chapter 4: The Programming Language &amp;#8614; 4.9-7 BindGlobal</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap4_mj.html#X7D39D3E17CF49F5B"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">4.9-7 BindGlobal</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ BindGlobal</code>( <var class="Arg">name</var>, <var class="Arg">val</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">sets the global variable named by the string <var class="Arg">name</var> to the value <var class="Arg">val</var>, provided it is writable, and makes it read-only. If <var class="Arg">name</var> already had a value, a warning message is printed.</p><p xmlns="http://www.w3.org/1999/xhtml">This is intended to be the normal way to create and set &quot;official&quot; global variables (such as operations and filters).</p><p xmlns="http://www.w3.org/1999/xhtml">Caution should be exercised in using these functions, especially <code class="func">BindGlobal</code> and <code class="func">UnbindGlobal</code> (<a shape="rect" href="chap4_mj.html#X829A5F0E811F77D3"><span class="RefLink">4.9-6</span></a>) as unexpected changes in global variables can be very confusing for the user.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">xx := 16;</span>

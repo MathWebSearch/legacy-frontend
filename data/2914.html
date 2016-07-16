@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 39: Groups-&gt;39.5-1 EpimorphismFromFreeGroup</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7FE8A3B08458A1BF"></meta>
+        <title>GAP (ref) - Chapter 39: Groups &amp;#8614; 39.5-1 EpimorphismFromFreeGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39_mj.html#X7FE8A3B08458A1BF"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.5-1 EpimorphismFromFreeGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EpimorphismFromFreeGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a group <var class="Arg">G</var> with a known generating set, this attribute returns a homomorphism from a free group that maps the free generators to the groups generators.</p><p xmlns="http://www.w3.org/1999/xhtml">The option <code class="code">names</code> can be used to prescribe a (print) name for the free generators.</p><p xmlns="http://www.w3.org/1999/xhtml">The following example shows how to decompose elements of <math id="8800874104940874793" display="inline" alttext="S_{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.5-1 EpimorphismFromFreeGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ EpimorphismFromFreeGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a group <var class="Arg">G</var> with a known generating set, this attribute returns a homomorphism from a free group that maps the free generators to the groups generators.</p><p xmlns="http://www.w3.org/1999/xhtml">The option <code class="code">names</code> can be used to prescribe a (print) name for the free generators.</p><p xmlns="http://www.w3.org/1999/xhtml">The following example shows how to decompose elements of <math id="-2358378841818992686" display="inline" alttext="S_{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
@@ -25,7 +25,7 @@ Group([ (1,2,3,4), (1,2) ])
 [ x, y ] -&gt; [ (1,2,3,4), (1,2) ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PreImagesRepresentative(hom,(1,4));</span>
 y^-1*x^-1*(x^-1*y^-1)^2*x
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The following example stems from a real request to the <strong class="pkg">GAP</strong> Forum. In September 2000 a <strong class="pkg">GAP</strong> user working with puzzles wanted to express the permutation <code class="code">(1,2)</code> as a word as short as possible in particular generators of the symmetric group <math id="-4374877948147393534" display="inline" alttext="S_{16}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The following example stems from a real request to the <strong class="pkg">GAP</strong> Forum. In September 2000 a <strong class="pkg">GAP</strong> user working with puzzles wanted to express the permutation <code class="code">(1,2)</code> as a word as short as possible in particular generators of the symmetric group <math id="7942839988057707169" display="inline" alttext="S_{16}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>

@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.3-2 Lucas</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X7830A03181D67192"></meta>
+        <title>GAP (ref) - Chapter 16: Combinatorics &amp;#8614; 16.3-2 Lucas</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16_mj.html#X7830A03181D67192"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.3-2 Lucas</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Lucas</code>( <var class="Arg">P</var>, <var class="Arg">Q</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the <var class="Arg">k</var>-th values of the <em>Lucas sequence</em> with parameters <var class="Arg">P</var> and <var class="Arg">Q</var>, which must be integers, as a list of three integers. If <var class="Arg">k</var> is a negative integer, then the values of the Lucas sequence may be nonintegral rational numbers, with denominator roughly <var class="Arg">Q</var>^<var class="Arg">k</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="2871291803145171678" display="inline" alttext="\alpha,\beta" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.3-2 Lucas</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Lucas</code>( <var class="Arg">P</var>, <var class="Arg">Q</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the <var class="Arg">k</var>-th values of the <em>Lucas sequence</em> with parameters <var class="Arg">P</var> and <var class="Arg">Q</var>, which must be integers, as a list of three integers. If <var class="Arg">k</var> is a negative integer, then the values of the Lucas sequence may be nonintegral rational numbers, with denominator roughly <var class="Arg">Q</var>^<var class="Arg">k</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="1764177323541708904" display="inline" alttext="\alpha,\beta" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">α</mi>
@@ -18,7 +18,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\alpha,\beta</annotation>
   </semantics>
-</math> be the two roots of <math id="-4269981482997073733" display="inline" alttext="x^{2}-Px+Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> be the two roots of <math id="5618369735395951588" display="inline" alttext="x^{2}-Px+Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
@@ -57,7 +57,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x^{2}-Px+Q</annotation>
   </semantics>
-</math> then we define <code class="code">Lucas( <var class="Arg">P</var>, <var class="Arg">Q</var>, <var class="Arg">k</var> )[1]</code> <math id="-2948907969200807868" display="inline" alttext="=U_{k}=(\alpha^{k}-\beta^{k})/(\alpha-\beta)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> then we define <code class="code">Lucas( <var class="Arg">P</var>, <var class="Arg">Q</var>, <var class="Arg">k</var> )[1]</code> <math id="-3400054327104212572" display="inline" alttext="=U_{k}=(\alpha^{k}-\beta^{k})/(\alpha-\beta)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">
       <mi xref="p1.1.m1.1.18.2.cmml" id="p1.1.m1.1.18.2"/>
@@ -136,7 +136,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">=U_{k}=(\alpha^{k}-\beta^{k})/(\alpha-\beta)</annotation>
   </semantics>
-</math> and <code class="code">Lucas( <var class="Arg">P</var>, <var class="Arg">Q</var>, <var class="Arg">k</var> )[2]</code> <math id="7912545165092604136" display="inline" alttext="=V_{k}=(\alpha^{k}+\beta^{k})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <code class="code">Lucas( <var class="Arg">P</var>, <var class="Arg">Q</var>, <var class="Arg">k</var> )[2]</code> <math id="-7638792423027013110" display="inline" alttext="=V_{k}=(\alpha^{k}+\beta^{k})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
       <mi xref="p1.1.m1.1.12.2.cmml" id="p1.1.m1.1.12.2"/>
@@ -195,7 +195,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">=V_{k}=(\alpha^{k}+\beta^{k})</annotation>
   </semantics>
-</math> and as a convenience <code class="code">Lucas( <var class="Arg">P</var>, <var class="Arg">Q</var>, <var class="Arg">k</var> )[3]</code> <math id="-3316769859734082020" display="inline" alttext="=Q^{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and as a convenience <code class="code">Lucas( <var class="Arg">P</var>, <var class="Arg">Q</var>, <var class="Arg">k</var> )[3]</code> <math id="31266269010496092" display="inline" alttext="=Q^{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1"/>
@@ -218,7 +218,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">=Q^{k}</annotation>
   </semantics>
-</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">The following recurrence relations are easily derived from the definition <math id="-6467490768116840007" display="inline" alttext="U_{0}=0,U_{1}=1,U_{k}=PU_{{k-1}}-QU_{{k-2}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">The following recurrence relations are easily derived from the definition <math id="-4259744540063867675" display="inline" alttext="U_{0}=0,U_{1}=1,U_{k}=PU_{{k-1}}-QU_{{k-2}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.21.1.cmml" id="p1.1.m1.1.21">
       <mrow xref="p1.1.m1.1.21.1.cmml" id="p1.1.m1.1.21.2">
@@ -341,7 +341,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">U_{0}=0,U_{1}=1,U_{k}=PU_{{k-1}}-QU_{{k-2}}</annotation>
   </semantics>
-</math> and <math id="8140576553664428280" display="inline" alttext="V_{0}=2,V_{1}=P,V_{k}=PV_{{k-1}}-QV_{{k-2}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-2676381988348405727" display="inline" alttext="V_{0}=2,V_{1}=P,V_{k}=PV_{{k-1}}-QV_{{k-2}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.21.1.cmml" id="p1.1.m1.1.21">
       <mrow xref="p1.1.m1.1.21.1.cmml" id="p1.1.m1.1.21.2">
@@ -464,7 +464,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">V_{0}=2,V_{1}=P,V_{k}=PV_{{k-1}}-QV_{{k-2}}</annotation>
   </semantics>
-</math>. Those relations are actually used to define <code class="func">Lucas</code> if <math id="-4199792316834907808" display="inline" alttext="\alpha=\beta" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Those relations are actually used to define <code class="func">Lucas</code> if <math id="-6542453848513302451" display="inline" alttext="\alpha=\beta" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">α</mi>
@@ -480,7 +480,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\alpha=\beta</annotation>
   </semantics>
-</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Also the more complex relations used in <code class="func">Lucas</code> can be easily derived <math id="6368552946016166403" display="inline" alttext="U_{2k}=U_{k}V_{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Also the more complex relations used in <code class="func">Lucas</code> can be easily derived <math id="-7697926762093999594" display="inline" alttext="U_{2k}=U_{k}V_{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <msub xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
@@ -533,7 +533,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">U_{2k}=U_{k}V_{k}</annotation>
   </semantics>
-</math>, <math id="-2259450096348380449" display="inline" alttext="U_{{2k+1}}=(PU_{2k}+V_{2k})/2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="-5924862548571942420" display="inline" alttext="U_{{2k+1}}=(PU_{2k}+V_{2k})/2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">
       <msub xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">
@@ -630,7 +630,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">U_{{2k+1}}=(PU_{2k}+V_{2k})/2</annotation>
   </semantics>
-</math> and <math id="6344463012346932571" display="inline" alttext="V_{2k}=V_{k}^{2}-2Q^{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-3609005741941587768" display="inline" alttext="V_{2k}=V_{k}^{2}-2Q^{k}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">
       <msub xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">
@@ -696,7 +696,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">V_{2k}=V_{k}^{2}-2Q^{k}</annotation>
   </semantics>
-</math>, <math id="-7983303970938927630" display="inline" alttext="V_{{2k+1}}=((P^{2}-4Q)U_{2k}+PV_{2k})/2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="8697296071483989226" display="inline" alttext="V_{{2k+1}}=((P^{2}-4Q)U_{2k}+PV_{2k})/2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.21.cmml" id="p1.1.m1.1.21">
       <msub xref="p1.1.m1.1.21.1.cmml" id="p1.1.m1.1.21.1">

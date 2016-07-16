@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 21: Lists-&gt;21.20-22 First</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X82801DFA84E11272"></meta>
+        <title>GAP (ref) - Chapter 21: Lists &amp;#8614; 21.20-22 First</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21_mj.html#X82801DFA84E11272"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.20-22 First</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ First</code>( <var class="Arg">list</var>, <var class="Arg">func</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">First</code> returns the first element of the list <var class="Arg">list</var> for which the unary function <var class="Arg">func</var> returns <code class="keyw">true</code>. <var class="Arg">list</var> may contain holes. <var class="Arg">func</var> must return either <code class="keyw">true</code> or <code class="keyw">false</code> for each element of <var class="Arg">list</var>, otherwise an error is signalled. If <var class="Arg">func</var> returns <code class="keyw">false</code> for all elements of <var class="Arg">list</var> then <code class="func">First</code> returns <code class="keyw">fail</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">PositionProperty</code> (<a shape="rect" href="chap21_mj.html#X7E6C763A82C6153B"><span class="RefLink">21.16-7</span></a>) allows you to find the position of the first element in a list that satisfies a certain property.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">First( [10^7..10^8], IsPrime );</span>

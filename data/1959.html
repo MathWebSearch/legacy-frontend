@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 43: Permutation Groups-&gt;43.5-2 SocleTypePrimitiveGroup</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43.html#X7E89A46A86A3F4A2"></meta>
+        <title>GAP (ref) - Chapter 43: Permutation Groups &amp;#8614; 43.5-2 SocleTypePrimitiveGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43_mj.html#X7E89A46A86A3F4A2"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">43.5-2 SocleTypePrimitiveGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SocleTypePrimitiveGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the socle type of the primitive permutation group <var class="Arg">G</var>. The socle of a primitive group is the direct product of isomorphic simple groups, therefore the type is indicated by a record with components <code class="code">series</code>, <code class="code">parameter</code> (both as described under <code class="func">IsomorphismTypeInfoFiniteSimpleGroup</code> (<a shape="rect" href="chap39_mj.html#X7C6AA6897C4409AC"><span class="RefLink">39.15-12</span></a>)), and <code class="code">width</code> for the number of direct factors.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">G</var> does not have a faithful primitive action, the result is undefined.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=AlternatingGroup(5);;</span>

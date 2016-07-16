@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.16 The Dixon-Schneider Algorithm</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X86CDA4007A5EF704"></meta>
+        <title>GAP (ref) - Chapter 71: Character Tables &amp;#8614; 71.16 The Dixon-Schneider Algorithm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71_mj.html#X86CDA4007A5EF704"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">71.16 <span class="Heading">The Dixon-Schneider Algorithm</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The <strong class="pkg">GAP</strong> library implementation of the Dixon-Schneider algorithm first computes the linear characters, using the commutator factor group. If irreducible characters are missing afterwards, they are computed using the techniques described in <a shape="rect" href="chapBib_mj.html#biBDix67">[Dix67]</a>, <a shape="rect" href="chapBib_mj.html#biBSch90">[Sch90]</a> and <a shape="rect" href="chapBib_mj.html#biBHulpke93">[Hul93]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Called with a group <math id="-1070050725105942597" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">71.16 <span class="Heading">The Dixon-Schneider Algorithm</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The <strong class="pkg">GAP</strong> library implementation of the Dixon-Schneider algorithm first computes the linear characters, using the commutator factor group. If irreducible characters are missing afterwards, they are computed using the techniques described in <a shape="rect" href="chapBib_mj.html#biBDix67">[Dix67]</a>, <a shape="rect" href="chapBib_mj.html#biBSch90">[Sch90]</a> and <a shape="rect" href="chapBib_mj.html#biBHulpke93">[Hul93]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Called with a group <math id="-2235476100810819810" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>, the function <code class="func">CharacterTable</code> (<a shape="rect" href="chap71_mj.html#X7FCA7A7A822BDA33"><span class="RefLink">71.3-1</span></a>) returns a character table object that stores already information such as class lengths, but not the irreducible characters. The routines that compute the irreducibles may use the information that is already contained in this table object. In particular the ordering of classes in the computed characters coincides with the ordering of classes in the character table of <var class="Arg">G</var> (see <a shape="rect" href="chap71_mj.html#X793E0EBF84B07313"><span class="RefLink">71.6</span></a>). Thus it is possible to combine computations using the group with character theoretic computations (see <a shape="rect" href="chap71_mj.html#X7C083207868066C1"><span class="RefLink">71.17</span></a> for details), for example one can enter known characters. Note that the user is responsible for the correctness of the characters. (There is little use in providing the trivial character to the routine.)</p><p xmlns="http://www.w3.org/1999/xhtml">The computation of irreducible characters from the group needs to identify the classes of group elements very often, so it can be helpful to store a class list of all group elements. Since this is obviously limited by the group order, it is controlled by the global function <code class="func">IsDxLargeGroup</code> (<a shape="rect" href="chap71_mj.html#X8089009E7EA85BC8"><span class="RefLink">71.17-8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The routines compute in a prime field of size <math id="5309133255800328692" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, the function <code class="func">CharacterTable</code> (<a shape="rect" href="chap71_mj.html#X7FCA7A7A822BDA33"><span class="RefLink">71.3-1</span></a>) returns a character table object that stores already information such as class lengths, but not the irreducible characters. The routines that compute the irreducibles may use the information that is already contained in this table object. In particular the ordering of classes in the computed characters coincides with the ordering of classes in the character table of <var class="Arg">G</var> (see <a shape="rect" href="chap71_mj.html#X793E0EBF84B07313"><span class="RefLink">71.6</span></a>). Thus it is possible to combine computations using the group with character theoretic computations (see <a shape="rect" href="chap71_mj.html#X7C083207868066C1"><span class="RefLink">71.17</span></a> for details), for example one can enter known characters. Note that the user is responsible for the correctness of the characters. (There is little use in providing the trivial character to the routine.)</p><p xmlns="http://www.w3.org/1999/xhtml">The computation of irreducible characters from the group needs to identify the classes of group elements very often, so it can be helpful to store a class list of all group elements. Since this is obviously limited by the group order, it is controlled by the global function <code class="func">IsDxLargeGroup</code> (<a shape="rect" href="chap71_mj.html#X8089009E7EA85BC8"><span class="RefLink">71.17-8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The routines compute in a prime field of size <math id="-7840741992914265775" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math>, such that the exponent of the group divides <math id="5904558648219007638" display="inline" alttext="(p-1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, such that the exponent of the group divides <math id="-5597281393178491085" display="inline" alttext="(p-1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -39,7 +39,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(p-1)</annotation>
   </semantics>
-</math> and such that <math id="5061541912563299007" display="inline" alttext="2\sqrt{{|G|}}&amp;lt;p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and such that <math id="-1036620996389007412" display="inline" alttext="2\sqrt{{|G|}}&amp;lt;p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
       <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
@@ -83,7 +83,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">2\sqrt{{|G|}}&amp;lt;p</annotation>
   </semantics>
-</math>. Currently prime fields of size smaller than <math id="-118172263186487260" display="inline" alttext="65\,536" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Currently prime fields of size smaller than <math id="5820399396094458895" display="inline" alttext="65\,536" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">65 536</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

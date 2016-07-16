@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 14: Integers-&gt;14.4-9 PartialFactorization</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X786FF92C7C54BF97"></meta>
+        <title>GAP (ref) - Chapter 14: Integers &amp;#8614; 14.4-9 PartialFactorization</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14_mj.html#X786FF92C7C54BF97"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.4-9 PartialFactorization</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PartialFactorization</code>( <var class="Arg">n</var>[, <var class="Arg">effort</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">PartialFactorization</code> returns a partial factorization of the integer <var class="Arg">n</var>. No assertions are made about the primality of the factors, except of those mentioned below.</p><p xmlns="http://www.w3.org/1999/xhtml">The argument <var class="Arg">effort</var>, if given, specifies how intensively the function should try to determine factors of <var class="Arg">n</var>. The default is <var class="Arg">effort</var> = 5.</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>If <var class="Arg">effort</var> = 0, trial division by the primes below 100 is done. Returned factors below <math id="-1649713540277064577" display="inline" alttext="10^{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.4-9 PartialFactorization</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PartialFactorization</code>( <var class="Arg">n</var>[, <var class="Arg">effort</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">PartialFactorization</code> returns a partial factorization of the integer <var class="Arg">n</var>. No assertions are made about the primality of the factors, except of those mentioned below.</p><p xmlns="http://www.w3.org/1999/xhtml">The argument <var class="Arg">effort</var>, if given, specifies how intensively the function should try to determine factors of <var class="Arg">n</var>. The default is <var class="Arg">effort</var> = 5.</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>If <var class="Arg">effort</var> = 0, trial division by the primes below 100 is done. Returned factors below <math id="1893108015173734270" display="inline" alttext="10^{4}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
@@ -20,7 +20,7 @@
   </semantics>
 </math> are guaranteed to be prime.</p>
 
-</li><li><p>If <var class="Arg">effort</var> = 1, trial division by the primes below 1000 is done. Returned factors below <math id="-5326802680666283019" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</li><li><p>If <var class="Arg">effort</var> = 1, trial division by the primes below 1000 is done. Returned factors below <math id="424933203960597134" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
@@ -37,7 +37,7 @@
   </semantics>
 </math> are guaranteed to be prime.</p>
 
-</li><li><p>If <var class="Arg">effort</var> = 2, additionally trial division by the numbers in the lists <code class="code">Primes2</code> and <code class="code">ProbablePrimes2</code> is done, and perfect powers are detected. Returned factors below <math id="-4278635439772079040" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</li><li><p>If <var class="Arg">effort</var> = 2, additionally trial division by the numbers in the lists <code class="code">Primes2</code> and <code class="code">ProbablePrimes2</code> is done, and perfect powers are detected. Returned factors below <math id="9163111100921697122" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
@@ -58,7 +58,7 @@
 
 </li><li><p>If <var class="Arg">effort</var> = 4, as above, but <code class="code">RhoTrials</code> = 2048.</p>
 
-</li><li><p>If <var class="Arg">effort</var> = 5, as above, but <code class="code">RhoTrials</code> = 8192. Returned factors below <math id="3049807508031994040" display="inline" alttext="10^{12}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</li><li><p>If <var class="Arg">effort</var> = 5, as above, but <code class="code">RhoTrials</code> = 8192. Returned factors below <math id="1678939335168818713" display="inline" alttext="10^{12}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
@@ -73,7 +73,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">10^{12}</annotation>
   </semantics>
-</math> are guaranteed to be prime, and all prime factors below <math id="3883051688343122303" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> are guaranteed to be prime, and all prime factors below <math id="-7548556206937787399" display="inline" alttext="10^{6}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>

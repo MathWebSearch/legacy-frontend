@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.11-1 TzOptions</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X8178683283214D88"></meta>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations &amp;#8614; 48.11-1 TzOptions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48_mj.html#X8178683283214D88"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.11-1 TzOptions</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TzOptions</code>( <var class="Arg">P</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is a record whose components direct the heuristics applied by the Tietze transformation functions.</p><p xmlns="http://www.w3.org/1999/xhtml">You may alter the value of any of these Tietze options by just assigning a new value to the respective record component.</p><p xmlns="http://www.w3.org/1999/xhtml">The following Tietze options are recognized by <strong class="pkg">GAP</strong>:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">protected</code>:</strong></dt><dd><p>The first <code class="code">protected</code> generators in a presentation <var class="Arg">P</var> are protected from being eliminated by the Tietze transformations functions. There are only two exceptions: The option <code class="code">protected</code> is ignored by the functions <code class="func">TzEliminate</code> (<a shape="rect" href="chap48_mj.html#X85989AF886EC2BF6"><span class="RefLink">48.7-1</span></a>) and <code class="func">TzSubstitute</code> (<a shape="rect" href="chap48_mj.html#X846DB23E8236FF8A"><span class="RefLink">48.8-1</span></a>) because they explicitly specify the generator to be eliminated. The default value of <code class="code">protected</code> is 0.</p>
 
@@ -9,7 +9,7 @@
 
 </dd><dt><strong class="Mark"><code class="code">expandLimit</code>:</strong></dt><dd><p>Whenever the routine for eliminating more than 1 generators is called for a presentation <var class="Arg">P</var> by the <code class="func">TzEliminate</code> (<a shape="rect" href="chap48_mj.html#X85989AF886EC2BF6"><span class="RefLink">48.7-1</span></a>) command or the elimination phase of the <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) command, then it saves the given total length of the relators, and subsequently it checks the current total length against its value before each elimination. If the total length has increased to more than <code class="code">expandLimit</code> per cent of its original value, then the routine returns instead of eliminating another generator. Hence you may use the <code class="code">expandLimit</code> parameter as a break criterion for the <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) command. The default value of <code class="code">expandLimit</code> is 150.</p>
 
-</dd><dt><strong class="Mark"><code class="code">generatorsLimit</code>:</strong></dt><dd><p>Whenever the elimination phase of the <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) command is entered for a presentation <var class="Arg">P</var> with <math id="1486727918670713337" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">generatorsLimit</code>:</strong></dt><dd><p>Whenever the elimination phase of the <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) command is entered for a presentation <var class="Arg">P</var> with <math id="7204193018215866573" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -17,7 +17,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> generators, then it will eliminate at most <math id="7182746185073917094" display="inline" alttext="n-" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> generators, then it will eliminate at most <math id="8508878923498896051" display="inline" alttext="n-" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
@@ -34,7 +34,7 @@
   </semantics>
 </math><code class="code">generatorsLimit</code> generators (except for generators which turn out to be trivial). Hence you may use the <code class="code">generatorsLimit</code> parameter as a break criterion for the <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) command. The default value of <code class="code">generatorsLimit</code> is 0.</p>
 
-</dd><dt><strong class="Mark"><code class="code">lengthLimit</code>:</strong></dt><dd><p>The Tietze transformation commands will never eliminate a generator of a presentation <var class="Arg">P</var>, if they cannot exclude the possibility that the resulting total length of the relators exceeds the maximal <strong class="pkg">GAP</strong> list length of <math id="2377280308043382850" display="inline" alttext="2^{31}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">lengthLimit</code>:</strong></dt><dd><p>The Tietze transformation commands will never eliminate a generator of a presentation <var class="Arg">P</var>, if they cannot exclude the possibility that the resulting total length of the relators exceeds the maximal <strong class="pkg">GAP</strong> list length of <math id="-2345706077814773684" display="inline" alttext="2^{31}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -57,7 +57,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">2^{31}-1</annotation>
   </semantics>
-</math> or the value of the option <code class="code">lengthLimit</code>. The default value of <code class="code">lengthLimit</code> is <math id="1865176574795314748" display="inline" alttext="2^{31}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> or the value of the option <code class="code">lengthLimit</code>. The default value of <code class="code">lengthLimit</code> is <math id="-3155483048634309607" display="inline" alttext="2^{31}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -84,7 +84,7 @@
 
 </dd><dt><strong class="Mark"><code class="code">loopLimit</code>:</strong></dt><dd><p>Whenever the <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) command is called for a presentation <var class="Arg">P</var>, then it will loop over at most <code class="code">loopLimit</code> of its basic steps. Hence you may use the <code class="code">loopLimit</code> parameter as a break criterion for the <code class="func">TzGo</code> (<a shape="rect" href="chap48_mj.html#X7C4A30328224C466"><span class="RefLink">48.6-1</span></a>) command. The default value of <code class="code">loopLimit</code> is <code class="func">infinity</code> (<a shape="rect" href="chap18_mj.html#X8511B8DF83324C27"><span class="RefLink">18.2-1</span></a>).</p>
 
-</dd><dt><strong class="Mark"><code class="code">printLevel</code>:</strong></dt><dd><p>Whenever Tietze transformation commands are called for a presentation <var class="Arg">P</var> with <code class="code">printLevel</code> <math id="2231096166046718758" display="inline" alttext="=0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">printLevel</code>:</strong></dt><dd><p>Whenever Tietze transformation commands are called for a presentation <var class="Arg">P</var> with <code class="code">printLevel</code> <math id="6895191327906176075" display="inline" alttext="=0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
@@ -100,7 +100,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">=0</annotation>
   </semantics>
-</math>, they will not provide any output except for error messages. If <code class="code">printLevel</code> <math id="-1829977866265197456" display="inline" alttext="=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, they will not provide any output except for error messages. If <code class="code">printLevel</code> <math id="2785101595012347488" display="inline" alttext="=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
@@ -116,7 +116,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">=1</annotation>
   </semantics>
-</math>, they will display some reasonable amount of output which allows you to watch the progress of the computation and to decide about your next commands. In the case <code class="code">printLevel</code> <math id="7762842499975401561" display="inline" alttext="=2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, they will display some reasonable amount of output which allows you to watch the progress of the computation and to decide about your next commands. In the case <code class="code">printLevel</code> <math id="-791930114410353139" display="inline" alttext="=2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
@@ -132,7 +132,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">=2</annotation>
   </semantics>
-</math>, you will get a much more generous amount of output. Finally, if <code class="code">printLevel</code> <math id="8487838845393699494" display="inline" alttext="=3" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, you will get a much more generous amount of output. Finally, if <code class="code">printLevel</code> <math id="1076750911341284878" display="inline" alttext="=3" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>

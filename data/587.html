@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.14-1 PermChars</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X7D02541482C196A6"></meta>
+        <title>GAP (ref) - Chapter 72: Class Functions &amp;#8614; 72.14-1 PermChars</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72_mj.html#X7D02541482C196A6"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.14-1 PermChars</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PermChars</code>( <var class="Arg">tbl</var>[, <var class="Arg">cond</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> provides several algorithms to determine possible permutation characters from a given character table. They are described in detail in <a shape="rect" href="chapBib_mj.html#biBBP98">[BP98]</a>. The algorithm is selected from the choice of the optional argument <var class="Arg">cond</var>. The user is encouraged to try different approaches, especially if one choice fails to come to an end.</p><p xmlns="http://www.w3.org/1999/xhtml">Regardless of the algorithm used in a specific case, <code class="func">PermChars</code> returns a list of <em>all</em> possible permutation characters with the properties described by <var class="Arg">cond</var>. There is no guarantee that a character of this list is in fact a permutation character. But an empty list always means there is no permutation character with these properties (e.g., of a certain degree).</p><p xmlns="http://www.w3.org/1999/xhtml">Called with only one argument, a character table <var class="Arg">tbl</var>, <code class="func">PermChars</code> returns the list of all possible permutation characters of the group with this character table. This list might be rather long for big groups, and its computation might take much time. The algorithm is described in <a shape="rect" href="chapBib_mj.html#biBBP98">[BP98, Section 3.2]</a>; it depends on a preprocessing step, where the inequalities arising from the condition <math id="-6094745025060323608" display="inline" alttext="\pi(g)\geq 0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.14-1 PermChars</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PermChars</code>( <var class="Arg">tbl</var>[, <var class="Arg">cond</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> provides several algorithms to determine possible permutation characters from a given character table. They are described in detail in <a shape="rect" href="chapBib_mj.html#biBBP98">[BP98]</a>. The algorithm is selected from the choice of the optional argument <var class="Arg">cond</var>. The user is encouraged to try different approaches, especially if one choice fails to come to an end.</p><p xmlns="http://www.w3.org/1999/xhtml">Regardless of the algorithm used in a specific case, <code class="func">PermChars</code> returns a list of <em>all</em> possible permutation characters with the properties described by <var class="Arg">cond</var>. There is no guarantee that a character of this list is in fact a permutation character. But an empty list always means there is no permutation character with these properties (e.g., of a certain degree).</p><p xmlns="http://www.w3.org/1999/xhtml">Called with only one argument, a character table <var class="Arg">tbl</var>, <code class="func">PermChars</code> returns the list of all possible permutation characters of the group with this character table. This list might be rather long for big groups, and its computation might take much time. The algorithm is described in <a shape="rect" href="chapBib_mj.html#biBBP98">[BP98, Section 3.2]</a>; it depends on a preprocessing step, where the inequalities arising from the condition <math id="-7126184966090580590" display="inline" alttext="\pi(g)\geq 0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
       <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
@@ -31,7 +31,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\pi(g)\geq 0</annotation>
   </semantics>
-</math> are transformed into a system of inequalities that guides the search (see <code class="func">Inequalities</code> (<a shape="rect" href="chap72_mj.html#X866942167802E036"><span class="RefLink">72.14-5</span></a>)). So the following commands compute the list of 39 possible permutation characters of the Mathieu group <math id="-808496227248482376" display="inline" alttext="M_{11}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> are transformed into a system of inequalities that guides the search (see <code class="func">Inequalities</code> (<a shape="rect" href="chap72_mj.html#X866942167802E036"><span class="RefLink">72.14-5</span></a>)). So the following commands compute the list of 39 possible permutation characters of the Mathieu group <math id="5081633264057229814" display="inline" alttext="M_{11}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
@@ -67,7 +67,7 @@ true
   Character( m11, [ 220, 12, 4, 4, 0, 0, 0, 0, 0, 0 ] ) ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PermChars( m11, rec( torso:= [ 220,,,,, 2 ] ) );</span>
 [ Character( m11, [ 220, 20, 4, 0, 0, 2, 0, 0, 0, 0 ] ) ]
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">An additional restriction on the possible permutation characters computed can be forced if <var class="Arg">con</var> contains, in addition to <code class="code">torso</code>, the components <code class="code">normalsubgroup</code> and <code class="code">nonfaithful</code>, with values a list of class positions of a normal subgroup <math id="-804507495680823510" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">An additional restriction on the possible permutation characters computed can be forced if <var class="Arg">con</var> contains, in addition to <code class="code">torso</code>, the components <code class="code">normalsubgroup</code> and <code class="code">nonfaithful</code>, with values a list of class positions of a normal subgroup <math id="-5616013899004462488" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -75,7 +75,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
   </semantics>
-</math> of the group <math id="1768211509615724466" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of the group <math id="6735518460076673561" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -83,7 +83,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> of <var class="Arg">tbl</var> and a possible permutation character <math id="81263102920293932" display="inline" alttext="\pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <var class="Arg">tbl</var> and a possible permutation character <math id="5692393543156246054" display="inline" alttext="\pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -91,7 +91,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\pi</annotation>
   </semantics>
-</math> of <math id="4974833468589993966" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <math id="3621908801262014573" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -99,7 +99,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>, respectively, such that <math id="-7029778023103600050" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, respectively, such that <math id="2062678042002550846" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -107,7 +107,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
   </semantics>
-</math> is contained in the kernel of <math id="-4909143681604089273" display="inline" alttext="\pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is contained in the kernel of <math id="3057298423449445297" display="inline" alttext="\pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -115,7 +115,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\pi</annotation>
   </semantics>
-</math>. In this case, <code class="func">PermChars</code> returns the list of those possible permutation characters <math id="-8097497695520860982" display="inline" alttext="\psi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. In this case, <code class="func">PermChars</code> returns the list of those possible permutation characters <math id="7593633828105548951" display="inline" alttext="\psi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ψ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -123,7 +123,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\psi</annotation>
   </semantics>
-</math> of <var class="Arg">tbl</var> coinciding with <code class="code">torso</code> wherever its values are bound and having the property that no irreducible constituent of <math id="-6834684547694269936" display="inline" alttext="\psi-\pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <var class="Arg">tbl</var> coinciding with <code class="code">torso</code> wherever its values are bound and having the property that no irreducible constituent of <math id="-2186917740626570526" display="inline" alttext="\psi-\pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ψ</mi>
@@ -139,7 +139,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\psi-\pi</annotation>
   </semantics>
-</math> has <math id="-4276766195975418170" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> has <math id="-9164957627864343128" display="inline" alttext="N" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -147,7 +147,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">N</annotation>
   </semantics>
-</math> in its kernel. If the component <code class="code">chars</code> is bound in <var class="Arg">cond</var> then the above statements apply. An interpretation of the computed characters is the following. Suppose there exists a subgroup <math id="6632858806484408282" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in its kernel. If the component <code class="code">chars</code> is bound in <var class="Arg">cond</var> then the above statements apply. An interpretation of the computed characters is the following. Suppose there exists a subgroup <math id="-4791776576317853930" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -155,7 +155,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
   </semantics>
-</math> of <math id="5144910379146868835" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <math id="4158677002637223278" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -163,7 +163,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> such that <math id="4904883403112437481" display="inline" alttext="\pi=(1_{V})^{G}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that <math id="3932917775943227135" display="inline" alttext="\pi=(1_{V})^{G}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">π</mi>
@@ -197,7 +197,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\pi=(1_{V})^{G}</annotation>
   </semantics>
-</math>; Then <math id="5701596487114058365" display="inline" alttext="N\leq V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>; Then <math id="1883686743985183672" display="inline" alttext="N\leq V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
@@ -213,7 +213,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">N\leq V</annotation>
   </semantics>
-</math>, and if a computed character is of the form <math id="618196758781484223" display="inline" alttext="(1_{U})^{G}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and if a computed character is of the form <math id="7741927787172272628" display="inline" alttext="(1_{U})^{G}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mrow xref="p1.1.m1.1.6.2.2.cmml" id="p1.1.m1.1.6.2">
@@ -239,7 +239,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(1_{U})^{G}</annotation>
   </semantics>
-</math>, for a subgroup <math id="-7287718795107927918" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, for a subgroup <math id="5321135200059144343" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -247,7 +247,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
   </semantics>
-</math> of <math id="6189740583866523506" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <math id="566847632703594893" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -255,7 +255,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>, then <math id="-2525123998983388975" display="inline" alttext="V=UN" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, then <math id="-1621309962904521946" display="inline" alttext="V=UN" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>

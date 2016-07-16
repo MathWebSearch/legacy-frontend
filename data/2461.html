@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 30: Collections-&gt;30.8-1 Iterator</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30.html#X83ADF8287ED0668E"></meta>
+        <title>GAP (ref) - Chapter 30: Collections &amp;#8614; 30.8-1 Iterator</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30_mj.html#X83ADF8287ED0668E"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.8-1 Iterator</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Iterator</code>( <var class="Arg">listorcoll</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsStandardIterator</code>( <var class="Arg">listorcoll</var> )</td><td colspan="1" rowspan="1" class="tdright">( filter )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Iterators provide a possibility to loop over the elements of a (countable) collection or list <var class="Arg">listorcoll</var>, without repetition. For many collections <math id="-1567298964304525943" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.8-1 Iterator</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Iterator</code>( <var class="Arg">listorcoll</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsStandardIterator</code>( <var class="Arg">listorcoll</var> )</td><td colspan="1" rowspan="1" class="tdright">( filter )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Iterators provide a possibility to loop over the elements of a (countable) collection or list <var class="Arg">listorcoll</var>, without repetition. For many collections <math id="-4716671636311627172" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math>, an iterator of <math id="8855074692339414060" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, an iterator of <math id="4556270740772374882" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math> need not store all elements of <math id="-1521711180298700221" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> need not store all elements of <math id="2536119469525335127" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math>, for example it is possible to construct an iterator of some infinite domains, such as the field of rational numbers.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Iterator</code> returns a mutable <em>iterator</em> <math id="-9093460996010595787" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, for example it is possible to construct an iterator of some infinite domains, such as the field of rational numbers.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">Iterator</code> returns a mutable <em>iterator</em> <math id="235571742620038153" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -49,7 +49,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">iter</annotation>
   </semantics>
-</math> for its argument. If this argument is a list (which may contain holes), then <math id="-6160089854275019824" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> for its argument. If this argument is a list (which may contain holes), then <math id="7403238613881660463" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -71,7 +71,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">iter</annotation>
   </semantics>
-</math> iterates over the elements (but not the holes) of this list in the same order (see <code class="func">IteratorList</code> (<a shape="rect" href="chap30_mj.html#X858A28667D137C4B"><span class="RefLink">30.8-6</span></a>) for details). If this argument is a collection but not a list then <math id="-2232445638653802688" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> iterates over the elements (but not the holes) of this list in the same order (see <code class="func">IteratorList</code> (<a shape="rect" href="chap30_mj.html#X858A28667D137C4B"><span class="RefLink">30.8-6</span></a>) for details). If this argument is a collection but not a list then <math id="-1108078981255618284" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -93,7 +93,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">iter</annotation>
   </semantics>
-</math> iterates over the elements of this collection in an unspecified order, which may change for repeated calls of <code class="func">Iterator</code>. Because iterators returned by <code class="func">Iterator</code> are mutable (see <a shape="rect" href="chap12_mj.html#X7F0C119682196D65"><span class="RefLink">12.6</span></a>), each call of <code class="func">Iterator</code> for the same argument returns a <em>new</em> iterator. Therefore <code class="func">Iterator</code> is not an attribute (see <a shape="rect" href="chap13_mj.html#X7C701DBF7BAE649A"><span class="RefLink">13.5</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The only operations for iterators are <code class="func">IsDoneIterator</code> (<a shape="rect" href="chap30_mj.html#X8055FC557B5D899E"><span class="RefLink">30.8-4</span></a>), <code class="func">NextIterator</code> (<a shape="rect" href="chap30_mj.html#X879F62F77D1D1179"><span class="RefLink">30.8-5</span></a>), and <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>). In particular, it is only possible to access the next element of the iterator with <code class="func">NextIterator</code> (<a shape="rect" href="chap30_mj.html#X879F62F77D1D1179"><span class="RefLink">30.8-5</span></a>) if there is one, and this can be checked with <code class="func">IsDoneIterator</code> (<a shape="rect" href="chap30_mj.html#X8055FC557B5D899E"><span class="RefLink">30.8-4</span></a>) For an iterator <math id="-2785153649087623864" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> iterates over the elements of this collection in an unspecified order, which may change for repeated calls of <code class="func">Iterator</code>. Because iterators returned by <code class="func">Iterator</code> are mutable (see <a shape="rect" href="chap12_mj.html#X7F0C119682196D65"><span class="RefLink">12.6</span></a>), each call of <code class="func">Iterator</code> for the same argument returns a <em>new</em> iterator. Therefore <code class="func">Iterator</code> is not an attribute (see <a shape="rect" href="chap13_mj.html#X7C701DBF7BAE649A"><span class="RefLink">13.5</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The only operations for iterators are <code class="func">IsDoneIterator</code> (<a shape="rect" href="chap30_mj.html#X8055FC557B5D899E"><span class="RefLink">30.8-4</span></a>), <code class="func">NextIterator</code> (<a shape="rect" href="chap30_mj.html#X879F62F77D1D1179"><span class="RefLink">30.8-5</span></a>), and <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>). In particular, it is only possible to access the next element of the iterator with <code class="func">NextIterator</code> (<a shape="rect" href="chap30_mj.html#X879F62F77D1D1179"><span class="RefLink">30.8-5</span></a>) if there is one, and this can be checked with <code class="func">IsDoneIterator</code> (<a shape="rect" href="chap30_mj.html#X8055FC557B5D899E"><span class="RefLink">30.8-4</span></a>) For an iterator <math id="630017193336226078" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -115,7 +115,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">iter</annotation>
   </semantics>
-</math>, <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) returns a mutable iterator <math id="-7293256043247695204" display="inline" alttext="new" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) returns a mutable iterator <math id="3940921702318140595" display="inline" alttext="new" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
@@ -134,7 +134,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">new</annotation>
   </semantics>
-</math> that iterates over the remaining elements independent of <math id="-1553022287535091678" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> that iterates over the remaining elements independent of <math id="-5312321058846651912" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -156,7 +156,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">iter</annotation>
   </semantics>
-</math>; the results of <code class="func">IsDoneIterator</code> (<a shape="rect" href="chap30_mj.html#X8055FC557B5D899E"><span class="RefLink">30.8-4</span></a>) for <math id="2956045554702850100" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>; the results of <code class="func">IsDoneIterator</code> (<a shape="rect" href="chap30_mj.html#X8055FC557B5D899E"><span class="RefLink">30.8-4</span></a>) for <math id="7816425092560650699" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -178,7 +178,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">iter</annotation>
   </semantics>
-</math> and <math id="8996484342195455361" display="inline" alttext="new" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-5147398232901471766" display="inline" alttext="new" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
@@ -197,7 +197,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">new</annotation>
   </semantics>
-</math> are equal, and if <math id="-3902251482508352845" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> are equal, and if <math id="-7052229856432780773" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -219,7 +219,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">iter</annotation>
   </semantics>
-</math> is mutable then also the results of <code class="func">NextIterator</code> (<a shape="rect" href="chap30_mj.html#X879F62F77D1D1179"><span class="RefLink">30.8-5</span></a>) for <math id="7240997111834695556" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is mutable then also the results of <code class="func">NextIterator</code> (<a shape="rect" href="chap30_mj.html#X879F62F77D1D1179"><span class="RefLink">30.8-5</span></a>) for <math id="1131058086887416489" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -241,7 +241,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">iter</annotation>
   </semantics>
-</math> and <math id="5446589349078275079" display="inline" alttext="new" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-365051733169979552" display="inline" alttext="new" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
@@ -260,7 +260,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">new</annotation>
   </semantics>
-</math> are equal; note that <code class="code">=</code> is not defined for iterators, so the equality of two iterators cannot be checked with <code class="code">=</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">When <code class="func">Iterator</code> is called for a <em>mutable</em> collection <math id="2165462357342992035" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> are equal; note that <code class="code">=</code> is not defined for iterators, so the equality of two iterators cannot be checked with <code class="code">=</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">When <code class="func">Iterator</code> is called for a <em>mutable</em> collection <math id="2961559244705951636" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -268,7 +268,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math> then it is not defined whether <math id="6654094807419486006" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> then it is not defined whether <math id="-5747427582649192191" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -290,7 +290,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">iter</annotation>
   </semantics>
-</math> respects changes to <math id="5031956145790870132" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> respects changes to <math id="-7449423559337832885" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -298,7 +298,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math> occurring after the construction of <math id="4177301752072419389" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> occurring after the construction of <math id="634221173564252371" display="inline" alttext="iter" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -320,7 +320,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">iter</annotation>
   </semantics>
-</math>, except if the documentation explicitly promises a certain behaviour. The latter is the case if the argument is a mutable list (see <code class="func">IteratorList</code> (<a shape="rect" href="chap30_mj.html#X858A28667D137C4B"><span class="RefLink">30.8-6</span></a>) for subtleties in this case).</p><p xmlns="http://www.w3.org/1999/xhtml">It is possible to have <code class="keyw">for</code>-loops run over mutable iterators instead of lists.</p><p xmlns="http://www.w3.org/1999/xhtml">In some situations, one can construct iterators with a special succession of elements, see <code class="func">IteratorByBasis</code> (<a shape="rect" href="chap61_mj.html#X855625D47979005D"><span class="RefLink">61.6-6</span></a>) for the possibility to loop over the elements of a vector space w.r.t. a given basis.</p><p xmlns="http://www.w3.org/1999/xhtml">For lists, <code class="func">Iterator</code> is implemented by <code class="func">IteratorList</code> (<a shape="rect" href="chap30_mj.html#X858A28667D137C4B"><span class="RefLink">30.8-6</span></a>). For collections <math id="-4204271231865841573" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, except if the documentation explicitly promises a certain behaviour. The latter is the case if the argument is a mutable list (see <code class="func">IteratorList</code> (<a shape="rect" href="chap30_mj.html#X858A28667D137C4B"><span class="RefLink">30.8-6</span></a>) for subtleties in this case).</p><p xmlns="http://www.w3.org/1999/xhtml">It is possible to have <code class="keyw">for</code>-loops run over mutable iterators instead of lists.</p><p xmlns="http://www.w3.org/1999/xhtml">In some situations, one can construct iterators with a special succession of elements, see <code class="func">IteratorByBasis</code> (<a shape="rect" href="chap61_mj.html#X855625D47979005D"><span class="RefLink">61.6-6</span></a>) for the possibility to loop over the elements of a vector space w.r.t. a given basis.</p><p xmlns="http://www.w3.org/1999/xhtml">For lists, <code class="func">Iterator</code> is implemented by <code class="func">IteratorList</code> (<a shape="rect" href="chap30_mj.html#X858A28667D137C4B"><span class="RefLink">30.8-6</span></a>). For collections <math id="4471768513141558552" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -328,7 +328,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math> that are not lists, the default method is <code class="code">IteratorList( Enumerator( </code><math id="5837049134007857760" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> that are not lists, the default method is <code class="code">IteratorList( Enumerator( </code><math id="-5054700476848796676" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -336,7 +336,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math><code class="code"> ) )</code>. Better methods depending on <math id="8719065044850428154" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code"> ) )</code>. Better methods depending on <math id="-1416660379235530439" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -344,7 +344,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math> should be provided if possible.</p><p xmlns="http://www.w3.org/1999/xhtml">For random access to the elements of a (possibly infinite) collection, <em>enumerators</em> are used. See <a shape="rect" href="chap21_mj.html#X7EA3ACE27E43D174"><span class="RefLink">21.23</span></a> for the facility to compute a list from <math id="-777863115622566076" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> should be provided if possible.</p><p xmlns="http://www.w3.org/1999/xhtml">For random access to the elements of a (possibly infinite) collection, <em>enumerators</em> are used. See <a shape="rect" href="chap21_mj.html#X7EA3ACE27E43D174"><span class="RefLink">21.23</span></a> for the facility to compute a list from <math id="1955816284635088433" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -352,7 +352,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math>, which provides a (partial) mapping from <math id="-7942897762002440800" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, which provides a (partial) mapping from <math id="-1108033188689784414" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

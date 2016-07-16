@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.3-16 IndexPeriodOfPartialPerm</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X873A9F717DA75CBC"></meta>
+        <title>GAP (ref) - Chapter 54: Partial permutations &amp;#8614; 54.3-16 IndexPeriodOfPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54_mj.html#X873A9F717DA75CBC"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.3-16 IndexPeriodOfPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IndexPeriodOfPartialPerm</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A pair of positive integers.</p><p xmlns="http://www.w3.org/1999/xhtml">Returns the least positive integers <code class="code">m, r</code> such that <code class="code"><var class="Arg">f</var>^(m+r)=<var class="Arg">f</var>^m</code>, which are known as the <em>index</em> and <em>period</em> of the partial permutation <var class="Arg">f</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2, 3, 5, 6, 7, 8, 11, 12, 16, 19 ], </span>

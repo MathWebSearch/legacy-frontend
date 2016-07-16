@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 21: Lists-&gt;21.22 Ranges</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X79596BDE7CAF8491"></meta>
+        <title>GAP (ref) - Chapter 21: Lists &amp;#8614; 21.22 Ranges</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21_mj.html#X79596BDE7CAF8491"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.22 <span class="Heading">Ranges</span></h4><p xmlns="http://www.w3.org/1999/xhtml">A <em>range</em> is a dense list of integers in arithmetic progression (or degression). This is a list of integers such that the difference between consecutive elements is a nonzero constant. Ranges can be abbreviated with the syntactic construct</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">[ <var class="Arg">first</var>, <var class="Arg">second</var> .. <var class="Arg">last</var> ]</code></p><p xmlns="http://www.w3.org/1999/xhtml">or, if the difference between consecutive elements is 1, as</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">[ <var class="Arg">first</var> .. <var class="Arg">last</var> ]</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="code"><var class="Arg">first</var> &gt; <var class="Arg">last</var></code>, <code class="code">[ <var class="Arg">first</var> .. <var class="Arg">last</var> ]</code> is the empty list, which by definition is also a range; also, if <code class="code"><var class="Arg">second</var> &gt; <var class="Arg">first</var> &gt; <var class="Arg">last</var></code> or <code class="code"><var class="Arg">second</var> &lt; <var class="Arg">first</var> &lt; <var class="Arg">last</var></code>, then <code class="code">[ <var class="Arg">first</var>, <var class="Arg">second</var> .. <var class="Arg">last</var> ]</code> is the empty list. If <code class="code"><var class="Arg">first</var> = <var class="Arg">last</var></code>, <code class="code">[ <var class="Arg">first</var>, <var class="Arg">second</var> .. <var class="Arg">last</var> ]</code> is a singleton list, which is a range, too. Note that <code class="code"><var class="Arg">last</var> - <var class="Arg">first</var></code> must be divisible by the increment <code class="code"><var class="Arg">second</var> - <var class="Arg">first</var></code>, otherwise an error is signalled.</p><p xmlns="http://www.w3.org/1999/xhtml">Currently, the integers <var class="Arg">first</var>, <var class="Arg">second</var> and <var class="Arg">last</var> and the length of a range must be small integers, that is at least <math id="258686014730683081" display="inline" alttext="-2^{d}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.22 <span class="Heading">Ranges</span></h4><p xmlns="http://www.w3.org/1999/xhtml">A <em>range</em> is a dense list of integers in arithmetic progression (or degression). This is a list of integers such that the difference between consecutive elements is a nonzero constant. Ranges can be abbreviated with the syntactic construct</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">[ <var class="Arg">first</var>, <var class="Arg">second</var> .. <var class="Arg">last</var> ]</code></p><p xmlns="http://www.w3.org/1999/xhtml">or, if the difference between consecutive elements is 1, as</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">[ <var class="Arg">first</var> .. <var class="Arg">last</var> ]</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <code class="code"><var class="Arg">first</var> &gt; <var class="Arg">last</var></code>, <code class="code">[ <var class="Arg">first</var> .. <var class="Arg">last</var> ]</code> is the empty list, which by definition is also a range; also, if <code class="code"><var class="Arg">second</var> &gt; <var class="Arg">first</var> &gt; <var class="Arg">last</var></code> or <code class="code"><var class="Arg">second</var> &lt; <var class="Arg">first</var> &lt; <var class="Arg">last</var></code>, then <code class="code">[ <var class="Arg">first</var>, <var class="Arg">second</var> .. <var class="Arg">last</var> ]</code> is the empty list. If <code class="code"><var class="Arg">first</var> = <var class="Arg">last</var></code>, <code class="code">[ <var class="Arg">first</var>, <var class="Arg">second</var> .. <var class="Arg">last</var> ]</code> is a singleton list, which is a range, too. Note that <code class="code"><var class="Arg">last</var> - <var class="Arg">first</var></code> must be divisible by the increment <code class="code"><var class="Arg">second</var> - <var class="Arg">first</var></code>, otherwise an error is signalled.</p><p xmlns="http://www.w3.org/1999/xhtml">Currently, the integers <var class="Arg">first</var>, <var class="Arg">second</var> and <var class="Arg">last</var> and the length of a range must be small integers, that is at least <math id="619554719223832752" display="inline" alttext="-2^{d}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">-</mo>
@@ -24,7 +24,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">-2^{d}</annotation>
   </semantics>
-</math> and at most <math id="6205761775888012685" display="inline" alttext="2^{d}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and at most <math id="-3301768303686068992" display="inline" alttext="2^{d}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -47,7 +47,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">2^{d}-1</annotation>
   </semantics>
-</math> with <math id="-5699028871966847609" display="inline" alttext="d=28" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> with <math id="-5765763851606469112" display="inline" alttext="d=28" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">d</mi>
@@ -63,7 +63,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">d=28</annotation>
   </semantics>
-</math> on 32-bit architectures and <math id="-4039351812659243534" display="inline" alttext="d=60" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> on 32-bit architectures and <math id="-6618367699761159086" display="inline" alttext="d=60" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">d</mi>

@@ -1,7 +1,7 @@
 <html> 
       <head>
         <title>GAP (ref) - Chapter 38: Rewriting Systems</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap38.html#X7CA8FCFD81AA1890"></meta>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap38_mj.html#X7CA8FCFD81AA1890"></meta>
       </head>
       <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap38_mj.html#X7CA8FCFD81AA1890">38 <span class="Heading">Rewriting Systems</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap38_mj.html#X8287CBE183EBE5D7">38.1 <span class="Heading">Operations on rewriting systems</span></a>
@@ -37,7 +37,7 @@
 <div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap38_mj.html#X8751F8FA7DC989A2">38.5 <span class="Heading">Developing rewriting systems</span></a>
 </span>
 </div>
-</div><h3 xmlns="http://www.w3.org/1999/xhtml">38 <span class="Heading">Rewriting Systems</span></h3><p xmlns="http://www.w3.org/1999/xhtml">Rewriting systems in <strong class="pkg">GAP</strong> are a framework for dealing with the very general task of rewriting elements of a free (or <em>term</em>) algebra in some normal form. Although most rewriting systems currently in use are <em>string rewriting systems</em> (where the algebra has only one binary operation which is associative) the framework in <strong class="pkg">GAP</strong> is general enough to encompass the task of rewriting algebras of any signature from groups to semirings.</p><p xmlns="http://www.w3.org/1999/xhtml">Rewriting systems are already implemented in <strong class="pkg">GAP</strong> for finitely presented semigroups and for pc groups. The use of these particular rewriting systems is described in the corresponding chapters. We describe here only the general framework of rewriting systems with a particular emphasis on material which would be helpful for a developer implementing a rewriting system.</p><p xmlns="http://www.w3.org/1999/xhtml">We fix some definitions and terminology for the rest of this chapter. Let <math id="1277003587674459747" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">38 <span class="Heading">Rewriting Systems</span></h3><p xmlns="http://www.w3.org/1999/xhtml">Rewriting systems in <strong class="pkg">GAP</strong> are a framework for dealing with the very general task of rewriting elements of a free (or <em>term</em>) algebra in some normal form. Although most rewriting systems currently in use are <em>string rewriting systems</em> (where the algebra has only one binary operation which is associative) the framework in <strong class="pkg">GAP</strong> is general enough to encompass the task of rewriting algebras of any signature from groups to semirings.</p><p xmlns="http://www.w3.org/1999/xhtml">Rewriting systems are already implemented in <strong class="pkg">GAP</strong> for finitely presented semigroups and for pc groups. The use of these particular rewriting systems is described in the corresponding chapters. We describe here only the general framework of rewriting systems with a particular emphasis on material which would be helpful for a developer implementing a rewriting system.</p><p xmlns="http://www.w3.org/1999/xhtml">We fix some definitions and terminology for the rest of this chapter. Let <math id="-1731850461981554852" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -45,7 +45,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
   </semantics>
-</math> be a term algebra in some signature. A <em>term rewriting system</em> for <math id="-5382119904403440600" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> be a term algebra in some signature. A <em>term rewriting system</em> for <math id="6356467696855380436" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -53,7 +53,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
   </semantics>
-</math> is a set of ordered pairs of elements of <math id="1456237051250898981" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a set of ordered pairs of elements of <math id="-2717312870371859911" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -61,7 +61,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
   </semantics>
-</math> of the form <math id="3847417101505329272" display="inline" alttext="(l,r)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of the form <math id="1706627893412308376" display="inline" alttext="(l,r)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -78,7 +78,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(l,r)</annotation>
   </semantics>
-</math>. Viewed as a set of relations, the rewriting system determines a presentation for a quotient algebra <math id="-8547324208235938803" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Viewed as a set of relations, the rewriting system determines a presentation for a quotient algebra <math id="-7904043085245532332" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -86,7 +86,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
   </semantics>
-</math> of <math id="-8138440087733175626" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <math id="-3858988165571008026" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -94,7 +94,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
   </semantics>
-</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">When we take into account the fact that the relations are expressed as <em>ordered</em> pairs, we have a way of <em>reducing</em> the elements of <math id="-3112061544919548148" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">When we take into account the fact that the relations are expressed as <em>ordered</em> pairs, we have a way of <em>reducing</em> the elements of <math id="6497035147757967369" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -102,7 +102,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
   </semantics>
-</math>. Suppose an element <math id="-6947818787946033118" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Suppose an element <math id="9193882147431604761" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -110,7 +110,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
   </semantics>
-</math> of <math id="1015030302781115664" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <math id="-7338715097753189938" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -118,7 +118,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
   </semantics>
-</math> has a subword <math id="5131321941021824435" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> has a subword <math id="7432228812825863450" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -126,7 +126,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
   </semantics>
-</math> and <math id="2837019032106191271" display="inline" alttext="(l,r)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-3022692575910763999" display="inline" alttext="(l,r)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -143,7 +143,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(l,r)</annotation>
   </semantics>
-</math> is a rule of the rewriting system, then we can replace the subterm <math id="-5131241137722161715" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a rule of the rewriting system, then we can replace the subterm <math id="-5946832445686114134" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -151,7 +151,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
   </semantics>
-</math> of <math id="6240787931777556090" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <math id="618850360707125886" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -159,7 +159,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
   </semantics>
-</math> by the term <math id="-7071575945155044296" display="inline" alttext="r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> by the term <math id="-3314658946531084208" display="inline" alttext="r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -167,7 +167,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">r</annotation>
   </semantics>
-</math> and obtain a new word <math id="-6591865036173152366" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and obtain a new word <math id="-7417074459295950547" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -175,7 +175,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">v</annotation>
   </semantics>
-</math>. We say that we have <em>rewritten</em> <math id="7073904839650553161" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. We say that we have <em>rewritten</em> <math id="-9025970713790361732" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -183,7 +183,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
   </semantics>
-</math> as <math id="-1739721629049798191" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> as <math id="2252862531344234507" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -191,7 +191,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">v</annotation>
   </semantics>
-</math>. Note that <math id="2544594757180171930" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Note that <math id="-255653584946282436" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -199,7 +199,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
   </semantics>
-</math> and <math id="3519537737298154478" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="1560161861028308004" display="inline" alttext="v" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">v</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -207,7 +207,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">v</annotation>
   </semantics>
-</math> represent the same element of <math id="-8336126517862139125" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> represent the same element of <math id="-8633220349658293549" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -215,7 +215,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
   </semantics>
-</math>. If <math id="-8303662294496291592" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. If <math id="6161114740157571415" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -223,7 +223,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">u</annotation>
   </semantics>
-</math> can not be rewritten using any rule of the rewriting system we sat that <math id="-7008054395219753774" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> can not be rewritten using any rule of the rewriting system we sat that <math id="2607294062520638407" display="inline" alttext="u" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

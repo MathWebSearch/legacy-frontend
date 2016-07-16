@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.3 Operators for Matrices</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X7899335779A39A95"></meta>
+        <title>GAP (ref) - Chapter 24: Matrices &amp;#8614; 24.3 Operators for Matrices</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24_mj.html#X7899335779A39A95"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">24.3 <span class="Heading">Operators for Matrices</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The rules for arithmetic operations involving matrices are in fact special cases of those for the arithmetic of lists, given in Section <a shape="rect" href="chap21_mj.html#X845EEAF083D43CCE"><span class="RefLink">21.11</span></a> and the following sections, here we reiterate that definition, in the language of vectors and matrices.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the additive behaviour sketched below is defined only for lists in the category <code class="func">IsGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X87ABCEE9809585A0"><span class="RefLink">21.12-1</span></a>), and the multiplicative behaviour is defined only for lists in the category <code class="func">IsMultiplicativeGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X7FBCA5B58308C158"><span class="RefLink">21.12-2</span></a>) (see <a shape="rect" href="chap21_mj.html#X84D642967B8546B7"><span class="RefLink">21.12</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat1</var> + <var class="Arg">mat2</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">returns the sum of the two matrices <var class="Arg">mat1</var> and <var class="Arg">mat2</var>, Probably the most usual situation is that <var class="Arg">mat1</var> and <var class="Arg">mat2</var> have the same dimensions and are defined over a common field; in this case the sum is a new matrix over the same field where each entry is the sum of the corresponding entries of the matrices.</p><p xmlns="http://www.w3.org/1999/xhtml">In more general situations, the sum of two matrices need not be a matrix, for example adding an integer matrix <var class="Arg">mat1</var> and a matrix <var class="Arg">mat2</var> over a finite field yields the table of pointwise sums, which will be a mixture of finite field elements and integers if <var class="Arg">mat1</var> has bigger dimensions than <var class="Arg">mat2</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">scalar</var> + <var class="Arg">mat</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat</var> + <var class="Arg">scalar</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">returns the sum of the scalar <var class="Arg">scalar</var> and the matrix <var class="Arg">mat</var>. Probably the most usual situation is that the entries of <var class="Arg">mat</var> lie in a common field with <var class="Arg">scalar</var>; in this case the sum is a new matrix over the same field where each entry is the sum of the scalar and the corresponding entry of the matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">More general situations are for example the sum of an integer scalar and a matrix over a finite field, or the sum of a finite field element and an integer matrix.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat1</var> - <var class="Arg">mat2</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">scalar</var> - <var class="Arg">mat</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat</var> - <var class="Arg">scalar</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">Subtracting a matrix or scalar is defined as adding its additive inverse, so the statements for the addition hold likewise.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">scalar</var> * <var class="Arg">mat</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat</var> * <var class="Arg">scalar</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">returns the product of the scalar <var class="Arg">scalar</var> and the matrix <var class="Arg">mat</var>. Probably the most usual situation is that the elements of <var class="Arg">mat</var> lie in a common field with <var class="Arg">scalar</var>; in this case the product is a new matrix over the same field where each entry is the product of the scalar and the corresponding entry of the matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">More general situations are for example the product of an integer scalar and a matrix over a finite field, or the product of a finite field element and an integer matrix.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">vec</var> * <var class="Arg">mat</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">returns the product of the row vector <var class="Arg">vec</var> and the matrix <var class="Arg">mat</var>. Probably the most usual situation is that <var class="Arg">vec</var> and <var class="Arg">mat</var> have the same lengths and are defined over a common field, and that all rows of <var class="Arg">mat</var> have the same length <math id="-8761753634122465956" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">24.3 <span class="Heading">Operators for Matrices</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The rules for arithmetic operations involving matrices are in fact special cases of those for the arithmetic of lists, given in Section <a shape="rect" href="chap21_mj.html#X845EEAF083D43CCE"><span class="RefLink">21.11</span></a> and the following sections, here we reiterate that definition, in the language of vectors and matrices.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the additive behaviour sketched below is defined only for lists in the category <code class="func">IsGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X87ABCEE9809585A0"><span class="RefLink">21.12-1</span></a>), and the multiplicative behaviour is defined only for lists in the category <code class="func">IsMultiplicativeGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X7FBCA5B58308C158"><span class="RefLink">21.12-2</span></a>) (see <a shape="rect" href="chap21_mj.html#X84D642967B8546B7"><span class="RefLink">21.12</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat1</var> + <var class="Arg">mat2</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">returns the sum of the two matrices <var class="Arg">mat1</var> and <var class="Arg">mat2</var>, Probably the most usual situation is that <var class="Arg">mat1</var> and <var class="Arg">mat2</var> have the same dimensions and are defined over a common field; in this case the sum is a new matrix over the same field where each entry is the sum of the corresponding entries of the matrices.</p><p xmlns="http://www.w3.org/1999/xhtml">In more general situations, the sum of two matrices need not be a matrix, for example adding an integer matrix <var class="Arg">mat1</var> and a matrix <var class="Arg">mat2</var> over a finite field yields the table of pointwise sums, which will be a mixture of finite field elements and integers if <var class="Arg">mat1</var> has bigger dimensions than <var class="Arg">mat2</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">scalar</var> + <var class="Arg">mat</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat</var> + <var class="Arg">scalar</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">returns the sum of the scalar <var class="Arg">scalar</var> and the matrix <var class="Arg">mat</var>. Probably the most usual situation is that the entries of <var class="Arg">mat</var> lie in a common field with <var class="Arg">scalar</var>; in this case the sum is a new matrix over the same field where each entry is the sum of the scalar and the corresponding entry of the matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">More general situations are for example the sum of an integer scalar and a matrix over a finite field, or the sum of a finite field element and an integer matrix.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat1</var> - <var class="Arg">mat2</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">scalar</var> - <var class="Arg">mat</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat</var> - <var class="Arg">scalar</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">Subtracting a matrix or scalar is defined as adding its additive inverse, so the statements for the addition hold likewise.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">scalar</var> * <var class="Arg">mat</var></code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat</var> * <var class="Arg">scalar</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">returns the product of the scalar <var class="Arg">scalar</var> and the matrix <var class="Arg">mat</var>. Probably the most usual situation is that the elements of <var class="Arg">mat</var> lie in a common field with <var class="Arg">scalar</var>; in this case the product is a new matrix over the same field where each entry is the product of the scalar and the corresponding entry of the matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">More general situations are for example the product of an integer scalar and a matrix over a finite field, or the product of a finite field element and an integer matrix.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">vec</var> * <var class="Arg">mat</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">returns the product of the row vector <var class="Arg">vec</var> and the matrix <var class="Arg">mat</var>. Probably the most usual situation is that <var class="Arg">vec</var> and <var class="Arg">mat</var> have the same lengths and are defined over a common field, and that all rows of <var class="Arg">mat</var> have the same length <math id="4400046042573433908" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
   </semantics>
-</math>, say; in this case the product is a new row vector of length <math id="-1663965621042687624" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, say; in this case the product is a new row vector of length <math id="-458987566183844741" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
   </semantics>
-</math> over the same field which is the sum of the scalar multiples of the rows of <var class="Arg">mat</var> with the corresponding entries of <var class="Arg">vec</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">More general situations are for example the product of an integer vector and a matrix over a finite field, or the product of a vector over a finite field and an integer matrix.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat</var> * <var class="Arg">vec</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">returns the product of the matrix <var class="Arg">mat</var> and the row vector <var class="Arg">vec</var>. (This is the standard product of a matrix with a <em>column</em> vector.) Probably the most usual situation is that the length of <var class="Arg">vec</var> and of all rows of <var class="Arg">mat</var> are equal, and that the elements of <var class="Arg">mat</var> and <var class="Arg">vec</var> lie in a common field; in this case the product is a new row vector of the same length as <var class="Arg">mat</var> and over the same field which is the sum of the scalar multiples of the columns of <var class="Arg">mat</var> with the corresponding entries of <var class="Arg">vec</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">More general situations are for example the product of an integer matrix and a vector over a finite field, or the product of a matrix over a finite field and an integer vector.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat1</var> * <var class="Arg">mat2</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">This form evaluates to the (Cauchy) product of the two matrices <var class="Arg">mat1</var> and <var class="Arg">mat2</var>. Probably the most usual situation is that the number of columns of <var class="Arg">mat1</var> equals the number of rows of <var class="Arg">mat2</var>, and that the elements of <var class="Arg">mat</var> and <var class="Arg">vec</var> lie in a common field; if <var class="Arg">mat1</var> is a matrix with <math id="-4076543308043906417" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> over the same field which is the sum of the scalar multiples of the rows of <var class="Arg">mat</var> with the corresponding entries of <var class="Arg">vec</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">More general situations are for example the product of an integer vector and a matrix over a finite field, or the product of a vector over a finite field and an integer matrix.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat</var> * <var class="Arg">vec</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">returns the product of the matrix <var class="Arg">mat</var> and the row vector <var class="Arg">vec</var>. (This is the standard product of a matrix with a <em>column</em> vector.) Probably the most usual situation is that the length of <var class="Arg">vec</var> and of all rows of <var class="Arg">mat</var> are equal, and that the elements of <var class="Arg">mat</var> and <var class="Arg">vec</var> lie in a common field; in this case the product is a new row vector of the same length as <var class="Arg">mat</var> and over the same field which is the sum of the scalar multiples of the columns of <var class="Arg">mat</var> with the corresponding entries of <var class="Arg">vec</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">More general situations are for example the product of an integer matrix and a vector over a finite field, or the product of a matrix over a finite field and an integer vector.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">mat1</var> * <var class="Arg">mat2</var></code></p><p xmlns="http://www.w3.org/1999/xhtml">This form evaluates to the (Cauchy) product of the two matrices <var class="Arg">mat1</var> and <var class="Arg">mat2</var>. Probably the most usual situation is that the number of columns of <var class="Arg">mat1</var> equals the number of rows of <var class="Arg">mat2</var>, and that the elements of <var class="Arg">mat</var> and <var class="Arg">vec</var> lie in a common field; if <var class="Arg">mat1</var> is a matrix with <math id="-295915485806324899" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
   </semantics>
-</math> rows and <math id="-1441207433400576496" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> rows and <math id="8949294490787283563" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -35,7 +35,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> columns, say, and <var class="Arg">mat2</var> is a matrix with <math id="-1009113853351560854" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> columns, say, and <var class="Arg">mat2</var> is a matrix with <math id="-204270879154032099" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -43,7 +43,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> rows and <math id="-4554365647156935320" display="inline" alttext="o" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> rows and <math id="-9039076618839876014" display="inline" alttext="o" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">o</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -51,7 +51,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">o</annotation>
   </semantics>
-</math> columns, the result is a new matrix with <math id="-6230361802640391461" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> columns, the result is a new matrix with <math id="7020622581544018275" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -59,7 +59,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
   </semantics>
-</math> rows and <math id="8218749646579288913" display="inline" alttext="o" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> rows and <math id="1239336765373023181" display="inline" alttext="o" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">o</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -67,7 +67,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">o</annotation>
   </semantics>
-</math> columns. The element in row <math id="6378061327351711520" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> columns. The element in row <math id="144848850215772862" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -75,7 +75,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> at position <math id="13792489317618581" display="inline" alttext="j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> at position <math id="-3056289113166419384" display="inline" alttext="j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">j</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -83,7 +83,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">j</annotation>
   </semantics>
-</math> of the product is the sum of <math id="9029855288302462589" display="inline" alttext="\textit{mat1}[i][l]*\textit{mat2}[l][j]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of the product is the sum of <math id="-6261248409928209255" display="inline" alttext="\textit{mat1}[i][l]*\textit{mat2}[l][j]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
       <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2">
@@ -153,7 +153,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{mat1}[i][l]*\textit{mat2}[l][j]</annotation>
   </semantics>
-</math>, with <math id="-5577962763033729466" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, with <math id="1896482748918527608" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -161,7 +161,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
   </semantics>
-</math> running from <math id="4743708855686969920" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> running from <math id="5080963572178009496" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -169,7 +169,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
   </semantics>
-</math> to <math id="-1765094137627347358" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="6890345945519578306" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

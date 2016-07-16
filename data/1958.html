@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 43: Permutation Groups-&gt;43.6 Stabilizer Chains</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43.html#X7FA58C3A8283F3BD"></meta>
+        <title>GAP (ref) - Chapter 43: Permutation Groups &amp;#8614; 43.6 Stabilizer Chains</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43_mj.html#X7FA58C3A8283F3BD"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">43.6 <span class="Heading">Stabilizer Chains</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Many of the algorithms for permutation groups use a <em>stabilizer chain</em> of the group. The concepts of stabilizer chains, <em>bases</em>, and <em>strong generating sets</em> were introduced by Charles Sims in <a shape="rect" href="chapBib_mj.html#biBSim70">[Sim70]</a>. An extensive account of basic algorithms together with asymptotic runtime analysis can be found in reference <a shape="rect" href="chapBib_mj.html#biBSeress2003">[Ser03, Chapter 4]</a>. A further discussion of base change is given in section <a shape="rect" href="chap87_mj.html#X870717BA831A0365"><span class="RefLink">87.1</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="-4547635835749386466" display="inline" alttext="B=[b_{1},\ldots,b_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">43.6 <span class="Heading">Stabilizer Chains</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Many of the algorithms for permutation groups use a <em>stabilizer chain</em> of the group. The concepts of stabilizer chains, <em>bases</em>, and <em>strong generating sets</em> were introduced by Charles Sims in <a shape="rect" href="chapBib_mj.html#biBSim70">[Sim70]</a>. An extensive account of basic algorithms together with asymptotic runtime analysis can be found in reference <a shape="rect" href="chapBib_mj.html#biBSeress2003">[Ser03, Chapter 4]</a>. A further discussion of base change is given in section <a shape="rect" href="chap87_mj.html#X870717BA831A0365"><span class="RefLink">87.1</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="-7322823050189907734" display="inline" alttext="B=[b_{1},\ldots,b_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
@@ -45,7 +45,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">B=[b_{1},\ldots,b_{n}]</annotation>
   </semantics>
-</math> be a list of points, <math id="-2673870429054728227" display="inline" alttext="G^{(1)}=G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> be a list of points, <math id="3358562941677690544" display="inline" alttext="G^{(1)}=G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -72,7 +72,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(1)}=G</annotation>
   </semantics>
-</math> and <math id="-8011405556825879273" display="inline" alttext="G^{{(i+1)}}=Stab_{{G^{(i)}}}(b_{i})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-5459210411187241672" display="inline" alttext="G^{{(i+1)}}=Stab_{{G^{(i)}}}(b_{i})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">
       <msup xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">
@@ -153,7 +153,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{{(i+1)}}=Stab_{{G^{(i)}}}(b_{i})</annotation>
   </semantics>
-</math>, such that <math id="3168937813935607975" display="inline" alttext="G^{(n+1)}=\{()\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, such that <math id="-2250161081862710694" display="inline" alttext="G^{(n+1)}=\{()\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
@@ -197,7 +197,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(n+1)}=\{()\}</annotation>
   </semantics>
-</math>. Then the list <math id="-3765480532647799458" display="inline" alttext="[b_{1},\ldots,b_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Then the list <math id="6746692981689623059" display="inline" alttext="[b_{1},\ldots,b_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -231,7 +231,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[b_{1},\ldots,b_{n}]</annotation>
   </semantics>
-</math> is called a <em>base</em> of <math id="2668167767869270344" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is called a <em>base</em> of <math id="3260548437439310382" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -239,7 +239,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>, the points <math id="-6965785776015839272" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, the points <math id="3460456532405556147" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -254,7 +254,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
   </semantics>
-</math> are called <em>base points</em>. A set <math id="-4965302235275085087" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> are called <em>base points</em>. A set <math id="-8505474166561851632" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -262,7 +262,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
   </semantics>
-</math> of generators for <math id="-2190533994355683712" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of generators for <math id="-2564733291816828657" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -270,7 +270,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> satisfying the condition <math id="-4915189878425386724" display="inline" alttext="\langle S\cap G^{(i)}\rangle=G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> satisfying the condition <math id="3015363784271132837" display="inline" alttext="\langle S\cap G^{(i)}\rangle=G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">
       <mrow xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1">
@@ -323,7 +323,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\langle S\cap G^{(i)}\rangle=G^{(i)}</annotation>
   </semantics>
-</math> for each <math id="5442824586045696033" display="inline" alttext="1\leq i\leq n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> for each <math id="-6542355928266105057" display="inline" alttext="1\leq i\leq n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
@@ -349,7 +349,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">1\leq i\leq n</annotation>
   </semantics>
-</math>, is called a <em>strong generating set</em> (SGS) of <math id="-23510917534145936" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, is called a <em>strong generating set</em> (SGS) of <math id="1124397978602752012" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -357,7 +357,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>. (More precisely we ought to say that it is a SGS of <math id="-3744403679869967067" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. (More precisely we ought to say that it is a SGS of <math id="-8035847957298679385" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -365,7 +365,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> <em>relative</em> to <math id="-6332542434908574402" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> <em>relative</em> to <math id="3661794807764826747" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -373,7 +373,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
   </semantics>
-</math>). The chain of subgroups <math id="-4510452313324123750" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>). The chain of subgroups <math id="3782206352062336289" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -392,7 +392,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}</annotation>
   </semantics>
-</math> of <math id="-2087429156079612815" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <math id="6180886776111306041" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -400,7 +400,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> itself is called the <em>stabilizer chain</em> of <math id="3167845562816254402" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> itself is called the <em>stabilizer chain</em> of <math id="-7108329386717398575" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -408,7 +408,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> relative to <math id="2137142486124676798" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> relative to <math id="816761649483521834" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -416,7 +416,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
   </semantics>
-</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Since <math id="425470805565057592" display="inline" alttext="[b_{1},\ldots,b_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Since <math id="1650509745526379128" display="inline" alttext="[b_{1},\ldots,b_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -450,7 +450,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[b_{1},\ldots,b_{n}]</annotation>
   </semantics>
-</math>, where <math id="-5307052173850406036" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, where <math id="-1893248242367818796" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -458,7 +458,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> is the degree of <math id="-7456465813841268034" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the degree of <math id="-3432156141392817713" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -466,7 +466,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> and <math id="2814720987593720481" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="7383390206286912723" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -481,7 +481,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
   </semantics>
-</math> are the moved points of <math id="7964881462219083942" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> are the moved points of <math id="6202421778594937746" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -489,7 +489,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>, certainly is a base for <math id="4056385849066902598" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, certainly is a base for <math id="-616547645244935139" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -497,7 +497,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> there exists a base for each permutation group. The number of points in a base is called the <em>length</em> of the base. A base <math id="4658226901067353896" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> there exists a base for each permutation group. The number of points in a base is called the <em>length</em> of the base. A base <math id="-3923471046272673363" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -505,7 +505,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
   </semantics>
-</math> is called <em>reduced</em> if there exists no <math id="4382759403696295809" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is called <em>reduced</em> if there exists no <math id="7685920560886775464" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -513,7 +513,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> such that <math id="4195024271669409614" display="inline" alttext="G^{(i)}=G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that <math id="-6629247545024514108" display="inline" alttext="G^{(i)}=G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <msup xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
@@ -559,7 +559,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}=G^{(i+1)}</annotation>
   </semantics>
-</math>. (This however does not imply that no subset of <math id="2919877066478337185" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. (This however does not imply that no subset of <math id="-4160454560476050348" display="inline" alttext="B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -567,7 +567,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">B</annotation>
   </semantics>
-</math> could also serve as a base.) Note that different reduced bases for one permutation group <math id="4718752883610187990" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> could also serve as a base.) Note that different reduced bases for one permutation group <math id="4935875100537728155" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -575,7 +575,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> may have different lengths. For example, the irreducible degree <math id="-1102393492762735633" display="inline" alttext="416" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> may have different lengths. For example, the irreducible degree <math id="-1415258112051022786" display="inline" alttext="416" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">416</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -583,7 +583,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">416</annotation>
   </semantics>
-</math> permutation representation of the Chevalley Group <math id="-4684250705178808719" display="inline" alttext="G_{2}(4)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> permutation representation of the Chevalley Group <math id="-8615453852897169004" display="inline" alttext="G_{2}(4)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <msub xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
@@ -610,7 +610,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G_{2}(4)</annotation>
   </semantics>
-</math> possesses reduced bases of lengths <math id="8219502069254425432" display="inline" alttext="5" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> possesses reduced bases of lengths <math id="6114177638066048836" display="inline" alttext="5" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">5</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -618,7 +618,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">5</annotation>
   </semantics>
-</math> and <math id="6809345438604341564" display="inline" alttext="7" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="3761362651387040081" display="inline" alttext="7" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">7</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -626,7 +626,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">7</annotation>
   </semantics>
-</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="-5604466695784240402" display="inline" alttext="R^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <math id="-6544031128669919977" display="inline" alttext="R^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
@@ -645,7 +645,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R^{(i)}</annotation>
   </semantics>
-</math> be a right transversal of <math id="-7165249725468508116" display="inline" alttext="G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> be a right transversal of <math id="3398519072797654878" display="inline" alttext="G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -672,7 +672,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i+1)}</annotation>
   </semantics>
-</math> in <math id="-6212845368357807073" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in <math id="6614270336482799580" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -691,7 +691,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}</annotation>
   </semantics>
-</math>, i.e. a set of right coset representatives of the cosets of <math id="6861647871639001787" display="inline" alttext="G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, i.e. a set of right coset representatives of the cosets of <math id="-7959031168340826162" display="inline" alttext="G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -718,7 +718,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i+1)}</annotation>
   </semantics>
-</math> in <math id="-5088388954266933901" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in <math id="-6176399815538179116" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -737,7 +737,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}</annotation>
   </semantics>
-</math>. Then each element <math id="-1831985044264428714" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Then each element <math id="7197911534962958286" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -745,7 +745,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math> of <math id="-4316324167591367470" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <math id="5470252215869645602" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -753,7 +753,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> has a unique representation as a product of the form <math id="-5883546084977618625" display="inline" alttext="g=r_{n}\ldots r_{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> has a unique representation as a product of the form <math id="-8278044624485511784" display="inline" alttext="g=r_{n}\ldots r_{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
@@ -794,7 +794,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g=r_{n}\ldots r_{1}</annotation>
   </semantics>
-</math> with <math id="2657237664387601715" display="inline" alttext="r_{i}\in R^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> with <math id="-8847219420551440496" display="inline" alttext="r_{i}\in R^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <msub xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
@@ -828,7 +828,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">r_{i}\in R^{(i)}</annotation>
   </semantics>
-</math>. The cosets of <math id="-7855143077554802467" display="inline" alttext="G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. The cosets of <math id="726398140618367076" display="inline" alttext="G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -855,7 +855,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i+1)}</annotation>
   </semantics>
-</math> in <math id="-3987669646943832464" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in <math id="8115653493963346359" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -874,7 +874,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}</annotation>
   </semantics>
-</math> are in bijective correspondence with the points in <math id="3433069513203585590" display="inline" alttext="O^{(i)}:=b_{i}^{{G^{(i)}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> are in bijective correspondence with the points in <math id="987714655803258033" display="inline" alttext="O^{(i)}:=b_{i}^{{G^{(i)}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
@@ -924,7 +924,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">O^{(i)}:=b_{i}^{{G^{(i)}}}</annotation>
   </semantics>
-</math>. So we could represent a transversal as a list <math id="1742760554847390517" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. So we could represent a transversal as a list <math id="-8392534018780661267" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -932,7 +932,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
   </semantics>
-</math> such that <math id="5904057952002507726" display="inline" alttext="T[p]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that <math id="-1808296201232759093" display="inline" alttext="T[p]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
@@ -955,7 +955,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T[p]</annotation>
   </semantics>
-</math> is a representative of the coset corresponding to the point <math id="768901352455017903" display="inline" alttext="p\in O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a representative of the coset corresponding to the point <math id="-8184277135554683821" display="inline" alttext="p\in O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
@@ -982,7 +982,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p\in O^{(i)}</annotation>
   </semantics>
-</math>, i.e., an element of <math id="-7360759201810281315" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, i.e., an element of <math id="5170504733162428458" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -1001,7 +1001,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}</annotation>
   </semantics>
-</math> that takes <math id="4301941316876908783" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> that takes <math id="9215466680317391074" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -1016,7 +1016,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
   </semantics>
-</math> to <math id="5256633165287255146" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="-6839048774277396486" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1024,7 +1024,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math>. (Note that such a list has holes in all positions corresponding to points not contained in <math id="-2772020247447089606" display="inline" alttext="O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. (Note that such a list has holes in all positions corresponding to points not contained in <math id="2550488344407984774" display="inline" alttext="O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">O</mi>
@@ -1043,7 +1043,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">O^{(i)}</annotation>
   </semantics>
-</math>.)</p><p xmlns="http://www.w3.org/1999/xhtml">This approach however will store many different permutations as coset representatives which can be a problem if the degree <math id="-254897453777963845" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.)</p><p xmlns="http://www.w3.org/1999/xhtml">This approach however will store many different permutations as coset representatives which can be a problem if the degree <math id="3970303746764558080" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1051,7 +1051,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> gets bigger. Our goal therefore is to store as few different permutations as possible such that we can still reconstruct each representative in <math id="6394580738194610559" display="inline" alttext="R^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> gets bigger. Our goal therefore is to store as few different permutations as possible such that we can still reconstruct each representative in <math id="-4475582039892011210" display="inline" alttext="R^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
@@ -1070,7 +1070,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R^{(i)}</annotation>
   </semantics>
-</math>, and from them the elements in <math id="6460190546210064156" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and from them the elements in <math id="-925949241607320035" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1078,7 +1078,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>. A <em>factorized inverse transversal</em> <math id="2604442584848527996" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. A <em>factorized inverse transversal</em> <math id="6851071008069949076" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1086,7 +1086,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
   </semantics>
-</math> is a list where <math id="964502518903649772" display="inline" alttext="T[p]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a list where <math id="-4830850081937967555" display="inline" alttext="T[p]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
@@ -1109,7 +1109,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T[p]</annotation>
   </semantics>
-</math> is a generator of <math id="-2963765931966431526" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a generator of <math id="-7769597992299390282" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -1128,7 +1128,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}</annotation>
   </semantics>
-</math> such that <math id="-3579432058572024660" display="inline" alttext="p^{{T[p]}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that <math id="-7434437655005888608" display="inline" alttext="p^{{T[p]}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
@@ -1158,7 +1158,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p^{{T[p]}}</annotation>
   </semantics>
-</math> is a point that lies earlier in <math id="4387891799409203003" display="inline" alttext="O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a point that lies earlier in <math id="-2115799417750539705" display="inline" alttext="O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">O</mi>
@@ -1177,7 +1177,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">O^{(i)}</annotation>
   </semantics>
-</math> than <math id="3595661249467013673" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> than <math id="3624188298808673985" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1185,7 +1185,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math> (note that we consider <math id="5102069730614455594" display="inline" alttext="O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (note that we consider <math id="5313849790719326279" display="inline" alttext="O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">O</mi>
@@ -1204,7 +1204,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">O^{(i)}</annotation>
   </semantics>
-</math> as a list, not as a set). If we assume inductively that we know an element <math id="-7047456682161305590" display="inline" alttext="r\in G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> as a list, not as a set). If we assume inductively that we know an element <math id="7821839879359760998" display="inline" alttext="r\in G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
@@ -1231,7 +1231,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">r\in G^{(i)}</annotation>
   </semantics>
-</math> that takes <math id="-7935870845196111228" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> that takes <math id="-3848561869600351960" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -1246,7 +1246,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
   </semantics>
-</math> to <math id="655786513746636485" display="inline" alttext="p^{{T[p]}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="-874876187229178829" display="inline" alttext="p^{{T[p]}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
@@ -1276,7 +1276,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p^{{T[p]}}</annotation>
   </semantics>
-</math>, then <math id="9159377197447696953" display="inline" alttext="rT[p]^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, then <math id="-6537217374452109205" display="inline" alttext="rT[p]^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
@@ -1315,7 +1315,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">rT[p]^{{-1}}</annotation>
   </semantics>
-</math> is an element in <math id="4345673935732076949" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is an element in <math id="-4949189964784018194" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -1334,7 +1334,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G^{(i)}</annotation>
   </semantics>
-</math> that takes <math id="-1671891339729105909" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> that takes <math id="-4851894008158577286" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -1349,7 +1349,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
   </semantics>
-</math> to <math id="8795923942846984463" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="158437789793868552" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1357,7 +1357,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math>. <strong class="pkg">GAP</strong> uses such factorized inverse transversals.</p><p xmlns="http://www.w3.org/1999/xhtml">Another name for a factorized inverse transversal is a <em>Schreier tree</em>. The vertices of the tree are the points in <math id="-1370805662373720825" display="inline" alttext="O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. <strong class="pkg">GAP</strong> uses such factorized inverse transversals.</p><p xmlns="http://www.w3.org/1999/xhtml">Another name for a factorized inverse transversal is a <em>Schreier tree</em>. The vertices of the tree are the points in <math id="1182068940664432825" display="inline" alttext="O^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">O</mi>
@@ -1376,7 +1376,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">O^{(i)}</annotation>
   </semantics>
-</math>, and the root of the tree is <math id="2964066174313491033" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and the root of the tree is <math id="-5831875404255999187" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -1391,7 +1391,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
   </semantics>
-</math>. The edges are defined as the ordered pairs <math id="3014401176717608232" display="inline" alttext="(p,p^{{T[p]}})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. The edges are defined as the ordered pairs <math id="-8389735985723660790" display="inline" alttext="(p,p^{{T[p]}})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -1430,7 +1430,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(p,p^{{T[p]}})</annotation>
   </semantics>
-</math>, for <math id="7380984557036199467" display="inline" alttext="p\in O^{(i)}\setminus\{b_{i}\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, for <math id="-996896586841557992" display="inline" alttext="p\in O^{(i)}\setminus\{b_{i}\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
@@ -1478,7 +1478,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p\in O^{(i)}\setminus\{b_{i}\}</annotation>
   </semantics>
-</math>. The edge <math id="8422656632209081411" display="inline" alttext="(p,p^{{T[p]}})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. The edge <math id="1874617835670003404" display="inline" alttext="(p,p^{{T[p]}})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -1517,7 +1517,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(p,p^{{T[p]}})</annotation>
   </semantics>
-</math> is labelled with the generator <math id="-4281552811449720514" display="inline" alttext="T[p]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is labelled with the generator <math id="-8906848098089450971" display="inline" alttext="T[p]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
@@ -1540,7 +1540,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T[p]</annotation>
   </semantics>
-</math>, and the product of edge labels along the unique path from <math id="-7318629425221241327" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and the product of edge labels along the unique path from <math id="-1361929186414927900" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1548,7 +1548,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math> to <math id="-1171269321030726698" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="1356657459201333761" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -1563,7 +1563,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
   </semantics>
-</math> is the inverse of the transversal element carrying <math id="-5264907446658696089" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the inverse of the transversal element carrying <math id="-2039398624477600615" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -1578,7 +1578,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}</annotation>
   </semantics>
-</math> to <math id="666046041481468971" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="-1937612919798236913" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

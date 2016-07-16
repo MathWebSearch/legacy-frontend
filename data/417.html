@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 56: Rings-&gt;56.4-2 IsUniqueFactorizationRing</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap56.html#X789A917085DB7527"></meta>
+        <title>GAP (ref) - Chapter 56: Rings &amp;#8614; 56.4-2 IsUniqueFactorizationRing</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap56_mj.html#X789A917085DB7527"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">56.4-2 IsUniqueFactorizationRing</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsUniqueFactorizationRing</code>( <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A ring <var class="Arg">R</var> is called a <em>unique factorization ring</em> if it is an integral ring (see <code class="func">IsIntegralRing</code> (<a shape="rect" href="chap56_mj.html#X87A7D5B584713B52"><span class="RefLink">56.4-1</span></a>)), and every nonzero element has a unique factorization into irreducible elements, i.e., a unique representation as product of irreducibles (see <code class="func">IsIrreducibleRingElement</code> (<a shape="rect" href="chap56_mj.html#X7CD7C64A7D961A18"><span class="RefLink">56.5-7</span></a>)). Unique in this context means unique up to permutations of the factors and up to multiplication of the factors by units (see <code class="func">Units</code> (<a shape="rect" href="chap56_mj.html#X853C045B7BA6A580"><span class="RefLink">56.5-2</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">Mathematically, a field should therefore also be a unique factorization ring, since every nonzero element is a unit. In <strong class="pkg">GAP</strong>, however, at least at present fields do not lie in the filter <code class="func">IsUniqueFactorizationRing</code>, since operations such as <code class="func">Factors</code> (<a shape="rect" href="chap56_mj.html#X82D6EDC685D12AE2"><span class="RefLink">56.5-9</span></a>), <code class="func">Gcd</code> (<a shape="rect" href="chap56_mj.html#X7DE207718456F98F"><span class="RefLink">56.7-1</span></a>), <code class="func">StandardAssociate</code> (<a shape="rect" href="chap56_mj.html#X7B1A9A4C7C59FB36"><span class="RefLink">56.5-5</span></a>) and so on do not apply to fields (the results would be trivial, and not especially useful) and methods which require their arguments to lie in <code class="func">IsUniqueFactorizationRing</code> expect these operations to work.</p><p xmlns="http://www.w3.org/1999/xhtml">(Note that we cannot install a subset maintained method for this filter since the factorization of an element needs not exist in a subring. As an example, consider the subring <math id="-3292426786362636584" display="inline" alttext="4?+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">56.4-2 IsUniqueFactorizationRing</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsUniqueFactorizationRing</code>( <var class="Arg">R</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A ring <var class="Arg">R</var> is called a <em>unique factorization ring</em> if it is an integral ring (see <code class="func">IsIntegralRing</code> (<a shape="rect" href="chap56_mj.html#X87A7D5B584713B52"><span class="RefLink">56.4-1</span></a>)), and every nonzero element has a unique factorization into irreducible elements, i.e., a unique representation as product of irreducibles (see <code class="func">IsIrreducibleRingElement</code> (<a shape="rect" href="chap56_mj.html#X7CD7C64A7D961A18"><span class="RefLink">56.5-7</span></a>)). Unique in this context means unique up to permutations of the factors and up to multiplication of the factors by units (see <code class="func">Units</code> (<a shape="rect" href="chap56_mj.html#X853C045B7BA6A580"><span class="RefLink">56.5-2</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">Mathematically, a field should therefore also be a unique factorization ring, since every nonzero element is a unit. In <strong class="pkg">GAP</strong>, however, at least at present fields do not lie in the filter <code class="func">IsUniqueFactorizationRing</code>, since operations such as <code class="func">Factors</code> (<a shape="rect" href="chap56_mj.html#X82D6EDC685D12AE2"><span class="RefLink">56.5-9</span></a>), <code class="func">Gcd</code> (<a shape="rect" href="chap56_mj.html#X7DE207718456F98F"><span class="RefLink">56.7-1</span></a>), <code class="func">StandardAssociate</code> (<a shape="rect" href="chap56_mj.html#X7B1A9A4C7C59FB36"><span class="RefLink">56.5-5</span></a>) and so on do not apply to fields (the results would be trivial, and not especially useful) and methods which require their arguments to lie in <code class="func">IsUniqueFactorizationRing</code> expect these operations to work.</p><p xmlns="http://www.w3.org/1999/xhtml">(Note that we cannot install a subset maintained method for this filter since the factorization of an element needs not exist in a subring. As an example, consider the subring <math id="7606546679646292479" display="inline" alttext="4?+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">4?+1</annotation>
   </semantics>
-</math> of the ring <math id="8302324840799627068" display="inline" alttext="4?+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of the ring <math id="7044150594374645764" display="inline" alttext="4?+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -51,7 +51,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">4?+1</annotation>
   </semantics>
-</math>; in the subring, the element <math id="-1496554463813740726" display="inline" alttext="3\cdot 3\cdot 11\cdot 7" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>; in the subring, the element <math id="1167947520565622917" display="inline" alttext="3\cdot 3\cdot 11\cdot 7" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
       <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">3</mn>
@@ -73,7 +73,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">3\cdot 3\cdot 11\cdot 7</annotation>
   </semantics>
-</math> has the two factorizations <math id="-4479920447264311868" display="inline" alttext="33\cdot 21=9\cdot 77" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> has the two factorizations <math id="3244029874418131940" display="inline" alttext="33\cdot 21=9\cdot 77" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">
       <mrow xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">
@@ -105,7 +105,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">33\cdot 21=9\cdot 77</annotation>
   </semantics>
-</math>, but in the large ring there is the unique factorization <math id="6104744988419622965" display="inline" alttext="(-3)\cdot(-3)\cdot(-11)\cdot(-7)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, but in the large ring there is the unique factorization <math id="5035485142219619786" display="inline" alttext="(-3)\cdot(-3)\cdot(-11)\cdot(-7)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.21.cmml" id="p1.1.m1.1.21">
       <mrow xref="p1.1.m1.1.21.1.2.cmml" id="p1.1.m1.1.21.1">
@@ -167,7 +167,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(-3)\cdot(-3)\cdot(-11)\cdot(-7)</annotation>
   </semantics>
-</math>, and it is easy to see that every element in <math id="5705740285022694550" display="inline" alttext="4?+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and it is easy to see that every element in <math id="5808439104890691838" display="inline" alttext="4?+1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">

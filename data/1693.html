@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.1-1 PowerMap</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X781FAA497E3B4D1A"></meta>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables &amp;#8614; 73.1-1 PowerMap</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73_mj.html#X781FAA497E3B4D1A"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.1-1 PowerMap</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PowerMap</code>( <var class="Arg">tbl</var>, <var class="Arg">n</var>[, <var class="Arg">class</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PowerMapOp</code>( <var class="Arg">tbl</var>, <var class="Arg">n</var>[, <var class="Arg">class</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ComputedPowerMaps</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Called with first argument a character table <var class="Arg">tbl</var> and second argument an integer <var class="Arg">n</var>, <code class="func">PowerMap</code> returns the <var class="Arg">n</var>-th power map of <var class="Arg">tbl</var>. This is a list containing at position <math id="3878948213207463202" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.1-1 PowerMap</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PowerMap</code>( <var class="Arg">tbl</var>, <var class="Arg">n</var>[, <var class="Arg">class</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PowerMapOp</code>( <var class="Arg">tbl</var>, <var class="Arg">n</var>[, <var class="Arg">class</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ComputedPowerMaps</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Called with first argument a character table <var class="Arg">tbl</var> and second argument an integer <var class="Arg">n</var>, <code class="func">PowerMap</code> returns the <var class="Arg">n</var>-th power map of <var class="Arg">tbl</var>. This is a list containing at position <math id="-2111527686363559740" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> the position of the class of <var class="Arg">n</var>-th powers of the elements in the <math id="-6445357669055822437" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> the position of the class of <var class="Arg">n</var>-th powers of the elements in the <math id="5060825129133851711" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math>-th class of <var class="Arg">tbl</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the additional third argument <var class="Arg">class</var> is present then the position of <var class="Arg">n</var>-th powers of the <var class="Arg">class</var>-th class is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">If the <var class="Arg">n</var>-th power map is not uniquely determined by <var class="Arg">tbl</var> then <code class="keyw">fail</code> is returned. This can happen only if <var class="Arg">tbl</var> has no access to its underlying group.</p><p xmlns="http://www.w3.org/1999/xhtml">The power maps of <var class="Arg">tbl</var> that were computed already by <code class="func">PowerMap</code> are stored in <var class="Arg">tbl</var> as value of the attribute <code class="func">ComputedPowerMaps</code>, the <math id="401715177950034732" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>-th class of <var class="Arg">tbl</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the additional third argument <var class="Arg">class</var> is present then the position of <var class="Arg">n</var>-th powers of the <var class="Arg">class</var>-th class is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">If the <var class="Arg">n</var>-th power map is not uniquely determined by <var class="Arg">tbl</var> then <code class="keyw">fail</code> is returned. This can happen only if <var class="Arg">tbl</var> has no access to its underlying group.</p><p xmlns="http://www.w3.org/1999/xhtml">The power maps of <var class="Arg">tbl</var> that were computed already by <code class="func">PowerMap</code> are stored in <var class="Arg">tbl</var> as value of the attribute <code class="func">ComputedPowerMaps</code>, the <math id="6300701861348125749" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math>-th power map at position <math id="-2673340570453405574" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>-th power map at position <math id="1962051728350271466" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

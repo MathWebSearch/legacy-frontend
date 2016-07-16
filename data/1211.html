@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.5-20 CyclesOfTransformation</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X7EAA15557D55D93B"></meta>
+        <title>GAP (ref) - Chapter 53: Transformations &amp;#8614; 53.5-20 CyclesOfTransformation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53_mj.html#X7EAA15557D55D93B"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.5-20 CyclesOfTransformation</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CyclesOfTransformation</code>( <var class="Arg">f</var>[, <var class="Arg">list</var>] )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A list of lists of positive integers.</p><p xmlns="http://www.w3.org/1999/xhtml">When the arguments of this function are a transformation<var class="Arg">f</var> and a list <var class="Arg">list</var>, it returns a list of the cycles of the components of <var class="Arg">f</var> containing any element of <var class="Arg">list</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the optional second argument is not present, then the range <code class="code">[1..DegreeOfTransformation(<var class="Arg">f</var>)]</code> is used as the default value for <var class="Arg">list</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=Transformation( [ 6, 12, 11, 1, 7, 6, 2, 8, 4, 7, 5, 12 ] );</span>

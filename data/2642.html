@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.2-2 Subspace</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X78C9826780BC9AE6"></meta>
+        <title>GAP (ref) - Chapter 61: Vector Spaces &amp;#8614; 61.2-2 Subspace</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61_mj.html#X78C9826780BC9AE6"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.2-2 Subspace</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Subspace</code>( <var class="Arg">V</var>, <var class="Arg">gens</var>[, <var class="Arg">&quot;basis&quot;</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SubspaceNC</code>( <var class="Arg">V</var>, <var class="Arg">gens</var>[, <var class="Arg">&quot;basis&quot;</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For an <math id="1440494365964545033" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.2-2 Subspace</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Subspace</code>( <var class="Arg">V</var>, <var class="Arg">gens</var>[, <var class="Arg">&quot;basis&quot;</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SubspaceNC</code>( <var class="Arg">V</var>, <var class="Arg">gens</var>[, <var class="Arg">&quot;basis&quot;</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For an <math id="-785628128064474959" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math>-vector space <var class="Arg">V</var> and a list or collection <var class="Arg">gens</var> that is a subset of <var class="Arg">V</var>, <code class="func">Subspace</code> returns the <math id="-9050180976911686144" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>-vector space <var class="Arg">V</var> and a list or collection <var class="Arg">gens</var> that is a subset of <var class="Arg">V</var>, <code class="func">Subspace</code> returns the <math id="-3296950134438568265" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math>-vector space spanned by <var class="Arg">gens</var>; if <var class="Arg">gens</var> is empty then the trivial subspace (see <code class="func">TrivialSubspace</code> (<a shape="rect" href="chap61_mj.html#X86DC71A9835430FD"><span class="RefLink">61.3-2</span></a>)) of <var class="Arg">V</var> is returned. The parent (see <a shape="rect" href="chap31_mj.html#X7CBDD36E7B7BE286"><span class="RefLink">31.7</span></a>) of the returned vector space is set to <var class="Arg">V</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SubspaceNC</code> does the same as <code class="func">Subspace</code>, except that it omits the check whether <var class="Arg">gens</var> is a subset of <var class="Arg">V</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional string <var class="Arg">&quot;basis&quot;</var> indicates that <var class="Arg">gens</var> is known to be linearly independent over <math id="-2032556010719405816" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>-vector space spanned by <var class="Arg">gens</var>; if <var class="Arg">gens</var> is empty then the trivial subspace (see <code class="func">TrivialSubspace</code> (<a shape="rect" href="chap61_mj.html#X86DC71A9835430FD"><span class="RefLink">61.3-2</span></a>)) of <var class="Arg">V</var> is returned. The parent (see <a shape="rect" href="chap31_mj.html#X7CBDD36E7B7BE286"><span class="RefLink">31.7</span></a>) of the returned vector space is set to <var class="Arg">V</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SubspaceNC</code> does the same as <code class="func">Subspace</code>, except that it omits the check whether <var class="Arg">gens</var> is a subset of <var class="Arg">V</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional string <var class="Arg">&quot;basis&quot;</var> indicates that <var class="Arg">gens</var> is known to be linearly independent over <math id="-8798408881074347339" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

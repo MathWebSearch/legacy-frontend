@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 81: An Example – Residue Class Rings-&gt;81.4 Compatibility of Residue Class Rings with Prime Fields</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap81.html#X83127B258512C436"></meta>
+        <title>GAP (ref) - Chapter 81: An Example – Residue Class Rings &amp;#8614; 81.4 Compatibility of Residue Class Rings with Prime Fields</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap81_mj.html#X83127B258512C436"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">81.4 <span class="Heading">Compatibility of Residue Class Rings with Prime Fields</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The above implementation of residue classes and residue class rings has at least two disadvantages. First, if <math id="-6778154066152511687" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">81.4 <span class="Heading">Compatibility of Residue Class Rings with Prime Fields</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The above implementation of residue classes and residue class rings has at least two disadvantages. First, if <math id="-7801691864001044498" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math> is a prime then the ring <math id="326889630977511495" display="inline" alttext="?/p?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a prime then the ring <math id="9128786104598046421" display="inline" alttext="?/p?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -35,7 +35,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/p?</annotation>
   </semantics>
-</math> is in fact a field, but the return values of <code class="code">MyZmodnZ</code> are never regarded as fields because they are not in the category <code class="func">IsMagmaWithInversesIfNonzero</code> (<a shape="rect" href="chap35_mj.html#X83E4903D7FBB2E24"><span class="RefLink">35.1-3</span></a>). Second, and this makes the example really interesting, there are already elements of finite prime fields implemented in <strong class="pkg">GAP</strong>, and we may want to identify them with elements in <math id="8042817326378964279" display="inline" alttext="?/p?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is in fact a field, but the return values of <code class="code">MyZmodnZ</code> are never regarded as fields because they are not in the category <code class="func">IsMagmaWithInversesIfNonzero</code> (<a shape="rect" href="chap35_mj.html#X83E4903D7FBB2E24"><span class="RefLink">35.1-3</span></a>). Second, and this makes the example really interesting, there are already elements of finite prime fields implemented in <strong class="pkg">GAP</strong>, and we may want to identify them with elements in <math id="58368057995294337" display="inline" alttext="?/p?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -71,7 +71,7 @@
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeclareGlobalFunction( &quot;MyZmodnZObj&quot; );</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput"/>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DeclareGlobalFunction( &quot;MyZmodnZ&quot; );</span>
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">As in the previous section, all (newly introduced) elements of rings <math id="8514367100216264203" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">As in the previous section, all (newly introduced) elements of rings <math id="-1504437941804158635" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -95,7 +95,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math> lie in the category <code class="code">IsMyZmodnZObj</code>. But now we introduce two subcategories, namely <code class="code">IsMyZmodnZObjNonprime</code> for all elements in rings <math id="-6461623181516190892" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> lie in the category <code class="code">IsMyZmodnZObj</code>. But now we introduce two subcategories, namely <code class="code">IsMyZmodnZObjNonprime</code> for all elements in rings <math id="-5887123540128871291" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -119,7 +119,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math> where <math id="8644011247621880346" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> where <math id="-4795888003023150553" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

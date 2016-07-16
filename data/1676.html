@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.4-2 RepresentativesFusions</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X821D11D180B5D317"></meta>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables &amp;#8614; 73.4-2 RepresentativesFusions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73_mj.html#X821D11D180B5D317"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.4-2 RepresentativesFusions</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RepresentativesFusions</code>( <var class="Arg">subtbl</var>, <var class="Arg">listofmaps</var>, <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">listofmaps</var> be a list of class fusions from the character table <var class="Arg">subtbl</var> to the character table <var class="Arg">tbl</var>. <code class="func">RepresentativesFusions</code> returns a list of orbit representatives of the class fusions under the action of maximal admissible subgroups of the table automorphism groups of these character tables.</p><p xmlns="http://www.w3.org/1999/xhtml">Instead of the character tables <var class="Arg">subtbl</var> and <var class="Arg">tbl</var>, also the permutation groups of their table automorphisms (see <code class="func">AutomorphismsOfTable</code> (<a shape="rect" href="chap71_mj.html#X7C2753DE8094F4BA"><span class="RefLink">71.9-4</span></a>)) may be entered.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">fus:= GetFusionMap( subtbl, tbl );</span>

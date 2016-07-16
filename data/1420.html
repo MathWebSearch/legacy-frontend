@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.15-1 InverseMatMod</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X7D8D1E0E83C7F872"></meta>
+        <title>GAP (ref) - Chapter 24: Matrices &amp;#8614; 24.15-1 InverseMatMod</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24_mj.html#X7D8D1E0E83C7F872"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.15-1 InverseMatMod</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseMatMod</code>( <var class="Arg">mat</var>, <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a square matrix <var class="Arg">mat</var>, <code class="func">InverseMatMod</code> returns a matrix <var class="Arg">inv</var> such that <code class="code"><var class="Arg">inv</var> * <var class="Arg">mat</var></code> is congruent to the identity matrix modulo <var class="Arg">obj</var>, if such a matrix exists, and <code class="keyw">fail</code> otherwise.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mat:= [ [ 1, 2 ], [ 3, 4 ] ];;  inv:= InverseMatMod( mat, 5 );</span>

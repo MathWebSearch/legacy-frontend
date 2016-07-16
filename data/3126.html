@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains-&gt;87.3-2 Enumerators for cosets of characteristic factors</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87.html#X84A94914876C03F0"></meta>
+        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains &amp;#8614; 87.3-2 Enumerators for cosets of characteristic factors</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87_mj.html#X84A94914876C03F0"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">87.3-2 <span class="Heading">Enumerators for cosets of characteristic factors</span></h5><p xmlns="http://www.w3.org/1999/xhtml">So far we have not used the fact that the characteristic factors are elementary abelian, but we will do so from here on. Our first task is to implement an enumerator (see <code class="func">AsList</code> (<a shape="rect" href="chap30_mj.html#X8289FCCC8274C89D"><span class="RefLink">30.3-8</span></a>) and <a shape="rect" href="chap21_mj.html#X7EA3ACE27E43D174"><span class="RefLink">21.23</span></a>) for a coset of a characteristic factor in a solvable group <math id="7352436306583722204" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">87.3-2 <span class="Heading">Enumerators for cosets of characteristic factors</span></h5><p xmlns="http://www.w3.org/1999/xhtml">So far we have not used the fact that the characteristic factors are elementary abelian, but we will do so from here on. Our first task is to implement an enumerator (see <code class="func">AsList</code> (<a shape="rect" href="chap30_mj.html#X8289FCCC8274C89D"><span class="RefLink">30.3-8</span></a>) and <a shape="rect" href="chap21_mj.html#X7EA3ACE27E43D174"><span class="RefLink">21.23</span></a>) for a coset of a characteristic factor in a solvable group <math id="-830049859684127376" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>. We assume that such a coset <math id="-8936002586000553074" display="inline" alttext="gN/M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. We assume that such a coset <math id="126980874847841547" display="inline" alttext="gN/M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -35,7 +35,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">gN/M</annotation>
   </semantics>
-</math> is given by</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">(1)</strong></dt><dd><p>a pcgs for the group <math id="-956876927387974997" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is given by</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">(1)</strong></dt><dd><p>a pcgs for the group <math id="241762476258220485" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -43,7 +43,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> (see <code class="func">Pcgs</code> (<a shape="rect" href="chap45_mj.html#X84C3750C7A4EEC34"><span class="RefLink">45.2-1</span></a>)), let <math id="-5687052361120426738" display="inline" alttext="n=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (see <code class="func">Pcgs</code> (<a shape="rect" href="chap45_mj.html#X84C3750C7A4EEC34"><span class="RefLink">45.2-1</span></a>)), let <math id="1434453933726132986" display="inline" alttext="n=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
@@ -59,7 +59,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n=</annotation>
   </semantics>
-</math><code class="code">Length( </code><math id="-31182481499537550" display="inline" alttext="pcgs" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">Length( </code><math id="6886696120710763167" display="inline" alttext="pcgs" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
@@ -83,7 +83,7 @@
   </semantics>
 </math><code class="code"> )</code>;</p>
 
-</dd><dt><strong class="Mark">(2)</strong></dt><dd><p>a range <math id="-5699358684822171570" display="inline" alttext="range=[start..stop]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">(2)</strong></dt><dd><p>a range <math id="4879129493606773181" display="inline" alttext="range=[start..stop]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mi id="p1.1.m1.1.1">r</mi>
@@ -137,7 +137,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1k" encoding="application/x-tex">range=[start..stop]</annotation>
   </semantics>
-</math> indicating that <math id="373436999033559626" display="inline" alttext="N=\langle pcgs\{[start..n]\}\rangle" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> indicating that <math id="-4041293174696309294" display="inline" alttext="N=\langle pcgs\{[start..n]\}\rangle" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mi id="p1.1.m1.1.1">N</mi>
@@ -203,7 +203,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1g" encoding="application/x-tex">N=\langle pcgs\{[start..n]\}\rangle</annotation>
   </semantics>
-</math> and <math id="-2272437148328571685" display="inline" alttext="M=\langle pcgs\{[stop+1..n]\}\rangle" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-5756185260652006229" display="inline" alttext="M=\langle pcgs\{[stop+1..n]\}\rangle" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mi id="p1.1.m1.1.1">M</mi>
@@ -271,7 +271,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1g" encoding="application/x-tex">M=\langle pcgs\{[stop+1..n]\}\rangle</annotation>
   </semantics>
-</math>, i.e., the cosets of <math id="1018932587519627825" display="inline" alttext="pcgs\{range\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, i.e., the cosets of <math id="4792973727083915498" display="inline" alttext="pcgs\{range\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
@@ -319,7 +319,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">pcgs\{range\}</annotation>
   </semantics>
-</math> form a base for the vector space <math id="-5366742001720691026" display="inline" alttext="N/M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> form a base for the vector space <math id="3976521533652016688" display="inline" alttext="N/M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">N</mi>
@@ -337,7 +337,7 @@
   </semantics>
 </math>;</p>
 
-</dd><dt><strong class="Mark">(3)</strong></dt><dd><p>the representative <math id="7064127045423955714" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">(3)</strong></dt><dd><p>the representative <math id="-3855252997455858176" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -347,7 +347,7 @@
   </semantics>
 </math>.</p>
 
-</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">We first define a new representation for such enumerators and then construct them by simply putting these three pieces of data into a record object. The enumerator should behave as a list of group elements (representing cosets modulo <math id="4130708021681265604" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">We first define a new representation for such enumerators and then construct them by simply putting these three pieces of data into a record object. The enumerator should behave as a list of group elements (representing cosets modulo <math id="302752769849436710" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -355,7 +355,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
   </semantics>
-</math>), consequently, its family will be the family of the <math id="4694981220795607454" display="inline" alttext="pcgs" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>), consequently, its family will be the family of the <math id="8130520654969227401" display="inline" alttext="pcgs" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>

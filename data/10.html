@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.11-22 NaturalHomomorphismBySubAlgebraModule</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X7885AAC87FDCF649"></meta>
+        <title>GAP (ref) - Chapter 62: Algebras &amp;#8614; 62.11-22 NaturalHomomorphismBySubAlgebraModule</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62_mj.html#X7885AAC87FDCF649"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.11-22 NaturalHomomorphismBySubAlgebraModule</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ NaturalHomomorphismBySubAlgebraModule</code>( <var class="Arg">V</var>, <var class="Arg">W</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">V</var> must be a sub-algebra module of <var class="Arg">V</var>. This function returns the projection from <var class="Arg">V</var> onto <code class="code"><var class="Arg">V</var>/<var class="Arg">W</var></code>. It is a linear map, that is also a module homomorphism. As usual images can be formed with <code class="code">Image( f, v )</code> and pre-images with <code class="code">PreImagesRepresentative( f, u )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The quotient module can also be formed by entering <code class="code"><var class="Arg">V</var>/<var class="Arg">W</var></code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= Rationals^[3,3];;</span>

@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains-&gt;87.1 Generalized Conjugation Technique</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87.html#X870717BA831A0365"></meta>
+        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains &amp;#8614; 87.1 Generalized Conjugation Technique</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87_mj.html#X870717BA831A0365"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">87.1 <span class="Heading">Generalized Conjugation Technique</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The command <code class="code">ConjugateGroup( <var class="Arg">G</var>, <var class="Arg">p</var> )</code> (see <code class="func">ConjugateGroup</code> (<a shape="rect" href="chap39_mj.html#X7E4143A08040BB47"><span class="RefLink">39.2-6</span></a>)) for a permutation group <var class="Arg">G</var> with stabilizer chain equips its result also with a stabilizer chain, namely with the chain of <var class="Arg">G</var> conjugate by <var class="Arg">p</var>. Conjugating a stabilizer chain by a permutation <var class="Arg">p</var> means replacing all the points which appear in the <code class="code">orbit</code> components by their images under <var class="Arg">p</var> and replacing every permutation <var class="Arg">g</var> which appears in a <code class="code">labels</code> or <code class="code">transversal</code> component by its conjugate <math id="2279964860403212570" display="inline" alttext="g^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">87.1 <span class="Heading">Generalized Conjugation Technique</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The command <code class="code">ConjugateGroup( <var class="Arg">G</var>, <var class="Arg">p</var> )</code> (see <code class="func">ConjugateGroup</code> (<a shape="rect" href="chap39_mj.html#X7E4143A08040BB47"><span class="RefLink">39.2-6</span></a>)) for a permutation group <var class="Arg">G</var> with stabilizer chain equips its result also with a stabilizer chain, namely with the chain of <var class="Arg">G</var> conjugate by <var class="Arg">p</var>. Conjugating a stabilizer chain by a permutation <var class="Arg">p</var> means replacing all the points which appear in the <code class="code">orbit</code> components by their images under <var class="Arg">p</var> and replacing every permutation <var class="Arg">g</var> which appears in a <code class="code">labels</code> or <code class="code">transversal</code> component by its conjugate <math id="8580116962817645295" display="inline" alttext="g^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
@@ -18,7 +18,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g^{p}</annotation>
   </semantics>
-</math>. The conjugate <math id="-7154857143544407294" display="inline" alttext="g^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. The conjugate <math id="-4498622031884522121" display="inline" alttext="g^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
@@ -33,7 +33,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g^{p}</annotation>
   </semantics>
-</math> acts on the mapped points exactly as <var class="Arg">g</var> did on the original points, i.e., <math id="2023462099884392224" display="inline" alttext="(pnt.p).g^{p}=(pnt.g).p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> acts on the mapped points exactly as <var class="Arg">g</var> did on the original points, i.e., <math id="-7004392956519037318" display="inline" alttext="(pnt.p).g^{p}=(pnt.g).p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mrow xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">
@@ -99,7 +99,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1g" encoding="application/x-tex">(pnt.p).g^{p}=(pnt.g).p</annotation>
   </semantics>
-</math>. Since the entries in the <code class="code">translabels</code> components are integers pointing to positions of the <code class="code">labels</code> list, the <code class="code">translabels</code> lists just have to be permuted by <var class="Arg">p</var> for the conjugated stabilizer. Then <code class="code">generators</code> is reconstructed as <code class="code">labels{ genlabels }</code> and <code class="code">transversal{ orbit }</code> as <code class="code">labels{ translabels{ orbit } }</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">This conjugation technique can be generalized. Instead of mapping points and permutations under the same permutation <var class="Arg">p</var>, it is sometimes desirable (e.g., in the context of permutation group homomorphisms) to map the points with an arbitrary mapping <math id="-7983938565358478346" display="inline" alttext="map" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Since the entries in the <code class="code">translabels</code> components are integers pointing to positions of the <code class="code">labels</code> list, the <code class="code">translabels</code> lists just have to be permuted by <var class="Arg">p</var> for the conjugated stabilizer. Then <code class="code">generators</code> is reconstructed as <code class="code">labels{ genlabels }</code> and <code class="code">transversal{ orbit }</code> as <code class="code">labels{ translabels{ orbit } }</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">This conjugation technique can be generalized. Instead of mapping points and permutations under the same permutation <var class="Arg">p</var>, it is sometimes desirable (e.g., in the context of permutation group homomorphisms) to map the points with an arbitrary mapping <math id="-8164567244106649853" display="inline" alttext="map" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
@@ -118,7 +118,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">map</annotation>
   </semantics>
-</math> and the permutations with a homomorphism <math id="7211789044882871920" display="inline" alttext="hom" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and the permutations with a homomorphism <math id="-7340726383725460080" display="inline" alttext="hom" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">h</mi>
@@ -137,7 +137,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">hom</annotation>
   </semantics>
-</math> such that the compatibility of the actions is still valid: <math id="3925901876987362206" display="inline" alttext="map(pnt).hom(g)=map(pnt.g)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that the compatibility of the actions is still valid: <math id="-1330879910437015367" display="inline" alttext="map(pnt).hom(g)=map(pnt.g)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mi id="p1.1.m1.1.1">m</mi>
@@ -215,7 +215,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1o" encoding="application/x-tex">map(pnt).hom(g)=map(pnt.g)</annotation>
   </semantics>
-</math>. (Of course the ordinary conjugation is a special case of this, with <math id="-85153231227608107" display="inline" alttext="map(pnt)=pnt.p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. (Of course the ordinary conjugation is a special case of this, with <math id="6629142844149707107" display="inline" alttext="map(pnt)=pnt.p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15">
       <mrow xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.2">
@@ -279,7 +279,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">map(pnt)=pnt.p</annotation>
   </semantics>
-</math> and <math id="6864253167209105512" display="inline" alttext="hom(g)=g^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="3361051535769737646" display="inline" alttext="hom(g)=g^{p}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">
       <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">
@@ -320,7 +320,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">hom(g)=g^{p}</annotation>
   </semantics>
-</math>.)</p><p xmlns="http://www.w3.org/1999/xhtml">In the generalized case, the &quot;conjugated&quot; chain need not be a stabilizer chain for the image of <math id="-4481390346427637549" display="inline" alttext="hom" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.)</p><p xmlns="http://www.w3.org/1999/xhtml">In the generalized case, the &quot;conjugated&quot; chain need not be a stabilizer chain for the image of <math id="-5829961007690281566" display="inline" alttext="hom" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">h</mi>
@@ -339,7 +339,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">hom</annotation>
   </semantics>
-</math>, since the &quot;preimage&quot; of the stabilizer of <math id="-7496378734511358811" display="inline" alttext="map(b)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, since the &quot;preimage&quot; of the stabilizer of <math id="-2693552694678579183" display="inline" alttext="map(b)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
@@ -365,7 +365,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">map(b)</annotation>
   </semantics>
-</math> (where <math id="-4222918638142884535" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (where <math id="4362179826551297679" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -373,7 +373,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
   </semantics>
-</math> is a base point) need not fix <math id="-3970678995491647642" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a base point) need not fix <math id="-5556247214484682804" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -381,7 +381,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
   </semantics>
-</math>, but only fixes the preimage <math id="2761718163183864734" display="inline" alttext="map^{{-1}}(map(b))" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, but only fixes the preimage <math id="-2619045391968647806" display="inline" alttext="map^{{-1}}(map(b))" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
@@ -438,7 +438,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">map^{{-1}}(map(b))</annotation>
   </semantics>
-</math> setwise. Therefore the method can be applied only to one level and the next stabilizer must be computed explicitly. But if <math id="6067658922135899841" display="inline" alttext="map" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> setwise. Therefore the method can be applied only to one level and the next stabilizer must be computed explicitly. But if <math id="-8714818175521097590" display="inline" alttext="map" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
@@ -457,7 +457,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">map</annotation>
   </semantics>
-</math> is injective, we have <math id="5363598969845881150" display="inline" alttext="map(b).hom(g)=map(b)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is injective, we have <math id="2043700604647901571" display="inline" alttext="map(b).hom(g)=map(b)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.21.1.cmml" id="p1.1.m1.1.21">
       <mrow xref="p1.1.m1.1.21.1.cmml" id="p1.1.m1.1.21.2">
@@ -535,7 +535,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">map(b).hom(g)=map(b)</annotation>
   </semantics>
-</math> if and only if <math id="1193631015862127022" display="inline" alttext="b.g=b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> if and only if <math id="7700395905978589103" display="inline" alttext="b.g=b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -559,7 +559,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b.g=b</annotation>
   </semantics>
-</math>, and if this holds, then <math id="5969592151999012712" display="inline" alttext="g=w(g_{1},\ldots,g_{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and if this holds, then <math id="-1958700653235793299" display="inline" alttext="g=w(g_{1},\ldots,g_{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
@@ -609,7 +609,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g=w(g_{1},\ldots,g_{n})</annotation>
   </semantics>
-</math> is a word in the generators <math id="-8311642445410460096" display="inline" alttext="g_{1},\ldots,g_{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a word in the generators <math id="8229052800479625416" display="inline" alttext="g_{1},\ldots,g_{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
       <msub xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
@@ -641,7 +641,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g_{1},\ldots,g_{n}</annotation>
   </semantics>
-</math> of the stabilizer of <math id="-837792116927573296" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of the stabilizer of <math id="5761519542243257923" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -649,7 +649,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
   </semantics>
-</math> and <math id="5005668405422749731" display="inline" alttext="hom(g)=^{*}w(hom(g_{1}),\ldots,hom(g_{n}))" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-4186490364894467492" display="inline" alttext="hom(g)=^{*}w(hom(g_{1}),\ldots,hom(g_{n}))" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.29.cmml" id="p1.1.m1.1.29">
       <mrow xref="p1.1.m1.1.29.2.cmml" id="p1.1.m1.1.29.2">
@@ -760,7 +760,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">hom(g)=^{*}w(hom(g_{1}),\ldots,hom(g_{n}))</annotation>
   </semantics>
-</math> is in the &quot;conjugated&quot; stabilizer. If, more generally, <math id="5258239499481396555" display="inline" alttext="hom" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is in the &quot;conjugated&quot; stabilizer. If, more generally, <math id="-7422160171940643126" display="inline" alttext="hom" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">h</mi>
@@ -779,7 +779,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">hom</annotation>
   </semantics>
-</math> is a right inverse to a homomorphism <math id="4070900570978434718" display="inline" alttext="\varphi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a right inverse to a homomorphism <math id="-7722148856485045136" display="inline" alttext="\varphi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">φ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -787,7 +787,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\varphi</annotation>
   </semantics>
-</math> (i.e., <math id="-2075688997413718649" display="inline" alttext="\varphi(hom(g))=g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (i.e., <math id="287834253149775360" display="inline" alttext="\varphi(hom(g))=g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
       <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">
@@ -833,7 +833,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\varphi(hom(g))=g</annotation>
   </semantics>
-</math> for all <math id="1455787699248332855" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> for all <math id="-1162045216130762662" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -841,7 +841,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math>), equality <math id="-2781079019688234163" display="inline" alttext="*" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>), equality <math id="-839086452184932017" display="inline" alttext="*" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">*</mo>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -849,7 +849,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">*</annotation>
   </semantics>
-</math> holds modulo the kernel of <math id="-6464311533680956090" display="inline" alttext="\varphi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> holds modulo the kernel of <math id="3181258184744055409" display="inline" alttext="\varphi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">φ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -857,7 +857,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\varphi</annotation>
   </semantics>
-</math>; in this case the &quot;conjugated&quot; chain can be made into a real stabilizer chain by extending each level with the generators of the kernel and appending a proper stabilizer chain of the kernel at the end. These special cases will occur in the algorithms for permutation group homomorphisms (see <a shape="rect" href="chap40_mj.html#X83702FC27B3C3098"><span class="RefLink">40</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">To &quot;conjugate&quot; the points (i.e., <code class="code">orbit</code>) and permutations (i.e., <code class="code">labels</code>) of the Schreier tree, a loop is set up over the <code class="code">orbit</code> list constructed during the orbit algorithm, and for each vertex <math id="-6219261616985649515" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>; in this case the &quot;conjugated&quot; chain can be made into a real stabilizer chain by extending each level with the generators of the kernel and appending a proper stabilizer chain of the kernel at the end. These special cases will occur in the algorithms for permutation group homomorphisms (see <a shape="rect" href="chap40_mj.html#X83702FC27B3C3098"><span class="RefLink">40</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">To &quot;conjugate&quot; the points (i.e., <code class="code">orbit</code>) and permutations (i.e., <code class="code">labels</code>) of the Schreier tree, a loop is set up over the <code class="code">orbit</code> list constructed during the orbit algorithm, and for each vertex <math id="-2274337830367592636" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -865,7 +865,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
   </semantics>
-</math> with unique edge <math id="-7693697544609386211" display="inline" alttext="a(l)b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> with unique edge <math id="-6899523421773509623" display="inline" alttext="a(l)b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -888,7 +888,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a(l)b</annotation>
   </semantics>
-</math> ending at <math id="7903684836729889405" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> ending at <math id="8221939746969361498" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -896,7 +896,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
   </semantics>
-</math>, the label <math id="5893449177230563789" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, the label <math id="-2110711725451705003" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -904,7 +904,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
   </semantics>
-</math> is mapped with <math id="1265542633879481894" display="inline" alttext="hom" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is mapped with <math id="6868142544357158526" display="inline" alttext="hom" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">h</mi>
@@ -923,7 +923,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">hom</annotation>
   </semantics>
-</math> and <math id="7170390195296095089" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-4076884571286102993" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -931,7 +931,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
   </semantics>
-</math> with <math id="5328254774495954310" display="inline" alttext="map" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> with <math id="-7802967756765764198" display="inline" alttext="map" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
@@ -950,7 +950,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">map</annotation>
   </semantics>
-</math>. We assume that the <code class="code">orbit</code> list was built w.r.t. a certain ordering <math id="-3284395999839717697" display="inline" alttext="&amp;lt;" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. We assume that the <code class="code">orbit</code> list was built w.r.t. a certain ordering <math id="8519774324485154908" display="inline" alttext="&amp;lt;" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -972,7 +972,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">&amp;lt;</annotation>
   </semantics>
-</math> of the labels, where <math id="3180712755016651893" display="inline" alttext="l^{\prime}&amp;lt;l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of the labels, where <math id="-6886695017277044351" display="inline" alttext="l^{\prime}&amp;lt;l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
       <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
@@ -1008,7 +1008,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">l^{\prime}&amp;lt;l</annotation>
   </semantics>
-</math> means that every point in the orbit was mapped with <math id="3009649326390446665" display="inline" alttext="l^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> means that every point in the orbit was mapped with <math id="4140400103118605844" display="inline" alttext="l^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
@@ -1023,7 +1023,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">l^{\prime}</annotation>
   </semantics>
-</math> before it was mapped with <math id="4447503420548556210" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> before it was mapped with <math id="2190336951177105678" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1031,7 +1031,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
   </semantics>
-</math>. This shape of the <code class="code">orbit</code> list is guaranteed if the Schreier tree is extended only by <code class="func">AddGeneratorsExtendSchreierTree</code> (<a shape="rect" href="chap43_mj.html#X8373007880EBF736"><span class="RefLink">43.11-10</span></a>), and it is then also guaranteed for the &quot;conjugated&quot; Schreier tree. (The ordering of the labels cannot be read from the Schreier tree, however.)</p><p xmlns="http://www.w3.org/1999/xhtml">In the generalized case, it can happen that the edge <math id="4945104847698350924" display="inline" alttext="a(l)b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. This shape of the <code class="code">orbit</code> list is guaranteed if the Schreier tree is extended only by <code class="func">AddGeneratorsExtendSchreierTree</code> (<a shape="rect" href="chap43_mj.html#X8373007880EBF736"><span class="RefLink">43.11-10</span></a>), and it is then also guaranteed for the &quot;conjugated&quot; Schreier tree. (The ordering of the labels cannot be read from the Schreier tree, however.)</p><p xmlns="http://www.w3.org/1999/xhtml">In the generalized case, it can happen that the edge <math id="8996299217805129214" display="inline" alttext="a(l)b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -1054,7 +1054,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a(l)b</annotation>
   </semantics>
-</math> bears a label <math id="7218800307574638747" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> bears a label <math id="-2036200186225103031" display="inline" alttext="l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">l</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1062,7 +1062,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">l</annotation>
   </semantics>
-</math> whose image is &quot;old&quot;, i.e., equal to the image of an earlier label <math id="-6561779702745303781" display="inline" alttext="l^{\prime}&amp;lt;l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> whose image is &quot;old&quot;, i.e., equal to the image of an earlier label <math id="-4324434981528505404" display="inline" alttext="l^{\prime}&amp;lt;l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
       <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
@@ -1098,7 +1098,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">l^{\prime}&amp;lt;l</annotation>
   </semantics>
-</math>. Because of the compatibility of the actions we then have <math id="-940242641698109197" display="inline" alttext="map(b)=map(a).hom(l)^{{-1}}=map(a).hom(l^{\prime})^{{-1}}=map(a{{l^{\prime}}}^%
+</math>. Because of the compatibility of the actions we then have <math id="1088978452580311142" display="inline" alttext="map(b)=map(a).hom(l)^{{-1}}=map(a).hom(l^{\prime})^{{-1}}=map(a{{l^{\prime}}}^%
 {{-1}})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.48.1.cmml" id="p1.1.m1.1.48">
@@ -1312,7 +1312,7 @@
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">map(b)=map(a).hom(l)^{{-1}}=map(a).hom(l^{\prime})^{{-1}}=map(a{{l^{\prime}}}^%
 {{-1}})</annotation>
   </semantics>
-</math>, so <math id="7889279545698815444" display="inline" alttext="map(b)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, so <math id="8172635876541056524" display="inline" alttext="map(b)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
@@ -1338,7 +1338,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">map(b)</annotation>
   </semantics>
-</math> is already equal to the image of the vertex <math id="-6525198375067986580" display="inline" alttext="a{{l^{\prime}}}^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is already equal to the image of the vertex <math id="-7646703487812437129" display="inline" alttext="a{{l^{\prime}}}^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -1374,7 +1374,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a{{l^{\prime}}}^{{-1}}</annotation>
   </semantics>
-</math>. This vertex must have been encountered before <math id="-8277071174542516040" display="inline" alttext="b=al^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. This vertex must have been encountered before <math id="4944220124306903225" display="inline" alttext="b=al^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -1411,7 +1411,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b=al^{{-1}}</annotation>
   </semantics>
-</math> because <math id="6803610815172660079" display="inline" alttext="l^{\prime}&amp;lt;l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> because <math id="-7215690813851363206" display="inline" alttext="l^{\prime}&amp;lt;l" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
       <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
@@ -1447,7 +1447,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">l^{\prime}&amp;lt;l</annotation>
   </semantics>
-</math>. We conclude that the image of a label can be &quot;old&quot; only if the vertex at the end of the corresponding edge has an &quot;old&quot; image, too, but then it need not be &quot;conjugated&quot; at all. A similar remark applies to labels which map under <math id="458468237747052877" display="inline" alttext="hom" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. We conclude that the image of a label can be &quot;old&quot; only if the vertex at the end of the corresponding edge has an &quot;old&quot; image, too, but then it need not be &quot;conjugated&quot; at all. A similar remark applies to labels which map under <math id="6778602110731278878" display="inline" alttext="hom" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">h</mi>

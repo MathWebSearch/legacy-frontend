@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.4-5 ElementOfFpGroup</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X7F34C8017DC03FDB"></meta>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups &amp;#8614; 47.4-5 ElementOfFpGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47_mj.html#X7F34C8017DC03FDB"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">47.4-5 ElementOfFpGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ElementOfFpGroup</code>( <var class="Arg">fam</var>, <var class="Arg">word</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">fam</var> is the elements family of a finitely presented group and <var class="Arg">word</var> is a word in the free generators underlying this finitely presented group, this operation creates the element with the representative <var class="Arg">word</var> in the free group.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ge := ElementOfFpGroup( FamilyObj( g.1 ), f.1*f.2 );</span>

@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 21: Lists-&gt;21.15 Mutability Status and List Arithmetic</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X8676EFE67972FD06"></meta>
+        <title>GAP (ref) - Chapter 21: Lists &amp;#8614; 21.15 Mutability Status and List Arithmetic</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21_mj.html#X8676EFE67972FD06"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.15 <span class="Heading">Mutability Status and List Arithmetic</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Many results of arithmetic operations, when applied to lists, are again lists, and it is of interest whether their entries are mutable or not (if applicable). Note that the mutability status of the result itself is already defined by the general rule for any result of an arithmetic operation, not only for lists (see <a shape="rect" href="chap12_mj.html#X7F0C119682196D65"><span class="RefLink">12.6</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">However, we do <em>not</em> define exactly the mutability status for each element on each level of a nested list returned by an arithmetic operation. (Of course it would be possible to define this recursively, but since the methods used are in general not recursive, in particular for efficient multiplication of compressed matrices, such a general definition would be a burden in these cases.) Instead we consider, for a list <math id="-6281186316197843320" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.15 <span class="Heading">Mutability Status and List Arithmetic</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Many results of arithmetic operations, when applied to lists, are again lists, and it is of interest whether their entries are mutable or not (if applicable). Note that the mutability status of the result itself is already defined by the general rule for any result of an arithmetic operation, not only for lists (see <a shape="rect" href="chap12_mj.html#X7F0C119682196D65"><span class="RefLink">12.6</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">However, we do <em>not</em> define exactly the mutability status for each element on each level of a nested list returned by an arithmetic operation. (Of course it would be possible to define this recursively, but since the methods used are in general not recursive, in particular for efficient multiplication of compressed matrices, such a general definition would be a burden in these cases.) Instead we consider, for a list <math id="713117161434313613" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
   </semantics>
-</math> in <code class="func">IsGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X87ABCEE9809585A0"><span class="RefLink">21.12-1</span></a>), the sequence <math id="9096959525003223402" display="inline" alttext="x=x_{1},x_{2},\ldots x_{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in <code class="func">IsGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X87ABCEE9809585A0"><span class="RefLink">21.12-1</span></a>), the sequence <math id="3887282291205684412" display="inline" alttext="x=x_{1},x_{2},\ldots x_{n}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
@@ -66,7 +66,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x=x_{1},x_{2},\ldots x_{n}</annotation>
   </semantics>
-</math> where <math id="4394357834243096028" display="inline" alttext="x_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> where <math id="8974309744438827630" display="inline" alttext="x_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
@@ -89,7 +89,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{{i+1}}</annotation>
   </semantics>
-</math> is the first bound entry in <math id="-6918563098043920667" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the first bound entry in <math id="1288293113376558478" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
@@ -104,7 +104,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{i}</annotation>
   </semantics>
-</math> if exists (that is, if <math id="-3660052603347264690" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> if exists (that is, if <math id="-890972538745659335" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
@@ -119,7 +119,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{i}</annotation>
   </semantics>
-</math> is a nonempty list), and <math id="3229551532040607949" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a nonempty list), and <math id="-207852288495254393" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -127,7 +127,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> is the largest <math id="-7256513341159813578" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the largest <math id="5821165325143874127" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -135,7 +135,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> such that <math id="2506305375525411227" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that <math id="-2878498109636112134" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
@@ -150,7 +150,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{i}</annotation>
   </semantics>
-</math> lies in <code class="func">IsGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X87ABCEE9809585A0"><span class="RefLink">21.12-1</span></a>). The <em>immutability level</em> of <math id="-5410184263296666258" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> lies in <code class="func">IsGeneralizedRowVector</code> (<a shape="rect" href="chap21_mj.html#X87ABCEE9809585A0"><span class="RefLink">21.12-1</span></a>). The <em>immutability level</em> of <math id="-4807056375521838285" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -158,7 +158,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
   </semantics>
-</math> is defined as infinity if <math id="683795215622378195" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is defined as infinity if <math id="4466690122967254146" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -166,7 +166,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
   </semantics>
-</math> is immutable, and otherwise the number of <math id="-7192828733186041696" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is immutable, and otherwise the number of <math id="3309452395496928621" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
@@ -181,21 +181,21 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x_{i}</annotation>
   </semantics>
-</math> which are immutable. (So the immutability level of a mutable empty list is <math id="-1361478388630677922" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> which are immutable. (So the immutability level of a mutable empty list is <math id="-9201617606315670114" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
       <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
     </annotation-xml>
   </semantics>
-</math>.)</p><p xmlns="http://www.w3.org/1999/xhtml">Thus a fully mutable matrix has immutability level <math id="313871753208232254" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.)</p><p xmlns="http://www.w3.org/1999/xhtml">Thus a fully mutable matrix has immutability level <math id="1037923085378412551" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
       <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
     </annotation-xml>
   </semantics>
-</math>, and a mutable matrix with immutable first row has immutability level <math id="2499987297663473784" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and a mutable matrix with immutable first row has immutability level <math id="-5331247034411711290" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -203,7 +203,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
   </semantics>
-</math> (independent of the mutability of other rows).</p><p xmlns="http://www.w3.org/1999/xhtml">The immutability level of the result of any of the binary operations discussed here is the minimum of the immutability levels of the arguments, provided that objects of the required mutability status exist in <strong class="pkg">GAP</strong>.</p><p xmlns="http://www.w3.org/1999/xhtml">Moreover, the results have a &quot;homogeneous&quot; mutability status, that is, if the first bound entry at nesting depth <math id="8211783997564711123" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (independent of the mutability of other rows).</p><p xmlns="http://www.w3.org/1999/xhtml">The immutability level of the result of any of the binary operations discussed here is the minimum of the immutability levels of the arguments, provided that objects of the required mutability status exist in <strong class="pkg">GAP</strong>.</p><p xmlns="http://www.w3.org/1999/xhtml">Moreover, the results have a &quot;homogeneous&quot; mutability status, that is, if the first bound entry at nesting depth <math id="-6570341495320557288" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -211,7 +211,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> is immutable (mutable) then all entries at nesting depth <math id="8093226169313744294" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is immutable (mutable) then all entries at nesting depth <math id="-4710425258277634880" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -219,14 +219,14 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> are immutable (mutable, provided that a mutable version of this entry exists in <strong class="pkg">GAP</strong>).</p><p xmlns="http://www.w3.org/1999/xhtml">Thus the sum of two mutable matrices whose first rows are mutable is a matrix all of whose rows are mutable, and the product of two matrices whose first rows are immutable is a matrix all of whose rows are immutable, independent of the mutability status of the other rows of the arguments.</p><p xmlns="http://www.w3.org/1999/xhtml">For example, the sum of a matrix (mutable or immutable, i.e., of immutability level one of <math id="-2532903864551657187" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> are immutable (mutable, provided that a mutable version of this entry exists in <strong class="pkg">GAP</strong>).</p><p xmlns="http://www.w3.org/1999/xhtml">Thus the sum of two mutable matrices whose first rows are mutable is a matrix all of whose rows are mutable, and the product of two matrices whose first rows are immutable is a matrix all of whose rows are immutable, independent of the mutability status of the other rows of the arguments.</p><p xmlns="http://www.w3.org/1999/xhtml">For example, the sum of a matrix (mutable or immutable, i.e., of immutability level one of <math id="-3994409294123291779" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
       <cn xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml" type="integer">0</cn>
     </annotation-xml>
   </semantics>
-</math>, <math id="-7477261155958380917" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="2369220885411108221" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -234,7 +234,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
   </semantics>
-</math>, or <math id="4903296880180474021" display="inline" alttext="2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, or <math id="2792874820599069343" display="inline" alttext="2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -242,7 +242,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">2</annotation>
   </semantics>
-</math>) and a mutable row vector (i.e., immutability level <math id="555439094032903837" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>) and a mutable row vector (i.e., immutability level <math id="-1810929686897440360" display="inline" alttext="0" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -256,7 +256,7 @@ false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMutable( l2 );  IsMutable( l3 );</span>
 true
 true
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">An example motivating the mutability rule is the use of syntactic constructs such as <code class="code"><var class="Arg">obj</var> * <var class="Arg">list</var></code> and <code class="code">- <var class="Arg">list</var></code> as an elegant and efficient way to create mutable lists needed for further manipulations from mutable lists. In particular one can construct a mutable zero vector of length <math id="-1864426101680982629" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">An example motivating the mutability rule is the use of syntactic constructs such as <code class="code"><var class="Arg">obj</var> * <var class="Arg">list</var></code> and <code class="code">- <var class="Arg">list</var></code> as an elegant and efficient way to create mutable lists needed for further manipulations from mutable lists. In particular one can construct a mutable zero vector of length <math id="3512430341945512402" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -264,7 +264,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> by <code class="code">0 * [ 1 .. </code><math id="-1471300823938248809" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> by <code class="code">0 * [ 1 .. </code><math id="-7195100317254515472" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

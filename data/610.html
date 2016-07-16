@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.10-2 ReducedCharacters</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X7B7138ED8586F09E"></meta>
+        <title>GAP (ref) - Chapter 72: Class Functions &amp;#8614; 72.10-2 ReducedCharacters</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72_mj.html#X7B7138ED8586F09E"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.10-2 ReducedCharacters</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReducedCharacters</code>( [<var class="Arg">tbl</var>, ]<var class="Arg">constituents</var>, <var class="Arg">reducibles</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ReducedCharacters</code> is similar to <code class="func">ReducedClassFunctions</code> (<a shape="rect" href="chap72_mj.html#X86F360D983343C2A"><span class="RefLink">72.10-1</span></a>), the only difference is that <var class="Arg">constituents</var> and <var class="Arg">reducibles</var> are assumed to be lists of characters. This means that only those scalar products must be formed where the degree of the character in <var class="Arg">constituents</var> does not exceed the degree of the character in <var class="Arg">reducibles</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;A5&quot; );;</span>

@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains-&gt;87.2-2 Functions for setting up an R-base</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87.html#X785508067969766B"></meta>
+        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains &amp;#8614; 87.2-2 Functions for setting up an R-base</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87_mj.html#X785508067969766B"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">87.2-2 <span class="Heading">Functions for setting up an R-base</span></h5><p xmlns="http://www.w3.org/1999/xhtml">This subsection explains some <strong class="pkg">GAP</strong> functions which are local to the library file <code class="file">lib/stbcbckt.gi</code> which contains the code for backtracking in permutation groups. They are mentioned here because you might find them helpful when you want to implement you own backtracking function based on the partition concept. An important argument to most of the functions is the R-base <math id="-4080070525246558101" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">87.2-2 <span class="Heading">Functions for setting up an R-base</span></h5><p xmlns="http://www.w3.org/1999/xhtml">This subsection explains some <strong class="pkg">GAP</strong> functions which are local to the library file <code class="file">lib/stbcbckt.gi</code> which contains the code for backtracking in permutation groups. They are mentioned here because you might find them helpful when you want to implement you own backtracking function based on the partition concept. An important argument to most of the functions is the R-base <math id="8100692571781288851" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
   </semantics>
-</math>, which you should regard as a black box. We will tell you how to set it up, how to maintain it and where to pass it as argument, but it is not necessary for you to know its internal representation. However, if you insist to learn the whole story: Here are the record components from which an R-base is made up:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">domain</code></strong></dt><dd><p>the set <math id="232368470902995540" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, which you should regard as a black box. We will tell you how to set it up, how to maintain it and where to pass it as argument, but it is not necessary for you to know its internal representation. However, if you insist to learn the whole story: Here are the record components from which an R-base is made up:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">domain</code></strong></dt><dd><p>the set <math id="7170758256459022392" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega</annotation>
   </semantics>
-</math> on which the group <math id="-1742167204521232072" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> on which the group <math id="-3487128956665628073" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -29,7 +29,7 @@
   </semantics>
 </math> operates</p>
 
-</dd><dt><strong class="Mark"><code class="code">base</code></strong></dt><dd><p>the sequence <math id="3400179500051469832" display="inline" alttext="(a_{1},\ldots,a_{r})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">base</code></strong></dt><dd><p>the sequence <math id="8947015013969418835" display="inline" alttext="(a_{1},\ldots,a_{r})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -65,7 +65,7 @@
   </semantics>
 </math> of base points</p>
 
-</dd><dt><strong class="Mark"><code class="code">partition</code></strong></dt><dd><p>an ordered partition, initially <math id="9111342975197943134" display="inline" alttext="\Pi_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">partition</code></strong></dt><dd><p>an ordered partition, initially <math id="6871100380555899100" display="inline" alttext="\Pi_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -80,7 +80,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi_{0}</annotation>
   </semantics>
-</math>, this will be refined to <math id="2653191453223083084" display="inline" alttext="\Pi_{1},\ldots,\Pi_{r}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, this will be refined to <math id="-3396579436228380938" display="inline" alttext="\Pi_{1},\ldots,\Pi_{r}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
       <msub xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.2">
@@ -114,7 +114,7 @@
   </semantics>
 </math> during the backtrack algorithm</p>
 
-</dd><dt><strong class="Mark"><code class="code">where</code></strong></dt><dd><p>a list such that <math id="-7941869656413039813" display="inline" alttext="a_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">where</code></strong></dt><dd><p>a list such that <math id="7555491751401353588" display="inline" alttext="a_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -129,7 +129,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a_{i}</annotation>
   </semantics>
-</math> lies in cell number <code class="code">where</code><math id="5371039596764369658" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> lies in cell number <code class="code">where</code><math id="8811554584831692838" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
       <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -144,7 +144,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[i]</annotation>
   </semantics>
-</math> of <math id="9155205427200712068" display="inline" alttext="\Pi_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of <math id="8388815463487605561" display="inline" alttext="\Pi_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -161,7 +161,7 @@
   </semantics>
 </math></p>
 
-</dd><dt><strong class="Mark"><code class="code">rfm</code></strong></dt><dd><p>a list whose <math id="-8452342201103510284" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">rfm</code></strong></dt><dd><p>a list whose <math id="-8760046598296786519" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -169,7 +169,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math>th entry is a list of refinements which take <math id="1297144871507347155" display="inline" alttext="\Sigma_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>th entry is a list of refinements which take <math id="950437270827586468" display="inline" alttext="\Sigma_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -184,7 +184,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma_{i}</annotation>
   </semantics>
-</math> to <math id="-7061775999050362408" display="inline" alttext="\Sigma_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="-4401400901808909252" display="inline" alttext="\Sigma_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -209,7 +209,7 @@
   </semantics>
 </math>; the structure of a refinement is described below</p>
 
-</dd><dt><strong class="Mark"><code class="code">chain</code></strong></dt><dd><p>a (copy of a) stabilizer chain for <math id="-699293434109619903" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">chain</code></strong></dt><dd><p>a (copy of a) stabilizer chain for <math id="4802051604095248804" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -217,7 +217,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> (not if <math id="3589323905483744418" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (not if <math id="-9120497771501576294" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -227,7 +227,7 @@
   </semantics>
 </math> is a symmetric group)</p>
 
-</dd><dt><strong class="Mark"><code class="code">fix</code></strong></dt><dd><p>only if <math id="5469604667580356188" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">fix</code></strong></dt><dd><p>only if <math id="-3232630810708376254" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -235,7 +235,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> is a symmetric group: a list whose <math id="8909993692319701539" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a symmetric group: a list whose <math id="6080337469653513220" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -243,7 +243,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> entry contains <code class="code">Fixcells( </code><math id="6162695787521411562" display="inline" alttext="\Pi_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> entry contains <code class="code">Fixcells( </code><math id="-6667122139792081353" display="inline" alttext="\Pi_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -260,7 +260,7 @@
   </semantics>
 </math><code class="code"> )</code></p>
 
-</dd><dt><strong class="Mark"><code class="code">level</code></strong></dt><dd><p>initially equal to <code class="code">chain</code>, this will be changed to chains for the stabilizers <math id="156011341267166553" display="inline" alttext="G_{{a_{1}\ldots a_{i}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">level</code></strong></dt><dd><p>initially equal to <code class="code">chain</code>, this will be changed to chains for the stabilizers <math id="-7784430697473077049" display="inline" alttext="G_{{a_{1}\ldots a_{i}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -300,7 +300,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G_{{a_{1}\ldots a_{i}}}</annotation>
   </semantics>
-</math> for <math id="2476815002008644689" display="inline" alttext="i=1,\ldots,r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> for <math id="4760570888134483848" display="inline" alttext="i=1,\ldots,r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
@@ -326,7 +326,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i=1,\ldots,r</annotation>
   </semantics>
-</math> during the backtrack algorithm; if <math id="6906337655013386568" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> during the backtrack algorithm; if <math id="-7392048201455837290" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -336,7 +336,7 @@
   </semantics>
 </math> is a symmetric group, only the number of moved points is stored for each stabilizer</p>
 
-</dd><dt><strong class="Mark"><code class="code">lev</code></strong></dt><dd><p>a list whose <math id="5559627243144450191" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">lev</code></strong></dt><dd><p>a list whose <math id="6164767829427508779" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -344,7 +344,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math>th entry remembers the <code class="code">level</code> entry for <math id="-1826874814016398757" display="inline" alttext="G_{{a_{1}\ldots a_{{i-1}}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>th entry remembers the <code class="code">level</code> entry for <math id="6495419933295996907" display="inline" alttext="G_{{a_{1}\ldots a_{{i-1}}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -394,7 +394,7 @@
   </semantics>
 </math></p>
 
-</dd><dt><strong class="Mark"><code class="code">level2</code>, <code class="code">lev2</code></strong></dt><dd><p>a similar construction for a second group (used in intersection calculations), <code class="keyw">false</code> otherwise. This second group <math id="-1526337327789575859" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">level2</code>, <code class="code">lev2</code></strong></dt><dd><p>a similar construction for a second group (used in intersection calculations), <code class="keyw">false</code> otherwise. This second group <math id="-6333005888827897887" display="inline" alttext="H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -402,7 +402,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">H</annotation>
   </semantics>
-</math> activated if the R-base is constructed as <code class="code">EmptyRBase( </code><math id="-1229916370210936473" display="inline" alttext="[G,H],\Omega,\Pi_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> activated if the R-base is constructed as <code class="code">EmptyRBase( </code><math id="-7046041052122534164" display="inline" alttext="[G,H],\Omega,\Pi_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11">
       <mrow xref="p1.1.m1.1.11.2.1.cmml" id="p1.1.m1.1.11.2">
@@ -436,7 +436,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[G,H],\Omega,\Pi_{0}</annotation>
   </semantics>
-</math><code class="code"> )</code> (if <math id="-2822604229363901779" display="inline" alttext="G=H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code"> )</code> (if <math id="-6193211276882470486" display="inline" alttext="G=H" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -456,7 +456,7 @@
 
 </dd><dt><strong class="Mark"><code class="code">nextLevel</code></strong></dt><dd><p>this is described below</p>
 
-</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">As our guiding example, we present code for the function <code class="func">Centralizer</code> (<a shape="rect" href="chap35_mj.html#X7DE33AFC823C7873"><span class="RefLink">35.4-4</span></a>) which calculates the centralizer of an element <math id="8694651284478292252" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">As our guiding example, we present code for the function <code class="func">Centralizer</code> (<a shape="rect" href="chap35_mj.html#X7DE33AFC823C7873"><span class="RefLink">35.4-4</span></a>) which calculates the centralizer of an element <math id="-623578664076409053" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -464,7 +464,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math> in the group <math id="-9199587770487280356" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in the group <math id="8966209655974610238" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -506,7 +506,7 @@ return PartitionBacktrack(
 
 </dd><dt><strong class="Mark">2.</strong></dt><dd><p>This statement sets up the R-base in the variable <code class="code">R</code>.</p>
 
-</dd><dt><strong class="Mark">3.-21.</strong></dt><dd><p>These lines define a function <code class="code">R.nextLevel</code> which is called whenever an additional member in the sequence <code class="code">Pi_0 </code><math id="1819113024644522994" display="inline" alttext="\geq\Pi_{1}\geq\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">3.-21.</strong></dt><dd><p>These lines define a function <code class="code">R.nextLevel</code> which is called whenever an additional member in the sequence <code class="code">Pi_0 </code><math id="-8033597064020523809" display="inline" alttext="\geq\Pi_{1}\geq\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2"/>
@@ -539,7 +539,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\geq\Pi_{1}\geq\ldots</annotation>
   </semantics>
-</math> of partitions is needed. If <math id="5439104682404897108" display="inline" alttext="\Pi_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of partitions is needed. If <math id="5662246556584368413" display="inline" alttext="\Pi_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -554,7 +554,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi_{i}</annotation>
   </semantics>
-</math> does not yet contain enough base points in one-point cells, <strong class="pkg">GAP</strong> will call <code class="code">R.nextLevel( </code><math id="3768805889967529801" display="inline" alttext="\Pi_{i}," class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> does not yet contain enough base points in one-point cells, <strong class="pkg">GAP</strong> will call <code class="code">R.nextLevel( </code><math id="-6818020177745958588" display="inline" alttext="\Pi_{i}," class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4">
       <msub xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4.2">
@@ -572,7 +572,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi_{i},</annotation>
   </semantics>
-</math><code class="code"> R )</code>, and this function will choose a new base point <math id="3788306226792226053" display="inline" alttext="a_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code"> R )</code>, and this function will choose a new base point <math id="-6152448322734375196" display="inline" alttext="a_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -595,7 +595,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a_{{i+1}}</annotation>
   </semantics>
-</math>, refine <math id="312489225256977766" display="inline" alttext="\Pi_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, refine <math id="-1887324714279671238" display="inline" alttext="\Pi_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -610,7 +610,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi_{i}</annotation>
   </semantics>
-</math> to <math id="-8243717525113026893" display="inline" alttext="\Pi_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="5938953849782779522" display="inline" alttext="\Pi_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -635,7 +635,7 @@ return PartitionBacktrack(
   </semantics>
 </math> (thereby <em>changing</em> the first argument) and store all necessary information in <code class="code">R</code>.</p>
 
-</dd><dt><strong class="Mark">5.</strong></dt><dd><p>This statement selects a new base point <math id="2566997591442790633" display="inline" alttext="a_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">5.</strong></dt><dd><p>This statement selects a new base point <math id="-7038957323132522874" display="inline" alttext="a_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -658,7 +658,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a_{{i+1}}</annotation>
   </semantics>
-</math>, which is not yet in a one-point cell of <math id="1516116753822854762" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, which is not yet in a one-point cell of <math id="-6701848788920021728" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -666,7 +666,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi</annotation>
   </semantics>
-</math> and still moved by the stabilizer <math id="3877169034432833513" display="inline" alttext="G_{{a_{1}\ldots a_{i}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and still moved by the stabilizer <math id="-1261165653140520867" display="inline" alttext="G_{{a_{1}\ldots a_{i}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -708,7 +708,7 @@ return PartitionBacktrack(
   </semantics>
 </math> of the earlier base points. If certain points of <code class="code">omega</code> should be preferred as base point (e.g., because they belong to long cycles of <code class="code">g</code>), a list of points starting with the most wanted ones, can be given as an optional third argument to <code class="code">NextRBasePoint</code> (actually, this is done in the real code for <code class="func">Centralizer</code> (<a shape="rect" href="chap35_mj.html#X7DE33AFC823C7873"><span class="RefLink">35.4-4</span></a>)).</p>
 
-</dd><dt><strong class="Mark">6.</strong></dt><dd><p><code class="code">Fixcells( </code><math id="782063447091129020" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">6.</strong></dt><dd><p><code class="code">Fixcells( </code><math id="2210018339069746989" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -716,7 +716,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi</annotation>
   </semantics>
-</math><code class="code"> )</code> returns the list of points in one-point cells of <math id="4605656476572766522" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code"> )</code> returns the list of points in one-point cells of <math id="-661096790422593427" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -724,7 +724,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi</annotation>
   </semantics>
-</math> (ordered as the cells are ordered in <math id="-8090088643219728913" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (ordered as the cells are ordered in <math id="995276480709270572" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -734,7 +734,7 @@ return PartitionBacktrack(
   </semantics>
 </math>).</p>
 
-</dd><dt><strong class="Mark">7.</strong></dt><dd><p>For every point <math id="-5538912525914274262" display="inline" alttext="p\in fix" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">7.</strong></dt><dd><p>For every point <math id="110514973249500063" display="inline" alttext="p\in fix" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
@@ -761,7 +761,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p\in fix</annotation>
   </semantics>
-</math>, if we know the image <math id="-4571353072238218938" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, if we know the image <math id="2070754392381505084" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -769,7 +769,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math><code class="code">^</code><math id="5463174267752573608" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">^</code><math id="1435736528540588559" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -777,7 +777,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math> under <math id="2616751757689424012" display="inline" alttext="c\in C_{G}(e)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> under <math id="-2602316886896796287" display="inline" alttext="c\in C_{G}(e)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
@@ -812,7 +812,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">c\in C_{G}(e)</annotation>
   </semantics>
-</math>, we also know <math id="4881235096411500198" display="inline" alttext="(p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, we also know <math id="8930734950233430623" display="inline" alttext="(p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -827,7 +827,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1g" encoding="application/x-tex">(p</annotation>
   </semantics>
-</math><code class="code">^</code><math id="164837309361255968" display="inline" alttext="g)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">^</code><math id="-1420199302779864226" display="inline" alttext="g)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mi id="p1.1.m1.1.1">g</mi>
@@ -842,7 +842,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1g" encoding="application/x-tex">g)</annotation>
   </semantics>
-</math><code class="code">^</code><math id="1047259490128037833" display="inline" alttext="c=(p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">^</code><math id="-8134149394630213526" display="inline" alttext="c=(p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mi id="p1.1.m1.1.1">c</mi>
@@ -866,7 +866,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1g" encoding="application/x-tex">c=(p</annotation>
   </semantics>
-</math><code class="code">^</code><math id="-8699343028847613571" display="inline" alttext="c)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">^</code><math id="-892752608594037209" display="inline" alttext="c)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mi id="p1.1.m1.1.1">c</mi>
@@ -881,7 +881,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1g" encoding="application/x-tex">c)</annotation>
   </semantics>
-</math><code class="code">^</code><math id="7911362561261871278" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">^</code><math id="1751156876440905802" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -889,7 +889,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math>. We therefore want to isolate these extra points in <math id="1882367355223587129" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. We therefore want to isolate these extra points in <math id="597627115710362997" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -899,7 +899,7 @@ return PartitionBacktrack(
   </semantics>
 </math>.</p>
 
-</dd><dt><strong class="Mark">9.</strong></dt><dd><p>This statement puts point <math id="1253396366342484706" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">9.</strong></dt><dd><p>This statement puts point <math id="-3750635087625460512" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -907,7 +907,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
   </semantics>
-</math> in a cell of its own, returning in <code class="code">where</code> the number of the cell of <math id="2965099697990757236" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in a cell of its own, returning in <code class="code">where</code> the number of the cell of <math id="-3171547960370203929" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -915,7 +915,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi</annotation>
   </semantics>
-</math> from which <math id="-706656924255046250" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> from which <math id="4422183785685314004" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -923,7 +923,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
   </semantics>
-</math> was taken. If <math id="38320285538232635" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> was taken. If <math id="-2379163351170190103" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -933,7 +933,7 @@ return PartitionBacktrack(
   </semantics>
 </math> was already the only point in its cell, <code class="code">where = </code><code class="keyw">false</code> instead.</p>
 
-</dd><dt><strong class="Mark">12.</strong></dt><dd><p>This command does the necessary bookkeeping for the extra base point <math id="5047583548722013773" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">12.</strong></dt><dd><p>This command does the necessary bookkeeping for the extra base point <math id="-776941933870288651" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -941,7 +941,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
   </semantics>
-</math>: It prescribes <math id="-4647381842691393220" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>: It prescribes <math id="7987123212280760185" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -949,7 +949,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
   </semantics>
-</math> as next base in the stabilizer chain for <math id="-8290988406335376297" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> as next base in the stabilizer chain for <math id="1157168843243506283" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -957,7 +957,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> (needed, e.g., in line 5) and returns <code class="keyw">false</code> if <math id="-9097179065299870478" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (needed, e.g., in line 5) and returns <code class="keyw">false</code> if <math id="-6071245565115118976" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -965,7 +965,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
   </semantics>
-</math> was already fixed the stabilizer of the earlier base points (and <code class="keyw">true</code> otherwise; this is not used here). Another call to <code class="code">ProcessFixpoint</code> like this was implicitly made by the function <code class="code">NextRBasePoint</code> to register the chosen base point. By contrast, the point <math id="-4626053210200885962" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> was already fixed the stabilizer of the earlier base points (and <code class="keyw">true</code> otherwise; this is not used here). Another call to <code class="code">ProcessFixpoint</code> like this was implicitly made by the function <code class="code">NextRBasePoint</code> to register the chosen base point. By contrast, the point <math id="1979742534801130525" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -973,7 +973,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
   </semantics>
-</math> was not chosen this way, so <code class="code">ProcessFixpoint</code> must be called explicitly for <math id="1998313210590345385" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> was not chosen this way, so <code class="code">ProcessFixpoint</code> must be called explicitly for <math id="-4888147905938912232" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -983,7 +983,7 @@ return PartitionBacktrack(
   </semantics>
 </math>.</p>
 
-</dd><dt><strong class="Mark">13.</strong></dt><dd><p>This statement registers the function which will be used during the backtrack search to perform the corresponding refinements on the &quot;image partition&quot; <math id="434117615702582498" display="inline" alttext="\Sigma_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">13.</strong></dt><dd><p>This statement registers the function which will be used during the backtrack search to perform the corresponding refinements on the &quot;image partition&quot; <math id="-308392319050249055" display="inline" alttext="\Sigma_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -998,7 +998,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma_{i}</annotation>
   </semantics>
-</math> (to yield the refined <math id="1142369707473170511" display="inline" alttext="\Sigma_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (to yield the refined <math id="8326220857315969461" display="inline" alttext="\Sigma_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -1021,7 +1021,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma_{{i+1}}</annotation>
   </semantics>
-</math>). After choosing an image <math id="-889725596382122142" display="inline" alttext="b_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>). After choosing an image <math id="-7638806560448940250" display="inline" alttext="b_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -1044,7 +1044,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{{i+1}}</annotation>
   </semantics>
-</math> for the base point <math id="-8944061793179213759" display="inline" alttext="a_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> for the base point <math id="-7579191414316820331" display="inline" alttext="a_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -1067,7 +1067,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a_{{i+1}}</annotation>
   </semantics>
-</math>, <strong class="pkg">GAP</strong> will compute <math id="-676763568168666948" display="inline" alttext="\Sigma_{i}\wedge(\{b_{{i+1}}\},\Omega\setminus\{b_{{i+1}}\})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <strong class="pkg">GAP</strong> will compute <math id="-3874284136579765819" display="inline" alttext="\Sigma_{i}\wedge(\{b_{{i+1}}\},\Omega\setminus\{b_{{i+1}}\})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">
       <msub xref="p1.1.m1.1.17.1.cmml" id="p1.1.m1.1.17.1">
@@ -1149,7 +1149,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma_{i}\wedge(\{b_{{i+1}}\},\Omega\setminus\{b_{{i+1}}\})</annotation>
   </semantics>
-</math> and store this partition in <math id="753619912210560257" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and store this partition in <math id="-6780227281421538197" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1157,7 +1157,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">I</annotation>
   </semantics>
-</math><code class="code">.partition</code>, where <math id="-7214781950793865686" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">.partition</code>, where <math id="-4491056591789097614" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1165,7 +1165,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">I</annotation>
   </semantics>
-</math> is a black box similar to <math id="2859367327318212662" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a black box similar to <math id="6125303061642145707" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1173,7 +1173,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
   </semantics>
-</math>, but corresponding to the current &quot;image partition&quot; (hence it is an &quot;R-image&quot; in analogy to the R-base). Then <strong class="pkg">GAP</strong> will call the function <code class="code">Refinements.Centralizer( R, I, Pi.cellno[ p ], p, where )</code>, with the then current values of <math id="-9031623091458325112" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, but corresponding to the current &quot;image partition&quot; (hence it is an &quot;R-image&quot; in analogy to the R-base). Then <strong class="pkg">GAP</strong> will call the function <code class="code">Refinements.Centralizer( R, I, Pi.cellno[ p ], p, where )</code>, with the then current values of <math id="-4761547735588736098" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1181,7 +1181,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
   </semantics>
-</math> and <math id="8347088561399667546" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-3606764895823944904" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1189,7 +1189,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">I</annotation>
   </semantics>
-</math>, but where <math id="-6121543324942286001" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, but where <math id="1303000620968607216" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1197,7 +1197,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi</annotation>
   </semantics>
-</math><code class="code">.cellno</code><math id="-7572262581870696738" display="inline" alttext="[p]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">.cellno</code><math id="-2601543329017656784" display="inline" alttext="[p]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
       <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -1212,7 +1212,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[p]</annotation>
   </semantics>
-</math>, <math id="2966023994566695730" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="1928962788869746220" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1220,7 +1220,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math>, <code class="code">where</code> still have the values they have at the time of this <code class="code">AddRefinement</code> command. This function call will further refine <math id="2854072137121302787" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <code class="code">where</code> still have the values they have at the time of this <code class="code">AddRefinement</code> command. This function call will further refine <math id="8939699829683207622" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1228,7 +1228,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">I</annotation>
   </semantics>
-</math><code class="code">.partition</code> to yield <math id="1174174042915003516" display="inline" alttext="\Sigma_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">.partition</code> to yield <math id="-3047188299044698045" display="inline" alttext="\Sigma_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -1253,7 +1253,7 @@ return PartitionBacktrack(
   </semantics>
 </math> as it is programmed in the function <code class="code">Refinements.Centralizer</code>, which is described below. (The global variable <code class="code">Refinements</code> is a record which contains all refinement functions for all backtracking procedures.)</p>
 
-</dd><dt><strong class="Mark">14.-19.</strong></dt><dd><p>If the cell from which <math id="-1739501659549761568" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">14.-19.</strong></dt><dd><p>If the cell from which <math id="-3085738205551030079" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1261,7 +1261,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">q</annotation>
   </semantics>
-</math> was taken out had only two points, we now have an additional one-point cell. This condition is checked in line 13 and if it is true, this extra fixpoint <math id="-7623488590815337388" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> was taken out had only two points, we now have an additional one-point cell. This condition is checked in line 13 and if it is true, this extra fixpoint <math id="1544637791811038581" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1269,7 +1269,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math> is taken (line 15), processed like <math id="-522510011147671419" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is taken (line 15), processed like <math id="-8333173707310972044" display="inline" alttext="q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">q</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1279,7 +1279,7 @@ return PartitionBacktrack(
   </semantics>
 </math> before (line 16) and is then (line 17) passed to another refinement function <code class="code">Refinements.ProcessFixpoint( R, I, p, where )</code>, which is also described below.</p>
 
-</dd><dt><strong class="Mark">23.-29.</strong></dt><dd><p>This command starts the backtrack search. Its result will be the centralizer as a subgroup of <math id="-1434232260705844180" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">23.-29.</strong></dt><dd><p>This command starts the backtrack search. Its result will be the centralizer as a subgroup of <math id="-6952874823352323312" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1297,7 +1297,7 @@ return PartitionBacktrack(
 
 </dd><dt><strong class="Mark">27.</strong></dt><dd><p>the R-base,</p>
 
-</dd><dt><strong class="Mark">28.</strong></dt><dd><p>a list of data, to be stored in <math id="8387428210584855055" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">28.</strong></dt><dd><p>a list of data, to be stored in <math id="-5651553817698968417" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1305,7 +1305,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">I</annotation>
   </semantics>
-</math><code class="code">.data</code>, which has in position 1 the first member <math id="-4410040128149125521" display="inline" alttext="\Sigma_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">.data</code>, which has in position 1 the first member <math id="618353119282534162" display="inline" alttext="\Sigma_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -1320,7 +1320,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma_{0}</annotation>
   </semantics>
-</math> of the decreasing sequence of &quot;image partitions&quot; mentioned in <a shape="rect" href="chap43_mj.html#X86C78160854C7F30"><span class="RefLink">43.12</span></a>. In the centralizer example, position 2 contains the element that is to be centralized. In the case of a representative search, i.e., a conjugacy test <math id="-492754487324479960" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of the decreasing sequence of &quot;image partitions&quot; mentioned in <a shape="rect" href="chap43_mj.html#X86C78160854C7F30"><span class="RefLink">43.12</span></a>. In the centralizer example, position 2 contains the element that is to be centralized. In the case of a representative search, i.e., a conjugacy test <math id="-1804370943329713735" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1328,7 +1328,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math><code class="code">^</code><math id="6249723677585626264" display="inline" alttext="c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">^</code><math id="8883428952615793639" display="inline" alttext="c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1336,7 +1336,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">c</annotation>
   </semantics>
-</math><code class="code"> ?= </code><math id="6992694180123727919" display="inline" alttext="h" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code"> ?= </code><math id="7112947208524231171" display="inline" alttext="h" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">h</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1344,7 +1344,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">h</annotation>
   </semantics>
-</math>, we would have <math id="7774034623937088673" display="inline" alttext="h" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, we would have <math id="-3991402218059717356" display="inline" alttext="h" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">h</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1352,7 +1352,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">h</annotation>
   </semantics>
-</math> instead of <math id="841676660621146048" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> instead of <math id="-41209967999178900" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1360,7 +1360,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math> here, and possibly a <math id="6530122506802578051" display="inline" alttext="\Sigma_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> here, and possibly a <math id="-6782779013738430920" display="inline" alttext="\Sigma_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -1375,7 +1375,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma_{0}</annotation>
   </semantics>
-</math> different from <math id="-909917361164355276" display="inline" alttext="\Pi_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> different from <math id="-8753774452826076791" display="inline" alttext="\Pi_{0}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -1390,7 +1390,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi_{0}</annotation>
   </semantics>
-</math> (e.g., a partition into unions of <math id="-6977269745566256707" display="inline" alttext="h" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (e.g., a partition into unions of <math id="-3333887585845365383" display="inline" alttext="h" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">h</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -1400,7 +1400,7 @@ return PartitionBacktrack(
   </semantics>
 </math>-cycles of same length).</p>
 
-</dd><dt><strong class="Mark">29.</strong></dt><dd><p>two subgroups <math id="6016662074141596555" display="inline" alttext="L\leq C_{G}(g)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">29.</strong></dt><dd><p>two subgroups <math id="3718989203712830752" display="inline" alttext="L\leq C_{G}(g)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
@@ -1435,7 +1435,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">L\leq C_{G}(g)</annotation>
   </semantics>
-</math> and <math id="-8368184561524728787" display="inline" alttext="R\leq C_{G}(h)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="4158963827649031835" display="inline" alttext="R\leq C_{G}(h)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
@@ -1470,7 +1470,7 @@ return PartitionBacktrack(
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R\leq C_{G}(h)</annotation>
   </semantics>
-</math> known in advance (we have <math id="2028676861333197912" display="inline" alttext="L=R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> known in advance (we have <math id="-8670607856084038969" display="inline" alttext="L=R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>

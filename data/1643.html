@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 86: Weak Pointers-&gt;86.1-1 WeakPointerObj</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap86.html#X8155EE1386F46063"></meta>
+        <title>GAP (ref) - Chapter 86: Weak Pointers &amp;#8614; 86.1-1 WeakPointerObj</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap86_mj.html#X8155EE1386F46063"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">86.1-1 WeakPointerObj</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ WeakPointerObj</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">WeakPointerObj</code> returns a weak pointer object which contains the same subobjects as the list <var class="Arg">list</var>, that is it returns a <em>shallow</em> weak copy of <var class="Arg">list</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">w := WeakPointerObj( [ 1, , [2,3], fail, rec( a := 1) ] );</span>

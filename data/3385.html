@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.6-2 ChevalleyBasis</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X82EBF10A7B3B6F6E"></meta>
+        <title>GAP (ref) - Chapter 64: Lie Algebras &amp;#8614; 64.6-2 ChevalleyBasis</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64_mj.html#X82EBF10A7B3B6F6E"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.6-2 ChevalleyBasis</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ChevalleyBasis</code>( <var class="Arg">L</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">L</var> must be a semisimple Lie algebra with a split Cartan subalgebra. Then <code class="code">ChevalleyBasis(<var class="Arg">L</var>)</code> returns a list consisting of three sublists. Together these sublists form a Chevalley basis of <var class="Arg">L</var>. The first list contains the positive root vectors, the second list contains the negative root vectors, and the third list the Cartan elements of the Chevalley basis.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;G&quot;, 2, Rationals );</span>

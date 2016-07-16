@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.12-1 SizeScreen</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X8723E0A1837894F3"></meta>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop &amp;#8614; 6.12-1 SizeScreen</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6_mj.html#X8723E0A1837894F3"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.12-1 SizeScreen</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SizeScreen</code>( [<var class="Arg">sz</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Called with no arguments, <code class="func">SizeScreen</code> returns the size of the screen as a list with two entries. The first is the length of each line, the second is the number of lines.</p><p xmlns="http://www.w3.org/1999/xhtml">Called with one argument that is a list <var class="Arg">sz</var>, <code class="func">SizeScreen</code> sets the size of the screen; The first entry of <var class="Arg">sz</var>, if bound, is the length of each line, and the second entry of <var class="Arg">sz</var>, if bound, is the number of lines. The values for unbound entries of <var class="Arg">sz</var> are left unaffected. The function returns the new values.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that those parameters can also be set with the command line options <code class="code">-x</code> for the line length and <code class="code">-y</code> for the number of lines (see Section <a shape="rect" href="chap3_mj.html#X782751D5858A6EAF"><span class="RefLink">3.1</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">To check/change whether line breaking occurs for files and streams see <code class="func">PrintFormattingStatus</code> (<a shape="rect" href="chap10_mj.html#X8663FCD57E8BC390"><span class="RefLink">10.4-8</span></a>) and <code class="func">SetPrintFormattingStatus</code> (<a shape="rect" href="chap10_mj.html#X8663FCD57E8BC390"><span class="RefLink">10.4-8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The line length must be between <math id="-3620250147903278128" display="inline" alttext="20" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.12-1 SizeScreen</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SizeScreen</code>( [<var class="Arg">sz</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Called with no arguments, <code class="func">SizeScreen</code> returns the size of the screen as a list with two entries. The first is the length of each line, the second is the number of lines.</p><p xmlns="http://www.w3.org/1999/xhtml">Called with one argument that is a list <var class="Arg">sz</var>, <code class="func">SizeScreen</code> sets the size of the screen; The first entry of <var class="Arg">sz</var>, if bound, is the length of each line, and the second entry of <var class="Arg">sz</var>, if bound, is the number of lines. The values for unbound entries of <var class="Arg">sz</var> are left unaffected. The function returns the new values.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that those parameters can also be set with the command line options <code class="code">-x</code> for the line length and <code class="code">-y</code> for the number of lines (see Section <a shape="rect" href="chap3_mj.html#X782751D5858A6EAF"><span class="RefLink">3.1</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">To check/change whether line breaking occurs for files and streams see <code class="func">PrintFormattingStatus</code> (<a shape="rect" href="chap10_mj.html#X8663FCD57E8BC390"><span class="RefLink">10.4-8</span></a>) and <code class="func">SetPrintFormattingStatus</code> (<a shape="rect" href="chap10_mj.html#X8663FCD57E8BC390"><span class="RefLink">10.4-8</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The line length must be between <math id="-4143423221456240208" display="inline" alttext="20" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">20</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">20</annotation>
   </semantics>
-</math> and <math id="-48424004989040499" display="inline" alttext="4096" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="3058324008787235191" display="inline" alttext="4096" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">4096</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">4096</annotation>
   </semantics>
-</math> characters (inclusive) and the number of lines must be at least <math id="-7469041639879925785" display="inline" alttext="10" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> characters (inclusive) and the number of lines must be at least <math id="-1078542597720679368" display="inline" alttext="10" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

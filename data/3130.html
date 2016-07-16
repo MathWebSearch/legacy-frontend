@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains-&gt;87.2-4 Functions for meeting ordered partitions</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87.html#X86CCA2B384A74856"></meta>
+        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains &amp;#8614; 87.2-4 Functions for meeting ordered partitions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87_mj.html#X86CCA2B384A74856"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">87.2-4 <span class="Heading">Functions for meeting ordered partitions</span></h5><p xmlns="http://www.w3.org/1999/xhtml">A kind of refinement that occurs in particular in the normalizer calculation involves computing the meet of <math id="-2610042821136003702" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">87.2-4 <span class="Heading">Functions for meeting ordered partitions</span></h5><p xmlns="http://www.w3.org/1999/xhtml">A kind of refinement that occurs in particular in the normalizer calculation involves computing the meet of <math id="8099317751777035001" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi</annotation>
   </semantics>
-</math> (cf. lines 6ff. above) with an arbitrary other partition <math id="-1326732829749145641" display="inline" alttext="\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (cf. lines 6ff. above) with an arbitrary other partition <math id="-2123607604514827858" display="inline" alttext="\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Λ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Lambda</annotation>
   </semantics>
-</math>, not just with one point. To do this efficiently, <strong class="pkg">GAP</strong> uses the following two functions.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">StratMeetPartition( </code><math id="-5125384167954032245" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, not just with one point. To do this efficiently, <strong class="pkg">GAP</strong> uses the following two functions.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">StratMeetPartition( </code><math id="9151772109172243629" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
   </semantics>
-</math>, <math id="-1433708432837924356" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="9017164766945289682" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -35,7 +35,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi</annotation>
   </semantics>
-</math>, <math id="-5301768816286089840" display="inline" alttext="\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="-1421121064790715428" display="inline" alttext="\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Λ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -43,7 +43,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Lambda</annotation>
   </semantics>
-</math> <code class="code">[</code>, <math id="-5721416036921799437" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> <code class="code">[</code>, <math id="-6043633457517910890" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -51,7 +51,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math> <code class="code">] )</code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">MeetPartitionStrat( </code><math id="-8030805887467177301" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> <code class="code">] )</code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">MeetPartitionStrat( </code><math id="-2375328190150450170" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -59,7 +59,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
   </semantics>
-</math>, <math id="8261669611709446307" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="5578668369978728730" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -67,7 +67,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">I</annotation>
   </semantics>
-</math><code class="code">{, </code><math id="-4214599862763038818" display="inline" alttext="\Lambda^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">{, </code><math id="1582952954504037243" display="inline" alttext="\Lambda^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Λ</mi>
@@ -82,7 +82,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Lambda^{\prime}</annotation>
   </semantics>
-</math><code class="code">}[, {</code><math id="-3034868833914052359" display="inline" alttext="g^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">}[, {</code><math id="816359133058720719" display="inline" alttext="g^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
@@ -97,7 +97,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g^{\prime}</annotation>
   </semantics>
-</math><code class="code">}]</code>, <math id="2097419705652255061" display="inline" alttext="strat" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">}]</code>, <math id="5301700260961230287" display="inline" alttext="strat" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
@@ -122,7 +122,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">strat</annotation>
   </semantics>
-</math> <code class="code">)</code></p><p xmlns="http://www.w3.org/1999/xhtml">Such a <code class="code">StratMeetPartition</code> command would typically appear in the function call <math id="-6085640240641749874" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> <code class="code">)</code></p><p xmlns="http://www.w3.org/1999/xhtml">Such a <code class="code">StratMeetPartition</code> command would typically appear in the function call <math id="-5817379534859130381" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -130,7 +130,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
   </semantics>
-</math><code class="code">.nextLevel</code><math id="-9185503613748834325" display="inline" alttext="(\Pi,R)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">.nextLevel</code><math id="3634907673539979613" display="inline" alttext="(\Pi,R)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -147,7 +147,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\Pi,R)</annotation>
   </semantics>
-</math> (during the refinement of <math id="-3307991649286218253" display="inline" alttext="\Pi_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (during the refinement of <math id="6815937350014270037" display="inline" alttext="\Pi_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -162,7 +162,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi_{i}</annotation>
   </semantics>
-</math> to <math id="-5873956769751051841" display="inline" alttext="\Pi_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="6273388277108294527" display="inline" alttext="\Pi_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -185,7 +185,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi_{{i+1}}</annotation>
   </semantics>
-</math>). This command replaces <math id="-7283271063236693881" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>). This command replaces <math id="2227371400609310276" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -193,7 +193,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi</annotation>
   </semantics>
-</math> by <math id="5211186296862619344" display="inline" alttext="\Pi\wedge\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> by <math id="5830944244918743341" display="inline" alttext="\Pi\wedge\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -209,7 +209,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi\wedge\Lambda</annotation>
   </semantics>
-</math> (thereby <em>changing</em> the second argument) and returns a &quot;meet strategy&quot; <math id="-1967025661216400983" display="inline" alttext="strat" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (thereby <em>changing</em> the second argument) and returns a &quot;meet strategy&quot; <math id="4345499533939626704" display="inline" alttext="strat" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
@@ -234,7 +234,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">strat</annotation>
   </semantics>
-</math>. This is (for us) a black box which serves two purposes: First, it allows <strong class="pkg">GAP</strong> to calculate faster the corresponding meet <math id="1903656381415278800" display="inline" alttext="\Sigma\wedge\Lambda^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. This is (for us) a black box which serves two purposes: First, it allows <strong class="pkg">GAP</strong> to calculate faster the corresponding meet <math id="6418824278464153312" display="inline" alttext="\Sigma\wedge\Lambda^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -257,7 +257,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma\wedge\Lambda^{\prime}</annotation>
   </semantics>
-</math>, which must then appear in a <code class="code">Refinements</code> function (during the refinement of <math id="-5788456350938664381" display="inline" alttext="\Sigma_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, which must then appear in a <code class="code">Refinements</code> function (during the refinement of <math id="881684218337253728" display="inline" alttext="\Sigma_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -272,7 +272,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma_{i}</annotation>
   </semantics>
-</math> to <math id="-2964979892009806194" display="inline" alttext="\Sigma_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="3427411151542566033" display="inline" alttext="\Sigma_{{i+1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -295,7 +295,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma_{{i+1}}</annotation>
   </semantics>
-</math>). It is faster to compute <math id="6832191957439331820" display="inline" alttext="\Sigma\wedge\Lambda^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>). It is faster to compute <math id="7756834452197099259" display="inline" alttext="\Sigma\wedge\Lambda^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -318,7 +318,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma\wedge\Lambda^{\prime}</annotation>
   </semantics>
-</math> with the &quot;meet strategy&quot; of <math id="4429206349792092564" display="inline" alttext="\Pi\wedge\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> with the &quot;meet strategy&quot; of <math id="-2136707715893976874" display="inline" alttext="\Pi\wedge\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
@@ -334,7 +334,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi\wedge\Lambda</annotation>
   </semantics>
-</math> because if the refinement of <math id="8425558264235239461" display="inline" alttext="\Sigma" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> because if the refinement of <math id="-7139539893981567999" display="inline" alttext="\Sigma" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -342,7 +342,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma</annotation>
   </semantics>
-</math> is successful at all, the intersection of a cell from the left hand side of the <math id="1477588509535464773" display="inline" alttext="\wedge" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is successful at all, the intersection of a cell from the left hand side of the <math id="-4399187182837469334" display="inline" alttext="\wedge" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">∧</mo>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -350,7 +350,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\wedge</annotation>
   </semantics>
-</math> sign with a cell from the right hand side must have the same size in both cases (and <math id="3587160177779484194" display="inline" alttext="strat" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> sign with a cell from the right hand side must have the same size in both cases (and <math id="5512442408339236041" display="inline" alttext="strat" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
@@ -375,7 +375,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">strat</annotation>
   </semantics>
-</math> records these sizes, so that only non-empty intersections must be calculated for <math id="6487340067290049867" display="inline" alttext="\Sigma\wedge\Lambda^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> records these sizes, so that only non-empty intersections must be calculated for <math id="8067936363619654606" display="inline" alttext="\Sigma\wedge\Lambda^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
@@ -398,7 +398,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma\wedge\Lambda^{\prime}</annotation>
   </semantics>
-</math>). Second, if there is a discrepancy between the behaviour prescribed by <math id="-2304751434543462715" display="inline" alttext="strat" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>). Second, if there is a discrepancy between the behaviour prescribed by <math id="7786524469190377292" display="inline" alttext="strat" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
@@ -423,7 +423,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">strat</annotation>
   </semantics>
-</math> and the behaviour observed when refining <math id="-3197280480786204692" display="inline" alttext="\Sigma" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and the behaviour observed when refining <math id="-6187886677879590728" display="inline" alttext="\Sigma" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Σ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -431,7 +431,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Sigma</annotation>
   </semantics>
-</math>, the refinement can immediately be abandoned.</p><p xmlns="http://www.w3.org/1999/xhtml">On the other hand, if you only want to meet a partition <math id="-7714994587546783943" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, the refinement can immediately be abandoned.</p><p xmlns="http://www.w3.org/1999/xhtml">On the other hand, if you only want to meet a partition <math id="7291238493794714727" display="inline" alttext="\Pi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Π</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -439,7 +439,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Pi</annotation>
   </semantics>
-</math> with <math id="2323031023948663659" display="inline" alttext="\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> with <math id="3494842574957470857" display="inline" alttext="\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Λ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -447,7 +447,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Lambda</annotation>
   </semantics>
-</math> for a one-time use, without recording a strategy, you can simply type <code class="code">StratMeetPartition</code><math id="-3785480842692570770" display="inline" alttext="(\Pi,\Lambda)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> for a one-time use, without recording a strategy, you can simply type <code class="code">StratMeetPartition</code><math id="-8878073098244351119" display="inline" alttext="(\Pi,\Lambda)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -474,7 +474,7 @@
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput"># The ``meet strategy'' was not recorded, ignore this result.</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Cells( P );</span>
 [ [ 1 ], [ 5, 4 ], [ 6 ], [ 2 ], [ 3 ] ]
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">You can even say <code class="code">StratMeetPartition</code><math id="-3627524680757051643" display="inline" alttext="(\Pi,\Delta)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">You can even say <code class="code">StratMeetPartition</code><math id="3988518915993677556" display="inline" alttext="(\Pi,\Delta)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -491,7 +491,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\Pi,\Delta)</annotation>
   </semantics>
-</math> where <math id="2074025756471442832" display="inline" alttext="\Delta" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> where <math id="451060492520229823" display="inline" alttext="\Delta" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Δ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -499,7 +499,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Delta</annotation>
   </semantics>
-</math> is simply a subset of <math id="-2909116633011882848" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is simply a subset of <math id="2594742943288496915" display="inline" alttext="\Omega" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Ω</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -507,7 +507,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Omega</annotation>
   </semantics>
-</math>, it will then be interpreted as the partition <math id="-8947454361209849296" display="inline" alttext="(\Delta,\Omega\setminus\Delta)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, it will then be interpreted as the partition <math id="4090985894293310645" display="inline" alttext="(\Delta,\Omega\setminus\Delta)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -532,7 +532,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\Delta,\Omega\setminus\Delta)</annotation>
   </semantics>
-</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> makes use of the advantages of a &quot;meet strategy&quot; if the refinement function in <code class="code">Refinements</code> contains a <code class="code">MeetPartitionStrat</code> command where <math id="7244963789163744792" display="inline" alttext="strat" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> makes use of the advantages of a &quot;meet strategy&quot; if the refinement function in <code class="code">Refinements</code> contains a <code class="code">MeetPartitionStrat</code> command where <math id="6709489444171388320" display="inline" alttext="strat" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
@@ -557,7 +557,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">strat</annotation>
   </semantics>
-</math> is the &quot;meet strategy&quot; calculated by <code class="code">StratMeetPartition</code> before. Such a command replaces <math id="8498472149669449823" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the &quot;meet strategy&quot; calculated by <code class="code">StratMeetPartition</code> before. Such a command replaces <math id="5038823577453204746" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -565,7 +565,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">I</annotation>
   </semantics>
-</math><code class="code">.partition</code> by its meet with <math id="6464334241031734419" display="inline" alttext="\Lambda^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">.partition</code> by its meet with <math id="9039736820422575503" display="inline" alttext="\Lambda^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Λ</mi>
@@ -580,7 +580,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Lambda^{\prime}</annotation>
   </semantics>
-</math>, again changing the argument <math id="7311930746154060303" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, again changing the argument <math id="-7954779191925282" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -588,7 +588,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">I</annotation>
   </semantics>
-</math>. The necessary reversal of these changes when backtracking from a node (and prescribing the next possible image for a base point) is automatically done by the function <code class="code">PartitionBacktrack</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">In all cases, an additional argument <math id="9155400063166083284" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. The necessary reversal of these changes when backtracking from a node (and prescribing the next possible image for a base point) is automatically done by the function <code class="code">PartitionBacktrack</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">In all cases, an additional argument <math id="-7725610646119847939" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -596,7 +596,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math> means that the meet is to be taken not with <math id="3001862216463302372" display="inline" alttext="\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> means that the meet is to be taken not with <math id="-1359263802700767700" display="inline" alttext="\Lambda" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Λ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -604,7 +604,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\Lambda</annotation>
   </semantics>
-</math>, but instead with <math id="-181799936861299689" display="inline" alttext="\Lambda.{{g^{{-1}}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, but instead with <math id="-6023828668741194043" display="inline" alttext="\Lambda.{{g^{{-1}}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">Λ</mi>
@@ -637,7 +637,7 @@
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P := Partition( [[1,2],[3,4,5],[6]] );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StratMeetPartition( P, P, (1,6,3) );;  Cells( P );</span>
 [ [ 1 ], [ 5, 4 ], [ 6 ], [ 2 ], [ 3 ] ]
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that <math id="4485626812926512081" display="inline" alttext="P.(1,3,6)=Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that <math id="5376648871845160258" display="inline" alttext="P.(1,3,6)=Q" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>

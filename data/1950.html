@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 43: Permutation Groups-&gt;43.9 Stabilizer Chain Records</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43.html#X81D7FCE47AC7F942"></meta>
+        <title>GAP (ref) - Chapter 43: Permutation Groups &amp;#8614; 43.9 Stabilizer Chain Records</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43_mj.html#X81D7FCE47AC7F942"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">43.9 <span class="Heading">Stabilizer Chain Records</span></h4><p xmlns="http://www.w3.org/1999/xhtml">If a permutation group has a stabilizer chain, this is stored as a recursive structure. This structure is itself a record <var class="Arg">S</var> and it has</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">(1)</strong></dt><dd><p>components that provide information about one level <math id="-1139024954955260643" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">43.9 <span class="Heading">Stabilizer Chain Records</span></h4><p xmlns="http://www.w3.org/1999/xhtml">If a permutation group has a stabilizer chain, this is stored as a recursive structure. This structure is itself a record <var class="Arg">S</var> and it has</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">(1)</strong></dt><dd><p>components that provide information about one level <math id="-3788472365269771390" display="inline" alttext="G^{(i)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -24,7 +24,7 @@
   </semantics>
 </math> of the stabilizer chain (which we call the &quot;current stabilizer&quot;) and</p>
 
-</dd><dt><strong class="Mark">(2)</strong></dt><dd><p>a component <code class="code">stabilizer</code> that holds another such record, namely the stabilizer chain of the next stabilizer <math id="-665801935612033698" display="inline" alttext="G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark">(2)</strong></dt><dd><p>a component <code class="code">stabilizer</code> that holds another such record, namely the stabilizer chain of the next stabilizer <math id="4062357729731218879" display="inline" alttext="G^{(i+1)}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -61,7 +61,7 @@
 
 </dd><dt><strong class="Mark"><code class="code">generators</code> </strong></dt><dd><p>a list of generators for the current stabilizer. Usually, it is <code class="code">labels{ genlabels }</code>.</p>
 
-</dd><dt><strong class="Mark"><code class="code">orbit</code> </strong></dt><dd><p>the vertices of the Schreier tree, which form the basic orbit <math id="-7138425366821279899" display="inline" alttext="b_{i}^{{G^{(i)}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">orbit</code> </strong></dt><dd><p>the vertices of the Schreier tree, which form the basic orbit <math id="-698733101834534098" display="inline" alttext="b_{i}^{{G^{(i)}}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msubsup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -92,7 +92,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b_{i}^{{G^{(i)}}}</annotation>
   </semantics>
-</math>, ordered in such a way that the base point <math id="6497770041769049469" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, ordered in such a way that the base point <math id="-899546844536949191" display="inline" alttext="b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
@@ -109,7 +109,7 @@
   </semantics>
 </math> is in the first position in the orbit.</p>
 
-</dd><dt><strong class="Mark"><code class="code">transversal</code></strong></dt><dd><p>The factorized inverse transversal found during the orbit algorithm. The element <math id="7934324118158155393" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">transversal</code></strong></dt><dd><p>The factorized inverse transversal found during the orbit algorithm. The element <math id="-5870418755608827858" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -117,7 +117,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math> stored at <code class="code">transversal</code><math id="-6171471959889407501" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> stored at <code class="code">transversal</code><math id="-6300157608267883463" display="inline" alttext="[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
       <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -132,7 +132,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[i]</annotation>
   </semantics>
-</math> will map <math id="8028001952059812172" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> will map <math id="-7601752702709483548" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -140,7 +140,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math> to another point <math id="-8381491310228622176" display="inline" alttext="j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to another point <math id="485963246936555181" display="inline" alttext="j" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">j</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -148,7 +148,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">j</annotation>
   </semantics>
-</math> that in the Schreier tree is closer to the base point. By iterated application (<code class="code">transversal</code><math id="-3457182422186975374" display="inline" alttext="[j]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> that in the Schreier tree is closer to the base point. By iterated application (<code class="code">transversal</code><math id="6471464218378505522" display="inline" alttext="[j]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4">
       <mo xref="p1.1.m1.1.4.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -163,7 +163,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[j]</annotation>
   </semantics>
-</math> and so on) eventually the base point is reached and an element that maps <math id="7819952097990412600" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and so on) eventually the base point is reached and an element that maps <math id="1442805882734296666" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -173,7 +173,7 @@
   </semantics>
 </math> to the base point found as product.</p>
 
-</dd><dt><strong class="Mark"><code class="code">translabels</code></strong></dt><dd><p>An index list such that <code class="code">transversal</code><math id="6615141683018508017" display="inline" alttext="[j]=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">translabels</code></strong></dt><dd><p>An index list such that <code class="code">transversal</code><math id="-5242824547193183039" display="inline" alttext="[j]=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1">
@@ -196,7 +196,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[j]=</annotation>
   </semantics>
-</math> <code class="code">labels</code><math id="-8500897341562380928" display="inline" alttext="[" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> <code class="code">labels</code><math id="4288290927020367357" display="inline" alttext="[" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -204,7 +204,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[</annotation>
   </semantics>
-</math> <code class="code">translabels</code><math id="1879717309849955259" display="inline" alttext="[j]]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> <code class="code">translabels</code><math id="-3103238298250711375" display="inline" alttext="[j]]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">

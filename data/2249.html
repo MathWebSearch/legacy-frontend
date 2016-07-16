@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.7-14 ProfileLineByLine</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X86557887796F66FA"></meta>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities &amp;#8614; 7.7-14 ProfileLineByLine</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7_mj.html#X86557887796F66FA"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">7.7-14 ProfileLineByLine</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ProfileLineByLine</code>( <var class="Arg">filename</var>[, <var class="Arg">options</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ProfileLineByLine</code> begins GAP recording profiling data to the file <var class="Arg">filename</var>. This file will get *very* large very quickly. This file is compressed using gzip to reduce its size. <var class="Arg">options</var> is an optional dictionary, which sets various configuration options. These are</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark">coverage</strong></dt><dd><p>Boolean (defaults to false). If this is enabled, only information about which lines are read and executed is stored. Enabling this is the same as calling <code class="func">CoverageLineByLine</code> (<a shape="rect" href="chap7_mj.html#X87CC48807DB4C008"><span class="RefLink">7.7-15</span></a>). Using this ignores all other options.</p>
 

@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.5-1 LLLReducedBasis</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X7D0FCEF8859E8637"></meta>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices &amp;#8614; 25.5-1 LLLReducedBasis</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25_mj.html#X7D0FCEF8859E8637"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.5-1 LLLReducedBasis</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LLLReducedBasis</code>( [<var class="Arg">L</var>, ]<var class="Arg">vectors</var>[, <var class="Arg">y</var>][, <var class="Arg">&quot;linearcomb&quot;</var>][, <var class="Arg">lllout</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">provides an implementation of the <em>LLL algorithm</em> by Lenstra, Lenstra and Lovász (see <a shape="rect" href="chapBib_mj.html#biBLLL82">[LLL82]</a>, <a shape="rect" href="chapBib_mj.html#biBPoh87">[Poh87]</a>). The implementation follows the description in <a shape="rect" href="chapBib_mj.html#biBCoh93">[Coh93, p. 94f.]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LLLReducedBasis</code> returns a record whose component <code class="code">basis</code> is a list of LLL reduced linearly independent vectors spanning the same lattice as the list <var class="Arg">vectors</var>. <var class="Arg">L</var> must be a lattice, with scalar product of the vectors <var class="Arg">v</var> and <var class="Arg">w</var> given by <code class="code">ScalarProduct( <var class="Arg">L</var>, <var class="Arg">v</var>, <var class="Arg">w</var> )</code>. If no lattice is specified then the scalar product of vectors given by <code class="code">ScalarProduct( <var class="Arg">v</var>, <var class="Arg">w</var> )</code> is used.</p><p xmlns="http://www.w3.org/1999/xhtml">In the case of the option <code class="code">&quot;linearcomb&quot;</code>, the result record contains also the components <code class="code">relations</code> and <code class="code">transformation</code>, with the following meaning. <code class="code">relations</code> is a basis of the relation space of <var class="Arg">vectors</var>, i.e., of vectors <var class="Arg">x</var> such that <code class="code"><var class="Arg">x</var> * <var class="Arg">vectors</var></code> is zero. <code class="code">transformation</code> gives the expression of the new lattice basis in terms of the old, i.e., <code class="code">transformation * <var class="Arg">vectors</var></code> equals the <code class="code">basis</code> component of the result.</p><p xmlns="http://www.w3.org/1999/xhtml">Another optional argument is <var class="Arg">y</var>, the &quot;sensitivity&quot; of the algorithm, a rational number between <math id="790672809365173082" display="inline" alttext="1/4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.5-1 LLLReducedBasis</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LLLReducedBasis</code>( [<var class="Arg">L</var>, ]<var class="Arg">vectors</var>[, <var class="Arg">y</var>][, <var class="Arg">&quot;linearcomb&quot;</var>][, <var class="Arg">lllout</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">provides an implementation of the <em>LLL algorithm</em> by Lenstra, Lenstra and Lovász (see <a shape="rect" href="chapBib_mj.html#biBLLL82">[LLL82]</a>, <a shape="rect" href="chapBib_mj.html#biBPoh87">[Poh87]</a>). The implementation follows the description in <a shape="rect" href="chapBib_mj.html#biBCoh93">[Coh93, p. 94f.]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LLLReducedBasis</code> returns a record whose component <code class="code">basis</code> is a list of LLL reduced linearly independent vectors spanning the same lattice as the list <var class="Arg">vectors</var>. <var class="Arg">L</var> must be a lattice, with scalar product of the vectors <var class="Arg">v</var> and <var class="Arg">w</var> given by <code class="code">ScalarProduct( <var class="Arg">L</var>, <var class="Arg">v</var>, <var class="Arg">w</var> )</code>. If no lattice is specified then the scalar product of vectors given by <code class="code">ScalarProduct( <var class="Arg">v</var>, <var class="Arg">w</var> )</code> is used.</p><p xmlns="http://www.w3.org/1999/xhtml">In the case of the option <code class="code">&quot;linearcomb&quot;</code>, the result record contains also the components <code class="code">relations</code> and <code class="code">transformation</code>, with the following meaning. <code class="code">relations</code> is a basis of the relation space of <var class="Arg">vectors</var>, i.e., of vectors <var class="Arg">x</var> such that <code class="code"><var class="Arg">x</var> * <var class="Arg">vectors</var></code> is zero. <code class="code">transformation</code> gives the expression of the new lattice basis in terms of the old, i.e., <code class="code">transformation * <var class="Arg">vectors</var></code> equals the <code class="code">basis</code> component of the result.</p><p xmlns="http://www.w3.org/1999/xhtml">Another optional argument is <var class="Arg">y</var>, the &quot;sensitivity&quot; of the algorithm, a rational number between <math id="-6514724197695319118" display="inline" alttext="1/4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">1/4</annotation>
   </semantics>
-</math> and <math id="-5090545086977876385" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="7125604129547425130" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
   </semantics>
-</math> (the default value is <math id="-6225298499570674536" display="inline" alttext="3/4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (the default value is <math id="-1252942205531038104" display="inline" alttext="3/4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">3</mn>
@@ -43,7 +43,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">3/4</annotation>
   </semantics>
-</math>).</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">lllout</var> is a record with the components <code class="code">mue</code> and <code class="code">B</code>, both lists of length <math id="6189124400048619957" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>).</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">lllout</var> is a record with the components <code class="code">mue</code> and <code class="code">B</code>, both lists of length <math id="6442440830398328474" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -51,7 +51,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
   </semantics>
-</math>, with the meaning that if <var class="Arg">lllout</var> is present then the first <math id="5759869787434789111" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, with the meaning that if <var class="Arg">lllout</var> is present then the first <math id="-3147543326846755512" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

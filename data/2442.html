@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.4 Break Loops</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X8593B49F8705B486"></meta>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop &amp;#8614; 6.4 Break Loops</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6_mj.html#X8593B49F8705B486"></meta>
       </head>
       <body> <h4 xmlns="http://www.w3.org/1999/xhtml">6.4 <span class="Heading">Break Loops</span></h4><p xmlns="http://www.w3.org/1999/xhtml">When an error has occurred or when you interrupt <strong class="pkg">GAP</strong> (usually by hitting <strong class="button">Ctrl-C</strong>) <strong class="pkg">GAP</strong> enters a break loop, that is in most respects like the main read eval print loop (see <a shape="rect" href="chap6_mj.html#X81667F568237B232"><span class="RefLink">6.1</span></a>). That is, you can enter statements, <strong class="pkg">GAP</strong> reads them, evaluates them, and shows the result if any. However those evaluations happen within the context in which the error occurred. So you can look at the arguments and local variables of the functions that were active when the error happened and even change them. The prompt is changed from <code class="code">gap&gt;</code> to <code class="code">brk&gt;</code> to indicate that you are in a break loop.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">1/0;</span>

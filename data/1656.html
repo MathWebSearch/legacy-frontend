@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.6-1 InitPowerMap</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X85D068D77C3C041C"></meta>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables &amp;#8614; 73.6-1 InitPowerMap</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73_mj.html#X85D068D77C3C041C"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.6-1 InitPowerMap</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InitPowerMap</code>( <var class="Arg">tbl</var>, <var class="Arg">prime</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For an ordinary character table <var class="Arg">tbl</var> and a prime <var class="Arg">prime</var>, <code class="func">InitPowerMap</code> returns a parametrized map that is a first approximation of the <var class="Arg">prime</var>-th powermap of <var class="Arg">tbl</var>, using the conditions 1. and 2. listed in the description of <code class="func">PossiblePowerMaps</code> (<a shape="rect" href="chap73_mj.html#X7C7B292E80590BE0"><span class="RefLink">73.1-2</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">If there are classes for which no images are possible, according to these criteria, then <code class="keyw">fail</code> is returned.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t:= CharacterTable( &quot;U4(3).4&quot; );;</span>

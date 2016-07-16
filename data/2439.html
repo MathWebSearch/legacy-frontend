@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop-&gt;6.4-3 OnBreak</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6.html#X82EBF01181C3C859"></meta>
+        <title>GAP (ref) - Chapter 6: Main Loop and Break Loop &amp;#8614; 6.4-3 OnBreak</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap6_mj.html#X82EBF01181C3C859"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">6.4-3 OnBreak</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OnBreak</code>(  )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">By default, when a break loop is entered, <strong class="pkg">GAP</strong> prints a trace of the innermost 5 commands currently being executed. This behaviour can be configured by changing the value of the global variable <code class="func">OnBreak</code>. When a break loop is entered, the value of <code class="func">OnBreak</code> is checked. If it is a function, then it is called with no arguments. By default, the value of <code class="func">OnBreak</code> is <code class="func">Where</code> (<a shape="rect" href="chap6_mj.html#X7A7FFA2B7C1EF5A3"><span class="RefLink">6.4-5</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OnBreak := function() Print(&quot;Hello\n&quot;); end;</span>

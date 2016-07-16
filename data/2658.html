@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 13: Types of Objects-&gt;13.6-3 AttributeValueNotSet</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap13.html#X8529F8A17884A32C"></meta>
+        <title>GAP (ref) - Chapter 13: Types of Objects &amp;#8614; 13.6-3 AttributeValueNotSet</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap13_mj.html#X8529F8A17884A32C"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">13.6-3 AttributeValueNotSet</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AttributeValueNotSet</code>( <var class="Arg">attr</var>, <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If the value of the attribute <var class="Arg">attr</var> is already stored for <var class="Arg">obj</var>, <code class="code">AttributeValueNotSet</code> simply returns this value. Otherwise the value of <code class="code"><var class="Arg">attr</var>( <var class="Arg">obj</var> )</code> is computed and returned <em>without storing it</em> in <var class="Arg">obj</var>. This can be useful when &quot;large&quot; attribute values (such as element lists) are needed only once and shall not be stored in the object.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasAsSSortedList(g);</span>

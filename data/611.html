@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.10-1 ReducedClassFunctions</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X86F360D983343C2A"></meta>
+        <title>GAP (ref) - Chapter 72: Class Functions &amp;#8614; 72.10-1 ReducedClassFunctions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72_mj.html#X86F360D983343C2A"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.10-1 ReducedClassFunctions</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReducedClassFunctions</code>( [<var class="Arg">tbl</var>, ][<var class="Arg">constituents</var>, ]<var class="Arg">reducibles</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">reducibles</var> be a list of ordinary virtual characters of the group <math id="1821930146979596899" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.10-1 ReducedClassFunctions</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ReducedClassFunctions</code>( [<var class="Arg">tbl</var>, ][<var class="Arg">constituents</var>, ]<var class="Arg">reducibles</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">reducibles</var> be a list of ordinary virtual characters of the group <math id="5354900093438369891" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>, say. If <var class="Arg">constituents</var> is given then it must also be a list of ordinary virtual characters of <math id="5709597560823350139" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, say. If <var class="Arg">constituents</var> is given then it must also be a list of ordinary virtual characters of <math id="-588398481811454301" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>, otherwise we have <var class="Arg">constituents</var> equal to <var class="Arg">reducibles</var> in the following.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ReducedClassFunctions</code> returns a record with the components <code class="code">remainders</code> and <code class="code">irreducibles</code>, both lists of virtual characters of <math id="7123084601561459595" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, otherwise we have <var class="Arg">constituents</var> equal to <var class="Arg">reducibles</var> in the following.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">ReducedClassFunctions</code> returns a record with the components <code class="code">remainders</code> and <code class="code">irreducibles</code>, both lists of virtual characters of <math id="-7119285383743971136" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -29,7 +29,7 @@
   </semantics>
 </math>. These virtual characters are computed as follows.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <code class="code">rems</code> be the set of nonzero class functions obtained by subtraction of</p><p class="center" xmlns="http://www.w3.org/1999/xhtml">\[
 \sum_{\chi} ( [<var class="Arg">reducibles</var>[i], \chi] / [\chi, \chi] ) \cdot \chi
-\]</p><p xmlns="http://www.w3.org/1999/xhtml">from <math id="-8175714480961459339" display="inline" alttext="\textit{reducibles}[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+\]</p><p xmlns="http://www.w3.org/1999/xhtml">from <math id="1995961563303240082" display="inline" alttext="\textit{reducibles}[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑟𝑒𝑑𝑢𝑐𝑖𝑏𝑙𝑒𝑠</mtext>
@@ -54,7 +54,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{reducibles}[i]</annotation>
   </semantics>
-</math>, where the summation runs over <var class="Arg">constituents</var> and <math id="6967300809193265497" display="inline" alttext="[\chi,\psi]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, where the summation runs over <var class="Arg">constituents</var> and <math id="7575723069920111924" display="inline" alttext="[\chi,\psi]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -71,7 +71,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[\chi,\psi]</annotation>
   </semantics>
-</math> denotes the scalar product of <math id="-6688005045220711436" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> denotes the scalar product of <math id="-5309703072812359694" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

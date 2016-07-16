@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 30: Collections-&gt;30.8-6 IteratorList</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30.html#X858A28667D137C4B"></meta>
+        <title>GAP (ref) - Chapter 30: Collections &amp;#8614; 30.8-6 IteratorList</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap30_mj.html#X858A28667D137C4B"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">30.8-6 IteratorList</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IteratorList</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IteratorList</code> returns a new iterator that allows iteration over the elements of the list <var class="Arg">list</var> (which may have holes) in the same order.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">list</var> is mutable then it is in principle possible to change <var class="Arg">list</var> after the call of <code class="func">IteratorList</code>. In this case all changes concerning positions that have not yet been reached in the iteration will also affect the iterator. For example, if <var class="Arg">list</var> is enlarged then the iterator will iterate also over the new elements at the end of the changed list.</p><p xmlns="http://www.w3.org/1999/xhtml"><em>Note</em> that changes of <var class="Arg">list</var> will also affect all shallow copies of <var class="Arg">list</var>.</p> </body>
     </html>

@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.6-2 ShortestVectors</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X79A692B6819353D4"></meta>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices &amp;#8614; 25.6-2 ShortestVectors</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25_mj.html#X79A692B6819353D4"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.6-2 ShortestVectors</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ShortestVectors</code>( <var class="Arg">G</var>, <var class="Arg">m</var>[, <var class="Arg">&quot;positive&quot;</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">G</var> be a regular matrix of a symmetric bilinear form, and <var class="Arg">m</var> a nonnegative integer. <code class="func">ShortestVectors</code> computes the vectors <math id="756678592547549432" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.6-2 ShortestVectors</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ShortestVectors</code>( <var class="Arg">G</var>, <var class="Arg">m</var>[, <var class="Arg">&quot;positive&quot;</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">G</var> be a regular matrix of a symmetric bilinear form, and <var class="Arg">m</var> a nonnegative integer. <code class="func">ShortestVectors</code> computes the vectors <math id="-5001639042723976499" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
   </semantics>
-</math> that satisfy <math id="-3079210943422964835" display="inline" alttext="x\cdot\textit{G}\cdot x^{tr}\leq\textit{m}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> that satisfy <math id="4647112183283469536" display="inline" alttext="x\cdot\textit{G}\cdot x^{tr}\leq\textit{m}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
       <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">
@@ -57,7 +57,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x\cdot\textit{G}\cdot x^{tr}\leq\textit{m}</annotation>
   </semantics>
-</math>, and returns a record describing these vectors. The result record has the components</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">vectors</code></strong></dt><dd><p>list of the nonzero vectors <math id="-799678841495875247" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and returns a record describing these vectors. The result record has the components</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">vectors</code></strong></dt><dd><p>list of the nonzero vectors <math id="-580637711808749421" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -65,7 +65,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
   </semantics>
-</math>, but only one of each pair <math id="1616313934917454334" display="inline" alttext="(x,-x)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, but only one of each pair <math id="3714646345936127606" display="inline" alttext="(x,-x)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -92,7 +92,7 @@
 
 </dd><dt><strong class="Mark"><code class="code">norms</code></strong></dt><dd><p>list of norms of the vectors according to the Gram matrix <var class="Arg">G</var>.</p>
 
-</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">If the optional argument <code class="code">&quot;positive&quot;</code> is entered, only those vectors <math id="-3774391329041006534" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">If the optional argument <code class="code">&quot;positive&quot;</code> is entered, only those vectors <math id="8099071381234729881" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.9-9 InfoText</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X7932C35180C80953"></meta>
+        <title>GAP (ref) - Chapter 71: Character Tables &amp;#8614; 71.9-9 InfoText</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71_mj.html#X7932C35180C80953"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.9-9 InfoText</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InfoText</code>( <var class="Arg">tbl</var> )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is a mutable string with information about the character table <var class="Arg">tbl</var>. There is no default method to create an info text.</p><p xmlns="http://www.w3.org/1999/xhtml">This attribute is used mainly for library tables (see the manual of the <strong class="pkg">GAP</strong> Character Table Library). Usual parts of the information are the origin of the table, tests it has passed (<code class="code">1.o.r.</code> for the test of orthogonality, <code class="code">pow[<var class="Arg">p</var>]</code> for the construction of the <var class="Arg">p</var>-th power map, <code class="code">DEC</code> for the decomposition of ordinary into Brauer characters, <code class="code">TENS</code> for the decomposition of tensor products of irreducibles), and choices made without loss of generality.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print( InfoText( CharacterTable( &quot;A5&quot; ) ), &quot;\n&quot; );</span>

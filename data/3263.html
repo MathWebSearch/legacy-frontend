@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 40: Group Homomorphisms-&gt;40.2 Operations for Group Homomorphisms</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap40.html#X794043AC7E4FAF9E"></meta>
+        <title>GAP (ref) - Chapter 40: Group Homomorphisms &amp;#8614; 40.2 Operations for Group Homomorphisms</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap40_mj.html#X794043AC7E4FAF9E"></meta>
       </head>
       <body> <h4 xmlns="http://www.w3.org/1999/xhtml">40.2 <span class="Heading">Operations for Group Homomorphisms</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Group homomorphisms are mappings, so all the operations and properties for mappings described in chapter <a shape="rect" href="chap32_mj.html#X7C9734B880042C73"><span class="RefLink">32</span></a> are applicable to them. (However often much better methods, than for general mappings are available.)</p><p xmlns="http://www.w3.org/1999/xhtml">Group homomorphisms will map groups to groups by just mapping the set of generators.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">KernelOfMultiplicativeGeneralMapping</code> (<a shape="rect" href="chap32_mj.html#X81A5A5CF846E5FBF"><span class="RefLink">32.9-5</span></a>) can be used to compute the kernel of a group homomorphism.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">hom:=GroupHomomorphismByImages(g,h,gens,[(1,2),(1,3)]);;</span>
@@ -33,7 +33,7 @@ Group(&lt;fp, no generators known&gt;)
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">up:=PreImage(phom,u);;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(GeneratorsOfGroup(up),TraceMat);</span>
 [ -2, -2, 0, -4, 1, 0 ]
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">For an automorphism <var class="Arg">aut</var>, <code class="func">Inverse</code> (<a shape="rect" href="chap31_mj.html#X78EE524E83624057"><span class="RefLink">31.10-8</span></a>) returns the inverse automorphism <math id="3497301543676732971" display="inline" alttext="\textit{aut}^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">For an automorphism <var class="Arg">aut</var>, <code class="func">Inverse</code> (<a shape="rect" href="chap31_mj.html#X78EE524E83624057"><span class="RefLink">31.10-8</span></a>) returns the inverse automorphism <math id="7018090486299997059" display="inline" alttext="\textit{aut}^{{-1}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑎𝑢𝑡</mtext>

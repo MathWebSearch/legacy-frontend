@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.5-13 InverseOfTransformation</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X860306EB7FAAD2D4"></meta>
+        <title>GAP (ref) - Chapter 53: Transformations &amp;#8614; 53.5-13 InverseOfTransformation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53_mj.html#X860306EB7FAAD2D4"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.5-13 InverseOfTransformation</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseOfTransformation</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A transformation.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">InverseOfTransformation</code> returns a semigroup inverse of the transformation <var class="Arg">f</var> in the full transformation semigroup. An <em>inverse</em> of <var class="Arg">f</var> is any transformation <code class="code">g</code> such that <code class="code"><var class="Arg">f</var>*g*<var class="Arg">f</var>=<var class="Arg">f</var></code> and <code class="code">g*<var class="Arg">f</var>*g=g</code>. Every transformation has at least one inverse in a full transformation semigroup.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=Transformation( [ 2, 6, 7, 2, 6, 9, 9, 1, 1, 5 ] );;</span>

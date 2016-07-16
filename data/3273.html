@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 81: An Example – Residue Class Rings-&gt;81.3 A Second Attempt to Implement Elements of Residue Class Rings</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap81.html#X85B914DD81732492"></meta>
+        <title>GAP (ref) - Chapter 81: An Example – Residue Class Rings &amp;#8614; 81.3 A Second Attempt to Implement Elements of Residue Class Rings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap81_mj.html#X85B914DD81732492"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">81.3 <span class="Heading">A Second Attempt to Implement Elements of Residue Class Rings</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Faced with the problem to implement elements of the rings <math id="8190123189786754101" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">81.3 <span class="Heading">A Second Attempt to Implement Elements of Residue Class Rings</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Faced with the problem to implement elements of the rings <math id="-2797431042912771151" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math>, we must define the <em>types</em> of these elements as far as is necessary to distinguish them from other <strong class="pkg">GAP</strong> objects.</p><p xmlns="http://www.w3.org/1999/xhtml">As is described in Chapter <a shape="rect" href="chap13_mj.html#X7E8202627B421DB1"><span class="RefLink">13</span></a>, the type of an object comprises several aspects of information about this object; the <em>family</em> determines the relation of the object to other objects, the <em>categories</em> determine what operations the object admits, the <em>representation</em> determines how an object is actually represented, and the <em>attributes</em> describe knowledge about the object.</p><p xmlns="http://www.w3.org/1999/xhtml">First of all, we must decide about the <em>family</em> of each residue class. A natural way to do this is to put the elements of each ring <math id="2224965451361654268" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, we must define the <em>types</em> of these elements as far as is necessary to distinguish them from other <strong class="pkg">GAP</strong> objects.</p><p xmlns="http://www.w3.org/1999/xhtml">As is described in Chapter <a shape="rect" href="chap13_mj.html#X7E8202627B421DB1"><span class="RefLink">13</span></a>, the type of an object comprises several aspects of information about this object; the <em>family</em> determines the relation of the object to other objects, the <em>categories</em> determine what operations the object admits, the <em>representation</em> determines how an object is actually represented, and the <em>attributes</em> describe knowledge about the object.</p><p xmlns="http://www.w3.org/1999/xhtml">First of all, we must decide about the <em>family</em> of each residue class. A natural way to do this is to put the elements of each ring <math id="4038857550701331463" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -51,7 +51,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math> into a family of their own. This means that for example elements of <math id="7312714749707772971" display="inline" alttext="?/3?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> into a family of their own. This means that for example elements of <math id="2044251638484121679" display="inline" alttext="?/3?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -75,7 +75,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/3?</annotation>
   </semantics>
-</math> and <math id="-3630248956507429458" display="inline" alttext="?/9?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="-1877758029098434960" display="inline" alttext="?/9?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -99,7 +99,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/9?</annotation>
   </semantics>
-</math> lie in different families. So the only interesting relation between the families of two residue classes is equality; binary arithmetic operations with two residue classes will be admissible only if their families are equal. Note that in the naive approach in Section <a shape="rect" href="chap81_mj.html#X81008A74838A792E"><span class="RefLink">81.1</span></a>, we had to take care of different moduli by a check in each function; these checks may disappear in the new approach because of our choice of families.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that we do not need to tell <strong class="pkg">GAP</strong> anything about the above decision concerning the families of the objects that we are going to implement, that is, the <em>declaration part</em> (see <a shape="rect" href="chap79_mj.html#X7837CA9A83D93B38"><span class="RefLink">79.19</span></a>) of the little <strong class="pkg">GAP</strong> package we are writing contains nothing about the distribution of the new objects into families. (The actual construction of a family happens in the function <code class="code">MyZmodnZ</code> shown below.)</p><p xmlns="http://www.w3.org/1999/xhtml">Second, we want to describe methods to add or multiply two elements in <math id="-1277670611882499693" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> lie in different families. So the only interesting relation between the families of two residue classes is equality; binary arithmetic operations with two residue classes will be admissible only if their families are equal. Note that in the naive approach in Section <a shape="rect" href="chap81_mj.html#X81008A74838A792E"><span class="RefLink">81.1</span></a>, we had to take care of different moduli by a check in each function; these checks may disappear in the new approach because of our choice of families.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that we do not need to tell <strong class="pkg">GAP</strong> anything about the above decision concerning the families of the objects that we are going to implement, that is, the <em>declaration part</em> (see <a shape="rect" href="chap79_mj.html#X7837CA9A83D93B38"><span class="RefLink">79.19</span></a>) of the little <strong class="pkg">GAP</strong> package we are writing contains nothing about the distribution of the new objects into families. (The actual construction of a family happens in the function <code class="code">MyZmodnZ</code> shown below.)</p><p xmlns="http://www.w3.org/1999/xhtml">Second, we want to describe methods to add or multiply two elements in <math id="799981880310804346" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -123,7 +123,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math>, and these methods shall be not applicable to other <strong class="pkg">GAP</strong> objects. The natural way to do this is to create a new <em>category</em> in which all elements of all rings <math id="-7123416262427309141" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and these methods shall be not applicable to other <strong class="pkg">GAP</strong> objects. The natural way to do this is to create a new <em>category</em> in which all elements of all rings <math id="7594455529679432000" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -152,7 +152,7 @@
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cat:= CategoryCollections( IsMyZmodnZObj );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cat:= CategoryCollections( cat );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">cat:= CategoryCollections( cat );;</span>
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">So all elements in the rings <math id="7934387854132384029" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">So all elements in the rings <math id="3983564338468385494" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -176,7 +176,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math> will lie in the category <code class="code">IsMyZmodnZObj</code>, which is a subcategory of <code class="func">IsScalar</code> (<a shape="rect" href="chap31_mj.html#X8113834E84FD0435"><span class="RefLink">31.14-20</span></a>). The latter means that one can add, subtract, multiply and divide two such elements that lie in the same family, with the obvious restriction that the second operand of a division must be invertible. (The name <code class="code">IsMyZmodnZObj</code> is chosen because <code class="func">IsZmodnZObj</code> (<a shape="rect" href="chap14_mj.html#X7D0107DD79753901"><span class="RefLink">14.5-4</span></a>) is already defined in <strong class="pkg">GAP</strong>, for an implementation of residue classes that is very similar to the one developed in this manual chapter. Using this different name, one can simply enter the <strong class="pkg">GAP</strong> code of this chapter into a <strong class="pkg">GAP</strong> session, either interactively or by reading a file with this code, and experiment after each step whether the expected behaviour has been achieved, and what is still missing.)</p><p xmlns="http://www.w3.org/1999/xhtml">The next lines of <strong class="pkg">GAP</strong> code above create the categories <code class="code">CategoryCollections( IsMyZmodnZObj )</code> and two higher levels of collections categories of this, which will be needed later; it is important to create these categories before collections of the objects in <code class="code">IsMyZmodnZObj</code> actually arise.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the only difference between <code class="func">DeclareCategory</code> (<a shape="rect" href="chap79_mj.html#X879DE2A17A6C6E92"><span class="RefLink">79.18-1</span></a>) and <code class="func">NewCategory</code> (<a shape="rect" href="chap79_mj.html#X87F68F887B44DBBD"><span class="RefLink">79.1-1</span></a>) is that in a call to <code class="func">DeclareCategory</code> (<a shape="rect" href="chap79_mj.html#X879DE2A17A6C6E92"><span class="RefLink">79.18-1</span></a>), a variable corresponding to the first argument is set to the new category, and this variable is read-only (see <a shape="rect" href="chap79_mj.html#X87E29BA57C8208A4"><span class="RefLink">79.18</span></a>). The same holds for <code class="func">DeclareRepresentation</code> (<a shape="rect" href="chap79_mj.html#X7C81FB2682AE54CD"><span class="RefLink">79.18-2</span></a>) and <code class="func">NewRepresentation</code> (<a shape="rect" href="chap79_mj.html#X7CC8106F809E15CF"><span class="RefLink">79.2-1</span></a>) etc.</p><p xmlns="http://www.w3.org/1999/xhtml">There is no analogue of categories in the implementation in Section <a shape="rect" href="chap81_mj.html#X81008A74838A792E"><span class="RefLink">81.1</span></a>, since there it was not necessary to distinguish residue classes from other <strong class="pkg">GAP</strong> objects. Note that the functions there assumed that their arguments were residue classes, and the user was responsible not to call them with other arguments. Thus an important aspect of types is to describe arguments of functions explicitly.</p><p xmlns="http://www.w3.org/1999/xhtml">Third, we must decide about the <em>representation</em> of our objects. This is something we know already from Section <a shape="rect" href="chap81_mj.html#X81008A74838A792E"><span class="RefLink">81.1</span></a>, where we chose a list of length two. Here we may choose between two essentially different representations for the new <strong class="pkg">GAP</strong> objects, namely as &quot;component object&quot; (record-like) or &quot;positional object&quot; (list-like). We decide to store the modulus of each residue class in its family, and to encode the element <math id="-7375355179214337654" display="inline" alttext="k+n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> will lie in the category <code class="code">IsMyZmodnZObj</code>, which is a subcategory of <code class="func">IsScalar</code> (<a shape="rect" href="chap31_mj.html#X8113834E84FD0435"><span class="RefLink">31.14-20</span></a>). The latter means that one can add, subtract, multiply and divide two such elements that lie in the same family, with the obvious restriction that the second operand of a division must be invertible. (The name <code class="code">IsMyZmodnZObj</code> is chosen because <code class="func">IsZmodnZObj</code> (<a shape="rect" href="chap14_mj.html#X7D0107DD79753901"><span class="RefLink">14.5-4</span></a>) is already defined in <strong class="pkg">GAP</strong>, for an implementation of residue classes that is very similar to the one developed in this manual chapter. Using this different name, one can simply enter the <strong class="pkg">GAP</strong> code of this chapter into a <strong class="pkg">GAP</strong> session, either interactively or by reading a file with this code, and experiment after each step whether the expected behaviour has been achieved, and what is still missing.)</p><p xmlns="http://www.w3.org/1999/xhtml">The next lines of <strong class="pkg">GAP</strong> code above create the categories <code class="code">CategoryCollections( IsMyZmodnZObj )</code> and two higher levels of collections categories of this, which will be needed later; it is important to create these categories before collections of the objects in <code class="code">IsMyZmodnZObj</code> actually arise.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the only difference between <code class="func">DeclareCategory</code> (<a shape="rect" href="chap79_mj.html#X879DE2A17A6C6E92"><span class="RefLink">79.18-1</span></a>) and <code class="func">NewCategory</code> (<a shape="rect" href="chap79_mj.html#X87F68F887B44DBBD"><span class="RefLink">79.1-1</span></a>) is that in a call to <code class="func">DeclareCategory</code> (<a shape="rect" href="chap79_mj.html#X879DE2A17A6C6E92"><span class="RefLink">79.18-1</span></a>), a variable corresponding to the first argument is set to the new category, and this variable is read-only (see <a shape="rect" href="chap79_mj.html#X87E29BA57C8208A4"><span class="RefLink">79.18</span></a>). The same holds for <code class="func">DeclareRepresentation</code> (<a shape="rect" href="chap79_mj.html#X7C81FB2682AE54CD"><span class="RefLink">79.18-2</span></a>) and <code class="func">NewRepresentation</code> (<a shape="rect" href="chap79_mj.html#X7CC8106F809E15CF"><span class="RefLink">79.2-1</span></a>) etc.</p><p xmlns="http://www.w3.org/1999/xhtml">There is no analogue of categories in the implementation in Section <a shape="rect" href="chap81_mj.html#X81008A74838A792E"><span class="RefLink">81.1</span></a>, since there it was not necessary to distinguish residue classes from other <strong class="pkg">GAP</strong> objects. Note that the functions there assumed that their arguments were residue classes, and the user was responsible not to call them with other arguments. Thus an important aspect of types is to describe arguments of functions explicitly.</p><p xmlns="http://www.w3.org/1999/xhtml">Third, we must decide about the <em>representation</em> of our objects. This is something we know already from Section <a shape="rect" href="chap81_mj.html#X81008A74838A792E"><span class="RefLink">81.1</span></a>, where we chose a list of length two. Here we may choose between two essentially different representations for the new <strong class="pkg">GAP</strong> objects, namely as &quot;component object&quot; (record-like) or &quot;positional object&quot; (list-like). We decide to store the modulus of each residue class in its family, and to encode the element <math id="889309358015574988" display="inline" alttext="k+n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
@@ -200,7 +200,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">k+n?</annotation>
   </semantics>
-</math> by the unique residue in the range <math id="8694929249774497343" display="inline" alttext="[0..n-1]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> by the unique residue in the range <math id="2594313441835360209" display="inline" alttext="[0..n-1]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -227,7 +227,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1g" encoding="application/x-tex">[0..n-1]</annotation>
   </semantics>
-</math> that is congruent to <math id="4742658526210382757" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> that is congruent to <math id="-1807608870032076483" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -235,7 +235,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
   </semantics>
-</math> modulo <math id="5398575520282682184" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> modulo <math id="-5106839122441480496" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -252,7 +252,7 @@
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">   return Objectify( NewType( Fam, IsMyZmodnZObj and IsMyModulusRep ),</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">                     [ residue mod Fam!.modulus ] );</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">end );</span>
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that we normalize <code class="code">residue</code> explicitly using <code class="keyw">mod</code>; we assumed that the modulus is stored in <code class="code">Fam</code>, so we must take care of this below. If <code class="code">Fam</code> is a family of residue classes, and <code class="code">residue</code> is an integer, <code class="code">MyZmodnZObj</code> returns the corresponding object in the family <code class="code">Fam</code>, which lies in the category <code class="code">IsMyZmodnZObj</code> and in the representation <code class="code">IsMyModulusRep</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">MyZmodnZObj</code> needs an appropriate family as first argument, so let us see how to get our hands on this. Of course we could write a handy function to create such a family for given modulus, but we choose another way. In fact we do not really want to call <code class="code">MyZmodnZObj</code> explicitly when we want to create residue classes. For example, if we want to enter a matrix of residues then usually we start with a matrix of corresponding integers, and it is more elegant to do the conversion via multiplying the matrix with the identity of the required ring <math id="-5390208395472313457" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that we normalize <code class="code">residue</code> explicitly using <code class="keyw">mod</code>; we assumed that the modulus is stored in <code class="code">Fam</code>, so we must take care of this below. If <code class="code">Fam</code> is a family of residue classes, and <code class="code">residue</code> is an integer, <code class="code">MyZmodnZObj</code> returns the corresponding object in the family <code class="code">Fam</code>, which lies in the category <code class="code">IsMyZmodnZObj</code> and in the representation <code class="code">IsMyModulusRep</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">MyZmodnZObj</code> needs an appropriate family as first argument, so let us see how to get our hands on this. Of course we could write a handy function to create such a family for given modulus, but we choose another way. In fact we do not really want to call <code class="code">MyZmodnZObj</code> explicitly when we want to create residue classes. For example, if we want to enter a matrix of residues then usually we start with a matrix of corresponding integers, and it is more elegant to do the conversion via multiplying the matrix with the identity of the required ring <math id="-4476747491576669163" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -276,7 +276,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math>; this is also done for the conversion of integral matrices to finite field matrices. (Note that we will have to install a method for this.) So it is often sufficient to access this identity, for example via <code class="code">One( MyZmodnZ( <var class="Arg">n</var> ) )</code>, where <code class="code">MyZmodnZ</code> returns a domain representing the ring <math id="-8268747412496103499" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>; this is also done for the conversion of integral matrices to finite field matrices. (Note that we will have to install a method for this.) So it is often sufficient to access this identity, for example via <code class="code">One( MyZmodnZ( <var class="Arg">n</var> ) )</code>, where <code class="code">MyZmodnZ</code> returns a domain representing the ring <math id="7692296777894360607" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -300,7 +300,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math> when called with the argument <math id="-6964669894399488442" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> when called with the argument <math id="-7189237701299718844" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -392,7 +392,7 @@ true
 false
 true
 false
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We might want to admit the addition of integers and elements in rings <math id="4461996100395119433" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">We might want to admit the addition of integers and elements in rings <math id="-4864989982930332846" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -416,7 +416,7 @@ false
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math>, where an integer is implicitly identified with its residue modulo <math id="6296997712063729320" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, where an integer is implicitly identified with its residue modulo <math id="4483661348638013775" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -575,7 +575,7 @@ fail
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">   F:= ElementsFamily( FamilyObj(R) );</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">   return List( [ 0 .. Size( R ) - 1 ], x -&gt; MyZmodnZObj( F, x ) );</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">   end );</span>
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that this method is applicable only to full rings <math id="-3691000868114046749" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Note that this method is applicable only to full rings <math id="8441090022543349032" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -599,7 +599,7 @@ fail
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math>, for proper subrings it would return a wrong result. Furthermore, it is not required that the argument is a ring; in fact this method is applicable also to the additive group formed by all elements in the family, provided that it knows to contain the whole family.</p><p xmlns="http://www.w3.org/1999/xhtml">Analogously, we install methods to compute the size, a random element, and the units of full rings <math id="-3467999477580365822" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, for proper subrings it would return a wrong result. Furthermore, it is not required that the argument is a ring; in fact this method is applicable also to the additive group formed by all elements in the family, provided that it knows to contain the whole family.</p><p xmlns="http://www.w3.org/1999/xhtml">Analogously, we install methods to compute the size, a random element, and the units of full rings <math id="7519516589159754504" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -659,7 +659,7 @@ fail
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">   gens:= Flat( gens ) * One( R );</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">   return GroupByGenerators( gens, One( R ) );</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">   end );</span>
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Each ring <math id="8185195560758056488" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Each ring <math id="1565661933211833828" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -683,7 +683,7 @@ fail
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math> is finite, and we could install a method that returns <code class="keyw">true</code> when <code class="func">IsFinite</code> (<a shape="rect" href="chap30_mj.html#X808A4061809A6E67"><span class="RefLink">30.4-2</span></a>) is called with <math id="-6450627466241130584" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is finite, and we could install a method that returns <code class="keyw">true</code> when <code class="func">IsFinite</code> (<a shape="rect" href="chap30_mj.html#X808A4061809A6E67"><span class="RefLink">30.4-2</span></a>) is called with <math id="-4666337752604295921" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">

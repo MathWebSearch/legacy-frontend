@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.11-2 IsomorphismFpGroupByGenerators</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X81B2B3B6812FD62D"></meta>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups &amp;#8614; 47.11-2 IsomorphismFpGroupByGenerators</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47_mj.html#X81B2B3B6812FD62D"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">47.11-2 IsomorphismFpGroupByGenerators</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsomorphismFpGroupByGenerators</code>( <var class="Arg">G</var>, <var class="Arg">gens</var>[, <var class="Arg">string</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsomorphismFpGroupByGeneratorsNC</code>( <var class="Arg">G</var>, <var class="Arg">gens</var>, <var class="Arg">string</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns an isomorphism from a finite group <var class="Arg">G</var> to a finitely presented group <var class="Arg">F</var> isomorphic to <var class="Arg">G</var>. The generators of <var class="Arg">F</var> correspond to the <em>generators of <var class="Arg">G</var> given in the list <var class="Arg">gens</var></em>. If <var class="Arg">string</var> is given it is used to name the generators of the finitely presented group.</p><p xmlns="http://www.w3.org/1999/xhtml">The <code class="code">NC</code> version will avoid testing whether the elements in <var class="Arg">gens</var> generate <var class="Arg">G</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetInfoLevel( InfoFpGroup, 1 );</span>
@@ -22,7 +22,7 @@ Group([ (1,2,3,4,5,6,7,8,9,10,11), (3,7,11,8)(4,10,5,6),
 #I  the image group has 3 gens and 20 rels of total length 497
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">iso := IsomorphismFpGroupByGenerators( M12, gens );;</span>
 #I  the image group has 3 gens and 19 rels of total length 493
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Also in the case of a permutation group <var class="Arg">G</var>, the function <code class="func">IsomorphismFpGroupByGenerators</code> supports the option <code class="code">method</code> that can be used to modify the strategy. The option <code class="code">method</code> may take the following values.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">method := &quot;regular&quot;</code></strong></dt><dd><p>This may be specified for groups of small size, up to <math id="-2008219989426451200" display="inline" alttext="10^{5}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Also in the case of a permutation group <var class="Arg">G</var>, the function <code class="func">IsomorphismFpGroupByGenerators</code> supports the option <code class="code">method</code> that can be used to modify the strategy. The option <code class="code">method</code> may take the following values.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">method := &quot;regular&quot;</code></strong></dt><dd><p>This may be specified for groups of small size, up to <math id="-5668575060912627317" display="inline" alttext="10^{5}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
@@ -52,7 +52,7 @@ Group([ (1,2,3,4,5,6,7,8,9,10,11), (3,7,11,8)(4,10,5,6),
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">iso := IsomorphismFpGroupByGenerators( M12, gens : </span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">                                          method := &quot;fast&quot; );;</span>
 #I  the image group has 3 gens and 151 rels of total length 3658
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Though the option <code class="code">method := &quot;regular&quot;</code> is only checked in the case of a permutation group it also affects the performance and the results of the function <code class="func">IsomorphismFpGroupByGenerators</code> for other groups, e. g. for matrix groups. This happens because, for these groups, the function first calls the function <code class="func">NiceMonomorphism</code> (<a shape="rect" href="chap40_mj.html#X7965086E82ABCF41"><span class="RefLink">40.5-2</span></a>) to get a bijective action homomorphism from <var class="Arg">G</var> to a suitable permutation group, <math id="-7488171471602017858" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Though the option <code class="code">method := &quot;regular&quot;</code> is only checked in the case of a permutation group it also affects the performance and the results of the function <code class="func">IsomorphismFpGroupByGenerators</code> for other groups, e. g. for matrix groups. This happens because, for these groups, the function first calls the function <code class="func">NiceMonomorphism</code> (<a shape="rect" href="chap40_mj.html#X7965086E82ABCF41"><span class="RefLink">40.5-2</span></a>) to get a bijective action homomorphism from <var class="Arg">G</var> to a suitable permutation group, <math id="7922802082650874292" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -60,7 +60,7 @@ Group([ (1,2,3,4,5,6,7,8,9,10,11), (3,7,11,8)(4,10,5,6),
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">P</annotation>
   </semantics>
-</math> say, and then, recursively, calls itself for the group <math id="-6477811583478832013" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> say, and then, recursively, calls itself for the group <math id="448016802063097307" display="inline" alttext="P" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">P</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

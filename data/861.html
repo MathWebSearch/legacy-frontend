@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.4-4 IsPolynomial</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X7974B0707C8DAB6C"></meta>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions &amp;#8614; 66.4-4 IsPolynomial</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66_mj.html#X7974B0707C8DAB6C"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.4-4 IsPolynomial</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsPolynomial</code>( <var class="Arg">ratfun</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A polynomial is a rational function whose denominator is one. (If the coefficients family forms a field this is equivalent to the denominator being constant.)</p><p xmlns="http://www.w3.org/1999/xhtml">If the base family is not a field, it may be impossible to represent the quotient of a polynomial by a ring element as a polynomial again, but it will have to be represented as a rational function.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPolynomial((x*y+x^2*y^3)/y);</span>

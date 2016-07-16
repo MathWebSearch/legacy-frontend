@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 64: Lie Algebras-&gt;64.12-4 ValueCochain</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64.html#X7D6760DA84683011"></meta>
+        <title>GAP (ref) - Chapter 64: Lie Algebras &amp;#8614; 64.12-4 ValueCochain</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap64_mj.html#X7D6760DA84683011"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">64.12-4 ValueCochain</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ValueCochain</code>( <var class="Arg">c</var>, <var class="Arg">y1</var>, <var class="Arg">y2</var>, <var class="Arg">...</var>, <var class="Arg">ys</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">c</var> is an <code class="code">s</code>-cochain. This function returns the value of <var class="Arg">c</var> when applied to the <code class="code">s</code> elements <var class="Arg">y1</var> to <var class="Arg">ys</var> (that lie in the Lie algebra acting on the module corresponding to <var class="Arg">c</var>). It is also possible to call this function with two arguments: first <var class="Arg">c</var> and then the list containing <code class="code"><var class="Arg">y1</var>,...,<var class="Arg">ys</var></code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:= SimpleLieAlgebra( &quot;A&quot;, 1, Rationals );;</span>

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.7-2 StandardizeTable</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X85FCD8DF81BA94D5"></meta>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups &amp;#8614; 47.7-2 StandardizeTable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47_mj.html#X85FCD8DF81BA94D5"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">47.7-2 StandardizeTable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StandardizeTable</code>( <var class="Arg">table</var>, <var class="Arg">standard</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">standardizes the given coset table <var class="Arg">table</var>. The second argument is optional. It defines the standard to be used, its values may be <code class="code">&quot;lenlex&quot;</code> or <code class="code">&quot;semilenlex&quot;</code> specifying the new or the old convention, respectively. If no value for the parameter <var class="Arg">standard</var> is provided the function will use the global variable <code class="func">CosetTableStandard</code> (<a shape="rect" href="chap47_mj.html#X85FD1D637EF1EBE7"><span class="RefLink">47.7-1</span></a>) instead. Note that the function alters the given table, it does not create a copy.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StandardizeTable( tab, &quot;semilenlex&quot; );</span>

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.7-2 CheckPermChar</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X82F776A3850C6404"></meta>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables &amp;#8614; 73.7-2 CheckPermChar</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73_mj.html#X82F776A3850C6404"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.7-2 CheckPermChar</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CheckPermChar</code>( <var class="Arg">subtbl</var>, <var class="Arg">tbl</var>, <var class="Arg">approxmap</var>, <var class="Arg">permchar</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">CheckPermChar</code> replaces the entries of the parametrized map <var class="Arg">approxmap</var> by improved values, according to condition 3. listed in the description of <code class="func">PossibleClassFusions</code> (<a shape="rect" href="chap73_mj.html#X7883271F7F26356E"><span class="RefLink">73.3-6</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">CheckPermChar</code> returns <code class="keyw">true</code> if no inconsistency occurred, and <code class="keyw">false</code> otherwise.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">permchar:= Sum( Irr( tbl ){ [ 1, 5, 6 ] } );;</span>

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 27: Strings and Characters-&gt;27.7-18 Chomp</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27.html#X79F8FFC5876D854A"></meta>
+        <title>GAP (ref) - Chapter 27: Strings and Characters &amp;#8614; 27.7-18 Chomp</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap27_mj.html#X79F8FFC5876D854A"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">27.7-18 Chomp</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Chomp</code>( <var class="Arg">str</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Like the similarly named Perl function, <code class="func">Chomp</code> removes a trailing newline character (or carriage-return line-feed couplet) from a string argument <var class="Arg">str</var> if present and returns the result. If <var class="Arg">str</var> is not a string or does not have such trailing character(s) it is returned unchanged. This latter property means that <code class="func">Chomp</code> is safe to use in cases where one is manipulating the result of another function which might sometimes return <code class="keyw">fail</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Chomp(&quot;The quick brown fox jumps over the lazy dog.\n&quot;);</span>

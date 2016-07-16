@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 80: Examples of Extending the System-&gt;80.8-2 Example: Groups with a word length</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap80.html#X7CD762FD82DED051"></meta>
+        <title>GAP (ref) - Chapter 80: Examples of Extending the System &amp;#8614; 80.8-2 Example: Groups with a word length</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap80_mj.html#X7CD762FD82DED051"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">80.8-2 <span class="Heading">Example: Groups with a word length</span></h5><p xmlns="http://www.w3.org/1999/xhtml">Our second example is that of groups for whose elements a <em>word length</em> is defined. (We assume that the word length is only defined in the context of the group with respect to a preselected generating set but not for single elements alone. However we will not delve into any details of how this length is defined and how it could be computed.)</p><p xmlns="http://www.w3.org/1999/xhtml">Having a word length is a feature which enables other operations (for example a &quot;word length&quot; function). This is exactly what categories are intended for and therefore we use one.</p><p xmlns="http://www.w3.org/1999/xhtml">First, we declare the category. All objects in this category are groups and so we inherit the supercategory <code class="func">IsGroup</code> (<a shape="rect" href="chap39_mj.html#X7939B3177BBD61E4"><span class="RefLink">39.2-7</span></a>):</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 DeclareCategory(&quot;IsGroupWithWordLength&quot;,IsGroup);

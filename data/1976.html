@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 82: An Example – Designing Arithmetic Operations-&gt;82.2 Designing new Multiplicative Objects</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap82.html#X7BE9D84482B421F9"></meta>
+        <title>GAP (ref) - Chapter 82: An Example – Designing Arithmetic Operations &amp;#8614; 82.2 Designing new Multiplicative Objects</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap82_mj.html#X7BE9D84482B421F9"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">82.2 <span class="Heading">Designing new Multiplicative Objects</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The goal of this section is to implement objects with a prescribed multiplication. Let us assume that we are given a field <math id="3021783359177769512" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">82.2 <span class="Heading">Designing new Multiplicative Objects</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The goal of this section is to implement objects with a prescribed multiplication. Let us assume that we are given a field <math id="-875658063767108612" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math>, and that we want to define a new multiplication <math id="-6465496274829416438" display="inline" alttext="*" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and that we want to define a new multiplication <math id="3069628296441785788" display="inline" alttext="*" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">*</mo>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">*</annotation>
   </semantics>
-</math> on <math id="-8803583803211382983" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> on <math id="707567840885296416" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math> that is given by <math id="160581664686867841" display="inline" alttext="a*b=ab-a-b+2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> that is given by <math id="-7395768691154914912" display="inline" alttext="a*b=ab-a-b+2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">
       <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">
@@ -78,7 +78,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a*b=ab-a-b+2</annotation>
   </semantics>
-</math>; here <math id="-4179240560590880572" display="inline" alttext="ab" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>; here <math id="6134005594614999588" display="inline" alttext="ab" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -94,7 +94,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">ab</annotation>
   </semantics>
-</math> denotes the ordinary product in <math id="-377295115337410802" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> denotes the ordinary product in <math id="-3331265507398634906" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -102,7 +102,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">By the discussion in Section <a shape="rect" href="chap82_mj.html#X7EA9422E7ACA7276"><span class="RefLink">82.1</span></a>, we know that we cannot define a new multiplication on <math id="-621872934808089351" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">By the discussion in Section <a shape="rect" href="chap82_mj.html#X7EA9422E7ACA7276"><span class="RefLink">82.1</span></a>, we know that we cannot define a new multiplication on <math id="1511659324202662781" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -112,7 +112,7 @@
   </semantics>
 </math> itself but have to create new objects.</p><p xmlns="http://www.w3.org/1999/xhtml">We want to distinguish these new objects from all other <strong class="pkg">GAP</strong> objects, in order to describe for example the situation that two of our objects shall be multiplied. This distinction is made via the <em>type</em> of the objects. More precisely, we declare a new <em>filter</em>, a function that will return <code class="keyw">true</code> for our new objects, and <code class="keyw">false</code> for all other <strong class="pkg">GAP</strong> objects. This can be done by calling <code class="func">DeclareFilter</code> (<a shape="rect" href="chap79_mj.html#X846EA18A7D36626C"><span class="RefLink">79.18-5</span></a>), but since our objects will know about the value already when they are constructed, the filter can be created with <code class="func">DeclareCategory</code> (<a shape="rect" href="chap79_mj.html#X879DE2A17A6C6E92"><span class="RefLink">79.18-1</span></a>) or <code class="func">NewCategory</code> (<a shape="rect" href="chap79_mj.html#X87F68F887B44DBBD"><span class="RefLink">79.1-1</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 DeclareCategory( &quot;IsMyObject&quot;, IsObject );
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The idea is that the new multiplication will be installed only for objects that &quot;lie in the category <code class="code">IsMyObject</code>&quot;.</p><p xmlns="http://www.w3.org/1999/xhtml">The next question is what internal data our new objects store, and how they are accessed. The easiest solution is to store the &quot;underlying&quot; object from the field <math id="-5104355735828012095" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The idea is that the new multiplication will be installed only for objects that &quot;lie in the category <code class="code">IsMyObject</code>&quot;.</p><p xmlns="http://www.w3.org/1999/xhtml">The next question is what internal data our new objects store, and how they are accessed. The easiest solution is to store the &quot;underlying&quot; object from the field <math id="-5066499627727970830" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -169,7 +169,7 @@ InstallTrueMethod( IsMultiplicativeElement, IsMyObject );
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a*b;  a^27;</span>
 &lt;9&gt;
 &lt;134217729&gt;
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Powering the new objects by negative integers is not possible yet, because <strong class="pkg">GAP</strong> does not know how to compute the inverse of an element <math id="-9059513690477892068" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Powering the new objects by negative integers is not possible yet, because <strong class="pkg">GAP</strong> does not know how to compute the inverse of an element <math id="6790471496827855688" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -177,7 +177,7 @@ InstallTrueMethod( IsMultiplicativeElement, IsMyObject );
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a</annotation>
   </semantics>
-</math>, say, which is defined as the unique element <math id="3054774011423164216" display="inline" alttext="a^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, say, which is defined as the unique element <math id="6706094444267955660" display="inline" alttext="a^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -192,7 +192,7 @@ InstallTrueMethod( IsMultiplicativeElement, IsMyObject );
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a^{\prime}</annotation>
   </semantics>
-</math> such that both <math id="6868513024661540202" display="inline" alttext="aa^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that both <math id="7103913376299841571" display="inline" alttext="aa^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -215,7 +215,7 @@ InstallTrueMethod( IsMultiplicativeElement, IsMyObject );
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">aa^{\prime}</annotation>
   </semantics>
-</math> and <math id="977271846308958594" display="inline" alttext="a^{\prime}a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="8700418435343724334" display="inline" alttext="a^{\prime}a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <msup xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4.2">
@@ -238,7 +238,7 @@ InstallTrueMethod( IsMultiplicativeElement, IsMyObject );
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a^{\prime}a</annotation>
   </semantics>
-</math> are &quot;the unique multiplicative neutral element that belongs to <math id="-1076304860223113579" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> are &quot;the unique multiplicative neutral element that belongs to <math id="7254863417908894725" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -287,7 +287,7 @@ true
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( elms, x -&gt; b * x );</span>
 [ &lt;Z(7)^0&gt;, &lt;Z(7)^0&gt;, &lt;Z(7)^0&gt;, &lt;Z(7)^0&gt; ]
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Here we found a multiplicative neutral element, but the element <code class="code">b</code> does not have an inverse. If an addition would be defined for our elements then we would say that <code class="code">b</code> behaves like a zero element.</p><p xmlns="http://www.w3.org/1999/xhtml">When we started to implement the new objects, we said that we wanted to define the new multiplication for elements of a given field <math id="1179304062895476800" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">Here we found a multiplicative neutral element, but the element <code class="code">b</code> does not have an inverse. If an addition would be defined for our elements then we would say that <code class="code">b</code> behaves like a zero element.</p><p xmlns="http://www.w3.org/1999/xhtml">When we started to implement the new objects, we said that we wanted to define the new multiplication for elements of a given field <math id="-2458521289918662639" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -295,7 +295,7 @@ false
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math>. In principle, the current implementation would admit also something like <code class="code">MyObject( 2 ) * MyObject( Z(7) )</code>. But if we decide that our initial assumption holds, we may define the identity and the inverse of the object <code class="code">&lt;a&gt;</code> as <code class="code">&lt;2*e&gt;</code> and <code class="code">&lt;a/(a-e)&gt;</code>, respectively, where <code class="code">e</code> is the identity element in <math id="5388309840921531714" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. In principle, the current implementation would admit also something like <code class="code">MyObject( 2 ) * MyObject( Z(7) )</code>. But if we decide that our initial assumption holds, we may define the identity and the inverse of the object <code class="code">&lt;a&gt;</code> as <code class="code">&lt;2*e&gt;</code> and <code class="code">&lt;a/(a-e)&gt;</code>, respectively, where <code class="code">e</code> is the identity element in <math id="1141840646306510433" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -303,7 +303,7 @@ false
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math> and <code class="code">/</code> denotes the division in <math id="-4713146410194470448" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <code class="code">/</code> denotes the division in <math id="-2182180632018976826" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -369,7 +369,7 @@ InstallMethod( AdditiveInverseOp,
 &lt;Z(7)^5&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MyObject( 2*Z(7)^0 ) * a;</span>
 &lt;Z(7)&gt;
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In particular we see that this multiplication does <em>not</em> coincide with the multiplication of two of our objects, that is, an integer <em>cannot</em> be used as a shorthand for one of the new objects in a multiplication.</p><p xmlns="http://www.w3.org/1999/xhtml">(It should be possible to create a <em>field</em> with the new multiplication and addition. Currently this fails, due to missing methods for computing several kinds of generators from field generators, for computing the characteristic in the case that the family does not know this in advance, for checking with <code class="func">AsField</code> (<a shape="rect" href="chap58_mj.html#X7C193B7D7AFB29BE"><span class="RefLink">58.1-9</span></a>) whether a domain is in fact a field, for computing the closure as a field.)</p><p xmlns="http://www.w3.org/1999/xhtml">It should be emphasized that the mechanism described above may be not suitable for the situation that one wants to consider many different multiplications &quot;on the same set of objects&quot;, since the installation of a new multiplication requires the declaration of at least one new filter and the installation of several methods. But the design of <strong class="pkg">GAP</strong> is not suitable for such dynamic method installations.</p><p xmlns="http://www.w3.org/1999/xhtml">Turning this argument the other way round, the implementation of the new arithmetics defined by the above multiplication and addition is available for any field <math id="2572258254910606300" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In particular we see that this multiplication does <em>not</em> coincide with the multiplication of two of our objects, that is, an integer <em>cannot</em> be used as a shorthand for one of the new objects in a multiplication.</p><p xmlns="http://www.w3.org/1999/xhtml">(It should be possible to create a <em>field</em> with the new multiplication and addition. Currently this fails, due to missing methods for computing several kinds of generators from field generators, for computing the characteristic in the case that the family does not know this in advance, for checking with <code class="func">AsField</code> (<a shape="rect" href="chap58_mj.html#X7C193B7D7AFB29BE"><span class="RefLink">58.1-9</span></a>) whether a domain is in fact a field, for computing the closure as a field.)</p><p xmlns="http://www.w3.org/1999/xhtml">It should be emphasized that the mechanism described above may be not suitable for the situation that one wants to consider many different multiplications &quot;on the same set of objects&quot;, since the installation of a new multiplication requires the declaration of at least one new filter and the installation of several methods. But the design of <strong class="pkg">GAP</strong> is not suitable for such dynamic method installations.</p><p xmlns="http://www.w3.org/1999/xhtml">Turning this argument the other way round, the implementation of the new arithmetics defined by the above multiplication and addition is available for any field <math id="1820253921010029202" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -377,7 +377,7 @@ InstallMethod( AdditiveInverseOp,
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math>, one need not repeat it for each field one is interested in.</p><p xmlns="http://www.w3.org/1999/xhtml">Similar to the above situation, the construction of a magma ring <math id="4263759119774918050" display="inline" alttext="RM" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, one need not repeat it for each field one is interested in.</p><p xmlns="http://www.w3.org/1999/xhtml">Similar to the above situation, the construction of a magma ring <math id="9033733288953874040" display="inline" alttext="RM" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
@@ -393,7 +393,7 @@ InstallMethod( AdditiveInverseOp,
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">RM</annotation>
   </semantics>
-</math> from a coefficient ring <math id="-394932779646315950" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> from a coefficient ring <math id="-3440480375848492846" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -401,7 +401,7 @@ InstallMethod( AdditiveInverseOp,
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
   </semantics>
-</math> and a magma <math id="-2053503429632364897" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and a magma <math id="1173605727998541335" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -409,7 +409,7 @@ InstallMethod( AdditiveInverseOp,
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
   </semantics>
-</math> is implemented only once, since the definition of the arithmetic operations depends only on the given multiplication of <math id="-6735855803115112281" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is implemented only once, since the definition of the arithmetic operations depends only on the given multiplication of <math id="5598663612391030331" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -417,7 +417,7 @@ InstallMethod( AdditiveInverseOp,
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
   </semantics>
-</math> and not on <math id="519512687917435661" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and not on <math id="396820618855432803" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -425,7 +425,7 @@ InstallMethod( AdditiveInverseOp,
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">M</annotation>
   </semantics>
-</math> itself. So the addition is not implemented for the elements in <math id="-3675372448744642077" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> itself. So the addition is not implemented for the elements in <math id="-6072641445569274564" display="inline" alttext="M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">M</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.10-6 OrthogonalEmbeddingsSpecialDimension</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X7F97B34A879D11BA"></meta>
+        <title>GAP (ref) - Chapter 72: Class Functions &amp;#8614; 72.10-6 OrthogonalEmbeddingsSpecialDimension</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72_mj.html#X7F97B34A879D11BA"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.10-6 OrthogonalEmbeddingsSpecialDimension</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OrthogonalEmbeddingsSpecialDimension</code>( <var class="Arg">tbl</var>, <var class="Arg">reducibles</var>, <var class="Arg">grammat</var>[, <var class="Arg">&quot;positive&quot;</var>], <var class="Arg">dim</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">OrthogonalEmbeddingsSpecialDimension</code> is a variant of <code class="func">OrthogonalEmbeddings</code> (<a shape="rect" href="chap25_mj.html#X842280C2808FF05D"><span class="RefLink">25.6-1</span></a>) for the situation that <var class="Arg">tbl</var> is an ordinary character table, <var class="Arg">reducibles</var> is a list of virtual characters of <var class="Arg">tbl</var>, <var class="Arg">grammat</var> is the matrix of scalar products (see <code class="func">MatScalarProducts</code> (<a shape="rect" href="chap72_mj.html#X858DF4E67EBB99DA"><span class="RefLink">72.8-6</span></a>)), and <var class="Arg">dim</var> is an upper bound for the number of irreducible characters of <var class="Arg">tbl</var> that occur as constituents of <var class="Arg">reducibles</var>; if the vectors in <var class="Arg">reducibles</var> are known to be proper characters then the string <code class="code">&quot;positive&quot;</code> may be entered as fourth argument. (See <code class="func">OrthogonalEmbeddings</code> (<a shape="rect" href="chap25_mj.html#X842280C2808FF05D"><span class="RefLink">25.6-1</span></a>) for information why this may help.)</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">OrthogonalEmbeddingsSpecialDimension</code> first uses <code class="func">OrthogonalEmbeddings</code> (<a shape="rect" href="chap25_mj.html#X842280C2808FF05D"><span class="RefLink">25.6-1</span></a>) to compute all orthogonal embeddings of <var class="Arg">grammat</var> into a standard lattice of dimension up to <var class="Arg">dim</var>, and then calls <code class="func">Decreased</code> (<a shape="rect" href="chap72_mj.html#X8799AB967C58C0E9"><span class="RefLink">72.10-7</span></a>) in order to find irreducible characters of <var class="Arg">tbl</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">OrthogonalEmbeddingsSpecialDimension</code> returns a record with the following components.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">irreducibles</code></strong></dt><dd><p>a list of found irreducibles, the intersection of all lists of irreducibles found by <code class="func">Decreased</code> (<a shape="rect" href="chap72_mj.html#X8799AB967C58C0E9"><span class="RefLink">72.10-7</span></a>), for all possible embeddings, and</p>
 
@@ -40,7 +40,7 @@ rec( norms := [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
       [ 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, -1, 1, 0, 0, 0 ], 
       [ 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 1 ], 
       [ 0, 0, 0, 0, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 1 ] ] )
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In the following example we temporarily decrease the line length limit from its default value <math id="2722746061547902838" display="inline" alttext="80" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">In the following example we temporarily decrease the line length limit from its default value <math id="558451218601878284" display="inline" alttext="80" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">80</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -48,7 +48,7 @@ rec( norms := [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">80</annotation>
   </semantics>
-</math> to <math id="3374767064478331079" display="inline" alttext="62" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> to <math id="-8027514436535347997" display="inline" alttext="62" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">62</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 43: Permutation Groups-&gt;43.13 Working with large degree permutation groups</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43.html#X78A68F5A80ADD1B6"></meta>
+        <title>GAP (ref) - Chapter 43: Permutation Groups &amp;#8614; 43.13 Working with large degree permutation groups</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap43_mj.html#X78A68F5A80ADD1B6"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">43.13 <span class="Heading">Working with large degree permutation groups</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Permutation groups of large degree (usually at least a few <math id="-7897945427820733898" display="inline" alttext="10000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">43.13 <span class="Heading">Working with large degree permutation groups</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Permutation groups of large degree (usually at least a few <math id="7220424106791898825" display="inline" alttext="10000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">10000</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">10000</annotation>
   </semantics>
-</math>) can pose a challenge to the heuristics used in the algorithms for permutation groups. This section lists a few useful tricks that may speed up calculations with such large groups enormously.</p><p xmlns="http://www.w3.org/1999/xhtml">The first aspect concerns solvable groups: A lot of calculations (including an initial stabilizer chain computation thanks to the algorithm from <a shape="rect" href="chapBib_mj.html#biBSims90b">[Sim90]</a>) are faster if a permutation group is known to be solvable. On the other hand, proving nonsolvability can be expensive for higher degrees. Therefore <strong class="pkg">GAP</strong> will automatically test a permutation group for solvability, only if the degree is not exceeding <math id="-6383569696981033291" display="inline" alttext="100" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>) can pose a challenge to the heuristics used in the algorithms for permutation groups. This section lists a few useful tricks that may speed up calculations with such large groups enormously.</p><p xmlns="http://www.w3.org/1999/xhtml">The first aspect concerns solvable groups: A lot of calculations (including an initial stabilizer chain computation thanks to the algorithm from <a shape="rect" href="chapBib_mj.html#biBSims90b">[Sim90]</a>) are faster if a permutation group is known to be solvable. On the other hand, proving nonsolvability can be expensive for higher degrees. Therefore <strong class="pkg">GAP</strong> will automatically test a permutation group for solvability, only if the degree is not exceeding <math id="-5204173059933328004" display="inline" alttext="100" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">100</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">100</annotation>
   </semantics>
-</math>. (See also the <code class="code">tryPcgs</code> component of <code class="func">StabChainOptions</code> (<a shape="rect" href="chap43_mj.html#X790C27B8783EDE68"><span class="RefLink">43.8-2</span></a>).) It is therefore beneficial to tell a group of larger degree, which is known to be solvable, that it is, using <code class="code">SetIsSolvableGroup(<var class="Arg">G</var>,true)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The second aspect concerns memory usage. A permutation on more than <math id="-5103993869130810977" display="inline" alttext="65536" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. (See also the <code class="code">tryPcgs</code> component of <code class="func">StabChainOptions</code> (<a shape="rect" href="chap43_mj.html#X790C27B8783EDE68"><span class="RefLink">43.8-2</span></a>).) It is therefore beneficial to tell a group of larger degree, which is known to be solvable, that it is, using <code class="code">SetIsSolvableGroup(<var class="Arg">G</var>,true)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The second aspect concerns memory usage. A permutation on more than <math id="7572463065394738526" display="inline" alttext="65536" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">65536</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">65536</annotation>
   </semantics>
-</math> points requires <math id="-437842001213735500" display="inline" alttext="4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> points requires <math id="3321217486874518944" display="inline" alttext="4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">4</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -35,7 +35,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">4</annotation>
   </semantics>
-</math> bytes per point for storing. So permutations on <math id="5128725604473854673" display="inline" alttext="256000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> bytes per point for storing. So permutations on <math id="6825614280590708349" display="inline" alttext="256000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">256000</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -43,7 +43,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">256000</annotation>
   </semantics>
-</math> points require roughly 1MB of storage per permutation. Just storing the permutations required for a stabilizer chain might already go beyond the available memory, in particular if the base is not very short. In such a situation it can be useful, to replace the permutations by straight line program elements (see <a shape="rect" href="chap37_mj.html#X8188799182D82A92"><span class="RefLink">37.9</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The following code gives an example of usage: We create a group of degree <math id="4569519789791109312" display="inline" alttext="231000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> points require roughly 1MB of storage per permutation. Just storing the permutations required for a stabilizer chain might already go beyond the available memory, in particular if the base is not very short. In such a situation it can be useful, to replace the permutations by straight line program elements (see <a shape="rect" href="chap37_mj.html#X8188799182D82A92"><span class="RefLink">37.9</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The following code gives an example of usage: We create a group of degree <math id="7879245640794581723" display="inline" alttext="231000" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">231000</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -51,7 +51,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">231000</annotation>
   </semantics>
-</math>. Using straight line program elements, one can compute a stabilizer chain in about <math id="-1873995752160133921" display="inline" alttext="200" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Using straight line program elements, one can compute a stabilizer chain in about <math id="381057422931521808" display="inline" alttext="200" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">200</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 31: Domains and their Elements-&gt;31.5 Changing the Representation</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap31.html#X860FCCBE7A41412F"></meta>
+        <title>GAP (ref) - Chapter 31: Domains and their Elements &amp;#8614; 31.5 Changing the Representation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap31_mj.html#X860FCCBE7A41412F"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">31.5 <span class="Heading">Changing the Representation</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Often it is useful to answer questions about a domain via computations in a different but isomorphic domain. In the sense that this approach keeps the structure and changes the underlying set of elements, it can be viewed as a counterpart of keeping the set of elements and changing its structure (see <a shape="rect" href="chap31_mj.html#X7EA77DE17DD8A231"><span class="RefLink">31.4</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">One reason for doing so can be that computations with the elements in the given domain are not very efficient. For example, if one is given a solvable matrix group (see Chapter <a shape="rect" href="chap44_mj.html#X7CF51CB48610A07D"><span class="RefLink">44</span></a>) then one can compute an isomorphism to a polycyclicly presented group <math id="5870549327458582703" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">31.5 <span class="Heading">Changing the Representation</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Often it is useful to answer questions about a domain via computations in a different but isomorphic domain. In the sense that this approach keeps the structure and changes the underlying set of elements, it can be viewed as a counterpart of keeping the set of elements and changing its structure (see <a shape="rect" href="chap31_mj.html#X7EA77DE17DD8A231"><span class="RefLink">31.4</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">One reason for doing so can be that computations with the elements in the given domain are not very efficient. For example, if one is given a solvable matrix group (see Chapter <a shape="rect" href="chap44_mj.html#X7CF51CB48610A07D"><span class="RefLink">44</span></a>) then one can compute an isomorphism to a polycyclicly presented group <math id="-2693360466144475465" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>, say (see Chapter <a shape="rect" href="chap45_mj.html#X86007B0083F60470"><span class="RefLink">45</span></a>); the multiplication of two matrices –which is essentially determined by the dimension of the matrices– is much more expensive than the multiplication of two elements in <math id="5213326399170867904" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, say (see Chapter <a shape="rect" href="chap45_mj.html#X86007B0083F60470"><span class="RefLink">45</span></a>); the multiplication of two matrices –which is essentially determined by the dimension of the matrices– is much more expensive than the multiplication of two elements in <math id="5653448221222783397" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math> –which is essentially determined by the composition length of <math id="-3800272551333483765" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> –which is essentially determined by the composition length of <math id="-1323925307758050839" display="inline" alttext="G" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G</annotation>
   </semantics>
-</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">Isomorphism<var class="Arg">Rep</var><var class="Arg">Struct</var>( <var class="Arg">D</var> )</code></p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">D</var> is a domain that is closed under the operational structure given by <var class="Arg">Struct</var> then <code class="code">Isomorphism<var class="Arg">Rep</var><var class="Arg">Struct</var></code> returns a mapping <var class="Arg">hom</var> from <var class="Arg">D</var> to a domain <math id="3767146802623775126" display="inline" alttext="E" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">Isomorphism<var class="Arg">Rep</var><var class="Arg">Struct</var>( <var class="Arg">D</var> )</code></p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">D</var> is a domain that is closed under the operational structure given by <var class="Arg">Struct</var> then <code class="code">Isomorphism<var class="Arg">Rep</var><var class="Arg">Struct</var></code> returns a mapping <var class="Arg">hom</var> from <var class="Arg">D</var> to a domain <math id="-2504486384765849742" display="inline" alttext="E" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">E</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -35,7 +35,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">E</annotation>
   </semantics>
-</math> having structure given by <var class="Arg">Struct</var>, such that <var class="Arg">hom</var> respects the structure <var class="Arg">Struct</var> and <var class="Arg">Rep</var> describes the representation of the elements in <math id="-538631061184777169" display="inline" alttext="E" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> having structure given by <var class="Arg">Struct</var>, such that <var class="Arg">hom</var> respects the structure <var class="Arg">Struct</var> and <var class="Arg">Rep</var> describes the representation of the elements in <math id="-2237447619323874812" display="inline" alttext="E" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">E</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -43,7 +43,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">E</annotation>
   </semantics>
-</math>. If no domain <math id="-471242598784506524" display="inline" alttext="E" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. If no domain <math id="-2219164010099525735" display="inline" alttext="E" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">E</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 40: Group Homomorphisms-&gt;40.9-6 MorClassLoop</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap40.html#X7AABA9A27E30BF2B"></meta>
+        <title>GAP (ref) - Chapter 40: Group Homomorphisms &amp;#8614; 40.9-6 MorClassLoop</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap40_mj.html#X7AABA9A27E30BF2B"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">40.9-6 MorClassLoop</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ MorClassLoop</code>( <var class="Arg">range</var>, <var class="Arg">classes</var>, <var class="Arg">params</var>, <var class="Arg">action</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This function loops over element tuples taken from <var class="Arg">classes</var> and checks these for properties such as generating a given group, or fulfilling relations. This can be used to find small generating sets or all types of Morphisms. The element tuples are used only up to up to inner automorphisms as all images can be obtained easily from them by conjugation while running through all of them usually would take too long.</p><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">range</var> is a group from which these elements are taken. The classes are given in a list <var class="Arg">classes</var> which is a list of records with the following components.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">classes</code></strong></dt><dd><p>list of conjugacy classes</p>
 

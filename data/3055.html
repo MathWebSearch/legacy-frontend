@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.4-4 TzPrintStatus</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X7D7B3F46865443E4"></meta>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations &amp;#8614; 48.4-4 TzPrintStatus</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48_mj.html#X7D7B3F46865443E4"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.4-4 TzPrintStatus</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TzPrintStatus</code>( <var class="Arg">P</var>[, <var class="Arg">norepeat</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is an internal function which is used by the Tietze transformation routines to print the number of generators, the number of relators, and the total length of all relators in the given Tietze presentation <var class="Arg">P</var>. If <var class="Arg">norepeat</var> is specified as <code class="keyw">true</code>, the printing is suppressed if none of the three values has changed since the last call.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TzPrintStatus( P );</span>

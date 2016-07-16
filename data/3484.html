@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 21: Lists-&gt;21.16-7 PositionProperty</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7E6C763A82C6153B"></meta>
+        <title>GAP (ref) - Chapter 21: Lists &amp;#8614; 21.16-7 PositionProperty</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21_mj.html#X7E6C763A82C6153B"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.16-7 PositionProperty</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PositionProperty</code>( <var class="Arg">list</var>, <var class="Arg">func</var>[, <var class="Arg">from</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the position of the first entry in the list <var class="Arg">list</var> for which the property tester function <var class="Arg">func</var> returns <code class="keyw">true</code>, or <code class="keyw">fail</code> if no such entry exists. If a starting index <var class="Arg">from</var> is given, it returns the position of the first entry satisfying <var class="Arg">func</var>, starting the search <em>after</em> position <var class="Arg">from</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PositionProperty( [10^7..10^8], IsPrime );</span>

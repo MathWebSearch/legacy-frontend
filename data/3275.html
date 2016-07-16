@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 81: An Example – Residue Class Rings-&gt;81.1 A First Attempt to Implement Elements of Residue Class Rings</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap81.html#X81008A74838A792E"></meta>
+        <title>GAP (ref) - Chapter 81: An Example – Residue Class Rings &amp;#8614; 81.1 A First Attempt to Implement Elements of Residue Class Rings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap81_mj.html#X81008A74838A792E"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">81.1 <span class="Heading">A First Attempt to Implement Elements of Residue Class Rings</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Suppose we want to do computations with elements of a ring <math id="-4908601638688121322" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">81.1 <span class="Heading">A First Attempt to Implement Elements of Residue Class Rings</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Suppose we want to do computations with elements of a ring <math id="8089324441745930186" display="inline" alttext="?/n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/n?</annotation>
   </semantics>
-</math>, where <math id="2614436375747339460" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, where <math id="4253338962808029213" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -35,7 +35,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> is a positive integer.</p><p xmlns="http://www.w3.org/1999/xhtml">First we have to decide how to represent the element <math id="-2422837850990860674" display="inline" alttext="k+n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a positive integer.</p><p xmlns="http://www.w3.org/1999/xhtml">First we have to decide how to represent the element <math id="-6112881906884372319" display="inline" alttext="k+n?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
@@ -59,7 +59,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">k+n?</annotation>
   </semantics>
-</math> in <strong class="pkg">GAP</strong>. If the modulus <math id="-2583451964112674760" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in <strong class="pkg">GAP</strong>. If the modulus <math id="3564585571641199094" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -67,7 +67,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> is fixed then we can use the integer <math id="-3203498178613474349" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is fixed then we can use the integer <math id="-1637424438196216677" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -75,7 +75,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
   </semantics>
-</math>. More precisely, we can use any integer <math id="6538576794514360947" display="inline" alttext="k^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. More precisely, we can use any integer <math id="-8837999621855597304" display="inline" alttext="k^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
@@ -90,7 +90,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">k^{\prime}</annotation>
   </semantics>
-</math> such that <math id="-3396433369282012459" display="inline" alttext="k-k^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that <math id="-4881067485212134411" display="inline" alttext="k-k^{\prime}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
@@ -113,7 +113,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">k-k^{\prime}</annotation>
   </semantics>
-</math> is a multiple of <math id="-286604234201506604" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a multiple of <math id="672897170906172425" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -121,7 +121,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math>. If different moduli are likely to occur then using a list of the form <math id="-5662941375139053857" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. If different moduli are likely to occur then using a list of the form <math id="-3075672005616219183" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -138,7 +138,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k,n]</annotation>
   </semantics>
-</math>, or a record of the form <code class="code">rec( residue := <var class="Arg">k</var>, modulus := <var class="Arg">n</var> )</code> is more appropriate. In the following, let us assume the list representation <math id="-3862559687038851387" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, or a record of the form <code class="code">rec( residue := <var class="Arg">k</var>, modulus := <var class="Arg">n</var> )</code> is more appropriate. In the following, let us assume the list representation <math id="-5126624120803194143" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -155,7 +155,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k,n]</annotation>
   </semantics>
-</math> is chosen. Moreover, we decide that the residue <math id="4004216109875559123" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is chosen. Moreover, we decide that the residue <math id="4256438138901236707" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -163,7 +163,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
   </semantics>
-</math> in all such lists satisfies <math id="-7734311727890489928" display="inline" alttext="0\leq k&amp;lt;n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in all such lists satisfies <math id="-7208960027281648476" display="inline" alttext="0\leq k&amp;lt;n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
       <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>
@@ -200,7 +200,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">0\leq k&amp;lt;n</annotation>
   </semantics>
-</math>, i.e., the result of adding two residue classes represented by <math id="-6753738766428028685" display="inline" alttext="[k_{1},n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, i.e., the result of adding two residue classes represented by <math id="-7063321946908746430" display="inline" alttext="[k_{1},n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -224,7 +224,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k_{1},n]</annotation>
   </semantics>
-</math> and <math id="5862434561337555905" display="inline" alttext="[k_{2},n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="2001385928109391668" display="inline" alttext="[k_{2},n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -248,7 +248,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k_{2},n]</annotation>
   </semantics>
-</math> (of course with same modulus <math id="-3782554788166346701" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (of course with same modulus <math id="4302443201103529400" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -256,7 +256,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math>) will be <math id="-7908862123158557612" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>) will be <math id="-5924891977837059304" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -273,7 +273,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k,n]</annotation>
   </semantics>
-</math> with <math id="-7882507384143521832" display="inline" alttext="k_{1}+k_{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> with <math id="-4666571776702327738" display="inline" alttext="k_{1}+k_{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <msub xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
@@ -303,7 +303,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">k_{1}+k_{2}</annotation>
   </semantics>
-</math> congruent to <math id="2575992967737851905" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> congruent to <math id="3966043227165480234" display="inline" alttext="k" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">k</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -311,7 +311,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">k</annotation>
   </semantics>
-</math> modulo <math id="-4975458935712033647" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> modulo <math id="4229086782435263123" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -319,7 +319,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> and <math id="-6509228092987928909" display="inline" alttext="0\leq k&amp;lt;n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="3655471288338352761" display="inline" alttext="0\leq k&amp;lt;n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
       <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">0</mn>

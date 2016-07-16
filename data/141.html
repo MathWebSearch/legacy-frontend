@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.8-9 RestrictOutputsOfSLP</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X7C9CABD17BE4850F"></meta>
+        <title>GAP (ref) - Chapter 37: Associative Words &amp;#8614; 37.8-9 RestrictOutputsOfSLP</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37_mj.html#X7C9CABD17BE4850F"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">37.8-9 RestrictOutputsOfSLP</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ RestrictOutputsOfSLP</code>( <var class="Arg">slp</var>, <var class="Arg">k</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">slp</var> must be a straight line program returning a tuple of values. This function returns a new slp that calculates only those outputs specified by <var class="Arg">k</var>. The argument <var class="Arg">k</var> may be an integer or a list of integers. If <var class="Arg">k</var> is an integer, the resulting slp calculates only the result with that number in the original output tuple. If <var class="Arg">k</var> is a list of integers, the resulting slp calculates those results with indices <var class="Arg">k</var> in the original output tuple. In both cases the resulting slp does only what is necessary. Obviously, the slp must have a line with enough expressions (lists) for the supplied <var class="Arg">k</var> as its last line. <var class="Arg">slp</var> is either an slp or a pair where the first entry are the lines of the slp and the second is the number of inputs.</p> </body>
     </html>

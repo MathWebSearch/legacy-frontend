@@ -1,14 +1,14 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 21: Lists-&gt;21.3 List Elements</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7921047F83F5FA28"></meta>
+        <title>GAP (ref) - Chapter 21: Lists &amp;#8614; 21.3 List Elements</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21_mj.html#X7921047F83F5FA28"></meta>
       </head>
       <body> <h4 xmlns="http://www.w3.org/1999/xhtml">21.3 <span class="Heading">List Elements</span></h4><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>[ <var class="Arg">ix</var> ]</code></p><p xmlns="http://www.w3.org/1999/xhtml">The above construct evaluates to the element of the list <var class="Arg">list</var> with index <var class="Arg">ix</var>. For built-in list types and collections, indexing is done with origin 1, i.e., the first element of the list is the element with index 1.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := [ 2, 3, 5, 7, 11, 13 ];;  l[1];  l[2];  l[6];</span>
 2
 3
 13
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">list</var> is not a built-in list, or <var class="Arg">ix</var> does not evaluate to a positive integer, method selection is invoked to try and find a way of indexing <var class="Arg">list</var> with index <var class="Arg">ix</var>. If this fails, or the selected method finds that <code class="code"><var class="Arg">list</var>[<var class="Arg">ix</var>]</code> is unbound, an error is signalled.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>[ <var class="Arg">ix1</var>,<var class="Arg">ix2</var>,...]</code></p><p xmlns="http://www.w3.org/1999/xhtml">is a short-hand for <code class="code"><var class="Arg">list</var>[[<var class="Arg">ix1</var>,<var class="Arg">ix2</var>,...]]</code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>{ <var class="Arg">poss</var> }</code></p><p xmlns="http://www.w3.org/1999/xhtml">The above construct evaluates to a new list <var class="Arg">new</var> whose first element is <code class="code"><var class="Arg">list</var>[<var class="Arg">poss</var>[1]]</code>, whose second element is <code class="code"><var class="Arg">list</var>[<var class="Arg">poss</var>[2]]</code>, and so on. However, it does not need to be sorted and may contain duplicate elements. If for any <math id="-607615367545810996" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">list</var> is not a built-in list, or <var class="Arg">ix</var> does not evaluate to a positive integer, method selection is invoked to try and find a way of indexing <var class="Arg">list</var> with index <var class="Arg">ix</var>. If this fails, or the selected method finds that <code class="code"><var class="Arg">list</var>[<var class="Arg">ix</var>]</code> is unbound, an error is signalled.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>[ <var class="Arg">ix1</var>,<var class="Arg">ix2</var>,...]</code></p><p xmlns="http://www.w3.org/1999/xhtml">is a short-hand for <code class="code"><var class="Arg">list</var>[[<var class="Arg">ix1</var>,<var class="Arg">ix2</var>,...]]</code></p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">list</var>{ <var class="Arg">poss</var> }</code></p><p xmlns="http://www.w3.org/1999/xhtml">The above construct evaluates to a new list <var class="Arg">new</var> whose first element is <code class="code"><var class="Arg">list</var>[<var class="Arg">poss</var>[1]]</code>, whose second element is <code class="code"><var class="Arg">list</var>[<var class="Arg">poss</var>[2]]</code>, and so on. However, it does not need to be sorted and may contain duplicate elements. If for any <math id="1371640334206184985" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -16,7 +16,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math>, <code class="code"><var class="Arg">list</var>[ <var class="Arg">poss</var>[</code><math id="-484588816377675323" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <code class="code"><var class="Arg">list</var>[ <var class="Arg">poss</var>[</code><math id="-2348097916804576690" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

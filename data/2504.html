@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.6-1 OrthogonalEmbeddings</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X842280C2808FF05D"></meta>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices &amp;#8614; 25.6-1 OrthogonalEmbeddings</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25_mj.html#X842280C2808FF05D"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.6-1 OrthogonalEmbeddings</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OrthogonalEmbeddings</code>( <var class="Arg">gram</var>[, <var class="Arg">&quot;positive&quot;</var>][, <var class="Arg">maxdim</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes all possible orthogonal embeddings of a lattice given by its Gram matrix <var class="Arg">gram</var>, which must be a regular symmetric matrix of integers. In other words, all integral solutions <math id="-6746446666063594042" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.6-1 OrthogonalEmbeddings</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OrthogonalEmbeddings</code>( <var class="Arg">gram</var>[, <var class="Arg">&quot;positive&quot;</var>][, <var class="Arg">maxdim</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes all possible orthogonal embeddings of a lattice given by its Gram matrix <var class="Arg">gram</var>, which must be a regular symmetric matrix of integers. In other words, all integral solutions <math id="2281453321278126584" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">X</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">X</annotation>
   </semantics>
-</math> of the equation <math id="-8988562196274169582" display="inline" alttext="X^{tr}\cdot X=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of the equation <math id="-8398204860824659152" display="inline" alttext="X^{tr}\cdot X=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
@@ -50,7 +50,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">X^{tr}\cdot X=</annotation>
   </semantics>
-</math><var class="Arg">gram</var> are calculated. The implementation follows the description in <a shape="rect" href="chapBib_mj.html#biBPle90">[Ple95]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Usually there are many solutions <math id="6341322381072250094" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><var class="Arg">gram</var> are calculated. The implementation follows the description in <a shape="rect" href="chapBib_mj.html#biBPle90">[Ple95]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Usually there are many solutions <math id="5775216601966216899" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">X</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -58,7 +58,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">X</annotation>
   </semantics>
-</math> but all their rows belong to a small set of vectors, so <code class="func">OrthogonalEmbeddings</code> returns the solutions encoded by a record with the following components.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">vectors</code></strong></dt><dd><p>the list <math id="-160663248643907576" display="inline" alttext="L=[x_{1},x_{2},\ldots,x_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> but all their rows belong to a small set of vectors, so <code class="func">OrthogonalEmbeddings</code> returns the solutions encoded by a record with the following components.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">vectors</code></strong></dt><dd><p>the list <math id="3539035546249578462" display="inline" alttext="L=[x_{1},x_{2},\ldots,x_{n}]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
@@ -110,7 +110,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">L=[x_{1},x_{2},\ldots,x_{n}]</annotation>
   </semantics>
-</math> of vectors that may be rows of a solution, up to sign; these are exactly the vectors with the property <math id="5386769017461875131" display="inline" alttext="x_{i}\cdot" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of vectors that may be rows of a solution, up to sign; these are exactly the vectors with the property <math id="-7259300531629135934" display="inline" alttext="x_{i}\cdot" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <msub xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
@@ -132,7 +132,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1f" encoding="application/x-tex">x_{i}\cdot</annotation>
   </semantics>
-</math><var class="Arg">gram</var><math id="4142888780847928742" display="inline" alttext="{}^{{-1}}\cdot x_{i}^{tr}\leq 1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><var class="Arg">gram</var><math id="-6624482865515138833" display="inline" alttext="{}^{{-1}}\cdot x_{i}^{tr}\leq 1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mmultiscripts xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
@@ -188,7 +188,7 @@
   </semantics>
 </math>, see <code class="func">ShortestVectors</code> (<a shape="rect" href="chap25_mj.html#X79A692B6819353D4"><span class="RefLink">25.6-2</span></a>),</p>
 
-</dd><dt><strong class="Mark"><code class="code">norms</code></strong></dt><dd><p>the list of values <math id="7449888973821857576" display="inline" alttext="x_{i}\cdot" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">norms</code></strong></dt><dd><p>the list of values <math id="-6774516447509372450" display="inline" alttext="x_{i}\cdot" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <msub xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
@@ -210,7 +210,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1f" encoding="application/x-tex">x_{i}\cdot</annotation>
   </semantics>
-</math><var class="Arg">gram</var><math id="-7304119338077934235" display="inline" alttext="{}^{{-1}}\cdot x_{i}^{tr}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><var class="Arg">gram</var><math id="8649467322764818574" display="inline" alttext="{}^{{-1}}\cdot x_{i}^{tr}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mmultiscripts xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
@@ -262,7 +262,7 @@
   </semantics>
 </math>, and</p>
 
-</dd><dt><strong class="Mark"><code class="code">solutions</code></strong></dt><dd><p>a list <math id="748280385796106238" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">solutions</code></strong></dt><dd><p>a list <math id="2453656508072684006" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -270,7 +270,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
   </semantics>
-</math> of index lists; the <math id="-4756950342741527009" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of index lists; the <math id="-8511925682937946208" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -278,7 +278,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math>-th solution matrix is <math id="4145318570135097740" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>-th solution matrix is <math id="-3088482641897760113" display="inline" alttext="L" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">L</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -286,7 +286,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">L</annotation>
   </semantics>
-</math><code class="code">{ </code><math id="-1842998452610731692" display="inline" alttext="S[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">{ </code><math id="-3191140095981388812" display="inline" alttext="S[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
@@ -309,7 +309,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">S[i]</annotation>
   </semantics>
-</math><code class="code"> }</code>, so the dimension of the <var class="Arg">i</var>-th solution is the length of <math id="-7320937737257663340" display="inline" alttext="S[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code"> }</code>, so the dimension of the <var class="Arg">i</var>-th solution is the length of <math id="1684968073498048779" display="inline" alttext="S[i]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
@@ -332,7 +332,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">S[i]</annotation>
   </semantics>
-</math>, and we have <var class="Arg">gram</var><math id="286135093338877793" display="inline" alttext="=\sum_{{j\in S[i]}}x_{j}^{tr}\cdot x_{j}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and we have <var class="Arg">gram</var><math id="-8622793715021072516" display="inline" alttext="=\sum_{{j\in S[i]}}x_{j}^{tr}\cdot x_{j}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">
       <mi xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1"/>
@@ -421,7 +421,7 @@
   </semantics>
 </math>,</p>
 
-</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <code class="code">&quot;positive&quot;</code> will cause <code class="func">OrthogonalEmbeddings</code> to compute only vectors <math id="7792366917466147765" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd></dl><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <code class="code">&quot;positive&quot;</code> will cause <code class="func">OrthogonalEmbeddings</code> to compute only vectors <math id="1577640229680018312" display="inline" alttext="x_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
@@ -447,7 +447,7 @@ rec( norms := [ 1, 1, 1, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2 ],
       [ 0, 1, 0 ], [ 0, 0, 1 ] ] )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c.vectors{ c.solutions[1] };</span>
 [ [ -1, 1, 1 ], [ 1, -1, 1 ], [ -1, -1, 1 ] ]
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">gram</var> may be the matrix of scalar products of some virtual characters. From the characters and the embedding given by the matrix <math id="2226849809287883189" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">gram</var> may be the matrix of scalar products of some virtual characters. From the characters and the embedding given by the matrix <math id="-5313230536648247108" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">X</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

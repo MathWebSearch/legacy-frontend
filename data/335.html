@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 59: Finite Fields-&gt;59.1-2 Z</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap59.html#X7AA52FAF7EDEDD56"></meta>
+        <title>GAP (ref) - Chapter 59: Finite Fields &amp;#8614; 59.1-2 Z</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap59_mj.html#X7AA52FAF7EDEDD56"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">59.1-2 Z</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Z</code>( <var class="Arg">p^d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Z</code>( <var class="Arg">p</var>, <var class="Arg">d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For creating elements of a finite field, the function <code class="func">Z</code> can be used. The call <code class="code">Z(<var class="Arg">p</var>,<var class="Arg">d</var>)</code> (alternatively <code class="code">Z(<var class="Arg">p</var>^<var class="Arg">d</var>)</code>) returns the designated generator of the multiplicative group of the finite field with <var class="Arg">p^d</var> elements. <var class="Arg">p</var> must be a prime integer.</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> can represent elements of all finite fields <code class="code">GF(<var class="Arg">p^d</var>)</code> such that either (1) <var class="Arg">p^d</var> <math id="-2821725924181609334" display="inline" alttext="&amp;lt;=65536" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">59.1-2 Z</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Z</code>( <var class="Arg">p^d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Z</code>( <var class="Arg">p</var>, <var class="Arg">d</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For creating elements of a finite field, the function <code class="func">Z</code> can be used. The call <code class="code">Z(<var class="Arg">p</var>,<var class="Arg">d</var>)</code> (alternatively <code class="code">Z(<var class="Arg">p</var>^<var class="Arg">d</var>)</code>) returns the designated generator of the multiplicative group of the finite field with <var class="Arg">p^d</var> elements. <var class="Arg">p</var> must be a prime integer.</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> can represent elements of all finite fields <code class="code">GF(<var class="Arg">p^d</var>)</code> such that either (1) <var class="Arg">p^d</var> <math id="2124980535862524780" display="inline" alttext="&amp;lt;=65536" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mi id="p1.1.m1.1.1" mathvariant="normal">&amp;</mi>
@@ -26,7 +26,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1i" encoding="application/x-tex">&amp;lt;=65536</annotation>
   </semantics>
-</math> (in which case an extremely efficient internal representation is used); (2) d = 1, (in which case, for large <var class="Arg">p</var>, the field is represented using the machinery of residue class rings (see section <a shape="rect" href="chap14_mj.html#X864BF040862409FC"><span class="RefLink">14.5</span></a>) or (3) if the Conway polynomial of degree <var class="Arg">d</var> over the field with <var class="Arg">p</var> elements is known, or can be computed (see <code class="func">ConwayPolynomial</code> (<a shape="rect" href="chap59_mj.html#X7C2425A786F09054"><span class="RefLink">59.5-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">If you attempt to construct an element of <code class="code">GF(<var class="Arg">p^d</var>)</code> for which <var class="Arg">d</var> <math id="3790165549782554816" display="inline" alttext="&amp;gt;1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (in which case an extremely efficient internal representation is used); (2) d = 1, (in which case, for large <var class="Arg">p</var>, the field is represented using the machinery of residue class rings (see section <a shape="rect" href="chap14_mj.html#X864BF040862409FC"><span class="RefLink">14.5</span></a>) or (3) if the Conway polynomial of degree <var class="Arg">d</var> over the field with <var class="Arg">p</var> elements is known, or can be computed (see <code class="func">ConwayPolynomial</code> (<a shape="rect" href="chap59_mj.html#X7C2425A786F09054"><span class="RefLink">59.5-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">If you attempt to construct an element of <code class="code">GF(<var class="Arg">p^d</var>)</code> for which <var class="Arg">d</var> <math id="-3162380867743909397" display="inline" alttext="&amp;gt;1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.2">
@@ -52,7 +52,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">&amp;gt;1</annotation>
   </semantics>
-</math> and the relevant Conway polynomial is not known, and not necessarily easy to find (see <code class="func">IsCheapConwayPolynomial</code> (<a shape="rect" href="chap59_mj.html#X78A7C1247E129AD9"><span class="RefLink">59.5-2</span></a>)), then <strong class="pkg">GAP</strong> will stop with an error and enter the break loop. If you leave this break loop by entering <code class="code">return;</code> <strong class="pkg">GAP</strong> will attempt to compute the Conway polynomial, which may take a very long time.</p><p xmlns="http://www.w3.org/1999/xhtml">The root returned by <code class="func">Z</code> is a generator of the multiplicative group of the finite field with <var class="Arg">p^d</var> elements, which is cyclic. The order of the element is of course <var class="Arg">p^d</var> <math id="8080407920477328563" display="inline" alttext="-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and the relevant Conway polynomial is not known, and not necessarily easy to find (see <code class="func">IsCheapConwayPolynomial</code> (<a shape="rect" href="chap59_mj.html#X78A7C1247E129AD9"><span class="RefLink">59.5-2</span></a>)), then <strong class="pkg">GAP</strong> will stop with an error and enter the break loop. If you leave this break loop by entering <code class="code">return;</code> <strong class="pkg">GAP</strong> will attempt to compute the Conway polynomial, which may take a very long time.</p><p xmlns="http://www.w3.org/1999/xhtml">The root returned by <code class="func">Z</code> is a generator of the multiplicative group of the finite field with <var class="Arg">p^d</var> elements, which is cyclic. The order of the element is of course <var class="Arg">p^d</var> <math id="-1136256651034168135" display="inline" alttext="-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">-</mo>
@@ -66,7 +66,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">-1</annotation>
   </semantics>
-</math>. The <var class="Arg">p^d</var> <math id="2511052096938355643" display="inline" alttext="-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. The <var class="Arg">p^d</var> <math id="-9128419775890167149" display="inline" alttext="-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">-</mo>
@@ -80,7 +80,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">-1</annotation>
   </semantics>
-</math> different powers of the root are exactly the nonzero elements of the finite field.</p><p xmlns="http://www.w3.org/1999/xhtml">Thus all nonzero elements of the finite field with <var class="Arg">p^d</var> elements can be entered as <code class="code">Z(<var class="Arg">p^d</var>)^</code><math id="-7395425619922067424" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> different powers of the root are exactly the nonzero elements of the finite field.</p><p xmlns="http://www.w3.org/1999/xhtml">Thus all nonzero elements of the finite field with <var class="Arg">p^d</var> elements can be entered as <code class="code">Z(<var class="Arg">p^d</var>)^</code><math id="-3194844631922191076" display="inline" alttext="i" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">i</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -88,7 +88,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">i</annotation>
   </semantics>
-</math>. Note that this is also the form that <strong class="pkg">GAP</strong> uses to output those elements when they are stored in the internal representation. In larger fields, it is more convenient to enter and print elements as linear combinations of powers of the primitive element, see section <a shape="rect" href="chap59_mj.html#X78EE3656879C3B88"><span class="RefLink">59.6</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">The additive neutral element is <code class="code">0 * Z(<var class="Arg">p</var>)</code>. It is different from the integer <code class="code">0</code> in subtle ways. First <code class="code">IsInt( 0 * Z(<var class="Arg">p</var>) )</code> (see <code class="func">IsInt</code> (<a shape="rect" href="chap14_mj.html#X87AEADF07DC8303B"><span class="RefLink">14.2-1</span></a>)) is <code class="keyw">false</code> and <code class="code">IsFFE( 0 * Z(<var class="Arg">p</var>) )</code> (see <code class="func">IsFFE</code> (<a shape="rect" href="chap59_mj.html#X7D3DF32C84FEBD25"><span class="RefLink">59.1-1</span></a>)) is <code class="keyw">true</code>, whereas it is just the other way around for the integer <code class="code">0</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The multiplicative neutral element is <code class="code">Z(<var class="Arg">p</var>)^0</code>. It is different from the integer <code class="code">1</code> in subtle ways. First <code class="code">IsInt( Z(<var class="Arg">p</var>)^0 )</code> (see <code class="func">IsInt</code> (<a shape="rect" href="chap14_mj.html#X87AEADF07DC8303B"><span class="RefLink">14.2-1</span></a>)) is <code class="keyw">false</code> and <code class="code">IsFFE( Z(<var class="Arg">p</var>)^0 )</code> (see <code class="func">IsFFE</code> (<a shape="rect" href="chap59_mj.html#X7D3DF32C84FEBD25"><span class="RefLink">59.1-1</span></a>)) is <code class="keyw">true</code>, whereas it is just the other way around for the integer <code class="code">1</code>. Also <code class="code">1+1</code> is <code class="code">2</code>, whereas, e.g., <code class="code">Z(2)^0 + Z(2)^0</code> is <code class="code">0 * Z(2)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The various roots returned by <code class="func">Z</code> for finite fields of the same characteristic are compatible in the following sense. If the field <code class="code">GF(<var class="Arg">p</var>,</code><math id="8939359053435367235" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Note that this is also the form that <strong class="pkg">GAP</strong> uses to output those elements when they are stored in the internal representation. In larger fields, it is more convenient to enter and print elements as linear combinations of powers of the primitive element, see section <a shape="rect" href="chap59_mj.html#X78EE3656879C3B88"><span class="RefLink">59.6</span></a>.</p><p xmlns="http://www.w3.org/1999/xhtml">The additive neutral element is <code class="code">0 * Z(<var class="Arg">p</var>)</code>. It is different from the integer <code class="code">0</code> in subtle ways. First <code class="code">IsInt( 0 * Z(<var class="Arg">p</var>) )</code> (see <code class="func">IsInt</code> (<a shape="rect" href="chap14_mj.html#X87AEADF07DC8303B"><span class="RefLink">14.2-1</span></a>)) is <code class="keyw">false</code> and <code class="code">IsFFE( 0 * Z(<var class="Arg">p</var>) )</code> (see <code class="func">IsFFE</code> (<a shape="rect" href="chap59_mj.html#X7D3DF32C84FEBD25"><span class="RefLink">59.1-1</span></a>)) is <code class="keyw">true</code>, whereas it is just the other way around for the integer <code class="code">0</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The multiplicative neutral element is <code class="code">Z(<var class="Arg">p</var>)^0</code>. It is different from the integer <code class="code">1</code> in subtle ways. First <code class="code">IsInt( Z(<var class="Arg">p</var>)^0 )</code> (see <code class="func">IsInt</code> (<a shape="rect" href="chap14_mj.html#X87AEADF07DC8303B"><span class="RefLink">14.2-1</span></a>)) is <code class="keyw">false</code> and <code class="code">IsFFE( Z(<var class="Arg">p</var>)^0 )</code> (see <code class="func">IsFFE</code> (<a shape="rect" href="chap59_mj.html#X7D3DF32C84FEBD25"><span class="RefLink">59.1-1</span></a>)) is <code class="keyw">true</code>, whereas it is just the other way around for the integer <code class="code">1</code>. Also <code class="code">1+1</code> is <code class="code">2</code>, whereas, e.g., <code class="code">Z(2)^0 + Z(2)^0</code> is <code class="code">0 * Z(2)</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The various roots returned by <code class="func">Z</code> for finite fields of the same characteristic are compatible in the following sense. If the field <code class="code">GF(<var class="Arg">p</var>,</code><math id="3799965173823465188" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -96,7 +96,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math><code class="code">)</code> is a subfield of the field <code class="code">GF(<var class="Arg">p</var>,</code><math id="3218112790209384916" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">)</code> is a subfield of the field <code class="code">GF(<var class="Arg">p</var>,</code><math id="5455800507119457816" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -104,7 +104,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
   </semantics>
-</math><code class="code">)</code>, i.e., <math id="-4061217103997800609" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">)</code>, i.e., <math id="6566781845275511113" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -112,7 +112,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math> divides <math id="4362834974921008817" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> divides <math id="-1974799414799895121" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -120,7 +120,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
   </semantics>
-</math>, then <code class="code">Z</code><math id="-4668715905517077356" display="inline" alttext="(\textit{p}^{n})=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, then <code class="code">Z</code><math id="1329338406167484546" display="inline" alttext="(\textit{p}^{n})=" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mrow xref="p1.1.m1.1.6.1.2.cmml" id="p1.1.m1.1.6.1">
@@ -149,7 +149,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\textit{p}^{n})=</annotation>
   </semantics>
-</math><code class="code">Z</code><math id="1818363232324137164" display="inline" alttext="(\textit{p}^{m})^{{(\textit{p}^{m}-1)/(\textit{p}^{n}-1)}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">Z</code><math id="-6628314641972669946" display="inline" alttext="(\textit{p}^{m})^{{(\textit{p}^{m}-1)/(\textit{p}^{n}-1)}}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mrow xref="p1.1.m1.1.6.2.2.cmml" id="p1.1.m1.1.6.2">
@@ -227,7 +227,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\textit{p}^{m})^{{(\textit{p}^{m}-1)/(\textit{p}^{n}-1)}}</annotation>
   </semantics>
-</math>. Note that this is the simplest relation that may hold between a generator of <code class="code">GF(<var class="Arg">p</var>,</code><math id="-1348226643766338368" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Note that this is the simplest relation that may hold between a generator of <code class="code">GF(<var class="Arg">p</var>,</code><math id="1311003813317728968" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -235,7 +235,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n</annotation>
   </semantics>
-</math><code class="code">)</code> and <code class="code">GF(<var class="Arg">p</var>,</code><math id="5443558828924912023" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">)</code> and <code class="code">GF(<var class="Arg">p</var>,</code><math id="-4050571050434675141" display="inline" alttext="m" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">m</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -243,7 +243,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">m</annotation>
   </semantics>
-</math><code class="code">)</code>, since <code class="code">Z</code><math id="2671700859772366626" display="inline" alttext="(\textit{p}^{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">)</code>, since <code class="code">Z</code><math id="2800096253674701536" display="inline" alttext="(\textit{p}^{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -264,7 +264,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\textit{p}^{n})</annotation>
   </semantics>
-</math> is an element of order <math id="-39620142359633495" display="inline" alttext="\textit{p}^{m}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is an element of order <math id="-306321799864202416" display="inline" alttext="\textit{p}^{m}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -289,7 +289,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{p}^{m}-1</annotation>
   </semantics>
-</math> and <code class="code">Z</code><math id="4930688851957901099" display="inline" alttext="(\textit{p}^{m})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <code class="code">Z</code><math id="5864841526503893362" display="inline" alttext="(\textit{p}^{m})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -310,7 +310,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\textit{p}^{m})</annotation>
   </semantics>
-</math> is an element of order <math id="-85684271911778477" display="inline" alttext="\textit{p}^{n}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is an element of order <math id="-5218629366940159859" display="inline" alttext="\textit{p}^{n}-1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
@@ -335,7 +335,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{p}^{n}-1</annotation>
   </semantics>
-</math>. This is achieved by choosing <code class="code">Z(<var class="Arg">p</var>)</code> as the smallest primitive root modulo <var class="Arg">p</var> and <code class="code">Z(</code><var class="Arg">p^n</var><code class="code">)</code> as a root of the <math id="-8580585689875322007" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. This is achieved by choosing <code class="code">Z(<var class="Arg">p</var>)</code> as the smallest primitive root modulo <var class="Arg">p</var> and <code class="code">Z(</code><var class="Arg">p^n</var><code class="code">)</code> as a root of the <math id="356631356446710504" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

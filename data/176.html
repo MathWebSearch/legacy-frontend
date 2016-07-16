@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.3-2 \&lt;</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X7BB12B9D7F990899"></meta>
+        <title>GAP (ref) - Chapter 37: Associative Words &amp;#8614; 37.3-2 \&lt;</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37_mj.html#X7BB12B9D7F990899"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">37.3-2 \&lt;</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ \&lt;</code>( <var class="Arg">w1</var>, <var class="Arg">w2</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The ordering of associative words is defined by length and lexicography (this ordering is called <em>short-lex</em> ordering), that is, shorter words are smaller than longer words, and words of the same length are compared w.r.t. the lexicographical ordering induced by the ordering of generators. Generators are sorted according to the order in which they were created. If the generators are invertible then each generator <var class="Arg">g</var> is larger than its inverse <var class="Arg">g</var><code class="code">^-1</code>, and <var class="Arg">g</var><code class="code">^-1</code> is larger than every generator that is smaller than <var class="Arg">g</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= FreeGroup( 2 );;  gens:= GeneratorsOfGroup( f );;</span>

@@ -1,7 +1,7 @@
 <html> 
       <head>
         <title>GAP (ref) - Chapter 32: Mappings</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap32.html#X7C9734B880042C73"></meta>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap32_mj.html#X7C9734B880042C73"></meta>
       </head>
       <body> <div class="ChapSects" xmlns="http://www.w3.org/1999/xhtml"><a shape="rect" href="chap32_mj.html#X7C9734B880042C73">32 <span class="Heading">Mappings</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss"> </span><a shape="rect" href="chap32_mj.html#X783BAB2683EEA0CC">32.1 <span class="Heading">IsDirectProductElement (Filter)</span></a>
@@ -135,7 +135,7 @@
 <span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7E1E26E37C413F6F">32.14-6 GeneralMappingsFamily</a></span>
 <span class="ContSS"><br/><span class="nocss">  </span><a shape="rect" href="chap32_mj.html#X7CF92CC37A6BBDA5">32.14-7 TypeOfDefaultGeneralMapping</a></span>
 </div></div>
-</div><h3 xmlns="http://www.w3.org/1999/xhtml">32 <span class="Heading">Mappings</span></h3><p xmlns="http://www.w3.org/1999/xhtml">A <em>mapping</em> in <strong class="pkg">GAP</strong> is what is called a &quot;function&quot; in mathematics. <strong class="pkg">GAP</strong> also implements <em>generalized mappings</em> in which one element might have several images, these can be imagined as subsets of the cartesian product and are often called &quot;relations&quot;.</p><p xmlns="http://www.w3.org/1999/xhtml">Most operations are declared for general mappings and therefore this manual often refers to &quot;(general) mappings&quot;, unless you deliberately need the generalization you can ignore the &quot;general&quot; bit and just read it as &quot;mappings&quot;.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>general mapping</em> <math id="7605938713724343476" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</div><h3 xmlns="http://www.w3.org/1999/xhtml">32 <span class="Heading">Mappings</span></h3><p xmlns="http://www.w3.org/1999/xhtml">A <em>mapping</em> in <strong class="pkg">GAP</strong> is what is called a &quot;function&quot; in mathematics. <strong class="pkg">GAP</strong> also implements <em>generalized mappings</em> in which one element might have several images, these can be imagined as subsets of the cartesian product and are often called &quot;relations&quot;.</p><p xmlns="http://www.w3.org/1999/xhtml">Most operations are declared for general mappings and therefore this manual often refers to &quot;(general) mappings&quot;, unless you deliberately need the generalization you can ignore the &quot;general&quot; bit and just read it as &quot;mappings&quot;.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>general mapping</em> <math id="159535682143553952" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -143,7 +143,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math> in <strong class="pkg">GAP</strong> is described by its source <math id="-1451534290042047596" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in <strong class="pkg">GAP</strong> is described by its source <math id="4006843085884021278" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -151,7 +151,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
   </semantics>
-</math>, its range <math id="8461531646918363496" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, its range <math id="-4191163902242973169" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -159,7 +159,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
   </semantics>
-</math>, and a subset <math id="1565483666400550150" display="inline" alttext="Rel" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and a subset <math id="-8207709421584216103" display="inline" alttext="Rel" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
@@ -178,7 +178,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">Rel</annotation>
   </semantics>
-</math> of the direct product <math id="6953817503352799345" display="inline" alttext="S\times R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of the direct product <math id="-4772911011936498996" display="inline" alttext="S\times R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
@@ -194,7 +194,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">S\times R</annotation>
   </semantics>
-</math>, which is called the underlying relation of <math id="-8098335453745009563" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, which is called the underlying relation of <math id="1802731059995285952" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -202,7 +202,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math>. <math id="3966694306134155752" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. <math id="4591246242175216288" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -210,7 +210,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
   </semantics>
-</math>, <math id="2879095349504831983" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="-7660848523709865953" display="inline" alttext="R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -218,7 +218,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">R</annotation>
   </semantics>
-</math>, and <math id="-8635386248327959974" display="inline" alttext="Rel" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and <math id="-2343365785746939951" display="inline" alttext="Rel" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">R</mi>
@@ -237,7 +237,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">Rel</annotation>
   </semantics>
-</math> are generalized domains (see <a shape="rect" href="chap12_mj.html#X7BAF69417BB925F6"><span class="RefLink">12.4</span></a>). The corresponding attributes for general mappings are <code class="func">Source</code> (<a shape="rect" href="chap32_mj.html#X7DE8173F80E07AB1"><span class="RefLink">32.3-8</span></a>), <code class="func">Range</code> (<a shape="rect" href="chap32_mj.html#X7B6FD7277CDE9FCB"><span class="RefLink">32.3-7</span></a>), and <code class="func">UnderlyingRelation</code> (<a shape="rect" href="chap32_mj.html#X784F871383FB599B"><span class="RefLink">32.3-9</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Note that general mappings themselves are <em>not</em> domains. One reason for this is that two general mappings with same underlying relation are regarded as equal only if also the sources are equal and the ranges are equal. Other, more technical, reasons are that general mappings and domains have different basic operations, and that general mappings are arithmetic objects (see <a shape="rect" href="chap32_mj.html#X7E2E16277940FA0B"><span class="RefLink">32.6</span></a>); both should not apply to domains.</p><p xmlns="http://www.w3.org/1999/xhtml">Each element of an underlying relation of a general mapping lies in the category of direct product elements (see <code class="func">IsDirectProductElement</code> (<a shape="rect" href="chap32_mj.html#X87FD9FE787023FF0"><span class="RefLink">32.1-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">For each <math id="-2813475617955867810" display="inline" alttext="s\in S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> are generalized domains (see <a shape="rect" href="chap12_mj.html#X7BAF69417BB925F6"><span class="RefLink">12.4</span></a>). The corresponding attributes for general mappings are <code class="func">Source</code> (<a shape="rect" href="chap32_mj.html#X7DE8173F80E07AB1"><span class="RefLink">32.3-8</span></a>), <code class="func">Range</code> (<a shape="rect" href="chap32_mj.html#X7B6FD7277CDE9FCB"><span class="RefLink">32.3-7</span></a>), and <code class="func">UnderlyingRelation</code> (<a shape="rect" href="chap32_mj.html#X784F871383FB599B"><span class="RefLink">32.3-9</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">Note that general mappings themselves are <em>not</em> domains. One reason for this is that two general mappings with same underlying relation are regarded as equal only if also the sources are equal and the ranges are equal. Other, more technical, reasons are that general mappings and domains have different basic operations, and that general mappings are arithmetic objects (see <a shape="rect" href="chap32_mj.html#X7E2E16277940FA0B"><span class="RefLink">32.6</span></a>); both should not apply to domains.</p><p xmlns="http://www.w3.org/1999/xhtml">Each element of an underlying relation of a general mapping lies in the category of direct product elements (see <code class="func">IsDirectProductElement</code> (<a shape="rect" href="chap32_mj.html#X87FD9FE787023FF0"><span class="RefLink">32.1-1</span></a>)).</p><p xmlns="http://www.w3.org/1999/xhtml">For each <math id="-8575937677141373808" display="inline" alttext="s\in S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
@@ -253,7 +253,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">s\in S</annotation>
   </semantics>
-</math>, the set <math id="-5673762494490791337" display="inline" alttext="\{r\in R|(s,r)\in Rel\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, the set <math id="-1055639730353893001" display="inline" alttext="\{r\in R|(s,r)\in Rel\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16">
       <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">{</mo>
@@ -307,7 +307,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\{r\in R|(s,r)\in Rel\}</annotation>
   </semantics>
-</math> is called the set of <em>images</em> of <math id="-8890309052116216324" display="inline" alttext="s" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is called the set of <em>images</em> of <math id="6386111425931475468" display="inline" alttext="s" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">s</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -315,7 +315,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">s</annotation>
   </semantics>
-</math>. Analogously, for <math id="8734207153064091492" display="inline" alttext="r\in R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. Analogously, for <math id="113871896316692973" display="inline" alttext="r\in R" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
@@ -331,7 +331,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">r\in R</annotation>
   </semantics>
-</math>, the set <math id="-4064959135580699081" display="inline" alttext="\{s\in S|(s,r)\in Rel\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, the set <math id="4137703655938814146" display="inline" alttext="\{s\in S|(s,r)\in Rel\}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16">
       <mo xref="p1.1.m1.1.16.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">{</mo>
@@ -385,7 +385,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\{s\in S|(s,r)\in Rel\}</annotation>
   </semantics>
-</math> is called the set of <em>preimages</em> of <math id="-4365985004114825426" display="inline" alttext="r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is called the set of <em>preimages</em> of <math id="-8630381014273841345" display="inline" alttext="r" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">r</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

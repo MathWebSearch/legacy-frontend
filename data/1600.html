@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 31: Domains and their Elements-&gt;31.10-8 InverseImmutable</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap31.html#X78EE524E83624057"></meta>
+        <title>GAP (ref) - Chapter 31: Domains and their Elements &amp;#8614; 31.10-8 InverseImmutable</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap31_mj.html#X78EE524E83624057"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">31.10-8 InverseImmutable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseImmutable</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseAttr</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Inverse</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseMutable</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseOp</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseSameMutability</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseSM</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">InverseImmutable</code>, <code class="func">InverseMutable</code>, and <code class="func">InverseSameMutability</code> all return the multiplicative inverse of an element <var class="Arg">elm</var>, that is, an element <var class="Arg">inv</var> such that <code class="code"><var class="Arg">elm</var> * <var class="Arg">inv</var> = <var class="Arg">inv</var> * <var class="Arg">elm</var> = One( <var class="Arg">elm</var> )</code> holds; if <var class="Arg">elm</var> is not invertible then <code class="keyw">fail</code> (see <a shape="rect" href="chap20_mj.html#X85E648AA8414F303"><span class="RefLink">20.2</span></a>) is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the above definition implies that a (general) mapping is invertible in the sense of <code class="func">Inverse</code> only if its source equals its range (see <a shape="rect" href="chap32_mj.html#X7D6F78587C00CDD0"><span class="RefLink">32.14</span></a>). For a bijective mapping <math id="-6329485763471401950" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">31.10-8 InverseImmutable</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseImmutable</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseAttr</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Inverse</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseMutable</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseOp</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseSameMutability</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ InverseSM</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">InverseImmutable</code>, <code class="func">InverseMutable</code>, and <code class="func">InverseSameMutability</code> all return the multiplicative inverse of an element <var class="Arg">elm</var>, that is, an element <var class="Arg">inv</var> such that <code class="code"><var class="Arg">elm</var> * <var class="Arg">inv</var> = <var class="Arg">inv</var> * <var class="Arg">elm</var> = One( <var class="Arg">elm</var> )</code> holds; if <var class="Arg">elm</var> is not invertible then <code class="keyw">fail</code> (see <a shape="rect" href="chap20_mj.html#X85E648AA8414F303"><span class="RefLink">20.2</span></a>) is returned.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the above definition implies that a (general) mapping is invertible in the sense of <code class="func">Inverse</code> only if its source equals its range (see <a shape="rect" href="chap32_mj.html#X7D6F78587C00CDD0"><span class="RefLink">32.14</span></a>). For a bijective mapping <math id="-7405879171412053085" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">f</annotation>
   </semantics>
-</math> whose source and range differ, <code class="func">InverseGeneralMapping</code> (<a shape="rect" href="chap32_mj.html#X865FC25A87D36F3D"><span class="RefLink">32.2-3</span></a>) can be used to construct a mapping <math id="8497090907709017153" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> whose source and range differ, <code class="func">InverseGeneralMapping</code> (<a shape="rect" href="chap32_mj.html#X865FC25A87D36F3D"><span class="RefLink">32.2-3</span></a>) can be used to construct a mapping <math id="3535059125780540669" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math> with the property that <math id="-7532310502827154990" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> with the property that <math id="6343072795846057042" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">f</annotation>
   </semantics>
-</math> <code class="code">*</code> <math id="-2926776292586821140" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> <code class="code">*</code> <math id="-8870719136623406728" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -35,7 +35,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math> is the identity mapping on the source of <math id="6446332427112703399" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the identity mapping on the source of <math id="5013684359788602683" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -43,7 +43,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">f</annotation>
   </semantics>
-</math> and <math id="-6881424195229643193" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="5362669499824115020" display="inline" alttext="g" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">g</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -51,7 +51,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">g</annotation>
   </semantics>
-</math> <code class="code">*</code> <math id="-417705831662078892" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> <code class="code">*</code> <math id="3665644614670209704" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -59,7 +59,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">f</annotation>
   </semantics>
-</math> is the identity mapping on the range of <math id="-4418082378805334640" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the identity mapping on the range of <math id="8051363692352654619" display="inline" alttext="f" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

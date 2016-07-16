@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 71: Character Tables-&gt;71.20-3 CharacterTableFactorGroup</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71.html#X7C3A4E5283B240BE"></meta>
+        <title>GAP (ref) - Chapter 71: Character Tables &amp;#8614; 71.20-3 CharacterTableFactorGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap71_mj.html#X7C3A4E5283B240BE"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">71.20-3 CharacterTableFactorGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CharacterTableFactorGroup</code>( <var class="Arg">tbl</var>, <var class="Arg">classes</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">is the character table of the factor group of the ordinary character table <var class="Arg">tbl</var> by the normal closure of the classes whose positions are contained in the list <var class="Arg">classes</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">The <code class="code">/</code> operator for a character table and a list of class positions (see <a shape="rect" href="chap71_mj.html#X7CADCBC9824CB624"><span class="RefLink">71.7</span></a>) delegates to <code class="func">CharacterTableFactorGroup</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s4:= CharacterTable( &quot;Symmetric&quot;, 4 );;</span>

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 14: Integers-&gt;14.3-4 GcdInt</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X7A4FEFCA8128E3C3"></meta>
+        <title>GAP (ref) - Chapter 14: Integers &amp;#8614; 14.3-4 GcdInt</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14_mj.html#X7A4FEFCA8128E3C3"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.3-4 GcdInt</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ GcdInt</code>( <var class="Arg">m</var>, <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">GcdInt</code> returns the greatest common divisor of its two integer operands <var class="Arg">m</var> and <var class="Arg">n</var>, i.e., the greatest integer that divides both <var class="Arg">m</var> and <var class="Arg">n</var>. The greatest common divisor is never negative, even if the arguments are. We define <code class="code">GcdInt( <var class="Arg">m</var>, 0 ) = GcdInt( 0, <var class="Arg">m</var> ) = AbsInt( <var class="Arg">m</var> )</code> and <code class="code">GcdInt( 0, 0 ) = 0</code>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">GcdInt</code> is a method used by the general function <code class="func">Gcd</code> (<a shape="rect" href="chap56_mj.html#X7DE207718456F98F"><span class="RefLink">56.7-1</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GcdInt( 123, 66 );</span>

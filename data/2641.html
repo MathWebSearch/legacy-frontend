@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.2-3 AsVectorSpace</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X7B001BAF7D5FD5D0"></meta>
+        <title>GAP (ref) - Chapter 61: Vector Spaces &amp;#8614; 61.2-3 AsVectorSpace</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61_mj.html#X7B001BAF7D5FD5D0"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.2-3 AsVectorSpace</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ AsVectorSpace</code>( <var class="Arg">F</var>, <var class="Arg">D</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">F</var> be a division ring and <var class="Arg">D</var> a domain. If the elements in <var class="Arg">D</var> form an <var class="Arg">F</var>-vector space then <code class="func">AsVectorSpace</code> returns this <var class="Arg">F</var>-vector space, otherwise <code class="keyw">fail</code> is returned.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">AsVectorSpace</code> can be used for example to view a given vector space as a vector space over a smaller or larger division ring.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">V:= FullRowSpace( GF( 27 ), 3 );</span>

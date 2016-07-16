@@ -1,11 +1,11 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 39: Groups-&gt;39.23-2 OneCoboundaries</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7E6438D5834ACCDA"></meta>
+        <title>GAP (ref) - Chapter 39: Groups &amp;#8614; 39.23-2 OneCoboundaries</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39_mj.html#X7E6438D5834ACCDA"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.23-2 OneCoboundaries</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ OneCoboundaries</code>( <var class="Arg">G</var>, <var class="Arg">M</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes the group of 1-coboundaries. Syntax of input and output otherwise is the same as with <code class="func">OneCocycles</code> (<a shape="rect" href="chap39_mj.html#X847BEC137A49BAF4"><span class="RefLink">39.23-1</span></a>) except that entries that refer to cocycles are not computed.</p><p xmlns="http://www.w3.org/1999/xhtml">The operations <code class="func">OneCocycles</code> (<a shape="rect" href="chap39_mj.html#X847BEC137A49BAF4"><span class="RefLink">39.23-1</span></a>) and <code class="func">OneCoboundaries</code> return a record with (at least) the components:</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">generators</code></strong></dt><dd><p>Is a list of representatives for a generating set of <var class="Arg">G</var>/<var class="Arg">M</var>. Cocycles are represented with respect to these generators.</p>
 
-</dd><dt><strong class="Mark"><code class="code">oneCocycles</code></strong></dt><dd><p>A space of row vectors over GF(<math id="5145954013409739" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">oneCocycles</code></strong></dt><dd><p>A space of row vectors over GF(<math id="-8555742053215407620" display="inline" alttext="p" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -13,7 +13,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">p</annotation>
   </semantics>
-</math>), representing <math id="7802391510141882059" display="inline" alttext="Z^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>), representing <math id="5708440397302298324" display="inline" alttext="Z^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
@@ -28,7 +28,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z^{1}</annotation>
   </semantics>
-</math>. The vectors are represented in dimension <math id="-1000820017493698333" display="inline" alttext="a\cdot b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. The vectors are represented in dimension <math id="7822835569297995256" display="inline" alttext="a\cdot b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
@@ -44,7 +44,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a\cdot b</annotation>
   </semantics>
-</math> where <math id="3903735248998303740" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> where <math id="5154342196675240029" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -52,7 +52,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a</annotation>
   </semantics>
-</math> is the length of <code class="code">generators</code> and <math id="-847693896551342744" display="inline" alttext="p^{b}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the length of <code class="code">generators</code> and <math id="1013490040193887599" display="inline" alttext="p^{b}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
@@ -69,7 +69,7 @@
   </semantics>
 </math> the size of <var class="Arg">M</var>.</p>
 
-</dd><dt><strong class="Mark"><code class="code">oneCoboundaries</code></strong></dt><dd><p>A space of row vectors that represents <math id="-3573815656398568706" display="inline" alttext="B^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">oneCoboundaries</code></strong></dt><dd><p>A space of row vectors that represents <math id="-7590248505791229587" display="inline" alttext="B^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
@@ -119,7 +119,7 @@ true
 Group([ (3,4), (1,3,4) ])
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">oc.complementToCocycle(Group((1,2,4),(1,4))) = Z(2) * [ 0, 1, 1, 1 ];</span>
 true
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The factor group <math id="-1423971080083811642" display="inline" alttext="H^{1}(\textit{G}/\textit{M},\textit{M})=Z^{1}(\textit{G}/\textit{M},\textit{M}%
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">The factor group <math id="-5956372658149157403" display="inline" alttext="H^{1}(\textit{G}/\textit{M},\textit{M})=Z^{1}(\textit{G}/\textit{M},\textit{M}%
 )/B^{1}(\textit{G}/\textit{M},\textit{M})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.30.cmml" id="p1.1.m1.1.30">
@@ -259,7 +259,7 @@ true
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">H^{1}(\textit{G}/\textit{M},\textit{M})=Z^{1}(\textit{G}/\textit{M},\textit{M}%
 )/B^{1}(\textit{G}/\textit{M},\textit{M})</annotation>
   </semantics>
-</math> is called the first cohomology group. Currently there is no function which explicitly computes this group. The easiest way to represent it is as a vector space complement to <math id="8358503174786212641" display="inline" alttext="B^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is called the first cohomology group. Currently there is no function which explicitly computes this group. The easiest way to represent it is as a vector space complement to <math id="-8892629001794428673" display="inline" alttext="B^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">B</mi>
@@ -274,7 +274,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">B^{1}</annotation>
   </semantics>
-</math> in <math id="-5443475150897293247" display="inline" alttext="Z^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in <math id="3446535439141308612" display="inline" alttext="Z^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">Z</mi>
@@ -289,7 +289,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">Z^{1}</annotation>
   </semantics>
-</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the only purpose of the calculation of <math id="-1993432781935107996" display="inline" alttext="H^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>.</p><p xmlns="http://www.w3.org/1999/xhtml">If the only purpose of the calculation of <math id="-738556234899483297" display="inline" alttext="H^{1}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>

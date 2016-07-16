@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 47: Finitely Presented Groups-&gt;47.10-1 LowIndexSubgroupsFpGroupIterator</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47.html#X85C5151380E19122"></meta>
+        <title>GAP (ref) - Chapter 47: Finitely Presented Groups &amp;#8614; 47.10-1 LowIndexSubgroupsFpGroupIterator</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap47_mj.html#X85C5151380E19122"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">47.10-1 LowIndexSubgroupsFpGroupIterator</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LowIndexSubgroupsFpGroupIterator</code>( <var class="Arg">G</var>[, <var class="Arg">H</var>], <var class="Arg">index</var>[, <var class="Arg">excluded</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LowIndexSubgroupsFpGroup</code>( <var class="Arg">G</var>[, <var class="Arg">H</var>], <var class="Arg">index</var>[, <var class="Arg">excluded</var>] )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">These functions compute representatives of the conjugacy classes of subgroups of the finitely presented group <var class="Arg">G</var> that contain the subgroup <var class="Arg">H</var> of <var class="Arg">G</var> and that have index less than or equal to <var class="Arg">index</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LowIndexSubgroupsFpGroupIterator</code> returns an iterator (see <a shape="rect" href="chap30_mj.html#X85A3F00985453F95"><span class="RefLink">30.8</span></a>) that can be used to run over these subgroups, and <code class="func">LowIndexSubgroupsFpGroup</code> returns the list of these subgroups. If one is interested only in one or a few subgroups up to a given index then preferably the iterator should be used.</p><p xmlns="http://www.w3.org/1999/xhtml">If the optional argument <var class="Arg">excluded</var> has been specified, then it is expected to be a list of words in the free generators of the underlying free group of <var class="Arg">G</var>, and <code class="func">LowIndexSubgroupsFpGroup</code> returns only those subgroups of index at most <var class="Arg">index</var> that contain <var class="Arg">H</var>, but do not contain any conjugate of any of the group elements defined by these words.</p><p xmlns="http://www.w3.org/1999/xhtml">If not given, <var class="Arg">H</var> defaults to the trivial subgroup.</p><p xmlns="http://www.w3.org/1999/xhtml">The algorithm used finds the requested subgroups by systematically running through a tree of all potential coset tables of <var class="Arg">G</var> of length at most <var class="Arg">index</var> (where it skips all branches of that tree for which it knows in advance that they cannot provide new classes of such subgroups). The time required to do this depends, of course, on the presentation of <var class="Arg">G</var>, but in general it will grow exponentially with the value of <var class="Arg">index</var>. So you should be careful with the choice of <var class="Arg">index</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">li:=LowIndexSubgroupsFpGroup( g, TrivialSubgroup( g ), 10 );</span>
@@ -10,7 +10,7 @@
 </pre></div><p xmlns="http://www.w3.org/1999/xhtml">By default, the algorithm computes no generating sets for the subgroups. This can be enforced with <code class="func">GeneratorsOfGroup</code> (<a shape="rect" href="chap39_mj.html#X79C44528864044C5"><span class="RefLink">39.2-4</span></a>):</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfGroup(li[2]);</span>
 [ a, b*a*b^-1 ]
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If we are interested just in one (proper) subgroup of index at most <math id="7284226230208111713" display="inline" alttext="10" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">If we are interested just in one (proper) subgroup of index at most <math id="8300724565832886330" display="inline" alttext="10" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">10</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -26,7 +26,7 @@
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s2:= NextIterator( iter );;  s2 = li[2];</span>
 true
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">As an example for an application of the optional parameter <var class="Arg">excluded</var>, we compute all conjugacy classes of torsion free subgroups of index at most <math id="-3781860026535649066" display="inline" alttext="24" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">As an example for an application of the optional parameter <var class="Arg">excluded</var>, we compute all conjugacy classes of torsion free subgroups of index at most <math id="1003429273065204608" display="inline" alttext="24" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">24</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -34,7 +34,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">24</annotation>
   </semantics>
-</math> in the group <math id="7306469034022216150" display="inline" alttext="G=\langle x,y,z\mid x^{2},y^{4},z^{3},(xy)^{3},(yz)^{2},(xz)^{3}\rangle" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> in the group <math id="8016205023612677007" display="inline" alttext="G=\langle x,y,z\mid x^{2},y^{4},z^{3},(xy)^{3},(yz)^{2},(xz)^{3}\rangle" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.37.cmml" id="p1.1.m1.1.37">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">G</mi>
@@ -167,7 +167,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">G=\langle x,y,z\mid x^{2},y^{4},z^{3},(xy)^{3},(yz)^{2},(xz)^{3}\rangle</annotation>
   </semantics>
-</math>. It is know from theory that each torsion element of this group is conjugate to a power of <math id="4665756123036731934" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. It is know from theory that each torsion element of this group is conjugate to a power of <math id="7160717505409484152" display="inline" alttext="x" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -175,7 +175,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">x</annotation>
   </semantics>
-</math>, <math id="-3929517701820961586" display="inline" alttext="y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="-1795348592132000506" display="inline" alttext="y" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -183,7 +183,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">y</annotation>
   </semantics>
-</math>, <math id="-1710064507996407739" display="inline" alttext="z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="-1541519874600556696" display="inline" alttext="z" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">z</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -191,7 +191,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">z</annotation>
   </semantics>
-</math>, <math id="-1455144378210298293" display="inline" alttext="xy" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="1581902582241445355" display="inline" alttext="xy" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
@@ -207,7 +207,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">xy</annotation>
   </semantics>
-</math>, <math id="205426696845462592" display="inline" alttext="xz" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="316502882569730427" display="inline" alttext="xz" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
@@ -223,7 +223,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">xz</annotation>
   </semantics>
-</math>, or <math id="-7448027665977227826" display="inline" alttext="yz" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, or <math id="-4391708974926398589" display="inline" alttext="yz" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>
@@ -239,7 +239,7 @@ true
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">yz</annotation>
   </semantics>
-</math>. (Note that this includes conjugates of <math id="1468608036069968815" display="inline" alttext="y^{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. (Note that this includes conjugates of <math id="3537439259691346164" display="inline" alttext="y^{2}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">y</mi>

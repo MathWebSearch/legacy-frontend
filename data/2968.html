@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 14: Integers-&gt;14.4-3 PrimalityProof</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14.html#X7CD977B17B4A7A4B"></meta>
+        <title>GAP (ref) - Chapter 14: Integers &amp;#8614; 14.4-3 PrimalityProof</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap14_mj.html#X7CD977B17B4A7A4B"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.4-3 PrimalityProof</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PrimalityProof</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Construct a machine verifiable proof of the primality of (the probable prime) <var class="Arg">n</var>, following the ideas of <a shape="rect" href="chapBib_mj.html#biBBLS1975">[BLS75]</a>. The proof consists of various Fermat and Lucas pseudoprimality tests, which taken as a whole prove the primality. The proof is represented as a list of witnesses of two kinds. The first kind, <code class="code">[ &quot;F&quot;, divisor, base ]</code>, indicates a successful Fermat pseudoprimality test, where <var class="Arg">n</var> is a strong pseudoprime at <code class="keyw">base</code> with order not divisible by <math id="-5091365110578175276" display="inline" alttext="(\textit{n}-1)/divisor" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">14.4-3 PrimalityProof</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PrimalityProof</code>( <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Construct a machine verifiable proof of the primality of (the probable prime) <var class="Arg">n</var>, following the ideas of <a shape="rect" href="chapBib_mj.html#biBBLS1975">[BLS75]</a>. The proof consists of various Fermat and Lucas pseudoprimality tests, which taken as a whole prove the primality. The proof is represented as a list of witnesses of two kinds. The first kind, <code class="code">[ &quot;F&quot;, divisor, base ]</code>, indicates a successful Fermat pseudoprimality test, where <var class="Arg">n</var> is a strong pseudoprime at <code class="keyw">base</code> with order not divisible by <math id="7087425248230370947" display="inline" alttext="(\textit{n}-1)/divisor" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">
       <mrow xref="p1.1.m1.1.14.2.cmml" id="p1.1.m1.1.14.2">
@@ -56,7 +56,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\textit{n}-1)/divisor</annotation>
   </semantics>
-</math>. The second kind, <code class="code">[ &quot;L&quot;, divisor, discriminant, P ]</code> indicates a successful Lucas pseudoprimality test, for a quadratic form of given <code class="keyw">discriminant</code> and middle term <code class="keyw">P</code> with an extra check at <math id="-75865969404831054" display="inline" alttext="(\textit{n}+1)/divisor" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. The second kind, <code class="code">[ &quot;L&quot;, divisor, discriminant, P ]</code> indicates a successful Lucas pseudoprimality test, for a quadratic form of given <code class="keyw">discriminant</code> and middle term <code class="keyw">P</code> with an extra check at <math id="1474587654041707453" display="inline" alttext="(\textit{n}+1)/divisor" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">
       <mrow xref="p1.1.m1.1.14.2.cmml" id="p1.1.m1.1.14.2">

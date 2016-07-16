@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 61: Vector Spaces-&gt;61.9-12 SiftedVector</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61.html#X815C69A57C042C34"></meta>
+        <title>GAP (ref) - Chapter 61: Vector Spaces &amp;#8614; 61.9-12 SiftedVector</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap61_mj.html#X815C69A57C042C34"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.9-12 SiftedVector</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SiftedVector</code>( <var class="Arg">B</var>, <var class="Arg">v</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">B</var> be a semi-echelonized basis (see <code class="func">IsSemiEchelonized</code> (<a shape="rect" href="chap61_mj.html#X865A540F85FAE2DF"><span class="RefLink">61.9-7</span></a>)) of a Gaussian row or matrix space <math id="3267220233541488801" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">61.9-12 SiftedVector</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SiftedVector</code>( <var class="Arg">B</var>, <var class="Arg">v</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">B</var> be a semi-echelonized basis (see <code class="func">IsSemiEchelonized</code> (<a shape="rect" href="chap61_mj.html#X865A540F85FAE2DF"><span class="RefLink">61.9-7</span></a>)) of a Gaussian row or matrix space <math id="-2788552838280550515" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
   </semantics>
-</math> (see <code class="func">IsGaussianSpace</code> (<a shape="rect" href="chap61_mj.html#X83724C157F4FDFB4"><span class="RefLink">61.9-3</span></a>)), and <var class="Arg">v</var> a row vector or matrix, respectively, of the same dimension as the elements in <math id="1506864870501679755" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> (see <code class="func">IsGaussianSpace</code> (<a shape="rect" href="chap61_mj.html#X83724C157F4FDFB4"><span class="RefLink">61.9-3</span></a>)), and <var class="Arg">v</var> a row vector or matrix, respectively, of the same dimension as the elements in <math id="2789879744756734858" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -19,7 +19,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
   </semantics>
-</math>. <code class="code">SiftedVector</code> returns the <em>residuum</em> of <var class="Arg">v</var> with respect to <var class="Arg">B</var>, which is obtained by successively cleaning the pivot positions in <var class="Arg">v</var> by subtracting multiples of the basis vectors in <var class="Arg">B</var>. So the result is the zero vector in <math id="-3198765502990591150" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. <code class="code">SiftedVector</code> returns the <em>residuum</em> of <var class="Arg">v</var> with respect to <var class="Arg">B</var>, which is obtained by successively cleaning the pivot positions in <var class="Arg">v</var> by subtracting multiples of the basis vectors in <var class="Arg">B</var>. So the result is the zero vector in <math id="212081118145483402" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">V</annotation>
   </semantics>
-</math> if and only if <var class="Arg">v</var> lies in <math id="-1871603154423004330" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> if and only if <var class="Arg">v</var> lies in <math id="701009663423015717" display="inline" alttext="V" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">V</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

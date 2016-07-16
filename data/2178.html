@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.10-3 IsTableOfMarksWithGens</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X7889DB6D790593B9"></meta>
+        <title>GAP (ref) - Chapter 70: Tables of Marks &amp;#8614; 70.10-3 IsTableOfMarksWithGens</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70_mj.html#X7889DB6D790593B9"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.10-3 IsTableOfMarksWithGens</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsTableOfMarksWithGens</code>( <var class="Arg">tom</var> )</td><td colspan="1" rowspan="1" class="tdright">( filter )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This filter shall express the union of the filters <code class="code">IsTableOfMarks and HasStraightLineProgramsTom</code> and <code class="code">IsTableOfMarks and HasGeneratorsSubgroupsTom</code>. If a table of marks <var class="Arg">tom</var> has this filter set then <var class="Arg">tom</var> can be asked to compute information that is in general not uniquely determined by a table of marks, for example the positions of derived subgroups or normalizers of subgroups (see <code class="func">DerivedSubgroupTom</code> (<a shape="rect" href="chap70_mj.html#X8528D9397FFAF477"><span class="RefLink">70.9-2</span></a>), <code class="func">NormalizerTom</code> (<a shape="rect" href="chap70_mj.html#X7CE6C45881F7F7D4"><span class="RefLink">70.9-4</span></a>)).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a5:= TableOfMarks( &quot;A5&quot; );;  IsTableOfMarksWithGens( a5 );</span>

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.5-7 UpdateMap</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X80C7328C85BFC20B"></meta>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables &amp;#8614; 73.5-7 UpdateMap</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73_mj.html#X80C7328C85BFC20B"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.5-7 UpdateMap</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ UpdateMap</code>( <var class="Arg">character</var>, <var class="Arg">paramap</var>, <var class="Arg">indirected</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">character</var> be a map, <var class="Arg">paramap</var> a parametrized map, and <var class="Arg">indirected</var> a parametrized map that is contained in <code class="code">CompositionMaps( <var class="Arg">character</var>, <var class="Arg">paramap</var> )</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">Then <code class="func">UpdateMap</code> changes <var class="Arg">paramap</var> to the parametrized map containing exactly the maps whose composition with <var class="Arg">character</var> is equal to <var class="Arg">indirected</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">If a contradiction is detected then <code class="keyw">false</code> is returned immediately, otherwise <code class="keyw">true</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">subtbl:= CharacterTable(&quot;S4(4).2&quot;);; tbl:= CharacterTable(&quot;He&quot;);;</span>

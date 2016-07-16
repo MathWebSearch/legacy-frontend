@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 9: Files and Filenames-&gt;9.6-4 IsExecutableFile</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap9.html#X83A1AAD58435FC4C"></meta>
+        <title>GAP (ref) - Chapter 9: Files and Filenames &amp;#8614; 9.6-4 IsExecutableFile</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap9_mj.html#X83A1AAD58435FC4C"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">9.6-4 IsExecutableFile</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsExecutableFile</code>( <var class="Arg">filename</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">IsExecutableFile</code> returns <code class="keyw">true</code> if a file with the filename <var class="Arg">filename</var> exists <em>and</em> the <strong class="pkg">GAP</strong> process has execute permissions for the file, or <code class="keyw">false</code> if this is not the case. Note that execute permissions do not imply that it is possible to execute the file, e.g., it may only be executable on a different machine.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsExecutableFile( &quot;/bin/date&quot; );   # ... but executable</span>

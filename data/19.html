@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 62: Algebras-&gt;62.11-13 ActingAlgebra</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62.html#X8308408D86CFC3C9"></meta>
+        <title>GAP (ref) - Chapter 62: Algebras &amp;#8614; 62.11-13 ActingAlgebra</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap62_mj.html#X8308408D86CFC3C9"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">62.11-13 ActingAlgebra</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ ActingAlgebra</code>( <var class="Arg">V</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Here <var class="Arg">V</var> is an algebra module; this function returns the algebra that acts on <var class="Arg">V</var> (this is the same as <code class="code">LeftActingAlgebra( <var class="Arg">V</var> )</code> if <var class="Arg">V</var> is a left module, and <code class="code">RightActingAlgebra( <var class="Arg">V</var> )</code> if <var class="Arg">V</var> is a right module; it will signal an error if <var class="Arg">V</var> is a bi-module).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:= Rationals^[3,3];;</span>

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 80: Examples of Extending the System-&gt;80.4 Adding a new Operation</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap80.html#X797545848520A44B"></meta>
+        <title>GAP (ref) - Chapter 80: Examples of Extending the System &amp;#8614; 80.4 Adding a new Operation</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap80_mj.html#X797545848520A44B"></meta>
       </head>
       <body> <h4 xmlns="http://www.w3.org/1999/xhtml">80.4 <span class="Heading">Adding a new Operation</span></h4><p xmlns="http://www.w3.org/1999/xhtml">Next, we will consider how to add own operations. As an example we take the Sylow normalizer in a group of a given prime. This operation gets two arguments, the first has to be a group, the second a prime number.</p><p xmlns="http://www.w3.org/1999/xhtml">There is a function <code class="func">IsPrimeInt</code> (<a shape="rect" href="chap14_mj.html#X78FDA4437EDCA70C"><span class="RefLink">14.4-2</span></a>), but no property for being prime (which would be pointless as integers cannot store property values anyhow). So the second argument gets specified only as positive integer:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 SylowNormalizer:=NewOperation(&quot;SylowNormalizer&quot;,[IsGroup,IsPosInt]);

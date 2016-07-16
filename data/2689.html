@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 54: Partial permutations-&gt;54.5-6 TrimPartialPerm</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54.html#X83560BE678ACF855"></meta>
+        <title>GAP (ref) - Chapter 54: Partial permutations &amp;#8614; 54.5-6 TrimPartialPerm</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap54_mj.html#X83560BE678ACF855"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">54.5-6 TrimPartialPerm</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ TrimPartialPerm</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: Nothing.</p><p xmlns="http://www.w3.org/1999/xhtml">It can happen that the internal representation of a partial permutation uses more memory than necessary. For example, by composing a partial permutation with codegree less than 65536 with a partial permutation with codegree greater than 65535. It is possible that the resulting partial permutation <var class="Arg">f</var> has its codegree and images stored as 32-bit integers, while none of its image points exceeds 65536. The purpose of this function is to change the internal representation of such an <var class="Arg">f</var> from using 32-bit to using 16-bit integers.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the partial permutation <var class="Arg">f</var> is changed in-place, and nothing is returned by this function.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=PartialPerm( [ 1, 2 ], [ 3, 4 ] )</span>

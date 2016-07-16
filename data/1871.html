@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 16: Combinatorics-&gt;16.2-14 Derangements</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16.html#X79C159507B2BF1C9"></meta>
+        <title>GAP (ref) - Chapter 16: Combinatorics &amp;#8614; 16.2-14 Derangements</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap16_mj.html#X79C159507B2BF1C9"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.2-14 Derangements</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Derangements</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the set of all derangements of the list <var class="Arg">list</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>derangement</em> is a fixpointfree permutation of <var class="Arg">list</var> and is represented by a list that contains exactly the same elements as <var class="Arg">list</var>, but in such an order that the derangement has at no position the same element as <var class="Arg">list</var>. If the list <var class="Arg">list</var> contains no element twice there are exactly <math id="7288168596962189133" display="inline" alttext="|\textit{list}|!(1/2!-1/3!+1/4!-\cdots+(-1)^{n}/n!)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">16.2-14 Derangements</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Derangements</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the set of all derangements of the list <var class="Arg">list</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">A <em>derangement</em> is a fixpointfree permutation of <var class="Arg">list</var> and is represented by a list that contains exactly the same elements as <var class="Arg">list</var>, but in such an order that the derangement has at no position the same element as <var class="Arg">list</var>. If the list <var class="Arg">list</var> contains no element twice there are exactly <math id="8563920941118929070" display="inline" alttext="|\textit{list}|!(1/2!-1/3!+1/4!-\cdots+(-1)^{n}/n!)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.32.cmml" id="p1.1.m1.1.32">
       <mrow xref="p1.1.m1.1.32.2.cmml" id="p1.1.m1.1.32.2">
@@ -143,7 +143,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">|\textit{list}|!(1/2!-1/3!+1/4!-\cdots+(-1)^{n}/n!)</annotation>
   </semantics>
-</math> derangements.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the ratio <code class="code">NrPermutationsList( [ 1 .. n ] ) / NrDerangements( [ 1 .. n ] )</code>, which is <math id="1950931931363362078" display="inline" alttext="n!/(n!(1/2!-1/3!+1/4!-\cdots+(-1)^{n}/n!))" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> derangements.</p><p xmlns="http://www.w3.org/1999/xhtml">Note that the ratio <code class="code">NrPermutationsList( [ 1 .. n ] ) / NrDerangements( [ 1 .. n ] )</code>, which is <math id="5516510789204918158" display="inline" alttext="n!/(n!(1/2!-1/3!+1/4!-\cdots+(-1)^{n}/n!))" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.35.cmml" id="p1.1.m1.1.35">
       <mrow xref="p1.1.m1.1.35.1.cmml" id="p1.1.m1.1.35.1">
@@ -292,7 +292,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">n!/(n!(1/2!-1/3!+1/4!-\cdots+(-1)^{n}/n!))</annotation>
   </semantics>
-</math> is an approximation for the base of the natural logarithm <math id="-5166586684684994831" display="inline" alttext="e=2.7182818285\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is an approximation for the base of the natural logarithm <math id="-68937818312494049" display="inline" alttext="e=2.7182818285\ldots" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
@@ -316,7 +316,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">e=2.7182818285\ldots</annotation>
   </semantics>
-</math>, which is correct to about <math id="-8055205617165961294" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, which is correct to about <math id="-2126202157163108786" display="inline" alttext="n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

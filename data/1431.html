@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 24: Matrices-&gt;24.13-1 CharacteristicPolynomial</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24.html#X87FA0A727CDB060B"></meta>
+        <title>GAP (ref) - Chapter 24: Matrices &amp;#8614; 24.13-1 CharacteristicPolynomial</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap24_mj.html#X87FA0A727CDB060B"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.13-1 CharacteristicPolynomial</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CharacteristicPolynomial</code>( [<var class="Arg">F</var>, <var class="Arg">E</var>, ]<var class="Arg">mat</var>[, <var class="Arg">ind</var>] )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a square matrix <var class="Arg">mat</var>, <code class="func">CharacteristicPolynomial</code> returns the <em>characteristic polynomial</em> of <var class="Arg">mat</var>, that is, the <code class="func">StandardAssociate</code> (<a shape="rect" href="chap56_mj.html#X7B1A9A4C7C59FB36"><span class="RefLink">56.5-5</span></a>) of the determinant of the matrix <math id="-4412739600467417563" display="inline" alttext="\textit{mat}-X\cdot I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">24.13-1 CharacteristicPolynomial</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CharacteristicPolynomial</code>( [<var class="Arg">F</var>, <var class="Arg">E</var>, ]<var class="Arg">mat</var>[, <var class="Arg">ind</var>] )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">For a square matrix <var class="Arg">mat</var>, <code class="func">CharacteristicPolynomial</code> returns the <em>characteristic polynomial</em> of <var class="Arg">mat</var>, that is, the <code class="func">StandardAssociate</code> (<a shape="rect" href="chap56_mj.html#X7B1A9A4C7C59FB36"><span class="RefLink">56.5-5</span></a>) of the determinant of the matrix <math id="2308007207600656694" display="inline" alttext="\textit{mat}-X\cdot I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑚𝑎𝑡</mtext>
@@ -29,7 +29,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\textit{mat}-X\cdot I</annotation>
   </semantics>
-</math>, where <math id="-9072695101635874555" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, where <math id="-5121159363003477486" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">X</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -37,7 +37,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">X</annotation>
   </semantics>
-</math> is an indeterminate and <math id="-9063827786600679467" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is an indeterminate and <math id="-5668084492604698506" display="inline" alttext="I" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">I</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -45,7 +45,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">I</annotation>
   </semantics>
-</math> is the appropriate identity matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">If fields <var class="Arg">F</var> and <var class="Arg">E</var> are given, then <var class="Arg">F</var> must be a subfield of <var class="Arg">E</var>, and <var class="Arg">mat</var> must have entries in <var class="Arg">E</var>. Then <code class="func">CharacteristicPolynomial</code> returns the characteristic polynomial of the <var class="Arg">F</var>-linear mapping induced by <var class="Arg">mat</var> on the underlying <var class="Arg">E</var>-vector space of <var class="Arg">mat</var>. In this case, the characteristic polynomial is computed using <code class="func">BlownUpMat</code> (<a shape="rect" href="chap24_mj.html#X85923C107A4569D0"><span class="RefLink">24.13-3</span></a>) for the field extension of <math id="-3927667667322462612" display="inline" alttext="E/F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the appropriate identity matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">If fields <var class="Arg">F</var> and <var class="Arg">E</var> are given, then <var class="Arg">F</var> must be a subfield of <var class="Arg">E</var>, and <var class="Arg">mat</var> must have entries in <var class="Arg">E</var>. Then <code class="func">CharacteristicPolynomial</code> returns the characteristic polynomial of the <var class="Arg">F</var>-linear mapping induced by <var class="Arg">mat</var> on the underlying <var class="Arg">E</var>-vector space of <var class="Arg">mat</var>. In this case, the characteristic polynomial is computed using <code class="func">BlownUpMat</code> (<a shape="rect" href="chap24_mj.html#X85923C107A4569D0"><span class="RefLink">24.13-3</span></a>) for the field extension of <math id="833169224052710140" display="inline" alttext="E/F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">E</mi>
@@ -61,7 +61,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">E/F</annotation>
   </semantics>
-</math> generated by the default field. Thus, if <math id="-3826632504339974384" display="inline" alttext="F=E" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> generated by the default field. Thus, if <math id="-1398338091462474717" display="inline" alttext="F=E" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
@@ -77,7 +77,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F=E</annotation>
   </semantics>
-</math>, the result is the same as for the one argument version.</p><p xmlns="http://www.w3.org/1999/xhtml">The returned polynomials are expressed in the indeterminate number <var class="Arg">ind</var>. If <var class="Arg">ind</var> is not given, it defaults to <math id="841012558287164014" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, the result is the same as for the one argument version.</p><p xmlns="http://www.w3.org/1999/xhtml">The returned polynomials are expressed in the indeterminate number <var class="Arg">ind</var>. If <var class="Arg">ind</var> is not given, it defaults to <math id="-6694346240857868202" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

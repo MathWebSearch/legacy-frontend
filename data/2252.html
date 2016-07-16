@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities-&gt;7.7-11 An Example of Function Profiling</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7.html#X7C5CE32579891120"></meta>
+        <title>GAP (ref) - Chapter 7: Debugging and Profiling Facilities &amp;#8614; 7.7-11 An Example of Function Profiling</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap7_mj.html#X7C5CE32579891120"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">7.7-11 <span class="Heading">An Example of Function Profiling</span></h5><p xmlns="http://www.w3.org/1999/xhtml">Let us suppose we want to get information about the computation of the conjugacy classes of a certain permutation group. For that, first we create the group, then we start profiling for all global functions and for all operations and their methods, then we compute the conjugacy classes, and then we stop profiling.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:= PrimitiveGroup( 24, 1 );;</span>

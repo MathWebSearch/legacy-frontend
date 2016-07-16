@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 21: Lists-&gt;21.1-2 IsDenseList</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X870AA9D8798C93DD"></meta>
+        <title>GAP (ref) - Chapter 21: Lists &amp;#8614; 21.1-2 IsDenseList</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21_mj.html#X870AA9D8798C93DD"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.1-2 IsDenseList</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsDenseList</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A list is <em>dense</em> if it has no holes, i.e., contains an element at every position up to the length. It is absolutely legal to have lists with holes. They are created by leaving the entry between the commas empty. Holes at the end of a list are ignored. Lists with holes are sometimes convenient when the list represents a mapping from a finite, but not consecutive, subset of the positive integers.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsDenseList( [ 1, 2, 3 ] );</span>

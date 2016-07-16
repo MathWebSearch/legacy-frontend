@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 45: Polycyclic Groups-&gt;45.2-3 CanEasilyComputePcgs</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap45.html#X7B561B1685CEC2AB"></meta>
+        <title>GAP (ref) - Chapter 45: Polycyclic Groups &amp;#8614; 45.2-3 CanEasilyComputePcgs</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap45_mj.html#X7B561B1685CEC2AB"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">45.2-3 CanEasilyComputePcgs</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CanEasilyComputePcgs</code>( <var class="Arg">grp</var> )</td><td colspan="1" rowspan="1" class="tdright">( filter )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This filter indicates whether it is possible to compute a pcgs for <var class="Arg">grp</var> cheaply. Clearly, <var class="Arg">grp</var> must be polycyclic in this case. However, not for every polycyclic group there is a method to compute a pcgs at low costs. This filter is used in the method selection mainly. Note that this filter may change its value from <code class="keyw">false</code> to <code class="keyw">true</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := Group( (1,2,3,4),(1,2) );</span>

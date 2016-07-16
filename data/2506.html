@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 25: Integral matrices and lattices-&gt;25.5-2 LLLReducedGramMat</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25.html#X86D23EB885EDE60E"></meta>
+        <title>GAP (ref) - Chapter 25: Integral matrices and lattices &amp;#8614; 25.5-2 LLLReducedGramMat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap25_mj.html#X86D23EB885EDE60E"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.5-2 LLLReducedGramMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LLLReducedGramMat</code>( <var class="Arg">G</var>[, <var class="Arg">y</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LLLReducedGramMat</code> provides an implementation of the <em>LLL algorithm</em> by Lenstra, Lenstra and Lovász (see <a shape="rect" href="chapBib_mj.html#biBLLL82">[LLL82]</a>, <a shape="rect" href="chapBib_mj.html#biBPoh87">[Poh87]</a>). The implementation follows the description in <a shape="rect" href="chapBib_mj.html#biBCoh93">[Coh93, p. 94f.]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">G</var> the Gram matrix of the vectors <math id="61037915163380453" display="inline" alttext="(b_{1},b_{2},\ldots,b_{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">25.5-2 LLLReducedGramMat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ LLLReducedGramMat</code>( <var class="Arg">G</var>[, <var class="Arg">y</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LLLReducedGramMat</code> provides an implementation of the <em>LLL algorithm</em> by Lenstra, Lenstra and Lovász (see <a shape="rect" href="chapBib_mj.html#biBLLL82">[LLL82]</a>, <a shape="rect" href="chapBib_mj.html#biBPoh87">[Poh87]</a>). The implementation follows the description in <a shape="rect" href="chapBib_mj.html#biBCoh93">[Coh93, p. 94f.]</a>.</p><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">G</var> the Gram matrix of the vectors <math id="-6781918131037876099" display="inline" alttext="(b_{1},b_{2},\ldots,b_{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -47,7 +47,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(b_{1},b_{2},\ldots,b_{n})</annotation>
   </semantics>
-</math>; this means <var class="Arg">G</var> is either a square symmetric matrix or lower triangular matrix (only the entries in the lower triangular half are used by the program).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LLLReducedGramMat</code> returns a record whose component <code class="code">remainder</code> is the Gram matrix of the LLL reduced basis corresponding to <math id="2569200672516645684" display="inline" alttext="(b_{1},b_{2},\ldots,b_{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>; this means <var class="Arg">G</var> is either a square symmetric matrix or lower triangular matrix (only the entries in the lower triangular half are used by the program).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">LLLReducedGramMat</code> returns a record whose component <code class="code">remainder</code> is the Gram matrix of the LLL reduced basis corresponding to <math id="4244075456384864367" display="inline" alttext="(b_{1},b_{2},\ldots,b_{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -91,7 +91,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(b_{1},b_{2},\ldots,b_{n})</annotation>
   </semantics>
-</math>. If <var class="Arg">G</var> is a lower triangular matrix then also the <code class="code">remainder</code> component of the result record is a lower triangular matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">The result record contains also the components <code class="code">relations</code> and <code class="code">transformation</code>, which have the following meaning.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">relations</code> is a basis of the space of vectors <math id="-8601072873531167763" display="inline" alttext="(x_{1},x_{2},\ldots,x_{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. If <var class="Arg">G</var> is a lower triangular matrix then also the <code class="code">remainder</code> component of the result record is a lower triangular matrix.</p><p xmlns="http://www.w3.org/1999/xhtml">The result record contains also the components <code class="code">relations</code> and <code class="code">transformation</code>, which have the following meaning.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">relations</code> is a basis of the space of vectors <math id="-5349994089766619063" display="inline" alttext="(x_{1},x_{2},\ldots,x_{n})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -135,7 +135,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(x_{1},x_{2},\ldots,x_{n})</annotation>
   </semantics>
-</math> such that <math id="6274138254648169127" display="inline" alttext="\sum_{{i=1}}^{n}x_{i}b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that <math id="-1245579030805985312" display="inline" alttext="\sum_{{i=1}}^{n}x_{i}b_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <msubsup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
@@ -191,7 +191,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\sum_{{i=1}}^{n}x_{i}b_{i}</annotation>
   </semantics>
-</math> is zero, and <code class="code">transformation</code> gives the expression of the new lattice basis in terms of the old, i.e., <code class="code">transformation</code> is the matrix <math id="-8073102338843189781" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is zero, and <code class="code">transformation</code> gives the expression of the new lattice basis in terms of the old, i.e., <code class="code">transformation</code> is the matrix <math id="-7182646385140213955" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -199,7 +199,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
   </semantics>
-</math> such that <math id="-1841686441892473851" display="inline" alttext="T\cdot\textit{G}\cdot T^{tr}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that <math id="8146575741275923926" display="inline" alttext="T\cdot\textit{G}\cdot T^{tr}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
@@ -235,7 +235,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">T\cdot\textit{G}\cdot T^{tr}</annotation>
   </semantics>
-</math> is the <code class="code">remainder</code> component of the result.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">y</var> denotes the &quot;sensitivity&quot; of the algorithm, it must be a rational number between <math id="69137892829125042" display="inline" alttext="1/4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is the <code class="code">remainder</code> component of the result.</p><p xmlns="http://www.w3.org/1999/xhtml">The optional argument <var class="Arg">y</var> denotes the &quot;sensitivity&quot; of the algorithm, it must be a rational number between <math id="-3609226810937530160" display="inline" alttext="1/4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
@@ -251,7 +251,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">1/4</annotation>
   </semantics>
-</math> and <math id="1712727167186471035" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math id="2187255944831484930" display="inline" alttext="1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">1</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -259,7 +259,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">1</annotation>
   </semantics>
-</math>; the default value is <math id="8257146749001598511" display="inline" alttext="\textit{y}=3/4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>; the default value is <math id="-7860705795786495226" display="inline" alttext="\textit{y}=3/4" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
       <mtext xref="p1.1.m1.1.1.1.cmml" id="p1.1.m1.1.1.1">𝑦</mtext>

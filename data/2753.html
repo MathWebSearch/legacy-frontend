@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 39: Groups-&gt;39.24-2 SchurCover</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7DD1E37987612042"></meta>
+        <title>GAP (ref) - Chapter 39: Groups &amp;#8614; 39.24-2 SchurCover</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39_mj.html#X7DD1E37987612042"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.24-2 SchurCover</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SchurCover</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns one (of possibly several) Schur covers of the group <var class="Arg">G</var>.</p><p xmlns="http://www.w3.org/1999/xhtml">At the moment this cover is represented as a finitely presented group and <code class="func">IsomorphismPermGroup</code> (<a shape="rect" href="chap43_mj.html#X80B7B1C783AA1567"><span class="RefLink">43.3-1</span></a>) would be needed to convert it to a permutation group.</p><p xmlns="http://www.w3.org/1999/xhtml">If also the relation to <var class="Arg">G</var> is needed, <code class="func">EpimorphismSchurCover</code> (<a shape="rect" href="chap39_mj.html#X7F619DDA7DD6C43B"><span class="RefLink">39.24-1</span></a>) should be used.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">g:=Group((1,2,3,4),(1,2));;</span>

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 39: Groups-&gt;39.2-7 IsGroup</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7939B3177BBD61E4"></meta>
+        <title>GAP (ref) - Chapter 39: Groups &amp;#8614; 39.2-7 IsGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39_mj.html#X7939B3177BBD61E4"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.2-7 IsGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsGroup</code>( <var class="Arg">obj</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">A group is a magma-with-inverses (see <code class="func">IsMagmaWithInverses</code> (<a shape="rect" href="chap35_mj.html#X82CBFF648574B830"><span class="RefLink">35.1-4</span></a>)) and associative (see <code class="func">IsAssociative</code> (<a shape="rect" href="chap35_mj.html#X7C83B5A47FD18FB7"><span class="RefLink">35.4-7</span></a>)) multiplication.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">IsGroup</code> tests whether the object <var class="Arg">obj</var> fulfills these conditions, it does <em>not</em> test whether <var class="Arg">obj</var> is a set of elements that forms a group under multiplication; use <code class="func">AsGroup</code> (<a shape="rect" href="chap39_mj.html#X7A0747F17B50D967"><span class="RefLink">39.2-5</span></a>) if you want to perform such a test. (See <a shape="rect" href="chap13_mj.html#X7CC6903E78F24167"><span class="RefLink">13.3</span></a> for details about categories.)</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsGroup(g);</span>

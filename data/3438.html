@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 21: Lists-&gt;21.20-19 List</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X86CB7DCE8510F977"></meta>
+        <title>GAP (ref) - Chapter 21: Lists &amp;#8614; 21.20-19 List</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21_mj.html#X86CB7DCE8510F977"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.20-19 List</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ List</code>( <var class="Arg">list</var>[, <var class="Arg">func</var>] )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">This function returns a new mutable list <code class="code">new</code> of the same length as the list <var class="Arg">list</var> (which may have holes). The entry <code class="code">new[i]</code> is unbound if <code class="code"><var class="Arg">list</var>[i]</code> is unbound. Otherwise <code class="code">new[i] = <var class="Arg">func</var>(<var class="Arg">list</var>[i])</code>. If the argument <var class="Arg">func</var> is omitted, its default is <code class="func">IdFunc</code> (<a shape="rect" href="chap5_mj.html#X810325697BDEF899"><span class="RefLink">5.4-6</span></a>), so this function does the same as <code class="func">ShallowCopy</code> (<a shape="rect" href="chap12_mj.html#X846BC7107C352031"><span class="RefLink">12.7-1</span></a>) (see also <a shape="rect" href="chap21_mj.html#X7ED7C0738495556F"><span class="RefLink">21.7</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( [1,2,3], i -&gt; i^2 );</span>

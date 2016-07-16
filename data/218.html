@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 50: Group Libraries-&gt;50.7-9 UnloadSmallGroupsData</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50.html#X850CC04E7855FF68"></meta>
+        <title>GAP (ref) - Chapter 50: Group Libraries &amp;#8614; 50.7-9 UnloadSmallGroupsData</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap50_mj.html#X850CC04E7855FF68"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">50.7-9 UnloadSmallGroupsData</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ UnloadSmallGroupsData</code>(  )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> loads all necessary data from the library automatically, but it does not delete the data from the workspace again. Usually, this will be not necessary, since the data is stored in a compressed format. However, if a large number of groups from the library have been loaded, then the user might wish to remove the data from the workspace and this can be done by the above function call.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := SmallGroup( 768, 1000000 );</span>

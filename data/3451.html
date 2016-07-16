@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 21: Lists-&gt;21.20-6 Flat</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21.html#X7FA272D984EF82ED"></meta>
+        <title>GAP (ref) - Chapter 21: Lists &amp;#8614; 21.20-6 Flat</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap21_mj.html#X7FA272D984EF82ED"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">21.20-6 Flat</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Flat</code>( <var class="Arg">list</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">returns the list of all elements that are contained in the list <var class="Arg">list</var> or its sublists. That is, <code class="func">Flat</code> first makes a new empty list <var class="Arg">new</var>. Then it loops over the elements <var class="Arg">elm</var> of <var class="Arg">list</var>. If <var class="Arg">elm</var> is not a list it is added to <var class="Arg">new</var>, otherwise <code class="func">Flat</code> appends <code class="code">Flat( <var class="Arg">elm</var> )</code> to <var class="Arg">new</var>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Flat( [ 1, [ 2, 3 ], [ [ 1, 2 ], 3 ] ] );</span>

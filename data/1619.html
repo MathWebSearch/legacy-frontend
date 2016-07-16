@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 31: Domains and their Elements-&gt;31.3 Constructing Domains</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap31.html#X82039A218274826F"></meta>
+        <title>GAP (ref) - Chapter 31: Domains and their Elements &amp;#8614; 31.3 Constructing Domains</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap31_mj.html#X82039A218274826F"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">31.3 <span class="Heading">Constructing Domains</span></h4><p xmlns="http://www.w3.org/1999/xhtml">For several operational structures (see <a shape="rect" href="chap31_mj.html#X859C7AB97B34F55F"><span class="RefLink">31.1</span></a>), <strong class="pkg">GAP</strong> provides functions to construct domains with this structure (note that such functions do not exist for all operational structures). For example, <code class="func">Group</code> (<a shape="rect" href="chap39_mj.html#X7D8E473384DE9CD4"><span class="RefLink">39.2-1</span></a>) returns groups, <code class="func">VectorSpace</code> (<a shape="rect" href="chap61_mj.html#X805413157CE9BECF"><span class="RefLink">61.2-1</span></a>) returns vector spaces etc.:</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">Struct</var>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, ... )</code></p><p xmlns="http://www.w3.org/1999/xhtml">The syntax of these functions may vary, dependent on the structure in question. Usually a domain is constructed as the closure of some elements under the given operations, that is, the domain is given by its <em>generators</em>. For example, a group can be constructed from a list of generating permutations or matrices or whatever is admissible as group elements, and a vector space over a given field <math id="993872925573660779" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">31.3 <span class="Heading">Constructing Domains</span></h4><p xmlns="http://www.w3.org/1999/xhtml">For several operational structures (see <a shape="rect" href="chap31_mj.html#X859C7AB97B34F55F"><span class="RefLink">31.1</span></a>), <strong class="pkg">GAP</strong> provides functions to construct domains with this structure (note that such functions do not exist for all operational structures). For example, <code class="func">Group</code> (<a shape="rect" href="chap39_mj.html#X7D8E473384DE9CD4"><span class="RefLink">39.2-1</span></a>) returns groups, <code class="func">VectorSpace</code> (<a shape="rect" href="chap61_mj.html#X805413157CE9BECF"><span class="RefLink">61.2-1</span></a>) returns vector spaces etc.:</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="code"><var class="Arg">Struct</var>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, ... )</code></p><p xmlns="http://www.w3.org/1999/xhtml">The syntax of these functions may vary, dependent on the structure in question. Usually a domain is constructed as the closure of some elements under the given operations, that is, the domain is given by its <em>generators</em>. For example, a group can be constructed from a list of generating permutations or matrices or whatever is admissible as group elements, and a vector space over a given field <math id="8818249489573103710" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -11,7 +11,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">F</annotation>
   </semantics>
-</math> can be constructed from <math id="-1378881125780780875" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> can be constructed from <math id="585988427605083150" display="inline" alttext="F" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

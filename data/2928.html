@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 39: Groups-&gt;39.3-5 IsSubgroup</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7839D8927E778334"></meta>
+        <title>GAP (ref) - Chapter 39: Groups &amp;#8614; 39.3-5 IsSubgroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39_mj.html#X7839D8927E778334"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.3-5 IsSubgroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsSubgroup</code>( <var class="Arg">G</var>, <var class="Arg">U</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><code class="code">IsSubgroup</code> returns <code class="keyw">true</code> if <var class="Arg">U</var> is a group that is a subset of the domain <var class="Arg">G</var>. This is actually checked by calling <code class="code">IsGroup( <var class="Arg">U</var> )</code> and <code class="code">IsSubset( <var class="Arg">G</var>, <var class="Arg">U</var> )</code>; note that special methods for <code class="func">IsSubset</code> (<a shape="rect" href="chap30_mj.html#X79CA175481F8105F"><span class="RefLink">30.5-1</span></a>) are available that test only generators of <var class="Arg">U</var> if <var class="Arg">G</var> is closed under the group operations. So in most cases, for example whenever one knows already that <var class="Arg">U</var> is a group, it is better to call only <code class="func">IsSubset</code> (<a shape="rect" href="chap30_mj.html#X79CA175481F8105F"><span class="RefLink">30.5-1</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSubgroup(g,u);</span>

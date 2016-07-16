@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 13: Types of Objects-&gt;13.7 Properties</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap13.html#X871597447BB998A1"></meta>
+        <title>GAP (ref) - Chapter 13: Types of Objects &amp;#8614; 13.7 Properties</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap13_mj.html#X871597447BB998A1"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">13.7 <span class="Heading">Properties</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The properties of an object are those of its attributes (see <a shape="rect" href="chap13_mj.html#X7C701DBF7BAE649A"><span class="RefLink">13.5</span></a>) whose values can only be <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The main difference between attributes and properties is that a property defines two sets of objects, namely the usual set of all objects for which the value is known, and the set of all objects for which the value is known to be <code class="keyw">true</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">(Note that it makes no sense to consider a third set, namely the set of objects for which the value of a property is <code class="keyw">true</code> whether or not it is known, since there may be objects for which the containment in this set cannot be decided.)</p><p xmlns="http://www.w3.org/1999/xhtml">For a property <var class="Arg">prop</var>, the containment of an object <var class="Arg">obj</var> in the first set is checked again by applying <code class="code">Tester( <var class="Arg">prop</var> )</code> to <var class="Arg">obj</var>, and <var class="Arg">obj</var> lies in the second set if and only if <code class="code">Tester( <var class="Arg">prop</var> )( <var class="Arg">obj</var> ) and <var class="Arg">prop</var>( <var class="Arg">obj</var> )</code> is <code class="keyw">true</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If a property value is known for an immutable object then this value is also stored, as part of the type of the object. To some extent, property values of mutable objects also can be stored, for example a mutable list all of whose entries are immutable can store whether it is strictly sorted. When the object is mutated (for example by list assignment) the type may need to be adjusted.</p><p xmlns="http://www.w3.org/1999/xhtml">Important properties for domains are <code class="func">IsAssociative</code> (<a shape="rect" href="chap35_mj.html#X7C83B5A47FD18FB7"><span class="RefLink">35.4-7</span></a>), <code class="func">IsCommutative</code> (<a shape="rect" href="chap35_mj.html#X830A4A4C795FBC2D"><span class="RefLink">35.4-9</span></a>), <code class="func">IsAnticommutative</code> (<a shape="rect" href="chap56_mj.html#X82DECD237D49D937"><span class="RefLink">56.4-6</span></a>), <code class="func">IsLDistributive</code> (<a shape="rect" href="chap56_mj.html#X7D4BB44187C55BF2"><span class="RefLink">56.4-3</span></a>) and <code class="func">IsRDistributive</code> (<a shape="rect" href="chap56_mj.html#X79A5AEE786AED315"><span class="RefLink">56.4-4</span></a>), which mean that the multiplication of elements in the domain satisfies <math id="7427598134876613953" display="inline" alttext="(a*b)*c=a*(b*c)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">13.7 <span class="Heading">Properties</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The properties of an object are those of its attributes (see <a shape="rect" href="chap13_mj.html#X7C701DBF7BAE649A"><span class="RefLink">13.5</span></a>) whose values can only be <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The main difference between attributes and properties is that a property defines two sets of objects, namely the usual set of all objects for which the value is known, and the set of all objects for which the value is known to be <code class="keyw">true</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">(Note that it makes no sense to consider a third set, namely the set of objects for which the value of a property is <code class="keyw">true</code> whether or not it is known, since there may be objects for which the containment in this set cannot be decided.)</p><p xmlns="http://www.w3.org/1999/xhtml">For a property <var class="Arg">prop</var>, the containment of an object <var class="Arg">obj</var> in the first set is checked again by applying <code class="code">Tester( <var class="Arg">prop</var> )</code> to <var class="Arg">obj</var>, and <var class="Arg">obj</var> lies in the second set if and only if <code class="code">Tester( <var class="Arg">prop</var> )( <var class="Arg">obj</var> ) and <var class="Arg">prop</var>( <var class="Arg">obj</var> )</code> is <code class="keyw">true</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If a property value is known for an immutable object then this value is also stored, as part of the type of the object. To some extent, property values of mutable objects also can be stored, for example a mutable list all of whose entries are immutable can store whether it is strictly sorted. When the object is mutated (for example by list assignment) the type may need to be adjusted.</p><p xmlns="http://www.w3.org/1999/xhtml">Important properties for domains are <code class="func">IsAssociative</code> (<a shape="rect" href="chap35_mj.html#X7C83B5A47FD18FB7"><span class="RefLink">35.4-7</span></a>), <code class="func">IsCommutative</code> (<a shape="rect" href="chap35_mj.html#X830A4A4C795FBC2D"><span class="RefLink">35.4-9</span></a>), <code class="func">IsAnticommutative</code> (<a shape="rect" href="chap56_mj.html#X82DECD237D49D937"><span class="RefLink">56.4-6</span></a>), <code class="func">IsLDistributive</code> (<a shape="rect" href="chap56_mj.html#X7D4BB44187C55BF2"><span class="RefLink">56.4-3</span></a>) and <code class="func">IsRDistributive</code> (<a shape="rect" href="chap56_mj.html#X79A5AEE786AED315"><span class="RefLink">56.4-4</span></a>), which mean that the multiplication of elements in the domain satisfies <math id="-219744312014476682" display="inline" alttext="(a*b)*c=a*(b*c)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
       <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">
@@ -59,7 +59,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(a*b)*c=a*(b*c)</annotation>
   </semantics>
-</math>, <math id="-48016567875588454" display="inline" alttext="a*b=b*a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="3740063414727183182" display="inline" alttext="a*b=b*a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
@@ -91,7 +91,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a*b=b*a</annotation>
   </semantics>
-</math>, <math id="-1361439993725868586" display="inline" alttext="a*b=-(b*a)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="-1097982295752023002" display="inline" alttext="a*b=-(b*a)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">
       <mrow xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">
@@ -133,7 +133,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a*b=-(b*a)</annotation>
   </semantics>
-</math>, <math id="-4904737813503965004" display="inline" alttext="a*(b+c)=a*b+a*c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="-3439331728585570901" display="inline" alttext="a*(b+c)=a*b+a*c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
       <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">
@@ -193,7 +193,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a*(b+c)=a*b+a*c</annotation>
   </semantics>
-</math>, and <math id="2956367490414538917" display="inline" alttext="(a+b)*c=a*c+b*c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and <math id="3859959741046417639" display="inline" alttext="(a+b)*c=a*c+b*c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
       <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">
@@ -253,7 +253,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(a+b)*c=a*c+b*c</annotation>
   </semantics>
-</math>, respectively, for all <math id="6505861470021894791" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, respectively, for all <math id="1476723523790073756" display="inline" alttext="a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -261,7 +261,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">a</annotation>
   </semantics>
-</math>, <math id="-1198302366461808643" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="5511818424912501489" display="inline" alttext="b" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">b</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -269,7 +269,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">b</annotation>
   </semantics>
-</math>, <math id="-3643680289390113189" display="inline" alttext="c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="-7938164135037875328" display="inline" alttext="c" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">c</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 80: Examples of Extending the System-&gt;80.3 Enforcing Property Tests</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap80.html#X7D880DB779EBA8D5"></meta>
+        <title>GAP (ref) - Chapter 80: Examples of Extending the System &amp;#8614; 80.3 Enforcing Property Tests</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap80_mj.html#X7D880DB779EBA8D5"></meta>
       </head>
       <body> <h4 xmlns="http://www.w3.org/1999/xhtml">80.3 <span class="Heading">Enforcing Property Tests</span></h4><p xmlns="http://www.w3.org/1999/xhtml">As mentioned in Section <a shape="rect" href="chap78_mj.html#X851FC6387CA2B241"><span class="RefLink">78.3</span></a>, <strong class="pkg">GAP</strong> does not check unknown properties to test whether a method might be applicable. In some cases one wants to enforce this, however, because the gain from knowing the property outweighs the cost of its determination.</p><p xmlns="http://www.w3.org/1999/xhtml">In this situation one has to install a method <em>without</em> the additional property (so it can be tried even if the property is not yet known) and at high rank (so it will be used before other methods). The first thing to do in the actual function then is to test the property and to bail out with <code class="func">TryNextMethod</code> (<a shape="rect" href="chap78_mj.html#X7EED949B83046A7F"><span class="RefLink">78.4-1</span></a>) if it turns out to be <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">The above <code class="func">Exponent</code> (<a shape="rect" href="chap39_mj.html#X7D44470C7DA59C1C"><span class="RefLink">39.16-2</span></a>) example thus would become:</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 InstallMethod(Exponent,&quot;test abelianity&quot;, [IsGroup],

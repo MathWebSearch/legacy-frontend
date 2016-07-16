@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.7-4 FusionsAllowedByRestrictions</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X85024BAE8585DB1C"></meta>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables &amp;#8614; 73.7-4 FusionsAllowedByRestrictions</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73_mj.html#X85024BAE8585DB1C"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.7-4 FusionsAllowedByRestrictions</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FusionsAllowedByRestrictions</code>( <var class="Arg">subtbl</var>, <var class="Arg">tbl</var>, <var class="Arg">subchars</var>, <var class="Arg">chars</var>, <var class="Arg">approxmap</var>, <var class="Arg">parameters</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">subtbl</var> and <var class="Arg">tbl</var> be ordinary character tables, <var class="Arg">subchars</var> and <var class="Arg">chars</var> two lists of (values lists of) characters of <var class="Arg">subtbl</var> and <var class="Arg">tbl</var>, respectively, <var class="Arg">approxmap</var> a parametrized map that is an approximation of the class fusion of <var class="Arg">subtbl</var> in <var class="Arg">tbl</var>, and <var class="Arg">parameters</var> a record with components <code class="code">maxlen</code>, <code class="code">minamb</code>, <code class="code">maxamb</code> (three integers), <code class="code">quick</code> (a Boolean), and <code class="code">contained</code> (a function). Usual values of <code class="code">contained</code> are <code class="func">ContainedCharacters</code> (<a shape="rect" href="chap73_mj.html#X81F1137A874EB962"><span class="RefLink">73.5-17</span></a>) or <code class="func">ContainedPossibleCharacters</code> (<a shape="rect" href="chap73_mj.html#X7F957B1481E10A0C"><span class="RefLink">73.5-15</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">FusionsAllowedByRestrictions</code> replaces the entries of <var class="Arg">approxmap</var> by improved values, according to condition 5. listed in the description of <code class="func">PossibleClassFusions</code> (<a shape="rect" href="chap73_mj.html#X7883271F7F26356E"><span class="RefLink">73.3-6</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">More precisely, the strategy used is as follows.</p><p xmlns="http://www.w3.org/1999/xhtml">First, for each <math id="6826994194458336723" display="inline" alttext="\chi\in\textit{chars}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.7-4 FusionsAllowedByRestrictions</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ FusionsAllowedByRestrictions</code>( <var class="Arg">subtbl</var>, <var class="Arg">tbl</var>, <var class="Arg">subchars</var>, <var class="Arg">chars</var>, <var class="Arg">approxmap</var>, <var class="Arg">parameters</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Let <var class="Arg">subtbl</var> and <var class="Arg">tbl</var> be ordinary character tables, <var class="Arg">subchars</var> and <var class="Arg">chars</var> two lists of (values lists of) characters of <var class="Arg">subtbl</var> and <var class="Arg">tbl</var>, respectively, <var class="Arg">approxmap</var> a parametrized map that is an approximation of the class fusion of <var class="Arg">subtbl</var> in <var class="Arg">tbl</var>, and <var class="Arg">parameters</var> a record with components <code class="code">maxlen</code>, <code class="code">minamb</code>, <code class="code">maxamb</code> (three integers), <code class="code">quick</code> (a Boolean), and <code class="code">contained</code> (a function). Usual values of <code class="code">contained</code> are <code class="func">ContainedCharacters</code> (<a shape="rect" href="chap73_mj.html#X81F1137A874EB962"><span class="RefLink">73.5-17</span></a>) or <code class="func">ContainedPossibleCharacters</code> (<a shape="rect" href="chap73_mj.html#X7F957B1481E10A0C"><span class="RefLink">73.5-15</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">FusionsAllowedByRestrictions</code> replaces the entries of <var class="Arg">approxmap</var> by improved values, according to condition 5. listed in the description of <code class="func">PossibleClassFusions</code> (<a shape="rect" href="chap73_mj.html#X7883271F7F26356E"><span class="RefLink">73.3-6</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">More precisely, the strategy used is as follows.</p><p xmlns="http://www.w3.org/1999/xhtml">First, for each <math id="312054764610441302" display="inline" alttext="\chi\in\textit{chars}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
@@ -21,7 +21,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi\in\textit{chars}</annotation>
   </semantics>
-</math>, let <code class="code">restricted:= CompositionMaps( </code><math id="1154399663933463489" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, let <code class="code">restricted:= CompositionMaps( </code><math id="-6752287317763336702" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -29,7 +29,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\chi</annotation>
   </semantics>
-</math><code class="code">, <var class="Arg">approxmap</var> )</code>.</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>If <code class="code">Indeterminateness( restricted )</code><math id="8386014747054558572" display="inline" alttext="=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">, <var class="Arg">approxmap</var> )</code>.</p><ul xmlns="http://www.w3.org/1999/xhtml"><li><p>If <code class="code">Indeterminateness( restricted )</code><math id="672969809602809147" display="inline" alttext="=1" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
@@ -45,7 +45,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">=1</annotation>
   </semantics>
-</math> and <code class="code"><var class="Arg">parameters</var>.quick = false</code> then the scalar products of <code class="code">restricted</code> with <var class="Arg">subchars</var> are checked; if not all scalar products are nonnegative integers then an empty list is returned, otherwise <math id="-2155452371639439695" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <code class="code"><var class="Arg">parameters</var>.quick = false</code> then the scalar products of <code class="code">restricted</code> with <var class="Arg">subchars</var> are checked; if not all scalar products are nonnegative integers then an empty list is returned, otherwise <math id="-5771336626057357574" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -55,7 +55,7 @@
   </semantics>
 </math> is deleted from the list of characters to inspect.</p>
 
-</li><li><p>Otherwise if <code class="code">Indeterminateness( minus )</code> is smaller than <code class="code"><var class="Arg">parameters</var>.minamb</code> then <math id="7542213795378792054" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</li><li><p>Otherwise if <code class="code">Indeterminateness( minus )</code> is smaller than <code class="code"><var class="Arg">parameters</var>.minamb</code> then <math id="5157138393167502681" display="inline" alttext="\chi" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">χ</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -65,7 +65,7 @@
   </semantics>
 </math> is deleted from the list of characters.</p>
 
-</li><li><p>If <code class="code"><var class="Arg">parameters</var>.minamb</code> <math id="-710837190132247154" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</li><li><p>If <code class="code"><var class="Arg">parameters</var>.minamb</code> <math id="-3214003633827089327" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -73,7 +73,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">\leq</annotation>
   </semantics>
-</math> <code class="code">Indeterminateness( restricted )</code> <math id="-1974117652017594243" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> <code class="code">Indeterminateness( restricted )</code> <math id="8250227295574464592" display="inline" alttext="\leq" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">≤</mo>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -83,7 +83,7 @@
   </semantics>
 </math> <code class="code"><var class="Arg">parameters</var>.maxamb</code> then construct <code class="code">poss:= <var class="Arg">parameters</var>.contained( <var class="Arg">subtbl</var>, <var class="Arg">subchars</var>, restricted )</code> and <code class="code">Parametrized( poss )</code>, and improve the approximation of the fusion map using <code class="func">UpdateMap</code> (<a shape="rect" href="chap73_mj.html#X80C7328C85BFC20B"><span class="RefLink">73.5-7</span></a>).</p>
 
-</li></ul><p xmlns="http://www.w3.org/1999/xhtml">If this yields no further immediate improvements then we branch. If there is a character from <var class="Arg">chars</var> left with less or equal <var class="Arg">parameters</var><code class="code">.maxlen</code> possible restrictions, compute the union of fusion maps allowed by these possibilities. Otherwise we choose a class <math id="-5764066484032585154" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</li></ul><p xmlns="http://www.w3.org/1999/xhtml">If this yields no further immediate improvements then we branch. If there is a character from <var class="Arg">chars</var> left with less or equal <var class="Arg">parameters</var><code class="code">.maxlen</code> possible restrictions, compute the union of fusion maps allowed by these possibilities. Otherwise we choose a class <math id="7254033365381750539" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -91,7 +91,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math> such that the possible restrictions of a character in <var class="Arg">chars</var> differ at <math id="5332095505570305777" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> such that the possible restrictions of a character in <var class="Arg">chars</var> differ at <math id="-4384513375092632146" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -99,7 +99,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
   </semantics>
-</math>, and compute recursively the union of all allowed fusion maps with image at <math id="4361951382096775019" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, and compute recursively the union of all allowed fusion maps with image at <math id="-6810608697862211140" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">

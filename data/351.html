@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 38: Rewriting Systems-&gt;38.5 Developing rewriting systems</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap38.html#X8751F8FA7DC989A2"></meta>
+        <title>GAP (ref) - Chapter 38: Rewriting Systems &amp;#8614; 38.5 Developing rewriting systems</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap38_mj.html#X8751F8FA7DC989A2"></meta>
       </head>
       <body> <h4 xmlns="http://www.w3.org/1999/xhtml">38.5 <span class="Heading">Developing rewriting systems</span></h4><p xmlns="http://www.w3.org/1999/xhtml">The key point to note about rewriting systems is that they have properties such as <code class="func">IsConfluent</code> (<a shape="rect" href="chap38_mj.html#X8006790B86328CE8"><span class="RefLink">38.1-5</span></a>) and attributes such as <code class="func">Rules</code> (<a shape="rect" href="chap38_mj.html#X833EAA8C86356F42"><span class="RefLink">38.1-2</span></a>), however they are rarely stored, but rather computed afresh each time they are asked for, from data stored in the private members of the rewriting system object. This is because a rewriting system often evolves through a session, starting with some rules which define the algebra <var class="Arg">A</var> as relations, and then adding more rules to make the system confluent. For example, in the case of Knuth-Bendix rewriting systems (see Chapter <a shape="rect" href="chap52_mj.html#X7DE7C52A7C4BDADE"><span class="RefLink">52</span></a>), the function <code class="code">CreateKnuthBendixRewritingSystem</code> creating the rewriting system (in the file <code class="file">lib/kbsemi.gi</code>) uses</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 kbrws := Objectify(NewType(rwsfam, 

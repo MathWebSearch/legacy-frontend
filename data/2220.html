@@ -1,11 +1,11 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 70: Tables of Marks-&gt;70.4-3 Display</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70.html#X821F9438839F445D"></meta>
+        <title>GAP (ref) - Chapter 70: Tables of Marks &amp;#8614; 70.4-3 Display</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap70_mj.html#X821F9438839F445D"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">70.4-3 Display</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Display</code>( <var class="Arg">tom</var>[, <var class="Arg">arec</var>] )</td><td colspan="1" rowspan="1" class="tdright">( method )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">The default <code class="func">Display</code> (<a shape="rect" href="chap6_mj.html#X83A5C59278E13248"><span class="RefLink">6.3-6</span></a>) method for a table of marks <var class="Arg">tom</var> produces a formatted output of the marks in <var class="Arg">tom</var>. Each line of output begins with the number of the corresponding class of subgroups. This number is repeated if the output spreads over several pages. The number of columns printed at one time depends on the actual line length, which can be accessed and changed by the function <code class="func">SizeScreen</code> (<a shape="rect" href="chap6_mj.html#X8723E0A1837894F3"><span class="RefLink">6.12-1</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">An interactive variant of <code class="func">Display</code> (<a shape="rect" href="chap6_mj.html#X83A5C59278E13248"><span class="RefLink">6.3-6</span></a>) is the <code class="func">Browse</code> (<a shape="rect" href="../../pkg/Browse/doc/chap6.html#X7FDD696B7DD54A6E"><span class="RefLink">Browse: Browse</span></a>) method for tables of marks that is provided by the <strong class="pkg">GAP</strong> package <strong class="pkg">Browse</strong>, see <code class="func">Browse</code> (<a shape="rect" href="../../pkg/Browse/doc/chap6.html#X7F4BD9C580BBBAA4"><span class="RefLink">Browse: Browse (for tables of marks)</span></a>).</p><p xmlns="http://www.w3.org/1999/xhtml">The optional second argument <var class="Arg">arec</var> of <code class="func">Display</code> (<a shape="rect" href="chap6_mj.html#X83A5C59278E13248"><span class="RefLink">6.3-6</span></a>) can be used to change the default style for displaying a table of marks. <var class="Arg">arec</var> must be a record, its relevant components are the following.</p><dl xmlns="http://www.w3.org/1999/xhtml"><dt><strong class="Mark"><code class="code">classes</code></strong></dt><dd><p>a list of class numbers to select only the rows and columns of the matrix that correspond to this list for printing,</p>
 
-</dd><dt><strong class="Mark"><code class="code">form</code></strong></dt><dd><p>one of the strings <code class="code">&quot;subgroups&quot;</code>, <code class="code">&quot;supergroups&quot;</code>; in the former case, at position <math id="-5212259048506460347" display="inline" alttext="(i,j)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</dd><dt><strong class="Mark"><code class="code">form</code></strong></dt><dd><p>one of the strings <code class="code">&quot;subgroups&quot;</code>, <code class="code">&quot;supergroups&quot;</code>; in the former case, at position <math id="6154021696887548913" display="inline" alttext="(i,j)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -22,7 +22,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(i,j)</annotation>
   </semantics>
-</math> of the matrix the number of conjugates of <math id="-6371084679377210148" display="inline" alttext="H_{j}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> of the matrix the number of conjugates of <math id="7197908921107103521" display="inline" alttext="H_{j}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
@@ -37,7 +37,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">H_{j}</annotation>
   </semantics>
-</math> contained in <math id="2719608463119226856" display="inline" alttext="H_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> contained in <math id="-7265277046969429452" display="inline" alttext="H_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
@@ -52,7 +52,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">H_{i}</annotation>
   </semantics>
-</math> is printed, and in the latter case, at position <math id="-1837303217541790650" display="inline" alttext="(i,j)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is printed, and in the latter case, at position <math id="-5633485927468821845" display="inline" alttext="(i,j)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
@@ -69,7 +69,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">(i,j)</annotation>
   </semantics>
-</math> the number of conjugates of <math id="7819246614392888556" display="inline" alttext="H_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> the number of conjugates of <math id="7002870260647010513" display="inline" alttext="H_{i}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
@@ -84,7 +84,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">H_{i}</annotation>
   </semantics>
-</math> which contain <math id="2210697705246877214" display="inline" alttext="H_{j}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> which contain <math id="3628959892343330316" display="inline" alttext="H_{j}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <msub xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>

@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains-&gt;87.3-3 Making automorphisms act on such enumerators</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87.html#X79B146E9786FE153"></meta>
+        <title>GAP (ref) - Chapter 87: More about Stabilizer Chains &amp;#8614; 87.3-3 Making automorphisms act on such enumerators</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap87_mj.html#X79B146E9786FE153"></meta>
       </head>
-      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">87.3-3 <span class="Heading">Making automorphisms act on such enumerators</span></h5><p xmlns="http://www.w3.org/1999/xhtml">Our next task is to make automorphisms of the solvable group <math id="-6820866924894469200" display="inline" alttext="pcgs" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h5 xmlns="http://www.w3.org/1999/xhtml">87.3-3 <span class="Heading">Making automorphisms act on such enumerators</span></h5><p xmlns="http://www.w3.org/1999/xhtml">Our next task is to make automorphisms of the solvable group <math id="6983391391958090943" display="inline" alttext="pcgs" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">p</mi>
@@ -25,7 +25,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">pcgs</annotation>
   </semantics>
-</math><code class="code">!.group</code> act on <math id="7480190745510562355" display="inline" alttext="[1.." class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">!.group</code> act on <math id="5822784758923669065" display="inline" alttext="[1.." class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -44,7 +44,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1f" encoding="application/x-tex">[1..</annotation>
   </semantics>
-</math><code class="code">Length</code><math id="8643851875293780564" display="inline" alttext="(enum)]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math><code class="code">Length</code><math id="-6164898538215700938" display="inline" alttext="(enum)]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow id="p1.1.m1.1b">
       <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
@@ -74,7 +74,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1f" encoding="application/x-tex">(enum)]</annotation>
   </semantics>
-</math> for such an enumerator <math id="655129204336886521" display="inline" alttext="enum" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> for such an enumerator <math id="-3658145190895831990" display="inline" alttext="enum" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">e</mi>
@@ -140,7 +140,7 @@ InstallMethod( \^,
     return PositionCanonical( Enumerator( a ),
                    Enumerator( a )[ p ] ^ a!.perm );
 end );
-</pre></div><p xmlns="http://www.w3.org/1999/xhtml">How the corresponding methods for <code class="code"><var class="Arg">p</var> / <var class="Arg">aut</var></code> and <code class="code"><var class="Arg">aut</var> ^ <var class="Arg">n</var></code> look like is obvious.</p><p xmlns="http://www.w3.org/1999/xhtml">Now we can formulate the recursive procedure <code class="code">StabChainStrong</code> which extends the stabilizer chain by adding in new generators <math id="-4860989988597646942" display="inline" alttext="newgens" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</pre></div><p xmlns="http://www.w3.org/1999/xhtml">How the corresponding methods for <code class="code"><var class="Arg">p</var> / <var class="Arg">aut</var></code> and <code class="code"><var class="Arg">aut</var> ^ <var class="Arg">n</var></code> look like is obvious.</p><p xmlns="http://www.w3.org/1999/xhtml">Now we can formulate the recursive procedure <code class="code">StabChainStrong</code> which extends the stabilizer chain by adding in new generators <math id="8397874442296109876" display="inline" alttext="newgens" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
       <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">n</mi>
@@ -171,7 +171,7 @@ end );
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">newgens</annotation>
   </semantics>
-</math>. We content ourselves again with pseudo-code, emphasizing only the lines which set the <code class="code">EnumeratorDomainPermutation</code>. We assume that initially <math id="5406640912668194043" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. We content ourselves again with pseudo-code, emphasizing only the lines which set the <code class="code">EnumeratorDomainPermutation</code>. We assume that initially <math id="-2263825087305683919" display="inline" alttext="S" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">S</mi>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -179,7 +179,7 @@ end );
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">S</annotation>
   </semantics>
-</math> is a stabilizer chain for the trivial subgroup with a level for each pair <math id="-2485085745229136400" display="inline" alttext="(range,g)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is a stabilizer chain for the trivial subgroup with a level for each pair <math id="6209174601734668230" display="inline" alttext="(range,g)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10">
       <mo id="p1.1.m1.1.1" stretchy="false">(</mo>

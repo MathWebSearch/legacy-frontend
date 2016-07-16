@@ -1,9 +1,9 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 81: An Example – Residue Class Rings-&gt;81.2 Why Proceed in a Different Way?</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap81.html#X78B6425787FDB0E5"></meta>
+        <title>GAP (ref) - Chapter 81: An Example – Residue Class Rings &amp;#8614; 81.2 Why Proceed in a Different Way?</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap81_mj.html#X78B6425787FDB0E5"></meta>
       </head>
-      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">81.2 <span class="Heading">Why Proceed in a Different Way?</span></h4><p xmlns="http://www.w3.org/1999/xhtml">It depends on the computations we intended to do with residue classes whether or not the implementation described in the previous section is satisfactory for us.</p><p xmlns="http://www.w3.org/1999/xhtml">Probably we are mainly interested in more complex data structures than the residue classes themselves, for example in matrix algebras or matrix groups over a ring such as <math id="-1120208497999955956" display="inline" alttext="?/4?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+      <body> <h4 xmlns="http://www.w3.org/1999/xhtml">81.2 <span class="Heading">Why Proceed in a Different Way?</span></h4><p xmlns="http://www.w3.org/1999/xhtml">It depends on the computations we intended to do with residue classes whether or not the implementation described in the previous section is satisfactory for us.</p><p xmlns="http://www.w3.org/1999/xhtml">Probably we are mainly interested in more complex data structures than the residue classes themselves, for example in matrix algebras or matrix groups over a ring such as <math id="-3344775080404455862" display="inline" alttext="?/4?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -27,7 +27,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/4?</annotation>
   </semantics>
-</math>. For this, we need functions to add, multiply, invert etc. matrices of residue classes. Of course this is not a difficult task, but it requires to write additional <strong class="pkg">GAP</strong> code.</p><p xmlns="http://www.w3.org/1999/xhtml">And when we have implemented the arithmetic operations for matrices of residue classes, we might be interested in domain operations such as computing the order of a matrix group over <math id="-1344387844799641483" display="inline" alttext="?/4?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>. For this, we need functions to add, multiply, invert etc. matrices of residue classes. Of course this is not a difficult task, but it requires to write additional <strong class="pkg">GAP</strong> code.</p><p xmlns="http://www.w3.org/1999/xhtml">And when we have implemented the arithmetic operations for matrices of residue classes, we might be interested in domain operations such as computing the order of a matrix group over <math id="8088254883932680308" display="inline" alttext="?/4?" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
       <mrow xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
@@ -51,7 +51,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">?/4?</annotation>
   </semantics>
-</math>, a Sylow <math id="-8612720041517982089" display="inline" alttext="2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, a Sylow <math id="4668958409939336394" display="inline" alttext="2" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mn xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">2</mn>
     <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
@@ -59,7 +59,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">2</annotation>
   </semantics>
-</math> subgroup, and so on. The problem is that a residue class represented as a pair <math id="-7284805069889136904" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> subgroup, and so on. The problem is that a residue class represented as a pair <math id="-428440720142812011" display="inline" alttext="[k,n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -76,7 +76,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k,n]</annotation>
   </semantics>
-</math> is not regarded as a group element by <strong class="pkg">GAP</strong>. We have not yet discussed how a matrix of residue classes shall be represented, but if we choose the obvious representation of a list of lists of our residue classes then also this is not a valid group element in <strong class="pkg">GAP</strong>. Hence we cannot apply the function <code class="func">Group</code> (<a shape="rect" href="chap39_mj.html#X7D8E473384DE9CD4"><span class="RefLink">39.2-1</span></a>) to create a group of residue classes or a group of matrices of residue classes. This is because <strong class="pkg">GAP</strong> assumes that group elements can be multiplied via the infix operator <code class="code">*</code> (equivalently, via the operation <code class="func">\*</code> (<a shape="rect" href="chap31_mj.html#X8481C9B97B214C23"><span class="RefLink">31.12-1</span></a>)). Note that in fact the multiplication of two lists <math id="2137653501878014334" display="inline" alttext="[k_{1},n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is not regarded as a group element by <strong class="pkg">GAP</strong>. We have not yet discussed how a matrix of residue classes shall be represented, but if we choose the obvious representation of a list of lists of our residue classes then also this is not a valid group element in <strong class="pkg">GAP</strong>. Hence we cannot apply the function <code class="func">Group</code> (<a shape="rect" href="chap39_mj.html#X7D8E473384DE9CD4"><span class="RefLink">39.2-1</span></a>) to create a group of residue classes or a group of matrices of residue classes. This is because <strong class="pkg">GAP</strong> assumes that group elements can be multiplied via the infix operator <code class="code">*</code> (equivalently, via the operation <code class="func">\*</code> (<a shape="rect" href="chap31_mj.html#X8481C9B97B214C23"><span class="RefLink">31.12-1</span></a>)). Note that in fact the multiplication of two lists <math id="3263222114553539899" display="inline" alttext="[k_{1},n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -100,7 +100,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k_{1},n]</annotation>
   </semantics>
-</math>, <math id="-2983051125830171305" display="inline" alttext="[k_{2},n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math>, <math id="-3216998709191996400" display="inline" alttext="[k_{2},n]" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
       <mo id="p1.1.m1.1.1" stretchy="false">[</mo>
@@ -124,7 +124,7 @@
     </annotation-xml>
     <annotation id="p1.1.m1.1c" encoding="application/x-tex">[k_{2},n]</annotation>
   </semantics>
-</math> is defined, but we have <math id="5328119427204086674" display="inline" alttext="[k_{1},n]*[k_{2},n]=k_{1}*k_{2}+n*n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+</math> is defined, but we have <math id="-1458622790543530941" display="inline" alttext="[k_{1},n]*[k_{2},n]=k_{1}*k_{2}+n*n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
   <semantics id="p1.1.m1.1a">
     <mrow xref="p1.1.m1.1.24.cmml" id="p1.1.m1.1.24">
       <mrow xref="p1.1.m1.1.24.1.cmml" id="p1.1.m1.1.24.1">

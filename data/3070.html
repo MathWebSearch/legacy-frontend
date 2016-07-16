@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations-&gt;48.1-6 SimplifiedFpGroup</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48.html#X7E1F2658827FC228"></meta>
+        <title>GAP (ref) - Chapter 48: Presentations and Tietze Transformations &amp;#8614; 48.1-6 SimplifiedFpGroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap48_mj.html#X7E1F2658827FC228"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">48.1-6 SimplifiedFpGroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SimplifiedFpGroup</code>( <var class="Arg">G</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">applies Tietze transformations to a copy of the presentation of the given finitely presented group <var class="Arg">G</var> in order to reduce it with respect to the number of generators, the number of relators, and the relator lengths.</p><p xmlns="http://www.w3.org/1999/xhtml"><code class="func">SimplifiedFpGroup</code> returns a group isomorphic to the given one with a presentation which has been tried to simplify via Tietze transformations.</p><p xmlns="http://www.w3.org/1999/xhtml">If the connection to the original group is important, then the operation <code class="func">IsomorphismSimplifiedFpGroup</code> (<a shape="rect" href="chap47_mj.html#X78D87FA68233C401"><span class="RefLink">47.12-1</span></a>) should be used instead.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">F6 := FreeGroup( 6, &quot;G&quot; );;</span>

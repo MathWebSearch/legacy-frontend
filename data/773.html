@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions-&gt;66.19-3 CoefficientsFamily</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66.html#X7AADCA45826866FB"></meta>
+        <title>GAP (ref) - Chapter 66: Polynomials and Rational Functions &amp;#8614; 66.19-3 CoefficientsFamily</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap66_mj.html#X7AADCA45826866FB"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">66.19-3 CoefficientsFamily</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ CoefficientsFamily</code>( <var class="Arg">rffam</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">rffam</var> has been created as <code class="code">RationalFunctionsFamily(<var class="Arg">cfam</var>)</code> this attribute holds the coefficients family <var class="Arg">cfam</var>.</p><p xmlns="http://www.w3.org/1999/xhtml"><strong class="pkg">GAP</strong> does <em>not</em> embed the base ring in the polynomial ring. While multiplication and addition of base ring elements to rational functions return the expected results, polynomials and rational functions are not equal.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">1=Indeterminate(Rationals)^0;</span>

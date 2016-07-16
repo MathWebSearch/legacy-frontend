@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 39: Groups-&gt;39.13-3 HallSubgroup</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39.html#X7EDBA19E828CD584"></meta>
+        <title>GAP (ref) - Chapter 39: Groups &amp;#8614; 39.13-3 HallSubgroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap39_mj.html#X7EDBA19E828CD584"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">39.13-3 HallSubgroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ HallSubgroup</code>( <var class="Arg">G</var>, <var class="Arg">P</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">computes a <var class="Arg">P</var>-Hall subgroup for a set <var class="Arg">P</var> of primes. This is a subgroup the order of which is only divisible by primes in <var class="Arg">P</var> and whose index is coprime to all primes in <var class="Arg">P</var>. Such a subgroup is unique up to conjugacy if <var class="Arg">G</var> is solvable. The function computes Hall subgroups via the operation <code class="code">HallSubgroupOp</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">G</var> is solvable this function always returns a subgroup. If <var class="Arg">G</var> is not solvable this function might return a subgroup (if it is unique up to conjugacy), a list of subgroups (which are representatives of the conjugacy classes in case there are several such classes) or <code class="keyw">fail</code> if no such subgroup exists.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">h:=SmallGroup(60,10);;</span>

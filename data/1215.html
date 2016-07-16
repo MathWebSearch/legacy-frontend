@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 53: Transformations-&gt;53.5-16 SmallestIdempotentPower</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53.html#X85FE9F20810BCC70"></meta>
+        <title>GAP (ref) - Chapter 53: Transformations &amp;#8614; 53.5-16 SmallestIdempotentPower</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap53_mj.html#X85FE9F20810BCC70"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">53.5-16 SmallestIdempotentPower</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ SmallestIdempotentPower</code>( <var class="Arg">f</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: A positive integer.</p><p xmlns="http://www.w3.org/1999/xhtml">This function returns the least positive integer <code class="code">n</code> such that the transformation <code class="code"><var class="Arg">f</var>^n</code> is an idempotent. The smallest idempotent power of <var class="Arg">f</var> is the least multiple of the period of <var class="Arg">f</var> that is greater than or equal to the index of <var class="Arg">f</var>; see <code class="func">IndexPeriodOfTransformation</code> (<a shape="rect" href="chap53_mj.html#X863216CB7AF88BED"><span class="RefLink">53.5-15</span></a>).</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=Transformation( [ 6, 7, 4, 1, 7, 4, 6, 1, 3, 4 ] );;</span>

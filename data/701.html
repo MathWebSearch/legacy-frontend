@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 51: Semigroups and Monoids-&gt;51.4-8 IsInverseSemigroup</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap51.html#X83F1529479D56665"></meta>
+        <title>GAP (ref) - Chapter 51: Semigroups and Monoids &amp;#8614; 51.4-8 IsInverseSemigroup</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap51_mj.html#X83F1529479D56665"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">51.4-8 IsInverseSemigroup</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsInverseSemigroup</code>( <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( property )</td></tr></tbody></table></div><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ IsInverseMonoid</code>( <var class="Arg">S</var> )</td><td colspan="1" rowspan="1" class="tdright">( category )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">Returns: <code class="keyw">true</code> or <code class="keyw">false</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">A semigroup is an <em>inverse semigroup</em> if every element <code class="code">x</code> has a unique semigroup inverse, that is, a unique element <code class="code">y</code> such that <code class="code">x*y*x=x</code> and <code class="code">y*x*y=y</code>.</p><p xmlns="http://www.w3.org/1999/xhtml">A monoid that happens to be an inverse semigroup is called an <em>inverse monoid</em>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=Semigroup( Transformation( [ 1, 2, 4, 5, 6, 3, 7, 8 ] ),</span>

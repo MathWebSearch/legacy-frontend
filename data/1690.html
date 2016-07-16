@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables-&gt;73.1-4 PowerMapByComposition</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73.html#X7C0F171F7DC846B7"></meta>
+        <title>GAP (ref) - Chapter 73: Maps Concerning Character Tables &amp;#8614; 73.1-4 PowerMapByComposition</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap73_mj.html#X7C0F171F7DC846B7"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">73.1-4 PowerMapByComposition</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ PowerMapByComposition</code>( <var class="Arg">tbl</var>, <var class="Arg">n</var> )</td><td colspan="1" rowspan="1" class="tdright">( function )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml"><var class="Arg">tbl</var> must be a nearly character table, and <var class="Arg">n</var> a positive integer. If the power maps for all prime divisors of <var class="Arg">n</var> are stored in the <code class="func">ComputedPowerMaps</code> (<a shape="rect" href="chap73_mj.html#X781FAA497E3B4D1A"><span class="RefLink">73.1-1</span></a>) list of <var class="Arg">tbl</var> then <code class="func">PowerMapByComposition</code> returns the <var class="Arg">n</var>-th power map of <var class="Arg">tbl</var>. Otherwise <code class="keyw">fail</code> is returned.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">tbl:= CharacterTable( &quot;U4(3).4&quot; );;  exp:= Exponent( tbl );</span>

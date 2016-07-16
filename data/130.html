@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 37: Associative Words-&gt;37.9-5 StretchImportantSLPElement</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37.html#X7D85D1DF84DC68E3"></meta>
+        <title>GAP (ref) - Chapter 37: Associative Words &amp;#8614; 37.9-5 StretchImportantSLPElement</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap37_mj.html#X7D85D1DF84DC68E3"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">37.9-5 StretchImportantSLPElement</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ StretchImportantSLPElement</code>( <var class="Arg">elm</var> )</td><td colspan="1" rowspan="1" class="tdright">( operation )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">If <var class="Arg">elm</var> is a straight line program element whose straight line representation is very long, this operation changes the representation of <var class="Arg">elm</var> to a straight line program element, equal to <var class="Arg">elm</var>, whose seed contains the evaluation of <var class="Arg">elm</var> and whose straight line program has length 1.</p><p xmlns="http://www.w3.org/1999/xhtml">For other objects nothing happens.</p><p xmlns="http://www.w3.org/1999/xhtml">This operation permits to designate &quot;important&quot; elements within an algorithm (elements that will be referred to often), which will be represented by guaranteed short straight line program elements.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens:=StraightLineProgGens([(1,2,3,4),(1,2)]);</span>

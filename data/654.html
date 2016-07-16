@@ -1,7 +1,7 @@
 <html> 
       <head>
-        <title>GAP (ref) - Chapter 72: Class Functions-&gt;72.4-3 Order</title>
-        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72.html#X7BCE99B88285EB39"></meta>
+        <title>GAP (ref) - Chapter 72: Class Functions &amp;#8614; 72.4-3 Order</title>
+        <meta name="url" content="http://www.gap-system.org/Manuals/doc/ref/chap72_mj.html#X7BCE99B88285EB39"></meta>
       </head>
       <body> <h5 xmlns="http://www.w3.org/1999/xhtml">72.4-3 Order</h5><div class="func" xmlns="http://www.w3.org/1999/xhtml"><table width="100%" class="func"><tbody><tr><td colspan="1" rowspan="1" class="tdleft"><code class="func">‣ Order</code>( <var class="Arg">chi</var> )</td><td colspan="1" rowspan="1" class="tdright">( attribute )</td></tr></tbody></table></div><p xmlns="http://www.w3.org/1999/xhtml">By definition of <code class="func">Order</code> (<a shape="rect" href="chap31_mj.html#X84F59A2687C62763"><span class="RefLink">31.10-10</span></a>) for arbitrary monoid elements, the return value of <code class="func">Order</code> (<a shape="rect" href="chap31_mj.html#X84F59A2687C62763"><span class="RefLink">31.10-10</span></a>) for a character must be its multiplicative order. The <em>determinantal order</em> (see <code class="func">DeterminantOfCharacter</code> (<a shape="rect" href="chap72_mj.html#X7A292A58827B95B8"><span class="RefLink">72.8-18</span></a>)) of a character <var class="Arg">chi</var> can be computed as <code class="code">Order( Determinant( <var class="Arg">chi</var> ) )</code>.</p><div class="example" xmlns="http://www.w3.org/1999/xhtml"><pre xml:space="preserve">
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">det:= Determinant( irr[3] );</span>
