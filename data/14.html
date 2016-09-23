@@ -1,0 +1,1075 @@
+<html> 
+      <head>
+        <title>Eilenberg-Moore category</title>
+        <meta name="url" content="https://ncatlab.org/nlab/show/Eilenberg-Moore+category#Definition"></meta>
+      </head>
+        <body> <h2 id="Definition" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Definition</h2>
+
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Let </p><math overflow="scroll" display="inline" class="maruku-mathml" xmlns="http://www.w3.org/1998/Math/MathML" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">η</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">μ</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="1357608542400835568" display="inline" alttext="(T,\eta,\mu)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">T</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">η</mi>
+      <mo id="p1.1.m1.1.5">,</mo>
+      <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">μ</mi>
+      <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <vector xref="p1.1.m1.1.8" id="p1.1.m1.1.8.1.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑇</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝜂</ci>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝜇</ci>
+      </vector>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(T,\eta,\mu)</annotation>
+  </semantics>
+</math></semantics></math><p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> be a <a shape="rect" href="/nlab/show/monad" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">monad</a> in <a shape="rect" href="/nlab/show/Cat" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">Cat</a>, where <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi></mrow><math id="2847556158605931348" display="inline" alttext="T\colon C\to C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">C</mi>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">→</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">C</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">→</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐶</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐶</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T\colon C\to C</annotation>
+  </semantics>
+</math></semantics></math> is an <a shape="rect" href="/nlab/show/endofunctor" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">endofunctor</a> with multiplication <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">μ</mi><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="953962636320242979" display="inline" alttext="\mu\colon TT\to T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">μ</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mrow xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">T</mi>
+          <mo xref="p1.1.m1.1.7.1.1.1.cmml" id="p1.1.m1.1.7.1.1.1">⁢</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">T</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">→</mo>
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">T</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜇</ci>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">→</ci>
+          <apply xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml">
+            <times xref="p1.1.m1.1.7.1.1.1" id="p1.1.m1.1.7.1.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑇</ci>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑇</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑇</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\mu\colon TT\to T</annotation>
+  </semantics>
+</math></semantics></math> and unit <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">η</mi><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Id</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi></msub><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="-6931476430383854890" display="inline" alttext="\eta\colon Id_{C}\to T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">η</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mrow xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">I</mi>
+          <mo xref="p1.1.m1.1.8.1.1.1.cmml" id="p1.1.m1.1.8.1.1.1">⁢</mo>
+          <msub xref="p1.1.m1.1.8.1.1.2.cmml" id="p1.1.m1.1.8.1.1.2">
+            <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">d</mi>
+            <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">C</mi>
+          </msub>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">→</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">T</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜂</ci>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">→</ci>
+          <apply xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml">
+            <times xref="p1.1.m1.1.8.1.1.1" id="p1.1.m1.1.8.1.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐼</ci>
+            <apply xref="p1.1.m1.1.8.1.1.2" id="p1.1.m1.1.8.1.1.2.cmml">
+              <csymbol id="p1.1.m1.1.8.1.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑑</ci>
+              <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝐶</ci>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑇</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\eta\colon Id_{C}\to T</annotation>
+  </semantics>
+</math></semantics></math>.</p>
+
+<div class="num_defn" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<h6 id="definition_2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">Definition</h6>
+
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">A (left) <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="-3036796346840385252" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math></semantics></math>-<a shape="rect" href="/nlab/show/module+over+a+monad" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">module</a> (or <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="8821391446593283415" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math></semantics></math>-algebra) in <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi></mrow><math id="1905511711650774689" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
+  </semantics>
+</math></semantics></math> is a pair <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">A</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ν</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="4949949993102384948" display="inline" alttext="(A,\nu)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">A</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">ν</mi>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="open">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐴</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝜈</ci>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(A,\nu)</annotation>
+  </semantics>
+</math></semantics></math> of an object <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">A</mi></mrow><math id="2958312410588398467" display="inline" alttext="A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">A</annotation>
+  </semantics>
+</math></semantics></math> in <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi></mrow><math id="-4193907179599809567" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
+  </semantics>
+</math></semantics></math> and a morphism <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ν</mi><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">A</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">A</mi></mrow><math id="5970138716200401109" display="inline" alttext="\nu\colon T(A)\to A" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">
+        <mrow xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">T</mi>
+          <mo xref="p1.1.m1.1.9.1.1.1.cmml" id="p1.1.m1.1.9.1.1.1">⁢</mo>
+          <mrow id="p1.1.m1.1.9.1.1.2">
+            <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">A</mi>
+            <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+        <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">→</mo>
+        <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">A</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+        <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">→</ci>
+          <apply xref="p1.1.m1.1.9.1.1" id="p1.1.m1.1.9.1.1.cmml">
+            <times xref="p1.1.m1.1.9.1.1.1" id="p1.1.m1.1.9.1.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑇</ci>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐴</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝐴</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\nu\colon T(A)\to A</annotation>
+  </semantics>
+</math></semantics></math> which is a <strong xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="5990637890939053521" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math></semantics></math>-<a shape="rect" href="/nlab/show/action" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">action</a></strong>, in that</p>
+<div class="maruku-equation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ν</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∘</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ν</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">=</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ν</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∘</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">μ</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">M</mi></msub><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">M</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">M</mi></mrow><math id="9172897040137436252" display="inline" alttext="\par
+\nu\circ T(\nu)=\nu\circ\mu_{M}\colon T(T(M))\to M" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22">
+      <mrow xref="p1.1.m1.1.22.1.cmml" id="p1.1.m1.1.22.1">
+        <mrow xref="p1.1.m1.1.22.1.1.cmml" id="p1.1.m1.1.22.1.1">
+          <mrow xref="p1.1.m1.1.22.1.1.2.cmml" id="p1.1.m1.1.22.1.1.2">
+            <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+            <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∘</mo>
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">T</mi>
+          </mrow>
+          <mo xref="p1.1.m1.1.22.1.1.1.cmml" id="p1.1.m1.1.22.1.1.1">⁢</mo>
+          <mrow id="p1.1.m1.1.22.1.1.3">
+            <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">ν</mi>
+            <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+        <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">=</mo>
+        <mrow xref="p1.1.m1.1.22.1.2.cmml" id="p1.1.m1.1.22.1.2">
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">ν</mi>
+          <mo xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">∘</mo>
+          <msub xref="p1.1.m1.1.22.1.2.1.cmml" id="p1.1.m1.1.22.1.2.1">
+            <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">μ</mi>
+            <mi xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">M</mi>
+          </msub>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">:</mo>
+      <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2">
+        <mrow xref="p1.1.m1.1.22.2.1.cmml" id="p1.1.m1.1.22.2.1">
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">T</mi>
+          <mo xref="p1.1.m1.1.22.2.1.1.cmml" id="p1.1.m1.1.22.2.1.1">⁢</mo>
+          <mrow xref="p1.1.m1.1.22.2.1.2.2.cmml" id="p1.1.m1.1.22.2.1.2">
+            <mo id="p1.1.m1.1.14" stretchy="false">(</mo>
+            <mrow xref="p1.1.m1.1.22.2.1.2.2.cmml" id="p1.1.m1.1.22.2.1.2.2">
+              <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">T</mi>
+              <mo xref="p1.1.m1.1.22.2.1.2.2.1.cmml" id="p1.1.m1.1.22.2.1.2.2.1">⁢</mo>
+              <mrow id="p1.1.m1.1.22.2.1.2.2.2">
+                <mo id="p1.1.m1.1.16" stretchy="false">(</mo>
+                <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">M</mi>
+                <mo id="p1.1.m1.1.18" stretchy="false">)</mo>
+              </mrow>
+            </mrow>
+            <mo id="p1.1.m1.1.19" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+        <mo xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">→</mo>
+        <mi xref="p1.1.m1.1.21.cmml" id="p1.1.m1.1.21">M</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml">
+        <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">:</ci>
+        <apply xref="p1.1.m1.1.22.1" id="p1.1.m1.1.22.1.cmml">
+          <eq xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+          <apply xref="p1.1.m1.1.22.1.1" id="p1.1.m1.1.22.1.1.cmml">
+            <times xref="p1.1.m1.1.22.1.1.1" id="p1.1.m1.1.22.1.1.1.cmml"/>
+            <apply xref="p1.1.m1.1.22.1.1.2" id="p1.1.m1.1.22.1.1.2.cmml">
+              <compose xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+              <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑇</ci>
+            </apply>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝜈</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.22.1.2" id="p1.1.m1.1.22.1.2.cmml">
+            <compose xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml"/>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝜈</ci>
+            <apply xref="p1.1.m1.1.22.1.2.1" id="p1.1.m1.1.22.1.2.1.cmml">
+              <csymbol id="p1.1.m1.1.22.1.2.1.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝜇</ci>
+              <ci xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.cmml">𝑀</ci>
+            </apply>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.22.2" id="p1.1.m1.1.22.2.cmml">
+          <ci xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml">→</ci>
+          <apply xref="p1.1.m1.1.22.2.1" id="p1.1.m1.1.22.2.1.cmml">
+            <times xref="p1.1.m1.1.22.2.1.1" id="p1.1.m1.1.22.2.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑇</ci>
+            <apply xref="p1.1.m1.1.22.2.1.2" id="p1.1.m1.1.22.2.1.2.2.cmml">
+              <times xref="p1.1.m1.1.22.2.1.2.2.1" id="p1.1.m1.1.22.2.1.2.2.1.cmml"/>
+              <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑇</ci>
+              <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝑀</ci>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.21" id="p1.1.m1.1.21.cmml">𝑀</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+\nu\circ T(\nu)=\nu\circ\mu_{M}\colon T(T(M))\to M</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">and</p>
+<div class="maruku-equation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ν</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∘</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">η</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">M</mi></msub><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">=</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">id</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">M</mi></msub><mspace width="thinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"/><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">.</mo></mrow><math id="2594482217100504602" display="inline" alttext="\par
+\nu\circ\eta_{M}=id_{M}\,." class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.11.2.cmml" id="p1.1.m1.1.11">
+      <mrow xref="p1.1.m1.1.11.2.cmml" id="p1.1.m1.1.11.2">
+        <mrow xref="p1.1.m1.1.11.2.cmml" id="p1.1.m1.1.11.2.1">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ν</mi>
+          <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∘</mo>
+          <msub xref="p1.1.m1.1.11.2.cmml" id="p1.1.m1.1.11.2.1.1">
+            <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">η</mi>
+            <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">M</mi>
+          </msub>
+        </mrow>
+        <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">=</mo>
+        <mrow xref="p1.1.m1.1.11.2.cmml" id="p1.1.m1.1.11.2.2">
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">i</mi>
+          <mo xref="p1.1.m1.1.11.2.2.1.cmml" id="p1.1.m1.1.11.2.2.1">⁢</mo>
+          <mpadded xref="p1.1.m1.1.11.2.cmml" id="p1.1.m1.1.11.2.2.2" width="+1.7pt">
+            <msub xref="p1.1.m1.1.11.2.cmml" id="p1.1.m1.1.11.2.2.2a">
+              <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">d</mi>
+              <mi xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">M</mi>
+            </msub>
+          </mpadded>
+        </mrow>
+      </mrow>
+      <mo id="p1.1.m1.1.10">.</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.11" id="p1.1.m1.1.11.2.cmml">
+        <eq xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.11" id="p1.1.m1.1.11.2.1.cmml">
+          <compose xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝜈</ci>
+          <apply xref="p1.1.m1.1.11" id="p1.1.m1.1.11.2.1.1.cmml">
+            <csymbol id="p1.1.m1.1.11.2.1.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝜂</ci>
+            <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑀</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.11" id="p1.1.m1.1.11.2.2.cmml">
+          <times xref="p1.1.m1.1.11.2.2.1" id="p1.1.m1.1.11.2.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑖</ci>
+          <apply xref="p1.1.m1.1.11" id="p1.1.m1.1.11.2.2.2.cmml">
+            <csymbol id="p1.1.m1.1.11.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑑</ci>
+            <ci xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">𝑀</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+\nu\circ\eta_{M}=id_{M}\,.</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">A <a shape="rect" href="/nlab/show/homomorphism" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">homomorphism</a> of <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="5928421431358786475" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math></semantics></math>-modules <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">f</mi><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">A</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ν</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">A</mi></msup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ν</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></msup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="6661466189782886808" display="inline" alttext="f\colon(A,\nu^{A})\to(B,\nu^{B})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">
+        <mrow xref="p1.1.m1.1.16.1.1.1.cmml" id="p1.1.m1.1.16.1.1">
+          <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">A</mi>
+          <mo id="p1.1.m1.1.5">,</mo>
+          <msup xref="p1.1.m1.1.16.1.1.1.cmml" id="p1.1.m1.1.16.1.1.2">
+            <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">ν</mi>
+            <mi xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">A</mi>
+          </msup>
+          <mo id="p1.1.m1.1.8" stretchy="false">)</mo>
+        </mrow>
+        <mo xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">→</mo>
+        <mrow xref="p1.1.m1.1.16.1.2.1.cmml" id="p1.1.m1.1.16.1.2">
+          <mo id="p1.1.m1.1.10" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">B</mi>
+          <mo id="p1.1.m1.1.12">,</mo>
+          <msup xref="p1.1.m1.1.16.1.2.1.cmml" id="p1.1.m1.1.16.1.2.2">
+            <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">ν</mi>
+            <mi xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">B</mi>
+          </msup>
+          <mo id="p1.1.m1.1.15" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑓</ci>
+        <apply xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml">
+          <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">→</ci>
+          <interval xref="p1.1.m1.1.16.1.1" id="p1.1.m1.1.16.1.1.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐴</ci>
+            <apply xref="p1.1.m1.1.16.1.1" id="p1.1.m1.1.16.1.1.2.cmml">
+              <csymbol id="p1.1.m1.1.16.1.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝜈</ci>
+              <ci xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">𝐴</ci>
+            </apply>
+          </interval>
+          <interval xref="p1.1.m1.1.16.1.2" id="p1.1.m1.1.16.1.2.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝐵</ci>
+            <apply xref="p1.1.m1.1.16.1.2" id="p1.1.m1.1.16.1.2.2.cmml">
+              <csymbol id="p1.1.m1.1.16.1.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝜈</ci>
+              <ci xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml">𝐵</ci>
+            </apply>
+          </interval>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">f\colon(A,\nu^{A})\to(B,\nu^{B})</annotation>
+  </semantics>
+</math></semantics></math> is a morphism <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">f</mi><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">A</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></mrow><math id="1425544637365871199" display="inline" alttext="f\colon A\to B" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">A</mi>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">→</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">B</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑓</ci>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">→</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐴</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐵</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">f\colon A\to B</annotation>
+  </semantics>
+</math></semantics></math> in <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi></mrow><math id="-6572384135998807872" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
+  </semantics>
+</math></semantics></math> that commutes with the action, in that</p>
+<div class="maruku-equation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">f</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∘</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ν</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">M</mi></msup><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">=</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ν</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">N</mi></msup><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∘</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">f</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">M</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">N</mi><mspace width="thinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"/><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">.</mo></mrow><math id="-1071991959696372383" display="inline" alttext="\par
+ f\circ\nu^{M}=\nu^{N}\circ T(f)\colon T(M)\to N\,." class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22">
+      <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2">
+        <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.1">
+          <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.1.1">
+            <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">f</mi>
+            <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∘</mo>
+            <msup xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.1.1.1">
+              <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">ν</mi>
+              <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">M</mi>
+            </msup>
+          </mrow>
+          <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">=</mo>
+          <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.1.2">
+            <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.1.2.2">
+              <msup xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.1.2.2.1">
+                <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">ν</mi>
+                <mi xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">N</mi>
+              </msup>
+              <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">∘</mo>
+              <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">T</mi>
+            </mrow>
+            <mo xref="p1.1.m1.1.22.2.1.2.1.cmml" id="p1.1.m1.1.22.2.1.2.1">⁢</mo>
+            <mrow id="p1.1.m1.1.22.2.1.2.3">
+              <mo id="p1.1.m1.1.10" stretchy="false">(</mo>
+              <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">f</mi>
+              <mo id="p1.1.m1.1.12" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+        </mrow>
+        <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">:</mo>
+        <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.2">
+          <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.2.1">
+            <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">T</mi>
+            <mo xref="p1.1.m1.1.22.2.2.1.1.cmml" id="p1.1.m1.1.22.2.2.1.1">⁢</mo>
+            <mrow id="p1.1.m1.1.22.2.2.1.2">
+              <mo id="p1.1.m1.1.15" stretchy="false">(</mo>
+              <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">M</mi>
+              <mo id="p1.1.m1.1.17" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">→</mo>
+          <mpadded xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.19" width="+1.7pt">
+            <mi xref="p1.1.m1.1.19.cmml" id="p1.1.m1.1.19a">N</mi>
+          </mpadded>
+        </mrow>
+      </mrow>
+      <mo id="p1.1.m1.1.21">.</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.cmml">
+        <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">:</ci>
+        <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.1.cmml">
+          <eq xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+          <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.1.1.cmml">
+            <compose xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑓</ci>
+            <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.1.1.1.cmml">
+              <csymbol id="p1.1.m1.1.22.2.1.1.1.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝜈</ci>
+              <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑀</ci>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.1.2.cmml">
+            <times xref="p1.1.m1.1.22.2.1.2.1" id="p1.1.m1.1.22.2.1.2.1.cmml"/>
+            <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.1.2.2.cmml">
+              <compose xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+              <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.1.2.2.1.cmml">
+                <csymbol id="p1.1.m1.1.22.2.1.2.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+                <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝜈</ci>
+                <ci xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">𝑁</ci>
+              </apply>
+              <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑇</ci>
+            </apply>
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑓</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.2.cmml">
+          <ci xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">→</ci>
+          <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.2.1.cmml">
+            <times xref="p1.1.m1.1.22.2.2.1.1" id="p1.1.m1.1.22.2.2.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑇</ci>
+            <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝑀</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.19a" id="p1.1.m1.1.19.cmml">𝑁</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+ f\circ\nu^{M}=\nu^{N}\circ T(f)\colon T(M)\to N\,.</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">The composition of morphisms of <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="-3870029414759464935" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math></semantics></math>-modules is the composition of underlying morphisms in <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi></mrow><math id="-2178732219684851580" display="inline" alttext="C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C</annotation>
+  </semantics>
+</math></semantics></math>. The resultiing <a shape="rect" href="/nlab/show/category" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">category</a> <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></msup></mrow><math id="7183780653841526737" display="inline" alttext="C^{T}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">T</mi>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑇</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">C^{T}</annotation>
+  </semantics>
+</math></semantics></math> of <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="-1679609637914574353" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math></semantics></math>-modules/algebras is called the <strong xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">Eilenberg–Moore category</strong> of the monad <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="-2169386723890283590" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math></semantics></math>, also be written <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Alg</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="-3111877621990657918" display="inline" alttext="Alg(T)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">l</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">g</mi>
+      <mo xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1b">⁢</mo>
+      <mrow id="p1.1.m1.1.7.2">
+        <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">T</mi>
+        <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <times xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑔</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑇</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Alg(T)</annotation>
+  </semantics>
+</math></semantics></math>, or <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi><mspace width="thinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"/><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Alg</mi></mrow><math id="6113085408115996788" display="inline" alttext="T\,Alg" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mpadded xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" width="+1.7pt">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1a">T</mi>
+      </mpadded>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">A</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">l</mi>
+      <mo xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">g</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <times xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐴</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑙</ci>
+        <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑔</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T\,Alg</annotation>
+  </semantics>
+</math></semantics></math>, etc.</p>
+
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">By construction, there is a <a shape="rect" href="/nlab/show/forgetful+functor" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">forgetful functor</a></p>
+<div class="maruku-equation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></msup><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></msup><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi></mrow><math id="3800578424214993594" display="inline" alttext="\par
+ U^{T}\colon C^{T}\to C" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">T</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">:</mo>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <msup xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">C</mi>
+          <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">T</mi>
+        </msup>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">→</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">C</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">:</ci>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <csymbol id="p1.1.m1.1.8.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑇</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">→</ci>
+          <apply xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml">
+            <csymbol id="p1.1.m1.1.8.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝐶</ci>
+            <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝑇</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝐶</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+ U^{T}\colon C^{T}\to C</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">(which may be thought of as the <a shape="rect" href="/nlab/show/universal+construction" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">universal</a> <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="-3268993719207826654" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math></semantics></math>-module) with a <a shape="rect" href="/nlab/show/left+adjoint" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">left adjoint</a> <a shape="rect" href="/nlab/show/free+functor" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">free functor</a> <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">F</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></msup></mrow><math id="-3176506241602893764" display="inline" alttext="F^{T}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">F</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">T</mi>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐹</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑇</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">F^{T}</annotation>
+  </semantics>
+</math></semantics></math> such that the monad <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></msup><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">F</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></msup></mrow><math id="-1959075136546257543" display="inline" alttext="U^{T}F^{T}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <msup xref="p1.1.m1.1.5.2.cmml" id="p1.1.m1.1.5.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">T</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <msup xref="p1.1.m1.1.5.3.cmml" id="p1.1.m1.1.5.3">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">F</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">T</mi>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <apply xref="p1.1.m1.1.5.2" id="p1.1.m1.1.5.2.cmml">
+          <csymbol id="p1.1.m1.1.5.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑇</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.5.3" id="p1.1.m1.1.5.3.cmml">
+          <csymbol id="p1.1.m1.1.5.3.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝐹</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑇</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U^{T}F^{T}</annotation>
+  </semantics>
+</math></semantics></math> arising from the adjunction is isomorphic to <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">T</mi></mrow><math id="-5912191486382937043" display="inline" alttext="T" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">T</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑇</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">T</annotation>
+  </semantics>
+</math></semantics></math>.</p>
+</div>
+
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">More generally, for <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">a</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">a</mi></mrow><math id="-1515635120181882611" display="inline" alttext="t\colon a\to a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">t</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">a</mi>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">→</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">a</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑡</ci>
+        <apply xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">→</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑎</ci>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑎</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">t\colon a\to a</annotation>
+  </semantics>
+</math></semantics></math> is a monad in any <a shape="rect" href="/nlab/show/2-category" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">2-category</a> <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">K</mi></mrow><math id="5237087825629128371" display="inline" alttext="K" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">K</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐾</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">K</annotation>
+  </semantics>
+</math></semantics></math>, then the <strong xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">Eilenberg–Moore object</strong> <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">a</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi></msup></mrow><math id="3473487690598826635" display="inline" alttext="a^{t}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <msup xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">a</mi>
+      <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">t</mi>
+    </msup>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <csymbol id="p1.1.m1.1.3.1.cmml" cd="ambiguous">superscript</csymbol>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑎</ci>
+        <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑡</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">a^{t}</annotation>
+  </semantics>
+</math></semantics></math> of <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi></mrow><math id="-8784996553924492848" display="inline" alttext="t" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">t</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑡</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">t</annotation>
+  </semantics>
+</math></semantics></math> is, if it exists, the universal (left) <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi></mrow><math id="-4760919216661970044" display="inline" alttext="t" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">t</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑡</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">t</annotation>
+  </semantics>
+</math></semantics></math>-module. That is, there is a morphism <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">u</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi></msup><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">a</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi></msup><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">a</mi></mrow><math id="4559393847129934561" display="inline" alttext="u^{t}\colon a^{t}\to a" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <msup xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">u</mi>
+        <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">t</mi>
+      </msup>
+      <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">:</mo>
+      <mrow xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <msup xref="p1.1.m1.1.8.2.1.cmml" id="p1.1.m1.1.8.2.1">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">a</mi>
+          <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">t</mi>
+        </msup>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">→</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">a</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">:</ci>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <csymbol id="p1.1.m1.1.8.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑢</ci>
+          <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑡</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">→</ci>
+          <apply xref="p1.1.m1.1.8.2.1" id="p1.1.m1.1.8.2.1.cmml">
+            <csymbol id="p1.1.m1.1.8.2.1.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑎</ci>
+            <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝑡</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑎</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">u^{t}\colon a^{t}\to a</annotation>
+  </semantics>
+</math></semantics></math> and a 2-cell <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">u</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi></msup><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">⇒</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">u</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi></msup></mrow><math id="-9179576316617842467" display="inline" alttext="tu^{t}\Rightarrow u^{t}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">t</mi>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">⁢</mo>
+        <msup xref="p1.1.m1.1.7.1.2.cmml" id="p1.1.m1.1.7.1.2">
+          <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">u</mi>
+          <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">t</mi>
+        </msup>
+      </mrow>
+      <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">⇒</mo>
+      <msup xref="p1.1.m1.1.7.2.cmml" id="p1.1.m1.1.7.2">
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">u</mi>
+        <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">t</mi>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">⇒</ci>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <times xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑡</ci>
+          <apply xref="p1.1.m1.1.7.1.2" id="p1.1.m1.1.7.1.2.cmml">
+            <csymbol id="p1.1.m1.1.7.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑢</ci>
+            <ci xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">𝑡</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.7.2" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑢</ci>
+          <ci xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">𝑡</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">tu^{t}\Rightarrow u^{t}</annotation>
+  </semantics>
+</math></semantics></math> that mediate a natural isomorphism <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">K</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">x</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">a</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi></msup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">≅</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">LMod</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">x</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="2471246003845961951" display="inline" alttext="K(x,a^{t})\cong LMod(x,t)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">
+      <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">K</mi>
+        <mo xref="p1.1.m1.1.18.1.1.cmml" id="p1.1.m1.1.18.1.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.18.1.2.1.cmml" id="p1.1.m1.1.18.1.2">
+          <mo id="p1.1.m1.1.2" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">x</mi>
+          <mo id="p1.1.m1.1.4">,</mo>
+          <msup xref="p1.1.m1.1.18.1.2.1.cmml" id="p1.1.m1.1.18.1.2.2">
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">a</mi>
+            <mi xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6.1">t</mi>
+          </msup>
+          <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">≅</mo>
+      <mrow xref="p1.1.m1.1.18.2.cmml" id="p1.1.m1.1.18.2">
+        <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">L</mi>
+        <mo xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">M</mi>
+        <mo xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">o</mi>
+        <mo xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">d</mi>
+        <mo xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1c">⁢</mo>
+        <mrow xref="p1.1.m1.1.18.2.2.1.cmml" id="p1.1.m1.1.18.2.2">
+          <mo id="p1.1.m1.1.13" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">x</mi>
+          <mo id="p1.1.m1.1.15">,</mo>
+          <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">t</mi>
+          <mo id="p1.1.m1.1.17" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">
+        <approx xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+        <apply xref="p1.1.m1.1.18.1" id="p1.1.m1.1.18.1.cmml">
+          <times xref="p1.1.m1.1.18.1.1" id="p1.1.m1.1.18.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐾</ci>
+          <interval xref="p1.1.m1.1.18.1.2" id="p1.1.m1.1.18.1.2.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑥</ci>
+            <apply xref="p1.1.m1.1.18.1.2" id="p1.1.m1.1.18.1.2.2.cmml">
+              <csymbol id="p1.1.m1.1.18.1.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑎</ci>
+              <ci xref="p1.1.m1.1.6.1" id="p1.1.m1.1.6.1.cmml">𝑡</ci>
+            </apply>
+          </interval>
+        </apply>
+        <apply xref="p1.1.m1.1.18.2" id="p1.1.m1.1.18.2.cmml">
+          <times xref="p1.1.m1.1.18.2.1" id="p1.1.m1.1.18.2.1.cmml"/>
+          <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝐿</ci>
+          <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑀</ci>
+          <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑜</ci>
+          <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑑</ci>
+          <interval xref="p1.1.m1.1.18.2.2" id="p1.1.m1.1.18.2.2.1.cmml" closure="open">
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑥</ci>
+            <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝑡</ci>
+          </interval>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">K(x,a^{t})\cong LMod(x,t)</annotation>
+  </semantics>
+</math></semantics></math> between morphisms <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">x</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">a</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi></msup></mrow><math id="-7066701195294716134" display="inline" alttext="x\to a^{t}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">x</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">→</mo>
+      <msup xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">a</mi>
+        <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">t</mi>
+      </msup>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">→</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑥</ci>
+        <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+          <csymbol id="p1.1.m1.1.5.1.1.cmml" cd="ambiguous">superscript</csymbol>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑎</ci>
+          <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝑡</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">x\to a^{t}</annotation>
+  </semantics>
+</math></semantics></math> and <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi></mrow><math id="-8503716189436733328" display="inline" alttext="t" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">t</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑡</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">t</annotation>
+  </semantics>
+</math></semantics></math>-modules <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">m</mi><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">x</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">a</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">λ</mi><mo lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">t</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">m</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">⇒</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">m</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="-7931680700699450639" display="inline" alttext="(m\colon x\to a,\lambda\colon tm\Rightarrow m)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.15.2.cmml" id="p1.1.m1.1.15">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.15.2.cmml" id="p1.1.m1.1.15.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">m</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">:</mo>
+        <mrow xref="p1.1.m1.1.15.2.cmml" id="p1.1.m1.1.15.2.2">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">x</mi>
+          <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">→</mo>
+          <mrow xref="p1.1.m1.1.15.2.2.1.1.cmml" id="p1.1.m1.1.15.2.2.1">
+            <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">a</mi>
+            <mo id="p1.1.m1.1.7">,</mo>
+            <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">λ</mi>
+          </mrow>
+        </mrow>
+        <mo xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">:</mo>
+        <mrow xref="p1.1.m1.1.15.2.cmml" id="p1.1.m1.1.15.2.3">
+          <mrow xref="p1.1.m1.1.15.2.cmml" id="p1.1.m1.1.15.2.3.1">
+            <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">t</mi>
+            <mo xref="p1.1.m1.1.15.2.3.1.1.cmml" id="p1.1.m1.1.15.2.3.1.1">⁢</mo>
+            <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">m</mi>
+          </mrow>
+          <mo xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">⇒</mo>
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">m</mi>
+        </mrow>
+      </mrow>
+      <mo id="p1.1.m1.1.14" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.2.cmml">
+        <and id="p1.1.m1.1.15.2a.cmml"/>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.2b.cmml">
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">:</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑚</ci>
+          <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.2.2.cmml">
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">→</ci>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑥</ci>
+            <list xref="p1.1.m1.1.15.2.2.1" id="p1.1.m1.1.15.2.2.1.1.cmml">
+              <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑎</ci>
+              <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝜆</ci>
+            </list>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.2c.cmml">
+          <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">:</ci>
+          <share id="p1.1.m1.1.15.2d.cmml" href="#p1.1.m1.1.15.2.2.cmml"/>
+          <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.2.3.cmml">
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">⇒</ci>
+            <apply xref="p1.1.m1.1.15" id="p1.1.m1.1.15.2.3.1.cmml">
+              <times xref="p1.1.m1.1.15.2.3.1.1" id="p1.1.m1.1.15.2.3.1.1.cmml"/>
+              <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑡</ci>
+              <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑚</ci>
+            </apply>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑚</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(m\colon x\to a,\lambda\colon tm\Rightarrow m)</annotation>
+  </semantics>
+</math></semantics></math>. Not every 2-category admits Eilenberg–Moore objects.</p>
+
+ </body>
+    </html>

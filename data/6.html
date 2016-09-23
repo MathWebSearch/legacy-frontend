@@ -1,0 +1,1839 @@
+<html> 
+      <head>
+        <title>Green-Schwarz mechanism</title>
+        <meta name="url" content="https://ncatlab.org/nlab/show/Green-Schwarz+mechanism#the_anomaly_line_bundle"></meta>
+      </head>
+        <body> <h3 id="the_anomaly_line_bundle" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">The anomaly line bundle</h3>
+
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">In order to formalize this we have to refine the formalization of the structure of the configuration space. So far we had regarded the <a shape="rect" href="/nlab/show/set" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">set</a> <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msubsup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">H</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">diff</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">dim</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">−</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi></mrow></msubsup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><msubsup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">H</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">diff</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">+</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn></mrow></msubsup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="269101790217800529" display="inline" alttext="H^{dimX-n}_{diff}(X)\times H_{diff}^{n+1}(X)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">
+      <mrow xref="p1.1.m1.1.14.2.cmml" id="p1.1.m1.1.14.2">
+        <mrow xref="p1.1.m1.1.14.2.1.cmml" id="p1.1.m1.1.14.2.1">
+          <msubsup xref="p1.1.m1.1.14.2.1.2.cmml" id="p1.1.m1.1.14.2.1.2">
+            <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">H</mi>
+            <mrow xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">
+              <mi xref="p1.1.m1.1.3.1.1.cmml" id="p1.1.m1.1.3.1.1">d</mi>
+              <mo xref="p1.1.m1.1.3.1.5.cmml" id="p1.1.m1.1.3.1.5">⁢</mo>
+              <mi xref="p1.1.m1.1.3.1.2.cmml" id="p1.1.m1.1.3.1.2">i</mi>
+              <mo xref="p1.1.m1.1.3.1.5.cmml" id="p1.1.m1.1.3.1.5a">⁢</mo>
+              <mi xref="p1.1.m1.1.3.1.3.cmml" id="p1.1.m1.1.3.1.3">f</mi>
+              <mo xref="p1.1.m1.1.3.1.5.cmml" id="p1.1.m1.1.3.1.5b">⁢</mo>
+              <mi xref="p1.1.m1.1.3.1.4.cmml" id="p1.1.m1.1.3.1.4">f</mi>
+            </mrow>
+            <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+              <mrow xref="p1.1.m1.1.2.1.7.cmml" id="p1.1.m1.1.2.1.7">
+                <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">d</mi>
+                <mo xref="p1.1.m1.1.2.1.7.1.cmml" id="p1.1.m1.1.2.1.7.1">⁢</mo>
+                <mi xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">i</mi>
+                <mo xref="p1.1.m1.1.2.1.7.1.cmml" id="p1.1.m1.1.2.1.7.1a">⁢</mo>
+                <mi xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">m</mi>
+                <mo xref="p1.1.m1.1.2.1.7.1.cmml" id="p1.1.m1.1.2.1.7.1b">⁢</mo>
+                <mi xref="p1.1.m1.1.2.1.4.cmml" id="p1.1.m1.1.2.1.4">X</mi>
+              </mrow>
+              <mo xref="p1.1.m1.1.2.1.5.cmml" id="p1.1.m1.1.2.1.5">-</mo>
+              <mi xref="p1.1.m1.1.2.1.6.cmml" id="p1.1.m1.1.2.1.6">n</mi>
+            </mrow>
+          </msubsup>
+          <mo xref="p1.1.m1.1.14.2.1.1.cmml" id="p1.1.m1.1.14.2.1.1">⁢</mo>
+          <mrow id="p1.1.m1.1.14.2.1.3">
+            <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">X</mi>
+            <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+        <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">×</mo>
+        <msubsup xref="p1.1.m1.1.14.2.2.cmml" id="p1.1.m1.1.14.2.2">
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">H</mi>
+          <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">
+            <mi xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1">d</mi>
+            <mo xref="p1.1.m1.1.9.1.5.cmml" id="p1.1.m1.1.9.1.5">⁢</mo>
+            <mi xref="p1.1.m1.1.9.1.2.cmml" id="p1.1.m1.1.9.1.2">i</mi>
+            <mo xref="p1.1.m1.1.9.1.5.cmml" id="p1.1.m1.1.9.1.5a">⁢</mo>
+            <mi xref="p1.1.m1.1.9.1.3.cmml" id="p1.1.m1.1.9.1.3">f</mi>
+            <mo xref="p1.1.m1.1.9.1.5.cmml" id="p1.1.m1.1.9.1.5b">⁢</mo>
+            <mi xref="p1.1.m1.1.9.1.4.cmml" id="p1.1.m1.1.9.1.4">f</mi>
+          </mrow>
+          <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">
+            <mi xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">n</mi>
+            <mo xref="p1.1.m1.1.10.1.2.cmml" id="p1.1.m1.1.10.1.2">+</mo>
+            <mn xref="p1.1.m1.1.10.1.3.cmml" id="p1.1.m1.1.10.1.3">1</mn>
+          </mrow>
+        </msubsup>
+      </mrow>
+      <mo xref="p1.1.m1.1.14.1.cmml" id="p1.1.m1.1.14.1">⁢</mo>
+      <mrow id="p1.1.m1.1.14.3">
+        <mo id="p1.1.m1.1.11" stretchy="false">(</mo>
+        <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">X</mi>
+        <mo id="p1.1.m1.1.13" stretchy="false">)</mo>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">
+        <times xref="p1.1.m1.1.14.1" id="p1.1.m1.1.14.1.cmml"/>
+        <apply xref="p1.1.m1.1.14.2" id="p1.1.m1.1.14.2.cmml">
+          <times xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+          <apply xref="p1.1.m1.1.14.2.1" id="p1.1.m1.1.14.2.1.cmml">
+            <times xref="p1.1.m1.1.14.2.1.1" id="p1.1.m1.1.14.2.1.1.cmml"/>
+            <apply xref="p1.1.m1.1.14.2.1.2" id="p1.1.m1.1.14.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.14.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <apply id="p1.1.m1.1.14.2.1.2.2.cmml">
+                <csymbol id="p1.1.m1.1.14.2.1.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐻</ci>
+                <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+                  <minus xref="p1.1.m1.1.2.1.5" id="p1.1.m1.1.2.1.5.cmml"/>
+                  <apply xref="p1.1.m1.1.2.1.7" id="p1.1.m1.1.2.1.7.cmml">
+                    <times xref="p1.1.m1.1.2.1.7.1" id="p1.1.m1.1.2.1.7.1.cmml"/>
+                    <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑑</ci>
+                    <ci xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml">𝑖</ci>
+                    <ci xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml">𝑚</ci>
+                    <ci xref="p1.1.m1.1.2.1.4" id="p1.1.m1.1.2.1.4.cmml">𝑋</ci>
+                  </apply>
+                  <ci xref="p1.1.m1.1.2.1.6" id="p1.1.m1.1.2.1.6.cmml">𝑛</ci>
+                </apply>
+              </apply>
+              <apply xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+                <times xref="p1.1.m1.1.3.1.5" id="p1.1.m1.1.3.1.5.cmml"/>
+                <ci xref="p1.1.m1.1.3.1.1" id="p1.1.m1.1.3.1.1.cmml">𝑑</ci>
+                <ci xref="p1.1.m1.1.3.1.2" id="p1.1.m1.1.3.1.2.cmml">𝑖</ci>
+                <ci xref="p1.1.m1.1.3.1.3" id="p1.1.m1.1.3.1.3.cmml">𝑓</ci>
+                <ci xref="p1.1.m1.1.3.1.4" id="p1.1.m1.1.3.1.4.cmml">𝑓</ci>
+              </apply>
+            </apply>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑋</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.14.2.2" id="p1.1.m1.1.14.2.2.cmml">
+            <csymbol id="p1.1.m1.1.14.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <apply id="p1.1.m1.1.14.2.2.2.cmml">
+              <csymbol id="p1.1.m1.1.14.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝐻</ci>
+              <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">
+                <times xref="p1.1.m1.1.9.1.5" id="p1.1.m1.1.9.1.5.cmml"/>
+                <ci xref="p1.1.m1.1.9.1.1" id="p1.1.m1.1.9.1.1.cmml">𝑑</ci>
+                <ci xref="p1.1.m1.1.9.1.2" id="p1.1.m1.1.9.1.2.cmml">𝑖</ci>
+                <ci xref="p1.1.m1.1.9.1.3" id="p1.1.m1.1.9.1.3.cmml">𝑓</ci>
+                <ci xref="p1.1.m1.1.9.1.4" id="p1.1.m1.1.9.1.4.cmml">𝑓</ci>
+              </apply>
+            </apply>
+            <apply xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">
+              <plus xref="p1.1.m1.1.10.1.2" id="p1.1.m1.1.10.1.2.cmml"/>
+              <ci xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml">𝑛</ci>
+              <cn xref="p1.1.m1.1.10.1.3" id="p1.1.m1.1.10.1.3.cmml" type="integer">1</cn>
+            </apply>
+          </apply>
+        </apply>
+        <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑋</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">H^{dimX-n}_{diff}(X)\times H_{diff}^{n+1}(X)</annotation>
+  </semantics>
+</math></semantics></math> of gauge equivalence classes of field configurations. This is the set of connected components of the full <a shape="rect" href="/nlab/show/cocycle" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">cocycle</a> <a shape="rect" href="/nlab/show/infinity-groupoid" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">∞-groupoid</a></p>
+<div class="maruku-equation" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msubsup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">diff</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">dim</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">−</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi></mrow></msubsup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><msubsup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">diff</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">+</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn></mrow></msubsup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∈</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∞</mn><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Grpd</mi></mrow><math id="-1243110668817541680" display="inline" alttext="\par
+ C^{dimX-n}_{diff}(X)\times C_{diff}^{n+1}(X)\in\infty Grpd" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">
+      <mrow xref="p1.1.m1.1.20.1.cmml" id="p1.1.m1.1.20.1">
+        <mrow xref="p1.1.m1.1.20.1.2.cmml" id="p1.1.m1.1.20.1.2">
+          <mrow xref="p1.1.m1.1.20.1.2.1.cmml" id="p1.1.m1.1.20.1.2.1">
+            <msubsup xref="p1.1.m1.1.20.1.2.1.2.cmml" id="p1.1.m1.1.20.1.2.1.2">
+              <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+              <mrow xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1">
+                <mi xref="p1.1.m1.1.3.1.1.cmml" id="p1.1.m1.1.3.1.1">d</mi>
+                <mo xref="p1.1.m1.1.3.1.5.cmml" id="p1.1.m1.1.3.1.5">⁢</mo>
+                <mi xref="p1.1.m1.1.3.1.2.cmml" id="p1.1.m1.1.3.1.2">i</mi>
+                <mo xref="p1.1.m1.1.3.1.5.cmml" id="p1.1.m1.1.3.1.5a">⁢</mo>
+                <mi xref="p1.1.m1.1.3.1.3.cmml" id="p1.1.m1.1.3.1.3">f</mi>
+                <mo xref="p1.1.m1.1.3.1.5.cmml" id="p1.1.m1.1.3.1.5b">⁢</mo>
+                <mi xref="p1.1.m1.1.3.1.4.cmml" id="p1.1.m1.1.3.1.4">f</mi>
+              </mrow>
+              <mrow xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">
+                <mrow xref="p1.1.m1.1.2.1.7.cmml" id="p1.1.m1.1.2.1.7">
+                  <mi xref="p1.1.m1.1.2.1.1.cmml" id="p1.1.m1.1.2.1.1">d</mi>
+                  <mo xref="p1.1.m1.1.2.1.7.1.cmml" id="p1.1.m1.1.2.1.7.1">⁢</mo>
+                  <mi xref="p1.1.m1.1.2.1.2.cmml" id="p1.1.m1.1.2.1.2">i</mi>
+                  <mo xref="p1.1.m1.1.2.1.7.1.cmml" id="p1.1.m1.1.2.1.7.1a">⁢</mo>
+                  <mi xref="p1.1.m1.1.2.1.3.cmml" id="p1.1.m1.1.2.1.3">m</mi>
+                  <mo xref="p1.1.m1.1.2.1.7.1.cmml" id="p1.1.m1.1.2.1.7.1b">⁢</mo>
+                  <mi xref="p1.1.m1.1.2.1.4.cmml" id="p1.1.m1.1.2.1.4">X</mi>
+                </mrow>
+                <mo xref="p1.1.m1.1.2.1.5.cmml" id="p1.1.m1.1.2.1.5">-</mo>
+                <mi xref="p1.1.m1.1.2.1.6.cmml" id="p1.1.m1.1.2.1.6">n</mi>
+              </mrow>
+            </msubsup>
+            <mo xref="p1.1.m1.1.20.1.2.1.1.cmml" id="p1.1.m1.1.20.1.2.1.1">⁢</mo>
+            <mrow id="p1.1.m1.1.20.1.2.1.3">
+              <mo id="p1.1.m1.1.4" stretchy="false">(</mo>
+              <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">X</mi>
+              <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">×</mo>
+          <msubsup xref="p1.1.m1.1.20.1.2.2.cmml" id="p1.1.m1.1.20.1.2.2">
+            <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">C</mi>
+            <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">
+              <mi xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1">d</mi>
+              <mo xref="p1.1.m1.1.9.1.5.cmml" id="p1.1.m1.1.9.1.5">⁢</mo>
+              <mi xref="p1.1.m1.1.9.1.2.cmml" id="p1.1.m1.1.9.1.2">i</mi>
+              <mo xref="p1.1.m1.1.9.1.5.cmml" id="p1.1.m1.1.9.1.5a">⁢</mo>
+              <mi xref="p1.1.m1.1.9.1.3.cmml" id="p1.1.m1.1.9.1.3">f</mi>
+              <mo xref="p1.1.m1.1.9.1.5.cmml" id="p1.1.m1.1.9.1.5b">⁢</mo>
+              <mi xref="p1.1.m1.1.9.1.4.cmml" id="p1.1.m1.1.9.1.4">f</mi>
+            </mrow>
+            <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">
+              <mi xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">n</mi>
+              <mo xref="p1.1.m1.1.10.1.2.cmml" id="p1.1.m1.1.10.1.2">+</mo>
+              <mn xref="p1.1.m1.1.10.1.3.cmml" id="p1.1.m1.1.10.1.3">1</mn>
+            </mrow>
+          </msubsup>
+        </mrow>
+        <mo xref="p1.1.m1.1.20.1.1.cmml" id="p1.1.m1.1.20.1.1">⁢</mo>
+        <mrow id="p1.1.m1.1.20.1.3">
+          <mo id="p1.1.m1.1.11" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">X</mi>
+          <mo id="p1.1.m1.1.13" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">∈</mo>
+      <mrow xref="p1.1.m1.1.20.2.cmml" id="p1.1.m1.1.20.2">
+        <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15" mathvariant="normal">∞</mi>
+        <mo xref="p1.1.m1.1.20.2.1.cmml" id="p1.1.m1.1.20.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">G</mi>
+        <mo xref="p1.1.m1.1.20.2.1.cmml" id="p1.1.m1.1.20.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">r</mi>
+        <mo xref="p1.1.m1.1.20.2.1.cmml" id="p1.1.m1.1.20.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">p</mi>
+        <mo xref="p1.1.m1.1.20.2.1.cmml" id="p1.1.m1.1.20.2.1c">⁢</mo>
+        <mi xref="p1.1.m1.1.19.cmml" id="p1.1.m1.1.19">d</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml">
+        <in xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml"/>
+        <apply xref="p1.1.m1.1.20.1" id="p1.1.m1.1.20.1.cmml">
+          <times xref="p1.1.m1.1.20.1.1" id="p1.1.m1.1.20.1.1.cmml"/>
+          <apply xref="p1.1.m1.1.20.1.2" id="p1.1.m1.1.20.1.2.cmml">
+            <times xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+            <apply xref="p1.1.m1.1.20.1.2.1" id="p1.1.m1.1.20.1.2.1.cmml">
+              <times xref="p1.1.m1.1.20.1.2.1.1" id="p1.1.m1.1.20.1.2.1.1.cmml"/>
+              <apply xref="p1.1.m1.1.20.1.2.1.2" id="p1.1.m1.1.20.1.2.1.2.cmml">
+                <csymbol id="p1.1.m1.1.20.1.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <apply id="p1.1.m1.1.20.1.2.1.2.2.cmml">
+                  <csymbol id="p1.1.m1.1.20.1.2.1.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                  <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+                  <apply xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">
+                    <minus xref="p1.1.m1.1.2.1.5" id="p1.1.m1.1.2.1.5.cmml"/>
+                    <apply xref="p1.1.m1.1.2.1.7" id="p1.1.m1.1.2.1.7.cmml">
+                      <times xref="p1.1.m1.1.2.1.7.1" id="p1.1.m1.1.2.1.7.1.cmml"/>
+                      <ci xref="p1.1.m1.1.2.1.1" id="p1.1.m1.1.2.1.1.cmml">𝑑</ci>
+                      <ci xref="p1.1.m1.1.2.1.2" id="p1.1.m1.1.2.1.2.cmml">𝑖</ci>
+                      <ci xref="p1.1.m1.1.2.1.3" id="p1.1.m1.1.2.1.3.cmml">𝑚</ci>
+                      <ci xref="p1.1.m1.1.2.1.4" id="p1.1.m1.1.2.1.4.cmml">𝑋</ci>
+                    </apply>
+                    <ci xref="p1.1.m1.1.2.1.6" id="p1.1.m1.1.2.1.6.cmml">𝑛</ci>
+                  </apply>
+                </apply>
+                <apply xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml">
+                  <times xref="p1.1.m1.1.3.1.5" id="p1.1.m1.1.3.1.5.cmml"/>
+                  <ci xref="p1.1.m1.1.3.1.1" id="p1.1.m1.1.3.1.1.cmml">𝑑</ci>
+                  <ci xref="p1.1.m1.1.3.1.2" id="p1.1.m1.1.3.1.2.cmml">𝑖</ci>
+                  <ci xref="p1.1.m1.1.3.1.3" id="p1.1.m1.1.3.1.3.cmml">𝑓</ci>
+                  <ci xref="p1.1.m1.1.3.1.4" id="p1.1.m1.1.3.1.4.cmml">𝑓</ci>
+                </apply>
+              </apply>
+              <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑋</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.20.1.2.2" id="p1.1.m1.1.20.1.2.2.cmml">
+              <csymbol id="p1.1.m1.1.20.1.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <apply id="p1.1.m1.1.20.1.2.2.2.cmml">
+                <csymbol id="p1.1.m1.1.20.1.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝐶</ci>
+                <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">
+                  <times xref="p1.1.m1.1.9.1.5" id="p1.1.m1.1.9.1.5.cmml"/>
+                  <ci xref="p1.1.m1.1.9.1.1" id="p1.1.m1.1.9.1.1.cmml">𝑑</ci>
+                  <ci xref="p1.1.m1.1.9.1.2" id="p1.1.m1.1.9.1.2.cmml">𝑖</ci>
+                  <ci xref="p1.1.m1.1.9.1.3" id="p1.1.m1.1.9.1.3.cmml">𝑓</ci>
+                  <ci xref="p1.1.m1.1.9.1.4" id="p1.1.m1.1.9.1.4.cmml">𝑓</ci>
+                </apply>
+              </apply>
+              <apply xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">
+                <plus xref="p1.1.m1.1.10.1.2" id="p1.1.m1.1.10.1.2.cmml"/>
+                <ci xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml">𝑛</ci>
+                <cn xref="p1.1.m1.1.10.1.3" id="p1.1.m1.1.10.1.3.cmml" type="integer">1</cn>
+              </apply>
+            </apply>
+          </apply>
+          <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑋</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.20.2" id="p1.1.m1.1.20.2.cmml">
+          <times xref="p1.1.m1.1.20.2.1" id="p1.1.m1.1.20.2.1.cmml"/>
+          <infinity xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml"/>
+          <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝐺</ci>
+          <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝑟</ci>
+          <ci xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">𝑝</ci>
+          <ci xref="p1.1.m1.1.19" id="p1.1.m1.1.19.cmml">𝑑</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+ C^{dimX-n}_{diff}(X)\times C_{diff}^{n+1}(X)\in\infty Grpd</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">whose</p>
+
+<ul xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><li xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><a shape="rect" href="/nlab/show/object" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">object</a>s are field configurations on <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi></mrow><math id="1421746245869657246" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">X</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑋</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">X</annotation>
+  </semantics>
+</math></semantics></math>;</p>
+</li><li xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><a shape="rect" href="/nlab/show/morphism" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">morphism</a>s are <a shape="rect" href="/nlab/show/gauge+transformation" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">gauge transformation</a>s;</p>
+</li><li xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><a shape="rect" href="/nlab/show/2-morphism" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">2-morphism</a>s are gauge transformations of gauge transformation,</p>
+</li><li xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">and so on.</p>
+</li></ul>
+
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">Moreover this cocycle <a shape="rect" href="/nlab/show/infinity-groupoid" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">∞-groupoid</a> is not just a <a shape="rect" href="/nlab/show/geometrically+discrete+infinity-groupoid" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">discrete ∞-groupoid</a> but it naturally has <em xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">smooth structure</em> : it is naturally a <a shape="rect" href="/nlab/show/smooth+infinity-groupoid" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">smooth ∞-groupoid</a>: an <a shape="rect" href="/nlab/show/infinity-stack" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">∞-stack</a> over the <a shape="rect" href="/nlab/show/category" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">category</a> <a shape="rect" href="/nlab/show/Diff" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">SmoothMfd</a>. We shall write</p>
+<div class="maruku-equation" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Conf</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">=</mo><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">[</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></mstyle><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi></msup><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></mstyle><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">dim</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">−</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">−</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn></mrow></msup><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">conn</mi></msub><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">]</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∈</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Smooth</mi><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∞</mn><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Grpd</mi></mrow><math id="-1912021497567914484" display="inline" alttext="\par
+ Conf:=[X,(\mathbf{B}^{n}U(1)\times\mathbf{B}^{dimX-n-1}U(1))_{conn}]\in
+Smooth%
+\infty Grpd" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.39.cmml" id="p1.1.m1.1.39">
+      <mrow xref="p1.1.m1.1.39.2.cmml" id="p1.1.m1.1.39.2">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+        <mo xref="p1.1.m1.1.39.2.1.cmml" id="p1.1.m1.1.39.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">o</mi>
+        <mo xref="p1.1.m1.1.39.2.1.cmml" id="p1.1.m1.1.39.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+        <mo xref="p1.1.m1.1.39.2.1.cmml" id="p1.1.m1.1.39.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">f</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">:=</mo>
+      <mrow xref="p1.1.m1.1.39.3.1.cmml" id="p1.1.m1.1.39.3">
+        <mo id="p1.1.m1.1.7" stretchy="false">[</mo>
+        <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">X</mi>
+        <mo id="p1.1.m1.1.9">,</mo>
+        <msub xref="p1.1.m1.1.39.3.1.cmml" id="p1.1.m1.1.39.3.2">
+          <mrow xref="p1.1.m1.1.39.3.2.2.2.cmml" id="p1.1.m1.1.39.3.2.2">
+            <mo id="p1.1.m1.1.10" stretchy="false">(</mo>
+            <mrow xref="p1.1.m1.1.39.3.2.2.2.cmml" id="p1.1.m1.1.39.3.2.2.2">
+              <mrow xref="p1.1.m1.1.39.3.2.2.2.cmml" id="p1.1.m1.1.39.3.2.2.2.2">
+                <mrow xref="p1.1.m1.1.39.3.2.2.2.cmml" id="p1.1.m1.1.39.3.2.2.2.2.1">
+                  <msup xref="p1.1.m1.1.39.3.2.2.2.cmml" id="p1.1.m1.1.39.3.2.2.2.2.1.2">
+                    <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">𝐁</mi>
+                    <mi xref="p1.1.m1.1.12.1.cmml" id="p1.1.m1.1.12.1">n</mi>
+                  </msup>
+                  <mo xref="p1.1.m1.1.39.3.2.2.2.2.1.1.cmml" id="p1.1.m1.1.39.3.2.2.2.2.1.1">⁢</mo>
+                  <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">U</mi>
+                  <mo xref="p1.1.m1.1.39.3.2.2.2.2.1.1.cmml" id="p1.1.m1.1.39.3.2.2.2.2.1.1a">⁢</mo>
+                  <mrow id="p1.1.m1.1.39.3.2.2.2.2.1.3">
+                    <mo id="p1.1.m1.1.14" stretchy="false">(</mo>
+                    <mn xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">1</mn>
+                    <mo id="p1.1.m1.1.16" stretchy="false">)</mo>
+                  </mrow>
+                </mrow>
+                <mo xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">×</mo>
+                <msup xref="p1.1.m1.1.39.3.2.2.2.cmml" id="p1.1.m1.1.39.3.2.2.2.2.2">
+                  <mi xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">𝐁</mi>
+                  <mrow xref="p1.1.m1.1.39.3.2.2.2.cmml" id="p1.1.m1.1.19.1">
+                    <mrow xref="p1.1.m1.1.39.3.2.2.2.cmml" id="p1.1.m1.1.19.1.9">
+                      <mi xref="p1.1.m1.1.19.1.1.cmml" id="p1.1.m1.1.19.1.1">d</mi>
+                      <mo xref="p1.1.m1.1.19.1.9.1.cmml" id="p1.1.m1.1.19.1.9.1">⁢</mo>
+                      <mi xref="p1.1.m1.1.19.1.2.cmml" id="p1.1.m1.1.19.1.2">i</mi>
+                      <mo xref="p1.1.m1.1.19.1.9.1.cmml" id="p1.1.m1.1.19.1.9.1a">⁢</mo>
+                      <mi xref="p1.1.m1.1.19.1.3.cmml" id="p1.1.m1.1.19.1.3">m</mi>
+                      <mo xref="p1.1.m1.1.19.1.9.1.cmml" id="p1.1.m1.1.19.1.9.1b">⁢</mo>
+                      <mi xref="p1.1.m1.1.19.1.4.cmml" id="p1.1.m1.1.19.1.4">X</mi>
+                    </mrow>
+                    <mo xref="p1.1.m1.1.19.1.5.cmml" id="p1.1.m1.1.19.1.5">-</mo>
+                    <mi xref="p1.1.m1.1.19.1.6.cmml" id="p1.1.m1.1.19.1.6">n</mi>
+                    <mo xref="p1.1.m1.1.19.1.5.cmml" id="p1.1.m1.1.19.1.5a">-</mo>
+                    <mn xref="p1.1.m1.1.19.1.8.cmml" id="p1.1.m1.1.19.1.8">1</mn>
+                  </mrow>
+                </msup>
+              </mrow>
+              <mo xref="p1.1.m1.1.39.3.2.2.2.1.cmml" id="p1.1.m1.1.39.3.2.2.2.1">⁢</mo>
+              <mi xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">U</mi>
+              <mo xref="p1.1.m1.1.39.3.2.2.2.1.cmml" id="p1.1.m1.1.39.3.2.2.2.1a">⁢</mo>
+              <mrow id="p1.1.m1.1.39.3.2.2.2.3">
+                <mo id="p1.1.m1.1.21" stretchy="false">(</mo>
+                <mn xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22">1</mn>
+                <mo id="p1.1.m1.1.23" stretchy="false">)</mo>
+              </mrow>
+            </mrow>
+            <mo id="p1.1.m1.1.24" stretchy="false">)</mo>
+          </mrow>
+          <mrow xref="p1.1.m1.1.39.3.1.cmml" id="p1.1.m1.1.25.1">
+            <mi xref="p1.1.m1.1.25.1.1.cmml" id="p1.1.m1.1.25.1.1">c</mi>
+            <mo xref="p1.1.m1.1.25.1.5.cmml" id="p1.1.m1.1.25.1.5">⁢</mo>
+            <mi xref="p1.1.m1.1.25.1.2.cmml" id="p1.1.m1.1.25.1.2">o</mi>
+            <mo xref="p1.1.m1.1.25.1.5.cmml" id="p1.1.m1.1.25.1.5a">⁢</mo>
+            <mi xref="p1.1.m1.1.25.1.3.cmml" id="p1.1.m1.1.25.1.3">n</mi>
+            <mo xref="p1.1.m1.1.25.1.5.cmml" id="p1.1.m1.1.25.1.5b">⁢</mo>
+            <mi xref="p1.1.m1.1.25.1.4.cmml" id="p1.1.m1.1.25.1.4">n</mi>
+          </mrow>
+        </msub>
+        <mo id="p1.1.m1.1.26" stretchy="false">]</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.27.cmml" id="p1.1.m1.1.27">∈</mo>
+      <mrow xref="p1.1.m1.1.39.4.cmml" id="p1.1.m1.1.39.4">
+        <mi xref="p1.1.m1.1.28.cmml" id="p1.1.m1.1.28">S</mi>
+        <mo xref="p1.1.m1.1.39.4.1.cmml" id="p1.1.m1.1.39.4.1">⁢</mo>
+        <mi xref="p1.1.m1.1.29.cmml" id="p1.1.m1.1.29">m</mi>
+        <mo xref="p1.1.m1.1.39.4.1.cmml" id="p1.1.m1.1.39.4.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.30.cmml" id="p1.1.m1.1.30">o</mi>
+        <mo xref="p1.1.m1.1.39.4.1.cmml" id="p1.1.m1.1.39.4.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.31.cmml" id="p1.1.m1.1.31">o</mi>
+        <mo xref="p1.1.m1.1.39.4.1.cmml" id="p1.1.m1.1.39.4.1c">⁢</mo>
+        <mi xref="p1.1.m1.1.32.cmml" id="p1.1.m1.1.32">t</mi>
+        <mo xref="p1.1.m1.1.39.4.1.cmml" id="p1.1.m1.1.39.4.1d">⁢</mo>
+        <mi xref="p1.1.m1.1.33.cmml" id="p1.1.m1.1.33">h</mi>
+        <mo xref="p1.1.m1.1.39.4.1.cmml" id="p1.1.m1.1.39.4.1e">⁢</mo>
+        <mi xref="p1.1.m1.1.34.cmml" id="p1.1.m1.1.34" mathvariant="normal">∞</mi>
+        <mo xref="p1.1.m1.1.39.4.1.cmml" id="p1.1.m1.1.39.4.1f">⁢</mo>
+        <mi xref="p1.1.m1.1.35.cmml" id="p1.1.m1.1.35">G</mi>
+        <mo xref="p1.1.m1.1.39.4.1.cmml" id="p1.1.m1.1.39.4.1g">⁢</mo>
+        <mi xref="p1.1.m1.1.36.cmml" id="p1.1.m1.1.36">r</mi>
+        <mo xref="p1.1.m1.1.39.4.1.cmml" id="p1.1.m1.1.39.4.1h">⁢</mo>
+        <mi xref="p1.1.m1.1.37.cmml" id="p1.1.m1.1.37">p</mi>
+        <mo xref="p1.1.m1.1.39.4.1.cmml" id="p1.1.m1.1.39.4.1i">⁢</mo>
+        <mi xref="p1.1.m1.1.38.cmml" id="p1.1.m1.1.38">d</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.39" id="p1.1.m1.1.39.cmml">
+        <and xref="p1.1.m1.1.39" id="p1.1.m1.1.39a.cmml"/>
+        <apply xref="p1.1.m1.1.39" id="p1.1.m1.1.39b.cmml">
+          <csymbol xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml" cd="latexml">assign</csymbol>
+          <apply xref="p1.1.m1.1.39.2" id="p1.1.m1.1.39.2.cmml">
+            <times xref="p1.1.m1.1.39.2.1" id="p1.1.m1.1.39.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+            <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑓</ci>
+          </apply>
+          <interval xref="p1.1.m1.1.39.3" id="p1.1.m1.1.39.3.1.cmml" closure="closed">
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑋</ci>
+            <apply xref="p1.1.m1.1.39.3" id="p1.1.m1.1.39.3.2.cmml">
+              <csymbol id="p1.1.m1.1.39.3.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <apply xref="p1.1.m1.1.39.3.2.2" id="p1.1.m1.1.39.3.2.2.2.cmml">
+                <times xref="p1.1.m1.1.39.3.2.2.2.1" id="p1.1.m1.1.39.3.2.2.2.1.cmml"/>
+                <apply xref="p1.1.m1.1.39.3.2.2" id="p1.1.m1.1.39.3.2.2.2.2.cmml">
+                  <times xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml"/>
+                  <apply xref="p1.1.m1.1.39.3.2.2" id="p1.1.m1.1.39.3.2.2.2.2.1.cmml">
+                    <times xref="p1.1.m1.1.39.3.2.2.2.2.1.1" id="p1.1.m1.1.39.3.2.2.2.2.1.1.cmml"/>
+                    <apply xref="p1.1.m1.1.39.3.2.2" id="p1.1.m1.1.39.3.2.2.2.2.1.2.cmml">
+                      <csymbol id="p1.1.m1.1.39.3.2.2.2.2.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                      <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝐁</ci>
+                      <ci xref="p1.1.m1.1.12.1" id="p1.1.m1.1.12.1.cmml">𝑛</ci>
+                    </apply>
+                    <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑈</ci>
+                    <cn xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml" type="integer">1</cn>
+                  </apply>
+                  <apply xref="p1.1.m1.1.39.3.2.2" id="p1.1.m1.1.39.3.2.2.2.2.2.cmml">
+                    <csymbol id="p1.1.m1.1.39.3.2.2.2.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                    <ci xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">𝐁</ci>
+                    <apply xref="p1.1.m1.1.39.3.2.2" id="p1.1.m1.1.19.1.cmml">
+                      <minus xref="p1.1.m1.1.19.1.5" id="p1.1.m1.1.19.1.5.cmml"/>
+                      <apply xref="p1.1.m1.1.39.3.2.2" id="p1.1.m1.1.19.1.9.cmml">
+                        <times xref="p1.1.m1.1.19.1.9.1" id="p1.1.m1.1.19.1.9.1.cmml"/>
+                        <ci xref="p1.1.m1.1.19.1.1" id="p1.1.m1.1.19.1.1.cmml">𝑑</ci>
+                        <ci xref="p1.1.m1.1.19.1.2" id="p1.1.m1.1.19.1.2.cmml">𝑖</ci>
+                        <ci xref="p1.1.m1.1.19.1.3" id="p1.1.m1.1.19.1.3.cmml">𝑚</ci>
+                        <ci xref="p1.1.m1.1.19.1.4" id="p1.1.m1.1.19.1.4.cmml">𝑋</ci>
+                      </apply>
+                      <ci xref="p1.1.m1.1.19.1.6" id="p1.1.m1.1.19.1.6.cmml">𝑛</ci>
+                      <cn xref="p1.1.m1.1.19.1.8" id="p1.1.m1.1.19.1.8.cmml" type="integer">1</cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml">𝑈</ci>
+                <cn xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml" type="integer">1</cn>
+              </apply>
+              <apply xref="p1.1.m1.1.39.3" id="p1.1.m1.1.25.1.cmml">
+                <times xref="p1.1.m1.1.25.1.5" id="p1.1.m1.1.25.1.5.cmml"/>
+                <ci xref="p1.1.m1.1.25.1.1" id="p1.1.m1.1.25.1.1.cmml">𝑐</ci>
+                <ci xref="p1.1.m1.1.25.1.2" id="p1.1.m1.1.25.1.2.cmml">𝑜</ci>
+                <ci xref="p1.1.m1.1.25.1.3" id="p1.1.m1.1.25.1.3.cmml">𝑛</ci>
+                <ci xref="p1.1.m1.1.25.1.4" id="p1.1.m1.1.25.1.4.cmml">𝑛</ci>
+              </apply>
+            </apply>
+          </interval>
+        </apply>
+        <apply xref="p1.1.m1.1.39" id="p1.1.m1.1.39c.cmml">
+          <in xref="p1.1.m1.1.27" id="p1.1.m1.1.27.cmml"/>
+          <share xref="p1.1.m1.1.39" id="p1.1.m1.1.39d.cmml" href="#p1.1.m1.1.39.3.cmml"/>
+          <apply xref="p1.1.m1.1.39.4" id="p1.1.m1.1.39.4.cmml">
+            <times xref="p1.1.m1.1.39.4.1" id="p1.1.m1.1.39.4.1.cmml"/>
+            <ci xref="p1.1.m1.1.28" id="p1.1.m1.1.28.cmml">𝑆</ci>
+            <ci xref="p1.1.m1.1.29" id="p1.1.m1.1.29.cmml">𝑚</ci>
+            <ci xref="p1.1.m1.1.30" id="p1.1.m1.1.30.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.31" id="p1.1.m1.1.31.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.32" id="p1.1.m1.1.32.cmml">𝑡</ci>
+            <ci xref="p1.1.m1.1.33" id="p1.1.m1.1.33.cmml">ℎ</ci>
+            <infinity xref="p1.1.m1.1.34" id="p1.1.m1.1.34.cmml"/>
+            <ci xref="p1.1.m1.1.35" id="p1.1.m1.1.35.cmml">𝐺</ci>
+            <ci xref="p1.1.m1.1.36" id="p1.1.m1.1.36.cmml">𝑟</ci>
+            <ci xref="p1.1.m1.1.37" id="p1.1.m1.1.37.cmml">𝑝</ci>
+            <ci xref="p1.1.m1.1.38" id="p1.1.m1.1.38.cmml">𝑑</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+ Conf:=[X,(\mathbf{B}^{n}U(1)\times\mathbf{B}^{dimX-n-1}U(1))_{conn}]\in
+Smooth%
+\infty Grpd</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">for this smooth <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∞</mn></mrow><math id="4042099869842854128" display="inline" alttext="\infty" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" mathvariant="normal">∞</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <infinity xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\infty</annotation>
+  </semantics>
+</math></semantics></math>-groupoid of configuration of the physical system – defined as the <a shape="rect" href="/nlab/show/internal+hom" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">internal hom</a> in terms of the <a shape="rect" href="http://ncatlab.org/nlab/show/(infinity%2C1)-topos#ClosedMonoidalStructure" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">closed monoidal structure on the (∞,1)-topos</a> <a shape="rect" href="/nlab/show/smooth+infinity-groupoid" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">Smooth∞Grpd</a> of <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∈</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">SmoothMfd</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">↪</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Smooth</mi><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∞</mn><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Grpd</mi></mrow><math id="8899567677749517920" display="inline" alttext="X\in SmoothMfd\hookrightarrow Smooth\infty Grpd" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.24.cmml" id="p1.1.m1.1.24">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">X</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mrow xref="p1.1.m1.1.24.2.cmml" id="p1.1.m1.1.24.2">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">S</mi>
+        <mo xref="p1.1.m1.1.24.2.1.cmml" id="p1.1.m1.1.24.2.1">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">m</mi>
+        <mo xref="p1.1.m1.1.24.2.1.cmml" id="p1.1.m1.1.24.2.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">o</mi>
+        <mo xref="p1.1.m1.1.24.2.1.cmml" id="p1.1.m1.1.24.2.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">o</mi>
+        <mo xref="p1.1.m1.1.24.2.1.cmml" id="p1.1.m1.1.24.2.1c">⁢</mo>
+        <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">t</mi>
+        <mo xref="p1.1.m1.1.24.2.1.cmml" id="p1.1.m1.1.24.2.1d">⁢</mo>
+        <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">h</mi>
+        <mo xref="p1.1.m1.1.24.2.1.cmml" id="p1.1.m1.1.24.2.1e">⁢</mo>
+        <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">M</mi>
+        <mo xref="p1.1.m1.1.24.2.1.cmml" id="p1.1.m1.1.24.2.1f">⁢</mo>
+        <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">f</mi>
+        <mo xref="p1.1.m1.1.24.2.1.cmml" id="p1.1.m1.1.24.2.1g">⁢</mo>
+        <mi xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">d</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">↪</mo>
+      <mrow xref="p1.1.m1.1.24.3.cmml" id="p1.1.m1.1.24.3">
+        <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">S</mi>
+        <mo xref="p1.1.m1.1.24.3.1.cmml" id="p1.1.m1.1.24.3.1">⁢</mo>
+        <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">m</mi>
+        <mo xref="p1.1.m1.1.24.3.1.cmml" id="p1.1.m1.1.24.3.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">o</mi>
+        <mo xref="p1.1.m1.1.24.3.1.cmml" id="p1.1.m1.1.24.3.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">o</mi>
+        <mo xref="p1.1.m1.1.24.3.1.cmml" id="p1.1.m1.1.24.3.1c">⁢</mo>
+        <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">t</mi>
+        <mo xref="p1.1.m1.1.24.3.1.cmml" id="p1.1.m1.1.24.3.1d">⁢</mo>
+        <mi xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">h</mi>
+        <mo xref="p1.1.m1.1.24.3.1.cmml" id="p1.1.m1.1.24.3.1e">⁢</mo>
+        <mi xref="p1.1.m1.1.19.cmml" id="p1.1.m1.1.19" mathvariant="normal">∞</mi>
+        <mo xref="p1.1.m1.1.24.3.1.cmml" id="p1.1.m1.1.24.3.1f">⁢</mo>
+        <mi xref="p1.1.m1.1.20.cmml" id="p1.1.m1.1.20">G</mi>
+        <mo xref="p1.1.m1.1.24.3.1.cmml" id="p1.1.m1.1.24.3.1g">⁢</mo>
+        <mi xref="p1.1.m1.1.21.cmml" id="p1.1.m1.1.21">r</mi>
+        <mo xref="p1.1.m1.1.24.3.1.cmml" id="p1.1.m1.1.24.3.1h">⁢</mo>
+        <mi xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22">p</mi>
+        <mo xref="p1.1.m1.1.24.3.1.cmml" id="p1.1.m1.1.24.3.1i">⁢</mo>
+        <mi xref="p1.1.m1.1.23.cmml" id="p1.1.m1.1.23">d</mi>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.24" id="p1.1.m1.1.24.cmml">
+        <and xref="p1.1.m1.1.24" id="p1.1.m1.1.24a.cmml"/>
+        <apply xref="p1.1.m1.1.24" id="p1.1.m1.1.24b.cmml">
+          <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑋</ci>
+          <apply xref="p1.1.m1.1.24.2" id="p1.1.m1.1.24.2.cmml">
+            <times xref="p1.1.m1.1.24.2.1" id="p1.1.m1.1.24.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑆</ci>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑚</ci>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑡</ci>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">ℎ</ci>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑀</ci>
+            <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑓</ci>
+            <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">𝑑</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.24" id="p1.1.m1.1.24c.cmml">
+          <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">↪</ci>
+          <share xref="p1.1.m1.1.24" id="p1.1.m1.1.24d.cmml" href="#p1.1.m1.1.24.2.cmml"/>
+          <apply xref="p1.1.m1.1.24.3" id="p1.1.m1.1.24.3.cmml">
+            <times xref="p1.1.m1.1.24.3.1" id="p1.1.m1.1.24.3.1.cmml"/>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑆</ci>
+            <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑚</ci>
+            <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝑡</ci>
+            <ci xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">ℎ</ci>
+            <infinity xref="p1.1.m1.1.19" id="p1.1.m1.1.19.cmml"/>
+            <ci xref="p1.1.m1.1.20" id="p1.1.m1.1.20.cmml">𝐺</ci>
+            <ci xref="p1.1.m1.1.21" id="p1.1.m1.1.21.cmml">𝑟</ci>
+            <ci xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml">𝑝</ci>
+            <ci xref="p1.1.m1.1.23" id="p1.1.m1.1.23.cmml">𝑑</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">X\in SmoothMfd\hookrightarrow Smooth\infty Grpd</annotation>
+  </semantics>
+</math></semantics></math> into the target object of the higher <a shape="rect" href="/nlab/show/gauge+theory" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">gauge theory</a>, (this object is discussed in detail <a shape="rect" href="http://ncatlab.org/nlab/show/smooth+infinity-groupoid#StrucDifferentialCohomology" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">here</a>; it is presented under the <a shape="rect" href="/nlab/show/Dold-Kan+correspondence" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">Dold-Kan correspondence</a> by the <a shape="rect" href="/nlab/show/Deligne+cohomology" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">Deligne complex</a> of sheaves on <a shape="rect" href="/nlab/show/CartSp" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">CartSp</a>).</p>
+
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">This smooth structure is characterized by saying that for any <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∈</mo></mrow><math id="-6414660605270148556" display="inline" alttext="U\in" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+        <csymbol xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" cd="latexml">absent</csymbol>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U\in</annotation>
+  </semantics>
+</math></semantics></math> <a shape="rect" href="/nlab/show/Diff" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">SmoothMfd</a> the <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi></mrow><math id="787628525951352007" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
+  </semantics>
+</math></semantics></math>-parameterized smooth families of field configurations, gauge transformations, etc. form the <a shape="rect" href="/nlab/show/infinity-groupoid" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">∞-groupoid</a></p>
+<div class="maruku-equation" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Conf</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">≃</mo><msubsup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">diff</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">dim</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">−</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi></mrow></msubsup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><msubsup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">diff</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">+</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn></mrow></msubsup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="1907135772985922349" display="inline" alttext="\par
+ Conf(U)\simeq C^{dimX-n}_{diff}(U\times X)\times C_{diff}^{n+1}(U\times X)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.26.cmml" id="p1.1.m1.1.26">
+      <mrow xref="p1.1.m1.1.26.1.cmml" id="p1.1.m1.1.26.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+        <mo xref="p1.1.m1.1.26.1.1.cmml" id="p1.1.m1.1.26.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">o</mi>
+        <mo xref="p1.1.m1.1.26.1.1.cmml" id="p1.1.m1.1.26.1.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+        <mo xref="p1.1.m1.1.26.1.1.cmml" id="p1.1.m1.1.26.1.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">f</mi>
+        <mo xref="p1.1.m1.1.26.1.1.cmml" id="p1.1.m1.1.26.1.1c">⁢</mo>
+        <mrow id="p1.1.m1.1.26.1.2">
+          <mo id="p1.1.m1.1.5" stretchy="false">(</mo>
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">U</mi>
+          <mo id="p1.1.m1.1.7" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">≃</mo>
+      <mrow xref="p1.1.m1.1.26.2.cmml" id="p1.1.m1.1.26.2">
+        <mrow xref="p1.1.m1.1.26.2.2.cmml" id="p1.1.m1.1.26.2.2">
+          <mrow xref="p1.1.m1.1.26.2.2.1.cmml" id="p1.1.m1.1.26.2.2.1">
+            <msubsup xref="p1.1.m1.1.26.2.2.1.2.cmml" id="p1.1.m1.1.26.2.2.1.2">
+              <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">C</mi>
+              <mrow xref="p1.1.m1.1.11.1.cmml" id="p1.1.m1.1.11.1">
+                <mi xref="p1.1.m1.1.11.1.1.cmml" id="p1.1.m1.1.11.1.1">d</mi>
+                <mo xref="p1.1.m1.1.11.1.5.cmml" id="p1.1.m1.1.11.1.5">⁢</mo>
+                <mi xref="p1.1.m1.1.11.1.2.cmml" id="p1.1.m1.1.11.1.2">i</mi>
+                <mo xref="p1.1.m1.1.11.1.5.cmml" id="p1.1.m1.1.11.1.5a">⁢</mo>
+                <mi xref="p1.1.m1.1.11.1.3.cmml" id="p1.1.m1.1.11.1.3">f</mi>
+                <mo xref="p1.1.m1.1.11.1.5.cmml" id="p1.1.m1.1.11.1.5b">⁢</mo>
+                <mi xref="p1.1.m1.1.11.1.4.cmml" id="p1.1.m1.1.11.1.4">f</mi>
+              </mrow>
+              <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">
+                <mrow xref="p1.1.m1.1.10.1.7.cmml" id="p1.1.m1.1.10.1.7">
+                  <mi xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">d</mi>
+                  <mo xref="p1.1.m1.1.10.1.7.1.cmml" id="p1.1.m1.1.10.1.7.1">⁢</mo>
+                  <mi xref="p1.1.m1.1.10.1.2.cmml" id="p1.1.m1.1.10.1.2">i</mi>
+                  <mo xref="p1.1.m1.1.10.1.7.1.cmml" id="p1.1.m1.1.10.1.7.1a">⁢</mo>
+                  <mi xref="p1.1.m1.1.10.1.3.cmml" id="p1.1.m1.1.10.1.3">m</mi>
+                  <mo xref="p1.1.m1.1.10.1.7.1.cmml" id="p1.1.m1.1.10.1.7.1b">⁢</mo>
+                  <mi xref="p1.1.m1.1.10.1.4.cmml" id="p1.1.m1.1.10.1.4">X</mi>
+                </mrow>
+                <mo xref="p1.1.m1.1.10.1.5.cmml" id="p1.1.m1.1.10.1.5">-</mo>
+                <mi xref="p1.1.m1.1.10.1.6.cmml" id="p1.1.m1.1.10.1.6">n</mi>
+              </mrow>
+            </msubsup>
+            <mo xref="p1.1.m1.1.26.2.2.1.1.cmml" id="p1.1.m1.1.26.2.2.1.1">⁢</mo>
+            <mrow xref="p1.1.m1.1.26.2.2.1.3.2.cmml" id="p1.1.m1.1.26.2.2.1.3">
+              <mo id="p1.1.m1.1.12" stretchy="false">(</mo>
+              <mrow xref="p1.1.m1.1.26.2.2.1.3.2.cmml" id="p1.1.m1.1.26.2.2.1.3.2">
+                <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">U</mi>
+                <mo xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">×</mo>
+                <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">X</mi>
+              </mrow>
+              <mo id="p1.1.m1.1.16" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">×</mo>
+          <msubsup xref="p1.1.m1.1.26.2.2.2.cmml" id="p1.1.m1.1.26.2.2.2">
+            <mi xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">C</mi>
+            <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19.1">
+              <mi xref="p1.1.m1.1.19.1.1.cmml" id="p1.1.m1.1.19.1.1">d</mi>
+              <mo xref="p1.1.m1.1.19.1.5.cmml" id="p1.1.m1.1.19.1.5">⁢</mo>
+              <mi xref="p1.1.m1.1.19.1.2.cmml" id="p1.1.m1.1.19.1.2">i</mi>
+              <mo xref="p1.1.m1.1.19.1.5.cmml" id="p1.1.m1.1.19.1.5a">⁢</mo>
+              <mi xref="p1.1.m1.1.19.1.3.cmml" id="p1.1.m1.1.19.1.3">f</mi>
+              <mo xref="p1.1.m1.1.19.1.5.cmml" id="p1.1.m1.1.19.1.5b">⁢</mo>
+              <mi xref="p1.1.m1.1.19.1.4.cmml" id="p1.1.m1.1.19.1.4">f</mi>
+            </mrow>
+            <mrow xref="p1.1.m1.1.20.1.cmml" id="p1.1.m1.1.20.1">
+              <mi xref="p1.1.m1.1.20.1.1.cmml" id="p1.1.m1.1.20.1.1">n</mi>
+              <mo xref="p1.1.m1.1.20.1.2.cmml" id="p1.1.m1.1.20.1.2">+</mo>
+              <mn xref="p1.1.m1.1.20.1.3.cmml" id="p1.1.m1.1.20.1.3">1</mn>
+            </mrow>
+          </msubsup>
+        </mrow>
+        <mo xref="p1.1.m1.1.26.2.1.cmml" id="p1.1.m1.1.26.2.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.26.2.3.2.cmml" id="p1.1.m1.1.26.2.3">
+          <mo id="p1.1.m1.1.21" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.26.2.3.2.cmml" id="p1.1.m1.1.26.2.3.2">
+            <mi xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22">U</mi>
+            <mo xref="p1.1.m1.1.23.cmml" id="p1.1.m1.1.23">×</mo>
+            <mi xref="p1.1.m1.1.24.cmml" id="p1.1.m1.1.24">X</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.25" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.26" id="p1.1.m1.1.26.cmml">
+        <csymbol xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml" cd="latexml">similar-to-or-equals</csymbol>
+        <apply xref="p1.1.m1.1.26.1" id="p1.1.m1.1.26.1.cmml">
+          <times xref="p1.1.m1.1.26.1.1" id="p1.1.m1.1.26.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑜</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑓</ci>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑈</ci>
+        </apply>
+        <apply xref="p1.1.m1.1.26.2" id="p1.1.m1.1.26.2.cmml">
+          <times xref="p1.1.m1.1.26.2.1" id="p1.1.m1.1.26.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.26.2.2" id="p1.1.m1.1.26.2.2.cmml">
+            <times xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml"/>
+            <apply xref="p1.1.m1.1.26.2.2.1" id="p1.1.m1.1.26.2.2.1.cmml">
+              <times xref="p1.1.m1.1.26.2.2.1.1" id="p1.1.m1.1.26.2.2.1.1.cmml"/>
+              <apply xref="p1.1.m1.1.26.2.2.1.2" id="p1.1.m1.1.26.2.2.1.2.cmml">
+                <csymbol id="p1.1.m1.1.26.2.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <apply id="p1.1.m1.1.26.2.2.1.2.2.cmml">
+                  <csymbol id="p1.1.m1.1.26.2.2.1.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                  <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝐶</ci>
+                  <apply xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">
+                    <minus xref="p1.1.m1.1.10.1.5" id="p1.1.m1.1.10.1.5.cmml"/>
+                    <apply xref="p1.1.m1.1.10.1.7" id="p1.1.m1.1.10.1.7.cmml">
+                      <times xref="p1.1.m1.1.10.1.7.1" id="p1.1.m1.1.10.1.7.1.cmml"/>
+                      <ci xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml">𝑑</ci>
+                      <ci xref="p1.1.m1.1.10.1.2" id="p1.1.m1.1.10.1.2.cmml">𝑖</ci>
+                      <ci xref="p1.1.m1.1.10.1.3" id="p1.1.m1.1.10.1.3.cmml">𝑚</ci>
+                      <ci xref="p1.1.m1.1.10.1.4" id="p1.1.m1.1.10.1.4.cmml">𝑋</ci>
+                    </apply>
+                    <ci xref="p1.1.m1.1.10.1.6" id="p1.1.m1.1.10.1.6.cmml">𝑛</ci>
+                  </apply>
+                </apply>
+                <apply xref="p1.1.m1.1.11.1" id="p1.1.m1.1.11.1.cmml">
+                  <times xref="p1.1.m1.1.11.1.5" id="p1.1.m1.1.11.1.5.cmml"/>
+                  <ci xref="p1.1.m1.1.11.1.1" id="p1.1.m1.1.11.1.1.cmml">𝑑</ci>
+                  <ci xref="p1.1.m1.1.11.1.2" id="p1.1.m1.1.11.1.2.cmml">𝑖</ci>
+                  <ci xref="p1.1.m1.1.11.1.3" id="p1.1.m1.1.11.1.3.cmml">𝑓</ci>
+                  <ci xref="p1.1.m1.1.11.1.4" id="p1.1.m1.1.11.1.4.cmml">𝑓</ci>
+                </apply>
+              </apply>
+              <apply xref="p1.1.m1.1.26.2.2.1.3" id="p1.1.m1.1.26.2.2.1.3.2.cmml">
+                <times xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml"/>
+                <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑈</ci>
+                <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑋</ci>
+              </apply>
+            </apply>
+            <apply xref="p1.1.m1.1.26.2.2.2" id="p1.1.m1.1.26.2.2.2.cmml">
+              <csymbol id="p1.1.m1.1.26.2.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <apply id="p1.1.m1.1.26.2.2.2.2.cmml">
+                <csymbol id="p1.1.m1.1.26.2.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">𝐶</ci>
+                <apply xref="p1.1.m1.1.19.1" id="p1.1.m1.1.19.1.cmml">
+                  <times xref="p1.1.m1.1.19.1.5" id="p1.1.m1.1.19.1.5.cmml"/>
+                  <ci xref="p1.1.m1.1.19.1.1" id="p1.1.m1.1.19.1.1.cmml">𝑑</ci>
+                  <ci xref="p1.1.m1.1.19.1.2" id="p1.1.m1.1.19.1.2.cmml">𝑖</ci>
+                  <ci xref="p1.1.m1.1.19.1.3" id="p1.1.m1.1.19.1.3.cmml">𝑓</ci>
+                  <ci xref="p1.1.m1.1.19.1.4" id="p1.1.m1.1.19.1.4.cmml">𝑓</ci>
+                </apply>
+              </apply>
+              <apply xref="p1.1.m1.1.20.1" id="p1.1.m1.1.20.1.cmml">
+                <plus xref="p1.1.m1.1.20.1.2" id="p1.1.m1.1.20.1.2.cmml"/>
+                <ci xref="p1.1.m1.1.20.1.1" id="p1.1.m1.1.20.1.1.cmml">𝑛</ci>
+                <cn xref="p1.1.m1.1.20.1.3" id="p1.1.m1.1.20.1.3.cmml" type="integer">1</cn>
+              </apply>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.26.2.3" id="p1.1.m1.1.26.2.3.2.cmml">
+            <times xref="p1.1.m1.1.23" id="p1.1.m1.1.23.cmml"/>
+            <ci xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml">𝑈</ci>
+            <ci xref="p1.1.m1.1.24" id="p1.1.m1.1.24.cmml">𝑋</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+ Conf(U)\simeq C^{dimX-n}_{diff}(U\times X)\times C_{diff}^{n+1}(U\times X)</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">of gauge fields on the <a shape="rect" href="/nlab/show/cartesian+product" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">product</a> of <a shape="rect" href="/nlab/show/spacetime" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">spacetime</a> <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi></mrow><math id="-7566457971925505611" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">X</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑋</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">X</annotation>
+  </semantics>
+</math></semantics></math> with the parameter space <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi></mrow><math id="-8015034181434901559" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
+  </semantics>
+</math></semantics></math>. (See for instance <a shape="rect" href="/nlab/show/Lie+integration" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">Lie integration</a> and <a shape="rect" href="/nlab/show/connection+on+a+smooth+principal+infinity-bundle" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">connection on an ∞-bundle</a> for details on how differential forms on <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi></mrow><math id="-7615238940482683641" display="inline" alttext="U\times X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">×</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">X</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">
+        <times xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑋</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U\times X</annotation>
+  </semantics>
+</math></semantics></math> encode <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi></mrow><math id="-5380628485901227798" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
+  </semantics>
+</math></semantics></math>-families of forms on <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi></mrow><math id="7478690658092571609" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">X</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑋</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">X</annotation>
+  </semantics>
+</math></semantics></math>).</p>
+
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">This way the configuration space of higher electromagnetism in the presence of electric and magnetic charge is naturally incarnated as an object in the <a shape="rect" href="/nlab/show/cohesive+%28infinity%2C1%29-topos" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">cohesive (∞,1)-topos</a> of <a shape="rect" href="/nlab/show/smooth+infinity-groupoid" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">smooth ∞-groupoid</a>s, and accordingly all the <a shape="rect" href="http://nlab.mathforge.org/nlab/show/cohesive%20(infinity,1)-topos#Structures" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">differential geometric structures</a> in cohesive <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∞</mn><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="274562674293307522" display="inline" alttext="(\infty,1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.1.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2" mathvariant="normal">∞</mi>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.6" id="p1.1.m1.1.6.1.cmml" closure="open">
+        <infinity xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\infty,1)</annotation>
+  </semantics>
+</math></semantics></math>-topos are available. In particular we may speak of <a shape="rect" href="/nlab/show/circle+n-bundle+with+connection" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">line bundle with connection</a> on <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Conf</mi></mrow><math id="-4678132781650698183" display="inline" alttext="Conf" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">o</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">f</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑜</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑓</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Conf</annotation>
+  </semantics>
+</math></semantics></math>, gevin for instance by morphisms</p>
+<div class="maruku-equation" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Anom</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mover xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">j</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">^</mo></mover><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></msub></mrow></msub><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Conf</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mstyle mathvariant="bold" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></mstyle><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">conn</mi></msub></mrow><math id="-3600345123360721739" display="inline" alttext="\par
+ Anom_{\hat{j}_{B}}:Conf\to\mathbf{B}U(1)_{conn}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">
+      <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">A</mi>
+        <mo xref="p1.1.m1.1.18.1.1.cmml" id="p1.1.m1.1.18.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+        <mo xref="p1.1.m1.1.18.1.1.cmml" id="p1.1.m1.1.18.1.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">o</mi>
+        <mo xref="p1.1.m1.1.18.1.1.cmml" id="p1.1.m1.1.18.1.1b">⁢</mo>
+        <msub xref="p1.1.m1.1.18.1.2.cmml" id="p1.1.m1.1.18.1.2">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">m</mi>
+          <msub xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+            <mover xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1" accent="true">
+              <mi xref="p1.1.m1.1.5.1.1.2.cmml" id="p1.1.m1.1.5.1.1.2">j</mi>
+              <mo xref="p1.1.m1.1.5.1.1.1.cmml" id="p1.1.m1.1.5.1.1.1" stretchy="false">^</mo>
+            </mover>
+            <mi xref="p1.1.m1.1.5.1.2.1.cmml" id="p1.1.m1.1.5.1.2.1">B</mi>
+          </msub>
+        </msub>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">:</mo>
+      <mrow xref="p1.1.m1.1.18.2.cmml" id="p1.1.m1.1.18.2">
+        <mrow xref="p1.1.m1.1.18.2.1.cmml" id="p1.1.m1.1.18.2.1">
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">C</mi>
+          <mo xref="p1.1.m1.1.18.2.1.1.cmml" id="p1.1.m1.1.18.2.1.1">⁢</mo>
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">o</mi>
+          <mo xref="p1.1.m1.1.18.2.1.1.cmml" id="p1.1.m1.1.18.2.1.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">n</mi>
+          <mo xref="p1.1.m1.1.18.2.1.1.cmml" id="p1.1.m1.1.18.2.1.1b">⁢</mo>
+          <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">f</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">→</mo>
+        <mrow xref="p1.1.m1.1.18.2.2.cmml" id="p1.1.m1.1.18.2.2">
+          <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">𝐁</mi>
+          <mo xref="p1.1.m1.1.18.2.2.1.cmml" id="p1.1.m1.1.18.2.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">U</mi>
+          <mo xref="p1.1.m1.1.18.2.2.1.cmml" id="p1.1.m1.1.18.2.2.1a">⁢</mo>
+          <msub xref="p1.1.m1.1.18.2.2.2.cmml" id="p1.1.m1.1.18.2.2.2">
+            <mrow id="p1.1.m1.1.18.2.2.2.2">
+              <mo id="p1.1.m1.1.14" stretchy="false">(</mo>
+              <mn xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">1</mn>
+              <mo id="p1.1.m1.1.16" stretchy="false">)</mo>
+            </mrow>
+            <mrow xref="p1.1.m1.1.17.1.cmml" id="p1.1.m1.1.17.1">
+              <mi xref="p1.1.m1.1.17.1.1.cmml" id="p1.1.m1.1.17.1.1">c</mi>
+              <mo xref="p1.1.m1.1.17.1.5.cmml" id="p1.1.m1.1.17.1.5">⁢</mo>
+              <mi xref="p1.1.m1.1.17.1.2.cmml" id="p1.1.m1.1.17.1.2">o</mi>
+              <mo xref="p1.1.m1.1.17.1.5.cmml" id="p1.1.m1.1.17.1.5a">⁢</mo>
+              <mi xref="p1.1.m1.1.17.1.3.cmml" id="p1.1.m1.1.17.1.3">n</mi>
+              <mo xref="p1.1.m1.1.17.1.5.cmml" id="p1.1.m1.1.17.1.5b">⁢</mo>
+              <mi xref="p1.1.m1.1.17.1.4.cmml" id="p1.1.m1.1.17.1.4">n</mi>
+            </mrow>
+          </msub>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">:</ci>
+        <apply xref="p1.1.m1.1.18.1" id="p1.1.m1.1.18.1.cmml">
+          <times xref="p1.1.m1.1.18.1.1" id="p1.1.m1.1.18.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐴</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑜</ci>
+          <apply xref="p1.1.m1.1.18.1.2" id="p1.1.m1.1.18.1.2.cmml">
+            <csymbol id="p1.1.m1.1.18.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑚</ci>
+            <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+              <csymbol id="p1.1.m1.1.5.1.3.cmml" cd="ambiguous">subscript</csymbol>
+              <apply xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml">
+                <ci xref="p1.1.m1.1.5.1.1.1" id="p1.1.m1.1.5.1.1.1.cmml">^</ci>
+                <ci xref="p1.1.m1.1.5.1.1.2" id="p1.1.m1.1.5.1.1.2.cmml">𝑗</ci>
+              </apply>
+              <ci xref="p1.1.m1.1.5.1.2.1" id="p1.1.m1.1.5.1.2.1.cmml">𝐵</ci>
+            </apply>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.18.2" id="p1.1.m1.1.18.2.cmml">
+          <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">→</ci>
+          <apply xref="p1.1.m1.1.18.2.1" id="p1.1.m1.1.18.2.1.cmml">
+            <times xref="p1.1.m1.1.18.2.1.1" id="p1.1.m1.1.18.2.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝐶</ci>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑛</ci>
+            <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑓</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.18.2.2" id="p1.1.m1.1.18.2.2.cmml">
+            <times xref="p1.1.m1.1.18.2.2.1" id="p1.1.m1.1.18.2.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝐁</ci>
+            <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑈</ci>
+            <apply xref="p1.1.m1.1.18.2.2.2" id="p1.1.m1.1.18.2.2.2.cmml">
+              <csymbol id="p1.1.m1.1.18.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <cn xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml" type="integer">1</cn>
+              <apply xref="p1.1.m1.1.17.1" id="p1.1.m1.1.17.1.cmml">
+                <times xref="p1.1.m1.1.17.1.5" id="p1.1.m1.1.17.1.5.cmml"/>
+                <ci xref="p1.1.m1.1.17.1.1" id="p1.1.m1.1.17.1.1.cmml">𝑐</ci>
+                <ci xref="p1.1.m1.1.17.1.2" id="p1.1.m1.1.17.1.2.cmml">𝑜</ci>
+                <ci xref="p1.1.m1.1.17.1.3" id="p1.1.m1.1.17.1.3.cmml">𝑛</ci>
+                <ci xref="p1.1.m1.1.17.1.4" id="p1.1.m1.1.17.1.4.cmml">𝑛</ci>
+              </apply>
+            </apply>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+ Anom_{\hat{j}_{B}}:Conf\to\mathbf{B}U(1)_{conn}</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">in <a shape="rect" href="/nlab/show/smooth+infinity-groupoid" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">Smooth∞Grpd</a>.</p>
+
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">We say</p>
+
+<ul xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><li xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">the underlying class in <a shape="rect" href="/nlab/show/ordinary+cohomology" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">ordinary cohomology</a></p>
+<div class="maruku-equation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">[</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Anom</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mover xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">j</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">^</mo></mover><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></msub></mrow></msub><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">]</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∈</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">H</mi><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn></msup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Conf</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="349755147989861952" display="inline" alttext="\par
+[Anom_{\hat{j}_{B}}]\in H^{1}(Conf,U(1))" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22">
+      <mrow xref="p1.1.m1.1.22.1.1.cmml" id="p1.1.m1.1.22.1">
+        <mo xref="p1.1.m1.1.22.1.1.1.cmml" id="p1.1.m1.1.1" stretchy="false">[</mo>
+        <mrow xref="p1.1.m1.1.22.1.1.cmml" id="p1.1.m1.1.22.1.2">
+          <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">A</mi>
+          <mo xref="p1.1.m1.1.22.1.2.1.cmml" id="p1.1.m1.1.22.1.2.1">⁢</mo>
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+          <mo xref="p1.1.m1.1.22.1.2.1.cmml" id="p1.1.m1.1.22.1.2.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">o</mi>
+          <mo xref="p1.1.m1.1.22.1.2.1.cmml" id="p1.1.m1.1.22.1.2.1b">⁢</mo>
+          <msub xref="p1.1.m1.1.22.1.1.cmml" id="p1.1.m1.1.22.1.2.2">
+            <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">m</mi>
+            <msub xref="p1.1.m1.1.22.1.1.cmml" id="p1.1.m1.1.6.1">
+              <mover xref="p1.1.m1.1.22.1.1.cmml" id="p1.1.m1.1.6.1.1" accent="true">
+                <mi xref="p1.1.m1.1.6.1.1.2.cmml" id="p1.1.m1.1.6.1.1.2">j</mi>
+                <mo xref="p1.1.m1.1.6.1.1.1.cmml" id="p1.1.m1.1.6.1.1.1" stretchy="false">^</mo>
+              </mover>
+              <mi xref="p1.1.m1.1.6.1.2.1.cmml" id="p1.1.m1.1.6.1.2.1">B</mi>
+            </msub>
+          </msub>
+        </mrow>
+        <mo xref="p1.1.m1.1.22.1.1.1.cmml" id="p1.1.m1.1.7" stretchy="false">]</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">∈</mo>
+      <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2">
+        <msup xref="p1.1.m1.1.22.2.2.cmml" id="p1.1.m1.1.22.2.2">
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">H</mi>
+          <mn xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">1</mn>
+        </msup>
+        <mo xref="p1.1.m1.1.22.2.1.cmml" id="p1.1.m1.1.22.2.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.22.2.3.1.cmml" id="p1.1.m1.1.22.2.3">
+          <mo id="p1.1.m1.1.11" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.22.2.3.1.cmml" id="p1.1.m1.1.22.2.3.2">
+            <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">C</mi>
+            <mo xref="p1.1.m1.1.22.2.3.2.1.cmml" id="p1.1.m1.1.22.2.3.2.1">⁢</mo>
+            <mi xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">o</mi>
+            <mo xref="p1.1.m1.1.22.2.3.2.1.cmml" id="p1.1.m1.1.22.2.3.2.1a">⁢</mo>
+            <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">n</mi>
+            <mo xref="p1.1.m1.1.22.2.3.2.1.cmml" id="p1.1.m1.1.22.2.3.2.1b">⁢</mo>
+            <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15">f</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.16">,</mo>
+          <mrow xref="p1.1.m1.1.22.2.3.1.cmml" id="p1.1.m1.1.22.2.3.3">
+            <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">U</mi>
+            <mo xref="p1.1.m1.1.22.2.3.3.1.cmml" id="p1.1.m1.1.22.2.3.3.1">⁢</mo>
+            <mrow id="p1.1.m1.1.22.2.3.3.2">
+              <mo id="p1.1.m1.1.18" stretchy="false">(</mo>
+              <mn xref="p1.1.m1.1.19.cmml" id="p1.1.m1.1.19">1</mn>
+              <mo id="p1.1.m1.1.20" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+          <mo id="p1.1.m1.1.21" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml">
+        <in xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml"/>
+        <apply xref="p1.1.m1.1.22.1" id="p1.1.m1.1.22.1.1.cmml">
+          <csymbol xref="p1.1.m1.1.1" id="p1.1.m1.1.22.1.1.1.cmml" cd="latexml">delimited-[]</csymbol>
+          <apply xref="p1.1.m1.1.22.1" id="p1.1.m1.1.22.1.2.cmml">
+            <times xref="p1.1.m1.1.22.1.2.1" id="p1.1.m1.1.22.1.2.1.cmml"/>
+            <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝐴</ci>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑜</ci>
+            <apply xref="p1.1.m1.1.22.1" id="p1.1.m1.1.22.1.2.2.cmml">
+              <csymbol id="p1.1.m1.1.22.1.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝑚</ci>
+              <apply xref="p1.1.m1.1.22.1" id="p1.1.m1.1.6.1.cmml">
+                <csymbol id="p1.1.m1.1.6.1.3.cmml" cd="ambiguous">subscript</csymbol>
+                <apply xref="p1.1.m1.1.22.1" id="p1.1.m1.1.6.1.1.cmml">
+                  <ci xref="p1.1.m1.1.6.1.1.1" id="p1.1.m1.1.6.1.1.1.cmml">^</ci>
+                  <ci xref="p1.1.m1.1.6.1.1.2" id="p1.1.m1.1.6.1.1.2.cmml">𝑗</ci>
+                </apply>
+                <ci xref="p1.1.m1.1.6.1.2.1" id="p1.1.m1.1.6.1.2.1.cmml">𝐵</ci>
+              </apply>
+            </apply>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.22.2" id="p1.1.m1.1.22.2.cmml">
+          <times xref="p1.1.m1.1.22.2.1" id="p1.1.m1.1.22.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.22.2.2" id="p1.1.m1.1.22.2.2.cmml">
+            <csymbol id="p1.1.m1.1.22.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝐻</ci>
+            <cn xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml" type="integer">1</cn>
+          </apply>
+          <interval xref="p1.1.m1.1.22.2.3" id="p1.1.m1.1.22.2.3.1.cmml" closure="open">
+            <apply xref="p1.1.m1.1.22.2.3" id="p1.1.m1.1.22.2.3.2.cmml">
+              <times xref="p1.1.m1.1.22.2.3.2.1" id="p1.1.m1.1.22.2.3.2.1.cmml"/>
+              <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝐶</ci>
+              <ci xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml">𝑜</ci>
+              <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑛</ci>
+              <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">𝑓</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.22.2.3" id="p1.1.m1.1.22.2.3.3.cmml">
+              <times xref="p1.1.m1.1.22.2.3.3.1" id="p1.1.m1.1.22.2.3.3.1.cmml"/>
+              <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝑈</ci>
+              <cn xref="p1.1.m1.1.19" id="p1.1.m1.1.19.cmml" type="integer">1</cn>
+            </apply>
+          </interval>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+[Anom_{\hat{j}_{B}}]\in H^{1}(Conf,U(1))</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">is <strong xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">the anomaly</strong> of the system of higher electromagnetism couple to electic and magnetic charge;</p>
+</li><li xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">its <a shape="rect" href="/nlab/show/curvature" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">curvature</a> 2-form</p>
+<div class="maruku-equation" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Curv</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Anom</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mover xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">j</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">^</mo></mover><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></msub></mrow></msub></mrow></msub><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Conf</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">♭</mo></mstyle><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">dR</mi></msub><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mstyle mathvariant="bold" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></mstyle><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">2</mn></msup><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ℝ</mi></mrow><math id="5506140250139538538" display="inline" alttext="\par
+ Curv_{Anom_{\hat{j}_{B}}}:Conf\to\mathbf{\flat}_{dR}\mathbf{B}^{2}%
+\mathbb{R}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">
+      <mrow xref="p1.1.m1.1.17.1.cmml" id="p1.1.m1.1.17.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+        <mo xref="p1.1.m1.1.17.1.1.cmml" id="p1.1.m1.1.17.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">u</mi>
+        <mo xref="p1.1.m1.1.17.1.1.cmml" id="p1.1.m1.1.17.1.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">r</mi>
+        <mo xref="p1.1.m1.1.17.1.1.cmml" id="p1.1.m1.1.17.1.1b">⁢</mo>
+        <msub xref="p1.1.m1.1.17.1.2.cmml" id="p1.1.m1.1.17.1.2">
+          <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">v</mi>
+          <mrow xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">
+            <mi xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">A</mi>
+            <mo xref="p1.1.m1.1.5.1.6.cmml" id="p1.1.m1.1.5.1.6">⁢</mo>
+            <mi xref="p1.1.m1.1.5.1.2.cmml" id="p1.1.m1.1.5.1.2">n</mi>
+            <mo xref="p1.1.m1.1.5.1.6.cmml" id="p1.1.m1.1.5.1.6a">⁢</mo>
+            <mi xref="p1.1.m1.1.5.1.3.cmml" id="p1.1.m1.1.5.1.3">o</mi>
+            <mo xref="p1.1.m1.1.5.1.6.cmml" id="p1.1.m1.1.5.1.6b">⁢</mo>
+            <msub xref="p1.1.m1.1.5.1.7.cmml" id="p1.1.m1.1.5.1.7">
+              <mi xref="p1.1.m1.1.5.1.4.cmml" id="p1.1.m1.1.5.1.4">m</mi>
+              <msub xref="p1.1.m1.1.5.1.5.1.cmml" id="p1.1.m1.1.5.1.5.1">
+                <mover xref="p1.1.m1.1.5.1.5.1.1.cmml" id="p1.1.m1.1.5.1.5.1.1" accent="true">
+                  <mi xref="p1.1.m1.1.5.1.5.1.1.2.cmml" id="p1.1.m1.1.5.1.5.1.1.2">j</mi>
+                  <mo xref="p1.1.m1.1.5.1.5.1.1.1.cmml" id="p1.1.m1.1.5.1.5.1.1.1" stretchy="false">^</mo>
+                </mover>
+                <mi xref="p1.1.m1.1.5.1.5.1.2.1.cmml" id="p1.1.m1.1.5.1.5.1.2.1">B</mi>
+              </msub>
+            </msub>
+          </mrow>
+        </msub>
+      </mrow>
+      <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">:</mo>
+      <mrow xref="p1.1.m1.1.17.2.cmml" id="p1.1.m1.1.17.2">
+        <mrow xref="p1.1.m1.1.17.2.1.cmml" id="p1.1.m1.1.17.2.1">
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">C</mi>
+          <mo xref="p1.1.m1.1.17.2.1.1.cmml" id="p1.1.m1.1.17.2.1.1">⁢</mo>
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">o</mi>
+          <mo xref="p1.1.m1.1.17.2.1.1.cmml" id="p1.1.m1.1.17.2.1.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">n</mi>
+          <mo xref="p1.1.m1.1.17.2.1.1.cmml" id="p1.1.m1.1.17.2.1.1b">⁢</mo>
+          <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">f</mi>
+        </mrow>
+        <mo xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">→</mo>
+        <mrow xref="p1.1.m1.1.17.2.2.cmml" id="p1.1.m1.1.17.2.2">
+          <msub xref="p1.1.m1.1.17.2.2.2.cmml" id="p1.1.m1.1.17.2.2.2">
+            <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12" mathvariant="normal">♭</mi>
+            <mrow xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">
+              <mi xref="p1.1.m1.1.13.1.1.cmml" id="p1.1.m1.1.13.1.1">d</mi>
+              <mo xref="p1.1.m1.1.13.1.3.cmml" id="p1.1.m1.1.13.1.3">⁢</mo>
+              <mi xref="p1.1.m1.1.13.1.2.cmml" id="p1.1.m1.1.13.1.2">R</mi>
+            </mrow>
+          </msub>
+          <mo xref="p1.1.m1.1.17.2.2.1.cmml" id="p1.1.m1.1.17.2.2.1">⁢</mo>
+          <msup xref="p1.1.m1.1.17.2.2.3.cmml" id="p1.1.m1.1.17.2.2.3">
+            <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">𝐁</mi>
+            <mn xref="p1.1.m1.1.15.1.cmml" id="p1.1.m1.1.15.1">2</mn>
+          </msup>
+          <mo xref="p1.1.m1.1.17.2.2.1.cmml" id="p1.1.m1.1.17.2.2.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">ℝ</mi>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">:</ci>
+        <apply xref="p1.1.m1.1.17.1" id="p1.1.m1.1.17.1.cmml">
+          <times xref="p1.1.m1.1.17.1.1" id="p1.1.m1.1.17.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑢</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑟</ci>
+          <apply xref="p1.1.m1.1.17.1.2" id="p1.1.m1.1.17.1.2.cmml">
+            <csymbol id="p1.1.m1.1.17.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑣</ci>
+            <apply xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">
+              <times xref="p1.1.m1.1.5.1.6" id="p1.1.m1.1.5.1.6.cmml"/>
+              <ci xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml">𝐴</ci>
+              <ci xref="p1.1.m1.1.5.1.2" id="p1.1.m1.1.5.1.2.cmml">𝑛</ci>
+              <ci xref="p1.1.m1.1.5.1.3" id="p1.1.m1.1.5.1.3.cmml">𝑜</ci>
+              <apply xref="p1.1.m1.1.5.1.7" id="p1.1.m1.1.5.1.7.cmml">
+                <csymbol id="p1.1.m1.1.5.1.7.1.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.5.1.4" id="p1.1.m1.1.5.1.4.cmml">𝑚</ci>
+                <apply xref="p1.1.m1.1.5.1.5.1" id="p1.1.m1.1.5.1.5.1.cmml">
+                  <csymbol id="p1.1.m1.1.5.1.5.1.3.cmml" cd="ambiguous">subscript</csymbol>
+                  <apply xref="p1.1.m1.1.5.1.5.1.1" id="p1.1.m1.1.5.1.5.1.1.cmml">
+                    <ci xref="p1.1.m1.1.5.1.5.1.1.1" id="p1.1.m1.1.5.1.5.1.1.1.cmml">^</ci>
+                    <ci xref="p1.1.m1.1.5.1.5.1.1.2" id="p1.1.m1.1.5.1.5.1.1.2.cmml">𝑗</ci>
+                  </apply>
+                  <ci xref="p1.1.m1.1.5.1.5.1.2.1" id="p1.1.m1.1.5.1.5.1.2.1.cmml">𝐵</ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.17.2" id="p1.1.m1.1.17.2.cmml">
+          <ci xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml">→</ci>
+          <apply xref="p1.1.m1.1.17.2.1" id="p1.1.m1.1.17.2.1.cmml">
+            <times xref="p1.1.m1.1.17.2.1.1" id="p1.1.m1.1.17.2.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝐶</ci>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑛</ci>
+            <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑓</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.17.2.2" id="p1.1.m1.1.17.2.2.cmml">
+            <times xref="p1.1.m1.1.17.2.2.1" id="p1.1.m1.1.17.2.2.1.cmml"/>
+            <apply xref="p1.1.m1.1.17.2.2.2" id="p1.1.m1.1.17.2.2.2.cmml">
+              <csymbol id="p1.1.m1.1.17.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">♭</ci>
+              <apply xref="p1.1.m1.1.13.1" id="p1.1.m1.1.13.1.cmml">
+                <times xref="p1.1.m1.1.13.1.3" id="p1.1.m1.1.13.1.3.cmml"/>
+                <ci xref="p1.1.m1.1.13.1.1" id="p1.1.m1.1.13.1.1.cmml">𝑑</ci>
+                <ci xref="p1.1.m1.1.13.1.2" id="p1.1.m1.1.13.1.2.cmml">𝑅</ci>
+              </apply>
+            </apply>
+            <apply xref="p1.1.m1.1.17.2.2.3" id="p1.1.m1.1.17.2.2.3.cmml">
+              <csymbol id="p1.1.m1.1.17.2.2.3.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝐁</ci>
+              <cn xref="p1.1.m1.1.15.1" id="p1.1.m1.1.15.1.cmml" type="integer">2</cn>
+            </apply>
+            <ci xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml">ℝ</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+ Curv_{Anom_{\hat{j}_{B}}}:Conf\to\mathbf{\flat}_{dR}\mathbf{B}^{2}%
+\mathbb{R}</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">is the <strong xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">differential anomaly</strong>.</p>
+</li></ul>
+
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">One finds that this curvature 2-form is given by the <a shape="rect" href="/nlab/show/fiber+integration" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">fiber integration</a> of the wedge product of the <a shape="rect" href="/nlab/show/electric+charge" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">electric charge</a> <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">+</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="795716990123643158" display="inline" alttext="(n+1)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mrow xref="p1.1.m1.1.6.2.cmml" id="p1.1.m1.1.6.2">
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">n</mi>
+        <mo xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">+</mo>
+        <mn xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">1</mn>
+      </mrow>
+      <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.6" id="p1.1.m1.1.6.2.cmml">
+        <plus xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml"/>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑛</ci>
+        <cn xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml" type="integer">1</cn>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(n+1)</annotation>
+  </semantics>
+</math></semantics></math>-form with the <a shape="rect" href="/nlab/show/magnetic+charge" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">magnetic charge</a> <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">dim</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">−</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi></mrow><math id="-8843421718361788221" display="inline" alttext="dimX-n" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">
+      <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">
+        <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">d</mi>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1">⁢</mo>
+        <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">i</mi>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1a">⁢</mo>
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">m</mi>
+        <mo xref="p1.1.m1.1.7.1.1.cmml" id="p1.1.m1.1.7.1.1b">⁢</mo>
+        <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">X</mi>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">-</mo>
+      <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">n</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">
+        <minus xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">
+          <times xref="p1.1.m1.1.7.1.1" id="p1.1.m1.1.7.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑑</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑖</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑚</ci>
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑋</ci>
+        </apply>
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑛</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">dimX-n</annotation>
+  </semantics>
+</math></semantics></math>-form over <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi></mrow><math id="1574987404362652960" display="inline" alttext="X" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">X</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑋</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">X</annotation>
+  </semantics>
+</math></semantics></math>:</p>
+<div class="maruku-equation" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Curv</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Anom</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mover xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">j</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">^</mo></mover><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></msub></mrow></msub></mrow></msub><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">=</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∫</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi></msub><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">j</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">E</mi></msub><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∧</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">j</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></msub><mspace width="thinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"/><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">.</mo></mrow><math id="7751788705716714425" display="inline" alttext="\par
+ Curv_{Anom_{\hat{j}_{B}}}=\int_{X}j_{E}\wedge j_{B}\,." class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16">
+      <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2">
+        <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2.1">
+          <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+          <mo xref="p1.1.m1.1.16.2.1.1.cmml" id="p1.1.m1.1.16.2.1.1">⁢</mo>
+          <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">u</mi>
+          <mo xref="p1.1.m1.1.16.2.1.1.cmml" id="p1.1.m1.1.16.2.1.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">r</mi>
+          <mo xref="p1.1.m1.1.16.2.1.1.cmml" id="p1.1.m1.1.16.2.1.1b">⁢</mo>
+          <msub xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2.1.2">
+            <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">v</mi>
+            <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.5.1">
+              <mi xref="p1.1.m1.1.5.1.1.cmml" id="p1.1.m1.1.5.1.1">A</mi>
+              <mo xref="p1.1.m1.1.5.1.6.cmml" id="p1.1.m1.1.5.1.6">⁢</mo>
+              <mi xref="p1.1.m1.1.5.1.2.cmml" id="p1.1.m1.1.5.1.2">n</mi>
+              <mo xref="p1.1.m1.1.5.1.6.cmml" id="p1.1.m1.1.5.1.6a">⁢</mo>
+              <mi xref="p1.1.m1.1.5.1.3.cmml" id="p1.1.m1.1.5.1.3">o</mi>
+              <mo xref="p1.1.m1.1.5.1.6.cmml" id="p1.1.m1.1.5.1.6b">⁢</mo>
+              <msub xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.5.1.7">
+                <mi xref="p1.1.m1.1.5.1.4.cmml" id="p1.1.m1.1.5.1.4">m</mi>
+                <msub xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.5.1.5.1">
+                  <mover xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.5.1.5.1.1" accent="true">
+                    <mi xref="p1.1.m1.1.5.1.5.1.1.2.cmml" id="p1.1.m1.1.5.1.5.1.1.2">j</mi>
+                    <mo xref="p1.1.m1.1.5.1.5.1.1.1.cmml" id="p1.1.m1.1.5.1.5.1.1.1" stretchy="false">^</mo>
+                  </mover>
+                  <mi xref="p1.1.m1.1.5.1.5.1.2.1.cmml" id="p1.1.m1.1.5.1.5.1.2.1">B</mi>
+                </msub>
+              </msub>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">=</mo>
+        <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2.2">
+          <mrow xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2.2.1">
+            <msub xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2.2.1.1">
+              <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7" symmetric="true" largeop="true">∫</mo>
+              <mi xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">X</mi>
+            </msub>
+            <msub xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2.2.1.2">
+              <mi xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">j</mi>
+              <mi xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">E</mi>
+            </msub>
+          </mrow>
+          <mo xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">∧</mo>
+          <mpadded xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2.2.2" width="+1.7pt">
+            <msub xref="p1.1.m1.1.16.2.cmml" id="p1.1.m1.1.16.2.2.2a">
+              <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">j</mi>
+              <mi xref="p1.1.m1.1.13.1.cmml" id="p1.1.m1.1.13.1">B</mi>
+            </msub>
+          </mpadded>
+        </mrow>
+      </mrow>
+      <mo id="p1.1.m1.1.15">.</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.cmml">
+        <eq xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml"/>
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.1.cmml">
+          <times xref="p1.1.m1.1.16.2.1.1" id="p1.1.m1.1.16.2.1.1.cmml"/>
+          <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑢</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑟</ci>
+          <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.1.2.cmml">
+            <csymbol id="p1.1.m1.1.16.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑣</ci>
+            <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.5.1.cmml">
+              <times xref="p1.1.m1.1.5.1.6" id="p1.1.m1.1.5.1.6.cmml"/>
+              <ci xref="p1.1.m1.1.5.1.1" id="p1.1.m1.1.5.1.1.cmml">𝐴</ci>
+              <ci xref="p1.1.m1.1.5.1.2" id="p1.1.m1.1.5.1.2.cmml">𝑛</ci>
+              <ci xref="p1.1.m1.1.5.1.3" id="p1.1.m1.1.5.1.3.cmml">𝑜</ci>
+              <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.5.1.7.cmml">
+                <csymbol id="p1.1.m1.1.5.1.7.1.cmml" cd="ambiguous">subscript</csymbol>
+                <ci xref="p1.1.m1.1.5.1.4" id="p1.1.m1.1.5.1.4.cmml">𝑚</ci>
+                <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.5.1.5.1.cmml">
+                  <csymbol id="p1.1.m1.1.5.1.5.1.3.cmml" cd="ambiguous">subscript</csymbol>
+                  <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.5.1.5.1.1.cmml">
+                    <ci xref="p1.1.m1.1.5.1.5.1.1.1" id="p1.1.m1.1.5.1.5.1.1.1.cmml">^</ci>
+                    <ci xref="p1.1.m1.1.5.1.5.1.1.2" id="p1.1.m1.1.5.1.5.1.1.2.cmml">𝑗</ci>
+                  </apply>
+                  <ci xref="p1.1.m1.1.5.1.5.1.2.1" id="p1.1.m1.1.5.1.5.1.2.1.cmml">𝐵</ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.2.cmml">
+          <and xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml"/>
+          <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.2.1.cmml">
+            <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.2.1.1.cmml">
+              <csymbol id="p1.1.m1.1.16.2.2.1.1.1.cmml" cd="ambiguous">subscript</csymbol>
+              <int xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+              <ci xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">𝑋</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.16.2.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <ci xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">𝑗</ci>
+              <ci xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">𝐸</ci>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.16" id="p1.1.m1.1.16.2.2.2.cmml">
+            <csymbol id="p1.1.m1.1.16.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑗</ci>
+            <ci xref="p1.1.m1.1.13.1" id="p1.1.m1.1.13.1.cmml">𝐵</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+ Curv_{Anom_{\hat{j}_{B}}}=\int_{X}j_{E}\wedge j_{B}\,.</annotation>
+  </semantics>
+</math></semantics></math></div>
+<p xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">This means that for every parameter space <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∈</mo></mrow><math id="-1368494097430356268" display="inline" alttext="U\in" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∈</mo>
+      <mi xref="p1.1.m1.1.3.1.cmml" id="p1.1.m1.1.3.1"/>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">
+        <in xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+        <csymbol xref="p1.1.m1.1.3.1" id="p1.1.m1.1.3.1.cmml" cd="latexml">absent</csymbol>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U\in</annotation>
+  </semantics>
+</math></semantics></math> <a shape="rect" href="/nlab/show/Diff" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">SmoothMfd</a> and every morphism <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">ϕ</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Conf</mi></mrow><math id="-4787295523128638922" display="inline" alttext="\phi:U\to Conf" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.9.cmml" id="p1.1.m1.1.9">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">ϕ</mi>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">:</mo>
+      <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">
+        <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">U</mi>
+        <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">→</mo>
+        <mrow xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1">
+          <mi xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">C</mi>
+          <mo xref="p1.1.m1.1.9.1.1.1.cmml" id="p1.1.m1.1.9.1.1.1">⁢</mo>
+          <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">o</mi>
+          <mo xref="p1.1.m1.1.9.1.1.1.cmml" id="p1.1.m1.1.9.1.1.1a">⁢</mo>
+          <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">n</mi>
+          <mo xref="p1.1.m1.1.9.1.1.1.cmml" id="p1.1.m1.1.9.1.1.1b">⁢</mo>
+          <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">f</mi>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.9" id="p1.1.m1.1.9.cmml">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">:</ci>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">italic-ϕ</ci>
+        <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">
+          <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">→</ci>
+          <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑈</ci>
+          <apply xref="p1.1.m1.1.9.1.1" id="p1.1.m1.1.9.1.1.cmml">
+            <times xref="p1.1.m1.1.9.1.1.1" id="p1.1.m1.1.9.1.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">𝐶</ci>
+            <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑜</ci>
+            <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">𝑛</ci>
+            <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝑓</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\phi:U\to Conf</annotation>
+  </semantics>
+</math></semantics></math> – which corresponds by the nature of the <a shape="rect" href="/nlab/show/infinity-stack" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">∞-stack</a> <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Conf</mi></mrow><math id="-7677879166091553914" display="inline" alttext="Conf" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">
+      <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">C</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">⁢</mo>
+      <mi xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">o</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1a">⁢</mo>
+      <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">n</mi>
+      <mo xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1b">⁢</mo>
+      <mi xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">f</mi>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml">
+        <times xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml"/>
+        <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝐶</ci>
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">𝑜</ci>
+        <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑛</ci>
+        <ci xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml">𝑓</ci>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">Conf</annotation>
+  </semantics>
+</math></semantics></math> to a field configuration <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∇</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mover xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">j</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">^</mo></mover><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">E</mi></msub><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∈</mo><msubsup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">diff</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">+</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">1</mn></mrow></msubsup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><msubsup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">C</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">diff</mi><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">dim</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">−</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">n</mi></mrow></msubsup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="-1838892392778815942" display="inline" alttext="(\nabla,\hat{j}_{E})\in C^{n+1}_{diff}(U\times X)\times C^{dimX-n}_{diff}(U%
+\times X)" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.25.cmml" id="p1.1.m1.1.25">
+      <mrow xref="p1.1.m1.1.25.1.1.cmml" id="p1.1.m1.1.25.1">
+        <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+        <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∇</mo>
+        <mo id="p1.1.m1.1.3">,</mo>
+        <msub xref="p1.1.m1.1.25.1.1.cmml" id="p1.1.m1.1.25.1.2">
+          <mover xref="p1.1.m1.1.25.1.1.cmml" id="p1.1.m1.1.4" accent="true">
+            <mi xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4.2">j</mi>
+            <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1" stretchy="false">^</mo>
+          </mover>
+          <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">E</mi>
+        </msub>
+        <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+      </mrow>
+      <mo xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7">∈</mo>
+      <mrow xref="p1.1.m1.1.25.2.cmml" id="p1.1.m1.1.25.2">
+        <mrow xref="p1.1.m1.1.25.2.2.cmml" id="p1.1.m1.1.25.2.2">
+          <mrow xref="p1.1.m1.1.25.2.2.1.cmml" id="p1.1.m1.1.25.2.2.1">
+            <msubsup xref="p1.1.m1.1.25.2.2.1.2.cmml" id="p1.1.m1.1.25.2.2.1.2">
+              <mi xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">C</mi>
+              <mrow xref="p1.1.m1.1.10.1.cmml" id="p1.1.m1.1.10.1">
+                <mi xref="p1.1.m1.1.10.1.1.cmml" id="p1.1.m1.1.10.1.1">d</mi>
+                <mo xref="p1.1.m1.1.10.1.5.cmml" id="p1.1.m1.1.10.1.5">⁢</mo>
+                <mi xref="p1.1.m1.1.10.1.2.cmml" id="p1.1.m1.1.10.1.2">i</mi>
+                <mo xref="p1.1.m1.1.10.1.5.cmml" id="p1.1.m1.1.10.1.5a">⁢</mo>
+                <mi xref="p1.1.m1.1.10.1.3.cmml" id="p1.1.m1.1.10.1.3">f</mi>
+                <mo xref="p1.1.m1.1.10.1.5.cmml" id="p1.1.m1.1.10.1.5b">⁢</mo>
+                <mi xref="p1.1.m1.1.10.1.4.cmml" id="p1.1.m1.1.10.1.4">f</mi>
+              </mrow>
+              <mrow xref="p1.1.m1.1.9.1.cmml" id="p1.1.m1.1.9.1">
+                <mi xref="p1.1.m1.1.9.1.1.cmml" id="p1.1.m1.1.9.1.1">n</mi>
+                <mo xref="p1.1.m1.1.9.1.2.cmml" id="p1.1.m1.1.9.1.2">+</mo>
+                <mn xref="p1.1.m1.1.9.1.3.cmml" id="p1.1.m1.1.9.1.3">1</mn>
+              </mrow>
+            </msubsup>
+            <mo xref="p1.1.m1.1.25.2.2.1.1.cmml" id="p1.1.m1.1.25.2.2.1.1">⁢</mo>
+            <mrow xref="p1.1.m1.1.25.2.2.1.3.2.cmml" id="p1.1.m1.1.25.2.2.1.3">
+              <mo id="p1.1.m1.1.11" stretchy="false">(</mo>
+              <mrow xref="p1.1.m1.1.25.2.2.1.3.2.cmml" id="p1.1.m1.1.25.2.2.1.3.2">
+                <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">U</mi>
+                <mo xref="p1.1.m1.1.13.cmml" id="p1.1.m1.1.13">×</mo>
+                <mi xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">X</mi>
+              </mrow>
+              <mo id="p1.1.m1.1.15" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.16.cmml" id="p1.1.m1.1.16">×</mo>
+          <msubsup xref="p1.1.m1.1.25.2.2.2.cmml" id="p1.1.m1.1.25.2.2.2">
+            <mi xref="p1.1.m1.1.17.cmml" id="p1.1.m1.1.17">C</mi>
+            <mrow xref="p1.1.m1.1.19.1.cmml" id="p1.1.m1.1.19.1">
+              <mi xref="p1.1.m1.1.19.1.1.cmml" id="p1.1.m1.1.19.1.1">d</mi>
+              <mo xref="p1.1.m1.1.19.1.5.cmml" id="p1.1.m1.1.19.1.5">⁢</mo>
+              <mi xref="p1.1.m1.1.19.1.2.cmml" id="p1.1.m1.1.19.1.2">i</mi>
+              <mo xref="p1.1.m1.1.19.1.5.cmml" id="p1.1.m1.1.19.1.5a">⁢</mo>
+              <mi xref="p1.1.m1.1.19.1.3.cmml" id="p1.1.m1.1.19.1.3">f</mi>
+              <mo xref="p1.1.m1.1.19.1.5.cmml" id="p1.1.m1.1.19.1.5b">⁢</mo>
+              <mi xref="p1.1.m1.1.19.1.4.cmml" id="p1.1.m1.1.19.1.4">f</mi>
+            </mrow>
+            <mrow xref="p1.1.m1.1.18.1.cmml" id="p1.1.m1.1.18.1">
+              <mrow xref="p1.1.m1.1.18.1.7.cmml" id="p1.1.m1.1.18.1.7">
+                <mi xref="p1.1.m1.1.18.1.1.cmml" id="p1.1.m1.1.18.1.1">d</mi>
+                <mo xref="p1.1.m1.1.18.1.7.1.cmml" id="p1.1.m1.1.18.1.7.1">⁢</mo>
+                <mi xref="p1.1.m1.1.18.1.2.cmml" id="p1.1.m1.1.18.1.2">i</mi>
+                <mo xref="p1.1.m1.1.18.1.7.1.cmml" id="p1.1.m1.1.18.1.7.1a">⁢</mo>
+                <mi xref="p1.1.m1.1.18.1.3.cmml" id="p1.1.m1.1.18.1.3">m</mi>
+                <mo xref="p1.1.m1.1.18.1.7.1.cmml" id="p1.1.m1.1.18.1.7.1b">⁢</mo>
+                <mi xref="p1.1.m1.1.18.1.4.cmml" id="p1.1.m1.1.18.1.4">X</mi>
+              </mrow>
+              <mo xref="p1.1.m1.1.18.1.5.cmml" id="p1.1.m1.1.18.1.5">-</mo>
+              <mi xref="p1.1.m1.1.18.1.6.cmml" id="p1.1.m1.1.18.1.6">n</mi>
+            </mrow>
+          </msubsup>
+        </mrow>
+        <mo xref="p1.1.m1.1.25.2.1.cmml" id="p1.1.m1.1.25.2.1">⁢</mo>
+        <mrow xref="p1.1.m1.1.25.2.3.2.cmml" id="p1.1.m1.1.25.2.3">
+          <mo id="p1.1.m1.1.20" stretchy="false">(</mo>
+          <mrow xref="p1.1.m1.1.25.2.3.2.cmml" id="p1.1.m1.1.25.2.3.2">
+            <mi xref="p1.1.m1.1.21.cmml" id="p1.1.m1.1.21">U</mi>
+            <mo xref="p1.1.m1.1.22.cmml" id="p1.1.m1.1.22">×</mo>
+            <mi xref="p1.1.m1.1.23.cmml" id="p1.1.m1.1.23">X</mi>
+          </mrow>
+          <mo id="p1.1.m1.1.24" stretchy="false">)</mo>
+        </mrow>
+      </mrow>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.25" id="p1.1.m1.1.25.cmml">
+        <in xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml"/>
+        <interval xref="p1.1.m1.1.25.1" id="p1.1.m1.1.25.1.1.cmml" closure="open">
+          <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">∇</ci>
+          <apply xref="p1.1.m1.1.25.1" id="p1.1.m1.1.25.1.2.cmml">
+            <csymbol id="p1.1.m1.1.25.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <apply xref="p1.1.m1.1.25.1" id="p1.1.m1.1.4.cmml">
+              <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">^</ci>
+              <ci xref="p1.1.m1.1.4.2" id="p1.1.m1.1.4.2.cmml">𝑗</ci>
+            </apply>
+            <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝐸</ci>
+          </apply>
+        </interval>
+        <apply xref="p1.1.m1.1.25.2" id="p1.1.m1.1.25.2.cmml">
+          <times xref="p1.1.m1.1.25.2.1" id="p1.1.m1.1.25.2.1.cmml"/>
+          <apply xref="p1.1.m1.1.25.2.2" id="p1.1.m1.1.25.2.2.cmml">
+            <times xref="p1.1.m1.1.16" id="p1.1.m1.1.16.cmml"/>
+            <apply xref="p1.1.m1.1.25.2.2.1" id="p1.1.m1.1.25.2.2.1.cmml">
+              <times xref="p1.1.m1.1.25.2.2.1.1" id="p1.1.m1.1.25.2.2.1.1.cmml"/>
+              <apply xref="p1.1.m1.1.25.2.2.1.2" id="p1.1.m1.1.25.2.2.1.2.cmml">
+                <csymbol id="p1.1.m1.1.25.2.2.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+                <apply id="p1.1.m1.1.25.2.2.1.2.2.cmml">
+                  <csymbol id="p1.1.m1.1.25.2.2.1.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                  <ci xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">𝐶</ci>
+                  <apply xref="p1.1.m1.1.9.1" id="p1.1.m1.1.9.1.cmml">
+                    <plus xref="p1.1.m1.1.9.1.2" id="p1.1.m1.1.9.1.2.cmml"/>
+                    <ci xref="p1.1.m1.1.9.1.1" id="p1.1.m1.1.9.1.1.cmml">𝑛</ci>
+                    <cn xref="p1.1.m1.1.9.1.3" id="p1.1.m1.1.9.1.3.cmml" type="integer">1</cn>
+                  </apply>
+                </apply>
+                <apply xref="p1.1.m1.1.10.1" id="p1.1.m1.1.10.1.cmml">
+                  <times xref="p1.1.m1.1.10.1.5" id="p1.1.m1.1.10.1.5.cmml"/>
+                  <ci xref="p1.1.m1.1.10.1.1" id="p1.1.m1.1.10.1.1.cmml">𝑑</ci>
+                  <ci xref="p1.1.m1.1.10.1.2" id="p1.1.m1.1.10.1.2.cmml">𝑖</ci>
+                  <ci xref="p1.1.m1.1.10.1.3" id="p1.1.m1.1.10.1.3.cmml">𝑓</ci>
+                  <ci xref="p1.1.m1.1.10.1.4" id="p1.1.m1.1.10.1.4.cmml">𝑓</ci>
+                </apply>
+              </apply>
+              <apply xref="p1.1.m1.1.25.2.2.1.3" id="p1.1.m1.1.25.2.2.1.3.2.cmml">
+                <times xref="p1.1.m1.1.13" id="p1.1.m1.1.13.cmml"/>
+                <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑈</ci>
+                <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">𝑋</ci>
+              </apply>
+            </apply>
+            <apply xref="p1.1.m1.1.25.2.2.2" id="p1.1.m1.1.25.2.2.2.cmml">
+              <csymbol id="p1.1.m1.1.25.2.2.2.1.cmml" cd="ambiguous">subscript</csymbol>
+              <apply id="p1.1.m1.1.25.2.2.2.2.cmml">
+                <csymbol id="p1.1.m1.1.25.2.2.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+                <ci xref="p1.1.m1.1.17" id="p1.1.m1.1.17.cmml">𝐶</ci>
+                <apply xref="p1.1.m1.1.18.1" id="p1.1.m1.1.18.1.cmml">
+                  <minus xref="p1.1.m1.1.18.1.5" id="p1.1.m1.1.18.1.5.cmml"/>
+                  <apply xref="p1.1.m1.1.18.1.7" id="p1.1.m1.1.18.1.7.cmml">
+                    <times xref="p1.1.m1.1.18.1.7.1" id="p1.1.m1.1.18.1.7.1.cmml"/>
+                    <ci xref="p1.1.m1.1.18.1.1" id="p1.1.m1.1.18.1.1.cmml">𝑑</ci>
+                    <ci xref="p1.1.m1.1.18.1.2" id="p1.1.m1.1.18.1.2.cmml">𝑖</ci>
+                    <ci xref="p1.1.m1.1.18.1.3" id="p1.1.m1.1.18.1.3.cmml">𝑚</ci>
+                    <ci xref="p1.1.m1.1.18.1.4" id="p1.1.m1.1.18.1.4.cmml">𝑋</ci>
+                  </apply>
+                  <ci xref="p1.1.m1.1.18.1.6" id="p1.1.m1.1.18.1.6.cmml">𝑛</ci>
+                </apply>
+              </apply>
+              <apply xref="p1.1.m1.1.19.1" id="p1.1.m1.1.19.1.cmml">
+                <times xref="p1.1.m1.1.19.1.5" id="p1.1.m1.1.19.1.5.cmml"/>
+                <ci xref="p1.1.m1.1.19.1.1" id="p1.1.m1.1.19.1.1.cmml">𝑑</ci>
+                <ci xref="p1.1.m1.1.19.1.2" id="p1.1.m1.1.19.1.2.cmml">𝑖</ci>
+                <ci xref="p1.1.m1.1.19.1.3" id="p1.1.m1.1.19.1.3.cmml">𝑓</ci>
+                <ci xref="p1.1.m1.1.19.1.4" id="p1.1.m1.1.19.1.4.cmml">𝑓</ci>
+              </apply>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.25.2.3" id="p1.1.m1.1.25.2.3.2.cmml">
+            <times xref="p1.1.m1.1.22" id="p1.1.m1.1.22.cmml"/>
+            <ci xref="p1.1.m1.1.21" id="p1.1.m1.1.21.cmml">𝑈</ci>
+            <ci xref="p1.1.m1.1.23" id="p1.1.m1.1.23.cmml">𝑋</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\nabla,\hat{j}_{E})\in C^{n+1}_{diff}(U\times X)\times C^{dimX-n}_{diff}(U%
+\times X)</annotation>
+  </semantics>
+</math></semantics></math> – the pullback of this differential form to <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi></mrow><math id="-3982891748144869876" display="inline" alttext="U" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mi xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1">U</mi>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <ci xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml">𝑈</ci>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">U</annotation>
+  </semantics>
+</math></semantics></math> yields the ordinary differential form <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∫</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi></msub><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">j</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">E</mi></msub><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∧</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">j</mi><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">B</mi></msub></mrow><math id="-7709897170674973890" display="inline" alttext="\int_{X}j_{E}\wedge j_{B}" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.8.cmml" id="p1.1.m1.1.8">
+      <mrow xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">
+        <msub xref="p1.1.m1.1.8.1.1.cmml" id="p1.1.m1.1.8.1.1">
+          <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" symmetric="true" largeop="true">∫</mo>
+          <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">X</mi>
+        </msub>
+        <msub xref="p1.1.m1.1.8.1.2.cmml" id="p1.1.m1.1.8.1.2">
+          <mi xref="p1.1.m1.1.3.cmml" id="p1.1.m1.1.3">j</mi>
+          <mi xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1">E</mi>
+        </msub>
+      </mrow>
+      <mo xref="p1.1.m1.1.5.cmml" id="p1.1.m1.1.5">∧</mo>
+      <msub xref="p1.1.m1.1.8.2.cmml" id="p1.1.m1.1.8.2">
+        <mi xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">j</mi>
+        <mi xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.1">B</mi>
+      </msub>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.8" id="p1.1.m1.1.8.cmml">
+        <and xref="p1.1.m1.1.5" id="p1.1.m1.1.5.cmml"/>
+        <apply xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">
+          <apply xref="p1.1.m1.1.8.1.1" id="p1.1.m1.1.8.1.1.cmml">
+            <csymbol id="p1.1.m1.1.8.1.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <int xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑋</ci>
+          </apply>
+          <apply xref="p1.1.m1.1.8.1.2" id="p1.1.m1.1.8.1.2.cmml">
+            <csymbol id="p1.1.m1.1.8.1.2.1.cmml" cd="ambiguous">subscript</csymbol>
+            <ci xref="p1.1.m1.1.3" id="p1.1.m1.1.3.cmml">𝑗</ci>
+            <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">𝐸</ci>
+          </apply>
+        </apply>
+        <apply xref="p1.1.m1.1.8.2" id="p1.1.m1.1.8.2.cmml">
+          <csymbol id="p1.1.m1.1.8.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">𝑗</ci>
+          <ci xref="p1.1.m1.1.7.1" id="p1.1.m1.1.7.1.cmml">𝐵</ci>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\int_{X}j_{E}\wedge j_{B}</annotation>
+  </semantics>
+</math></semantics></math> in the image of <math overflow="scroll" display="inline" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∇</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">,</mo><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mover xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">j</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">^</mo></mover><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">E</mi></msub><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo></mrow><math id="984304551504959454" display="inline" alttext="(\nabla,\hat{j}_{E})" class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7">
+      <mo id="p1.1.m1.1.1" stretchy="false">(</mo>
+      <mo xref="p1.1.m1.1.2.cmml" id="p1.1.m1.1.2">∇</mo>
+      <mo id="p1.1.m1.1.3">,</mo>
+      <msub xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.7.2">
+        <mover xref="p1.1.m1.1.7.1.cmml" id="p1.1.m1.1.4" accent="true">
+          <mi xref="p1.1.m1.1.4.2.cmml" id="p1.1.m1.1.4.2">j</mi>
+          <mo xref="p1.1.m1.1.4.1.cmml" id="p1.1.m1.1.4.1" stretchy="false">^</mo>
+        </mover>
+        <mi xref="p1.1.m1.1.5.1.cmml" id="p1.1.m1.1.5.1">E</mi>
+      </msub>
+      <mo id="p1.1.m1.1.6" stretchy="false">)</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <interval xref="p1.1.m1.1.7" id="p1.1.m1.1.7.1.cmml" closure="open">
+        <ci xref="p1.1.m1.1.2" id="p1.1.m1.1.2.cmml">∇</ci>
+        <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.7.2.cmml">
+          <csymbol id="p1.1.m1.1.7.2.1.cmml" cd="ambiguous">subscript</csymbol>
+          <apply xref="p1.1.m1.1.7" id="p1.1.m1.1.4.cmml">
+            <ci xref="p1.1.m1.1.4.1" id="p1.1.m1.1.4.1.cmml">^</ci>
+            <ci xref="p1.1.m1.1.4.2" id="p1.1.m1.1.4.2.cmml">𝑗</ci>
+          </apply>
+          <ci xref="p1.1.m1.1.5.1" id="p1.1.m1.1.5.1.cmml">𝐸</ci>
+        </apply>
+      </interval>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">(\nabla,\hat{j}_{E})</annotation>
+  </semantics>
+</math></semantics></math> under the <a shape="rect" href="/nlab/show/fiber+integration" class="existingWikiWord" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">fiber integration</a> map</p>
+<div class="maruku-equation" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><math overflow="scroll" display="block" class="maruku-mathml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><semantics encoding="" definitionURL="" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><msub xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">∫</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi></msub><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mo rspace="0em" lspace="verythinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">−</mo><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">:</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Ω</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">•</mo></msup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">×</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">X</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">→</mo><msup xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">Ω</mi><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">•</mo></msup><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">(</mo><mi xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">U</mi><mo stretchy="false" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">)</mo><mspace width="thinmathspace" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML"/><mo xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/1998/Math/MathML">.</mo></mrow><math id="-8250263625871228304" display="inline" alttext="\par
+\int_{X}(-):\Omega^{\bullet}(U\times X)\to\Omega^{\bullet}(U)\,." class="ltx_Math" xmlns="http://www.w3.org/1998/Math/MathML">
+  <semantics id="p1.1.m1.1a">
+    <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22">
+      <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2">
+        <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.1">
+          <msub xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.1.1">
+            <mo xref="p1.1.m1.1.1.cmml" id="p1.1.m1.1.1" symmetric="true" largeop="true">∫</mo>
+            <mi xref="p1.1.m1.1.2.1.cmml" id="p1.1.m1.1.2.1">X</mi>
+          </msub>
+          <mrow id="p1.1.m1.1.22.2.1.2">
+            <mo id="p1.1.m1.1.3" stretchy="false">(</mo>
+            <mo xref="p1.1.m1.1.4.cmml" id="p1.1.m1.1.4">-</mo>
+            <mo id="p1.1.m1.1.5" stretchy="false">)</mo>
+          </mrow>
+        </mrow>
+        <mo xref="p1.1.m1.1.6.cmml" id="p1.1.m1.1.6">:</mo>
+        <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.2">
+          <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.2.1">
+            <msup xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.2.1.2">
+              <mi xref="p1.1.m1.1.7.cmml" id="p1.1.m1.1.7" mathvariant="normal">Ω</mi>
+              <mo xref="p1.1.m1.1.8.1.cmml" id="p1.1.m1.1.8.1">∙</mo>
+            </msup>
+            <mo xref="p1.1.m1.1.22.2.2.1.1.cmml" id="p1.1.m1.1.22.2.2.1.1">⁢</mo>
+            <mrow xref="p1.1.m1.1.22.2.2.1.3.2.cmml" id="p1.1.m1.1.22.2.2.1.3">
+              <mo id="p1.1.m1.1.9" stretchy="false">(</mo>
+              <mrow xref="p1.1.m1.1.22.2.2.1.3.2.cmml" id="p1.1.m1.1.22.2.2.1.3.2">
+                <mi xref="p1.1.m1.1.10.cmml" id="p1.1.m1.1.10">U</mi>
+                <mo xref="p1.1.m1.1.11.cmml" id="p1.1.m1.1.11">×</mo>
+                <mi xref="p1.1.m1.1.12.cmml" id="p1.1.m1.1.12">X</mi>
+              </mrow>
+              <mo id="p1.1.m1.1.13" stretchy="false">)</mo>
+            </mrow>
+          </mrow>
+          <mo xref="p1.1.m1.1.14.cmml" id="p1.1.m1.1.14">→</mo>
+          <mrow xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.2.2">
+            <msup xref="p1.1.m1.1.22.2.cmml" id="p1.1.m1.1.22.2.2.2.2">
+              <mi xref="p1.1.m1.1.15.cmml" id="p1.1.m1.1.15" mathvariant="normal">Ω</mi>
+              <mo xref="p1.1.m1.1.16.1.cmml" id="p1.1.m1.1.16.1">∙</mo>
+            </msup>
+            <mo xref="p1.1.m1.1.22.2.2.2.1.cmml" id="p1.1.m1.1.22.2.2.2.1">⁢</mo>
+            <mrow id="p1.1.m1.1.22.2.2.2.3">
+              <mo id="p1.1.m1.1.17" stretchy="false">(</mo>
+              <mi xref="p1.1.m1.1.18.cmml" id="p1.1.m1.1.18">U</mi>
+              <mo id="p1.1.m1.1.19" stretchy="false" rspace="4.2pt">)</mo>
+            </mrow>
+          </mrow>
+        </mrow>
+      </mrow>
+      <mo id="p1.1.m1.1.21">.</mo>
+    </mrow>
+    <annotation-xml id="p1.1.m1.1b" encoding="MathML-Content">
+      <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.cmml">
+        <ci xref="p1.1.m1.1.6" id="p1.1.m1.1.6.cmml">:</ci>
+        <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.1.cmml">
+          <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.1.1.cmml">
+            <csymbol id="p1.1.m1.1.22.2.1.1.1.cmml" cd="ambiguous">subscript</csymbol>
+            <int xref="p1.1.m1.1.1" id="p1.1.m1.1.1.cmml"/>
+            <ci xref="p1.1.m1.1.2.1" id="p1.1.m1.1.2.1.cmml">𝑋</ci>
+          </apply>
+          <minus xref="p1.1.m1.1.4" id="p1.1.m1.1.4.cmml"/>
+        </apply>
+        <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.2.cmml">
+          <ci xref="p1.1.m1.1.14" id="p1.1.m1.1.14.cmml">→</ci>
+          <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.2.1.cmml">
+            <times xref="p1.1.m1.1.22.2.2.1.1" id="p1.1.m1.1.22.2.2.1.1.cmml"/>
+            <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.2.1.2.cmml">
+              <csymbol id="p1.1.m1.1.22.2.2.1.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.7" id="p1.1.m1.1.7.cmml">Ω</ci>
+              <ci xref="p1.1.m1.1.8.1" id="p1.1.m1.1.8.1.cmml">∙</ci>
+            </apply>
+            <apply xref="p1.1.m1.1.22.2.2.1.3" id="p1.1.m1.1.22.2.2.1.3.2.cmml">
+              <times xref="p1.1.m1.1.11" id="p1.1.m1.1.11.cmml"/>
+              <ci xref="p1.1.m1.1.10" id="p1.1.m1.1.10.cmml">𝑈</ci>
+              <ci xref="p1.1.m1.1.12" id="p1.1.m1.1.12.cmml">𝑋</ci>
+            </apply>
+          </apply>
+          <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.2.2.cmml">
+            <times xref="p1.1.m1.1.22.2.2.2.1" id="p1.1.m1.1.22.2.2.2.1.cmml"/>
+            <apply xref="p1.1.m1.1.22" id="p1.1.m1.1.22.2.2.2.2.cmml">
+              <csymbol id="p1.1.m1.1.22.2.2.2.2.1.cmml" cd="ambiguous">superscript</csymbol>
+              <ci xref="p1.1.m1.1.15" id="p1.1.m1.1.15.cmml">Ω</ci>
+              <ci xref="p1.1.m1.1.16.1" id="p1.1.m1.1.16.1.cmml">∙</ci>
+            </apply>
+            <ci xref="p1.1.m1.1.18" id="p1.1.m1.1.18.cmml">𝑈</ci>
+          </apply>
+        </apply>
+      </apply>
+    </annotation-xml>
+    <annotation id="p1.1.m1.1c" encoding="application/x-tex">\par
+\int_{X}(-):\Omega^{\bullet}(U\times X)\to\Omega^{\bullet}(U)\,.</annotation>
+  </semantics>
+</math></semantics></math></div>
+ </body>
+    </html>
