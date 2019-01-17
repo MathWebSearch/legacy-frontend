@@ -1,10 +1,13 @@
 <?php
+
+define('LATEXML_URL', getenv('LATEXML_URL', true) ?: 'https://latexml.mathweb.org/convert');
+
 $data = array(
   'profile' => @$_REQUEST['profile'],
   'tex' => @$_REQUEST['tex']
 );
 
-$session = curl_init('http://latexml.mathweb.org/convert');
+$session = curl_init(LATEXML_URL);
 curl_setopt($session, CURLOPT_POST, true);
 curl_setopt($session, CURLOPT_POSTFIELDS, $data);
 curl_setopt($session, CURLOPT_HEADER, false);

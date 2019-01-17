@@ -1,6 +1,6 @@
 <?php
 
-define('MWS_URL', 'http://localhost:9090');
+define('MWS_URL', getenv('MWS_URL', true) ?: 'http://localhost:9090');
 
 $mws_query = '<mws:query'.
     ' limitmin="'.$_GET["from"].'"'.
