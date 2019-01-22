@@ -65,8 +65,16 @@ MWS.query = function(text, math){
 	};
 
 	var make_proper_entry = function(hit, qvars){
-		var xhtml = $(jQuery.parseXML(hit.xhtml));
-        return {
+		if (hit.hasOwnProperty("maths")) {
+			return make_proper_tema_entry(hit, qvars);
+		} else {
+			return make_proper_mws_entry(hit, qvars);
+		}
+	}; 
+
+	var make_proper_tema_entry = function(hit, qvars) {
+		return {
+			"kind": "tema",
 			"data": {
                 "id" : hit.id,
                 "metadata" : hit.metadata,
@@ -87,7 +95,46 @@ MWS.query = function(text, math){
 				};
 			})
 		}; 
-	}; 
+	}
+
+	var make_proper_mws_entry = function(hit, qvars) {
+		var xhtml = $(jQuery.parseXML(hit.xhtml)); 
+		return {
+			"kind": "mws",
+			"data": {
+				"number": xhtml.find(".number").text(), 
+				"language": xhtml.find(".language").text(), 
+				"class": xhtml.find(".class").text(), 
+				"keywords": split_xhtml(xhtml.find(".keywords")), 
+				"doctype": xhtml.find(".doctype").text(), 
+				"review": {
+					"aunot": {
+						"author": split_xhtml(xhtml.find(".review > .aunot > .author")), 
+						"number": parseInt(xhtml.find(".review > .aunot > .number").text()), 
+					}, 
+					
+					"title": xhtml.find(".review > .title").get(0), 
+					"body": xhtml.find(".review > .review-body").get(0), 
+					"reviewer": split_xhtml(xhtml.find(".review > .reviewer")), 
+					"published": parseInt(xhtml.find(".review > .published").text()),
+				}, 
+			}, 
+			"text": hit.text, 
+			"math_hits": hit.math_ids.map(function(m){
+				return {
+						"id": m.url.split("#")[1], 
+						"xpath": m.xpath, 
+						"qvars": qvars.map(function(q){
+							return {
+								"name": q.name, 
+								"xpath": m.xpath+q.xpath, 
+								"relpath": q.xpath
+							}
+						})
+				};
+			})
+		}; 
+	}
 
 	this.getAll = function(callback, callback_fail){
 		var callback = (typeof callback == "function")?callback:function(){}; 

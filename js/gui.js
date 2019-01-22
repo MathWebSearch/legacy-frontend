@@ -403,28 +403,20 @@ MWS.gui = {
 		});
 
 	},
-
+	
+	/**
+	 * Renders a single search result
+	 */
 	"renderResult": function(res, id, search_mathml, all_results){
+		if (res.kind === "tema") {
+			return MWS.gui.renderTemaResult(res, id, search_mathml, all_results);
+		} else {
+			return MWS.gui.renderMWSResult(res, id, search_mathml, all_results);
+		}
+	},
+	
+	"renderTemaResult": function(res, id, search_mathml, all_results){
 		//render a single result here!
-
-		var xhtml_join = function(arr){
-			var div = $(document.createElement("div"));
-			for(var i=0;i<arr.length;i++){
-				var ar = arr[i];
-
-				if(typeof ar == "string"){
-					div.append($(document.createElement("span")).text(ar))
-				} else {
-					div.append(ar)
-				}
-
-				if (i != arr.length-1){
-					div.append("; ");
-				}
-			}
-
-			return div.html();
-		};
 
 		var link = res.data.metadata.url;
 
@@ -439,9 +431,9 @@ MWS.gui = {
             var snippetSep = "<span style='color: blue;'>[...]</span>"
             var snippetDiv = "<div>" + snippet_with_math + snippetSep + "</div>";
             bdyhtml.append(snippetDiv);
-        });
-	bdyhtml.children().first()
-		.prepend("<span style='color: blue;'>[...]</span>");
+		});
+
+		bdyhtml.children().first().prepend("<span style='color: blue;'>[...]</span>");
 
 		var link_data = MWS.config.data_to_link(res.data);
 		if(link_data){
@@ -455,12 +447,6 @@ MWS.gui = {
 		.append(
 			$(document.createElement("a")).attr("href", link).attr("target", "_blank").text(link), " <br />",
 			"<strong class='thema-ignore'>Title: </strong>" + res.data.metadata.title + " <br />"
-//			"<strong class='thema-ignore'>Author(s): </strong>"+xhtml_join(res.data.review.aunot.author)+" <br />",
-//			"<strong class='thema-ignore'>Published: </strong>"+res.data.review.published+" <br />",
-//			"<strong class='thema-ignore'>Class: </strong>"+res.data.class+" <br />",
-//			"<strong class='thema-ignore'>Doctype: </strong>"+res.data.doctype+" <br />",
-//			"<strong class='thema-ignore'>Keywords: </strong>"+xhtml_join(res.data.keywords)+" <br />",
-//			"<strong class='thema-ignore'>Language: </strong>"+res.data.language+" <br />"
 		);
 
 		$(link_data).each(function(i, e){
@@ -540,8 +526,6 @@ MWS.gui = {
 			});
 		}
 
-		var substs = [];
-
 		//math highlighting
 		var math_hits = res.math_hits;
 		for(var i=0;i<math_hits.length;i++){
@@ -579,20 +563,6 @@ MWS.gui = {
         titleelem.append("MathHub.info ");
         titleelem.append(" : ", "<em>" + res.data.metadata.title + "</em>"
         );
-        /*
-		titleelem.append(
-			res.data.review.aunot.author[0]
-		)
-
-		if(res.data.review.aunot.author.length > 1){
-			titleelem.append(" [+ "+(res.data.review.aunot.author.length-1)+" more]");
-		}
-
-		titleelem.append(
-			" (", res.data.review.published, "): ",
-			"<em>"+$(res.data.review.title).html()+"</em>"
-		);
-        */
 
 		//Create the element
 		return $("<div>").addClass("panel panel-default")
@@ -614,6 +584,189 @@ MWS.gui = {
 			.append(MWS.makeMath(body))
 		);
 	},
+
+	"renderMWSResult": function(res, id, search_mathml, all_results){
+		//render a single result here!
+
+		var xhtml_join = function(arr){
+			var div = $(document.createElement("div")); 
+			for(var i=0;i<arr.length;i++){
+				var ar = arr[i]; 
+
+				if(typeof ar == "string"){
+					div.append($(document.createElement("span")).text(ar))
+				} else {
+					div.append(ar)
+				}
+
+				if (i != arr.length-1){
+					div.append("; "); 
+				}
+			}
+
+			return div.html(); 
+		}
+
+		var link = MWS.config.result_link_prefix + res.data.number + MWS.config.result_link_suffix; 
+
+		var bdyhtml = $(res.data.review.body); 
+
+		var body = $("<div>").addClass("panel-body").css("text-align", "left")
+		.append(
+			$(document.createElement("a")).attr("href", link).attr("target", "_blank").text(link), " <br />", 
+			"<strong class='thema-ignore'>Title: </strong>"+$(res.data.review.title).html()+" <br />", 
+			"<strong class='thema-ignore'>Author(s): </strong>"+xhtml_join(res.data.review.aunot.author)+" <br />", 
+			"<strong class='thema-ignore'>Published: </strong>"+res.data.review.published+" <br />", 
+			"<strong class='thema-ignore'>Class: </strong>"+res.data.class+" <br />",
+			"<strong class='thema-ignore'>Doctype: </strong>"+res.data.doctype+" <br />", 
+			"<strong class='thema-ignore'>Keywords: </strong>"+xhtml_join(res.data.keywords)+" <br />", 
+			"<strong class='thema-ignore'>Language: </strong>"+res.data.language+" <br />"
+		); 
+
+		var qvar_names = []; 
+		var qvars = all_results.qvars; 
+
+		if(search_mathml.length > 0 && qvars.length > 0 && MWS.config.mws_highlight_colors.length > 0){
+			
+			for(var i=0;i<qvars.length;i++){
+				if(qvar_names.indexOf(qvars[i].name) == -1){ //push anything that isn't there yet
+					qvar_names.push(qvars[i].name); 
+				}
+				try{
+					MWS.FHL.getPresentation("/*[1]"+qvars[i].xpath, search_mathml.get(0))
+					.setAttribute("class", "math-highlight-qvar math-highlight-qvar-"+qvars[i].name);
+				} catch(e){
+					if(MWS.config.mws_warn_highlight){
+						console.log("Unable to highlight MWS qvar: ", qvars[i]); 
+					}
+				}	
+			}
+
+			 
+
+			var is_on = false; 
+			search_mathml = $("<div>").css("display", "inline").append(MWS.makeMath(search_mathml.clone())).addClass("hidden")
+
+			$("<button>").addClass("btn btn-default").text("Show substitutions").appendTo(body).click(function(){
+				search_mathml.get(0)
+				if(is_on){
+					//remove all the colors
+					search_mathml.addClass("hidden");
+					qvar_names.map(function(qvar){
+						
+						body.find(".math-highlight-qvar-"+qvar).css("color", "").each(function(){
+							//for native MathMl
+							this.setAttribute("class", "math-highlight-qvar math-highlight-qvar-"+qvar);
+							this.removeAttribute("mathcolor"); 
+						})
+						 
+					})
+				} else {
+					search_mathml.removeClass("hidden"); 
+					var i = 0; 
+					qvar_names.map(function(qvar){
+						body
+						.find(".math-highlight-qvar-"+qvar)
+						.css("color", MWS.config.mws_highlight_colors[i % MWS.config.mws_highlight_colors.length])
+						.each(function(){
+							//for native MathMl
+							this.setAttribute("mathcolor", MWS.config.mws_highlight_colors[i % MWS.config.mws_highlight_colors.length]);
+							this.setAttribute("class", "math-highlight-qvar-"+qvar); 
+						})
+						 
+						i++; 
+					})
+				}
+				$(this).text(is_on?"Show substitutions":"Hide substitutions"); 
+				is_on = !is_on;
+			});
+
+			body.append("  ", search_mathml)
+			.appendTo(body); 
+		} else {
+			body.append("<br />"); 
+		}
+
+		body.append(bdyhtml); 
+
+		//text highlighting
+		if (res.text != null) {
+			res.text.map(function(m){
+				body.highlight(m);
+			});
+		}
+
+		var substs = []; 
+		 
+		//math highlighting
+		var math_hits = res.math_hits; 
+		for(var i=0;i<math_hits.length;i++){
+			try{
+				var mhit = math_hits[i]; 
+				var elem = MWS.FHL.getElementByXMLId(mhit.id, body[0]); 
+				elem = MWS.FHL.getPresentation(mhit.xpath, elem); 
+
+				if(typeof elem !== "undefined"){
+					elem.setAttribute("class", "math-highlight");  
+				}
+
+				var qvars = mhit.qvars; 
+
+				for(var j=0;j<qvars.length;j++){
+					var qvar = qvars[j]; 
+
+					elem = MWS.FHL.getElementByXMLId(mhit.id, body[0]);
+					elem = MWS.FHL.getPresentation(qvar.xpath, elem); 
+					if(typeof elem !== "undefined"){
+						elem.setAttribute("class", "math-highlight-qvar math-highlight-qvar-"+qvar.name); 
+					}
+				}
+			} catch(e){
+				if(MWS.config.mws_warn_highlight){
+					console.log("Unable to highlight MWS result: ", mhit); 
+				}
+			}
+			
+		}
+
+		//Lets make the title
+		var titleelem = $(document.createElement("span"));
+		
+		titleelem.append(
+			res.data.review.aunot.author[0]
+		)
+
+		if(res.data.review.aunot.author.length > 1){
+			titleelem.append(" [+ "+(res.data.review.aunot.author.length-1)+" more]"); 
+		}
+
+		titleelem.append(
+			" (", res.data.review.published, "): ", 
+			"<em>"+$(res.data.review.title).html()+"</em>"
+		);
+
+
+		//Create the element
+		return $("<div>").addClass("panel panel-default")
+		.append(
+			$("<div>").addClass("panel-heading").append(
+				$("<h4>").addClass("panel-title")
+				.append(
+					$("<a>").attr({
+						"data-toggle": "collapse", 
+						"data-parent": "#resultsdiv", 
+						"href": "#resultId"+id
+					})
+					.append(MWS.makeMath(titleelem))
+				)
+			), 
+			$("<div>")
+			.addClass("panel-collapse collapse")
+			.attr("id", "resultId"+id)
+			.append(MWS.makeMath(body))
+		); 
+	}, 
+		
 
 	"renderSearchFailure": function(msg){
 		//render search Failure
