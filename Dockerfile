@@ -11,6 +11,7 @@ ADD index.html /var/www/html/index.html
 ADD main.css /var/www/html/main.css
 
 # Environment variables
+ENV MWS_MODE "mws"
 ENV MWS_URL "http://mws:8080/"
 ENV TEMA_URL "http://tema:8080/"
 ENV LATEXML_URL "https://latexml.mathweb.org/convert"

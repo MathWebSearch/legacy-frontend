@@ -6,7 +6,7 @@ MWS.config = {
 	"expand_first_result": false, //automatically open the first result on every page
 
 	"mws_query_url": //URL to put questions to
-		resolve("php/tema_proxy.php"), // Use this for TeMa Search
+		resolve("php/proxy.php"), // Use this for TeMa Search
 		// resolve("php/mws_proxy.php"), // Use this for MWS
 	"mws_warn_highlight": false, //warn about failed highlights
 	"mws_highlight_colors": ["blue", "green", "purple", "orange", "red"], //colors for show substitutions. Set to an empty array to disable.
