@@ -18,3 +18,7 @@ As can be seen from the example above, the Dockerfile takes several environment 
 - `MWS_URL` The container-reachable URL to the MWS backend. Only relevant if running in mws mode. 
 - `TEMA_URL` The container-reachable URL to the TEMA backend. Only relevant if running in tema mode. 
 
+Deployment Docker-Compose file
+===================
+
+This repository also contains a docker-compose file to deploy the MathWebSearch frontend. 
