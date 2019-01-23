@@ -17,8 +17,3 @@ As can be seen from the example above, the Dockerfile takes several environment 
 - `MWS_MODE` The mode to run the frontend in. Should be either 'tema' (to run in tema-search mode) or 'mws' (to run in mws-search mode). 
 - `MWS_URL` The container-reachable URL to the MWS backend. Only relevant if running in mws mode. 
 - `TEMA_URL` The container-reachable URL to the TEMA backend. Only relevant if running in tema mode. 
-
-Deployment Docker-Compose file
-===================
-
-This repository also contains a docker-compose file to deploy the MathWebSearch frontend. 
