@@ -6,10 +6,10 @@ Web frontend for MathWebSearch
 Frontend Dockerfile
 ===================
 
-This repository contains a Dockerfile for the frontend container. This can be found as the automated build [kwarc/mws-frontend](https://hub.docker.com/r/kwarc/mws-frontend) on DockerHub. 
+This repository contains a Dockerfile for the frontend container. This can be found as the automated build [kwarc/mws-frontend](https://hub.docker.com/r/mathwebsearch/frontend) on DockerHub. 
 Run it as:
 
-    docker run -t -i -p 8081:80 -e MWS_URL="http://mws.url:8080/" -e LATEXML_URL="http://ltxml.url/convert" kwarc/mws-frontend
+    docker run -t -i -p 8081:80 -e MWS_URL="http://mws.url:8080/" -e LATEXML_URL="http://ltxml.url/convert" mathwebsearch/frontend
 
 As can be seen from the example above, the Dockerfile takes several environment variables. In particular it takes the following values:
 
