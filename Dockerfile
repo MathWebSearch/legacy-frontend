@@ -14,4 +14,4 @@ ADD main.css /var/www/html/main.css
 ENV MWS_MODE "mws"
 ENV MWS_URL "http://mws:8080/"
 ENV TEMA_URL "http://tema:8080/"
-ENV LATEXML_URL "https://latexml.mathweb.org/convert"
+ENV LATEXML_URL "http://latexml:8080/convert"
