@@ -13,7 +13,7 @@ MWS.config = {
 
 	"mathjax_force": false, //force to use MathJax
 	"mathjax_cdn_url": //MathJax CDN
-		"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
+		"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
 
 	"result_link_prefix": "http://zbmath.org/?q=an:", //Prefix for result links
 	"result_link_suffix": "", //Suffix for result links
